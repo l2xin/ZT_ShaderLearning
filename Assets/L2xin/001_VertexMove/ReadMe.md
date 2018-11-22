@@ -14,7 +14,7 @@ v.vertex.xyz += _MaxDistance * v.normal.xyz;
 * _SinTime  float4  Sine of time: (t/8, t/4, t/2, t).
 * _CosTime  float4  Cosine of time: (t/8, t/4, t/2, t).
 
-_SinTime范围为（-1，1），为实现立方体弹开又收缩回到默认，`_SinTime.w + 1`把范围限制在（0，2).
+_SinTime范围为（-1，1），为实现立方体弹开又收缩回到默认，`_SinTime.w + 1`把范围限制在（0，2).
 ``` glsl
 v.vertex.xyz += (_SinTime.w + 1) * _MaxDistance * v.normal.xyz;
 ```
