@@ -1,5 +1,6 @@
 /Library
 /Temp
+/Obj
 Assembly-CSharp-Editor.csproj
 Assembly-CSharp.csproj
 ZT_ShaderLearning.sln
