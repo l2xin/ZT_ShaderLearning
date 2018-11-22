@@ -31,7 +31,7 @@ fixed4 frag (fixed facing : VFACE) : SV_Target
 * 使用**max**(0, _diffuceColor)：dot计算可能出负数，颜色为负不合法。
 * **_WorldSpaceLightPos0** ：内置变量，获得光照方向。
 * 使用`facing > 0 ? _ColorFront : _ColorBack`三目运算符而非`if else`，切记。 
-* 上一级目录下 builtin_shaders-2018.2.11f1/UnityShaderVariables中包含一些内置变量，放在这里方便查看。
+* [builtin_shaders-2018.2.11f1](https://github.com/l2xin/ZT_ShaderLearning/tree/master/builtin_shaders-2018.2.11f1)中包含一些内置变量，放在这里方便查看。
 
 ---
 ## 参考
