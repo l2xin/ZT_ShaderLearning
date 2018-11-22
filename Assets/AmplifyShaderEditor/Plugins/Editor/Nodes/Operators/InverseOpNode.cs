@@ -75,30 +75,6 @@ namespace AmplifyShaderEditor
 			false
 		};
 
-		// 3x3
-		private string Inverse3x3Header = "Inverse3x3( {0} )";
-		private string[] Inverse3x3Function =
-		{
-			"{0}3x3 Inverse3x3({0}3x3 input)\n",
-			"{\n",
-			"\t{0}3 a = input._11_21_31;\n",
-			"\t{0}3 b = input._12_22_32;\n",
-			"\t{0}3 c = input._13_23_33;\n",
-			"\treturn {0}3x3(cross(b,c), cross(c,a), cross(a,b)) * (1.0 / dot(a,cross(b,c)));\n",
-			"}\n"
-		};
-
-		private bool[] Inverse3x3FunctionFlags =
-		{
-			true,
-			false,
-			true,
-			true,
-			true,
-			true,
-			false
-		};
-
 		protected override void CommonInit( int uniqueId )
 		{
 			base.CommonInit( uniqueId );
@@ -111,7 +87,6 @@ namespace AmplifyShaderEditor
 			m_outputPorts[ 0 ].ChangeType( WirePortDataType.FLOAT4x4, false );
 		}
 
-
 		public override string GenerateShaderForOutput( int outputId, ref MasterNodeDataCollector dataCollector, bool ignoreLocalvar )
 		{
 			if ( m_outputPorts[ 0 ].IsLocalValue( dataCollector.PortCategory ) )
@@ -122,32 +97,8 @@ namespace AmplifyShaderEditor
 
 			if ( m_outputPorts[ 0 ].DataType == WirePortDataType.FLOAT3x3 )
 			{
-				if ( !dataCollector.HasFunction( Inverse3x3Header ) )
-				{
-					//Hack to be used util indent is properly used
-					int currIndent = UIUtils.ShaderIndentLevel;
-					if ( dataCollector.IsTemplate )
-					{
-						UIUtils.ShaderIndentLevel = 0;
-					}
-					else
-					{
-						UIUtils.ShaderIndentLevel = 1;
-						UIUtils.ShaderIndentLevel++;
-					}
-					string finalFunction = string.Empty;
-					for ( int i = 0; i < Inverse3x3Function.Length; i++ )
-					{
-						finalFunction += UIUtils.ShaderIndentTabs + ( Inverse3x3FunctionFlags[ i ] ? string.Format( Inverse3x3Function[ i ], precisionString ) : Inverse3x3Function[ i ] );
-					}
-
-					
-					UIUtils.ShaderIndentLevel = currIndent;
-
-					dataCollector.AddFunction( Inverse3x3Header, finalFunction );
-				}
-				
-				RegisterLocalVariable( 0, string.Format( Inverse3x3Header, value ), ref dataCollector, "invertVal" + OutputId );
+				GeneratorUtils.Add3x3InverseFunction( ref dataCollector, precisionString );
+				RegisterLocalVariable( 0, string.Format( GeneratorUtils.Inverse3x3Header, value ), ref dataCollector, "invertVal" + OutputId );
 			}
 			else
 			{

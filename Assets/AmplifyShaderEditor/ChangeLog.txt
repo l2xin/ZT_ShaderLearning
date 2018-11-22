@@ -1,4 +1,42 @@
 Release Notes:
+v1.5.9 rev 00:
+* Fixes:
+    * 'Grab Screen Color' node now also working on Lightweight SRP v3.x.x
+    * Fixed possible issue with Shader Function creation callback not being inside AmplifyShaderEditor namespace 
+
+v1.5.8 rev 03:
+* Fixes:
+    * Fixed multiple issues in both PBR and Unlit templates for HD SRP v4.x.x
+    * Fixed issue over clip space transforms on HD SRP
+    * Fixed issue on sampling depth buffer on HD SRP
+
+v1.5.8 rev 02:
+* Improvements:
+    * Multiple improvements over 'Global Array' node
+        * Added support for jagged arrays
+        * Added Auto-Register toggle
+        * Can reference other nodes through new Mode dropdown ( similar to 'Grab Screen Color' node )
+
+* Fixes:
+    * Fixed memory leak over 'Template Local Var' node
+    * Fixed HD templates issues over new HD 4.1.0
+
+v1.5.8 rev 01:
+* Fixes:
+    * Fixed issue on Live Mode writing on non ase shaders when loaded into canvas
+    * Fixed issue on MacOS with scroll bar over Texture Array Creator tool
+    * Fixed issue on MacOS with 'Function Input' node generated default Sampler 2D value
+
+* New Shader Function:
+    * Substance Blend Metallic
+
+* Improvements:
+    * 'Grab Screen Color' node is now supported on LW SRP
+        * Uses the new _CameraOpaqueTexture which must be requested on the pipeline asset
+            * Must toggle on the Opaque Texture option over its General foldout
+    * Added Clip and Tangent spaces into 'Transform Direction' node
+    * Added Tangent space into 'Transform Position' node
+
 v1.5.8 rev 00:
 * New Sample:
     * Substance 2018

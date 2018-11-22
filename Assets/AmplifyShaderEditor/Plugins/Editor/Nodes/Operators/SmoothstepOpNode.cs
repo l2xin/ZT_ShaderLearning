@@ -25,7 +25,9 @@ namespace AmplifyShaderEditor
 			m_minPortId = m_inputPorts.Count - 1;
 			AddInputPort( WirePortDataType.FLOAT, false, "Max", -1, MasterNodePortCategory.Fragment, 2 );
 			m_maxPortId = m_inputPorts.Count - 1;
-			
+
+			GetInputPortByUniqueId( m_maxPortId ).FloatInternalData = 1;
+
 			AddOutputPort( WirePortDataType.FLOAT, Constants.EmptyPortValue );
 			m_useInternalPortData = true;
 			m_textLabelWidth = 55;

@@ -107,7 +107,14 @@ namespace AmplifyShaderEditor
 				//m_templateProperties.PropertyDict[ m_modules.PassTag.Id ].UseIndentationAtStart = false;
 				idManager.RegisterId( m_modules.PassTag.StartIdx, m_modules.UniquePrefix + m_modules.PassTag.Id, string.Empty );
 			}
-			
+
+			m_modules.SRPType = subShaderModule.SRPType;
+			if( m_modules.SRPType == TemplateSRPType.HD )
+			{
+				m_modules.SRPIsPBR = passInfo.Data.Contains( TemplateHelperFunctions.HDPBRTag );
+
+			}
+
 			Dictionary<string, TemplateShaderPropertyData> ownDuplicatesDict = new Dictionary<string, TemplateShaderPropertyData>( duplicatesHelper );
 			TemplateHelperFunctions.CreateShaderGlobalsList( passInfo.Data, ref m_availableShaderGlobals, ref ownDuplicatesDict );
 

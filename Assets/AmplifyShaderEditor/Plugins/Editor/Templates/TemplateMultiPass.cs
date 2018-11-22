@@ -987,7 +987,7 @@ namespace AmplifyShaderEditor
 		}
 
 		public TemplateSRPType SRPtype { get { return m_subShaders[ 0 ].Modules.SRPType; } }
-		public bool SRPIsPBRHD { get { return m_subShaders[0].Modules.SRPIsPBRHD ; } }
+		//public bool SRPIsPBRHD { get { return m_subShaders[0].Modules.SRPIsPBRHD ; } }
 		public List<TemplateSubShader> SubShaders { get { return m_subShaders; } }
 		public List<TemplateShaderPropertyData> AvailableShaderProperties { get { return m_availableShaderProperties; } }
 		public TemplateTagData PropertyTag { get { return m_propertyTag; } }

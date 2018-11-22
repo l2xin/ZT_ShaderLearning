@@ -26,7 +26,7 @@ namespace AmplifyShaderEditor
 
 		void FetchDataId()
 		{
-			if( m_localVarsData != null )
+			if( m_localVarsData != null && m_localVarsData.Count > 0 )
 			{
 				m_currentDataIdx = 0;
 				int count = m_localVarsData.Count;

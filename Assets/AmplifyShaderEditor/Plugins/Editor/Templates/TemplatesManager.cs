@@ -424,6 +424,7 @@ namespace AmplifyShaderEditor
 			{ "964e57f8f828f8e44b6bc62ddfbe7b51","Impostors/Runtime Metallic" }
 		};
 
+		public static readonly string TemplateMenuItemsFileGUID = "da0b931bd234a1e43b65f684d4b59bfb";
 
 		private Dictionary<string, TemplateDataParent> m_availableTemplates = new Dictionary<string, TemplateDataParent>();
 
@@ -459,6 +460,10 @@ namespace AmplifyShaderEditor
 			{
 				if( ShowDebugMessages )
 					Debug.Log( "Initialize" );
+
+				string templateMenuItems = IOUtils.LoadTextFileFromDisk( AssetDatabase.GUIDToAssetPath( TemplateMenuItemsFileGUID ) );
+				bool refreshTemplateMenuItems = false;
+
 				foreach( KeyValuePair<string, string> kvp in OfficialTemplates )
 				{
 					if( !string.IsNullOrEmpty( AssetDatabase.GUIDToAssetPath( kvp.Key ) ) )
@@ -466,6 +471,8 @@ namespace AmplifyShaderEditor
 						TemplateMultiPass template = ScriptableObject.CreateInstance<TemplateMultiPass>();
 						template.Init( kvp.Value, kvp.Key, false );
 						AddTemplate( template );
+						if( !refreshTemplateMenuItems && templateMenuItems.IndexOf( kvp.Value ) < 0 )
+							refreshTemplateMenuItems = true;
 					}
 				}
 
@@ -487,6 +494,10 @@ namespace AmplifyShaderEditor
 					m_sortedTemplates[ i ].OrderId = i;
 					AvailableTemplateNames[ i + 1 ] = m_sortedTemplates[ i ].Name;
 				}
+
+				if( refreshTemplateMenuItems )
+					CreateTemplateMenuItems();
+
 				Initialized = true;
 			}
 		}
@@ -516,7 +527,7 @@ namespace AmplifyShaderEditor
 			}
 			fileContents.Append( "\t}\n" );
 			fileContents.Append( "}\n" );
-			string filePath = AssetDatabase.GUIDToAssetPath( "da0b931bd234a1e43b65f684d4b59bfb" );
+			string filePath = AssetDatabase.GUIDToAssetPath( TemplateMenuItemsFileGUID );
 			IOUtils.SaveTextfileToDisk( fileContents.ToString(), filePath, false );
 			AssetDatabase.ImportAsset( filePath );
 		}

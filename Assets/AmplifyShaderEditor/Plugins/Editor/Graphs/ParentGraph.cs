@@ -79,6 +79,9 @@ namespace AmplifyShaderEditor
 		private UsageListRegisterLocalVarNodes m_localVarNodes = new UsageListRegisterLocalVarNodes();
 
 		[SerializeField]
+		private UsageListGlobalArrayNodes m_globalArrayNodes = new UsageListGlobalArrayNodes();
+
+		[SerializeField]
 		private UsageListFunctionInputNodes m_functionInputNodes = new UsageListFunctionInputNodes();
 
 		[SerializeField]
@@ -98,6 +101,7 @@ namespace AmplifyShaderEditor
 
 		[SerializeField]
 		private UsageListCustomExpressionsOnFunctionMode m_customExpressionsOnFunctionMode = new UsageListCustomExpressionsOnFunctionMode();
+
 
 		[SerializeField]
 		private int m_masterNodeId = Constants.INVALID_NODE_ID;
@@ -211,6 +215,8 @@ namespace AmplifyShaderEditor
 			m_screenColorNodes.ContainerGraph = this;
 			m_localVarNodes = new UsageListRegisterLocalVarNodes();
 			m_localVarNodes.ContainerGraph = this;
+			m_globalArrayNodes = new UsageListGlobalArrayNodes();
+			m_globalArrayNodes.ContainerGraph = this;
 			m_functionInputNodes = new UsageListFunctionInputNodes();
 			m_functionInputNodes.ContainerGraph = this;
 			m_functionNodes = new UsageListFunctionNodes();
@@ -271,6 +277,7 @@ namespace AmplifyShaderEditor
 			m_textureArrayNodes.UpdateNodeArr();
 			m_screenColorNodes.UpdateNodeArr();
 			m_localVarNodes.UpdateNodeArr();
+			m_globalArrayNodes.UpdateNodeArr();
 		}
 
 		public int GetValidId()
@@ -372,6 +379,7 @@ namespace AmplifyShaderEditor
 			m_textureArrayNodes.Clear();
 			m_screenColorNodes.Clear();
 			m_localVarNodes.Clear();
+			m_globalArrayNodes.Clear();
 			m_selectedNodes.Clear();
 			m_markedForDeletion.Clear();
 		}
@@ -507,6 +515,14 @@ namespace AmplifyShaderEditor
 			}
 			propertyNodesList = null;
 
+			List<GlobalArrayNode> globalArrayNodeList = m_globalArrayNodes.NodesList;
+			int globalArrayCount = globalArrayNodeList.Count;
+			for( int i = 0; i < globalArrayCount; i++ )
+			{
+				globalArrayNodeList[ i ].CheckIfAutoRegister( ref dataCollector );
+			}
+			globalArrayNodeList = null;
+
 			//List<PropertyNode> propertyNodesList = m_propertyNodes.NodesList;
 			//int propertyCount = propertyNodesList.Count;
 			//for( int i = 0; i < propertyCount; i++ )
@@ -588,6 +604,8 @@ namespace AmplifyShaderEditor
 
 			m_localVarNodes.Clear();
 			//m_localVarNodes = null;
+
+			m_globalArrayNodes.Clear();
 
 			m_selectedNodes.Clear();
 			//m_selectedNodes = null;
@@ -688,6 +706,9 @@ namespace AmplifyShaderEditor
 
 			m_localVarNodes.Destroy();
 			m_localVarNodes = null;
+
+			m_globalArrayNodes.Destroy();
+			m_globalArrayNodes = null;
 
 			m_selectedNodes.Clear();
 			m_selectedNodes = null;
@@ -3095,6 +3116,7 @@ namespace AmplifyShaderEditor
 				case AvailableShaderTypes.SurfaceShader:
 				{
 					CurrentCanvasMode = NodeAvailability.SurfaceShader;
+					m_currentSRPType = TemplateSRPType.BuiltIn;
 					newMasterNode = CreateNode( typeof( StandardSurfaceOutputNode ), false ) as MasterNode;
 				}
 				break;
@@ -3508,6 +3530,7 @@ namespace AmplifyShaderEditor
 		public UsageListCustomExpressionsOnFunctionMode CustomExpressionOnFunctionMode { get { return m_customExpressionsOnFunctionMode; } }
 		public UsageListScreenColorNodes ScreenColorNodes { get { return m_screenColorNodes; } }
 		public UsageListRegisterLocalVarNodes LocalVarNodes { get { return m_localVarNodes; } }
+		public UsageListGlobalArrayNodes GlobalArrayNodes { get { return m_globalArrayNodes; } }
 		public UsageListFunctionInputNodes FunctionInputNodes { get { return m_functionInputNodes; } }
 		public UsageListFunctionNodes FunctionNodes { get { return m_functionNodes; } }
 		public UsageListFunctionOutputNodes FunctionOutputNodes { get { return m_functionOutputNodes; } }

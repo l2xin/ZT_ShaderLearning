@@ -17,7 +17,7 @@ namespace AmplifyShaderEditor
 		private const string SamplerType = "tex2D";
 		private const string GrabTextureDefault = "_GrabTexture";
 		private const string ScreenColorStr = "screenColor";
-		
+
 		[SerializeField]
 		private TexReferenceType m_referenceType = TexReferenceType.Object;
 
@@ -41,6 +41,15 @@ namespace AmplifyShaderEditor
 		[SerializeField]
 		private float m_referenceWidth = -1;
 
+		//SRP specific code
+		private string OpaqueTextureDefine = "REQUIRE_OPAQUE_TEXTURE 1";
+		private string FetchOpaqueTexture = "SAMPLE_TEXTURE2D( _CameraOpaqueTexture, sampler_CameraOpaqueTexture, {0})";
+		private string FetchVarName = "fetchOpaqueVal";
+#if !UNITY_2018_3_OR_NEWER
+		// Legacy SRP code
+		private string DeclareOpaqueTextureObject = "TEXTURE2D( _CameraOpaqueTexture);";
+		private string DeclareOpaqueTextureSampler = "SAMPLER( sampler_CameraOpaqueTexture);";
+#endif
 		public ScreenColorNode() : base() { }
 		public ScreenColorNode( int uniqueId, float x, float y, float width, float height ) : base( uniqueId, x, y, width, height ) { }
 
@@ -50,7 +59,7 @@ namespace AmplifyShaderEditor
 
 			AddInputPort( WirePortDataType.FLOAT2, false, "UV" );
 			AddOutputColorPorts( "RGBA" );
-			
+
 			m_currentParameterType = PropertyType.Global;
 			m_underscoredGlobal = true;
 			m_useVarSubtitle = true;
@@ -80,13 +89,19 @@ namespace AmplifyShaderEditor
 			base.OnNodeLogicUpdate( drawInfo );
 			if( m_referenceNodeId > -1 && m_referenceNode == null )
 			{
-				m_referenceNode = m_containerGraph.GetNode( m_referenceNodeId ) as ScreenColorNode;
+				m_referenceNode = UIUtils.GetScreenColorNode( m_referenceNodeId ) as ScreenColorNode;
 				if( m_referenceNode == null )
 				{
 					m_referenceNodeId = -1;
 					m_referenceArrayId = -1;
 					m_sizeIsDirty = true;
 				}
+			}
+
+			if( m_showSubtitle == m_containerGraph.IsSRP )
+			{
+				m_showSubtitle = !m_containerGraph.IsSRP;
+				m_sizeIsDirty = true;
 			}
 		}
 
@@ -188,21 +203,25 @@ namespace AmplifyShaderEditor
 
 			if( m_referenceType == TexReferenceType.Object )
 			{
-				EditorGUI.BeginChangeCheck();
-				m_useCustomGrab = EditorGUILayoutToggle( "Custom Grab Pass", m_useCustomGrab );
-				EditorGUI.BeginDisabledGroup( !m_useCustomGrab );
-				DrawMainPropertyBlockNoPrecision();
-				EditorGUI.EndDisabledGroup();
-
-				m_normalize = EditorGUILayoutToggle( "Normalize", m_normalize );
-				if( EditorGUI.EndChangeCheck() )
+				EditorGUI.BeginDisabledGroup( m_containerGraph.IsSRP );
 				{
-					UpdatePort();
-					if( m_useCustomGrab )
+					EditorGUI.BeginChangeCheck();
+					m_useCustomGrab = EditorGUILayoutToggle( "Custom Grab Pass", m_useCustomGrab );
+					EditorGUI.BeginDisabledGroup( !m_useCustomGrab );
+					DrawMainPropertyBlockNoPrecision();
+					EditorGUI.EndDisabledGroup();
+
+					m_normalize = EditorGUILayoutToggle( "Normalize", m_normalize );
+					if( EditorGUI.EndChangeCheck() )
 					{
-						BeginPropertyFromInspectorCheck();
+						UpdatePort();
+						if( m_useCustomGrab )
+						{
+							BeginPropertyFromInspectorCheck();
+						}
 					}
 				}
+				EditorGUI.EndDisabledGroup();
 			}
 			else
 			{
@@ -220,15 +239,18 @@ namespace AmplifyShaderEditor
 
 				m_referenceArrayId = EditorGUILayoutPopup( Constants.AvailableReferenceStr, m_referenceArrayId, arr );
 				GUI.enabled = guiEnabledBuffer;
-				EditorGUI.BeginChangeCheck();
-				m_normalize = EditorGUILayoutToggle( "Normalize", m_normalize );
-				if( EditorGUI.EndChangeCheck() )
+				EditorGUI.BeginDisabledGroup( m_containerGraph.IsSRP );
 				{
-					UpdatePort();
+					EditorGUI.BeginChangeCheck();
+					m_normalize = EditorGUILayoutToggle( "Normalize", m_normalize );
+					if( EditorGUI.EndChangeCheck() )
+					{
+						UpdatePort();
+					}
 				}
+				EditorGUI.EndDisabledGroup();
 			}
 		}
-
 
 		private void UpdatePort()
 		{
@@ -260,26 +282,36 @@ namespace AmplifyShaderEditor
 
 		public override string GenerateShaderForOutput( int outputId, ref MasterNodeDataCollector dataCollector, bool ignoreLocalVar )
 		{
-			if( dataCollector.IsTemplate && dataCollector.IsSRP )
+			if( dataCollector.IsTemplate && dataCollector.CurrentSRPType == TemplateSRPType.HD )
 			{
-				UIUtils.ShowMessage( "GrabPasses are not supported on Unity Scriptable Rendering Pipelines." );
-				return GetOutputColorItem( 0, outputId,"(0).xxxx");
+				UIUtils.ShowMessage( "GrabPasses are not supported on Unity HD Scriptable Rendering Pipeline." );
+				return GetOutputColorItem( 0, outputId, "(0).xxxx" );
 			}
 
 			if( m_outputPorts[ 0 ].IsLocalValue( dataCollector.PortCategory ) )
 				return GetOutputColorItem( 0, outputId, m_outputPorts[ 0 ].LocalValue( dataCollector.PortCategory ) );
 
-			base.GenerateShaderForOutput( outputId, ref dataCollector, ignoreLocalVar );
-			
-			string propertyName = CurrentPropertyReference;
-
-			OnPropertyNameChanged();
-
-			bool emptyName = string.IsNullOrEmpty( m_propertyInspectorName ) || propertyName == GrabTextureDefault;
-
-			dataCollector.AddGrabPass( emptyName ? string.Empty : propertyName );
-
-			string valueName = SetFetchedData( ref dataCollector, ignoreLocalVar );
+			string valueName = string.Empty;
+			if( dataCollector.IsSRP )
+			{
+#if !UNITY_2018_3_OR_NEWER
+				dataCollector.AddToUniforms( UniqueId, DeclareOpaqueTextureObject );
+				dataCollector.AddToUniforms( UniqueId, DeclareOpaqueTextureSampler );
+#endif
+				valueName = FetchVarName + OutputId;
+				dataCollector.AddToDefines( UniqueId, OpaqueTextureDefine );
+				string uvCoords = GetUVCoords( ref dataCollector, ignoreLocalVar, false );
+				dataCollector.AddLocalVariable( UniqueId, m_currentPrecisionType, WirePortDataType.FLOAT4, valueName, string.Format( FetchOpaqueTexture, uvCoords ) );
+			}
+			else
+			{
+				base.GenerateShaderForOutput( outputId, ref dataCollector, ignoreLocalVar );
+				string propertyName = CurrentPropertyReference;
+				OnPropertyNameChanged();
+				bool emptyName = string.IsNullOrEmpty( m_propertyInspectorName ) || propertyName == GrabTextureDefault;
+				dataCollector.AddGrabPass( emptyName ? string.Empty : propertyName );
+				valueName = SetFetchedData( ref dataCollector, ignoreLocalVar );
+			}
 
 			m_outputPorts[ 0 ].SetLocalValue( valueName, dataCollector.PortCategory );
 			return GetOutputColorItem( 0, outputId, valueName );
@@ -300,7 +332,7 @@ namespace AmplifyShaderEditor
 				return samplerValue;
 			}
 
-			if( m_outputPorts[0].IsLocalValue( dataCollector.PortCategory ) )
+			if( m_outputPorts[ 0 ].IsLocalValue( dataCollector.PortCategory ) )
 				return m_outputPorts[ 0 ].LocalValue( dataCollector.PortCategory );
 
 			string samplerOp = SamplerType + ( isProjecting ? "proj" : "" ) + "( " + propertyName + ", " + GetUVCoords( ref dataCollector, ignoreLocalVar, isProjecting ) + " )";

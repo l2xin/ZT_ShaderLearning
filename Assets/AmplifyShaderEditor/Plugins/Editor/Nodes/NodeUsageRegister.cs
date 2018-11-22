@@ -19,6 +19,7 @@ namespace AmplifyShaderEditor
 	[Serializable] public class UsageListFunctionSwitchCopyNodes : NodeUsageRegister<FunctionSwitch> { }
 	[Serializable] public class UsageListTemplateMultiPassMasterNodes : NodeUsageRegister<TemplateMultiPassMasterNode> { }
 	[Serializable] public class UsageListCustomExpressionsOnFunctionMode : NodeUsageRegister<CustomExpressionNode> { }
+	[Serializable] public class UsageListGlobalArrayNodes : NodeUsageRegister<GlobalArrayNode> { }
 
 	[Serializable]
 	public class NodeUsageRegister<T> where T : ParentNode
@@ -82,14 +83,15 @@ namespace AmplifyShaderEditor
 
 		public bool HasNode( int uniqueId )
 		{
-			int count = m_nodes.Count;
-			for( int i = 0; i < count; i++ )
-			{
-				if( m_nodes[ i ].UniqueId == uniqueId )
-					return true;
+			return m_nodes.FindIndex( x => x.UniqueId == uniqueId ) > -1 ? true : false;
+			//int count = m_nodes.Count;
+			//for( int i = 0; i < count; i++ )
+			//{
+			//	if( m_nodes[ i ].UniqueId == uniqueId )
+			//		return true;
 
-			}
-			return false;
+			//}
+			//return false;
 		}
 
 		public void RemoveNode( T node )
@@ -147,28 +149,36 @@ namespace AmplifyShaderEditor
 
 		public int GetNodeRegisterIdx( int uniqueId )
 		{
-			int count = m_nodes.Count;
-			for( int i = 0; i < count; i++ )
-			{
-				if( m_nodes[ i ].UniqueId == uniqueId )
-				{
-					return i;
-				}
-			}
-			return -1;
+			return m_nodes.FindIndex( x => x.UniqueId == uniqueId );
+
+			//int count = m_nodes.Count;
+			//for( int i = 0; i < count; i++ )
+			//{
+			//	if( m_nodes[ i ].UniqueId == uniqueId )
+			//	{
+			//		return i;
+			//	}
+			//}
+			//return -1;
 		}
 
 		public void UpdateDataOnNode( int uniqueId, string data )
 		{
-			int count = m_nodes.Count;
-			for( int i = 0; i < count; i++ )
+			int index = m_nodes.FindIndex( x => x.UniqueId == uniqueId );
+			if( index > -1 )
 			{
-				if( m_nodes[ i ].UniqueId == uniqueId )
-				{
-					m_nodesArr[ i ] = data;
-					m_nodeIDs[ i ] = uniqueId;
-				}
+				m_nodesArr[ index ] = data;
+				m_nodeIDs[ index ] = uniqueId;
 			}
+			//int count = m_nodes.Count;
+			//for( int i = 0; i < count; i++ )
+			//{
+			//	if( m_nodes[ i ].UniqueId == uniqueId )
+			//	{
+			//		m_nodesArr[ i ] = data;
+			//		m_nodeIDs[ i ] = uniqueId;
+			//	}
+			//}
 		}
 
 		public void Dump()

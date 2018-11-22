@@ -382,7 +382,7 @@ namespace AmplifyShaderEditor
 			if( m_invalidNode )
 				return;
 
-			if( m_templateMultiPass.SRPIsPBRHD )
+			if( m_templateMultiPass.SubShaders[m_subShaderIdx].Passes[m_passIdx].Modules.SRPIsPBRHD )
 				ConfigHDPorts();
 		}
 
@@ -847,7 +847,7 @@ namespace AmplifyShaderEditor
 		void AddHDKeywords()
 		{
 			if( m_templateMultiPass.SubShaders[ m_subShaderIdx ].Modules.SRPType != TemplateSRPType.HD ||
-				!m_templateMultiPass.SubShaders[ m_subShaderIdx ].Modules.SRPIsPBR )
+				!m_templateMultiPass.SubShaders[ m_subShaderIdx ].Passes[m_passIdx].Modules.SRPIsPBR )
 				return;
 
 			switch( m_hdSrpMaterialType )
@@ -918,7 +918,7 @@ namespace AmplifyShaderEditor
 		void ConfigHDPorts()
 		{
 			if( m_templateMultiPass.SubShaders[ m_subShaderIdx ].Modules.SRPType != TemplateSRPType.HD ||
-				!m_templateMultiPass.SubShaders[ m_subShaderIdx ].Modules.SRPIsPBR )
+				!m_templateMultiPass.SubShaders[ m_subShaderIdx ].Passes[ m_passIdx ].Modules.SRPIsPBR )
 				return;
 
 			FetchHDPorts();
@@ -1040,7 +1040,7 @@ namespace AmplifyShaderEditor
 				DrawShaderName();
 				DrawCurrentShaderType();
 #if SHOW_HD_SRP
-				if( m_templateMultiPass.SRPIsPBRHD )
+				if( m_templateMultiPass.SubShaders[ m_subShaderIdx ].Passes[ m_passIdx ].Modules.SRPIsPBRHD )
 				{
 					EditorGUI.BeginChangeCheck();
 					CurrentHDMaterialType = (HDSRPMaterialType)EditorGUILayoutEnumPopup( HDSRPMaterialTypeStr, m_hdSrpMaterialType );
@@ -2025,7 +2025,7 @@ namespace AmplifyShaderEditor
 		{
 			base.RefreshExternalReferences();
 			CheckTemplateChanges();
-			if( m_templateMultiPass != null && m_templateMultiPass.SRPIsPBRHD && UIUtils.CurrentShaderVersion() < 15410 )
+			if( m_templateMultiPass != null && m_templateMultiPass.SubShaders[ m_subShaderIdx ].Passes[ m_passIdx ].Modules.SRPIsPBRHD && UIUtils.CurrentShaderVersion() < 15410 )
 			{
 				FetchHDPorts();
 				m_hdSrpMaterialType = ( m_specularPort != null && m_specularPort.HasOwnOrLinkConnection ) ? HDSRPMaterialType.Specular : HDSRPMaterialType.Standard;

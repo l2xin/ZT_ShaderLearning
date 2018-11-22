@@ -1024,7 +1024,7 @@ namespace AmplifyShaderEditor
 				formatStr = "UnityObjectToClipPos({0})";
 				break;
 				case TemplateSRPType.HD:
-				formatStr = "ComputeClipSpacePosition( mul( GetObjectToWorldMatrix(), {0} ).xyz, GetWorldToHClipMatrix())";
+				formatStr = "TransformWorldToHClip( TransformObjectToWorld({0}))";
 				break;
 				case TemplateSRPType.Lightweight:
 				formatStr = "TransformObjectToHClip(({0}).xyz)";
@@ -1058,7 +1058,7 @@ namespace AmplifyShaderEditor
 				formatStr = "UnityObjectToClipPos({0})";
 				break;
 				case TemplateSRPType.HD:
-				formatStr = "ComputeClipSpacePosition( mul( GetObjectToWorldMatrix(), {0} ).xyz, GetWorldToHClipMatrix())";
+				formatStr = "TransformWorldToHClip( TransformObjectToWorld({0}))";
 				break;
 				case TemplateSRPType.Lightweight:
 				formatStr = "TransformObjectToHClip(({0}).xyz)";
@@ -1223,13 +1223,36 @@ namespace AmplifyShaderEditor
 			}
 		}
 
+		public string GetTangentToWorldMatrixFast( PrecisionType precisionType, bool useMasterNodeCategory = true, MasterNodePortCategory customCategory = MasterNodePortCategory.Fragment )
+		{
+			string worldTangent = GetWorldTangent( precisionType );
+			string worldNormal = GetWorldNormal( precisionType );
+			string worldBinormal = GetWorldBinormal( precisionType );
+
+			string varName = GeneratorUtils.TangentToWorldFastStr;
+			if( HasCustomInterpolatedData( varName, useMasterNodeCategory, customCategory ) )
+				return varName;
+
+			string result = string.Format( "float3x3({0}.x,{1}.x,{2}.x,{0}.y,{1}.y,{2}.y,{0}.z,{1}.z,{2}.z)", worldTangent, worldBinormal, worldNormal );
+			m_currentDataCollector.AddLocalVariable( -1, precisionType, WirePortDataType.FLOAT3x3, GeneratorUtils.TangentToWorldFastStr, result );
+			return GeneratorUtils.TangentToWorldFastStr;
+		}
+
+		public string GetTangentToWorldMatrixPrecise( PrecisionType precisionType, bool useMasterNodeCategory = true, MasterNodePortCategory customCategory = MasterNodePortCategory.Fragment)
+		{
+			string worldToTangent = GetWorldToTangentMatrix( precisionType, useMasterNodeCategory, customCategory );
+			GeneratorUtils.Add3x3InverseFunction( ref m_currentDataCollector, UIUtils.PrecisionWirePortToCgType( precisionType, WirePortDataType.FLOAT ) );
+			m_currentDataCollector.AddLocalVariable( -1, precisionType, WirePortDataType.FLOAT3x3, GeneratorUtils.TangentToWorldPreciseStr, string.Format( GeneratorUtils.Inverse3x3Header, worldToTangent ) );
+			return GeneratorUtils.TangentToWorldPreciseStr;
+		}
+
 		public string GetWorldToTangentMatrix( PrecisionType precisionType, bool useMasterNodeCategory = true, MasterNodePortCategory customCategory = MasterNodePortCategory.Fragment )
 		{
 			string worldTangent = GetWorldTangent( precisionType );
 			string worldNormal = GetWorldNormal( precisionType );
 			string worldBinormal = GetWorldBinormal( precisionType );
 
-			string varName = "worldToTanMat";
+			string varName = GeneratorUtils.WorldToTangentStr;// "worldToTanMat";
 			if( HasCustomInterpolatedData( varName, useMasterNodeCategory, customCategory ) )
 				return varName;
 			string worldTanMat = string.Format( "float3x3({0},{1},{2})", worldTangent, worldBinormal, worldNormal );

@@ -404,7 +404,7 @@ namespace AmplifyShaderEditor
 
 		private string SamplerWrappedData( ref MasterNodeDataCollector dataCollector )
 		{
-			m_internalData = "sampler" + PortId + UIUtils.GetNode( m_nodeId ).OutputId;
+			m_internalData = "_Sampler" + PortId + UIUtils.GetNode( m_nodeId ).OutputId;
 			dataCollector.AddToUniforms( m_nodeId, "uniform sampler2D " + m_internalData + ";" );
 
 			return m_internalData;

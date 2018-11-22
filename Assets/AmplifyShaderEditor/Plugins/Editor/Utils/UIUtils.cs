@@ -204,7 +204,7 @@ namespace AmplifyShaderEditor
 		World,
 		View,
 		Clip,
-		//Tangent,
+		Tangent
 		//Screen??
 	}
 
@@ -2613,6 +2613,16 @@ namespace AmplifyShaderEditor
 		public static int GetLocalVarNodeRegisterId( int uniqueId ) { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.LocalVarNodes.GetNodeRegisterIdx( uniqueId ); } return -1; }
 		public static RegisterLocalVarNode GetLocalVarNode( int idx ) { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.LocalVarNodes.GetNode( idx ); } return null; }
 		public static void UpdateLocalVarDataNode( int uniqueId, string data ) { if( CurrentWindow != null ) { CurrentWindow.CurrentGraph.LocalVarNodes.UpdateDataOnNode( uniqueId, data ); } }
+
+		//Global Array
+		public static void RegisterGlobalArrayNode( GlobalArrayNode node ) { if( CurrentWindow != null ) { CurrentWindow.CurrentGraph.GlobalArrayNodes.AddNode( node ); } }
+		public static void UnregisterGlobalArrayNode( GlobalArrayNode node ) { if( CurrentWindow != null ) { CurrentWindow.CurrentGraph.GlobalArrayNodes.RemoveNode( node ); } }
+		public static string[] GlobalArrayNodeArr() { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.GlobalArrayNodes.NodesArr; } return null; }
+		public static GlobalArrayNode GetGlobalArrayNode( int idx ) { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.GlobalArrayNodes.GetNode( idx ); } return null; }
+		public static int GetGlobalArrayNodeRegisterId( int uniqueId ) { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.GlobalArrayNodes.GetNodeRegisterIdx( uniqueId ); } return -1; }
+		public static void UpdateGlobalArrayDataNode( int uniqueId, string data ) { if( CurrentWindow != null ) { CurrentWindow.CurrentGraph.GlobalArrayNodes.UpdateDataOnNode( uniqueId, data ); } }
+		public static int GetGlobalArrayNodeAmount() { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.GlobalArrayNodes.NodesList.Count; } return -1; }
+
 
 		public static void FocusOnNode( ParentNode node, float zoom, bool selectNode ) { if( CurrentWindow != null ) { CurrentWindow.FocusOnNode( node, zoom, selectNode ); } }
 		public static PrecisionType CurrentPrecision() { if( CurrentWindow != null ) { return CurrentWindow.CurrentGraph.CurrentPrecision; } return PrecisionType.Float; }

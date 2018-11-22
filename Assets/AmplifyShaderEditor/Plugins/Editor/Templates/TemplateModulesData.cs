@@ -431,7 +431,7 @@ namespace AmplifyShaderEditor
 		public TemplateTagData InputsVertTag { get { return m_inputsVertTag; } }
 		public TemplateTagData InputsFragTag { get { return m_inputsFragTag; } }
 		public TemplateShaderModelData ShaderModel { get { return m_shaderModel; } }
-		public TemplateSRPType SRPType { get { return m_srpType; } }
+		public TemplateSRPType SRPType { get { return m_srpType; } set { m_srpType = value; } }
 		public bool SRPIsPBR { get { return m_srpIsPBR; } set { m_srpIsPBR = value; } }
 		public bool SRPIsPBRHD { get { return m_srpIsPBR && m_srpType == TemplateSRPType.HD; }  }
 		public string UniquePrefix { get { return m_uniquePrefix; } }

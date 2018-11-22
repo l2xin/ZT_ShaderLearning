@@ -395,7 +395,12 @@ namespace AmplifyShaderEditor
 			else
 			{
 				UIUtils.CreateEmptyFromInvalid( shader );
-				UIUtils.ShowMessage( "Trying to open shader not created on ASE!\nBEWARE, old data will be lost if saving it here!",MessageSeverity.Warning );
+				UIUtils.ShowMessage( "Trying to open shader not created on ASE!\nBEWARE, old data will be lost if saving it here!", MessageSeverity.Warning );
+				if( UIUtils.CurrentWindow.LiveShaderEditing )
+				{
+					UIUtils.ShowMessage( "Disabling Live Shader Editing. Must manually re-enable it.", MessageSeverity.Warning );
+					UIUtils.CurrentWindow.LiveShaderEditing = false;
+				}
 			}
 		}
 
@@ -5143,6 +5148,17 @@ namespace AmplifyShaderEditor
 					}
 					break;
 				}
+			}
+		}
+
+		public bool LiveShaderEditing
+		{
+			get { return m_liveShaderEditing; }
+			set
+			{
+				m_liveShaderEditing = value;
+				m_innerEditorVariables.LiveMode = m_liveShaderEditing;
+				UpdateLiveUI();
 			}
 		}
 

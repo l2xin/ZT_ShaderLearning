@@ -156,7 +156,7 @@ namespace AmplifyShaderEditor
 			if( m_pathButtonStyle == null )
 				m_pathButtonStyle = "minibutton";
 
-			m_scrollPos = EditorGUILayout.BeginScrollView( m_scrollPos, GUILayout.Height( Screen.height ) );
+			m_scrollPos = EditorGUILayout.BeginScrollView( m_scrollPos, GUILayout.Height( position.height ) );
 			float cachedWidth = EditorGUIUtility.labelWidth;
 			EditorGUIUtility.labelWidth = 100;
 			EditorGUILayout.BeginVertical( m_contentStyle );
@@ -253,7 +253,7 @@ namespace AmplifyShaderEditor
 			EditorGUILayout.BeginHorizontal();
 			m_pathButtonContent.text = m_folderPath;
 			Vector2 buttonSize = m_pathButtonStyle.CalcSize( m_pathButtonContent );
-			if( GUILayout.Button( m_pathButtonContent, m_pathButtonStyle, GUILayout.MaxWidth( Mathf.Min( Screen.width * 0.5f, buttonSize.x ) ) ) )
+			if( GUILayout.Button( m_pathButtonContent, m_pathButtonStyle, GUILayout.MaxWidth( Mathf.Min( position.width * 0.5f, buttonSize.x ) ) ) )
 			{
 				string folderpath = EditorUtility.OpenFolderPanel( "Save Texture Array to folder", "Assets/", "" );
 				folderpath = FileUtil.GetProjectRelativePath( folderpath );

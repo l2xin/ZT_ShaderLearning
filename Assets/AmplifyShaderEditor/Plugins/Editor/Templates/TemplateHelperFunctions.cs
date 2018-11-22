@@ -2033,8 +2033,11 @@ namespace AmplifyShaderEditor
 
 		public static readonly string FetchDefaultDepthFormat = "UNITY_SAMPLE_DEPTH(tex2Dproj(_CameraDepthTexture,UNITY_PROJ_COORD( {0} )))";
 		public static readonly string FetchLWDepthFormat = "tex2Dproj( _CameraDepthTexture, {0} ).r";
+#if UNITY_2018_3_OR_NEWER
+		public static readonly string FetchHDDepthFormat = " SampleCameraDepth( {0}.xy/{0}.w ).r";
+#else
 		public static readonly string FetchHDDepthFormat = " SAMPLE_TEXTURE2D( _CameraDepthTexture, s_point_clamp_sampler,{0}.xy/{0}.w ).r";
-
+#endif
 		public static string CreateDepthFetch( MasterNodeDataCollector dataCollector, string screenPos )
 		{
 			string screenDepthInstruction = string.Empty;
