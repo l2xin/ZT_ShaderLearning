@@ -1,4 +1,4 @@
-﻿## T_VertexMoveShader 控制模型顶点移动 --by l2xin
+## T_VertexMoveShader 控制模型顶点移动 --by l2xin
 
 
 ### 顶点偏移固定值
@@ -8,7 +8,7 @@ v.vertex.xyz += _MaxDistance * v.normal.xyz;
 
 
 ### 时间相关
-要对顶点移动做周期控制，想到正弦余弦曲线，使用`_SinTime`或者`_CosTime`.
+要对顶点移动做周期控制，想到正弦余弦曲线，使用`_SinTime`或者`_CosTime`.
 
 * _Time  float4  Time (t/20, t, t*2, t*3)
 * _SinTime  float4  Sine of time: (t/8, t/4, t/2, t).
