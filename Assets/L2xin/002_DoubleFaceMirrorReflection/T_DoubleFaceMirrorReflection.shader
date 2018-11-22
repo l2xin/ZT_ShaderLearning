@@ -2,7 +2,7 @@
  * 双面漫反射渲染
  * @author l2xin
  */
-Shader "Custom/T_DoubleFaceDiffuse"
+Shader "Custom/T_DoubleFaceMirrorReflection"
 {
 	Properties
 	{
