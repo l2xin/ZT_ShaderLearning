@@ -2,6 +2,5 @@
 
 ## UnityShader 学习
 
-目录之后整理
-
-* 
+* 001_VertexMove T_VertexMoveShader 控制模型顶点移动 
+* 002_DoubleFaceDiffuse T_DoubleFaceDiffuse 双面漫反射渲染
