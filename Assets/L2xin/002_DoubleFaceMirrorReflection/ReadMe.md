@@ -1,11 +1,11 @@
-﻿## T_DoubleFaceMirrorReflection 双面镜面反射 --by l2xin
+## T_DoubleFaceMirrorReflection 双面镜面反射 --by l2xin
 
 ---
 ### Cull Off
 需关闭裁剪背面剔除或者正面剔除。
 
 ---
-### 法线方向和光源方向dot计算出漫反射结果
+### 法线方向和光源方向dot计算出漫反射结果
 ``` GLSL
 o.diffuseFront = max(0, dot( UnityObjectToWorldNormal(v.normal), _WorldSpaceLightPos0.xyz));
 o.diffuseBack = max(0, dot( -UnityObjectToWorldNormal(v.normal), _WorldSpaceLightPos0.xyz));
@@ -31,7 +31,7 @@ fixed4 frag (fixed facing : VFACE) : SV_Target
 * 使用**max**(0, _diffuceColor)：dot计算可能出负数，颜色为负不合法。
 * **_WorldSpaceLightPos0** ：内置变量，获得光照方向。
 * 使用`facing > 0 ? _ColorFront : _ColorBack`三目运算符而非`if else`，切记。 
-* 上一级目录下 builtin_shaders-2018.2.11f1/UnityShaderVariables中包含一些内置变量，放在这里方便查看。
+* 上一级目录下 builtin_shaders-2018.2.11f1/UnityShaderVariables中包含一些内置变量，放在这里方便查看。
 
 ---
 ## 参考
