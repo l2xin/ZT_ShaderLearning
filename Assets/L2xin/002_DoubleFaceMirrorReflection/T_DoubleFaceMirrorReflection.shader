@@ -1,5 +1,5 @@
 ﻿/**
- * 双面漫反射渲染
+ * 双面镜面反射
  * @author l2xin
  */
 Shader "Custom/T_DoubleFaceMirrorReflection"
