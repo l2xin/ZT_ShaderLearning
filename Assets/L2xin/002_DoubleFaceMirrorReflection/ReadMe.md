@@ -13,7 +13,7 @@ o.diffuseBack = max(0, dot( -UnityObjectToWorldNormal(v.normal), _WorldSpaceLigh
 
 ---
 ### VFACE：被渲染的面是否朝向摄像机，
-用于片段着色器，需要添加`#pragma target 3.0`**`编译指令。
+用于片段着色器，需要添加`#pragma target 3.0`编译指令。
 
 用法如下：
 
