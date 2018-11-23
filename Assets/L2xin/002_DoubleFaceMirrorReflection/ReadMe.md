@@ -5,7 +5,7 @@
 需关闭裁剪背面剔除或者正面剔除。
 
 ---
-### 法线方向和光源方向dot计算出漫反射结果
+### 法线方向和光源方向dot计算出镜面反射结果
 ``` GLSL
 o.diffuseFront = max(0, dot( UnityObjectToWorldNormal(v.normal), _WorldSpaceLightPos0.xyz));
 o.diffuseBack = max(0, dot( -UnityObjectToWorldNormal(v.normal), _WorldSpaceLightPos0.xyz));
