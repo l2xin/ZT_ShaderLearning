@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Camera's Depth Texture</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-CameraDepthTexture.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-CameraDepthTexture.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-CameraDepthTexture.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-CameraDepthTexture.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-CameraDepthTexture.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-AdvancedTopics.html">Advanced ShaderLab topics</a></li>
+<li> Camera's Depth Texture</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DepthTextures.html"></a></span><div class="tip"> Using Depth Textures</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-PlatformDifferences.html"></a></span><div class="tip">Platform-specific rendering differences</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Camera’s Depth Texture</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>A <span class="tooltip"><a href="class-Camera.html">Camera</a><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> can generate a depth, depth+normals, or motion vector Texture. This is a minimalistic G-buffer Texture that can be used for post-processing effects or to implement custom lighting models (e.g. light pre-pass). It is also possible to build similar textures yourself, using <a href="SL-ShaderReplacement.html">Shader Replacement</a> feature.</p>
+
+<p>The Camera’s depth Texture mode can be enabled using <a href="../ScriptReference/Camera-depthTextureMode.html">Camera.depthTextureMode</a> variable from script.</p>
+
+<p>There are three possible depth texture modes:</p>
+
+<ul>
+<li>
+<strong>DepthTextureMode.Depth</strong>: a <a href="SL-DepthTextures.html">depth texture</a>.</li>
+<li>
+<strong>DepthTextureMode.DepthNormals</strong>: depth and view space normals packed into one texture.*</li>
+<li>
+<strong>DepthTextureMode.MotionVectors</strong>: per-pixel screen space motion of each screen texel for the current frame. Packed into a RG16 texture.</li>
+</ul>
+
+<p>These are flags, so it is possible to specify any combination of the above textures.</p>
+
+<h2>DepthTextureMode.Depth texture</h2>
+
+<p>This builds a screen-sized <a href="SL-DepthTextures.html">depth texture</a>.</p>
+
+<p>Depth texture is rendered using the same <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> passes as used for shadow caster <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> (<code>ShadowCaster</code> pass type). So by extension, if a shader does not support shadow casting (i.e. there’s no shadow caster pass in the shader or any of the fallbacks), then objects using that shader will not show up in the depth texture.</p>
+
+<ul>
+<li>Make your shader <a href="SL-Fallback.html">fallback</a> to some other shader that has a shadow casting pass, or</li>
+<li>If you’re using <span class="tooltip"><a href="SL-SurfaceShaders.html">surface shaders</a><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span>, adding an <code>addshadow</code> directive will make them generate a shadow pass too.</li>
+</ul>
+
+<p>Note that only “opaque” objects (that which have their materials and shaders setup to use <a href="SL-SubShaderTags.html">render queue</a> &lt;= 2500) are rendered into the depth texture.</p>
+
+<h2>DepthTextureMode.DepthNormals texture</h2>
+
+<p>This builds a screen-sized 32 bit (8 bit/channel) texture, where view space normals are encoded into R&amp;G channels, and depth is encoded in B&amp;A channels. Normals are encoded using Stereographic projection, and depth is 16 bit value packed into two 8 bit channels.</p>
+
+<p>
+<a href="SL-BuiltinIncludes.html"><code>UnityCG.cginc</code> include file</a> has a helper function <code>DecodeDepthNormal</code> to decode depth and normal from the encoded <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> value. Returned depth is in 0..1 range.</p>
+
+<p>For examples on how to use the depth and normals texture, please refer to the EdgeDetection image effect in the Shader Replacement example project or <a href="PostProcessing-AmbientOcclusion.html">Screen Space Ambient Occlusion Image Effect</a>.</p>
+
+<h2>DepthTextureMode.MotionVectors texture</h2>
+
+<p>This builds a screen-sized RG16 (16-bit float/channel) texture, where screen space pixel motion is encoded into the R&amp;G channels. The pixel motion is encoded in screen UV space.</p>
+
+<p>When sampling from this texture motion from the encoded pixel is returned in a rance of –1..1. This will be the UV offset from the last frame to the current frame. </p>
+
+<h2>Tips &amp; Tricks</h2>
+
+<p>
+<a href="class-Camera.html">Camera inspector</a> indicates when a camera is rendering a depth or a depth+normals texture.</p>
+
+<p>The way that depth textures are requested from the Camera (<a href="../ScriptReference/Camera-depthTextureMode.html">Camera.depthTextureMode</a>) might mean that after you disable an effect that needed them, the Camera might still continue rendering them. If there are multiple effects present on a Camera, where each of them needs the depth texture, there’s no good way to automatically disable depth texture rendering if you disable the individual effects.</p>
+
+<p>When implementing complex Shaders or Image Effects, keep <a href="SL-PlatformDifferences.html">Rendering Differences Between Platforms</a> in mind. In particular, using depth texture in an Image Effect often needs special handling on Direct3D + Anti-Aliasing.</p>
+
+<p>In some cases, the depth texture might come directly from the native Z buffer. If you see artifacts in your depth texture, make sure that the shaders that use it <strong>do not</strong> write into the Z buffer (use <a href="SL-CullAndDepth.html">ZWrite Off</a>).</p>
+
+<h2>Shader variables</h2>
+
+<p>Depth textures are available for sampling in shaders as global shader properties. By declaring a sampler called <code>_CameraDepthTexture</code> you will be able to sample the main depth texture for the camera.</p>
+
+<p>
+<code>_CameraDepthTexture</code> always refers to the camera’s primary depth
+texture. By contrast, you can use <code>_LastCameraDepthTexture</code> to refer to the last depth texture rendered by any camera. This could be useful for example if you render a half-resolution depth texture in script using a secondary camera and want to make it available to a post-process shader.</p>
+
+<p>The motion vectors texture (when enabled) is available in Shaders as a global Shader property. By declaring a sampler called ‘_CameraMotionVectorsTexture’ you can sample the Texture for the curently rendering Camera. </p>
+
+<h2>Under the hood</h2>
+
+<p>Depth textures can come directly from the actual depth buffer,
+or be rendered in a separate pass, depending on the rendering
+path used and the hardware. Typically when using Deferred
+Shading or Legacy Deferred Lighting rendering paths, the depth textures come “for free” since they are a product of the
+G-buffer rendering anyway.</p>
+
+<p>When the DepthNormals texture is rendered in a separate pass, this is done through <a href="SL-ShaderReplacement.html">Shader Replacement</a>. Hence it is important to have correct “<strong>RenderType</strong>” tag in your shaders.</p>
+
+<p>When enabled, the MotionVectors texture always comes from a extra render pass. Unity will render moving GameObjects into this buffer, and construct their motion from the last frame to the current frame. </p>
+
+<h2>See also</h2>
+
+<ul>
+<li><a href="PostProcessingWritingEffects.html">Writing Image Effects</a></li>
+<li><a href="SL-DepthTextures.html">Depth Textures</a></li>
+<li><a href="SL-ShaderReplacement.html">Shader Replacement</a></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DepthTextures.html"></a></span><div class="tip"> Using Depth Textures</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-PlatformDifferences.html"></a></span><div class="tip">Platform-specific rendering differences</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

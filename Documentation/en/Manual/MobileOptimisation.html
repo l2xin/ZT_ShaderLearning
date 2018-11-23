@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Optimizations</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/MobileOptimisation.html">English</a></li>
+<li><a href="/ja/current/Manual/MobileOptimisation.html">日本語</a></li>
+<li><a href="/es/current/Manual/MobileOptimisation.html">Español</a></li>
+<li><a href="/kr/current/Manual/MobileOptimisation.html">한국어</a></li>
+<li><a href="/ru/current/Manual/MobileOptimisation.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="MobileDeveloperChecklist.html">Mobile Developer Checklist</a></li>
+<li>Optimizations</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileProfiling.html"></a></span><div class="tip">Profiling</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationPracticalGuide.html"></a></span><div class="tip"> Practical guide to optimization for mobiles</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Optimizations</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Just like on PCs, mobile platforms like <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> and Android have devices of various levels of performance. You can easily find a phone that’s 10x more powerful for <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> than some other phone.
+Quite easy way of scaling:</p>
+
+<ol>
+<li>Make sure it runs okay on baseline configuration</li>
+<li>Use more eye-candy on higher performing configurations:
+
+<ul>
+<li>Resolution</li>
+<li>Post-processing</li>
+<li>MSAA</li>
+<li>Anisotropy</li>
+<li>Shaders</li>
+<li>Fx/particles density, on/off</li>
+</ul>
+</li>
+</ol>
+
+<h2>Focus on GPUs</h2>
+
+<p>Graphics performance is bound by fillrate, <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> and geometric complexity (vertex count). All three of these can be reduced if you can find a way to cull more renderers. <span class="tooltip"><strong>Occlusion culling</strong><span class="tooltiptext">A Unity feature that disables rendering of objects when they are not currently seen by the camera because they are obscured (occluded) by other objects. <a href="OcclusionCulling.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#OcclusionCulling">Glossary</a></span></span></span> could help here as Unity will automatically cull objects outside the viewing frustum.</p>
+
+<p>On mobiles you’re essentially fillrate bound (fillrate = screen pixels * shader complexity * overdraw), and over-complex <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> is the most common cause of problems. So use mobile <strong>shaders</strong> that come with Unity or design your own but make them as simple as possible. If possible simplify your pixel <strong>shaders</strong> by moving code to <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>.</p>
+
+<p>If reducing the Texture Quality in Quality Settings makes the game run faster, you are probably limited by memory bandwidth. So compress textures, use mipmaps, reduce texture size, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</p>
+
+<p>LOD (Level of Detail) - make objects simpler or eliminate them completely as they move further away. </p>
+
+<h3>Good practice</h3>
+
+<p>Mobile GPUs have huge constraints in how much heat they produce, how much power they use, and how large or noisy they can be. So compared to the desktop parts, mobile GPUs have way less bandwidth, low ALU performance and texturing power. The architectures of the GPUs are also tuned to use as little bandwidth &amp; power as possible.</p>
+
+<p>Unity is optimized for OpenGL ES 2.0, it uses GLSL ES (similar to HLSL) shading language. Built in shaders are most often written in HLSL (also known as Cg). This is cross compiled into GLSL ES for mobile platforms. You can also write GLSL directly if you want to, but doing that limits you to OpenGL-like platforms (e.g. mobile + Mac) since there currently are no GLSL-&gt;HLSL translation tools. When you use float/half/fixed types in HLSL, they end up highp/mediump/lowp precision qualifiers in GLSL ES.</p>
+
+<p>Here is the checklist for good practice:</p>
+
+<ol>
+<li>Keep the number of materials as low as possible. This makes it easier for Unity to batch stuff.</li>
+<li>Use texture atlases (large images containing a collection of sub-images) instead of a number of individual textures. These are faster to load, have fewer state switches, and are batching friendly.</li>
+<li>Use <em>Renderer.sharedMaterial</em> instead of <em>Renderer.material</em> if using texture atlases and shared materials.</li>
+<li>Forward rendered pixel lights are expensive.
+
+<ul>
+<li>Use light mapping instead of realtime lights where ever possible.</li>
+<li>Adjust pixel light count in quality settings. Essentially only the directional light should be per pixel, everything else - per vertex. Certainly this depends on the game.</li>
+</ul>
+</li>
+<li>Experiment with Render Mode of Lights in the Quality Settings to get the correct priority.</li>
+<li>Avoid Cutout (alpha test) shaders unless really necessary.</li>
+<li>Keep Transparent (alpha blend) screen coverage to a minimum.</li>
+<li>Try to avoid situations where multiple lights illuminate any given object.</li>
+<li>Try to reduce the overall number of shader passes (Shadows, pixel lights, reflections).</li>
+<li>Rendering order is critical. In general case:
+
+<ul>
+<li>fully opaque objects roughly front-to-back.</li>
+<li>alpha tested objects roughly front-to-back.</li>
+<li><span class="tooltip"><strong>skybox</strong><span class="tooltiptext">A special type of Material used to represent skies. Usually six-sided. <a href="class-Skybox.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skybox">Glossary</a></span></span></span>.</li>
+<li>alpha blended objects (back to front if needed).</li>
+</ul>
+</li>
+<li>Post Processing is expensive on mobiles, use with care.</li>
+<li>Particles: reduce overdraw, use the simplest possible shaders.</li>
+<li>Double buffer for Meshes modified every frame:</li>
+</ol>
+
+<pre><code>void Update (){
+  // flip between meshes
+  bufferMesh = on ? meshA : meshB;
+  on = !on;
+  bufferMesh.vertices = vertices; // modification to mesh
+  meshFilter.sharedMesh = bufferMesh;
+}
+</code></pre>
+
+<h3>Shader optimizations</h3>
+
+<p>Checking if you are fillrate-bound is easy: does the game run faster if you decrease the display resolution? If yes, you are limited by fillrate.</p>
+
+<p>Try reducing shader complexity by the following methods:</p>
+
+<ul>
+<li>Avoid alpha-testing shaders; instead use alpha-blended versions.</li>
+<li>Use simple, optimized shader code (such as the “Mobile” shaders that ship with Unity).</li>
+<li>Avoid expensive math functions in shader code (pow, exp, log, cos, sin, tan, etc). Consider using pre-calculated lookup textures instead.</li>
+<li>Pick lowest possible number precision format (float, half, fixedin Cg) for best performance.</li>
+</ul>
+
+<h2>Focus on CPUs</h2>
+
+<p>It is often the case that games are limited by the GPU on pixel processing. So they end up having unused CPU power, especially on multicore mobile CPUs. So it is often sensible to pull some work off the GPU and put it onto the CPU instead (Unity does all of these): <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> <span class="tooltip"><strong>skinning</strong><span class="tooltiptext">The process of binding bone joints to the vertices of a character’s mesh or ‘skin’. Performed with an external tool, such as 3ds Max or Maya. <a href="UsingHumanoidChars.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skinning">Glossary</a></span></span></span>, batching of small objects, particle geometry updates.</p>
+
+<p>These should be used with care, not blindly. If you are not bound by draw calls, then batching is actually worse for performance, as it makes culling less efficient and makes more objects affected by lights!</p>
+
+<h3>Good practice</h3>
+
+<ul>
+<li>FindObjectsOfType (and Unity getter properties in general) are very slow, so use them sensibly.</li>
+<li>Set the Static property on non-moving objects to allow internal optimizations like <span class="tooltip"><strong>static batching</strong><span class="tooltiptext">A technique Unity uses to draw GameObjects on the screen that combines static (non-moving) GameObjects into big Meshes, and renders them in a faster way. <a href="DrawCallBatching.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StaticBatching">Glossary</a></span></span></span>.</li>
+<li>Spend lots of CPU cycles to do occlusion culling and better sorting (to take advantage of Early Z-cull).</li>
+</ul>
+
+<h3>Physics</h3>
+
+<p>Physics can be CPU heavy. It can be profiled via the Editor <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span>. If Physics appears to take too much time on CPU:</p>
+
+<ul>
+<li>Tweak <em>Time.fixedDeltaTime</em> (in Project settings -&gt; Time) to be as high as you can get away with. If your game is slow moving, you probably need less fixed updates than games with fast action. Fast paced games will need more frequent calculations, and thus <em>fixedDeltaTime</em> will need to be lower or a collision may fail.</li>
+<li>Physics.solverIterationCount (Physics Manager).</li>
+<li>Use as little Cloth objects as possible.</li>
+<li>Use <span class="tooltip"><strong>Rigidbodies</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> only where necessary.</li>
+<li>Use primitive <span class="tooltip"><strong>colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> in preference <span class="tooltip"><strong>mesh colliders</strong><span class="tooltiptext">A free-form collider component which accepts a mesh reference to define its collision surface shape. <a href="class-MeshCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span>.</li>
+<li>Never ever move a static collider (ie a collider without a Rigidbody) as it causes a big performance hit. It shows up in Profiler as &quot;Static Collider.Move’ but actual processing is in <em>Physics.Simulate</em>. If necessary, add a RigidBody and set <em>isKinematic</em> to true.</li>
+<li>On Windows you can use NVidia’s AgPerfMon profiling tool set to get more details if needed.</li>
+</ul>
+
+<h2>Android</h2>
+
+<h3>GPU</h3>
+
+<p>These are the popular mobile architectures. This is both different hardware vendors than in PC/console space, and very different GPU architectures than the “usual” GPUs. </p>
+
+<ul>
+<li>ImgTec PowerVR SGX - Tile based, deferred: render everything in small tiles (as 16x16), shade only visible pixels</li>
+<li>NVIDIA Tegra - Classic: Render everything</li>
+<li>Qualcomm Adreno - Tiled: Render everything in tile, engineered in large tiles (as 256k). Adreno 3xx can switch to traditional.</li>
+<li>ARM Mali Tiled: Render everything in tile, engineered in small tiles (as 16x16)</li>
+</ul>
+
+<p>Spend some time looking into different rendering approaches and design your game accordingly. Pay especial attention to sorting. Define the lowest end supported devices early in the dev cycle. Test on them with the profiler on as you design your game.</p>
+
+<p>Use platform specific texture <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span>.</p>
+
+<h3>Further reading</h3>
+
+<ul>
+<li>PowerVR SGX Architecture Guide <a href="http://imgtec.com/powervr/insider/powervr-sdk-docs.asp">http://imgtec.com/powervr/insider/powervr-sdk-docs.asp</a>
+</li>
+<li>Tegra GLES2 feature guide <a href="http://developer.download.nvidia.com/assets/mobile/files/tegra_gles2_development.pdf">http://developer.download.nvidia.com/assets/mobile/files/tegra_gles2_development.pdf</a>
+</li>
+<li>Qualcomm Adreno GLES performance guide <a href="http://developer.qualcomm.com/file/607/adreno200performanceoptimizationopenglestipsandtricksmarch10.pdf">http://developer.qualcomm.com/file/607/adreno200performanceoptimizationopenglestipsandtricksmarch10.pdf</a>
+</li>
+<li>Engel, Rible <a href="http://altdevblogaday.com/2011/08/04/programming-the-xperia-play-gpu-by-wolfgang-engel-and-maurice-ribble/">http://altdevblogaday.com/2011/08/04/programming-the-xperia-play-gpu-by-wolfgang-engel-and-maurice-ribble/</a>
+</li>
+<li><a href="https://developer.arm.com/products/software-development-tools/graphics-development-tools/mali-graphics-debugger/docs/100140/0303">ARM Mali GPU Optimization guide</a></li>
+</ul>
+
+<h3>Screen resolution</h3>
+
+<h3>Android version</h3>
+
+<h2>iOS</h2>
+
+<h3>GPU</h3>
+
+<p>Only PowerVR architecture (tile based deferred) to be concerned about. </p>
+
+<ul>
+<li>ImgTec PowerVR SGX. Tile based, deferred: render everything in tiles, shade only visible pixels.</li>
+</ul>
+
+<p>This means:</p>
+
+<ul>
+<li>Mipmaps are not so necessary.</li>
+<li><span class="tooltip"><strong>Antialiasing</strong><span class="tooltiptext">A technique for decreasing artifacts, like jagged lines (jaggies), in images to make them appear smoother. <a href="PostProcessing-Antialiasing.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Antialiasing">Glossary</a></span></span></span> and aniso are cheap enough, not needed on iPad 3 in some cases.</li>
+</ul>
+
+<p>And cons:</p>
+
+<ul>
+<li>If vertex data per frame (number of vertices * storage required after vertex shader) exceeds the internal buffers allocated by the driver, the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> has to be “split” which costs performance. The driver might allocate a larger buffer after this point, or you might need to reduce your vertex count. This becomes apparent on iPad2 (iOS 4.3) at around 100 thousand vertices with quite complex shaders.</li>
+<li>TBDR needs more transistors allocated for the tiling and deferred parts, leaving conceptually less transistors for “raw performance”. It’s very hard (i.e. practically impossible) to get GPU timing for a draw call on TBDR, making profiling hard.</li>
+</ul>
+
+<h3>Further reading</h3>
+
+<ul>
+<li>PowerVR SGX Architecture Guide <a href="http://imgtec.com/powervr/insider/powervr-sdk-docs.asp">http://imgtec.com/powervr/insider/powervr-sdk-docs.asp</a>
+</li>
+</ul>
+
+<h3>Screen resolution</h3>
+
+<h3>iOS version</h3>
+
+<h2>Dynamic Objects</h2>
+
+<h3>Asset Bundles</h3>
+
+<ul>
+<li><span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> Bundles are cached on a device to a certain limit</li>
+<li>Create using the Editor API</li>
+<li>Load using WWW API: WWW.LoadFromCacheOrDownload or as a resource: AssetBundle.CreateFromMemory or AssetBundle.CreateFromFile</li>
+<li>Unload using AssetBundle.Unload. There is an option to unload the bundle, but keep the loaded asset from it. Also can kill all the loaded assets even if they’re referenced in the scene</li>
+<li>Resources.UnloadUnusedAssets unloads all assets no longer referenced in the scene. So remember to kill references to the assets you don’t need. Public and static variables are never garbage collected.</li>
+<li>Resources.UnloadAsset unloads a specific asset from memory. It can be reloaded from disk if needed.</li>
+</ul>
+
+<h4>Is there any limitation for download numbers of Assetbundle at the same time on iOS? (e.g Can we download over 10 assetbundles safely at the same time(or every frame)? )</h4>
+
+<p>Downloads are implemented via async API provided by OS, so OS decides how many threads need to be created for downloads. When launching multiple concurrent downloads you should keep in mind total device bandwidth it can support and amount of free memory. Each concurrent download allocates its own temporal buffer, so you should be careful there to not run out of memory.</p>
+
+<h3>Resources</h3>
+
+<ul>
+<li>Assets need to be recognized by Unity to be placed in a build.</li>
+<li>Add .bytes file extension to any raw bytes you want Unity to recognize as a binary data.</li>
+<li>Add .txt file extension to any text files you want Unity to recognize as a text asset</li>
+<li>Resources are converted to a platform format at a build time.</li>
+<li>Resources.Load()</li>
+</ul>
+
+<h2>Issue checklist</h2>
+
+<ul>
+<li>Textures without proper compression</li>
+<li>Different solutions for different cases, but be sure to compress textures unless you’re sure you should not.</li>
+<li>ETC/RGBA16 - default for android but can tweak depending on the GPU vendor. Best approach is to use ETC where possible. Alpha textures can use two ETC files with one channel being for alpha</li>
+<li><span class="tooltip"><strong>PVRTC</strong><span class="tooltiptext">PowerVR Texture Compression (PVRTC) is a fixed-rate texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PVRTC">Glossary</a></span></span></span> - default for iOS, good for most cases</li>
+<li>Textures having Get/Set pixels enabled - doubles the footprint, uncheck unless Get/Set is needed</li>
+<li>Textures loaded from JPEG/PNGs on the runtime will be uncompressed</li>
+<li>Big mp3 files marked as decompress on load</li>
+<li>Additive scene loading</li>
+<li>Unused Assets that remain uncleaned in memory.</li>
+<li>If it randomly crashes, try on a devkit or a device with 2 GB memory (like Ipad 3).</li>
+</ul>
+
+<p>Sometimes there’s nothing in the console, just a random crash</p>
+
+<ul>
+<li>Fast script call and stripping may lead to random crashes on iOS. Try without them.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileProfiling.html"></a></span><div class="tip">Profiling</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationPracticalGuide.html"></a></span><div class="tip"> Practical guide to optimization for mobiles</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

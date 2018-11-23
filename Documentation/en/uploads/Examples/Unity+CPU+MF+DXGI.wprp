@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone='yes'?>
+
+<WindowsPerformanceRecorder Version="1.0">
+  <Profiles>
+ 
+    <!-- System Collectors -->
+    <SystemCollector Id="SystemCollector" Name="Kernel Logger" Realtime="false">
+      <BufferSize Value="1024"/>
+      <Buffers Value="40"/>
+      <MaximumFileSize Value="128" FileMode="Circular"/>
+      <FileMax Value="3"/>
+    </SystemCollector>
+
+    <!-- Event Collectors -->
+    <EventCollector Id="UnityCollector" Name="Unity Collector" Private="false" ProcessPrivate="false" Secure="false" Realtime="false">
+      <BufferSize Value="128"/>
+      <Buffers Value="40"/>
+    </EventCollector>
+
+    <!-- System Providers -->
+    <SystemProvider Id="SystemProvider">
+      <Keywords>
+        <!-- keywords doc: http://msdn.microsoft.com/en-us/library/windows/hardware/hh448147.aspx -->
+        <Keyword Value="CpuConfig"/>
+        <Keyword Value="CSwitch"/>
+        <Keyword Value="DiskIO"/>
+        <Keyword Value="DPC"/>
+        <Keyword Value="HardFaults"/>
+        <Keyword Value="Interrupt"/>
+        <Keyword Value="Loader"/>
+		<Keyword Value="ProcessCounter"/>
+        <Keyword Value="ProcessThread"/>
+        <Keyword Value="ReadyThread"/>
+        <Keyword Value="SampledProfile"/>
+      </Keywords>
+      <Stacks>
+        <!-- values doc: http://msdn.microsoft.com/en-us/library/windows/hardware/hh448161.aspx -->
+        <Stack Value="CSwitch"/>
+        <Stack Value="SampledProfile"/>
+      </Stacks>
+    </SystemProvider>
+	
+    <!-- ETW Event Providers -->
+    <EventProvider Id="Unity" Name="F736823E-EEF1-49C0-83FB-D036F507B210">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF" />
+      </Keywords>
+	</EventProvider>
+
+    <EventProvider Id="EventProvider_Microsoft-Windows-D3D10Level9" Name="7E7D3382-023C-43cb-95D2-6F0CA6D70381" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-D3D11" Name="db6f6ddb-ac77-4e88-8253-819df9bbf140" Level="6"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Dxgi" Name="CA11C036-0102-4A2D-A6AD-F03CFED5D3C9" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-DxgKrnl" Name="802ec45a-1e99-4b83-9920-87c98277ba9d" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-MF" Name="A7364E1A-894F-4B3D-A930-2ED9C8C4C811" Level="4"/>    
+    <EventProvider Id="EventProvider_Microsoft-Windows-MediaFoundation-MFCaptureEngine" Name="B8197C10-845F-40CA-82AB-9341E98CFC2B" Level="4"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-MediaFoundation-MFPlat" Name="BC97B970-D001-482F-8745-B8D7D5759F99" Level="4"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-MediaFoundation-MFReadWrite" Name="4B7EAC67-FC53-448C-A49D-7CC6DB524DA7" Level="4"/>
+    <EventProvider Id="EventProvider_Microsoft_Windows_MediaFoundation_MSVProc" Name="A4112D1A-6DFA-476e-BB75-E350D24934E1" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft_Windows_MediaFoundation_Performance" Name="f404b94e-27e0-4384-bfe8-1d8d390b0aa3" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft_Windows_MediaFoundation_Performance_Core" Name="B20E65AC-C905-4014-8F78-1B6A508142EB" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft_Windows_MediaFoundation_Platform" Name="bc97b970-d001-482f-8745-b8d7d5759f99" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Runtime-Media" Name="8F0DB3A8-299B-4D64-A4ED-907B409D4584" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-VideoEditing" Name="ACABB288-1997-439b-808B-6FFB52B3488F" Level="5"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-WinRT-Error" Name="a86f8471-c31d-4fbc-a035-665d06047b03" Level="5"/>
+	
+    <!-- Profiles -->
+    <Profile Id="UnityProfile.Verbose.File" LoggingMode="File" Name="UnityProfile" DetailLevel="Verbose" Description="Unity+CPU+MF+DXGI">
+      <Collectors>
+	  
+        <!-- System Providers -->
+        <SystemCollectorId Value="SystemCollector">
+          <SystemProviderId Value="SystemProvider"/>
+        </SystemCollectorId>
+	  
+        <EventCollectorId Value="UnityCollector">
+          <EventProviders>
+            <EventProviderId Value="Unity" />
+
+            <EventProviderId Value="EventProvider_Microsoft-Windows-D3D10Level9"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-D3D11"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Dxgi"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-DxgKrnl"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-MF"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-MediaFoundation-MFCaptureEngine"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-MediaFoundation-MFPlat"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-MediaFoundation-MFReadWrite"/>
+            <EventProviderId Value="EventProvider_Microsoft_Windows_MediaFoundation_MSVProc"/>
+            <EventProviderId Value="EventProvider_Microsoft_Windows_MediaFoundation_Performance"/>
+            <EventProviderId Value="EventProvider_Microsoft_Windows_MediaFoundation_Performance_Core"/>
+            <EventProviderId Value="EventProvider_Microsoft_Windows_MediaFoundation_Platform"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Runtime-Media"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-VideoEditing"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-WinRT-Error"/>
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+
+  <TraceMergeProperties>
+    <TraceMergeProperty  Id="TraceMerge_Default" Name="TraceMerge_Default">
+      <CustomEvents>
+        <CustomEvent Value="ImageId"/>
+        <CustomEvent Value="BuildInfo"/>
+        <CustomEvent Value="VolumeMapping"/>
+        <CustomEvent Value="EventMetadata"/>
+        <CustomEvent Value="PerfTrackMetadata"/>
+        <CustomEvent Value="WinSAT"/>
+        <CustomEvent Value="NetworkInterface"/>
+      </CustomEvents>
+    </TraceMergeProperty>
+  </TraceMergeProperties>
+
+</WindowsPerformanceRecorder>

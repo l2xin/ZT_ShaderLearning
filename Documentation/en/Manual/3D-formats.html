@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Model file formats</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ImportingAssets" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/3D-formats.html">English</a></li>
+<li><a href="/ja/current/Manual/3D-formats.html">日本語</a></li>
+<li><a href="/es/current/Manual/3D-formats.html">Español</a></li>
+<li><a href="/kr/current/Manual/3D-formats.html">한국어</a></li>
+<li><a href="/ru/current/Manual/3D-formats.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ImportingAssets.html"> Importing</a></li>
+<li> Model file formats</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-ImportObjectSketchUp.html"></a></span><div class="tip"> SketchUp Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip"> Limitations when importing from other applications</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Model file formats</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity supports importing <a href="class-Mesh.html">Meshes</a> and <span class="tooltip"><a href="AnimationClips.html">animation</a><span class="tooltiptext">A collection of images that create a moving image when played sequentially. In Unity, an animation is the result of adding two different animation keys, at two different times, for the same <strong>animatable property</strong>. <a href="AnimationSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animation">Glossary</a></span></span></span> from two different types of files:</p>
+
+<ul>
+<li><p>
+<a href="#Exported3DFiles">Exported 3D file formats</a>, such as .fbx or .obj. You can export files from 3D modeling software in generic formats that can be imported and edited by a wide variety of different software. </p></li>
+<li><p>
+<a href="#Proprietary3DappFiles">Proprietary 3D or DCC (Digital Content Creation) application files</a>, such as .max and .blend file formats from <a href="https://www.autodesk.com/products/3ds-max/overview">3D Studio Max</a> or <a href="https://www.blender.org/">Blender</a>, for example. You can only edit proprietary files in the software that created them. Proprietary files are generally not directly editable by other software without first being converted and imported. An exception to this is <a href="https://www.sketchup.com/">SketchUp</a> .skp files, which both SketchUp and Unity can read.</p></li>
+</ul>
+
+<p>Unity can import and use both types of files, and each come with their own advantages and disadvantages.</p>
+
+<p><a name="Exported3DFiles"></a></p>
+
+<h2>Exported 3D files</h2>
+
+<p>Unity can read <a href="https://www.autodesk.com/products/fbx/overview">.fbx</a>, <a href="https://www.khronos.org/collada/">.dae (Collada)</a>, .3ds, .dxf, .obj, and .skp files. For information about exporting 3D files, see <a href="HOWTO-exportFBX.html">Exporting from other applications</a> or read the documentation for your 3D modeling software.</p>
+
+<p><strong>Advantages:</strong></p>
+
+<ul>
+<li>You can import only the parts of the model you need instead of importing the whole model into Unity.</li>
+<li>Exported generic files are often smaller than the proprietary equivalent.</li>
+<li>Using exported generic files encourages a modular approach (for example, using different components for collision types or interactivity).</li>
+<li>You can import these files from software that Unity does not directly support.</li>
+<li>You can re-import exported 3D files (.fbx, .obj) into 3D modeling software after exporting, to ensure that all of the information has been exported correctly.</li>
+</ul>
+
+<p><strong>Disadvantages:</strong></p>
+
+<ul>
+<li>You must re-import models manually if the original file changes.</li>
+<li>You need to keep track of versions between the source file and the files imported into Unity.</li>
+</ul>
+
+<p><a name="Proprietary3DappFiles"></a></p>
+
+<h2>Proprietary 3D application files</h2>
+
+<p>Unity can import proprietary files from the following 3D modeling software: </p>
+
+<ul>
+<li><a href="https://www.autodesk.com/products/3ds-max/overview">3D Studio Max</a></li>
+<li><a href="https://www.autodesk.com/products/maya/overview">Maya</a></li>
+<li><a href="https://www.blender.org/">Blender</a></li>
+<li><a href="https://www.maxon.net/en/products/cinema-4d/overview/">Cinema4D</a></li>
+<li><a href="https://www.foundry.com/products/modo">Modo</a></li>
+<li><a href="https://www.lightwave3d.com/">LightWave</a></li>
+<li><a href="https://www.cheetah3d.com/">Cheetah3D</a></li>
+</ul>
+
+<p>
+<strong>Warning:</strong> Unity converts proprietary files to .fbx files as part of the import process. However, it is recommended that you export to FBX instead of directly saving your application files in the Project. It is not recommended to use native file formats directly in production.</p>
+
+<p><strong>Advantages:</strong></p>
+
+<ul>
+<li>Unity automatically re-imports the file if the original model changes.</li>
+<li>This is initially simple; however it can become more complex later in development.</li>
+</ul>
+
+<p><strong>Disadvantages:</strong></p>
+
+<ul>
+<li>A licensed copy of the software used must be installed on each machine that uses the Unity Project.</li>
+<li>Software versions should be the same on each machine using the Unity Project. Using a different software version can cause errors or unexpected behavior when importing 3D models.</li>
+<li>Files can become bloated with unnecessary data.</li>
+<li>Big files can slow down Unity Project imports or <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> re-imports, because you have to run the 3D modeling software you use as a background process when you import the model into Unity.</li>
+<li>Unity exports proprietary files to .fbx internally, during the import process. This makes it difficult to verify the .fbx data and troubleshoot problems.</li>
+</ul>
+
+<p>
+<strong><em>Note:</em></strong> Assets saved as .ma, .mb, .max, .c4d, or .blend files fail to import unless you have the corresponding 3D modeling software installed on your computer. This means that everybody working on your Unity Project must have the correct software installed. For example, if you use <a href="https://www.autodesk.com/products/maya-lt/overview">the Maya LT license</a> to create <code>ExampleModel.mb</code> and copy it into your Project, anyone else opening that Project also needs to have Maya LT installed on their computer too. </p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-ImportObjectSketchUp.html"></a></span><div class="tip"> SketchUp Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip"> Limitations when importing from other applications</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

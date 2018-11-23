@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: ShaderLab: Stencil</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-Stencil.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-Stencil.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-Stencil.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-Stencil.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-Stencil.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-Shader.html">ShaderLab Syntax</a></li>
+<li><a href="SL-SubShader.html">ShaderLab: SubShader</a></li>
+<li><a href="SL-Pass.html">ShaderLab: Pass</a></li>
+<li>ShaderLab: Stencil</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-PassTags.html"></a></span><div class="tip">ShaderLab: Pass Tags</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Name.html"></a></span><div class="tip">ShaderLab: Name</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>ShaderLab: Stencil</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The stencil buffer can be used as a general purpose per pixel mask for saving or discarding <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span>.</p>
+
+<p>The stencil buffer is usually an 8 bit integer per pixel. The value can be written to, increment or decremented. Subsequent draw calls can test against the value, to decide if a pixel should be discarded before running the pixel <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>.</p>
+
+<h2>Syntax</h2>
+
+<h3>Ref</h3>
+
+<pre><code>    Ref referenceValue
+</code></pre>
+
+<p>The value to be compared against (if Comp is anything else than <em>always</em>) and/or the value to be written to the buffer (if either Pass, Fail or ZFail is set to replace). 0–255 integer.</p>
+
+<h3>ReadMask</h3>
+
+<pre><code>    ReadMask readMask
+</code></pre>
+
+<p>An 8 bit mask as an 0–255 integer, used when comparing the reference value with the contents of the buffer (<em>referenceValue</em> &amp; <em>readMask</em>) <em>comparisonFunction</em> (<em>stencilBufferValue</em> &amp; <em>readMask</em>). Default: <em>255</em>.</p>
+
+<h3>WriteMask</h3>
+
+<pre><code>    WriteMask writeMask
+</code></pre>
+
+<p>An 8 bit mask as an 0–255 integer, used when writing to the buffer. Note that, like other write masks, it specifies which bits of stencil buffer will be affected by write (i.e. WriteMask 0 means that no bits are affected and not that 0 will be written). Default: <em>255</em>.</p>
+
+<h3>Comp</h3>
+
+<pre><code>    Comp comparisonFunction
+</code></pre>
+
+<p>The function used to compare the reference value to the current contents of the buffer. Default: <em>always</em>.</p>
+
+<h3>Pass</h3>
+
+<pre><code>    Pass stencilOperation
+</code></pre>
+
+<p>What to do with the contents of the buffer if the stencil test (and the depth test) passes. Default: <em>keep</em>.</p>
+
+<h3>Fail</h3>
+
+<pre><code>    Fail stencilOperation
+</code></pre>
+
+<p>What to do with the contents of the buffer if the stencil test fails. Default: <em>keep</em>.</p>
+
+<h3>ZFail</h3>
+
+<pre><code>    ZFail stencilOperation
+</code></pre>
+
+<p>What to do with the contents of the buffer if the stencil test passes, but the depth test fails. Default: <em>keep</em>.</p>
+
+<p>Comp, Pass, Fail and ZFail will be applied to the front-facing geometry, unless <em>Cull Front</em> is specified, in which case it’s back-facing geometry. You can also explicitly specify the two-sided stencil state by defining CompFront, PassFront, FailFront, ZFailFront (for front-facing geometry), and CompBack, PassBack, FailBack, ZFailBack (for back-facing geometry).</p>
+
+<h3>Comparison Function</h3>
+
+<p>Comparison function is one of the following:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Greater</strong></td>
+	<td style="text-align:left;">Only render pixels whose reference value is greater than the value in the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GEqual</strong></td>
+	<td style="text-align:left;">Only render pixels whose reference value is greater than or equal to the value in the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Less</strong></td>
+	<td style="text-align:left;">Only render pixels whose reference value is less than the value in the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LEqual</strong></td>
+	<td style="text-align:left;">Only render pixels whose reference value is less than or equal to the value in the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Equal</strong></td>
+	<td style="text-align:left;">Only render pixels whose reference value equals the value in the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NotEqual</strong></td>
+	<td style="text-align:left;">Only render pixels whose reference value differs from the value in the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Always</strong></td>
+	<td style="text-align:left;">Make the stencil test always pass.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Never</strong></td>
+	<td style="text-align:left;">Make the stencil test always fail.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Stencil Operation</h3>
+
+<p>Stencil operation is one of the following:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Keep</strong></td>
+	<td style="text-align:left;">Keep the current contents of the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Zero</strong></td>
+	<td style="text-align:left;">Write 0 into the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Replace</strong></td>
+	<td style="text-align:left;">Write the reference value into the buffer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>IncrSat</strong></td>
+	<td style="text-align:left;">Increment the current value in the buffer. If the value is 255 already, it stays at 255.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>DecrSat</strong></td>
+	<td style="text-align:left;">Decrement the current value in the buffer. If the value is 0 already, it stays at 0.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Invert</strong></td>
+	<td style="text-align:left;">Negate all the bits.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>IncrWrap</strong></td>
+	<td style="text-align:left;">Increment the current value in the buffer. If the value is 255 already, it becomes 0.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>DecrWrap</strong></td>
+	<td style="text-align:left;">Decrement the current value in the buffer. If the value is 0 already, it becomes 255.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Deferred rendering path</h2>
+
+<p>Stencil functionality for objects rendered in the deferred <span class="tooltip"><strong>rendering path</strong><span class="tooltiptext">The technique Unity uses to render graphics. Choosing a different path affects the performance of your game, and how lighting and shading are calculated. Some paths are more suited to different platforms and hardware than others. <a href="RenderingPaths.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> is somewhat limited, as during the base pass and lighting pass the stencil buffer is used for other purposes. During those two stages stencil state defined in the shader will be ignored and only taken into account during the final pass. Because of that it’s not possible to mask out these objects based on a stencil test, but they can still modify the buffer contents, to be used by objects rendered later in the frame. Objects rendered in the <span class="tooltip"><strong>forward rendering</strong><span class="tooltiptext">A rendering path that renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity. <a href="RenderTech-ForwardRendering.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> path following the deferred path (e.g. transparent objects or objects without a surface shader) will set their stencil state normally again.</p>
+
+<p>The deferred <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> path uses the three highest bits of the stencil buffer, plus up to four more highest bits - depending on how many light mask layers are used in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. It is possible to operate within the range of the “clean” bits using the stencil read and write masks, or you can force the <strong>camera</strong> to clean the stencil buffer after the lighting pass using <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>.clearStencilAfterLightingPass.</p>
+
+<h3>Example</h3>
+
+<p>The first example shader will write the value ‘2’ wherever the depth test passes. The stencil test is set to always pass.</p>
+
+<pre><code>Shader &quot;Red&quot; {
+    SubShader {
+        Tags { &quot;RenderType&quot;=&quot;Opaque&quot; &quot;Queue&quot;=&quot;Geometry&quot;}
+        Pass {
+            Stencil {
+                Ref 2
+                Comp always
+                Pass replace
+            }
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            struct appdata {
+                float4 vertex : POSITION;
+            };
+            struct v2f {
+                float4 pos : SV_POSITION;
+            };
+            v2f vert(appdata v) {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            half4 frag(v2f i) : SV_Target {
+                return half4(1,0,0,1);
+            }
+            ENDCG
+        }
+    } 
+}
+</code></pre>
+
+<p>The second shader will pass only for the pixels which the first (red) shader passed, because it is checking for equality with the value ‘2’. It will also decrement the value in the buffer wherever it fails the Z test.</p>
+
+<pre><code>Shader &quot;Green&quot; {
+    SubShader {
+        Tags { &quot;RenderType&quot;=&quot;Opaque&quot; &quot;Queue&quot;=&quot;Geometry+1&quot;}
+        Pass {
+            Stencil {
+                Ref 2
+                Comp equal
+                Pass keep 
+                ZFail decrWrap
+            }
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            struct appdata {
+                float4 vertex : POSITION;
+            };
+            struct v2f {
+                float4 pos : SV_POSITION;
+            };
+            v2f vert(appdata v) {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            half4 frag(v2f i) : SV_Target {
+                return half4(0,1,0,1);
+            }
+            ENDCG
+        }
+    } 
+}
+</code></pre>
+
+<p>The third shader will only pass wherever the stencil value is ‘1’, so only pixels at the intersection of both red and green spheres - that is, where the stencil is set to ‘2’ by the red shader and decremented to ‘1’ by the green shader.</p>
+
+<pre><code>Shader &quot;Blue&quot; {
+    SubShader {
+        Tags { &quot;RenderType&quot;=&quot;Opaque&quot; &quot;Queue&quot;=&quot;Geometry+2&quot;}
+        Pass {
+            Stencil {
+                Ref 1
+                Comp equal
+            }
+        
+            CGPROGRAM
+            #include &quot;UnityCG.cginc&quot;
+            #pragma vertex vert
+            #pragma fragment frag
+            struct appdata {
+                float4 vertex : POSITION;
+            };
+            struct v2f {
+                float4 pos : SV_POSITION;
+            };
+            v2f vert(appdata v) {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            half4 frag(v2f i) : SV_Target {
+                return half4(0,0,1,1);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre>
+
+<p>The result:</p>
+
+<figure>
+<img src="../uploads/Main/StencilExample.png" alt="">
+</figure>
+
+<p>Another example of a more directed effect. The sphere is first rendered with this shader to mark-up the proper regions in the stencil buffer:</p>
+
+<pre><code>Shader &quot;HolePrepare&quot; {
+    SubShader {
+        Tags { &quot;RenderType&quot;=&quot;Opaque&quot; &quot;Queue&quot;=&quot;Geometry+1&quot;}
+        ColorMask 0
+        ZWrite off
+        Stencil {
+            Ref 1
+            Comp always
+            Pass replace
+        }
+
+        CGINCLUDE
+            struct appdata {
+                float4 vertex : POSITION;
+            };
+            struct v2f {
+                float4 pos : SV_POSITION;
+            };
+            v2f vert(appdata v) {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            half4 frag(v2f i) : SV_Target {
+                return half4(1,1,0,1);
+            }
+        ENDCG
+
+        Pass {
+            Cull Front
+            ZTest Less
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            ENDCG
+        }
+        Pass {
+            Cull Back
+            ZTest Greater
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            ENDCG
+        }
+    } 
+}
+</code></pre>
+
+<p>And then rendered once more as a fairly standard <span class="tooltip"><strong>surface shader</strong><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span>, with the exception of front face culling, disabled depth test and stencil test discarding previously marked pixels:</p>
+
+<pre><code>Shader &quot;Hole&quot; {
+    Properties {
+        _Color (&quot;Main Color&quot;, Color) = (1,1,1,0)
+    }
+    SubShader {
+        Tags { &quot;RenderType&quot;=&quot;Opaque&quot; &quot;Queue&quot;=&quot;Geometry+2&quot;}
+
+        ColorMask RGB
+        Cull Front
+        ZTest Always
+        Stencil {
+            Ref 1
+            Comp notequal 
+        }
+
+        CGPROGRAM
+        #pragma surface surf Lambert
+        float4 _Color;
+        struct Input {
+            float4 color : COLOR;
+        };
+        void surf (Input IN, inout SurfaceOutput o) {
+            o.Albedo = _Color.rgb;
+            o.Normal = half3(0,0,-1);
+            o.Alpha = 1;
+        }
+        ENDCG
+    } 
+}
+</code></pre>
+
+<p>The result:</p>
+
+<figure>
+<img src="../uploads/Main/StencilExample2.png" alt="">
+</figure>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-PassTags.html"></a></span><div class="tip">ShaderLab: Pass Tags</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Name.html"></a></span><div class="tip">ShaderLab: Name</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

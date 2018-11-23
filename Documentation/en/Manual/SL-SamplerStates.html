@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using sampler states</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-SamplerStates.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-SamplerStates.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-SamplerStates.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-SamplerStates.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-SamplerStates.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-ShaderPrograms.html">Writing vertex and fragment shaders</a></li>
+<li> Using sampler states</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DataTypesAndPrecision.html"></a></span><div class="tip"> Shader data types and precision</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab Syntax</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Using sampler states</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Coupled textures and samplers</h2>
+
+<p>Most of the time when sampling textures in <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>, the texture sampling state should come form <a href="class-TextureImporter.html">texture settings</a> – essentially, textures and samplers are coupled together. This is default behavior when using DX9-style shader syntax:</p>
+
+<pre><code>sampler2D _MainTex;
+// ...
+half4 color = tex2D(_MainTex, uv);
+</code></pre>
+
+<p>Using sampler2D, sampler3D, samplerCUBE HLSL keywords declares both texture and sampler.</p>
+
+<p>Most of the time this is what you want, and is the only supported option on older graphics APIs (OpenGL ES).</p>
+
+<h2>Separate textures and samplers</h2>
+
+<p>Many graphics APIs and GPUs allow using fewer samplers than textures, and coupled texture+sampler syntax might not allow more complex shaders to be written. For example Direct3D 11 allows using up to 128 textures in a single shader, but only up to 16 samplers.</p>
+
+<p>Unity allows declaring textures and samplers using DX11-style HLSL syntax, with a special naming convention to match them up: samplers that have names in the form of “sampler”+TextureName will take sampling states from that texture.</p>
+
+<p>The shader snippet from section above could be rewritten in DX11-style HLSL syntax, and it would do the same thing:</p>
+
+<pre><code>Texture2D _MainTex;
+SamplerState sampler_MainTex; // &quot;sampler&quot; + “_MainTex”
+// ...
+half4 color = _MainTex.Sample(sampler_MainTex, uv);
+</code></pre>
+
+<p>However, this way a shader could be written to “reuse” samplers from other textures, while sampling more than one texture. In the example below, three textures are sampled, but only one sampler is used for all of them:</p>
+
+<pre><code>Texture2D _MainTex;
+Texture2D _SecondTex;
+Texture2D _ThirdTex;
+SamplerState sampler_MainTex; // &quot;sampler&quot; + “_MainTex”
+// ...
+half4 color = _MainTex.Sample(sampler_MainTex, uv);
+color += _SecondTex.Sample(sampler_MainTex, uv);
+color += _ThirdTex.Sample(sampler_MainTex, uv);
+</code></pre>
+
+<p>Note however that DX11-style HLSL syntax does not work on some older platforms (e.g. OpenGL ES 2.0), see <a href="SL-ShadingLanguage.html">shading language</a> for details. You might want to specify <code>#pragma target 3.5</code> (see <a href="SL-ShaderCompileTargets.html">shader compilation targets</a> to skip older platforms from using the shader.</p>
+
+<p>Unity provides several shader macros to help with declaring and sampling textures using this “separate samplers” approach, see <a href="SL-BuiltinMacros.html">built-in macros</a>. The example above could be rewritten this way, using said macros:</p>
+
+<pre><code>UNITY_DECLARE_TEX2D(_MainTex);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_SecondTex);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_ThirdTex);
+// ...
+half4 color = UNITY_SAMPLE_TEX2D(_MainTex, uv);
+color += UNITY_SAMPLE_TEX2D_SAMPLER(_SecondTex, _MainTex, uv);
+color += UNITY_SAMPLE_TEX2D_SAMPLER(_ThirdTex, _MainTex, uv);
+</code></pre>
+
+<p>The above would compile on all platforms supported by Unity, but would fallback to using three samplers on older platforms like DX9.</p>
+
+<h2>Inline sampler states</h2>
+
+<p>In addition to recognizing HLSL SamplerState objects named as “sampler”+TextureName, Unity also recognizes some other patterns in sampler names. This is useful for declaring simple hardcoded sampling states directly in the shaders. An example:</p>
+
+<pre><code>Texture2D _MainTex;
+SamplerState my_point_clamp_sampler;
+// ...
+half4 color = _MainTex.Sample(my_point_clamp_sampler, uv);
+</code></pre>
+
+<p>The name “my_point_clamp_sampler” will be recognized as a sampler that should use Point (nearest) texture filtering, and Clamp texture wrapping mode.</p>
+
+<p>Sampler names recognized as “inline” sampler states (all case insensitive):</p>
+
+<ul>
+<li><p>“Point”, “Linear” or “Trilinear” (required) set up texture filtering mode.</p></li>
+<li>
+<p>“Clamp”, “Repeat”, “Mirror” or “MirrorOnce” (required) set up texture wrap mode.</p>
+
+<ul>
+<li>Wrap modes can be specified per-axis (UVW), e.g. “ClampU_RepeatV”.</li>
+</ul>
+</li>
+<li><p>“Compare” (optional) set up sampler for depth comparison; use with HLSL SamplerComparisonState type and SampleCmp / SampleCmpLevelZero functions.</p></li>
+</ul>
+
+<p>Here’s an example of sampling texture with <code>sampler_linear_repeat</code> and <code>sampler_point_repeat</code> SamplerStates respectively, illustrating how the name controls filtering mode:</p>
+
+<figure>
+<img src="../uploads/Main/SamplerStates1.jpg" alt="">
+</figure>
+
+<p>Here’s an example with <code>SmpClampPoint</code>, <code>SmpRepeatPoint</code>, <code>SmpMirrorPoint</code>, <code>SmpMirrorOncePoint</code>, <code>Smp_ClampU_RepeatV_Point</code> SamplerStates respectively, illustrating how the name controls wrapping mode. In the last example, different wrap modes are set for horizontal (U) and vertical (V) axes. In all cases texture coordinates go from –2.0 to +2.0.</p>
+
+<figure>
+<img src="../uploads/Main/SamplerStates2.png" alt="">
+</figure>
+
+<p>Just like separate texture + sampler syntax, inline sampler states are not supported on some platforms. Currently they are implemented on Direct3D 11/12, <span class="tooltip"><strong>PS4</strong><span class="tooltiptext">Sony’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PS4">Glossary</a></span></span></span>, XboxOne and Metal.</p>
+
+<p>Note that “MirrorOnce” texture wrapping mode is not supported on most mobile GPUs/APIs, and will fallback to Mirror mode when support is not present.
+<br>
+<br>
+</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–01 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New feature in <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DataTypesAndPrecision.html"></a></span><div class="tip"> Shader data types and precision</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab Syntax</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

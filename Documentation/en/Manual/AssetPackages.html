@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Asset packages</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AssetPackages.html">English</a></li>
+<li><a href="/ja/current/Manual/AssetPackages.html">日本語</a></li>
+<li><a href="/es/current/Manual/AssetPackages.html">Español</a></li>
+<li><a href="/kr/current/Manual/AssetPackages.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AssetPackages.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AssetWorkflow.html">Asset Workflow</a></li>
+<li> Asset packages</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PrimitiveObjects.html"></a></span><div class="tip"> Primitive and placeholder objects</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetStore.html"></a></span><div class="tip"> Using the Asset Store</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Asset packages</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity uses two types of packages:</p>
+
+<ul>
+<li>
+<strong><strong>Asset packages</strong></strong>, available on the Unity <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>, which allow you to share and re-use Unity Projects and collections of Assets.</li>
+<li>
+<strong>Unity packages</strong>, available through the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html">Package Manager window</a>. You can import a wide range of Assets, including plug-ins directly into Unity with this type of package.</li>
+</ul>
+
+<p>This section provides information about using Asset packages in Unity.</p>
+
+<h2>Asset packages</h2>
+
+<p>Unity <span class="tooltip"><strong>Standard Assets</strong><span class="tooltiptext">A collection of useful assets supplied with Unity. Unity ships with multiple Standard Asset such as 2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, and Vehicles. <a href="AssetTypes.html#Standard">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardAsset">Glossary</a></span></span></span> and items on the Unity <strong>Asset Store</strong> are supplied in packages, which are
+collections of files and data from Unity Projects, or elements of Projects,
+which are compressed and stored in one file, similar to zip files.
+Like zip files, a package maintains its original directory structure when it is unpacked,
+as well as meta-data about Assets (such as import settings and links to other Assets).</p>
+
+<p>In Unity, the menu option <strong>Export Package</strong> compresses and stores the collection,
+while <strong>Import Package</strong> unpacks the collection into your currently open Unity Project.</p>
+
+<p>This page contains information on:</p>
+
+<ul>
+<li>
+<a href="#ImportingPackages">Importing packages</a> (both <strong>Standard Asset</strong> packages and custom packages)</li>
+<li>
+<a href="#ExportingPackages">Exporting packages</a> (both new and updated)</li>
+</ul>
+
+<p><a name="ImportingPackages"></a></p>
+
+<h2>Importing Asset packages</h2>
+
+<p>You can import <strong>Standard Asset Packages</strong>, which are Asset collections pre-made and supplied with Unity, and <strong>Custom Packages</strong>, which are made by people using Unity.</p>
+
+<p>Choose <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> &gt; <strong>Import Package</strong> to import both types of Asset packages.</p>
+
+<figure>
+<img src="../uploads/Main/ImportPackageMenu.png" alt="Fig 1: Asset &amp;gt; Import Package menu">
+<figcaption>Fig 1: Asset &gt; Import Package menu</figcaption>
+</figure>
+
+<p><a name="Standard"></a></p>
+
+<h3>Importing Standard Assets</h3>
+
+<p>Unity <strong>‘Standard Assets’</strong> consist of several different packages:
+<strong>2D, </strong>Cameras<strong>, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, Vehicles</strong>.</p>
+
+<p>To import a new <strong>Standard Asset</strong> package:</p>
+
+<ol>
+<li><p>Open the Project you want to import Assets into.</p></li>
+<li><p>Choose <strong>Assets</strong> &gt; <strong>Import Package</strong> and then select the name of the package you want to import from the list.
+The <strong>Import Unity Package</strong> dialog box appears with all the items in the package pre-checked,
+ready to install. (See <em>Fig 2: New install Import Unity Package Dialog Box</em>.)</p></li>
+<li><p>Select <strong>Import</strong> and Unity puts the contents of the package into a <strong>Standard Asset</strong> folder,
+which you can access from your <span class="tooltip"><strong>Project View</strong><span class="tooltiptext">A view that shows the contents of your Assets folder (Project tab) <a href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectView">Glossary</a></span></span></span>. </p></li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/NewInstallImportPackageDialog.png" alt="Fig 2: New install Import Unity Package dialog box">
+<figcaption>Fig 2: New install Import Unity Package dialog box</figcaption>
+</figure>
+
+<h3>Importing custom Asset packages</h3>
+
+<p>You can import custom packages which have been exported from your own Projects or from Projects made by other Unity users.</p>
+
+<p>To import a new custom package:</p>
+
+<ol>
+<li><p>Open the Project you want to import Assets into.</p></li>
+<li><p>Choose <strong>Assets</strong> &gt; <strong>Import Package</strong> &gt; <strong>Custom Package…</strong> to bring up up File Explorer (Windows) or Finder (Mac).</p></li>
+<li><p>Select the package you want from Explorer or Finder, and the <strong>Import Unity Package</strong> dialog box displays,
+with all the items in the package pre-checked, ready to install. (See <em>Fig 4: New install Import Unity Package dialog box</em>.)</p></li>
+<li><p>Select <strong>Import</strong> and Unity puts the contents of the package into the <strong>Assets</strong> folder,
+which you can access from your <strong>Project View</strong>. </p></li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/CustomPackageInstallDialog.png" alt="Fig 3: New install Import Unity Package dialog box">
+<figcaption>Fig 3: New install Import Unity Package dialog box</figcaption>
+</figure>
+
+<h3>Upgrading Standard Assets</h3>
+
+<p>Standard Assets do not upgrade automatically when you upgrade the Editor.</p>
+
+<p>When you create a new Project in Unity, you can choose to include <strong>Standard Assets</strong> collections in your Project. Unity copies the Assets you choose to include from the Unity install folder into your new Project folder. This means that if you upgrade your Unity Editor to a newer version, the <strong>Standard Assets</strong> you have already imported into your Project do not upgrade: you have to manually upgrade them.</p>
+
+<p>
+<strong><em>Hint:</em></strong> A newer version of a <strong>Standard Asset</strong> might behave differently in your existing installation (for performance or quality reasons, for example). A newer version might make your Project look or behave differently and you may need to re-tweak its parameters. Check the package contents and Unity’s release notes before you decide to re-install.</p>
+
+<p><a name="ExportingPackages"></a></p>
+
+<h2>Exporting packages</h2>
+
+<p>Use <strong>Export Package</strong> to create your own <strong>Custom Package</strong>.</p>
+
+<ol>
+<li><p>Open the Project you want to export Assets from.</p></li>
+<li><p>Choose <strong>Assets &gt; Export Package…</strong> from the menu to bring up the <strong>Exporting Package</strong> dialog box.
+(See <em>Fig 4: Exporting Package dialog box</em>.)</p></li>
+<li><p>In the dialog box, select the Assets you want to include in the package by clicking on the boxes so they are checked.</p></li>
+<li><p>Leave the <strong>include dependencies</strong> box checked to auto-select any Assets used by the ones you have selected. </p></li>
+<li><p>Click on <strong>Export</strong> to bring up File Explorer (Windows) or Finder (Mac) and choose where you want to store your package file. </p></li>
+<li><p>Name and save the package anywhere you like.</p></li>
+</ol>
+
+<p>
+<strong><em>Hint:</em></strong> When exporting a package Unity can export all dependencies as well.
+So, for example, if you select a <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> and export a package with all dependencies, then all models,
+Textures and other Assets that appear in the scene will be exported as well.
+This can be a quick way of exporting a bunch of Assets without manually locating them all.</p>
+
+<figure>
+<img src="../uploads/Main/ExportPackageDialog.png" alt="Fig 4: Exporting Package dialog box">
+<figcaption>Fig 4: Exporting Package dialog box</figcaption>
+</figure>
+
+<h3>Updating packages</h3>
+
+<p>Sometimes you may want to change the contents of a package and create a newer, updated version of your Asset package.
+To do this:</p>
+
+<ol>
+<li><p>Select the Asset files you want in your package (select both the unchanged ones and the new ones).</p></li>
+<li><p>Export the files as described above in <strong><em>Export Package</em></strong>, above. </p></li>
+</ol>
+
+<p>
+<strong><em>Note:</em></strong> You can re-name an updated package and Unity will recognise it as an update, so you can use incremental naming, for example: MyAssetPackageVer1, MyAssetPackageVer2.</p>
+
+<p>
+<strong><em>Hint:</em></strong> It is not good practice to remove files from packages and then replace them with the same name:
+Unity will recognize them as different and possibly conflicting files and so display a warning symbol when they are imported.
+If you have removed a file and then decide to replace it, it is better to give it a different but related name to the original.</p>
+
+<p><span class="search-words">Re-install Standard Assets, Upgrade Standard Assets, Upgrading Standard Assets, Install Standard Assets, Installing Standard Assets, Import Standard Assets, Importing Standard Assets</span></p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PrimitiveObjects.html"></a></span><div class="tip"> Primitive and placeholder objects</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetStore.html"></a></span><div class="tip"> Using the Asset Store</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Managing cloud storage</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCollaborateManageCloudStorage.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityCollaborateManageCloudStorage.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCollaborateManageCloudStorage.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCollaborateManageCloudStorage.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCollaborateManageCloudStorage.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityCollaborate.html">Unity Collaborate</a></li>
+<li> Managing cloud storage</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CollaborateInProgress.html"></a></span><div class="tip"> In-Progress edit notifications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip"> Moving your Project to another version control system</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Managing cloud storage</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Collaborate service uses cloud storage to backup your entire Project in the cloud and make it accessible anywhere.</p>
+
+<p>This topic covers: </p>
+
+<ul>
+<li><a href="#howmuchstorage">Determining how much storage your Projects are using</a></li>
+<li><a href="#addingstorage">Adding more storage</a></li>
+<li><a href="#retention">Cloud storage data retention</a></li>
+<li><a href="#archivingprojects">Archiving Projects</a></li>
+<li><a href="#archiveforcollab">Archiving Projects for Collaborate</a></li>
+</ul>
+
+<p><a name="howmuchstorage"></a></p>
+
+<h2>Determining how much storage your Projects are using</h2>
+
+<p>Cloud storage is calculated on a per Organization basis. Unity calculates the amount of cloud storage that your Organization is using by summing the size of the latest versions of all your Organization’s Collaborate Projects. Only the latest version of your project counts towards your storage limit. Historical (non-head) versions of your Projects do not count towards cloud storage.</p>
+
+<p>To view your current storage usage:</p>
+
+<ol>
+<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>Select a Project in the Organization whose storage you want to view.</li>
+<li>In the left navigation window, click <strong>Settings</strong>, then click <strong>Usage</strong>.</li>
+</ol>
+
+<p>In the main Project window there are tiles that show:</p>
+
+<ul>
+<li>
+<strong>Cloud storage</strong> - How much storage the current Project is using compared to the rest of the Projects in your Organization, and your entire cloud storage space.</li>
+<li>
+<strong>Percent of storage per project</strong> - How much storage is used by each Project in your Organization.</li>
+<li>
+<strong>Storage used by &lt;Project name&gt; over time</strong> - How much storage the current Project has used since it was created, until the current time.</li>
+</ul>
+
+<p><a name="addingstorage"></a></p>
+
+<h2>Adding more storage</h2>
+
+<p>You can obtain more cloud storage in two ways: </p>
+
+<ul>
+<li>Upgrade to Unity Teams Advanced, which also provides 25GB of cloud storage.</li>
+<li>Purchase Storage Packs on the Unity ID dashboard. Each storage Pack adds 25GB of cloud storage to an Organization.</li>
+</ul>
+
+<p><strong>Upgrading to Unity Teams Advanced</strong></p>
+
+<p>To upgrade to Unity Teams Advanced, visit the Unity Teams page at <a href="https://unity3d.com/teams">unity3d.com/teams</a>. On the Unity Teams page you can learn more about the features of Unity Teams Advanced and then upgrade. </p>
+
+<p><strong>Purchase storage packs</strong></p>
+
+<p>To add storage packs:</p>
+
+<ol>
+<li>Sign in to the <a href="https://id.unity.com/">Unity ID</a> dashboard.</li>
+<li>In the left navigation bar, click <strong>Organizations</strong>.</li>
+<li>In the main <strong>Organizations</strong> window, select an Organization.</li>
+<li>In the left navigation bar, click <strong>Service Usage</strong>.</li>
+<li>In the <strong>Usage overview</strong> window, click the <strong>Manage storage</strong> button.</li>
+<li>On the <strong>Add cloud storage</strong> dialog, select the amount of storage that you need, and then click the <strong>Continue to purchase</strong> button. If you have only one Organization, proceed to step 6.</li>
+<li>In the <strong>Checkout</strong> window, enter your payment information and then click <strong>Pay now</strong>.</li>
+</ol>
+
+<p><strong>Modifying your contracted amount of storage</strong></p>
+
+<ol>
+<li>Sign in to the <a href="https://id.unity.com/">Unity ID</a> dashboard.</li>
+<li>In the left navigation window, click <strong>Organizations</strong>.</li>
+<li>In the main <strong>Organizations</strong> window, select an Organization.</li>
+<li>In the left navigation bar, click <strong>Service Usage</strong>. The Service Usage window displays your contract period and the number of storage packs that you are contracted for.</li>
+<li>In the <strong>Usage overview</strong> window, click the <strong>Manage storage</strong> button.</li>
+<li>On the <strong>Add cloud storage</strong> tab, enter the number of storage packs to add.</li>
+<li>Click the <strong>Next</strong> button.</li>
+<li>In the <strong>Review order</strong> window, review the order information and then click the <strong>Confirm purchase</strong> button.</li>
+</ol>
+
+<p>You can reduce the number storage packs on the <strong>Manage subscription</strong> tab:</p>
+
+<ul>
+<li>To remove all contracted storage packs, turn off <strong>Automatic Renewal</strong>. When automatic renewal is turned off, all storage packs are removed on the renewal date.</li>
+<li>To reduce the number of storage packs that are renewed, enter the number of storage packs to renew in the <strong>Select the number of storage packs you want to renew upon renewal</strong> field.</li>
+</ul>
+
+<p>Then click the <strong>Save</strong> button.</p>
+
+<p><a name="retention"></a></p>
+
+<h2>Cloud storage data retention</h2>
+
+<p>If you’re using Unity Teams Advanced, Unity does not delete any version history for your Projects.</p>
+
+<p>If you’re using Unity Teams Basic, Unity stores your data in cloud storage for at least 1 year. Unity reserves the right to delete Project history older than 1 year. You always have access to the latest version of your Project, but you only have access to the last 90 days of your version history. If you’re using Unity Teams Basic and want full access to the last 1 year of your history, you must upgrade to Unity Teams Advanced. When you upgrade to Unity Teams Advanced, you have access to your full history going forward.</p>
+
+<h2>Reducing your cloud storage usage</h2>
+
+<p>You have three options to reduce your cloud storage usage:</p>
+
+<ul>
+<li>Delete or reduce the size of <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> in your Project. It is important to remember that Project history does not count toward your cloud storage usage.</li>
+<li>Archive unused Projects. See <a href="#archivingprojects">Archiving Projects</a>.</li>
+<li>Archive Projects for Collaborate only. Archiving a Project for Collaborate only allows you to free cloud storage space, while still being able to use other Unity services such as Ads, <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span>, and Performance Reporting. See <a href="#archiveforcollab">Archiving Projects for Collaborate</a>.</li>
+</ul>
+
+<p><a name="archivingprojects"></a></p>
+
+<h2>Archiving Projects</h2>
+
+<p>Archiving a Project automatically archives any Collaborate cloud storage associated with the Project and Unity services are no longer accessible.</p>
+
+<p>To archive a Project:</p>
+
+<ol>
+<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>Select the Project to archive.</li>
+<li>In the left navigation bar, click <strong>Settings</strong>, then click <strong>General</strong>.</li>
+<li>At the bottom of the main window, read the important note and, if you are certain you want to archive the Project, click the <strong>Archive my Project for ALL Unity services</strong> button. </li>
+<li>In the <strong>Are you sure you want to archive this Project</strong> dialog, enter the name of the Project and then click the <strong>Yes, archive it</strong> button.</li>
+</ol>
+
+<p>To unarchive a Project:</p>
+
+<ol>
+<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>At the top right of the main window, under the <strong>CREATE NEW PROJECT</strong> button, click the <strong>View Archived Projects</strong> link.</li>
+<li>Locate the Project to reactivate, click the vertical ellipsis to the right of the Project name and then select <strong>Unarchive Project</strong>.</li>
+</ol>
+
+<p><a name="archiveforcollab"></a></p>
+
+<h2>Archiving Projects for Collaborate</h2>
+
+<p>To archive a Project for Collaborate only:</p>
+
+<ol>
+<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>Select the Project to archive.</li>
+<li>In the left navigation window, click <span class="tooltip"><strong>Collaborate</strong><span class="tooltiptext">A Unity cloud-hosted service that provides a simple way for teams to save, share, and contribute to their Unity project. <a href="UnityCollaborate.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collaborate">Glossary</a></span></span></span>, then click <strong>Storage</strong>.</li>
+<li>In the main window, click the <strong>ARCHIVE</strong> button.</li>
+</ol>
+
+<p>To unarchive a Project for Collaborate:</p>
+
+<ol>
+<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>Select the Project to unarchive.</li>
+<li>In the left navigation window, click <strong>Collaborate</strong>, then click <strong>Storage</strong>.</li>
+<li>In the main window, click the <strong>UNARCHIVE</strong> button.</li>
+</ol>
+
+<hr>
+
+<p><span class="page-edit">2018–07–16Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CollaborateInProgress.html"></a></span><div class="tip"> In-Progress edit notifications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip"> Moving your Project to another version control system</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

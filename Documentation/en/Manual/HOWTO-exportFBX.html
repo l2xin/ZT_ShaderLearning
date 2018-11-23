@@ -1,0 +1,491 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Exporting from other applications</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ImportingAssets" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/HOWTO-exportFBX.html">English</a></li>
+<li><a href="/ja/current/Manual/HOWTO-exportFBX.html">日本語</a></li>
+<li><a href="/es/current/Manual/HOWTO-exportFBX.html">Español</a></li>
+<li><a href="/kr/current/Manual/HOWTO-exportFBX.html">한국어</a></li>
+<li><a href="/ru/current/Manual/HOWTO-exportFBX.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ImportingAssets.html"> Importing</a></li>
+<li> Exporting from other applications</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip"> Limitations when importing from other applications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingHumanoidChars.html"></a></span><div class="tip"> Humanoid Asset preparation</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Exporting from other applications</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity supports FBX files which you can export from many 3D modeling applications. Use these guidelines to help ensure the best results:</p>
+
+<ol>
+<li>
+<a href="#Select">Select</a> what you want to export inside your 3D modeling application.</li>
+<li>
+<a href="#Prepare">Prepare</a> what you need to include inside your 3D modeling application.</li>
+<li>Check the <a href="#Export">FBX settings</a> before exporting.</li>
+<li>
+<a href="#Import">Verify and import</a> the FBX file into Unity.</li>
+</ol>
+
+<p>
+<strong>Note</strong>: In addition to these generation guidelines about exporting from 3d modeling applications, some 3d modeling applications have more specific information under these sections:</p>
+
+<ul>
+<li><a href="#Maya">Maya</a></li>
+<li><a href="#Cinema4D">Cinema 4D</a></li>
+<li><a href="#Max">3ds Max</a></li>
+<li><a href="#LightWave">LightWave</a></li>
+</ul>
+
+<p><a name="Select"></a></p>
+
+<h2>Selecting what to export</h2>
+
+<p>Think about what you want to export: some <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> objects are essential but others may be unnecessary.
+Applications often let you export <strong>selected objects</strong> or a <strong>whole scene</strong>.
+You can optimize the data in Unity by keeping only the essential objects.</p>
+
+<p>If you choose to export only specific objects in your scene, you can:</p>
+
+<ul>
+<li>Export only the <strong>selected objects</strong> if your application supports it.</li>
+<li>Remove unwanted data from your scene and export the <strong>whole scene</strong>.</li>
+<li>Make a preset or a custom scene exporter to automate or simplify the selection export process.</li>
+</ul>
+
+<p><a name="Prepare"></a></p>
+
+<h2>Preparing what you need to include</h2>
+
+<p>Prepare your <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> for export, using the following considerations:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Object:</strong></th>
+	<th style="text-align:left;"><strong>Preparations:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Meshes</strong></td>
+	<td style="text-align:left;">All NURBS, NURMS, splines, patches, and subdiv surfaces must be converted to polygons (triangulation or quadrangulation)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Animation</strong><span class="tooltiptext">A collection of images that create a moving image when played sequentially. In Unity, an animation is the result of adding two different animation keys, at two different times, for the same <strong>animatable property</strong>. <a href="AnimationSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animation">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Select the correct rig. Check the frame rate. Check the animation length.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Blend Shapes</strong> or <strong>Morphing</strong>
+</td>
+	<td style="text-align:left;">Make sure your BlendShapes (Maya) or Morph targets (Max) are assigned. Set up the export <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> appropriately.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Textures</strong><span class="tooltiptext">An image used when rendering a GameObject, Sprite, or UI element. Textures are often applied to the surface of a mesh to give it visual detail. <a href="class-TextureImporter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#texture">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Make sure your textures are either sourced from your Unity Project or copy them into a folder called <code>textures</code> inside your Unity Project. <br><br><strong>Note:</strong> We don’t recommend embedding textures in the FBX file using the <strong>Embed Media</strong> option. You must extract textures before using them, so embedding them just bloats your project unnecessarily and slows the import process.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Smoothing</strong></td>
+	<td style="text-align:left;">Verify any smoothing groups and smooth mesh settings.<br><br><strong>Important:</strong> Importing blendshape normals requires having smoothing groups in the FBX file.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Export"></a></p>
+
+<h2>Setting the FBX export options</h2>
+
+<p>Check your FBX export settings:</p>
+
+<ul>
+<li>Check each setting in the export dialogue of your 3D modeling application so that you know what to match up the FBX import settings in Unity.</li>
+<li>Select whether to export Animation, Deformations, Skins, Morphs according to your needs.</li>
+<li>Nodes, markers and their transforms can be exported to Unity.</li>
+<li>Select any Cameras, Lights, and Visibility settings you want to import into Unity.</li>
+<li>Use the <a href="https://www.autodesk.com/products/fbx/overview">Latest Version of FBX</a> where possible. Autodesk regularly updates their FBX installer.</li>
+<li>Make sure you use the same FBX version to import files into Unity as you used to export them from your 3D modeling application. Using different versions of the software can provide unexpected results.</li>
+</ul>
+
+<p><a name="Import"></a></p>
+
+<h2>Verifying and importing into Unity</h2>
+
+<p>Before importing your FBX file into Unity:</p>
+
+<ol>
+<li><p>Verify the size of your exported file. Perform a sanity check on the file size (e.g. &gt;10kb?).</p></li>
+<li><p>Re-import your FBX file into a new scene back into the 3D modeling software you used to generate it. Check to make sure it is what you expected.</p></li>
+</ol>
+
+<p>To import your file into Unity, follow the instructions for <a href="ImportingAssets.html">Importing</a>, keeping in mind how you set the export options in your 3D modeling software.</p>
+
+<h2>Export settings in specific 3D modeling applications</h2>
+
+<p><a name="Maya"></a></p>
+
+<h3>Maya</h3>
+
+<p>You can use the <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-FE8DBEAA-C2DD-43B3-9933-4BA4CDDEAA89">FBX Export options</a> to pick what to export in your FBX file.</p>
+
+<h4>Exporting BlendShapes (morphing)</h4>
+
+<p>When exporting BlendShapes (Morphing) from Maya, follow these guidelines:</p>
+
+<ul>
+<li>Apply the blend shape to the export mesh with its targets in order.</li>
+<li>If you require Maya animation <span class="tooltip"><strong>keyframes</strong><span class="tooltiptext">A frame that marks the start or end point of a transition in an animation. Frames in between the keyframes are called inbetweens. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#keyframe">Glossary</a></span></span></span>, you can animate <strong>keyframes</strong> on the blend shape node.</li>
+<li>Enable the <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Blend Shapes</strong> FBX Export option in Maya before exporting the mesh.</li>
+<li>If you also want to export skin deformation, enable the <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Skins</strong> FBX Export option in Maya before exporting the mesh.</li>
+</ul>
+
+<p>When you’ve imported the file into Unity, select it in the <strong>Project</strong> view and enable <strong>Bake Animations</strong> in the <a href="class-AnimationClip.html">Animations tab of the Model Importer</a>.</p>
+
+<p><a name="Cinema4D"></a></p>
+
+<h3>Cinema 4D</h3>
+
+<h4>Animated characters using IK</h4>
+
+<p>If you are using IK to animate your characters in Cinema 4D, you have to bake the IK before exporting using the <strong>Plugins &gt; Mocca &gt; Cappucino</strong> menu in Cinema 4D.
+If you don’t bake your IK prior to importing into Unity, you only get animated locators and no animated bones.</p>
+
+<h4>Maximizing import speed</h4>
+
+<p>You can speed up file import into Unity by turning off the <strong>Embed Textures</strong> preference in Cinema 4D before you export. Check the <a href="https://help.maxon.net/us/#FFBXEXPORT-FBXEXPORT_GROUP">Cinema 4D documentation</a> for instructions.</p>
+
+<p><a name="Max"></a></p>
+
+<h3>3ds Max</h3>
+
+<p>Autodesk provides a <a href="https://help.autodesk.com/view/3DSMAX/2018/ENU/?guid=GUID-B0258B21-83AE-4DF6-B7AB-3FA7F63F371A">Game Exporter Utility</a> that targets the assets typically exported as game assets. You can also use the <a href="https://help.autodesk.com/view/3DSMAX/2018/ENU/?guid=GUID-EB0F5BB7-2E59-4EF6-8B16-F59CC56A4747">standard FBX Export utility</a> to pick what to export in your FBX file.</p>
+
+<p>For example, the default FBX exporter options (that basically exports everything) includes embedding Textures as image maps in the file. While this makes the file very portable, it also increases the file size.</p>
+
+<p>In addition, when exporting from Maya, there are some extra considerations when dealing with the following:</p>
+
+<ul>
+<li>Exporting quads</li>
+<li>Bone-based Animations</li>
+<li>Morph targets (Blendshapes)</li>
+<li>UV sets for Lightmapping</li>
+</ul>
+
+<p><a name="Quads"></a></p>
+
+<h4>Exporting quads</h4>
+
+<p>3dsMax’s editable Mesh always exports triangles. The editable poly retains <span class="tooltip"><strong>quads</strong><span class="tooltiptext">A primitive object that resembles a plane but its edges are only one unit long, it uses only 4 vertices, and the surface is oriented in the XY plane of the local coordinate space. <a href="PrimitiveObjects.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Quad">Glossary</a></span></span></span> and N-gons on import. So if you want to import <strong>quads</strong> into Unity, you have to use editable poly in 3ds Max.</p>
+
+<h4>Bone-based Animations</h4>
+
+<p>Follow these guidelines when you want to export bone-based animations in 3ds Max:</p>
+
+<ul>
+<li>After setting up the bone structure and the animations (using FK or IK), select all bones and/or IK solvers.</li>
+<li>Select <strong>Motion</strong> &gt; <strong>Trajectories</strong> &gt; <strong>Collapse</strong>. Unity makes a key filter, so the amount of keys you export is irrelevant.</li>
+<li>Click the Export button on the Game Exporter window or the OK button on the FBX Exporter window.</li>
+<li>Copy the FBX file into the Assets folder.</li>
+<li>Open Unity and reassign the Texture to the Material in the root bone.</li>
+</ul>
+
+<p>When exporting a bone hierarchy with mesh and animations from 3ds Max to Unity, the <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> hierarchy produced corresponds to the hierarchy you can see in the 3ds Max Schematic View. However, Unity uses a <strong>GameObject</strong> as the new root, containing the animations, and places the mesh and material information in the root bone.</p>
+
+<p>If you prefer to keep animation and mesh information in the same Unity GameObject, parent the mesh node to a bone in the bone hierarchy in 3ds Max before exporting. </p>
+
+<h4>Morph targets (Blendshapes)</h4>
+
+<p>Follow these guidelines when you want to export Morph targets in 3ds Max:</p>
+
+<ul>
+<li>Apply the Morpher Modifier to the export mesh with appropriate morph targets set up in the Channel List.</li>
+<li>If you require 3ds Max animation keyframes, you can animate keyframes on the mesh/modifier.</li>
+<li>Enable the <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Blend Shapes</strong> FBX Export option in 3ds Max before exporting the mesh.</li>
+<li>If you also want to export skin deformation, enable the <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Skins</strong> FBX Export option in 3ds Max before exporting the mesh.</li>
+</ul>
+
+<h4>UV sets for Lightmapping</h4>
+
+<p>Unity has a built-in <span class="tooltip"><a href="GIIntro.html">lightmapper</a><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span>, but you can also create <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> using texture baking (<strong>Render To Texture</strong> on the Rendering menu) feature and automatic unwrapping functionality in 3ds Max. </p>
+
+<p>Usually one UV set is used for main texture and/or normal maps, and another UV set is used for the lightmap texture. For both UV sets to come through properly, the material in 3ds Max has to be Standard and both Diffuse (for main texture) and Self-Illumination (for lightmap) map slots have to be set up:</p>
+
+<figure>
+<img src="../uploads/Main/3dsMaxLightmapMaterial.png" alt="Material setup for Lightmapping in 3ds Max, using self-illumination map">
+<figcaption>Material setup for Lightmapping in 3ds Max, using self-illumination map</figcaption>
+</figure>
+
+<p>
+<strong>Note</strong>: If the object uses a Shell type of Material, Autodesk’s FBX exporter does <strong>not export UVs correctly</strong>.</p>
+
+<p>Alternatively, you can use Multi/Sub Object material type and setup two sub-materials, using the main texture and the lightmap in their diffuse map slots, as shown below. However, if the faces in your Model use different sub-material IDs, this results in multiple materials being imported, which is not optimal for performance.</p>
+
+<figure>
+<img src="../uploads/Main/3dsMaxMultiSubObject.png" alt="Alternate Material setup for Lightmapping in 3ds Max, using multi/sub object material">
+<figcaption>Alternate Material setup for Lightmapping in 3ds Max, using multi/sub object material</figcaption>
+</figure>
+
+<p><a name="LightWave"></a></p>
+
+<h3>LightWave</h3>
+
+<p>You can access the FBX export settings window inside LightWave by selecting <strong>Save</strong> &gt; <strong>Export</strong> &gt; <strong>Export FBX</strong> from the <strong>File</strong> toolbar in LightWave Layout:</p>
+
+<figure>
+<img src="../uploads/Main/LW_Export.png" alt="Accessing FBX Export options in LightWave Layout">
+<figcaption>Accessing FBX Export options in LightWave Layout</figcaption>
+</figure>
+
+<p>The Export FBX window appears.</p>
+
+<figure>
+<img src="../uploads/Main/LW_FBX.png" alt="LightWave FBX Export Settings">
+<figcaption>LightWave FBX Export Settings</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>FBX Filename</strong></td>
+	<td style="text-align:left;">Set the name and location of the FBX file. Use a location under the Unity <code>Assets</code> folder.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Anim Layer</strong></td>
+	<td style="text-align:left;">Name of the <span class="tooltip"><strong>animation layer</strong><span class="tooltiptext">An Animation Layer contains an Animation State Machine that controls animations of a model or part of it. An example of this is if you have a full-body layer for walking or jumping and a higher layer for upper-body motions such as throwing an object or shooting. The higher layers take precedence for the body parts they control. <a href="AnimationLayers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnimationLayer">Glossary</a></span></span></span> to use.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Type</strong></td>
+	<td style="text-align:left;">Use <strong>Binary</strong> to reduce filesize or <strong>ASCII</strong> for a text-editable FBX file.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>FBX Version</strong></td>
+	<td style="text-align:left;">Select the most recent FBX version from the list, making sure that it matches the version that Unity is using.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Export</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Models</strong><span class="tooltiptext">A 3D model representation of an object, such as a character, a building, or a piece of furniture. <a href="3D-formats.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Model">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Export all models in the scene</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Morphs (Blend Shapes)</strong></td>
+	<td style="text-align:left;">Export all BlendShapes in the scene</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Mesh type</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Cage (Subdivision Off)</strong></td>
+	<td style="text-align:left;">Export the object without any subdivision applied to it</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Subdivision</strong></td>
+	<td style="text-align:left;">Subdivide the mesh when it is exported</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Re-parent bone hierarchy</strong></td>
+	<td style="text-align:left;">Create a null to act as the new parent of the bone hierarchy.<br><br>When exporting a rig from Layout with the bone hierarchy parented to the mesh, the actual movement of the deformed mesh is twice what it should be. Enabling this new parent keeps the mesh in place.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Materials</strong><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#material">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Convert LightWave’s standard Surface channels and image maps. This does not include procedural textures and nodes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Embedded Textures</strong></td>
+	<td style="text-align:left;">Save embedded Textures as image maps included directly in the FBX file instead of in a separate image directory. This creates much larger, but self-contained, FBX files.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Smoothing Groups</strong></td>
+	<td style="text-align:left;">Convert LightWave’s normals into smoothing groups.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Collapse Materials</strong></td>
+	<td style="text-align:left;">Collapse surfaces with identical Material names, exporting the Materials separately. However, if both Material names and all surface parameters match, the two Materials are always merged, regardless of this setting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Merge UVs</strong></td>
+	<td style="text-align:left;">Collapse multiple UV maps into a single map per object.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Unity 3D Mode</strong></td>
+	<td style="text-align:left;">Correct rotation errors caused by converting between coordinate systems across LightWave, FBX, and Unity.<br><br>Both LightWave and Unity use <em>left-handed</em> coordinate systems but FBX is <em>right-handed</em>. When LightWave exports to FBX, it converts to right-handed coordinates along the Z axis. When Unity imports the FBX file, it converts back to left-handed coordinates along the X axis, which results in an apparent 180 degree rotation of the scene. Using the setting means that when you go into Unity and look down the Z axis, the imported FBX looks exactly the same as it does inside LightWave.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Cameras</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Export all cameras in the scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lights</strong></td>
+	<td style="text-align:left;">Export all lights in the scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Animations</strong></td>
+	<td style="text-align:left;">Export simple animations based on movement, rotation or scaling without baking. Character animation or other animation using IK or dynamics should still be baked, using <strong>Bake Motion Envelopes</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bake Motion Envelopes</strong></td>
+	<td style="text-align:left;">Set an arbitrary start and end point for baking, in case there are setup frames you do not wish to capture. Only available if <strong>Animations</strong> is checked.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Start Frame</strong> and <strong>End Frame</strong>
+</td>
+	<td style="text-align:left;">Export data only inside this timeframe.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scale Scene</strong></td>
+	<td style="text-align:left;">Set a scale for your scene to match the Unity <a href="FBXImporter-Model.html">File Scale</a> value.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip"> Limitations when importing from other applications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingHumanoidChars.html"></a></span><div class="tip"> Humanoid Asset preparation</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

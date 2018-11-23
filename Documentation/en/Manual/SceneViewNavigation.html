@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Scene View navigation</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SceneViewNavigation.html">English</a></li>
+<li><a href="/ja/current/Manual/SceneViewNavigation.html">日本語</a></li>
+<li><a href="/es/current/Manual/SceneViewNavigation.html">Español</a></li>
+<li><a href="/kr/current/Manual/SceneViewNavigation.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SceneViewNavigation.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UsingTheEditor.html">The Main Windows</a></li>
+<li><a href="UsingTheSceneView.html">The Scene View</a></li>
+<li>Scene View navigation</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheSceneView.html"></a></span><div class="tip">The Scene View</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PositioningGameObjects.html"></a></span><div class="tip"> Positioning GameObjects</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Scene View navigation</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> has a set of navigation controls to help you move around quickly and efficiently.</p>
+
+<h2>Scene Gizmo</h2>
+
+<p>The <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> <span class="tooltip"><strong>Gizmo</strong><span class="tooltiptext">A graphic overlay associated with a GameObject in a Scene, and displayed in the Scene View. Built-in scene tools such as the move tool are Gizmos, and you can create custom Gizmos using textures or scripting. Some Gizmos are only drawn when the GameObject is selected, while other Gizmos are drawn by the Editor regardless of which GameObjects are selected. <a href="GizmosMenu.html#gizmos">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> is in the upper-right corner of the <strong>Scene</strong> View. This displays the <strong>Scene</strong> View <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>’s current orientation, and allows you to quickly modify the viewing angle and projection mode.</p>
+
+<figure>
+<img src="../uploads/Main/Editor-SceneGizmo.png" alt="">
+</figure>
+
+<p>The Scene Gizmo has a conical arm on each side of the cube. The arms at the forefront are labelled <strong>X</strong>, <strong>Y</strong> and <strong>Z</strong>. Click on any of the conical axis arms to snap the Scene View Camera to the axis it represents (for example: top view, left view and front view). You can also right-click the cube to bring up a menu with a list of viewing angles. To return to the default viewing angle, right-click the Scene Gizmo and click <strong>Free</strong>.</p>
+
+<p>You can also toggle <strong>Perspective</strong> on and off. This changes the projection mode of the Scene View between <strong>Perspective</strong> and <strong>Orthographic</strong> (sometimes called ‘isometric’). To do this, click the cube in the centre of the Scene Gizmo, or the text below it. Orthographic view has no perspective, and is useful in combination with clicking one of the conical axis arms to get a front, top or side elevation.</p>
+
+<figure>
+<img src="../uploads/Main/CameraPerspectiveAndOrtho.jpg" alt="A Scene shown in Perspective mode (left) and Orthographic mode (right) ">
+<figcaption>A Scene shown in Perspective mode (left) and Orthographic mode (right) </figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/SceneViewOrthoTopAndSide.jpg" alt="The same Scene viewed in top and front view, in orthographic mode">
+<figcaption>The same Scene viewed in top and front view, in orthographic mode</figcaption>
+</figure>
+
+<p><em>(Scene above from <a href="https://www.assetstore.unity3d.com/en/#!/publisher/1299">BITGEM</a>)</em></p>
+
+<p>If your Scene View is in an awkward viewpoint (upside-down, or just an angle you find confusing), Shift-click the cube at the centre of the Scene Gizmo to get back to a <strong>Perspective</strong> view with an angle that is looking at the Scene from the side and slightly from above.</p>
+
+<p>Click on the padlock on the top right of the Scene Gizmo to enable or disable rotation of the Scene. Once Scene rotation is disabled, right-clicking the mouse pans the view instead of rotating it. This is the same as the Hand tool (see <a href="#handtool"><em>Hand tool</em></a>, below).</p>
+
+<p>Note that in <strong>2D Mode</strong> the Scene Gizmo is not displayed, because the only option is to have the view looking perpendicularly at the XY plane.</p>
+
+<h3>Scene Gizmo: Mac trackpad gestures</h3>
+
+<p>On a Mac with a trackpad, you can drag with two fingers to zoom the view.</p>
+
+<p>You can also use three fingers to simulate the effect of clicking the arms of the <strong>Scene Gizmo</strong>: drag up, left, right or down to snap the Scene View Camera to the corresponding direction. In OS X 10.7 “Lion” you may have to change your trackpad settings in order to enable this feature:</p>
+
+<ul>
+<li>Open System Preferences and then Trackpad (or type trackpad into Spotlight).</li>
+<li>Click into the “More Gestures” option.</li>
+<li>Click the first option labelled “Swipe between pages” and then either set it to “Swipe left or right with three fingers” or “Swipe with two or three fingers”.</li>
+</ul>
+
+<h2>Moving, orbiting and zooming in the Scene View</h2>
+
+<p>Moving, orbiting and zooming are key operations in Scene View navigation. Unity provides several ways to perform them for maximum accessibility:</p>
+
+<h3>Arrow movement</h3>
+
+<p>You can use the <strong>Arrow Keys</strong> to move around the Scene as though “walking” through it. The up and down arrows move the Camera forward and backward in the direction it is facing. The left and right arrows pan the view sideways. Hold down the <strong>Shift</strong> key with an arrow to move faster.</p>
+
+<p><a name="handtool"></a></p>
+
+<h3>The Hand tool</h3>
+
+<p>When the Hand tool is selected (shortcut: <strong>Q</strong>), the following mouse controls are available:</p>
+
+<p>
+<img src="../uploads/Main/UI-ViewTool.png" alt=""> <strong>Move:</strong> Click-drag to drag the Camera around. </p>
+
+<p>
+<img src="../uploads/Main/Editor-EyeTool.png" alt=""> <strong>Orbit:</strong> Hold <strong>Alt</strong>, and left-click and drag to orbit the Camera around the current pivot point. This option is not available in 2D mode, because the view is orthographic.</p>
+
+<p>
+<img src="../uploads/Main/Editor-ZoomTool.png" alt=""> <strong>Zoom:</strong> Hold <strong>Alt</strong>, and right-click and drag to zoom the Scene View. On Mac you can also hold <span class="tooltip"><strong>Control</strong><span class="tooltiptext">A function for displaying text, buttons, checkboxes, scrollbars and other features on the user interface. <a href="gui-Controls.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Control">Glossary</a></span></span></span>, and left-click and drag instead.</p>
+
+<p>Hold down <strong>Shift</strong> to increase the rate of movement and zooming.</p>
+
+<h3>Flythrough mode</h3>
+
+<p>Use <strong>Flythrough mode</strong> to navigate the Scene View by flying around in first-person, similar to how you would navigate in many games.</p>
+
+<ul>
+<li>Click and hold the right mouse button.</li>
+<li>Move the view around using the mouse, the <strong>WASD</strong> keys to move left/right/forward/backward, and the <strong>Q</strong> and <strong>E</strong> keys to move up and down.</li>
+<li>Hold down <strong>Shift</strong> to move faster.</li>
+</ul>
+
+<p>Flythrough mode is designed for <strong>Perspective Mode</strong>. In <strong>Orthographic Mode</strong>, holding down the right mouse button and moving the mouse orbits the Camera instead.</p>
+
+<p>Note that Flythrough mode is not available in 2D mode. Instead, holding the right mouse button down while moving the mouse pans around the Scene View.</p>
+
+<h3>Movement shortcuts</h3>
+
+<p>For extra efficiency, all of these controls can also be used regardless of which transform tool is selected.
+The most convenient controls depend on which mouse or track-pad you are using:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Action</strong></th>
+	<th style="text-align:left;"><strong>3-button mouse</strong></th>
+	<th style="text-align:left;"><strong>2-button mouse or track-pad</strong></th>
+	<th style="text-align:left;"><strong>Mac with only one mouse button or track-pad</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Move</strong></td>
+	<td style="text-align:left;">Hold Alt+middle mouse button, then drag</td>
+	<td style="text-align:left;">Hold Alt+Control+left-click, then drag</td>
+	<td style="text-align:left;">Hold Alt+Command+left-click, then drag</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Orbit</strong> (Not available in 2D mode)</td>
+	<td style="text-align:left;">Hold Alt+left-click, then drag</td>
+	<td style="text-align:left;">Hold Alt+left-click, then drag</td>
+	<td style="text-align:left;">Hold Alt+left-click, then drag</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Zoom</strong></td>
+	<td style="text-align:left;">Use the scroll wheel, or hold Alt+right-click, then drag</td>
+	<td style="text-align:left;">Hold Alt+right-click, then drag</td>
+	<td style="text-align:left;">Use the two-finger swipe method to scroll in and out, or hold Alt-Control+left-click, then drag</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Centering the view on a GameObject</h2>
+
+<p>To center the Scene View on a GameObject, select the GameObject in the Hierarchy, then move the mouse over the Scene View and press <strong>F</strong>. This feature can also be found in the menu bar under <strong>Edit</strong> &gt; <strong>Frame Selected</strong>. To lock the view to the GameObject even when the GameObject is moving, press <strong>Shift+F</strong>. This feature can also be found in the menu bar under <strong>Edit</strong> &gt; <strong>Lock View to Selected</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/FrameSelection.png" alt="">
+</figure>
+
+<p><span class="search-words">The Scene Gizmo is secretly known as the Tetraxial Perspectagon.</span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheSceneView.html"></a></span><div class="tip">The Scene View</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PositioningGameObjects.html"></a></span><div class="tip"> Positioning GameObjects</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Cloth</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-Cloth.html">English</a></li>
+<li><a href="/ja/current/Manual/class-Cloth.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-Cloth.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-Cloth.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-Cloth.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li><a href="Physics3DReference.html">3D Physics Reference</a></li>
+<li> Cloth</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpringJoint.html"></a></span><div class="tip">Spring Joint</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-WheelCollider.html"></a></span><div class="tip">Wheel Collider</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Cloth</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/Cloth.html' title='Go to Cloth page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Cloth <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> works with the Skinned <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderer to provide a physics-based solution for simulating fabrics. It is specifically designed for character clothing, and only works with skinned meshes. If you add a Cloth <strong>component</strong> to a non-skinned <strong>Mesh</strong>, Unity removes the non-skinned <strong>Mesh</strong> and adds a skinned <strong>Mesh</strong>. </p>
+
+<p>To attach a Cloth component to a skinned Mesh, select the GameObject in the Editor, click the <strong>Add Component</strong> button in the Inspector window, and select <strong>Physics</strong> &gt; <strong>Cloth</strong>. The component appears in the Inspector.</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-Cloth.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Stretching Stiffness</strong></td>
+	<td style="text-align:left;">Stretching stiffness of the cloth.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bending Stiffness</strong></td>
+	<td style="text-align:left;">Bending stiffness of the cloth.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Tethers</strong></td>
+	<td style="text-align:left;">Apply constraints that help to prevent the moving cloth particles from going too far away from the fixed ones. This helps to reduce excess stretchiness.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Gravity</strong></td>
+	<td style="text-align:left;">Should gravitational acceleration be applied to the cloth?</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Damping</strong></td>
+	<td style="text-align:left;">Motion damping coefficient.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>External Acceleration</strong></td>
+	<td style="text-align:left;">A constant, external acceleration applied to the cloth.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Random Acceleration</strong></td>
+	<td style="text-align:left;">A random, external acceleration applied to the cloth.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Velocity Scale</strong></td>
+	<td style="text-align:left;">How much world-space movement of the character will affect cloth vertices.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Acceleration Scale</strong></td>
+	<td style="text-align:left;">How much world-space acceleration of the character will affect cloth vertices.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Friction</strong></td>
+	<td style="text-align:left;">The friction of the cloth when colliding with the character.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collision Mass Scale</strong></td>
+	<td style="text-align:left;">How much to increase mass of colliding particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Continuous Collision</strong></td>
+	<td style="text-align:left;">Enable continuous <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> to improve <strong>collision</strong> stability.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Virtual Particles</strong></td>
+	<td style="text-align:left;">Add one virtual particle per triangle to improve collision stability.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Solver Frequency</strong></td>
+	<td style="text-align:left;">Number of solver iterations per second.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sleep Threshold</strong></td>
+	<td style="text-align:left;">Cloth’s sleep threshold.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Capsule Colliders</strong><span class="tooltiptext">A capsule-shaped collider component that handles collisions for GameObjects like barrels and character limbs. <a href="class-CapsuleCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#capsulecollider">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">An array of CapsuleColliders which this Cloth instance should collide with.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Sphere Colliders</strong><span class="tooltiptext">A sphere-shaped collider component that handles collisions for GameObjects like balls or other things that can be roughly approximated as a sphere for the purposes of physics. <a href="class-SphereCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">An array of ClothSphereColliderPairs which this Cloth instance should collide with.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>Cloth does not react to all <span class="tooltip"><strong>colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> in a <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, nor does it apply forces back to the world. When it has been added the Cloth component will not react to or influence any other bodies at all. Thus Cloth and the world do not recognise or see each other until you manually add <strong>colliders</strong> from the world to the Cloth component. Even after that, the simulation is still one-way: cloth reacts to those bodies but doesn’t apply forces back.</p>
+
+<p>Additionally, you can only use three types of colliders with cloth: a sphere, a capsule, and conical capsule colliders, constructed using two sphere colliders. These restrictions all exist to help boost performance.</p>
+
+<h3>Edit Constraints Tool</h3>
+
+<p>Select <strong>Edit</strong> &gt; <span class="tooltip"><strong>Constraints</strong><span class="tooltiptext">Settings on Joint components which limit movement or rotation. The type and number of constraints vary depending on the type of Joint. <a href="Joints2D.html#constraints">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Constraints">Glossary</a></span></span></span> to edit the constraints applied to each of the vertices in the cloth mesh. All vertices have a color based on the current visualization mode, to display the difference between their respective values. You can author Cloth constraints by painting them onto the cloth with a brush.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Visualization</strong></td>
+	<td style="text-align:left;">Changes the visual appearance of the tool in the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> between Max Distance and Surface Penetration Values. A toggle for Manipulate Backfaces is also available.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Distance</strong></td>
+	<td style="text-align:left;">The maximum distance a cloth particle can travel from its vertex position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Surface Penetration</strong></td>
+	<td style="text-align:left;">How deep the cloth particle can penetrate the mesh.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Brush Radius</strong></td>
+	<td style="text-align:left;">Sets the radius of a brush that enables you to paint constraints onto a cloth.</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/Inspector-Cloth2.png" alt="The Cloth Constraints Tool being used on a Skinned Mesh Renderer.">
+<figcaption>The Cloth Constraints Tool being used on a Skinned Mesh Renderer.</figcaption>
+</figure>
+
+<p>There are two modes for changing the values for each vertex:</p>
+
+<ul>
+<li><p>Use <strong>Select</strong> mode to select a group of vertices. To do this, use the mouse cursor to draw a selection box or click on vertices one at a time. You can can then enable <strong>Max Distance</strong>, <strong>Surface Penetration</strong>, or both, and set a value.</p></li>
+<li><p>Use <strong>Paint</strong> mode to directly adjust each individual vertex. To do this, click the vertex you want to adjust. You can can then enable <strong>Max Distance</strong>, <strong>Surface Penetration</strong>, or both, and set a value.</p></li>
+</ul>
+
+<p>In both modes, the visual representation in the Scene view automatically updates when you assign values to <strong>Max Distance</strong> and <strong>Surface Penetration</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/ClothContraintsPaint.png" alt="The Cloth Constraints Tool in Paint mode">
+<figcaption>The Cloth Constraints Tool in Paint mode</figcaption>
+</figure>
+
+<h3>Self collision and intercollision</h3>
+
+<p>Cloth collision makes character clothing and other fabrics in your game move more realistically. In Unity, a cloth has several cloth particles that handle collision. You can set up cloth particles for:</p>
+
+<ul>
+<li>Self-collision, which prevents cloth from penetrating itself.</li>
+<li>Intercollision, which allows cloth particles to collide with each other.</li>
+</ul>
+
+<p>To set up the collision particles for a cloth, select the <strong>Self Collision and Intercollision</strong> button in the Cloth <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>:</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-Cloth-Collision-Button.png" alt="The Self Collision and Intercollision button in the Cloth Inspector">
+<figcaption>The Self Collision and Intercollision button in the Cloth Inspector</figcaption>
+</figure>
+
+<p>The <strong>Cloth Self Collision And Intercollision</strong> window appears in the Scene view:</p>
+
+<figure>
+<img src="../uploads/Main/ClothSelfCollisionAndIntercollision.png" alt="The Cloth Self Collision And Intercollision window">
+<figcaption>The Cloth Self Collision And Intercollision window</figcaption>
+</figure>
+
+<p>Cloth particles appear automatically for skinned Meshes with a Cloth component. Initially, none of the cloth particles are set to use collision. These unused particles appear black:</p>
+
+<figure>
+<img src="../uploads/Main/ClothSelfCollisionNonSelected.jpg" alt="Unused cloth particles">
+<figcaption>Unused cloth particles</figcaption>
+</figure>
+
+<p>To apply self-collision or intercollision, you need to select a single set of particles to apply collision to. To select a set of particles for collision, click the <strong>Select</strong> button:</p>
+
+<figure>
+<img src="../uploads/Main/ClothSelectParticles.png" alt="Select cloth particles button">
+<figcaption>Select cloth particles button</figcaption>
+</figure>
+
+<p>Now left-click and drag to select the particles you want to apply collision to:</p>
+
+<figure>
+<img src="../uploads/Main/SelectingClothParticles.jpg" alt="Selecting cloth particles using click and drag">
+<figcaption>Selecting cloth particles using click and drag</figcaption>
+</figure>
+
+<p>The selected particles appear in blue:</p>
+
+<figure>
+<img src="../uploads/Main/SelectedParticlesBlue.jpg" alt="Selected cloth particles are blue">
+<figcaption>Selected cloth particles are blue</figcaption>
+</figure>
+
+<p>Tick the <strong>Self Collision and Intercollision</strong> checkbox to apply collision to the selected particles:</p>
+
+<figure>
+<img src="../uploads/Main/SelfCollisionAndIntercollisionCheckbox.png" alt="Self Collision and Intercollision tick box">
+<figcaption>Self Collision and Intercollision tick box</figcaption>
+</figure>
+
+<p>The particles you specify for use in collision appear in green:</p>
+
+<figure>
+<img src="../uploads/Main/SelectedParticlesGreen.jpg" alt="Selected particles are green">
+<figcaption>Selected particles are green</figcaption>
+</figure>
+
+<p>To enable the self collision behavior for a cloth, to go the <strong>Self Collision</strong> section of the Cloth Inspector window and set <strong>Distance</strong> and <strong>Stiffness</strong> to non-zero values:</p>
+
+<figure>
+<img src="../uploads/Main/SelfCollisionParameters.png" alt="Self Collision parameters">
+<figcaption>Self Collision parameters</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Distance</strong></td>
+	<td style="text-align:left;">The diameter of a sphere around each particle. Unity ensures that these spheres do not overlap during simulations. <strong>Distance</strong> should be smaller than the smallest distance between two particles in the configuration. If the distance is larger, self collision may violate some distance constraints and result in jittering.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stiffness</strong></td>
+	<td style="text-align:left;">How strong the separating impulse between particles should be. The cloth solver calculates this and it should be enough to keep the particles separated.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Self collision and intercollision can take a significant amount of the overall simulation time. Consider keeping the collision distance small and using self collision indices to reduce the number of particles that collide with each other.</p>
+
+<p>Self collision uses vertices, not triangles, so don’t expect self collision to work perfectly for Meshes with triangles much larger than the cloth thickness.</p>
+
+<p>
+<strong>Paint</strong> and <strong>Erase</strong> modes allow you to add or remove particles for use in collision by holding the left mouse button down and dragging individual cloth particles:</p>
+
+<figure>
+<img src="../uploads/Main/PaintEraseModes.png" alt="Self Collision parameters">
+<figcaption>Self Collision parameters</figcaption>
+</figure>
+
+<p>When in <strong>Paint</strong> or <strong>Erase</strong> mode, particles specified for collision are green, unspecified particles are black, and particles underneath the brush are blue:</p>
+
+<figure>
+<img src="../uploads/Main/PaintBrushSelfCollision.jpg" alt="Particles being painted are blue">
+<figcaption>Particles being painted are blue</figcaption>
+</figure>
+
+<h4>Cloth intercollision</h4>
+
+<p>You specify particles for intercollision in the same way as you specify particles for self collision, as described above. As with self collision, you specify one set of particles for intercollision.</p>
+
+<p>To enable intercollision behavior, open the PhysicsManager inspector (<strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Physics</strong>) and set <strong>Distance</strong> and <strong>Stiffness</strong> to non-zero values in the <strong>Cloth InterCollision</strong> section:</p>
+
+<figure>
+<img src="../uploads/Main/ClothInspectorIntercollisionSettings.png" alt="Particles being painted are blue">
+<figcaption>Particles being painted are blue</figcaption>
+</figure>
+
+<p>Cloth intercollision <strong>Distance</strong> and <strong>Stiffness</strong> properties have the same function as self collision Distance and Stiffness properties, which are described above.</p>
+
+<h3>Collider collision</h3>
+
+<p>Cloth is unable to simply collide with arbitrary world geometry, and now will only interact with the colliders specified in either the <a href="../ScriptReference/Cloth-capsuleColliders.html">Capsule Colliders</a> or <a href="../ScriptReference/Cloth-sphereColliders.html">Sphere Colliders</a> arrays.</p>
+
+<p>The sphere colliders array can contain either a single valid <a href="../ScriptReference/SphereCollider.html">SphereCollider</a> instance (with the second one being null), or a pair. In the former cases the <a href="../ScriptReference/ClothSphereColliderPair.html">ClothSphereColliderPair</a> just represents a single sphere collider for the cloth to collide against. In the latter case, it represents a conic capsule shape defined by the two spheres, and the cone connecting the two. Conic capsule shapes are useful for modelling limbs of a character.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–12–05  Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Cloth self collision and intercollision added in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpringJoint.html"></a></span><div class="tip">Spring Joint</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-WheelCollider.html"></a></span><div class="tip">Wheel Collider</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

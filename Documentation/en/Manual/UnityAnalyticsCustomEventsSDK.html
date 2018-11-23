@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Custom Events</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="LegacyTopics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityAnalyticsCustomEventsSDK.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityAnalyticsCustomEventsSDK.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityAnalyticsCustomEventsSDK.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityAnalyticsCustomEventsSDK.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityAnalyticsCustomEventsSDK.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="LegacyTopics.html">Legacy Topics</a></li>
+<li><a href="UnityAnalyticsSDK.html">Legacy Unity Analytics (SDK Workflow)</a></li>
+<li><a href="UnityAnalyticsAdvancedSDK.html">Advanced Integration (SDK)</a></li>
+<li>Custom Events</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsAdvancedSDK.html"></a></span><div class="tip">Advanced Integration (SDK)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsMonetizationSDK.html"></a></span><div class="tip">Monetization</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Custom Events</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Custom events can be any specific in-game action your user performs. They allow you to track player behavior Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span> does not track automatically, such as level achievement, <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> change, entering a store, or interacting with game objects. Each custom event can have its own parameters. Setting parameters on your event allows you to filter data collected at the time the event occurred. Visualization tools for Custom Events can be viewed in the <strong>Analytics</strong> Dashboard, including <span class="tooltip"><strong>Data Explorer</strong><span class="tooltiptext">A Unity Analytics Dashboard page that allows you to build, view and export reports on your Analytics metrics and events. You can also see how metrics and custom events change over time. <a href="UnityAnalyticsDataExplorer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DataExplorer">Glossary</a></span></span></span>, Funnel Analyzer, and Segment Builder.</p>
+
+<pre><code>// Reference the Unity Analytics SDK namespace
+using UnityEngine.Cloud.Analytics;
+
+//  Use this call for wherever a player triggers a custom event
+UnityAnalytics.CustomEvent(string customEventName,
+IDictionary&lt;string, object&gt; eventData);
+</code></pre>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3"><strong><em>UnityAnalytics.CustomEvent Input Parameters</em></strong></th>
+</tr>
+<tr>
+	<th style="text-align:left;"><strong><em>Name</em></strong></th>
+	<th style="text-align:left;"><strong><em>Type</em></strong></th>
+	<th style="text-align:left;"><strong><em>Description</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>customEventName</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">Name of custom event. Name cannot include the prefix “unity.” — This is a reserved keyword.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>eventData</strong></td>
+	<td style="text-align:left;">dictionary</td>
+	<td style="text-align:left;">Additional parameters sent to <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">See Analytics <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> at the time the custom event was triggered. eventData key cannot include the prefix “unity.” — This is a reserved keyword.</td>
+</tr>
+</tbody>
+</table>
+
+<p>A few considerations with regards to the custom events:</p>
+
+<ul>
+<li>Be consistent! Maintain consistent data types for each parameter in your event data. For example, don’t send a level parameter as a number, then change it to be a string. Doing so can lead to erroneous behavior, making your data difficult to interpret.
+
+<ul>
+<li>Boolean (true/false)</li>
+<li>String (characters)</li>
+<li>Numbers (int, float, etc.).</li>
+</ul>
+</li>
+<li>Default limit of 10 parameters per custom event.
+
+<ul>
+<li>If there are more parameters passed, the call will fail with a return value of AnalyticsResult.TooManyItems</li>
+</ul>
+</li>
+<li>Default limit of 500 characters for the dictionary content.
+
+<ul>
+<li>If more than 500 characters are passed, the call will fail with return value of AnalyticsResult.SizeLimitReached</li>
+</ul>
+</li>
+<li>Default limit of 100 custom events per hour, per user.
+
+<ul>
+<li>If more than 100 events per hour are called, the call will fail with return value of AnalyticsResult.TooManyRequests</li>
+</ul>
+</li>
+<li>Consider how parameters are parsed by the Analytics system.
+
+<ul>
+<li>All numbers, ints, floats, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>., even if sent as strings, are parsed as numbers.</li>
+<li>Only strings and Booleans are considered ‘categorizable’.</li>
+<li>Consequently, if you want something to be summed or averaged, send it as a number (e.g., 51 or ‘51’). If you want it to be categorized, as you would with a level or option, make sure it will parse as a string (e.g., ‘Level51’).</li>
+</ul>
+</li>
+</ul>
+
+<p>In the example below we are interested in knowing what our user had in their inventory at the time the game ended.</p>
+
+<pre><code>// Reference the Collections Generic namespace
+  using System.Collections.Generic;
+
+  int totalPotions = 5;
+  int totalCoins = 100;
+  string weaponID = &quot;Weapon_102&quot;;
+  UnityAnalytics.CustomEvent(&quot;gameOver&quot;, new Dictionary&lt;string, object&gt;
+  {
+    { &quot;potions&quot;, totalPotions },
+    { &quot;coins&quot;, totalCoins },
+    { &quot;activeWeapon&quot;, weaponID }
+  });
+</code></pre>
+
+<h2>Press Play</h2>
+
+<p>To send test Custom Event data to our servers and validate your integration, trigger your Custom Event during Editor Play mode. </p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsPlayGame.gif" alt="">
+</figure>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsAdvancedSDK.html"></a></span><div class="tip">Advanced Integration (SDK)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsMonetizationSDK.html"></a></span><div class="tip">Monetization</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

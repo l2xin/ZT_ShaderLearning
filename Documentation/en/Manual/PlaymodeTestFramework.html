@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Writing and executing tests in Unity Test Runner</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ScriptingSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PlaymodeTestFramework.html">English</a></li>
+<li><a href="/ja/current/Manual/PlaymodeTestFramework.html">日本語</a></li>
+<li><a href="/es/current/Manual/PlaymodeTestFramework.html">Español</a></li>
+<li><a href="/kr/current/Manual/PlaymodeTestFramework.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PlaymodeTestFramework.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ScriptingSection.html">Scripting</a></li>
+<li><a href="ScriptingTools.html">Scripting Tools</a></li>
+<li><a href="testing-editortestsrunner.html"> Unity Test Runner</a></li>
+<li> Writing and executing tests in Unity Test Runner</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="testing-editortestsrunner.html"></a></span><div class="tip"> Unity Test Runner</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IL2CPP.html"></a></span><div class="tip">IL2CPP</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Writing and executing tests in Unity Test Runner</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Unity <span class="tooltip"><strong>Test Runner</strong><span class="tooltiptext">A Unity tool that tests your code in both Edit mode and Play mode, and also on target platforms such as Standalone, Android, or iOS. <a href="testing-editortestsrunner.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TestRunner">Glossary</a></span></span></span> tests your code in <strong>Edit</strong> mode and <strong>Play</strong> mode, as well as on target platforms such as Standalone, Android, or iOS.</p>
+
+<p>The documentation on this page discusses writing and executing tests in the the Unity Test Runner, and assumes you understand both <a href="CreatingAndUsingScripts.html">scripting</a> and the <a href="testing-editortestsrunner.html">Unity Test Runner</a>.</p>
+
+<p>Unity delivers test results in an XML format. For more information, see the <a href="https://github.com/nunit/docs/wiki/Test-Result-XML-Format">NUnit documentation on XML format test results</a>.</p>
+
+<h2>UnityTestAttribute</h2>
+
+<p>
+<a href="../ScriptReference/TestTools.UnityTestAttribute.html">UnityTestAttribute</a> requires you to return <code>IEnumerator</code>. In <strong>Play</strong> mode, execute the test as a <a href="../ScriptReference/Coroutine.html">coroutine</a>. In <strong>Edit</strong> mode, you can yield <code>null</code> from the test, which skips the current frame.</p>
+
+<p>
+<strong>Note:</strong> The <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span> and WSA platforms do not support <code>UnityTestAttribute</code>.</p>
+
+<h3>Regular NUnit test (works in Edit mode and Play mode)</h3>
+
+<pre><code>[Test]
+public void GameObject_CreatedWithGiven_WillHaveTheName()
+{
+    var go = new GameObject(&quot;MyGameObject&quot;);
+    Assert.AreEqual(&quot;MyGameObject&quot;, go.name);
+}
+</code></pre>
+
+<h3>Example in Play mode</h3>
+
+<pre><code>[UnityTest]
+public IEnumerator GameObject_WithRigidBody_WillBeAffectedByPhysics()
+{
+    var go = new GameObject();
+    go.AddComponent&lt;Rigidbody&gt;();
+    var originalPosition = go.transform.position.y;
+
+    yield return new WaitForFixedUpdate();
+
+    Assert.AreNotEqual(originalPosition, go.transform.position.y);
+}
+</code></pre>
+
+<h3>Example in Edit mode:</h3>
+
+<pre><code>[UnityTest]
+public IEnumerator EditorUtility_WhenExecuted_ReturnsSuccess()
+{
+    var utility = RunEditorUtilityInTheBackgroud();
+
+    while (utility.isRunning)
+    {
+        yield return null;
+    }
+
+    Assert.IsTrue(utility.isSuccess);
+}
+</code></pre>
+
+<h2>UnityPlatformAttribute</h2>
+
+<p>Use <a href="../ScriptReference/TestTools.UnityPlatformAttribute.html">UnityPlatformAttribute</a> to filter tests based on the the executing platform. It behaves like the <a href="http://nunit.org/docs/2.5/platform.html">NUnit </a><a href="http://nunit.org/docs/2.5/platform.html">PlatformAttribute</a>.</p>
+
+<pre><code>[Test]
+[UnityPlatform (RuntimePlatform.WindowsPlayer)]
+public void TestMethod1()
+{
+   Assert.AreEqual(Application.platform, RuntimePlatform.WindowsPlayer);
+}
+
+[Test]
+[UnityPlatform(exclude = new[] {RuntimePlatform.WindowsEditor })]
+public void TestMethod2()
+{
+   Assert.AreNotEqual(Application.platform, RuntimePlatform.WindowsEditor);
+}
+</code></pre>
+
+<p>To only execute Editor tests on a given platform, you can also use <code>UnityPlatform</code> .</p>
+
+<h3>PrebuildSetupAttriubte</h3>
+
+<p>Use <a href="../ScriptReference/TestTools.PrebuildSetupAttribute.html">PrebuildSetupAttribute</a> if you need to perform any extra set-up before the test starts. To do this, specify the class type that implements the <a href="../ScriptReference/TestTools.IPrebuildSetup.html">IPrebuildSetup</a> interface. If you need to run the set-up code for the whole class (for example, if you want to execute some code before the test starts, such as Asset preparation or set-up required for a specific test), implement the <code>IPrebuildSetup</code> interface in the class for tests.</p>
+
+<pre><code>public class TestsWithPrebuildStep : IPrebuildSetup
+{
+    public void Setup()
+    {
+        // Run this code before the tests are executed
+    }
+
+    [Test]
+    //PrebuildSetupAttribute can be skipped because it's implemented in the same class
+    [PrebuildSetup(typeof(TestsWithPrebuildStep))]
+    public void Test()
+    {
+        (...)
+    }
+}
+</code></pre>
+
+<p>Execute the <code>IPrebuildSetup</code> code before entering Play mode or building a player. Setup can use UnityEditor namespace and its function, but to avoid compilation errors, you must place it either in the <em>Editor</em> folder, or guard it with the <code>#if UNITY_EDITOR</code> directive.</p>
+
+<h2>LogAssert</h2>
+
+<p>A test fails if Unity logs a message other than a regular log or warning message. Use the <a href="../ScriptReference/TestTools.LogAssert.html">LogAssert</a> class to make a message expected in the log, so that the test does not fail when Unity logs that message.</p>
+
+<p>A test also reports as failed if an expected message does not appear, or if Unity does not log any regular log or warning messages.</p>
+
+<h3>Example</h3>
+
+<pre><code>[Test]
+public void LogAssertExample()
+{
+    //Expect a regular log message
+    LogAssert.Expect(LogType.Log, &quot;Log message&quot;);
+    //A log message is expected so without the following line
+    //the test would fail
+    Debug.Log(&quot;Log message&quot;);
+    //An error log is printed
+    Debug.LogError(&quot;Error message&quot;);
+    //Without expecting an error log, the test would fail
+    LogAssert.Expect(LogType.Error, &quot;Error message&quot;);
+}
+</code></pre>
+
+<h2>MonoBehaviourTest</h2>
+
+<p>
+<a href="../ScriptReference/TestTools.MonoBehaviourTest_1.html">MonoBehaviourTest</a> is a <a href="../ScriptReference/Coroutine.html">coroutine</a>, and a helper for writing <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> tests. Yield <code>MonoBehaviourTest</code> from the <a href="../ScriptReference/TestTools.UnityTestAttribute.html">UnityTest</a> attribute to instantiate the specified MonoBehaviour and wait for it to finish executing. Implement the <a href="../ScriptReference/TestTools.IMonoBehaviourTest.html">IMonoBehaviourTest</a> interface to indicate when the test is done.</p>
+
+<h3>Example</h3>
+
+<pre><code>[UnityTest]
+public IEnumerator MonoBehaviourTest_Works()
+{
+    yield return new MonoBehaviourTest&lt;MyMonoBehaviourTest&gt;();
+}
+
+public class MyMonoBehaviourTest : MonoBehaviour, IMonoBehaviourTest
+{
+    private int frameCount;
+    public bool IsTestFinished
+    {
+        get { return frameCount &gt; 10; }
+    }
+
+     void Update()
+     {
+        frameCount++;
+     }
+}
+</code></pre>
+
+<h2>Running tests on platforms</h2>
+
+<p>In <strong>Play</strong> mode, you can run tests on specific platforms. The target platform is always the current Platform selected in <a href="BuildSettings.html">Build Settings</a> (menu: <strong>File</strong> &gt; <strong>Build Settings</strong>). Click <strong>Run all in the player</strong> to build and run your tests on the currently active target platform.</p>
+
+<p>Note that your current platform displays in brackets on the button. For example, in the screenshot below, the button reads <strong>Run all in player (StandaloneWindows)</strong>, because the current platform is Windows.</p>
+
+<figure>
+<img src="../uploads/Main/UnityTestRunner-3.png" alt="">
+</figure>
+
+<p>The test results display in the build once the test is complete.</p>
+
+<figure>
+<img src="../uploads/Main/UnityTestRunner-4.png" alt="">
+</figure>
+
+<p>To get the test results from the platform to the Editor running the test, both need to be on same network. The application running on the platform reports back the test results, displays the tests executed, and shuts down.</p>
+
+<p>Note that some platforms do not support shutting down the application with <a href="../ScriptReference/Application.Quit.html">Application.Quit</a>. These continue running after reporting test results.</p>
+
+<p>If Unity cannot instantiate the connection, you can visually see the tests succeed in the running application. Note that running tests on platforms with arguments, in this state, does not provide XML test results.</p>
+
+<h2>Running from the command line</h2>
+
+<p>To do this, run Unity with the following <a href="CommandLineArguments.html">command line </a><a href="CommandLineArguments.html">arguments</a>:</p>
+
+<ul>
+<li><p>
+<code>runTests</code> - Executes tests in the Project.</p></li>
+<li>
+<p>
+<code>testPlatform</code> - The platform you want to run tests on.</p>
+
+<ul>
+<li>
+<p>Available platforms:</p>
+
+<ul>
+<li><p>
+<code>playmode</code> and <code>editmode</code>. Note that If unspecified, tests run in <code>editmode</code> by default.</p></li>
+<li>
+<p>Platform/Type convention is from the <a href="../ScriptReference/BuildTarget.html">BuildTarget</a> enum. The tested and official supported platforms:</p>
+
+<ul>
+<li><p><a href="../ScriptReference/BuildTarget.StandaloneWindows.html">StandaloneWindows</a></p></li>
+<li><p><a href="../ScriptReference/BuildTarget.StandaloneWindows64.html">StandaloneWindows64</a></p></li>
+<li><p><a href="../ScriptReference/BuildTarget.StandaloneOSXIntel.html">StandaloneOSXIntel</a></p></li>
+<li><p><a href="../ScriptReference/BuildTarget.StandaloneOSXIntel64.html">StandaloneOSXIntel64</a></p></li>
+<li><p><span class="tooltip"><a href="../ScriptReference/BuildTarget.iOS.html">iOS</a><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span></p></li>
+<li><p><a href="../ScriptReference/BuildTarget.tvOS.html">tvOS</a></p></li>
+<li><p><a href="../ScriptReference/BuildTarget.Android.html">Android</a></p></li>
+<li><p><span class="tooltip"><a href="../ScriptReference/BuildTarget.PS4.html">PS4</a><span class="tooltiptext">Sony’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PS4">Glossary</a></span></span></span></p></li>
+<li><p><a href="../ScriptReference/BuildTarget.XboxOne.html">XboxOne</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>
+<code>testResults</code> - The path indicating where Unity should save the result file. By default, Unity saves it in the Project’s root folder. </p></li>
+</ul>
+
+<h3>Example</h3>
+
+<p>The following example shows a command line argument on Windows. The specific line may differ depending on your operating system.</p>
+
+<pre><code>&gt;Unity.exe -runTests -projectPath PATH_TO_YOUR_PROJECT -testResults C:\temp\results.xml -testPlatform editmode
+</code></pre>
+
+<p>
+<strong>Tip:</strong> On Windows, in order to read the result code of the executed command, run the following: </p>
+
+<p>
+<code>start /WAIT Unity.exe ARGUMENT_LIST</code>.</p>
+
+<h2>Comparison utilities</h2>
+
+<p>The <a href="../ScriptReference/TestTools.Utils.Utils.html">UnityEngine.TestTools.Utils</a> namespace contains utility classes to compare <a href="../ScriptReference/Vector2.html">Vector2</a>, <a href="../ScriptReference/Vector3.html">Vector3</a>, <a href="../ScriptReference/Vector4.html">Vector4</a>, <span class="tooltip"><a href="../ScriptReference/Quaternion.html">Quaternion</a><span class="tooltiptext">Unity’s standard way of representing rotations as data. When writing code that deals with rotations, you should usually use the Quaternion class and its methods. <a href="QuaternionAndEulerRotationsInUnity.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Quaternion">Glossary</a></span></span></span>, <a href="../ScriptReference/Color.html">Color</a> and <code>float</code> types using NUnit constraints.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–03–21 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="testing-editortestsrunner.html"></a></span><div class="tip"> Unity Test Runner</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IL2CPP.html"></a></span><div class="tip">IL2CPP</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

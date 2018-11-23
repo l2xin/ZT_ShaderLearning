@@ -1,0 +1,432 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Progressive Lightmapper</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/ProgressiveLightmapper.html">English</a></li>
+<li><a href="/ja/current/Manual/ProgressiveLightmapper.html">日本語</a></li>
+<li><a href="/es/current/Manual/ProgressiveLightmapper.html">Español</a></li>
+<li><a href="/kr/current/Manual/ProgressiveLightmapper.html">한국어</a></li>
+<li><a href="/ru/current/Manual/ProgressiveLightmapper.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li> Progressive Lightmapper</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LODRealtimeGI.html"></a></span><div class="tip"> LOD and Realtime GI</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmapping.html"></a></span><div class="tip"> Lightmapping: Getting started</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Progressive Lightmapper</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-0.jpg" alt="">
+</figure>
+
+<p>Progressive Lightmapper is a fast path-tracing-based lightmapper system that provides baked <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> and <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> with progressive updates in the Editor. It requires non-overlapping UVs with small area and angle errors, and sufficient padding between the charts.</p>
+
+<p>Progressive Lightmapper takes a short preparation step to process geometry and instance updates, and generates the G-buffer and chart masks. It then produces the output immediately and progressively refines it over time for a much-improved interactive lighting workflow. Additionally, baking times are much more predictable because Progressive Lightmapper provides an estimated time while it bakes.</p>
+
+<p>Progressive Lightmapper also bakes global illumination (GI) at the lightmap resolution for each texel individually, without upsampling schemes or relying on any irradiance caches or other global data structures. This makes it robust and allows you to bake selected portions of lightmaps, which makes it faster for you to test and iterate on your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p>
+
+<p>For an in-depth video showing the interactive workflow, see Unity’s video walkthrough: <a href="https://youtu.be/foMZJrwRGr0">In Development - Progressive Lightmapper (YouTube)</a>.</p>
+
+<h2>Settings</h2>
+
+<p>To open the settings, go to <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt;<strong>Lighting Settings</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-2.jpg" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;" colspan="5"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Lighting Mode</strong></td>
+	<td style="text-align:left;" colspan="5">Specifies which lighting mode Unity should use for all mixed lights in the Scene. Options are <a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a>, <span class="tooltip"><a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a><span class="tooltiptext">A version of the Shadowmask lighting mode that includes high quality shadows cast from static GameObjects onto dynamic GameObjects. <a href="LightMode-Mixed-DistanceShadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DistanceShadowmask">Glossary</a></span></span></span>, <span class="tooltip"><a href="LightMode-Mixed-Shadowmask.html">Shadowmask</a><span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span>, and <a href="LightMode-Mixed-Subtractive.html">Subtractive</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span></td>
+	<td style="text-align:left;" colspan="5">Use this to specify which internal lighting calculation software to use to calculate lightmaps in the Scene. The options are <strong>Progressive </strong>and <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">The lighting system by Geomerics used in Unity for computing global illumination (GI). <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Enlighten">Glossary</a></span></span></span>. The default value is <strong>Progressive</strong>. If you want to use the Enlighten system, see documentation on <a href="https://docs.google.com/document/d/1-Vll44vg4UX4enb98JNS3AjIP8IguWF8lhbCRQLgkJ8/edit#heading=h.dq1ep1102yb8">Enlighten</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Prioritize View</strong></td>
+	<td style="text-align:left;" colspan="5">Enable this to make the Progressive Lightmapper apply changes to the texels that are currently visible in the <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, then apply changes to the out-of-view texels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Direct Samples</strong></td>
+	<td style="text-align:left;" colspan="5">The number of samples (paths) shot from each texel. This setting controls the number of samples Progressive Lightmapper uses for direct lighting calculations. Increasing this value can improve the quality of lightmaps, but increases the baking time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Indirect Samples</strong></td>
+	<td style="text-align:left;" colspan="5">The number of samples (paths) shot from each texel. This setting controls the number of samples Progressive Lightmapper uses for indirect lighting calculations. For some Scenes, especially outdoor Scenes, 100 samples should be enough. For indoor Scenes with emissive geometry, increase the value until you see the result you want.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounces</strong></td>
+	<td style="text-align:left;" colspan="5">Use this value to specify the number of indirect bounces to do when tracing paths. For most Scenes, two bounces is enough. For some indoor Scenes, more bounces might be necessary.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filtering</strong></td>
+	<td style="text-align:left;" colspan="5">Configure the post-processing of lightmaps to limit noise. You can set it to <strong>None</strong>, <strong>Auto</strong> or <strong>Advanced</strong>. The Advanced option offers three additional parameters for manual configuration. In Auto mode, the default values from the Advanced mode are used. For every parameter, Gaussian or A-Trous filter can be used separately.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Auto</strong></td>
+	<td style="text-align:left;" colspan="5">Uses default values for post-processing lightmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Advanced</strong></td>
+	<td style="text-align:left;" colspan="4">Offers three additional parameters for manual configuration. You can use the Gaussian or A-Trous filters separately for direct and indirect settings. Note that the <strong>Gaussian</strong> filter values define the radius, while the <strong>A-Trous</strong> filter value defines the “sigma”. Sigma is a parameter that determines the threshold at which the filter acts on differences in the image.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Direct Filter</strong></td>
+	<td style="text-align:left;" colspan="3">Select a filter to use for direct light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>Gaussian</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use a Gaussian filter for direct light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"></td>
+	<td style="text-align:left;"><strong>Direct Radius</strong></td>
+	<td style="text-align:left;">The radius of the Gaussian filter in texels for direct light in the lightmap. A higher radius increases the blur strength.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>A-Trous</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use an A-Trous filter for direct light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"></td>
+	<td style="text-align:left;"><strong>Direct Sigma</strong></td>
+	<td style="text-align:left;">The sigma of the A-Trous filter in texels for direct light in the lightmap. A higher sigma increases the blur strength.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>None</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use no filter for direct light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Indirect Filter</strong></td>
+	<td style="text-align:left;" colspan="3">Select a filter to use for indirect light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>Gaussian</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use a Gaussian filter for indirect light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"></td>
+	<td style="text-align:left;"><strong>Indirect Radius</strong></td>
+	<td style="text-align:left;">The radius of the Gaussian filter in texels for indirect light in the lightmap. A higher radius increases the blur strength.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>A-Trous</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use an A-Trous filter for indirect light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"></td>
+	<td style="text-align:left;"><strong>Indirect Sigma</strong></td>
+	<td style="text-align:left;">The sigma of the A-Trous filter in texels for indirect light in the lightmap. A higher sigma increases the blur strength.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Ambient Occlusion Filter</strong></td>
+	<td style="text-align:left;" colspan="3">Select a filter to use for Ambient Occlusion (see below) in the lightmap. Filter only available when you enable <span class="tooltip"><strong>Ambient Occlusion</strong><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>Gaussian</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use a Gaussian filter for Ambient Occlusion in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"></td>
+	<td style="text-align:left;"><strong>Ambient Occlusion Radius</strong></td>
+	<td style="text-align:left;" colspan="3">The radius of the Gaussian filter in texels for Ambient Occlusion in the lightmap. A higher radius increases the blur strength.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;"><strong>A-Trous</strong></td>
+	<td style="text-align:left;" colspan="2">Select this to use an A-Trous filter for Ambient Occlusion in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"></td>
+	<td style="text-align:left;"><strong>Ambient Occlusion Sigma</strong></td>
+	<td style="text-align:left;">The sigma of the A-Trous filter in texels for Ambient Occlusion in the lightmap. A higher sigma increases the blur strength.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>None</strong></td>
+	<td style="text-align:left;" colspan="5">Select this to use no filter for indirect light in the lightmap.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Lightmap Resolution</strong></td>
+	<td style="text-align:left;" colspan="5">Use this to specify the number of texels per unit to use for lightmaps. Increasing this value improves lightmap quality, but also increases bake times. Note that doubling this value causes the number of texels to quadruple (because the value refers to both the height and width of the lightmap). Check the <strong>Occupied texels</strong> count in the stats, documented below this table.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Lightmap Padding</strong></td>
+	<td style="text-align:left;" colspan="5">Use this to specify the separation (in texel units) between separate shapes in the baked lightmap. The default value is 2.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Lightmap Size</strong></td>
+	<td style="text-align:left;" colspan="5">The size (in pixels) of the full lightmap texture, which incorporates separate regions for the individual <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> textures. The default value is 1024.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Compress Lightmaps</strong></td>
+	<td style="text-align:left;" colspan="4">A compressed lightmap requires less storage space, but the <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> process can introduce unwanted visual effects into the texture. Tick this checkbox to compress lightmaps, or untick it to keep them uncompressed. The checkbox is ticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Ambient Occlusion</strong></td>
+	<td style="text-align:left;" colspan="5">Tick this checkbox to open a group of settings which allow you to control the relative brightness of surfaces in <a href="LightingBakedAmbientOcclusion.html">ambient occlusion</a>. Higher values indicate a greater contrast between the occluded and fully lit areas. This only applies to the indirect lighting calculated by the GI system. This setting is enabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Max Distance</strong></td>
+	<td style="text-align:left;" colspan="4">Set a value to control how far the lighting system casts rays in order to determine whether or not to apply occlusion to an object. A larger value produces longer rays and contributes more shadows to the lightmap, while a smaller value produces shorter rays that contribute shadows only when objects are very close to one another. A value of 0 casts an infinitely long ray that has no maximum distance. The default value is 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Indirect Contribution</strong></td>
+	<td style="text-align:left;" colspan="4">Use the slider to scale the brightness of indirect light as seen in the final lightmap (that is, ambient light, or light bounced and emitted from objects) from a value between 0 and 10. The default value is 1. Values less than 1 reduce the intensity, while values greater than 1 increase it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Direct Contribution</strong></td>
+	<td style="text-align:left;" colspan="4">Use the slider to scale the brightness of direct light from a value between 0 and 10. The default value is 0. The higher this value is, the greater the contrast applied to the direct lighting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Directional Mode</strong></td>
+	<td style="text-align:left;" colspan="4">You can set the lightmap up to store information about the dominant incoming light at each point on the objects’ surfaces. See documentation on <a href="LightmappingDirectional.html">Directional Lightmapping</a> for further details. The default mode is <strong>Directional</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Directional</strong></td>
+	<td style="text-align:left;" colspan="3">In <strong>Directional</strong> mode, Unity generates a second lightmap to store the dominant direction of incoming light. This allows diffuse normal mapped materials to work with the GI. Directional mode requires about twice as much storage space for the additional lightmap data. Directional lightmaps cannot be decoded on SM2.0 hardware or when using GLES2.0. They fall back to Non-Directional lightmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Non-directional</strong></td>
+	<td style="text-align:left;" colspan="3">
+<strong>Non-directional</strong> mode switches Directional option off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Indirect Intensity</strong></td>
+	<td style="text-align:left;" colspan="4">Use this slider to control the brightness of indirect light stored in realtime and baked lightmaps, from a value between 0 and 5. A value above 1 increases the intensity of indirect light while a value of less that 1 reduces indirect light intensity. The default value is 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Albedo Boost</strong></td>
+	<td style="text-align:left;" colspan="4">Use this slider to control the amount of light Unity bounces between surfaces, from a value between 1 and 10. To do this, Unity intensifies the albedo of materials in the Scene. Increasing this draws the albedo value towards white for indirect light computation. The default value of 1 is physically accurate.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Lightmap Parameters</strong></td>
+	<td style="text-align:left;" colspan="4">Unity uses a set of general parameters for the lightmapping in addition to properties of the Lighting window. A few defaults are available from the menu for this property but you can also create your own lightmap parameter file using the <strong>Create New</strong> option. See the <a href="class-LightmapParameters.html">Lightmap Parameters</a> page for further details. The default value is <strong>Default-Medium</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Statistics</h2>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-3.png" alt="">
+</figure>
+
+<p>The panel below the <strong>Auto Generate</strong> and <strong>Generate Lighting</strong> options shows statistics about the lightmapping, including:</p>
+
+<ul>
+<li><p>The number of lightmaps that Unity has created</p></li>
+<li><p>
+<strong>Memory Usage:</strong> The amount of memory required for the current lightmapping.</p></li>
+<li><p>
+<strong>Occupied Texels</strong>: The number of texels that are occupied in lightmap UV space.</p></li>
+<li><p>
+<strong>Lightmaps in view</strong>: The number of lightmaps in the Scene view.</p></li>
+<li>
+<p>
+<strong>Lightmaps not in view</strong>: The number of lightmaps that are out of view.</p>
+
+<ul>
+<li><p>
+<strong>Converged</strong>: All calculations for these lightmaps are complete.</p></li>
+<li><p>
+<strong>Not Converged</strong>: Baking is still in progress for these lightmaps.</p></li>
+</ul>
+</li>
+<li><p>
+<strong>Bake Performance</strong>: The number of mrays per second. If this is low (that is, less than 2) you should adjust your settings or your hardware to process more light rays at a time. </p></li>
+</ul>
+
+<p>In <strong>Auto</strong> mode, Unity automatically calculates the lightmaps and Light Probes. If you have <strong>Auto</strong> disabled, you need to press the <span class="tooltip"><strong>Build</strong><span class="tooltiptext">The process of compiling your project into a format that is ready to run on a specific platform or platforms. <a href="BuildSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#build">Glossary</a></span></span></span> button to start the bake.</p>
+
+<h2>During baking</h2>
+
+<p>Progressive Lightmapper provides options to monitor and stop the bake while it is in progress, if you need to.</p>
+
+<h3>ETA</h3>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-7.png" alt="">
+</figure>
+
+<p>The progress bar that appears while Unity is baking the lightmap provides an “estimated time of arrival” (displayed as <strong>ETA</strong>). This is the estimated time in seconds for the current bake to complete. This allows for much more predictable baking times, and allows you to quickly learn how much time baking takes with your current lighting settings. </p>
+
+<h3>Force Stop</h3>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-5.jpg" alt="">
+</figure>
+
+<p>During manual baking, press <strong>Force Stop</strong> at any time to halt the baking process. This allows you to stop the process as soon as you see results that look good.</p>
+
+<hr>
+
+<p><span class="page-history">Progressive Lightmapper added in <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> <span class="search-words">NewIn20181</span></span></p>
+
+<p><span class="page-edit"> 2018–03–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LODRealtimeGI.html"></a></span><div class="tip"> LOD and Realtime GI</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmapping.html"></a></span><div class="tip"> Lightmapping: Getting started</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

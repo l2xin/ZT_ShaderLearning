@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Input for OpenVR controllers</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/OpenVRControllers.html">English</a></li>
+<li><a href="/ja/current/Manual/OpenVRControllers.html">日本語</a></li>
+<li><a href="/es/current/Manual/OpenVRControllers.html">Español</a></li>
+<li><a href="/kr/current/Manual/OpenVRControllers.html">한국어</a></li>
+<li><a href="/ru/current/Manual/OpenVRControllers.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="xr_input.html"> Unity XR input</a></li>
+<li> Input for OpenVR controllers</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Windows-Mixed-Reality-Input.html"></a></span><div class="tip"> Input for Windows Mixed Reality</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OculusControllers.html"></a></span><div class="tip">Input for Oculus</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Input for OpenVR controllers</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>For the Unity Editor to support OpenVR tracked controllers, the Unity VR subsystem presents VR controller inputs as separate joysticks. Use the <a href="../ScriptReference/Input.html">UnityEngine.Input</a> class to access the axis and button values.</p>
+
+<p>OpenVR’s Unity integration doesn’t refer to any specific hardware when presenting axis and button states. This page provides the axis and button mappings for the three types of controllers supported by OpenVR: HTC Vive, <span class="tooltip"><strong>Oculus</strong><span class="tooltiptext">A VR platform for making applications for Rift and mobile VR devices. <a href="OculusControllers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Oculus">Glossary</a></span></span></span> Touch, and Valve Knuckles Controllers.</p>
+
+<h2>Naming convention and detection</h2>
+
+<p>When properly configured and connected, any OpenVR-compatible controllers are internally named as either <strong>OpenVR Controller - Left</strong> or <strong>OpenVR Controller - Right</strong>. Access this name through the list returned by <a href="../ScriptReference/Input.GetJoystickNames.html">UnityEngine.Input.GetJoystickNames()</a>. When available, these controllers appear highlighted in green in the SteamVR status menu when tested with Steam. To access this menu you must have both Steam and SteamVR installed and running on your machine.</p>
+
+<figure>
+<img src="../uploads/Main/steamvr_status_menu.jpg" alt="Steam VR status menu">
+<figcaption>Steam VR status menu</figcaption>
+</figure>
+
+<p>You can test the availability of these controllers by periodically checking for their presence in the list of joystick names through script. When the controllers turn off, or when you remove their batteries, an empty string replaces their name in the list returned by <a href="../ScriptReference/Input.GetJoystickNames.html">UnityEngine.Input.GetJoystickNames()</a>. When the controllers turn on again, their name reappears in the list of returned joysticks.</p>
+
+<h2>Unity input system mappings</h2>
+
+<p>This section provides diagrams for each type of controller supported by OpenVR devices, along with information on the internal Unity input mapping for each controller button.</p>
+
+<h3>HTC Vive controllers</h3>
+
+<p>The diagram below displays the different inputs available on HTC Vive controllers for use in VR applications.</p>
+
+<figure>
+<img src="../uploads/Main/vive_controllers.jpg" alt="HTC Vive controller inputs mapping (Image courtesy of developer.viveport.com)">
+<figcaption>HTC Vive controller inputs mapping (Image courtesy of developer.viveport.com)</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">1</th>
+	<th style="text-align:left;">Menu Button</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;">Trackpad</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3</td>
+	<td style="text-align:left;">System button</td>
+</tr>
+<tr>
+	<td style="text-align:left;">4</td>
+	<td style="text-align:left;">Status light</td>
+</tr>
+<tr>
+	<td style="text-align:left;">5</td>
+	<td style="text-align:left;">Micro-USB port</td>
+</tr>
+<tr>
+	<td style="text-align:left;">6</td>
+	<td style="text-align:left;">Tracking sensor</td>
+</tr>
+<tr>
+	<td style="text-align:left;">7</td>
+	<td style="text-align:left;">Trigger</td>
+</tr>
+<tr>
+	<td style="text-align:left;">8</td>
+	<td style="text-align:left;">Grip button</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Oculus Touch controllers</h3>
+
+<p>The diagram below displays the different inputs available on Oculus Touch controllers for use in VR applications.</p>
+
+<figure>
+<img src="../uploads/Main/oculus_touch.jpg" alt="Oculus Touch controller input mapping (Image courtesy of developer.oculus.com)">
+<figcaption>Oculus Touch controller input mapping (Image courtesy of developer.oculus.com)</figcaption>
+</figure>
+
+<h3>Knuckles controllers</h3>
+
+<p>The diagram below displays the different inputs available when using Knuckles controllers in VR applications.</p>
+
+<figure>
+<img src="../uploads/Main/knuckles_controller.jpg" alt="Valve Knuckles Controller input mapping (Image courtesy of steamcommunity.com)">
+<figcaption>Valve Knuckles Controller input mapping (Image courtesy of steamcommunity.com)</figcaption>
+</figure>
+
+<p>The table below lists controller inputs for each OpenVR-supported controller, their interaction types, Unity axis and button IDs, along with the value range for each axis.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>HTC Vive Controller</strong></th>
+	<th style="text-align:left;"><strong>Oculus Touch Controller</strong></th>
+	<th style="text-align:left;"><strong>Valve Knuckles Controller</strong></th>
+	<th style="text-align:left;"><strong>Interaction Type</strong></th>
+	<th style="text-align:left;"><strong>Unity Button ID</strong></th>
+	<th style="text-align:left;"><strong>Unity Axis ID</strong></th>
+	<th style="text-align:left;"><strong>Unity Axis Value Range</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Left Controller Menu Button (1)</td>
+	<td style="text-align:left;">Button.Three</td>
+	<td style="text-align:left;">Left Controller Inner Face Button</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Menu Button (1)</td>
+	<td style="text-align:left;">Button.One</td>
+	<td style="text-align:left;">Right Controller Inner Face Button</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">0</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Left Controller Outer Face Button</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">3</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Right Controller Outer Face Button</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Trackpad (2)</td>
+	<td style="text-align:left;">Button.PrimaryThumbstick</td>
+	<td style="text-align:left;">Left Controller Trackpad</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">8</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Trackpad (2)</td>
+	<td style="text-align:left;">Button.SecondaryThumbstick</td>
+	<td style="text-align:left;">Right Controller Trackpad</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">9</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Trackpad (2)</td>
+	<td style="text-align:left;">Button.PrimaryThumbstick</td>
+	<td style="text-align:left;">Left Controller Trackpad</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">16</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Trackpad (2)</td>
+	<td style="text-align:left;">Button.SecondaryThumbstick</td>
+	<td style="text-align:left;">Right Controller Trackpad</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">17</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Trackpad (2)</td>
+	<td style="text-align:left;">Axis2D.PrimaryThumbstick</td>
+	<td style="text-align:left;">Left Controller Trackpad</td>
+	<td style="text-align:left;">Horizontal Movement</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Trackpad (2)</td>
+	<td style="text-align:left;">Axis2D.PrimaryThumbstick</td>
+	<td style="text-align:left;">Left Controller Trackpad</td>
+	<td style="text-align:left;">Vertical Movement</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Trackpad (2)</td>
+	<td style="text-align:left;">Axis2D.SecondaryThumbstick</td>
+	<td style="text-align:left;">Right Controller Trackpad</td>
+	<td style="text-align:left;">Horizontal Movement</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">4</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Trackpad (2)</td>
+	<td style="text-align:left;">Axis2D.SecondaryThumbstick</td>
+	<td style="text-align:left;">Right Controller Trackpad</td>
+	<td style="text-align:left;">Vertical Movement</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">5</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Trigger (7)</td>
+	<td style="text-align:left;">Axis1D.PrimaryIndexTrigger</td>
+	<td style="text-align:left;">Left Controller Trigger</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">14</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Trigger (7)</td>
+	<td style="text-align:left;">Axis1D.SecondaryIndexTrigger</td>
+	<td style="text-align:left;">Right Controller Trigger</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">15</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Trigger (7)</td>
+	<td style="text-align:left;">Axis1D.PrimaryIndexTrigger</td>
+	<td style="text-align:left;">Left Controller Trigger</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">9</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Trigger (7)</td>
+	<td style="text-align:left;">Axis1D.SecondaryIndexTrigger</td>
+	<td style="text-align:left;">Right Controller Trigger</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">10</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Left Controller Grip Button (8)</td>
+	<td style="text-align:left;">Axis1D.PrimaryHandTrigger</td>
+	<td style="text-align:left;">Left Controller Grip Average</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">11</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Right Controller Grip Button (8)</td>
+	<td style="text-align:left;">Axis1D.SecondaryHandTrigger</td>
+	<td style="text-align:left;">Right Controller Grip Average</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">12</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Left Controller Index Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">20</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Right Controller Index Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">21</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Left Controller Middle Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">22</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Right Controller Middle Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">23</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Left Controller Ring Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">24</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Right Controller Ring Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">25</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Left Controller Pinky Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">26</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Right Controller Pinky Finger Cap Sensor</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">27</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note: Any hardware features not listed in the table above are not exposed through the OpenVR API and are therefore not exposed through Unity’s input system.</p>
+
+<h2>Important controller differences</h2>
+
+<p>When developing applications to support OpenVR devices, it is important to note certain differences in input event triggers and response rates for buttons on all three controllers.</p>
+
+<p>Unity Touch Input events differ for each platform controller:</p>
+
+<ul>
+<li>The <span class="tooltip"><a href="EventSystem.html">Event System</a><span class="tooltiptext">A way of sending events to objects in the application based on input, be it keyboard, mouse, touch, or custom input. The Event System consists of a few components that work together to send events. <a href="EventSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#EventSystem">Glossary</a></span></span></span> generates Input Touch events for the triggers on HTC Vive controllers when the user begins squeezing the trigger.</li>
+<li>The <a href="EventSystem.html">Event System</a> generates Input Touch events for the triggers on Oculus Touch and Valve Knuckles controllers when <a href="../ScriptReference/Input.html">Unity Input</a> detects a touch - no trigger squeeze is necessary.</li>
+</ul>
+
+<p>The grip trigger differs between platforms:</p>
+
+<ul>
+<li><p>The HTC Vive controllers each have two grip buttons but both map to the same axis. The value for these buttons is 0.0 when not pressed and 1.0 when pressed (intermediate values between 0.0 and 1.0 are not possible).</p></li>
+<li><p>The grip on the Oculus Touch Controller is an analog trigger with a range from 0.0 to 1.0 (intermediate values are possible).</p></li>
+<li><p>The grip on the Valve Knuckles Controller is a weighted average of the input values for each of the individual finger touch sensors.</p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Windows-Mixed-Reality-Input.html"></a></span><div class="tip"> Input for Windows Mixed Reality</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OculusControllers.html"></a></span><div class="tip">Input for Oculus</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

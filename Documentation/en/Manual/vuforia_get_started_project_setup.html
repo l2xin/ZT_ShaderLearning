@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Setting up your Project for Vuforia</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/vuforia_get_started_project_setup.html">English</a></li>
+<li><a href="/ja/current/Manual/vuforia_get_started_project_setup.html">日本語</a></li>
+<li><a href="/es/current/Manual/vuforia_get_started_project_setup.html">Español</a></li>
+<li><a href="/kr/current/Manual/vuforia_get_started_project_setup.html">한국어</a></li>
+<li><a href="/ru/current/Manual/vuforia_get_started_project_setup.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="vuforia-sdk-overview.html"> Vuforia</a></li>
+<li><a href="vuforia_get_started.html"> Vuforia quick start guide</a></li>
+<li> Setting up your Project for Vuforia</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="vuforia_get_started.html"></a></span><div class="tip"> Vuforia quick start guide</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="vuforia_get_started_image_targets_setup.html"></a></span><div class="tip"> Setting up Image Targets</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Setting up your Project for Vuforia</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Setting up your project to develop Vuforia <span class="tooltip"><strong>AR</strong><span class="tooltiptext">Augmented Reality (AR) uses computer graphics or video composited on top of a live video feed to augment the view and create interaction with real and virtual objects. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AR">Glossary</a></span></span></span> or MR mobile applications is very similar to the set-up process for building with Unity for a mobile platform. The Unity Installer includes the Vuforia SDK. Follow the instructions for downloading and installing Unity on the <a href="InstallingUnity.html">InstallingUnity</a> manual page. Vuforia provides a selection of <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> designed to be dropped into a <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> to provide feature functionality to your application. These are all available from inside the Unity Editor.</p>
+
+<p>You should adhere to the same performance considerations as required for developing regular mobile games. For information on optimising for mobile devices, see Unity documentation on <a href="MobileOptimisation.html">mobile optimisation</a>.</p>
+
+<p>To get Vuforia set up with Unity:</p>
+
+<ul>
+<li>Install the <a href="https://unity3d.com/get-unity/download">latest version of Unity</a>, and in the Unity <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> selection section of the installer, select <strong>Vuforia Augmented Reality Support</strong>, along with either the <strong>iOS Build Support</strong> or <strong>Android Build Support</strong> packages.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/installing_vuforia.jpg" alt="Installing Vuforia Augmented Reality support through Unity Installer">
+<figcaption>Installing Vuforia Augmented Reality support through Unity Installer</figcaption>
+</figure>
+
+<p>
+<strong>Note:</strong> Most AR and MR applications target mobile devices, so the focus of this guide is development for Android and iOS. See guides for enabling build support for Android and iOS devices in the Getting Started documentation for <a href="android-GettingStarted.html">Android</a> and <span class="tooltip"><a href="iphone-GettingStarted.html">iOS</a><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span>.</p>
+
+<ul>
+<li><p>Create a Vuforia developer account from the <a href="https://developer.vuforia.com/user/register">Vuforia registration page</a>. This account gives you access to the tools you need to make AR and MR applications with Vuforia in Unity.</p></li>
+<li><p>If you have not already created a Unity ID, then do so from the <a href="https://id.unity.com/en/conversations/8c075ba1-a442-41b1-b64d-ad4fb3c56073008f?view=register">Unity registration page</a>. You need a Unity ID to download any packages from the Unity <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>.</p></li>
+<li><p>Open Unity and create a new 3D Project (make sure the <strong>3D</strong> option is selected next to the <strong>Add Asset Package</strong> button). Name your Project, then click the <strong>Create project</strong> button.</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/new_project.png" alt="Creating a new 3D project">
+<figcaption>Creating a new 3D project</figcaption>
+</figure>
+
+<p>
+<strong>Tip:</strong> Download the <a href="https://www.assetstore.unity3d.com/en/#!/content/101547">Vuforia AR+VR Sample package</a> from the Unity <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> Store. This package provides useful example Scenes demonstrating important features. You will not need this for following this guide, but it is useful to have for further learning later.</p>
+
+<h2>Activating Vuforia in Unity</h2>
+
+<p>To activate Vuforia in your Unity project, access the Player Settings from <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong> and select the tab for the mobile device you are building to. Under <strong>XR Settings</strong>, tick the <strong>Vuforia Augmented Reality Support</strong> checkbox.</p>
+
+<figure>
+<img src="../uploads/Main/vuforia_ar_support.png" alt="Enabling Vuforia Augmented Reality Support in Unity Player Settings">
+<figcaption>Enabling Vuforia Augmented Reality Support in Unity Player Settings</figcaption>
+</figure>
+
+<p>Your Scene now contains two GameObjects: a main <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>, and a directional light. You need to add a new AR <strong>Camera</strong> to the Scene in order to enable AR functionality, and you need to delete the current <strong>Main Camera</strong> GameObject from the Scene. </p>
+
+<p>To delete the Camera GameObject, select it in the <strong>Hierarchy window</strong> and press the delete key on your keyboard, or right click it and select <strong>Delete</strong>.</p>
+
+<p>For more information on the individual settings in the <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XR">Glossary</a></span></span></span> Settings window, see the <a href="vuforia_configuration.html">Vuforia Platform Configuration</a> page of this manual.</p>
+
+<h2>Adding a Vuforia AR Camera and other GameObjects</h2>
+
+<p>To add an AR Camera to your scene, go to <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> &gt; <strong>Vuforia</strong> &gt; <strong>AR Camera</strong>. </p>
+
+<p>If this is the first Vuforia GameObject added to your Scene then Unity also prompts to import your Vuforia Assets. Select <strong>Import</strong>, and Unity imports all necessary Vuforia files into your project.</p>
+
+<p>The <strong>Project window</strong> displays 4 new folders, one of which is called <strong>Vuforia</strong>. The code and Assets in this folder provide the main AR and MR functionality. The other folders provide sample Scenes, resources, tools, and <span class="tooltip"><strong>plugins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> so that you can develop AR and MR applications for a variety of devices.</p>
+
+<figure>
+<img src="../uploads/Main/Importing_assets.png" alt="Empty project with all imported Vuforia assets">
+<figcaption>Empty project with all imported Vuforia assets</figcaption>
+</figure>
+
+<p>Create a new folder in your project. To do this, navigate to the Project window, click the <strong>Create</strong> button, and select <strong>Folder</strong>. Name this new folder <em>Scenes</em> and save a <a href="CreatingScenes.html">new Scene</a> inside this folder.</p>
+
+<figure>
+<img src="../uploads/Main/New_folder.png" alt="Creating an empty folder and naming it Scenes">
+<figcaption>Creating an empty folder and naming it Scenes</figcaption>
+</figure>
+
+<p>This process also adds a new ARCamera GameObject in your Scene hierarchy.</p>
+
+<h2>Creating a Vuforia license key</h2>
+
+<p>The last step in the setup process is to create a license key from the <a href="https://developer.vuforia.com/Targetmanager/licenseManager/licenseListing">License Manager section</a> of the Vuforia Developer Portal. You need to enter this into Unity’s Vuforia configuration settings in order to build and test your application with Unity. </p>
+
+<p>Visit the <a href="https://developer.vuforia.com/user/login">Vuforia Developer Portal</a> and log in (or create a new account). Navigate to the <strong>License Manager</strong> in the <strong>Develop</strong> section and click the <strong>Get Development Key</strong> button to open the <strong>Add License Key</strong> page.</p>
+
+<figure>
+<img src="../uploads/Main/creating_dev_key.png" alt="Creating a Vuforia Development Key">
+<figcaption>Creating a Vuforia Development Key</figcaption>
+</figure>
+
+<p>On the <strong>Add License Key</strong> page, enter a name for your app. Accept the terms and conditions, then click the <strong>Confirm</strong> button to generate a new license key.</p>
+
+<figure>
+<img src="../uploads/Main/vuforia_dev_key_details.png" alt="Confirming Vuforia development key details">
+<figcaption>Confirming Vuforia development key details</figcaption>
+</figure>
+
+<p>On the next page, agree to the Vuforia Developer conditions (tick the box) and then click the <strong>Confirm</strong> button. This brings you back to the <strong>Licence Manager</strong> page where you can see your newly created license in a list where its status is <strong>Active</strong>. Click on the name of your App to view the license details. This allows you to retrieve your development license key.</p>
+
+<figure>
+<img src="../uploads/Main/license_manager.png" alt="License Manager">
+<figcaption>License Manager</figcaption>
+</figure>
+
+<p>Copy the license key to the clipboard and navigate back to your Unity Project.</p>
+
+<figure>
+<img src="../uploads/Main/copying_license_key.png" alt="Copying your Vuforia License key">
+<figcaption>Copying your Vuforia License key</figcaption>
+</figure>
+
+<p>Select the <strong>ARCamera</strong> GameObject from the <strong>Hierarchy window</strong> and, in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window, navigate to the the <strong>Vuforia Behaviour(Script)</strong> component and click the <strong>Open Vuforia configuration</strong> button. </p>
+
+<figure>
+<img src="../uploads/Main/config_settings.jpg" alt="Accessing Vuforia configuration settings">
+<figcaption>Accessing Vuforia configuration settings</figcaption>
+</figure>
+
+<p>The <strong>Inspector window</strong> displays a list of <strong>Vuforia Configuration</strong> options. Paste your Vuforia Development key into the <strong>App License Key</strong> text box under the Vuforia section and then click the <strong>Add License</strong> button.</p>
+
+<figure>
+<img src="../uploads/Main/entering_key.png" alt="Entering your Vuforia development key in the Vuforia Configuration settings">
+<figcaption>Entering your Vuforia development key in the Vuforia Configuration settings</figcaption>
+</figure>
+
+<h2>Testing your set-up</h2>
+
+<p>To test Vuforia apps in the Unity Editor, you need to have a webcam connected to your PC or laptop. As a final step to make sure Vuforia is now installed properly in your Unity Project, press the <strong>Play</strong> button to test your Scene. If Vuforia is set up correctly, a video feed from your webcam appears in the Editor Game View. </p>
+
+<p>Now you are ready to set up Image Targets and add AR functionality to your Project.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–28 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Vuforia documentation updated for Unity XR API in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="vuforia_get_started.html"></a></span><div class="tip"> Vuforia quick start guide</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="vuforia_get_started_image_targets_setup.html"></a></span><div class="tip"> Setting up Image Targets</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

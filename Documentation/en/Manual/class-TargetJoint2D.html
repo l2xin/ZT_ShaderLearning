@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Target Joint 2D</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Unity2D" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-TargetJoint2D.html">English</a></li>
+<li><a href="/ja/current/Manual/class-TargetJoint2D.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-TargetJoint2D.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-TargetJoint2D.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-TargetJoint2D.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Physics2DReference.html">Physics Reference 2D</a></li>
+<li><a href="Joints2D.html"> 2D Joints</a></li>
+<li>Target Joint 2D</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpringJoint2D.html"></a></span><div class="tip">Spring Joint 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-WheelJoint2D.html"></a></span><div class="tip"> Wheel Joint 2D</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Target Joint 2D</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/TargetJoint2D.html' title='Go to TargetJoint2D page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This joint connects to a specified target, rather than another rigid body object, as other <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> do. It is a spring type joint, which you could use for picking up and moving an object acting under gravity, for example.</p>
+
+<figure>
+<img src="../uploads/Main/TargetJoint2DInspector.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Anchor</strong><span class="tooltiptext">A UI layout tool that fixes a UI element to a parent element. Anchors are shown as four small triangular handles in the Scene View and anchor information is also shown in the Inspector. <a href="UIBasicLayout.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Anchor">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">The place (in terms of X, Y co-ordinates on the <span class="tooltip"><strong>RigidBody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span>) where the end point of the joint connects to this object.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target</strong></td>
+	<td style="text-align:left;">The place (in terms of X, Y co-ordinates in the world space) towards which the other end of the joint attempts to move.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Configure Target</strong></td>
+	<td style="text-align:left;">Check this box to automatically set the other end of the joint to the current position of the object. (This option is useful when you are moving the object around, as it sets the initial target position as the current position.) <strong>Note</strong> that when this option is selected, the target changes as you move the object; it won’t change if the option is unselected.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Force</strong></td>
+	<td style="text-align:left;">Sets the force that the joint can apply when attempting to move the object to the <span class="tooltip"><strong>target position</strong><span class="tooltiptext">A joint property to set the target position that the joint’s drive force should move it to. <a href="class-ConfigurableJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TargetPosition">Glossary</a></span></span></span>. The higher the value, the higher the maximum force.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Damping Ratio</strong><span class="tooltiptext">A joint setting to control spring oscillation. A higher damping ratio means the spring will come to rest faster. <a href="class-FixedJoint2D.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DampingRatio">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">The degree to which you want to suppress spring oscillation: In the range 0 to 1, the higher the value, the less movement.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frequency</strong></td>
+	<td style="text-align:left;">The frequency at which the spring oscillates while the objects are approaching the separation distance you want (measured in cycles per second): In the range 0 to 1,000,000 -, the higher the value, the stiffer the spring.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Force</strong></td>
+	<td style="text-align:left;">Specify the force level needed to break and so delete the joint. <strong>Infinity</strong> means it is unbreakable.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>(See also <a href="Joints2D.html">Joints 2D</a>: <em>Details and Hints</em> for useful background information on all 2D joints.)</p>
+
+<p>Use this joint to connect a rigid body game object to a point in space.</p>
+
+<p>The aim of this joint is to keep zero linear distance between two points: An anchor point on a rigid body object and a world-space position, called the “<strong>Target</strong>”. The joint applies linear force to the rigid body object, it does not apply torque (anglular force). </p>
+
+<p>The joint uses a simulated spring. You can set the spring’s stiffness and movement:</p>
+
+<p>A stiff, barely moving spring…</p>
+
+<ul>
+<li><p>A high (1,000,000 is the highest) <strong>Frequency</strong> == a stiff spring.</p></li>
+<li><p>A high (1 is the highest) <strong>Damping Ratio</strong> == a barely moving spring.</p></li>
+</ul>
+
+<p>A loose, moving spring…</p>
+
+<ul>
+<li><p>A low <strong>Frequency</strong> == a loose spring.</p></li>
+<li><p>A low <strong>Damping Ratio</strong> == a moving spring.</p></li>
+</ul>
+
+<p>When the spring applies its force between the rigid body object and target, it tends to overshoot the distance you have set between them, and then rebound repeatedly, giving in a continuous oscillation. The <strong>Damping Ratio</strong> sets how quickly the rigid body object stops moving. The <strong>Frequency</strong> sets how quickly the rigid body object oscillates either side of the distance you have specified.</p>
+
+<p>This joint has one constraint:</p>
+
+<ul>
+<li>Maintain a zero linear distance between the anchor point on a rigid body object and a world-space position (<strong>Target</strong>).</li>
+</ul>
+
+<p><strong>For Example:</strong></p>
+
+<p>You can use this joint to construct physical objects that need to move to designated target positions and stay there until another target position is selected or the turned-off. Such as:</p>
+
+<ul>
+<li>A game where players pick up cakes, using a mouse-click, and drag them into to a plate. You can use this joint to move each cake to the plate.</li>
+</ul>
+
+<p>You could also use the joint to allow objects to hang: If the anchor point is not the <span class="tooltip"><strong>center of mass</strong><span class="tooltiptext">Represents the average position of all mass in a rigidbody for the purposes of physics calculations. By default it is computed from all colliders belonging to the rigidbody, but can be modified via script. <a href="../ScriptReference/Rigidbody-centerOfMass.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CenterofMass">Glossary</a></span></span></span>, then the object will rotate. Such as:</p>
+
+<ul>
+<li>A game where players pick up boxes. If they use a mouse-click to pick a box up by its corner and drag it, it will hang from the cursor.</li>
+</ul>
+
+<p><strong>HINT:</strong></p>
+
+<ul>
+<li>Zero in the <strong>Frequency</strong> is a special case: It gives the stiffest spring possible.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpringJoint2D.html"></a></span><div class="tip">Spring Joint 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-WheelJoint2D.html"></a></span><div class="tip"> Wheel Joint 2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

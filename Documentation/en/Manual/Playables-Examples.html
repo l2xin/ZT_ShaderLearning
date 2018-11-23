@@ -1,0 +1,843 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Playables Examples</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="AnimationSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/Playables-Examples.html">English</a></li>
+<li><a href="/ja/current/Manual/Playables-Examples.html">日本語</a></li>
+<li><a href="/es/current/Manual/Playables-Examples.html">Español</a></li>
+<li><a href="/kr/current/Manual/Playables-Examples.html">한국어</a></li>
+<li><a href="/ru/current/Manual/Playables-Examples.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="AnimationSection.html">Animation</a></li>
+<li><a href="Playables.html">Playables API</a></li>
+<li>Playables Examples</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Playables-ScriptPlayable.html"></a></span><div class="tip">ScriptPlayable and PlayableBehaviour</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AnimationGlossary.html"></a></span><div class="tip">A Glossary of animation terms</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Playables Examples</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>PlayableGraph Visualizer</h2>
+
+<p>All of the examples in this document use the PlayableGraph Visualizer (Pictured below) to illustrate the trees and nodes created by the <span class="tooltip"><strong>Playables</strong><span class="tooltiptext">An API that provides a way to create tools, effects or other gameplay mechanisms by organizing and evaluating data sources in a tree-like structure known as the PlayableGraph. <a href="Playables.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Playables">Glossary</a></span></span></span> API. The <span class="tooltip"><strong>Playable graph</strong><span class="tooltiptext">An API for controlling Playables. Playable Graphs allow you to create, connect and destroy playables. <a href="Playables-Graph.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayableGraph">Glossary</a></span></span></span> Visualizer is a tool available through GitHub.</p>
+
+<p>To use the PlayableGraph Visualizer:</p>
+
+<ol>
+<li><p>Download the PlayableGraph Visualizer that corresponds with your version of Unity from the <a href="https://github.com/UnityTech/graph-visualizer">GitHub repository</a>
+</p></li>
+<li><p>Open the tool by selecting <strong>Window</strong> &gt; <strong>PlayableGraph Visualizer</strong>
+</p></li>
+<li><p>Register your graph using GraphVisualizerClient.Show(PlayableGraph graph, string name).</p></li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/PlayablesExamples5.png" alt="The GraphVisualizer window">
+<figcaption>The GraphVisualizer window</figcaption>
+</figure>
+
+<p>Playables in the graph are represented by colored nodes. Wire color intensity indicates the weight of the blending. See <a href="https://github.com/UnityTech/graph-visualizer">GitHub</a> for more information on this tool.</p>
+
+<h2>Playing a single animation clip on a GameObject</h2>
+
+<p>This example demonstrates a simple <code>PlayableGraph</code> with a single playable output that is linked to a single playable node. The playable node plays a single <span class="tooltip"><strong>animation clip</strong><span class="tooltiptext">Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”. <a href="class-AnimationClip.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> (clip). An <code>AnimationClipPlayable</code> must wrap the animation clip to make it compatible with the Playables API.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PlayAnimationSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        playableGraph.SetTimeUpdateMode(DirectorUpdateMode.GameTime);
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        // Wrap the clip in a playable
+
+        var clipPlayable = AnimationClipPlayable.Create(playableGraph, clip);
+
+        // Connect the Playable to an output
+
+        playableOutput.SetSourcePlayable(clipPlayable);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and PlayableOutputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PlayablesExamples0.png" alt="The PlayableGraph generated by PlayAnimationSample">
+<figcaption>The PlayableGraph generated by PlayAnimationSample</figcaption>
+</figure>
+
+<p>Use <code>AnimationPlayableUtilities</code> to simplify the creation and playback of animation playables, as shown in the following example:__
+__</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PlayAnimationUtilitiesSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        AnimationPlayableUtilities.PlayClip(GetComponent&lt;Animator&gt;(), clip, out playableGraph);
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<h2>Creating an animation blend tree</h2>
+
+<p>This example demonstrates how to use the <code>AnimationMixerPlayable</code> to blend two animation clips. Before blending the animation clips, they must be wrapped by playables. To do this, an <code>AnimationClipPlayable</code> (clipPlayable0 and clipPlayable1) wraps each <code>AnimationClip</code> (clip0 and clip1). The <code>SetInputWeight()</code> method dynamically adjusts the blend weight of each playable.</p>
+
+<p>Although not shown in this example, you can also use <code>AnimationMixerPlayable</code> to blend playable mixers and other playables.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class MixAnimationSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip0;
+
+    public AnimationClip clip1;
+
+    public float weight;
+
+    PlayableGraph playableGraph;
+
+    AnimationMixerPlayable mixerPlayable;
+
+    void Start()
+
+    {
+
+        // Creates the graph, the mixer and binds them to the Animator.
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        mixerPlayable = AnimationMixerPlayable.Create(playableGraph, 2);
+
+        playableOutput.SetSourcePlayable(mixerPlayable);
+
+        // Creates AnimationClipPlayable and connects them to the mixer.
+
+        var clipPlayable0 = AnimationClipPlayable.Create(playableGraph, clip0);
+
+        var clipPlayable1 = AnimationClipPlayable.Create(playableGraph, clip1);
+
+        playableGraph.Connect(clipPlayable0, 0, mixerPlayable, 0);
+
+        playableGraph.Connect(clipPlayable1, 0, mixerPlayable, 1);
+
+        
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void Update()
+
+    {
+
+        weight = Mathf.Clamp01(weight);
+
+        mixerPlayable.SetInputWeight(0, 1.0f-weight);
+
+        mixerPlayable.SetInputWeight(1, weight);
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PlayablesExamples1.png" alt="The PlayableGraph generated by `MixAnimationSample">
+<figcaption>The <code>PlayableGraph</code> generated by `MixAnimationSample</figcaption>
+</figure>
+
+<h2>Blending an AnimationClip and AnimatorController</h2>
+
+<p>This example demonstrates how to use an <code>AnimationMixerPlayable</code> to blend an <code>AnimationClip</code> with an <code>AnimatorController</code>. </p>
+
+<p>Before blending the <code>AnimationClip</code> and <code>AnimatorController</code>, they must be wrapped by playables. To do this, an <code>AnimationClipPlayable</code> (clipPlayable) wraps the <code>AnimationClip</code> (clip) and an <code>AnimatorControllerPlayable</code> (ctrlPlayable) wraps the RuntimeAnimatorController (controller). The <code>SetInputWeight(</code>) method dynamically adjusts the blend weight of each playable.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class RuntimeControllerSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    public RuntimeAnimatorController controller;
+
+    public float weight;
+
+    PlayableGraph playableGraph;
+
+    AnimationMixerPlayable mixerPlayable;
+
+    void Start()
+
+    {
+
+        // Creates the graph, the mixer and binds them to the Animator.
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        mixerPlayable = AnimationMixerPlayable.Create(playableGraph, 2);
+
+        playableOutput.SetSourcePlayable(mixerPlayable);
+
+        // Creates AnimationClipPlayable and connects them to the mixer.
+
+        var clipPlayable = AnimationClipPlayable.Create(playableGraph, clip);
+
+        var ctrlPlayable = AnimatorControllerPlayable.Create(playableGraph, controller);
+
+        playableGraph.Connect(clipPlayable, 0, mixerPlayable, 0);
+
+        playableGraph.Connect(ctrlPlayable, 0, mixerPlayable, 1);
+
+        
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void Update()
+
+    {
+
+        weight = Mathf.Clamp01(weight);
+
+        mixerPlayable.SetInputWeight(0, 1.0f-weight);
+
+        mixerPlayable.SetInputWeight(1, weight);
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<h2>Creating a PlayableGraph with several outputs</h2>
+
+<p>This example demonstrates how to create a <code>PlayableGraph</code> with two different playable output types: an <code>AudioPlayableOutpu</code>t and an <code>AnimationPlayableOutput</code>. A <code>PlayableGraph</code> can have many playable outputs of different types.</p>
+
+<p>This example also demonstrates how to play an <code>AudioClip</code> through an <code>AudioClipPlayable</code> that is connected to an <code>AudioPlayableOutput</code>.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Animations;
+
+using UnityEngine.Audio;
+
+using UnityEngine.Playables;
+
+[RequireComponent(typeof(Animator))]
+
+[RequireComponent(typeof(AudioSource))]
+
+public class MultiOutputSample : MonoBehaviour
+
+{
+
+    public AnimationClip animationClip;
+
+    public AudioClip audioClip;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        // Create the outputs.
+
+        var animationOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        var audioOutput = AudioPlayableOutput.Create(playableGraph, &quot;Audio&quot;, GetComponent&lt;AudioSource&gt;());
+
+        
+
+        // Create the playables.
+
+        var animationClipPlayable = AnimationClipPlayable.Create(playableGraph, animationClip);
+
+        var audioClipPlayable = AudioClipPlayable.Create(playableGraph, audioClip, true);
+
+        // Connect the playables to an output
+
+        animationOutput.SetSourcePlayable(animationClipPlayable);
+
+        audioOutput.SetSourcePlayable(audioClipPlayable);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PlayablesExamples2.png" alt="The PlayableGraph generated by `MultiOutputSample">
+<figcaption>The <code>PlayableGraph</code> generated by `MultiOutputSample</figcaption>
+</figure>
+
+<h2>Controlling the play state of the tree</h2>
+
+<p>This example demonstrates how to use the <code>Playable.SetPlayState()</code> method to control the play state of node on the <code>PlayableGraph</code> tree. The <code>SetPlayState</code> method controls the play state of the entire tree, one of its branches, or a single node.</p>
+
+<p>When setting the play state of a node, the state propagates to all its children, regardless of their play states. For example, if a child node is explicitly paused, setting a parent node to “playing” also sets all its child nodes to “playing.”</p>
+
+<p>In this example, the <code>PlayableGraph</code> contains a mixer that blends two animation clips. An <code>AnimationClipPlayable</code> wraps each animation clip and the <code>SetPlayState()</code> method explicitly pauses the second playable. The second <code>AnimationClipPlayable</code> is explicitly paused, so its internal time does not advance and outputs the same value. The exact value depends on the specific time when the <code>AnimationClipPlayable</code> was paused.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PauseSubGraphAnimationSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip0;
+
+    public AnimationClip clip1;
+
+    PlayableGraph playableGraph;
+
+    AnimationMixerPlayable mixerPlayable;
+
+    void Start()
+
+    {
+
+        // Creates the graph, the mixer and binds them to the Animator.
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        mixerPlayable = AnimationMixerPlayable.Create(playableGraph, 2);
+
+        playableOutput.SetSourcePlayable(mixerPlayable);
+
+        // Creates AnimationClipPlayable and connects them to the mixer.
+
+        var clipPlayable0 = AnimationClipPlayable.Create(playableGraph, clip0);
+
+        var clipPlayable1 = AnimationClipPlayable.Create(playableGraph, clip1);
+
+        playableGraph.Connect(clipPlayable0, 0, mixerPlayable, 0);
+
+        playableGraph.Connect(clipPlayable1, 0, mixerPlayable, 1);
+
+        mixerPlayable.SetInputWeight(0, 1.0f);
+
+        mixerPlayable.SetInputWeight(1, 1.0f);
+
+        clipPlayable1.SetPlayState(PlayState.Paused);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PlayablesExamples3.png" alt="The PlayableGraph generated by PauseSubGraphAnimationSample. Notice that the second clip is paused (red edge).">
+<figcaption>The PlayableGraph generated by PauseSubGraphAnimationSample. Notice that the second clip is paused (red edge).</figcaption>
+</figure>
+
+<h2>Controlling the timing of the tree</h2>
+
+<p>This example demonstrates how to use the Play() method to play a PlayableGraph, how to use the SetPlayState() method to pause a playable, and how to use the SetTime() method to manually set the local time of a playable with a variable.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Playables;
+
+using UnityEngine.Animations;
+
+[RequireComponent(typeof(Animator))]
+
+public class PlayWithTimeControlSample : MonoBehaviour
+
+{
+
+    public AnimationClip clip;
+
+    public float time;
+
+    PlayableGraph playableGraph;
+
+    AnimationClipPlayable playableClip;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        // Wrap the clip in a playable
+
+        playableClip = AnimationClipPlayable.Create(playableGraph, clip);
+
+        // Connect the Playable to an output
+
+        playableOutput.SetSourcePlayable(playableClip);
+
+        // Plays the Graph.
+
+        playableGraph.Play();
+
+        // Stops time from progressing automatically.
+
+        playableClip.SetPlayState(PlayState.Paused);
+
+    }
+
+    void Update () 
+
+    {
+
+        // Control the time manually
+
+        playableClip.SetTime(time);
+
+    }
+
+    
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<h2>Creating PlayableBehaviour</h2>
+
+<p>This example demonstrates how to create custom playables with the <code>PlayableBehaviour</code> public class. This example also demonstrate how to override the <code>PrepareFrame()</code> virtual method to control nodes on the <code>PlayableGraph</code>. Custom playables can override any of the other virtual methods of the <code>PlayableBehaviour</code> class.</p>
+
+<p>In this example, the nodes being controlled are a series of animation clips (clipsToPlay). The <code>SetInputMethod()</code> modifies the blend weight of each animation clip, ensuring that only one clip plays at a time, and the <code>SetTime()</code> method adjusts the local time so playback starts at the moment the animation clip is activated.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Animations;
+
+using UnityEngine.Playables;
+
+public class PlayQueuePlayable : PlayableBehaviour
+
+{
+
+    private int m_CurrentClipIndex = -1;
+
+    private float m_TimeToNextClip;
+
+    private Playable mixer;
+
+    public void Initialize(AnimationClip[] clipsToPlay, Playable owner, PlayableGraph graph)
+
+    {
+
+        owner.SetInputCount(1);
+
+        mixer = AnimationMixerPlayable.Create(graph, clipsToPlay.Length);
+
+        graph.Connect(mixer, 0, owner, 0);
+
+        owner.SetInputWeight(0, 1);
+
+        for (int clipIndex = 0 ; clipIndex &lt; mixer.GetInputCount() ; ++clipIndex)
+
+        {
+
+            graph.Connect(AnimationClipPlayable.Create(graph, clipsToPlay[clipIndex]), 0, mixer, clipIndex);
+
+            mixer.SetInputWeight(clipIndex, 1.0f);
+
+        }
+
+    }
+
+    override public void PrepareFrame(Playable owner, FrameData info)
+
+    {
+
+        if (mixer.GetInputCount() == 0)
+
+            return;
+
+        // Advance to next clip if necessary
+
+        m_TimeToNextClip -= (float)info.deltaTime;
+
+        if (m_TimeToNextClip &lt;= 0.0f)
+
+        {
+
+            m_CurrentClipIndex++;
+
+            if (m_CurrentClipIndex &gt;= mixer.GetInputCount())
+
+                m_CurrentClipIndex = 0;
+
+            var currentClip = (AnimationClipPlayable)mixer.GetInput(m_CurrentClipIndex);
+
+            // Reset the time so that the next clip starts at the correct position
+
+            currentClip.SetTime(0);
+
+            m_TimeToNextClip = currentClip.GetAnimationClip().length;
+
+        }
+
+        // Adjust the weight of the inputs
+
+        for (int clipIndex = 0 ; clipIndex &lt; mixer.GetInputCount(); ++clipIndex)
+
+        {
+
+            if (clipIndex == m_CurrentClipIndex)
+
+                mixer.SetInputWeight(clipIndex, 1.0f);
+
+            else
+
+                mixer.SetInputWeight(clipIndex, 0.0f);
+
+        }
+
+    }
+
+}
+
+[RequireComponent(typeof (Animator))]
+
+public class PlayQueueSample : MonoBehaviour
+
+{
+
+    public AnimationClip[] clipsToPlay;
+
+    PlayableGraph playableGraph;
+
+    void Start()
+
+    {
+
+        playableGraph = PlayableGraph.Create();
+
+        var playQueuePlayable = ScriptPlayable&lt;PlayQueuePlayable&gt;.Create(playableGraph);
+
+        var playQueue = playQueuePlayable.GetBehaviour();
+
+        playQueue.Initialize(clipsToPlay, playQueuePlayable, playableGraph);
+
+        var playableOutput = AnimationPlayableOutput.Create(playableGraph, &quot;Animation&quot;, GetComponent&lt;Animator&gt;());
+
+        playableOutput.SetSourcePlayable(playQueuePlayable);
+        playableOutput.SetSourceInputPort(0);
+
+        playableGraph.Play();
+
+    }
+
+    void OnDisable()
+
+    {
+
+        // Destroys all Playables and Outputs created by the graph.
+
+        playableGraph.Destroy();
+
+    }
+
+}
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/PlayablesExamples4.png" alt="The PlayableGraph generated by PlayQueueSample">
+<figcaption>The PlayableGraph generated by PlayQueueSample</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–07–04 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New in Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Playables-ScriptPlayable.html"></a></span><div class="tip">ScriptPlayable and PlayableBehaviour</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AnimationGlossary.html"></a></span><div class="tip">A Glossary of animation terms</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

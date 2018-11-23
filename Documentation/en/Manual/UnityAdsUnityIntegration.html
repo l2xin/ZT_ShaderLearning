@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Unity Editor integration</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityAdsUnityIntegration.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityAdsUnityIntegration.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityAdsUnityIntegration.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityAdsUnityIntegration.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityAdsUnityIntegration.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityAds.html">Unity Ads</a></li>
+<li> Unity Editor integration</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAds.html"></a></span><div class="tip">Unity Ads</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Unity Editor integration</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This guide covers both methods for integrating Unity Ads in the Unity engine:</p>
+
+<ul>
+<li>Services Window integration</li>
+<li><span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> Package integration</li>
+</ul>
+
+<h2>Setting build targets</h2>
+
+<p>Configure your project for a supported platform using the <a href="BuildSettings.html">Build Settings window</a>.</p>
+
+<p>Set the platform to <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> or <strong>Android</strong>, then click <strong>Switch Platform</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/BuildTargets.png" alt="The Build Settings window">
+<figcaption>The Build Settings window</figcaption>
+</figure>
+
+<h2>Enabling the Ads Service</h2>
+
+<p>This process varies slightly depending on your integration preference; the Services Window method or the <span class="tooltip"><strong>Asset Package</strong><span class="tooltiptext">A collection of files and data from Unity projects, or elements of projects, which are compressed and stored in one file, similar to Zip files. Packages are a handy way of sharing and re-using Unity projects and collections of assets. <a href="AssetPackages.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetPackage">Glossary</a></span></span></span> method.</p>
+
+<h3>Services Window method</h3>
+
+<p>To enable Ads, you need to configure your project for Unity Services. This requires setting an <strong>Organization</strong> and <strong>Project Name</strong>. See documentation on <a href="SettingUpProjectServices.html">setting up Services</a>. </p>
+
+<p>With Services set up, you can enable Unity Ads:</p>
+
+<ol>
+<li>In the Unity Editor, select <strong>Window</strong> &gt; <strong>General</strong> &gt; <span class="tooltip"><strong>Services</strong><span class="tooltiptext">A Unity facility that provides a growing range of complimentary services to help you make games and engage, retain and monetize audiences. <a href="UnityServices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Services">Glossary</a></span></span></span> to open the Services window.</li>
+<li>Select <strong>Ads</strong> from the Services window menu.</li>
+<li>Click the toggle to the right to enable the Ads Service (see image below).</li>
+<li>Specify whether your product targets children under 13, by clicking in the checkbox then click <strong>Continue</strong>.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/ServicesWindow.png" alt="Services window in the Unity Editor (left) and the Ads section of the Services window with the enable toggle (middle, right)">
+<figcaption>Services window in the Unity Editor (left) and the Ads section of the Services window with the enable toggle (middle, right)</figcaption>
+</figure>
+
+<h3>Asset Package method</h3>
+
+<p>Before integrating Ads the Asset Package, you need to create a Unity Ads Game ID, as described below.</p>
+
+<p><strong>Create a Unity Ads Game ID</strong></p>
+
+<ol>
+<li><p>In your web browser, navigate to the <a href="https://dashboard.unityads.unity3d.com/">Unity Ads Dashboard</a>, using your Unity Developer Network <a href="https://id.unity.com/account/new">UDN</a> Account, and select <strong>Add new project</strong>.<br><img src="../uploads/Main/NewProject.png" alt="Add a new project">
+</p></li>
+<li><p>Select applicable platforms (iOS, Android, or both).<br><img src="../uploads/Main/SelectPlatforms.png" alt="Select your platform">
+</p></li>
+<li><p>Locate the platform-specific <code>Game ID</code> and copy it for later.<br><img src="../uploads/Main/CopyGameID.png" alt="Locate your Game ID">
+</p></li>
+</ol>
+
+<p><strong>Integrate Ads to the Asset Package</strong></p>
+
+<ol>
+<li>
+<p>Declare the Unity Ads namespace, <code>UnityEngine.Advertisements</code> in the header of your script (see <a href="../ScriptReference/Advertisements.Advertisement.html"> UnityEngine.Advertisements</a> documentation): <br><br>
+</p>
+
+<pre><code>    using UnityEngine.Advertisements;
+</code></pre>
+</li>
+<li>
+<p>Inititalize Unity Ads early in the game’s runtime lifecycle, preferably at launch, using the copied Game ID string, <code>gameId</code>: <br><br>
+</p>
+
+<pre><code>    Advertisement.Initialize(string gameId)
+</code></pre>
+</li>
+</ol>
+
+<h2>Showing ads</h2>
+
+<p>With the Service enabled, you can implement the code in any script to display ads.</p>
+
+<ol>
+<li>
+<p>Declare the Unity Ads namespace, <code>UnityEngine.Advertisement</code> in the header of your script (see <a href="../ScriptReference/Advertisements.Advertisement.html"> UnityEngine.Advertisements</a> documentation): <br><br>
+</p>
+
+<pre><code>     using UnityEngine.Advertisements;
+         
+</code></pre>
+</li>
+<li>
+<p>Call the <code>Show()</code> function to display an ad: <br> </p>
+
+<pre><code>Advertisement.Show()
+    
+</code></pre>
+</li>
+</ol>
+
+<h2>Rewarding players for watching ads</h2>
+
+<p>Rewarding players for watching ads increases user engagement, resulting in higher revenue. For example, games may reward players with in-game currency, consumables, additional lives, or experience-multipliers.</p>
+
+<p>To reward players for completing a video ad, use the <code>HandleShowResult</code> callback method in the example below. Be sure to check that the <code>result</code> is equal to <code>ShowResult.Finished</code>, to verify that the user hasn’t skipped the ad.</p>
+
+<ol>
+<li>In your script, add a callback method.</li>
+<li>Pass the method as a parameter when when calling <code>Show()</code>.</li>
+<li>Call <code>Show()</code> with the <code>&quot;rewardedVideo&quot;</code> placement to make the video unskippable.</li>
+</ol>
+
+<p>
+<strong>Note</strong>: See <a href="https://unityads.unity3d.com/help/monetization/placements">Unity Ads documentation</a> for more detailed information on <code>placements</code>.</p>
+
+<pre><code>void ShowRewardedVideo ()
+{
+    var options = new ShowOptions();
+    options.resultCallback = HandleShowResult;
+    
+    Advertisement.Show(&quot;rewardedVideo&quot;, options);
+}
+
+void HandleShowResult (ShowResult result)
+{
+    if(result == ShowResult.Finished) {
+        Debug.Log(&quot;Video completed - Offer a reward to the player&quot;);
+        // Reward your player here.
+        
+    }else if(result == ShowResult.Skipped) {
+        Debug.LogWarning(&quot;Video was skipped - Do NOT reward the player&quot;);
+        
+    }else if(result == ShowResult.Failed) {
+        Debug.LogError(&quot;Video failed to show&quot;);
+    }
+}
+</code></pre>
+
+<h3>Example rewarded ads button code</h3>
+
+<p>Use the code below to create a rewarded ads button. The ads button displays an ad when pressed as long as ads are available.</p>
+
+<ol>
+<li><p>Select <strong>Game Object</strong> &gt; <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> &gt; <strong>Button</strong> to add a button to your <span class="tooltip"><a href="UsingTheSceneView.html">Scene</a><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p></li>
+<li><p>Select the button you added to your Scene, then add a script component to it using the <span class="tooltip"><a href="UsingTheInspector.html">Inspector</a><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. (In the Inspector, select <strong>Add Component</strong> &gt; <strong>New Script</strong> .)</p></li>
+<li>
+<p>
+<a href="CreatingAndUsingScripts.html">Open the script</a> and add the following code: <br> <br><strong>Note</strong>: The two sections of code that are specific to Asset Package integration are called out in comments. <br><br> </p>
+
+<pre><code>         
+     using UnityEngine;
+     using UnityEngine.UI;
+     using UnityEngine.Advertisements;
+    
+     //---------- ONLY NECESSARY FOR ASSET PACKAGE INTEGRATION: ----------//
+         
+     #if UNITY_IOS
+     private string gameId = &quot;1486551&quot;;
+     #elif UNITY_ANDROID
+     private string gameId = &quot;1486550&quot;;
+     #endif
+    
+     //-------------------------------------------------------------------//
+    
+         ColorBlock newColorBlock = new ColorBlock();
+         public Color green = new Color(0.1F, 0.8F, 0.1F, 1.0F);
+    
+     [RequireComponent(typeof(Button))]
+     public class UnityAdsButton : MonoBehaviour
+     {
+         Button m_Button;
+        
+         public string placementId = &quot;rewardedVideo&quot;;
+    
+         void Start ()
+         {  
+             m_Button = GetComponent&lt;Button&gt;();
+             if (m_Button) m_Button.onClick.AddListener(ShowAd);
+            
+             if (Advertisement.isSupported) {
+                 Advertisement.Initialize (gameId, true);
+             }
+            
+             //---------- ONLY NECESSARY FOR ASSET PACKAGE INTEGRATION: ----------//
+            
+             if (Advertisement.isSupported) {
+                 Advertisement.Initialize (gameId, true);
+             }
+            
+             //-------------------------------------------------------------------//
+            
+         }
+    
+         void Update ()
+         {
+             if (m_Button) m_Button.interactable = Advertisement.IsReady(placementId);
+         }
+    
+         void ShowAd ()
+         {
+             var options = new ShowOptions();
+             options.resultCallback = HandleShowResult;
+    
+             Advertisement.Show(placementId, options);
+         }
+    
+         void HandleShowResult (ShowResult result)
+         {
+             if(result == ShowResult.Finished) {
+                 Debug.Log(&quot;Video completed - Offer a reward to the player&quot;);
+    
+             }else if(result == ShowResult.Skipped) {
+                 Debug.LogWarning(&quot;Video was skipped - Do NOT reward the player&quot;);
+    
+             }else if(result == ShowResult.Failed) {
+                 Debug.LogError(&quot;Video failed to show&quot;);
+             }
+         }
+     }
+     
+</code></pre>
+</li>
+<li><p>Press <strong>Play</strong> in the Unity Editor to test the Ads button integration.</p></li>
+</ol>
+
+<p>For further guidance, see the <a href="http://forum.unity3d.com/forums/unity-ads.67">Unity Ads forum</a>.</p>
+
+<hr>
+
+<h2>Managing settings in the Ads Dashboard</h2>
+
+<p>Use settings to modify placements and other game-specific settings in your project. (See <a href="http://unityads.unity3d.com/help/monetization/placements">Unity Ads documentation</a> for further information on placements.)</p>
+
+<ol>
+<li>
+<p>In your web browser, navigate to the <a href="https://dashboard.unityads.unity3d.com/">Unity Ads Dashboard</a>, using your Unity Developer Network <a href="https://id.unity.com/account/new">UDN</a> Account, and locate the project for your game. <br> <br>
+</p>
+
+<figure>
+<img src="../uploads/Main/DashSelectProject.png" alt="Unity Ads Dashboard with project selection highlighted">
+<figcaption>Unity Ads Dashboard with project selection highlighted</figcaption>
+</figure>
+</li>
+<li>
+<p>Select an applicable platform (iOS or Android). <br><br> </p>
+
+<figure>
+<img src="../uploads/Main/DashSelectStore.png" alt="Unity Ads Dashboard with platform selection highlighted">
+<figcaption>Unity Ads Dashboard with platform selection highlighted</figcaption>
+</figure>
+</li>
+<li>
+<p>Select placement. (See <a href="http://unityads.unity3d.com/help/monetization/placements">Unity Ads documentation</a>.) <br><br> </p>
+
+<figure>
+<img src="../uploads/Main/DashSelectPlacement.png" alt="Unity Ads Dashboard showing placement information">
+<figcaption>Unity Ads Dashboard showing placement information</figcaption>
+</figure>
+</li>
+</ol>
+
+<p>
+<br>
+<br>
+</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–25 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAds.html"></a></span><div class="tip">Unity Ads</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

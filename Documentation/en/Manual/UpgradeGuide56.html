@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 5.6</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide56.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide56.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide56.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide56.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide56.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 5.6</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20171.html"></a></span><div class="tip">Upgrading to Unity 2017.1</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide55.html"></a></span><div class="tip">Upgrading to Unity 5.5</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 5.6</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page lists any changes in 5.6 which might affect existing projects when you upgrade from earlier versions of Unity.</p>
+
+<p>For example:</p>
+
+<ul>
+<li><p>Changes in data format which may require re-baking.</p></li>
+<li><p>Changes to the meaning or behavior of any existing functions, parameters or <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> values.</p></li>
+<li><p>Deprecation of any function or feature. (Alternatives are suggested.)</p></li>
+</ul>
+
+<hr>
+
+<p><strong>Script serialization errors no longer work</strong></p>
+
+<p>The script serialization errors introduced in Unity 5.4 and described in detail in this <a href="https://blogs.unity3d.com/2016/06/06/serialization-monobehaviour-constructors-and-unity-5-4/">blog post</a>, will always throw a managed exception from 5.6 onwards. </p>
+
+<p>Behaviour in Unity 5.5 is the same as in Unity 5.4.</p>
+
+<hr>
+
+<p><strong>PlayerSettings.apiCompatibilityLevel deprecated</strong></p>
+
+<p>This is now a per-platform setting.
+Use <a href="../ScriptReference/PlayerSettings.SetApiCompatibilityLevel.html">PlayerSettings.SetApiCompatibilityLevel</a> and <a href="../ScriptReference/PlayerSettings.SetApiCompatibilityLevel.html">PlayerSettings.GetApiCompatibilityLevel</a> instead. <a href="../ScriptReference/PlayerSettings-apiCompatibilityLevel.html">PlayerSettings.apiCompatibilityLevel</a> will continue to function, but it will only affect the current active platform.</p>
+
+<hr>
+
+<p><strong>Lighting changes</strong></p>
+
+<p>Directional specular <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> has been removed.</p>
+
+<p>As a consequence, <a href="../ScriptReference/LightmapsMode.SeparateDirectional.html">LightmapsMode.SeparateDirectional</a> has been removed. Use <a href="../ScriptReference/LightmapsMode.CombinedDirectional.html">LightmapsMode.CombinedDirectional</a> instead. </p>
+
+<p>Here are the prefered ways to get specular highlights in Unity 5.6:</p>
+
+<ul>
+<li><p>For direct specular, stationary lights with real-time direct lighting provide high quality specular highlights in all modes but the subtractive one. Please see the <em>Mixed Lighting</em> documentation in the online <a href="https://docs.unity3d.com/560/Documentation/Manual/LightingOverview.html">lighting</a> section of the 5.6 User Manual.</p></li>
+<li><p>For indirect specular, use <span class="tooltip"><a href="class-ReflectionProbe.html">Reflection Probes</a><span class="tooltiptext">A rendering component that captures a spherical view of its surroundings in all directions, rather like a camera. The captured image is then stored as a Cubemap that can be used by objects with reflective materials. <a href="class-ReflectionProbe.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>, <a href="https://github.com/Unity-Technologies/PostProcessing">Screen Space Reflection </a><a href="https://github.com/Unity-Technologies/PostProcessing">(SSR)</a>, or both.</p></li>
+</ul>
+
+<p><strong>Mixed mode lighting has evolved</strong></p>
+
+<p>Mixed mode lighting in Unity 5.5 has been replaced with stationary lighting modes in Unity 5.6. This implies a lot of changes, and we advise you to carefully read the <em>Lighting Modes</em> documentation, and in particular the <em>Stationary Modes</em> draft documentation in the online <a href="https://docs.unity3d.com/560/Documentation/Manual/LightingOverview.html">lighting</a> section of the 5.6 User Manual which details the newly available options.</p>
+
+<p>Projects from pre-Unity 5.6 will be upgraded to <strong>Subtractive</strong> mode (see the <em>Subtractive Light Mode</em> in the online <a href="https://docs.unity3d.com/560/Documentation/Manual/LightingOverview.html">lighting</a> section of the 5.6 User Manual. This is the closest match to the <strong>Mixed</strong> lighting from Unity 5.5. </p>
+
+<p>However this mode is the lowest quality mode for Unity 5.6, so try other modes to see if they are a better fit for your projects. We highly recommend the <strong><span class="tooltip"><strong>Shadowmask</strong><span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span></strong> (see the <em>Shadowmask</em> page and the <em>Distance Shadowmask</em> page in the online <a href="https://docs.unity3d.com/560/Documentation/Manual/LightingOverview.html">lighting</a> section of the 5.6 User Manual, especially if you were using the now-defunct Directional Specular lightmaps before).</p>
+
+<p>The default for new Unity 5.6 projects is <strong><span class="tooltip"><strong>Distance shadowmask</strong><span class="tooltiptext">A version of the Shadowmask lighting mode that includes high quality shadows cast from static GameObjects onto dynamic GameObjects. <a href="LightMode-Mixed-DistanceShadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DistanceShadowmask">Glossary</a></span></span></span></strong> mode. (See the <em>Distance shadowmask</em> page in the online <a href="https://docs.unity3d.com/560/Documentation/Manual/LightingOverview.html">lighting</a> section of the 5.6 User Manual).</p>
+
+<p><strong><span class="tooltip"><strong>Light probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span></strong></p>
+
+<p>In Unity 5.6 you can no longer choose whether direct lighting is added to Light Probes from the lighting window. This now happens automatically based on the lights types and the stationary modes. This ensures that direct lighting is not missing and that there is no double lighting on dynamic objects using Light Probes, greatly simplifying the process.</p>
+
+<hr>
+
+<p><strong>New GPU instancing workflow</strong></p>
+
+<p>You must now check the new <strong>Enable Instancing</strong> checkbox for all Materials used for GPU instancing. This is required for GPU instancing to work correctly.</p>
+
+<p>Note that the checkbox is not checked automatically as it’s impossible for Unity to determine if a Material uses a pre–5.6 <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/upgradeguide56_1.jpg" alt="">
+</figure>
+
+<p>An upgrade error is also imposed on SpeedTree <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> to help you regenerate the SpeedTree Materials, so that you can have <strong>Enable Instancing</strong> checked.</p>
+
+<p>
+<strong>Note:</strong> The newly introduced procedural instancing Shaders (those with <code>#pragma instancing_options procedural:func</code>) don’t require this change because Shaders with the <code>PROCEDURAL_INSTANCING_ON</code> keyword are not affected.</p>
+
+<hr>
+
+<p><strong><span class="tooltip"><strong>Particle system</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span> changes</strong></p>
+
+<p>
+<code>Custom Vertex Streams</code> in the Renderer Module may now require you to manually upgrade your Particle Systems, if you use the <code>Particles/Alpha Anim Blend</code> Shader. In this situation, it is sufficient to simply remove the duplicated UV2 stream.</p>
+
+<p>This is required because, in some cases, the duplicated stream is needed to maintain backwards compatibility, so there is no fully reliable auto-upgrade solution. The Normal and AnimFrame streams are also not required, but causes no problems if they exist. The fixed Particle System setup should look like this:</p>
+
+<figure>
+<img src="../uploads/Main/upgradeguide56_2.png" alt="">
+</figure>
+
+<p>Secondly, the upgraded Emission Module will cause Animation Bindings attached the Burst Emission to be lost. It will be necessary to rebind those properties.</p>
+
+<hr>
+
+<p><strong>Animator change</strong></p>
+
+<p>
+<strong>Animate Physics</strong>: Rigidbodies attached to objects where the Animator has <em>Animate Physics</em> selected now have velocities applied to them when animated. This will give correct physical interactions with other physics objects, and bring the Animator in line with the behaviour of objects animated by the Animation Component.</p>
+
+<p>This will affect how your animated Rigidbodies interact with other Rigidbodies (the Rigidbodies are moved instead of teleported every frame), so make sure to verify that your Animators with <strong>Animate Physics </strong>are behaving as you expect.</p>
+
+<hr>
+
+<p><strong>Dynamic batching 2D sprites</strong></p>
+
+<p>You should use dynamic batching in upgraded projects that contain 2D sprites. This avoids significant sprite rendering performance issues on devices with Adreno and Mali chipsets.</p>
+
+<p>To use Dynamic Batching, open the PlayerSettings (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong>). Open the <strong>Other Settings</strong> section and, under <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>, tick the <span class="tooltip"><strong>Dynamic Batching</strong><span class="tooltiptext">An automatic Unity process which attempts to render multiple meshes as if they were a single mesh for optimized graphics performance. The technique transforms all of the GameObject vertices on the CPU and groups many similar vertices together. <a href="DrawCallBatching.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DynamicBatching">Glossary</a></span></span></span> checkbox and untick the <strong>Graphics Jobs (Experimental)</strong> checkbox. Note that these are the default settings for projects created in 5.6.</p>
+
+<p>Graphics Jobs should not affect dynamic batching, but can sometimes cause unexpected behaviors on platforms that use Vulkan and DirectX12.</p>
+
+<hr>
+
+<p><strong>NUnit library updated</strong></p>
+
+<p>The <a href="testing-editortestsrunner.html">Unity Test Runner</a> uses a Unity integration of the NUnit library, which is an open-source unit testing library for .NET languages. In Unity 5.6, this integrated library is updated from version 2.6 to version 3.5. This update has introduced some breaking changes that might affect your existing tests. See the <a href="https://github.com/nunit/docs/wiki/Upgrading">NUnit update guide</a> for more information.</p>
+
+<hr>
+
+<p>
+<br>
+* <span class="page-edit"> 2017–05–19 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span>
+</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20171.html"></a></span><div class="tip">Upgrading to Unity 2017.1</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide55.html"></a></span><div class="tip">Upgrading to Unity 5.5</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

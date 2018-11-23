@@ -1,0 +1,544 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  NetworkBehaviour</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-NetworkBehaviour.html">English</a></li>
+<li><a href="/ja/current/Manual/class-NetworkBehaviour.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-NetworkBehaviour.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-NetworkBehaviour.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-NetworkBehaviour.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetClassesReference.html">Multiplayer Classes Reference</a></li>
+<li> NetworkBehaviour</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetClassesReference.html"></a></span><div class="tip">Multiplayer Classes Reference</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkClient.html"></a></span><div class="tip"> NetworkClient</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>NetworkBehaviour</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>NetworkBehaviour <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> work with <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> that have a <a href="class-NetworkIdentity.html">Network Identity</a> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>. These scripts can perform <a href="UNetUsingHLAPI.html">high-level API</a> functions such as <a href="UNetActions.html">Commands, ClientRPCs</a>, <a href="../ScriptReference/Networking.SyncEventAttribute.html">SyncEvents</a> and <a href="UNetStateSync.html">SyncVars</a>.</p>
+
+<p>With the server-authoritative system of the Unity Network System, the server must use the <a href="../ScriptReference/Networking.NetworkServer.Spawn.html">NetworkServer.Spawn</a> function to spawn GameObjects with Network Identity components. Spawning them this way assigns them a <a href="../ScriptReference/Networking.NetworkInstanceId.html">NetworkInstanceId</a> and creates them on clients connected to the server.</p>
+
+<p>
+<strong>Note:</strong> This is not a component that you can add to a GameObject directly. Instead, you must create a script which inherits from <code>NetworkBehaviour</code> (instead of the default <code>MonoBehaviour</code>), then you can add your script as a component to a GameObject.</p>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong><code>isLocalPlayer</code></strong></td>
+	<td style="text-align:left;">Returns true if this GameObject is the one that represents the player on the local client.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>isServer</code></strong></td>
+	<td style="text-align:left;">Returns true if this GameObject is running on the server, and has been spawned.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>isClient</code></strong></td>
+	<td style="text-align:left;">Returns true if this GameObject is on the client and has been spawned by the server.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>hasAuthority</code></strong></td>
+	<td style="text-align:left;">Returns true if this GameObject is the authoritative version of the GameObject, meaning it is the source for changes to be synchronized. For most GameObjects, this returns true on the server. However, if the localPlayerAuthority value on the <span class="tooltip"><strong>NetworkIdentity</strong><span class="tooltiptext">A Networking component that allows you to assign an identity to your GameObject for the network to recognise it as a Local Player GameObject or a Server Only GameObject. <a href="class-NetworkIdentity.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkIdentity">Glossary</a></span></span></span> is true, the authority rests with that player’s client, and this value is true on that client instead of on the server.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>netId</code></strong></td>
+	<td style="text-align:left;">The unique network ID of this GameObject. The server assigns this at runtime. It is unique for all GameObjects in that network session.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>playerControllerId</code></strong></td>
+	<td style="text-align:left;">The ID of the player associated with this NetworkBehaviour script. This is only valid if the object is a local player.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>connectionToServer</code></strong></td>
+	<td style="text-align:left;">The NetworkConnection associated with the Network Identity component attached to this GameObject. This is only valid for <span class="tooltip"><strong>player objects</strong><span class="tooltiptext">A High Level API (HPAPI) object that represents the player on the server and has the ability to run commands (which are secure client-to-server remote procedure calls) from the player’s client. <a href="UNetPlayers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerObject">Glossary</a></span></span></span> on the client.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>connectionToClient</code></strong></td>
+	<td style="text-align:left;">The NetworkConnection associated with the Network Identity component attached to this GameObject. This is only valid for player GameObjects on the server.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>localPlayerAuthority</code></strong></td>
+	<td style="text-align:left;">This value is set on the Network Identity component and is accessible from the NetworkBehaviour script for convenient access in scripts.</td>
+</tr>
+</tbody>
+</table>
+
+<p>NetworkBehaviour scripts have the following features:</p>
+
+<ul>
+<li><p>Synchronized variables</p></li>
+<li><p>Network callbacks</p></li>
+<li><p>Server and client functions</p></li>
+<li><p>Sending commands</p></li>
+<li><p>Client RPC calls</p></li>
+<li><p>Networked events</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/UNetDirections.jpg" alt="">
+</figure>
+
+<h3>Synchronized variables</h3>
+
+<p>You can synchronize member variables of NetworkBehaviour scripts from the server to clients. The server is authoritative in this system, so synchronization only takes place in the direction of server to client. </p>
+
+<p>Use the <a href="../ScriptReference/Networking.SyncVarAttribute.html">SyncVar</a> attribute to tag member variables as synchronized. Synchronized variables can be any basic type (bool, byte, sbyte, char, decimal, double, float, int, uint, long, ulong, short, ushort, string), but not classes, lists, or other collections.</p>
+
+<pre><code>public class SpaceShip : NetworkBehaviour
+{
+    [SyncVar]
+    public int health;
+
+    [SyncVar]
+    public string playerName;
+}
+</code></pre>
+
+<p>When the value of a <code>SyncVar</code> changes on the server, the server automatically sends the new value to all ready clients in the game, and updates the corresponding <code>SyncVar</code> values on those clients. When GameObjects spawn, they are created on the client with the latest state of all <code>SyncVar</code> attributes from the server.</p>
+
+<p>
+<strong>Note:</strong> To make a request from a client to the server, you need to use <strong>commands</strong>, not synchronized variables. See documentation on Sending commands for more information.</p>
+
+<h3>Network callbacks</h3>
+
+<p>There are built-in callback functions which are invoked on NetworkBehaviour scripts for various network events. These are virtual functions on the base class, so you can override them in your own code like this:</p>
+
+<pre><code>public class SpaceShip : NetworkBehaviour
+{
+    public override void OnStartServer()
+    {
+        // disable client stuff
+    }
+
+    public override void OnStartClient()
+    {
+        // register client events, enable effects
+    }
+}
+</code></pre>
+
+<p>The built-in callbacks are:</p>
+
+<ul>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnStartServer.html">OnStartServer</a> - called when a GameObject spawns on the server, or when the server is started for GameObjects in the Scene</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnStartClient.html">OnStartClient</a> - called when the GameObject spawns on the client, or when the client connects to a server for GameObjects in the Scene</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnSerialize.html">OnSerialize</a> - called to gather state to send from the server to clients</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnDeserialize.html">OnDeSerialize</a> - called to apply state to GameObjects on clients</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnNetworkDestroy.html">OnNetworkDestroy</a> - called on clients when the server destroys the GameObject</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnStartLocalPlayer.html">OnStartLocalPlayer</a> - called on clients for player GameObjects on the local client (only)</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnRebuildObservers.html">OnRebuildObservers</a> - called on the server when the set of observers for a GameObjects is rebuilt</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnSetLocalVisibility.html">OnSetLocalVisibility</a> - called on the client and/or server when the visibility of a GameObject changes for the local client</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkBehaviour.OnCheckObserver.html">OnCheckObserver</a> - called on the server to check visibility state for a new client</p></li>
+</ul>
+
+<p>Note that in a peer-hosted setup, when one of the clients is acting as both host and client, both <code>OnStartServer</code> and <code>OnStartClient</code> are called on the same GameObject. Both these functions are useful for actions that are specific to either the client or server, such as suppressing effects on a server, or setting up client-side events.</p>
+
+<h3>Server and Client functions</h3>
+
+<p>You can tag member functions in NetworkBehaviour scripts with custom attributes to designate them as server-only or client-only functions. For example:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+
+public class SimpleSpaceShip : NetworkBehaviour
+{
+    int health;
+
+    [Server]
+    public void TakeDamage( int amount)
+    {
+        // will only work on server
+        health -= amount;
+    }
+
+    [ServerCallback]
+    void Update()
+    {
+        // engine invoked callback - will only run on server
+    }
+
+
+    [Client]
+    void ShowExplosion()
+    {
+        // will only run on client
+    }
+
+    [ClientCallback]
+    void Update()
+    {
+        // engine invoked callback - will only run on client
+    }
+}
+</code></pre>
+
+<p>
+<code>[Server]</code> and <code>[ServerCallback]</code> return immediately if the client is not active. Likewise, <code>[Client]</code> and <code>[ClientCallback]</code> return immediately if the server is not active. </p>
+
+<p>The <code>[Server]</code> and <code>[Client]</code> attributes are for your own custom callback functions. They do not generate compile time errors, but they do emit a warning log message if called in the wrong scope.</p>
+
+<p>The <code>[ServerCallback]</code> and <code>[ClientCallback]</code> attributes are for built-in callback functions that are called automatically by Unity. These attributes do not cause a warning to be generated.</p>
+
+<p>For more information, see API reference documentation on the attributes discussed:</p>
+
+<ul>
+<li><p><a href="../ScriptReference/Networking.ClientAttribute.html">ClientAttribute</a></p></li>
+<li><p><a href="../ScriptReference/Networking.ClientCallbackAttribute.html">ClientCallbackAttribute</a></p></li>
+<li><p><a href="../ScriptReference/Networking.ServerAttribute.html">ServerAttribute</a></p></li>
+<li><p><a href="../ScriptReference/Networking.ServerCallbackAttribute.html">ServerCallbackAttribute</a></p></li>
+</ul>
+
+<h3>Sending commands</h3>
+
+<p>To execute code on the server, you must use <strong>commands</strong>. The high-level API is a server-authoritative system, so commands are the only way for a client to trigger some code on the server.</p>
+
+<p>Only player GameObjects can send commands.</p>
+
+<p>When client player GameObject sends a command, that command runs on the corresponding player GameObject on the server. This routing happens automatically, so it is impossible for a client to send a command for a different player.</p>
+
+<p>To define a <strong>command</strong> in your code, you must write a function which has:</p>
+
+<ul>
+<li><p>A name that begins with <code>Cmd</code>
+</p></li>
+<li><p>The <code>[Command]</code> attribute</p></li>
+</ul>
+
+<p>For example:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.<span class="tooltip">__Networking__<span class="tooltiptext">The Unity system that enables multiplayer gaming across a computer network. [More info](UNetOverview.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#Networking)&lt;/span&gt;</span></span>;
+
+public class SpaceShip : NetworkBehaviour
+{
+    bool alive;
+    float thrusting;
+    int spin;
+
+    [ClientCallback]
+    void Update()
+    {
+
+        // This code executes on the client, gathering input
+        int spin = 0;
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            spin += 1;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            spin -= 1;
+        }
+
+
+        // This line triggers the code to run on the server
+        CmdThrust(Input.GetAxis(&quot;Vertical&quot;), spin);
+    }
+
+    [Command]
+    public void CmdThrust(float thrusting, int spin)
+    {   
+
+        // This code executes on the server after Update() is
+
+        // called from below.
+        if (!alive)
+        {
+            this.thrusting = 0;
+            this.spin = 0;
+            return;
+        }
+            
+        this.thrusting = thrusting;
+        this.spin = spin;
+    }
+
+}
+</code></pre>
+
+<p>Commands are called just by invoking the function normally on the client. Instead of the command function running on the client, it is automatically invoked on the corresponding player GameObject on the server. </p>
+
+<p>Commands are type-safe, have built-in security and routing to the player, and use an efficient serialization mechanism for the arguments to make calling them fast.</p>
+
+<h3>Client RPC calls</h3>
+
+<p>Client RPC calls are a way for server GameObjects to make things happen on client GameObjects.</p>
+
+<p>Client RPC calls are not restricted to player GameObjects, and may be called on any GameObject with a <a href="class-NetworkIdentity.html">Network Identity</a> component.</p>
+
+<p>To define a <strong>client RPC call </strong>in your code, you must write a function which:</p>
+
+<ul>
+<li><p>Has a name that begins with <code>Rpc</code>
+</p></li>
+<li><p>Has the <code>[ClientRPC]</code> attribute</p></li>
+</ul>
+
+<p>For example:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+
+public class SpaceShipRpc : NetworkBehaviour
+{
+    [ServerCallback]
+    void Update()
+    {
+
+        // This is code run on the server
+        int value = UnityEngine.Random.Range(0,100);
+        if (value &lt; 10)
+        {
+            // This invoke the RpcDoOnClient function on all clients
+            RpcDoOnClient(value);
+        }
+    }
+
+    [ClientRpc]
+    public void RpcDoOnClient(int foo)
+    {
+
+        // This code will run on all clients
+        Debug.Log(&quot;OnClient &quot; + foo);
+    }
+
+}
+</code></pre>
+
+<h3>Networked events</h3>
+
+<p>
+<strong>Networked events</strong> are like <strong>Client RPC </strong>calls, but instead of calling a function on the GameObject, they trigger Events instead.</p>
+
+<p>This allows you to write scripts which can register for a callback when an event is triggered. </p>
+
+<p>To define a <strong>Networked event </strong>in your code, you must write a function which both:</p>
+
+<ul>
+<li><p>Has a name that begins with <code>Event</code>
+</p></li>
+<li><p>Has the <code>[SyncEvent]</code> attribute</p></li>
+</ul>
+
+<p>You can use events to build powerful networked game systems that can be extended by other scripts. This example shows how an effect script on the client can respond to events generated by a combat script on the server.</p>
+
+<p>
+<strong>SyncEvent </strong>is the base class that <strong>Commands </strong>and <strong>ClientRPC </strong>calls are derived from. You can use the SyncEvent attribute on your own functions to make your own event-driven networked gameplay code. Using SyncEvent, you can extend Unity’s Multiplayer features to better fit your own programming patterns. For example:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+
+// Server script
+public class MyCombat : NetworkBehaviour
+{
+    public delegate void TakeDamageDelegate(int amount);
+    public delegate void DieDelegate();
+    public delegate void RespawnDelegate();
+    
+    float deathTimer;
+    bool alive;
+    int health;
+
+    [SyncEvent(channel=1)]
+    public event TakeDamageDelegate EventTakeDamage;
+    
+    [SyncEvent]
+    public event DieDelegate EventDie;
+    
+    [SyncEvent]
+    public event RespawnDelegate EventRespawn;
+
+    [ServerCallback]
+    void Update()
+    {
+
+        // Check if it is time to Respawn
+        if (!alive)
+        {
+            if (Time.time &gt; deathTimer)
+            {
+                Respawn();
+            }
+            return;
+        }
+    }
+
+    [Server]
+    void Respawn()
+    {
+        alive = true;
+
+
+        // send respawn event to all clients from the Server
+        EventRespawn();
+    }
+
+
+    [Server]
+    void EventTakeDamage(int amount)
+    {
+        if (!alive)
+            return;
+            
+        if (health &gt; amount) {
+            health -= amount;
+        }
+        else
+        {
+            health = 0;
+            alive = false;
+
+
+            // send die event to all clients
+            EventDie();
+            deathTimer = Time.time + 5.0f;
+        }
+    }
+}
+</code></pre>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetClassesReference.html"></a></span><div class="tip">Multiplayer Classes Reference</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkClient.html"></a></span><div class="tip"> NetworkClient</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

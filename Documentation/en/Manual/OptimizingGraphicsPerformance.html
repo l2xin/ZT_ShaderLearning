@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Optimizing graphics performance</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/OptimizingGraphicsPerformance.html">English</a></li>
+<li><a href="/ja/current/Manual/OptimizingGraphicsPerformance.html">日本語</a></li>
+<li><a href="/es/current/Manual/OptimizingGraphicsPerformance.html">Español</a></li>
+<li><a href="/kr/current/Manual/OptimizingGraphicsPerformance.html">한국어</a></li>
+<li><a href="/ru/current/Manual/OptimizingGraphicsPerformance.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li> Optimizing graphics performance</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Example-CreatingaBillboardPlane.html"></a></span><div class="tip">Example - Creating a Quad</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">DrawCallBatching</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Optimizing graphics performance</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Good performance is critical to the success of many games. Below are some simple guidelines for maximizing the speed of your game’s <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>.</p>
+
+<h2>Locate high graphics impact</h2>
+
+<p>The graphical parts of your game can primarily impact on two systems of the computer: the GPU and the CPU. The first rule of any optimization is to find <strong>where</strong> the performance problem is, because strategies for optimizing for GPU vs. CPU are quite different (and can even be opposite - for example, it’s quite common to make the GPU do more work while optimizing for CPU, and vice versa).</p>
+
+<p>Common bottlenecks and ways to check for them:</p>
+
+<ul>
+<li>GPU is often limited by <strong>fillrate</strong> or memory bandwidth.
+
+<ul>
+<li>Lower the display resolution and run the game. If a lower display resolution makes the game run faster, you may be limited by fillrate on the GPU.</li>
+</ul>
+</li>
+<li>CPU is often limited by the number of batches that need to be rendered.
+
+<ul>
+<li>Check “batches” in the <a href="RenderingStatistics.html">Rendering Statistics</a> window. The more batches are being rendered, the higher the cost to the CPU.</li>
+</ul>
+</li>
+</ul>
+
+<p>Less-common bottlenecks:</p>
+
+<ul>
+<li>The GPU has too many vertices to process. The number of vertices that is acceptable to ensure good performance depends on the GPU and the complexity of <span class="tooltip"><strong>vertex shaders</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>. Generally speaking, aim for no more than 100,000 vertices on mobile. A PC manages well even with several million vertices, but it is still good practice to keep this number as low as possible through optimization.</li>
+<li>The CPU has too many vertices to process. This could be in skinned meshes, cloth simulation, particles, or other game objects and meshes. As above, it is generally good practice to keep this number as low as possible without compromising game quality. See the section on <a href="#CPU-optimization">CPU optimization</a> below for guidance on how to do this.</li>
+<li>If rendering is not a problem on the GPU or the CPU, there may be an issue elsewhere - for example, in your script or physics. Use the <a href="Profiler.html">Unity Profiler</a> to locate the problem.</li>
+</ul>
+
+<p><a name="CPU-optimization"></a></p>
+
+<h2>CPU optimization</h2>
+
+<p>To render objects on the screen, the CPU has a lot of processing work to do: working out which lights affect that object, setting up the <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> and <strong>shader</strong> parameters, and sending drawing commands to the graphics driver, which then prepares the commands to be sent off to the graphics card. </p>
+
+<p>All this “per object” CPU usage is resource-intensive, so if you have lots of visible objects, it can add up. For example, if you have a thousand triangles, it is much easier on the CPU if they are all in one <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span>, rather than in one <strong>mesh</strong> per triangle (adding up to 1000 meshes). The cost of both scenarios on the GPU is very similar, but the work done by the CPU to render a thousand objects (instead of one) is significantly higher.</p>
+
+<p>Reduce the visible object count. To reduce the amount of work the CPU needs to do:</p>
+
+<ul>
+<li>Combine close objects together, either manually or using Unity’s <a href="DrawCallBatching.html">draw call batching</a>.</li>
+<li>Use fewer materials in your objects by putting separate textures into a larger texture atlas.</li>
+<li>Use fewer things that cause objects to be rendered multiple times (such as reflections, shadows and per-pixel lights).</li>
+</ul>
+
+<p>Combine objects together so that each mesh has at least several hundred triangles and uses only one <span class="tooltip"><strong>Material</strong><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#material">Glossary</a></span></span></span> for the entire mesh. Note that combining two objects which don’t share a material does not give you any performance increase at all. The most common reason for requiring multiple materials is that two meshes don’t share the same textures; to optimize CPU performance, ensure that any objects you combine share the same textures.</p>
+
+<p>When using many <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> lights in the <a href="RenderTech-ForwardRendering.html">Forward rendering path</a>, there are situations where combining objects may not make sense. See the <a href="#LightingPerformance">Lighting performance</a> section below to learn how to manage this.</p>
+
+<h2>GPU: Optimizing model geometry</h2>
+
+<p>There are two basic rules for optimizing the geometry of a model:</p>
+
+<ul>
+<li>Don’t use any more triangles than necessary</li>
+<li>Try to keep the number of UV mapping seams and hard edges (doubled-up vertices) as low as possible</li>
+</ul>
+
+<p>Note that the actual number of vertices that graphics hardware has to process is usually not the same as the number reported by a 3D application. Modeling applications usually display the number of distinct corner points that make up a model (known as the geometric vertex count). For a graphics card, however, some geometric vertices need to be split into two or more logical vertices for rendering purposes. A vertex must be split if it has multiple normals, UV coordinates or vertex colors. Consequently, the vertex count in Unity is usually higher than the count given by the 3D application.</p>
+
+<p>While the amount of geometry in the models is mostly relevant for the GPU, some features in Unity also process models on the CPU (for example, mesh skinning).</p>
+
+<p><a name="LightingPerformance"></a></p>
+
+<h2>Lighting performance</h2>
+
+<p>The fastest option is always to create lighting that doesn’t need to be computed at all. To do this, use <a href="GIIntro.html">Lightmapping</a> to “bake” static lighting just once, instead of computing it each frame. The process of generating a lightmapped environment takes only a little longer than just placing a light in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> in Unity, <strong>but</strong>:</p>
+
+<ul>
+<li>It runs a lot faster (2–3 times faster for 2-per-pixel lights)</li>
+<li>It looks a lot better, as you can bake global illumination and the <span class="tooltip"><strong>lightmapper</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> can smooth the results</li>
+</ul>
+
+<p>In many cases you can apply simple tricks instead of adding multiple extra lights. For example, instead of adding a light that shines straight into the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> to give a <strong>Rim Lighting</strong> effect, add a dedicated <code>Rim Lighting</code> computation directly into your shaders (see <a href="SL-SurfaceShaderExamples.html">Surface Shader Examples</a> to learn how to do this).</p>
+
+<h4>Lights in forward rendering</h4>
+
+<p>Also see: <span class="tooltip"><a href="RenderTech-ForwardRendering.html">Forward rendering</a><span class="tooltiptext">A rendering path that renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity. <a href="RenderTech-ForwardRendering.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span></p>
+
+<p>Per-pixel dynamic lighting adds significant rendering work to every affected pixel, and can lead to objects being rendered in multiple passes. Avoid having more than one <strong>Pixel Light</strong> illuminating any single object on less powerful devices, like mobile or low-end PC GPUs, and use <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> to light static objects instead of calculating their lighting every frame. Per-vertex dynamic lighting can add significant work to vertex transformations, so try to avoid situations where multiple lights illuminate a single object.</p>
+
+<p>Avoid combining meshes that are far enough apart to be affected by different sets of pixel lights. When you use pixel lighting, each mesh has to be rendered as many times as there are pixel lights illuminating it. If you combine two meshes that are very far apart, it increase the effective size of the combined object. All pixel lights that illuminate any part of this combined object are taken into account during rendering, so the number of rendering passes that need to be made could be increased. Generally, the number of passes that must be made to render the combined object is the <strong>sum of the number of passes for each of the separate objects</strong>, so nothing is gained by combining meshes.</p>
+
+<p>During rendering, Unity finds all lights surrounding a mesh and calculates which of those lights affect it most. The <a href="class-QualitySettings.html">Quality Settings</a> are used to modify how many of the lights end up as pixel lights, and how many as vertex lights. Each light calculates its importance based on how far away it is from the mesh and how intense its illumination is - and some lights are more important than others purely from the game context. For this reason, every light has a <strong>Render Mode</strong> setting which can be set to <strong>Important</strong> or <strong>Not Important</strong>; lights marked as <strong>Not Important</strong> have a lower rendering overhead.</p>
+
+<p>
+<strong>Example</strong>: Consider a driving game in which the player’s car is driving in the dark with headlights switched on. The headlights are probably the most visually significant light source in the game, so their <strong>Render Mode</strong> should be set to <strong>Important</strong>. There may be other lights in the game that are less important, like other cars’ rear lights or distant lampposts, and which don’t improve the visual effect much by being pixel lights. The <strong>Render Mode</strong> for such lights can safely be set to <strong>Not Important</strong> to avoid wasting rendering capacity in places where it has little benefit.</p>
+
+<p>Optimizing per-pixel lighting saves both the CPU and GPU work: the CPU has fewer draw calls to do, and the GPU has fewer vertices to process and pixels to rasterize for all the additional object renders.</p>
+
+<h2>GPU: Texture compression and mipmaps</h2>
+
+<p>Use <a href="class-TextureImporter.html">Compressed textures</a> to decrease the size of your textures. This can result in faster load times, a smaller memory footprint, and dramatically increased rendering performance. Compressed textures only use a fraction of the memory bandwidth needed for uncompressed 32-bit RGBA textures.</p>
+
+<h4>Texture mipmaps</h4>
+
+<p>Always enable <a href="class-TextureImporter.html">Generate mipmaps</a> for textures used in a 3D scene. A mipmap texture enables the GPU to use a lower resolution texture for smaller triangles.This is similar to how texture <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> can help limit the amount of texture data transfered when the GPU is rendering.</p>
+
+<p>The only exception to this rule is when a texel (texture pixel) is known to map 1:1 to the rendered screen pixel, as with <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> elements or in a 2D game.</p>
+
+<h2>LOD and per-layer cull distances</h2>
+
+<p>Culling objects involves making objects invisible. This is an effective way to reduce both the CPU and GPU load.</p>
+
+<p>In many games, a quick and effective way to do this without compromising the player experience is to cull small objects more aggressively than large ones. For example, small rocks and debris could be made invisible at long distances, while large buildings would still be visible.</p>
+
+<p>There are a number of ways you can achieve this:</p>
+
+<ul>
+<li><p>Use the <span class="tooltip"><a href="LevelOfDetail.html">Level Of Detail</a><span class="tooltiptext">A rendering optimisation technique that allows you to reduce the number of triangles rendered for an object in stages as its distance from the camera increases. As long as your objects aren’t all close to the camera at the same time, LOD will reduce the load on the hardware and improve rendering performance. <a href="class-LODGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#levelofdetail">Glossary</a></span></span></span> system</p></li>
+<li><p>Manually set per-layer culling distances on the camera </p></li>
+<li><p>Put small objects into a <a href="Layers.html">separate layer</a> and set up per-layer cull distances using the <a href="../ScriptReference/Camera-layerCullDistances.html">Camera.layerCullDistances</a> script function</p></li>
+</ul>
+
+<h2>Realtime shadows</h2>
+
+<p>Realtime shadows are nice, but they can have a high impact on performance, both in terms of extra draw calls for the CPU and extra processing on the GPU. For further details, see the <a href="LightPerformance.html">Light Performance</a> page.</p>
+
+<h2>GPU: Tips for writing high-performance shaders</h2>
+
+<p>Different platforms have vastly different performance capabilities; a high-end PC GPU can handle much more in terms of graphics and shaders than a low-end mobile GPU. The same is true even on a single platform; a fast GPU is dozens of times faster than a slow integrated GPU.</p>
+
+<p>GPU performance on mobile platforms and low-end PCs is likely to be much lower than on your development machine. It’s recommended that you manually optimize your shaders to reduce calculations and texture reads, in order to get good performance across low-end GPU machines. For example, some built-in Unity shaders have “mobile” equivalents that are much faster, but have some limitations or approximations.</p>
+
+<p>Below are some guidelines for mobile and low-end PC graphics cards:</p>
+
+<h4>Complex mathematical operations</h4>
+
+<p>Transcendental mathematical functions (such as <code>pow</code>, <code>exp</code>, <code>log</code>, <code>cos</code>,
+<code>sin</code>, <code>tan</code>) are quite resource-intensive, so avoid using them where possible. Consider using lookup textures as an alternative to complex math calculations if applicable.</p>
+
+<p>Avoid writing your own operations (such as <code>normalize</code>, <code>dot</code>, <code>inversesqrt</code>). Unity’s built-in options ensure that the driver can generate much better code. Remember that the Alpha Test (<code>discard</code>) operation often makes your fragment shader slower.</p>
+
+<h4>Floating point precision</h4>
+
+<p>While the precision (<code>float</code> vs <code>half</code> vs <code>fixed</code>) of floating point
+variables is largely ignored on desktop GPUs, it is quite
+important to get a good performance on mobile GPUs. See the
+<a href="SL-DataTypesAndPrecision.html">Shader Data Types and Precision</a>
+page for details.</p>
+
+<p>For further details about shader performance, see the <a href="SL-ShaderPerformance.html">Shader Performance</a> page.</p>
+
+<h2>Simple checklist to make your game faster</h2>
+
+<ul>
+<li>Keep the vertex count below 200K and 3M per frame when building for PC (depending on the target GPU).</li>
+<li>If you’re using built-in shaders, pick ones from the <strong>Mobile</strong> or <strong>Unlit</strong> categories. They work on non-mobile platforms as well, but are simplified and approximated versions of the more complex shaders.</li>
+<li>Keep the number of different materials per scene low, and share as many materials between different objects as possible.</li>
+<li>Set the <code>Static</code> property on a non-moving object to allow internal optimizations like <span class="tooltip"><a href="DrawCallBatching.html">static batching</a><span class="tooltiptext">A technique Unity uses to draw GameObjects on the screen that combines static (non-moving) GameObjects into big Meshes, and renders them in a faster way. <a href="DrawCallBatching.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StaticBatching">Glossary</a></span></span></span>.</li>
+<li>Only have a single (preferably directional) <code>pixel light</code> affecting your geometry, rather than multiples.</li>
+<li>Bake lighting rather than using dynamic lighting.</li>
+<li>Use compressed texture formats when possible, and use 16-bit textures over 32-bit textures.</li>
+<li>Avoid using fog where possible.</li>
+<li>Use <span class="tooltip"><a href="OcclusionCulling.html">Occlusion Culling</a><span class="tooltiptext">A Unity feature that disables rendering of objects when they are not currently seen by the camera because they are obscured (occluded) by other objects. <a href="OcclusionCulling.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#OcclusionCulling">Glossary</a></span></span></span> to reduce the amount of visible geometry and draw-calls in cases of complex static scenes with lots of occlusion. Design your levels with occlusion culling in mind.</li>
+<li>Use skyboxes to “fake” distant geometry.</li>
+<li>Use pixel shaders or texture combiners to mix several textures instead of a multi-pass approach.</li>
+<li>Use <code>half</code> precision variables where possible.</li>
+<li>Minimize use of complex mathematical operations such as <code>pow</code>, <code>sin</code> and <code>cos</code> in pixel shaders.</li>
+<li>Use fewer textures per fragment.</li>
+</ul>
+
+<h2>See Also</h2>
+
+<ul>
+<li>
+<a href="Profiler.html">Unity Profiler Window</a>.</li>
+<li>
+<a href="LightPerformance.html">Light Performance</a>.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Example-CreatingaBillboardPlane.html"></a></span><div class="tip">Example - Creating a Quad</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">DrawCallBatching</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Water in Unity</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/HOWTO-Water.html">English</a></li>
+<li><a href="/ja/current/Manual/HOWTO-Water.html">日本語</a></li>
+<li><a href="/es/current/Manual/HOWTO-Water.html">Español</a></li>
+<li><a href="/kr/current/Manual/HOWTO-Water.html">한국어</a></li>
+<li><a href="/ru/current/Manual/HOWTO-Water.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsHowTos.html">Graphics HOWTOs</a></li>
+<li>Water in Unity</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-FixZAxisIsUp.html"></a></span><div class="tip">How do I fix the rotation of an imported model?</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ArtAssetBestPracticeGuide.html"></a></span><div class="tip"> Art Asset best practice guide</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Water in Unity</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity includes several water <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> (including the necessary Shaders, scripts and art Assets) within the <a href="AssetTypes.html#Standard">Standard Assets packages</a>. Separate daylight and nighttime water Prefabs are provided.</p>
+
+<p>Note that the water reflections described in this document do not work in VR.</p>
+
+<figure>
+<img src="../uploads/Main/Water_Reflective.png" alt="Reflective daylight water">
+<figcaption>Reflective daylight water</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Water_ReflectiveRefractive.png" alt="Reflective/Refractive daylight water">
+<figcaption>Reflective/Refractive daylight water</figcaption>
+</figure>
+
+<h2>Setting up water</h2>
+
+<p>Place one of the existing water Prefabs into your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Make sure you have the <a href="AssetTypes.html#Standard">Standard Assets installed</a>:</p>
+
+<ul>
+<li>Simple <strong>Daylight Simple Water</strong> and <strong>Nighttime Simple Water</strong> in <span class="tooltip"><strong>Standard Assets</strong><span class="tooltiptext">A collection of useful assets supplied with Unity. Unity ships with multiple Standard Asset such as 2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, and Vehicles. <a href="AssetTypes.html#Standard">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardAsset">Glossary</a></span></span></span> &gt; <strong>Water</strong>.</li>
+<li>Fancier water - <strong>Daylight Water</strong> and <strong>Nighttime Water</strong> in <strong>Pro Standard Assets</strong> &gt; <strong>Water</strong> (this needs some Assets from <strong>Standard Assets</strong> &gt; <strong>Water</strong> as well). Water mode (Simple, Reflective, Refractive) can be set in the Inspector.</li>
+</ul>
+
+<p>The Prefab uses an oval-shaped Mesh for the water. If you need to use a different <span class="tooltip"><a href="class-Mesh.html">Mesh</a><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span>, change it in the <span class="tooltip"><strong>Mesh Filter</strong><span class="tooltiptext">A mesh component that takes a mesh from your assets and passes it to the Mesh Renderer for rendering on the screen. <a href="class-MeshFilter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshFilter">Glossary</a></span></span></span> of the water <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>:</p>
+
+<figure>
+<img src="../uploads/Main/Water_ChangeMesh.png" alt="">
+</figure>
+
+<h2>Creating water from scratch (Advanced)</h2>
+
+<p>Simple water requires attaching a script to a plane-like mesh and using the water <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>:</p>
+
+<ol>
+<li>Have mesh for the water. This should be a flat mesh, oriented horizontally. UV coordinates are not required. The water GameObject should use the Water <span class="tooltip"><strong>Layer</strong><span class="tooltiptext">Layers in Unity can be used to selectively opt groups of GameObjects in or out of certain processes or calculations. This includes camera rendering, lighting, physics collisions, or custom calculations in your own code. <a href="Layers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Layer">Glossary</a></span></span></span>, which you can set in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li>
+<li>Attach the <strong>WaterSimple</strong> script (from <strong>Standard Assets/Water/Sources</strong>) to the GameObject.</li>
+<li>Use the <strong>FX/Water (simple)</strong> Shader in the Material, or tweak one of the provided water Materials (<strong>Daylight Simple Water</strong> or <strong>Nighttime Simple Water</strong>).</li>
+</ol>
+
+<p>Reflective/refractive water requires similar steps to set up from scratch:</p>
+
+<ol>
+<li>Create a Mesh for the water. This should be a flat Mesh, oriented horizontally. UV coordinates are not required. The water GameObject should use the water <strong>Layer</strong>, which you can set in the Inspector.</li>
+<li>Attach the <strong>Water</strong> script (from <strong>Pro Standard Assets/Water/Sources</strong>) to the GameObject (Water rendering mode can be set in the Inspector: <strong>Simple</strong>, <strong>Reflective</strong> or <strong>Refractive</strong>.)</li>
+<li>Use the <strong>FX/Water</strong> Shader in the Material, or tweak one of the provided water Materials (<strong>Daylight Water</strong> or <strong>Nighttime Water</strong>).</li>
+</ol>
+
+<h2>Properties in water Materials</h2>
+
+<p>These properties are used in the <strong>Reflective</strong> and <strong>Refractive</strong> water Shaders. Most of them are used in the <strong>Simple</strong> water Shader as well.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Wave scale</strong></td>
+	<td style="text-align:left;">Scaling of waves normal map. The smaller the value, the larger water waves.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection/refraction distort</strong></td>
+	<td style="text-align:left;">How much reflection/refraction is distorted by the waves normal map.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Refraction color</strong></td>
+	<td style="text-align:left;">Additional tint for refraction.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Environment reflection/refraction</strong></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>Render textures</strong><span class="tooltiptext">A special type of Texture that is created and updated at runtime. To use them, first create a new Render Texture and designate one of your Cameras to render into it. Then you can use the Render Texture in a Material just like a regular Texture. <a href="class-RenderTexture.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span> for real-time reflection and refraction.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Normalmap</strong></td>
+	<td style="text-align:left;">Defines the shape of the waves. The final waves are produced by combining these two normal maps, each scrolling at different direction, scale and speed. The second normal map is half as large as the first one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wave speed</strong></td>
+	<td style="text-align:left;">Scrolling speed for first normal map (1st and 2nd numbers) and the second normal map (3rd and 4th numbers).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fresnel</strong></td>
+	<td style="text-align:left;">A texture with alpha channel controlling the <span class="tooltip"><strong>Fresnel effect</strong><span class="tooltiptext">An effect representing the increase in reflectivity on objects when light hits at grazing angles. In Unity, the Standard Shader handles this indirectly, depending on a material’s smoothness. Smooth surfaces have a stronger Fresnel, totally rough surfaces have no Fresnel. <a href="StandardShaderFresnel.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FresnelEffect">Glossary</a></span></span></span> - how much reflection vs. refraction is visible, based on viewing angle.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The rest of the properties are not used by the <strong>Reflective</strong> and <strong>Refractive</strong> Shaders, but need to be set up in case the user’s video card does not support it and must fallback to the simpler shader:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Reflective color/cube and fresnel</strong></td>
+	<td style="text-align:left;">A texture that defines water color (RGB) and Fresnel effect (A) based on viewing angle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Horizon color</strong></td>
+	<td style="text-align:left;">The color of the water at horizon. `this is only used in the <strong>Simple</strong> water Shader.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fallback texture</strong></td>
+	<td style="text-align:left;">Define the fallback Texture used to represent the water on really old video cards, if none of the better looking Shaders can run.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-FixZAxisIsUp.html"></a></span><div class="tip">How do I fix the rotation of an imported model?</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ArtAssetBestPracticeGuide.html"></a></span><div class="tip"> Art Asset best practice guide</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

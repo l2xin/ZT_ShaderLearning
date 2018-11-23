@@ -1,0 +1,386 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Measuring performance with the built-in profiler</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/iphone-InternalProfiler.html">English</a></li>
+<li><a href="/ja/current/Manual/iphone-InternalProfiler.html">日本語</a></li>
+<li><a href="/es/current/Manual/iphone-InternalProfiler.html">Español</a></li>
+<li><a href="/kr/current/Manual/iphone-InternalProfiler.html">한국어</a></li>
+<li><a href="/ru/current/Manual/iphone-InternalProfiler.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li>iOS Advanced Topics</li>
+<li><a href="iphone-performance.html">Optimizing Performance on iOS</a></li>
+<li>Measuring performance with the built-in profiler</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-iOS-Optimization.html"></a></span><div class="tip">iOS-specific optimizations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-playerSizeOptimization.html"></a></span><div class="tip">Optimizing the size of the built iOS Player</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Measuring performance with the built-in profiler</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> and Android contain a built-in <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span>. The built-in <strong>profiler</strong> emits console messages from the game running on device. These messages are written every 30 seconds and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it’s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in <strong>profiler</strong>.</p>
+
+<h2>What the profiler tells you</h2>
+
+<p>Here’s an example of the built-in profiler’s output.</p>
+
+<pre><code>iPhone/iPad Unity internal profiler stats:
+cpu-player&gt; min: 9.8 max: 24.0 avg: 16.3
+cpu-ogles-drv&gt; min: 1.8 max: 8.2 avg: 4.3
+cpu-waits-gpu&gt; min: 0.8 max: 1.2 avg: 0.9
+cpu-present&gt; min: 1.2 max: 3.9 avg: 1.6
+frametime&gt; min: 31.9 max: 37.8 avg: 34.1
+draw-call #&gt; min: 4 max: 9 avg: 6 | batched: 10
+tris #&gt; min: 3590 max: 4561 avg: 3871 | batched: 3572
+verts #&gt; min: 1940 max: 2487 avg: 2104 | batched: 1900
+player-detail&gt; physx: 1.2 animation: 1.2 culling: 0.5 skinning: 0.0 batching: 0.2 render: 12.0 fixed-update-count: 1 .. 2
+mono-scripts&gt; update: 0.5 fixedUpdate: 0.0 coroutines: 0.0 
+mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collections: 1 collection total duration: 5.7
+</code></pre>
+
+<p>All times are measured in milliseconds per frame. You can see the minimum, maximum and average times over the last thirty frames.</p>
+
+<h2>General CPU activity</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Property</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span>:</th>
+	<th style="text-align:left;">
+<strong>Function</strong>:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>cpu-player</strong></td>
+	<td style="text-align:left;">Displays the time your game spends executing code inside the Unity engine and executing <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> on the CPU.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>cpu-ogles-drv</strong></td>
+	<td style="text-align:left;">Displays the time spent executing OpenGL ES driver code on the CPU. Many factors like the number of draw calls, number of internal <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> state changes, the <strong>rendering</strong> pipeline setup and even the number of processed vertices can have an effect on the driver stats.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>cpu-waits-gpu</strong></td>
+	<td style="text-align:left;">Displays the time the CPU is idle while waiting for the GPU to finish rendering. If this number exceeds 2–3 milliseconds then your application is most probably fillrate/GPU processing bound. If this value is too small then the profile skips displaying the value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>msaa-resolve</strong></td>
+	<td style="text-align:left;">The time taken to apply anti-aliasing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>cpu-present</strong></td>
+	<td style="text-align:left;">The amount of time spent executing the presentRenderbuffer command in OpenGL ES.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>frametime</strong></td>
+	<td style="text-align:left;">Represents the overall time of a game frame. Note that iOS hardware is always locked at a 60Hz refresh rate, so you will always get multiples times of 16.7ms (1000ms/60Hz = 16.7ms).</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Rendering statistics</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">
+<strong>Property</strong>:</th>
+	<th style="text-align:left;">
+<strong>Function</strong>:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>tris #</strong></td>
+	<td style="text-align:left;">Total number of triangles sent for rendering.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>verts #</strong></td>
+	<td style="text-align:left;">Total number of vertices sent for rendering. You should keep this number below 10000 if you use only static geometry but if you have lots of skinned geometry then you should keep it much lower.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>batched</strong></td>
+	<td style="text-align:left;">Number of draw-calls, triangles and vertices which were automatically batched by the engine. Comparing these numbers with draw-call and triangle totals will give you an idea how well is your <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> prepared for batching. Share as many materials as possible among your objects to improve batching.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Detailed Unity Player statistics</h2>
+
+<p>The <strong>player-detail</strong> section provides a detailed breakdown of what is happening inside the engine:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">
+<strong>Property</strong>:</th>
+	<th style="text-align:left;">
+<strong>Function</strong>:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>physx</strong></td>
+	<td style="text-align:left;">Time spent on physics.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>animation</strong><span class="tooltiptext">A collection of images that create a moving image when played sequentially. In Unity, an animation is the result of adding two different animation keys, at two different times, for the same <strong>animatable property</strong>. <a href="AnimationSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animation">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Time spent animating bones.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>culling</strong></td>
+	<td style="text-align:left;">Time spent culling objects outside the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> frustum.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>skinning</strong><span class="tooltiptext">The process of binding bone joints to the vertices of a character’s mesh or ‘skin’. Performed with an external tool, such as 3ds Max or Maya. <a href="UsingHumanoidChars.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skinning">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Time spent applying animations to skinned meshes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>batching</strong></td>
+	<td style="text-align:left;">Time spent batching geometry. Batching dynamic geometry is considerably more expensive than batching static geometry.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>render</strong></td>
+	<td style="text-align:left;">Time spent rendering visible objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>fixed-update-count</strong></td>
+	<td style="text-align:left;">Minimum and maximum number of FixedUpdates executed during this frame. Too many FixedUpdates will deteriorate performance considerably.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Detailed script statistics</h2>
+
+<p>The <strong>mono-scripts</strong> section provides a detailed breakdown of the time spent executing code in the Mono runtime:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">
+<strong>Property</strong>:</th>
+	<th style="text-align:left;">
+<strong>Function</strong>:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>update</strong></td>
+	<td style="text-align:left;">Total time spent executing all Update() functions in scripts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>fixedUpdate</strong></td>
+	<td style="text-align:left;">Total time spent executing all FixedUpdate() functions in scripts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>coroutines</strong></td>
+	<td style="text-align:left;">Time spent inside script coroutines.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Detailed statistics on memory allocated by scripts</h2>
+
+<p>The <strong>mono-memory</strong> section gives you an idea of how memory is being managed by the Mono garbage collector:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">
+<strong>Property</strong>:</th>
+	<th style="text-align:left;">
+<strong>Function</strong>:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>allocated heap</strong></td>
+	<td style="text-align:left;">Total amount of memory available for allocations. A garbage collection will be triggered if there is not enough memory left in the heap for a given allocation. If there is still not enough free memory even after the collection then the allocated heap will grow in size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>used heap</strong></td>
+	<td style="text-align:left;">The portion of the <strong>allocated heap</strong> which is currently used up by objects. Every time you create a new class instance (not a struct) this number will grow until the next garbage collection.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>max number of collections</strong></td>
+	<td style="text-align:left;">Number of garbage collection passes during the last 30 frames.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>collection total duration</strong></td>
+	<td style="text-align:left;">Total time (in milliseconds) of all garbage collection passes that have happened during the last 30 frames.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Configuration</h2>
+
+<p>On iOS, it’s disabled by default. To enable it, open the Unity-generated XCode project, select the <code>InternalProfiler.h</code> file, and change the line</p>
+
+<pre><code> #define ENABLE_INTERNAL_PROFILER 0
+</code></pre>
+
+<p>to</p>
+
+<pre><code> #define ENABLE_INTERNAL_PROFILER 1
+</code></pre>
+
+<p>Select <strong>View &gt; Debug Area &gt; Activate Console</strong> in the XCode menu to display the output console (GDB) and then run your project. Unity will output statistics to the console window every thirty frames.</p>
+
+<p>To enable it on Android, click the <strong>Enable Internal Profiler</strong> (Deprecated) checkbox in PlayerSettings (<strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong>). Make sure <span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> is checked in the <strong>Build Settings</strong> when building, and the statistics should show up in logcat when run on the device. To view logcat, you need <span class="tooltip"><strong>adb</strong><span class="tooltiptext">An Android Debug Bridge (ADB). You can use an ADB to deploy an Android package (APK) manually after building. <a href="https://developer.android.com/studio/command-line/adb.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ADB">Glossary</a></span></span></span> or the Android Debug Bridge. Once you have that, simply run the shell command <strong>adb logcat</strong>.</p>
+
+<ul>
+<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-iOS-Optimization.html"></a></span><div class="tip">iOS-specific optimizations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-playerSizeOptimization.html"></a></span><div class="tip">Optimizing the size of the built iOS Player</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

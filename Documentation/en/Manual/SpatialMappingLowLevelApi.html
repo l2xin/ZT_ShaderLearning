@@ -1,0 +1,418 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Spatial Mapping low level API</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SpatialMappingLowLevelApi.html">English</a></li>
+<li><a href="/ja/current/Manual/SpatialMappingLowLevelApi.html">日本語</a></li>
+<li><a href="/es/current/Manual/SpatialMappingLowLevelApi.html">Español</a></li>
+<li><a href="/kr/current/Manual/SpatialMappingLowLevelApi.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SpatialMappingLowLevelApi.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="wmr_sdk_overview.html"> Windows Mixed Reality</a></li>
+<li><a href="SpatialMapping.html"> HoloLens Spatial Mapping</a></li>
+<li> Spatial Mapping low level API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingRenderer.html"></a></span><div class="tip"> Spatial Mapping Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingTroubleshooting.html"></a></span><div class="tip"> Spatial Mapping common troubleshooting issues</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Spatial Mapping low level API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <span class="tooltip"><strong>Spatial Mapping</strong><span class="tooltiptext">The process of mapping real-world surfaces into the virtual world. <a href="SpatialMapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SpatialMapping">Glossary</a></span></span></span> Renderer and <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> allow you to use the features of <strong>Spatial Mapping</strong> easily without worrying about the finer details of the system. If you want to have finer control over the <strong>Spatial Mapping</strong> in your application then use the low level API that Unity provides for <strong>Spatial Mapping</strong>.</p>
+
+<p>The API provides a number of data structures and object types for accessing the Spatial Mapping information that the <span class="tooltip"><strong>HoloLens</strong><span class="tooltiptext">An XR headset for using apps made for the Windows Mixed Reality platform. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HoloLens">Glossary</a></span></span></span> gathers.</p>
+
+<h2>SurfaceObserver</h2>
+
+<p>You can access Spatial Mapping data using a <a href="../ScriptReference/XR.WSA.SurfaceObserver.html">SurfaceObserver</a> . A <code>SurfaceObserver</code> is an API class which monitors a volume of real-world space for which the application requires Spatial Mapping data. The <code>SurfaceObserver</code> describes a physical area in the real-world and reports on the set of spatial Surfaces it intersects with that have been added, changed, or removed by the Spatial Mapping system.</p>
+
+<p>Use of <code>SurfaceObservers</code> is only necessary if you wish to interact with Spatial Mapping directly through the Unity scripting API.</p>
+
+<p>Unity provides its own Spatial Mapping Renderer and Collider components, built on the <code>SurfaceObserver</code> API to allow easy access to Spatial Mapping functionality. See documentation on <a href="#SpatialMappingComponents">Spatial Mapping components</a> for more details on these. </p>
+
+<p>Using <code>SurfaceObserver</code>, applications can asynchronously request <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> data with or without physics <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> data. When the request is complete, another callback informs the application that the data is ready to use.</p>
+
+<p>
+<code>SurfaceObserver</code> provides the following functionality to your application:</p>
+
+<ol>
+<li><p>Issues <a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)">callbacks</a> upon request for Surface changes such as additions, removals, and updates.</p></li>
+<li><p>Provides an interface for requesting Mesh data corresponding to a known Surface.</p></li>
+<li><p>Issues <a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)">callbacks</a> when the Mesh data it requests is ready for use.</p></li>
+<li><p>Provides ways of defining the location and volume of the <code>SurfaceObserver</code>.</p></li>
+</ol>
+
+<h2>SurfaceData</h2>
+
+<p>
+<a href="../ScriptReference/XR.WSA.SurfaceData.html">SurfaceData</a> is a class which contains all the information required by the Spatial Mapping system to build and report on a <strong>Surface’s</strong> Mesh data.</p>
+
+<p>You must pass a populated <code>SurfaceData</code> object to the Spatial Mapping system using the <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> method. When you initially call the <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> method, you need to pass it a <code>SurfaceDataReadyDelegate</code>. When the Mesh data is ready the <code>SurfaceDataReadyDelegate</code> reports a matching <code>SurfaceData</code> object.</p>
+
+<p>This allows the application to determine precisely which Surface the data corresponds to.</p>
+
+<p>You should populate the <code>SurfaceData</code> GameObject using the information your application requires. This includes the following components and data:</p>
+
+<ul>
+<li><p>A <a href="../ScriptReference/XR.WSA.WorldAnchor.html">WorldAnchor</a> component</p></li>
+<li><p>A <a href="class-MeshFilter.html">MeshFilter</a> component</p></li>
+<li><p>A <a href="class-MeshCollider.html">MeshCollider</a> component (if physics data is required in your application)</p></li>
+<li><p>The triangles per cubic meter of the generated Mesh that you want</p></li>
+<li><p>The Surface ID</p></li>
+</ul>
+
+<p>The system throws argument exceptions when you call the <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> method with an incorrectly configured <a href="../ScriptReference/XR.WSA.SurfaceData.html">SurfaceData</a> object. Even if a <code>RequestMeshAsync</code> method call does not throw argument exceptions, there is no other way to check whether Spatial Mapping is creating and returning Mesh data successfully. We recommend that you keep track of the Mesh data you create manually through script.</p>
+
+<h2>API usage example</h2>
+
+<p>The sample script below shows basic examples of using the important parts of the API.</p>
+
+<pre><code>
+using UnityEngine;
+using UnityEngine.<span class="tooltip">__XR__<span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. [More info](XR.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#XR)&lt;/span&gt;</span></span>;
+using UnityEngine.XR.WSA;
+using UnityEngine.<span class="tooltip">__Rendering__<span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. [More info](GraphicsOverview.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#Rendering)&lt;/span&gt;</span></span>;
+using UnityEngine.Assertions;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public enum BakedState 
+{
+    NeverBaked = 0,
+    Baked = 1,
+    UpdatePostBake = 2
+}
+
+// This class holds data that is kept by the system to prioritize Surface baking.
+class SurfaceEntry 
+{
+    public <span class="tooltip">__GameObject__<span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject's functionality is defined by the Components attached to it. [More info](class-GameObject.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#GameObject)&lt;/span&gt;</span></span>  m_Surface; // the __GameObject__ corresponding to this Surface
+    public int         m_Id; // ID for this Surface
+    public DateTime    m_UpdateTime; // update time as reported by the system
+    public BakedState  m_BakedState;
+    public const float c_Extents = 5.0f;
+}
+
+public class SMSample : MonoBehaviour 
+{
+    // This observer is the window into the Spatial Mapping world.  
+    SurfaceObserver m_Observer;
+
+    // This dictionary contains the set of known Spatial Mapping Surfaces.
+    // Surfaces are updated, added, and removed by the system on a regular basis.
+    Dictionary&lt;int, SurfaceEntry&gt; m_Surfaces;
+
+    // This is the material with which the system draws baked Surfaces.  
+    public Material m_drawMat;
+
+    // This flag is used by the Spatial Mapping system to postpone requests if a bake is in progress. 
+    // Baking mesh data can take multiple frames.  This sample prioritizes baking request
+    // order based on Surface data Surfaces and only issues a new request
+    // if there are currently no requests being processed by the system.
+    bool m_WaitingForBake;
+
+    // This is the last time the SurfaceObserver was updated by the system. It updates no 
+    // more than every two seconds
+    float m_lastUpdateTime;
+
+    void Start () 
+    {
+        m_Observer = new SurfaceObserver ();
+        m_Observer.SetVolumeAsAxisAlignedBox (new Vector3(0.0f, 0.0f, 0.0f), 
+            new Vector3 (SurfaceEntry.c_Extents, SurfaceEntry.c_Extents, SurfaceEntry.c_Extents));
+        m_Surfaces = new Dictionary&lt;int, SurfaceEntry&gt; ();
+        m_WaitingForBake = false;
+        m_lastUpdateTime = 0.0f;
+    }
+    
+    void Update () 
+    {
+        // Avoid calling Update on a SurfaceObserver too frequently.
+        if (m_lastUpdateTime + 2.0f &lt; Time.realtimeSinceStartup) 
+        {
+            // This block makes the observation volume follow the <span class="tooltip">__camera__<span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. [More info](CamerasOverview.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#Camera)&lt;/span&gt;</span></span>.
+            Vector3 extents;
+            extents.x = SurfaceEntry.c_Extents;
+            extents.y = SurfaceEntry.c_Extents;
+            extents.z = SurfaceEntry.c_Extents;
+            m_Observer.SetVolumeAsAxisAlignedBox (Camera.main.transform.position, extents);
+
+            try 
+            {
+                m_Observer.Update (SurfaceChangedHandler);
+            } 
+            catch 
+            {
+                // Update can throw an exception if the specified callback is bad.
+                Debug.Log (&quot;Observer update failed unexpectedly!&quot;);
+            }
+
+            m_lastUpdateTime = Time.realtimeSinceStartup;
+        }
+        if (!m_WaitingForBake) 
+        {
+            // Prioritize older adds over other adds over updates.
+            SurfaceEntry bestSurface = null;
+            foreach (KeyValuePair&lt;int, SurfaceEntry&gt; surface in m_Surfaces) 
+            {
+                if (surface.Value.m_BakedState != BakedState.Baked) 
+                {
+                    if (bestSurface == null) 
+                    {
+                        bestSurface = surface.Value;
+                    } 
+                    else 
+                    {
+                        if (surface.Value.m_BakedState &lt; bestSurface.m_BakedState) 
+                        {
+                            bestSurface = surface.Value;
+                        } 
+                        else if (surface.Value.m_UpdateTime &lt; bestSurface.m_UpdateTime) 
+                        {
+                            bestSurface = surface.Value;
+                        }
+                    }
+                }
+            }
+            if (bestSurface != null) 
+            {
+                // Fill out and dispatch the request.
+                SurfaceData sd;
+                sd.id.handle = bestSurface.m_Id;
+                sd.outputMesh = bestSurface.m_Surface.GetComponent&lt;MeshFilter&gt; ();
+                sd.outputAnchor = bestSurface.m_Surface.GetComponent&lt;WorldAnchor&gt; ();
+                sd.outputCollider = bestSurface.m_Surface.GetComponent&lt;MeshCollider&gt; ();
+                sd.trianglesPerCubicMeter = 300.0f;
+                sd.bakeCollider = true;
+                try 
+                {
+                    if (m_Observer.RequestMeshAsync(sd, SurfaceDataReadyHandler)) 
+                    {
+                        m_WaitingForBake = true;
+                    } 
+                    else 
+                    {
+                        // A return value of false when requesting meshes 
+                        // typically indicates that the specified
+                        // Surface ID is invalid.
+                        Debug.Log(System.String.Format (&quot;Bake request for {0} failed.  Is {0} a valid Surface ID?&quot;, bestSurface.m_Id));
+                    }
+                }
+                catch 
+                {
+                    // Requests can fail you do not fill out the data struct properly
+                    Debug.Log (System.String.Format(&quot;Bake for id {0} failed unexpectedly!&quot;, bestSurface.m_Id));
+                }
+            }
+        }
+    }
+
+    // This handler receives events when surfaces change, and propagates those events
+    // using the SurfaceObserver’s Update method  
+    void SurfaceChangedHandler (SurfaceId id, SurfaceChange changeType, Bounds bounds, DateTime updateTime) 
+    {
+        SurfaceEntry entry;
+        switch (changeType) 
+        {
+            case SurfaceChange.Added:
+            case SurfaceChange.Updated:
+            if (m_Surfaces.TryGetValue(id.handle, out entry)) 
+            {
+                // If the system as already baked this Surface, mark it as needing to be baked
+                // in addition to the update time so the &quot;next Surface to bake&quot; 
+                // logic orders it correctly.  
+                if (entry.m_BakedState == BakedState.Baked) 
+                {
+                    entry.m_BakedState = BakedState.UpdatePostBake;
+                    entry.m_UpdateTime = updateTime;
+                }
+            } 
+            else 
+            {
+                // This is a brand new Surface so create an entry for it.
+                entry = new SurfaceEntry ();
+                entry.m_BakedState = BakedState.NeverBaked;
+                entry.m_UpdateTime = updateTime;
+                entry.m_Id = id.handle;
+                entry.m_Surface = new GameObject (System.String.Format(&quot;Surface-{0}&quot;, id.handle));
+                entry.m_Surface.AddComponent&lt;MeshFilter&gt; ();
+                entry.m_Surface.AddComponent&lt;MeshCollider&gt; ();
+                MeshRenderer mr = entry.m_Surface.AddComponent&lt;MeshRenderer&gt; ();
+                mr.shadowCastingMode = ShadowCastingMode.Off;
+                mr.receiveShadows = false;
+                entry.m_Surface.AddComponent&lt;WorldAnchor&gt; ();
+                entry.m_Surface.GetComponent&lt;MeshRenderer&gt; ().sharedMaterial = m_drawMat;
+                m_Surfaces[id.handle] = entry;
+            }
+            break;
+
+            case SurfaceChange.Removed:
+            if (m_Surfaces.TryGetValue(id.handle, out entry)) 
+            {
+                m_Surfaces.Remove (id.handle);
+                Mesh mesh = entry.m_Surface.GetComponent&lt;MeshFilter&gt; ().mesh;
+                if (mesh) 
+                {
+                    Destroy (mesh);
+                }
+                Destroy (entry.m_Surface);
+            }
+            break;
+        }
+    }
+
+    void SurfaceDataReadyHandler(SurfaceData sd, bool outputWritten, float elapsedBakeTimeSeconds) 
+    {
+        m_WaitingForBake = false;
+        SurfaceEntry entry;
+        if (m_Surfaces.TryGetValue(sd.id.handle, out entry)) 
+        {
+            // These two asserts check that the returned filter and WorldAnchor
+            // are the same as those used by the system to request the data. This should always
+            // be true unless you have changed code to replace or destroy them.
+            Assert.IsTrue (sd.outputMesh == entry.m_Surface.GetComponent&lt;MeshFilter&gt;());
+            Assert.IsTrue (sd.outputAnchor == entry.m_Surface.GetComponent&lt;WorldAnchor&gt;());
+            entry.m_BakedState = BakedState.Baked;
+        } 
+        else 
+        {
+            Debug.Log (System.String.Format(&quot;Paranoia:  Couldn't find surface {0} after a bake!&quot;, sd.id.handle));
+            Assert.IsTrue (false);
+        }
+    }
+}
+</code></pre>
+
+<p>
+<strong>Note:</strong> Calling the <a href="../ScriptReference/XR.WSA.SurfaceObserver.Update.html">SurfaceObserver’s Update</a> method can be resource-intensive, so you should try not to do it more than an application requires. Calling this method once every three seconds should be enough for most applications.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Spatial Mapping for Hololens documentation updated in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingRenderer.html"></a></span><div class="tip"> Spatial Mapping Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingTroubleshooting.html"></a></span><div class="tip"> Spatial Mapping common troubleshooting issues</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

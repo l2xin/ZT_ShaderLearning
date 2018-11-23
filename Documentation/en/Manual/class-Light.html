@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  The Light Inspector</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-Light.html">English</a></li>
+<li><a href="/ja/current/Manual/class-Light.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-Light.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-Light.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-Light.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="LightSources.html">Light sources</a></li>
+<li> The Light Inspector</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lighting.html"></a></span><div class="tip">Types of light</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingLights.html"></a></span><div class="tip">Using Lights</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>The Light Inspector</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/Light.html' title='Go to Light page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Lights determine the shading of an object and the shadows it casts. As such, they are a fundamental part of graphical <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>. See documentation on <a href="LightingOverview.html">lighting</a> and <a href="GlobalIllumination.html">Global Illumination</a> for further details about lighting concepts in Unity. </p>
+
+<figure>
+<img src="../uploads/Main/class-Light-0.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Type</strong></td>
+	<td style="text-align:left;">The current type of light. Possible values are <strong>Directional</strong>, <strong>Point</strong>, <strong>Spot</strong> and <strong>Area</strong> (see the <a href="Lighting.html">lighting overview</a> for details of these types).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Range</strong></td>
+	<td style="text-align:left;">Define how far the light emitted from the center of the object travels (<strong>Point</strong> and <strong>Spot</strong> lights only).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spot Angle</strong></td>
+	<td style="text-align:left;">Define the angle (in degrees) at the base of a spot light’s cone (<strong>Spot</strong> light only).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Color</strong></td>
+	<td style="text-align:left;">Use the color picker to set the color of the emitted light.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mode</strong></td>
+	<td style="text-align:left;">Specify the <span class="tooltip"><a href="LightModes.html">Light Mode</a><span class="tooltiptext">A Light property that defines the use of the Light. Can be set to Realtime, Baked and Mixed. <a href="LightModes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightMode">Glossary</a></span></span></span> used to determine if and how a light is “baked”. Possible modes are <strong>Realtime</strong>, <strong>Mixed</strong> and <strong>Baked</strong>. See documentation on <a href="LightMode-Realtime.html">Realtime Lighting</a>, <span class="tooltip"><a href="LightMode-Mixed.html">Mixed Lighting</a><span class="tooltiptext">A Light Mode for creating indirect lighting, shadowmasks and subtractive lighting. Indirect lighting gets baked into lightmaps and light probes. Shadowmasks and light probes occlusion get generated for baked shadows. <a href="LightMode-Mixed.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MixedLighting">Glossary</a></span></span></span>, and <a href="LightMode-Baked.html">Baked Lighting</a> for more detailed information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Intensity</strong></td>
+	<td style="text-align:left;">Set the brightness of the light. The default value for a <strong>Directional</strong> light is 0.5. The default value for a <strong>Point</strong>, <strong>Spot</strong> or <strong>Area</strong> light is 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Indirect Multiplier</strong></td>
+	<td style="text-align:left;">Use this value to vary the intensity of indirect light. Indirect light is light that has bounced from one object to another. The <strong>Indirect Multiplier</strong> defines the brightness of bounced light calculated by the global illumination (GI) system. If you set <strong>Indirect Multiplier</strong> to a value lower than <strong>1,</strong> the bounced light becomes dimmer with every bounce. A value higher than <strong>1</strong> makes light brighter with each bounce. This is useful, for example, when a dark surface in shadow (such as the interior of a cave) needs to be brighter in order to make detail visible. Alternatively, if you want to use <a href="GlobalIllumination.html">Realtime Global Illumination</a>, but want to limit a single <span class="tooltip"><strong>real-time Light</strong><span class="tooltiptext">A Lighting Mode for Lights that need to change their properties or which are spawned via scripts during gameplay. Unity calculates and updates the lighting of these Lights every frame at run time. They can change in response to actions taken by the player, or events which take place in the Scene. <a href="LightMode-Realtime.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Real-timelight">Glossary</a></span></span></span> so that it only emits direct light, set its <strong>Indirect Multiplier</strong> to <strong>0</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Type</strong></td>
+	<td style="text-align:left;">Determine whether this Light casts Hard Shadows, Soft Shadows, or no shadows at all. See documentation on <span class="tooltip"><a href="ShadowOverview.html">Shadows</a><span class="tooltiptext">A UI component that adds a simple outline effect to graphic components such as Text or Image. It must be on the same GameObject as the graphic component. <a href="script-Shadow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadow">Glossary</a></span></span></span> for information on hard and soft shadows.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Baked Shadow Angle</td>
+	<td style="text-align:left;">If <strong>Type</strong> is set to <strong>Directional</strong> and <strong>Shadow Type</strong> is set to <span class="tooltip"><strong>Soft Shadows</strong><span class="tooltiptext">A shadow property that produces shadows with a soft edge. Soft shadows are more realistic compared to Hard Shadows and tend to reduce the “blocky” aliasing effect from the shadow map, but they require more processing. <a href="ShadowOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SoftShadows">Glossary</a></span></span></span>, this property adds some artificial softening to the edges of shadows and gives them a more natural look.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Baked Shadow Radius</td>
+	<td style="text-align:left;">If <strong>Type</strong> is set to <strong>Point</strong> or <strong>Spot</strong> and <strong>Shadow Type</strong> is set to <strong>Soft Shadows</strong>, this property adds some artificial softening to the edges of shadows and gives them a more natural look.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Realtime Shadows</td>
+	<td style="text-align:left;">These properties are available when <strong>Shadow Type</strong> is set to <span class="tooltip"><strong>Hard Shadows</strong><span class="tooltiptext">A shadow property that produces shadows with a sharp edge. Hard shadows are not particularly realistic compared to Soft Shadows but they involve less processing, and are acceptable for many purposes. <a href="ShadowOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HardShadows">Glossary</a></span></span></span> or <strong>Soft Shadows</strong>. Use these properties to control real-time shadow rendering settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Strength</td>
+	<td style="text-align:left;">Use the slider to control how dark the shadows cast by this Light are, represented by a value between 0 and 1. This is set to 1 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Resolution</td>
+	<td style="text-align:left;">Control the rendered resolution of shadow maps. A higher resolution increases the fidelity of shadows, but requires more GPU time and memory usage.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Bias</td>
+	<td style="text-align:left;">Use the slider to control the distance at which shadows are pushed away from the light, defined as a value between 0 and 2. This is useful for avoiding false self-shadowing artifacts. See Shadow mapping and the bias property for more information. This is set to 0.05 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Normal Bias</td>
+	<td style="text-align:left;">Use the slider to control distance at which the shadow casting surfaces are shrunk along the surface normal, defined as a value between 0 and 3. This is useful for avoiding false self-shadowing artifacts. See documentation on Shadow mapping and the bias property for more information. This is set to 0.4 by default.<br>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Near Plane</td>
+	<td style="text-align:left;">Use the slider to control the value for the near clip plane when rendering shadows, defined as a value between 0.1 and 10. This value is clamped to 0.1 units or 1% of the light’s <strong>Range</strong> property, whichever is lower. This is set to 0.2 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cookie</strong></td>
+	<td style="text-align:left;">Specify a Texture mask through which shadows are cast (for example, to create silhouettes, or patterned illumination for the Light).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Draw Halo</strong></td>
+	<td style="text-align:left;">Tick this box to draw a spherical <span class="tooltip"><a href="class-Halo.html">Halo</a><span class="tooltiptext">The glowing light areas around light sources, used to give the impression of small dust particles in the air. <a href="class-Halo.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Halo">Glossary</a></span></span></span> of light with a diameter equal to the <strong>Range</strong> value. You can also use the Halo <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> to achieve this. Note that the Halo <strong>component</strong> is drawn in addition to the halo from the Light <strong>component</strong>, and that the Halo <strong>component__’s </strong>Size__ parameter determines its radius, not its diameter.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Flare</strong><span class="tooltiptext">The source asset used by Lens Flare Components. The Flare itself is a combination of a texture file and specific information that determines how the Flare behaves. <a href="class-Flare.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Flare">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">If you want to set a <a href="class-Flare.html">Flare</a> to be rendered at the Light’s position, place an <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> in this field to be used as its source.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Render Mode</strong></td>
+	<td style="text-align:left;">Use this drop-down to set the rendering priority of the selected Light. This can affect lighting fidelity and performance (see <em>Performance Considerations,</em> below).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Auto</td>
+	<td style="text-align:left;">The rendering method is determined at run time, depending on the brightness of nearby lights and the current <a href="class-QualitySettings.html">Quality Settings</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Important</td>
+	<td style="text-align:left;">The light is always rendered at per-pixel quality. Use <strong>Important</strong> mode only for the most noticeable visual effects (for example, the headlights of a player’s car).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Not Important</td>
+	<td style="text-align:left;">The light is always rendered in a faster, vertex/object light mode.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Culling Mask</strong><span class="tooltiptext">Allows you to includes or omit objects to be rendered by a Camera, by Layer. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CullingMask">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Use this to selectively exclude groups of objects from being affected by the Light. For more information, see <span class="tooltip"><a href="Layers.html">Layers</a><span class="tooltiptext">Layers in Unity can be used to selectively opt groups of GameObjects in or out of certain processes or calculations. This includes camera rendering, lighting, physics collisions, or custom calculations in your own code. <a href="Layers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Layer">Glossary</a></span></span></span>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>If you create a Texture that contains an alpha channel and assign it to the <strong>Cookie</strong> variable of the light, the cookie is projected from the light. The cookie’s alpha mask modulates the light’s brightness, creating light and dark spots on surfaces. This is a great way to add complexity or atmosphere to a <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p>
+
+<p>All <a href="Built-inShaderGuide.html">built-in shaders</a> in Unity seamlessly work with any type of light. However, <a href="Built-inShaderGuide.html">VertexLit</a> <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> cannot display Cookies or Shadows.</p>
+
+<p>All Lights can optionally cast Shadows. To do this, set the <strong>Shadow Type</strong> property of each individual Light to either <strong>Hard Shadows</strong> or <strong>Soft Shadows</strong>. See documentation on <a href="ShadowOverview.html">Shadows</a> for more information.</p>
+
+<h2>Directional Light Shadows</h2>
+
+<p>See documentation on <a href="DirLightShadows.html">directional light shadows</a> for an in-depth explanation of how they work. Note that shadows are disabled for directional lights with cookies when <span class="tooltip"><strong>forward rendering</strong><span class="tooltiptext">A rendering path that renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity. <a href="RenderTech-ForwardRendering.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> is used. It is possible to write custom shaders to enable shadows in this case; see documentation on <a href="SL-SurfaceShaders.html">writing surface shaders</a> for further details.</p>
+
+<h2>Hints</h2>
+
+<ul>
+<li>
+<strong>Spot</strong> lights with cookies can be extremely effective for creating the effect of light coming in from a window.</li>
+<li>Low-intensity point lights are good for providing depth to a Scene.</li>
+<li>For maximum performance, use a <a href="Built-inShaderGuide.html">VertexLit</a> shader. This shader only does per-vertex lighting, giving a much higher throughput on low-end cards.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lighting.html"></a></span><div class="tip">Types of light</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingLights.html"></a></span><div class="tip">Using Lights</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

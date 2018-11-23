@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Material properties and the GI system</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/MetaPass.html">English</a></li>
+<li><a href="/ja/current/Manual/MetaPass.html">日本語</a></li>
+<li><a href="/es/current/Manual/MetaPass.html">Español</a></li>
+<li><a href="/kr/current/Manual/MetaPass.html">한국어</a></li>
+<li><a href="/ru/current/Manual/MetaPass.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li> Material properties and the GI system</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lightmaps-TechnicalInformation.html"></a></span><div class="tip"> Lightmaps: Technical information</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingGiUvs.html"></a></span><div class="tip"> Global Illumination UVs</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Material properties and the GI system</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The way an object looks is defined by its <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>. </p>
+
+<h3>Legacy and current Shader mappings</h3>
+
+<p>Shader mappings in Unity versions 3 and 4 work in a different way to Shader mappings in Unity 5 onwards. The legacy Shader mappings are still supported in Unity 5 onwards. See Legacy material mappings, below.</p>
+
+<p>Unity versions 3.x and 4.x used a simple mapping from material properties to <span class="tooltip"><strong>lightmapper</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> material properties. It worked for common cases but was based on naming conventions, tags and strings. You couldn’t do any custom surface properties as it was effectively hard coded to behave in a certain way. Unity version 5.0 onwards has flexible Shader mappings.</p>
+
+<p><br></p>
+
+<h3>Meta pass (Unity 5.0 onwards)</h3>
+
+<p>Albedo and emissive are rendered using a special Meta Shader pass. <strong>Lightmap</strong> static <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> are rendered in <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> space using the GPU. This means how the GameObject looks on screen and how it looks to the lightmapper are separate, so you can customize the Shaders.</p>
+
+<p>The Meta pass decouples the albedo and emissive, which is used to compute <a href="GIIntro.html">Global Illumination</a> (GI) during regular Shader passes. This allows you to control GI without affecting the Shader used for real-time <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>. The <span class="tooltip"><strong>standard Shader</strong><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardShader">Glossary</a></span></span></span> contains a Meta pass by default. Global Illumination is managed in Unity by a piece of middleware called <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">The lighting system by Geomerics used in Unity for computing global illumination (GI). <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Enlighten">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/metapass.png" alt="Meta pass flow">
+<figcaption>Meta pass flow</figcaption>
+</figure>
+
+<p>The Meta pass is how the Unity Editor handles albedo for metallic surfaces internally. Enlighten handles diffuse transport and uses surface albedo on each bounce. Metallic surfaces with black (or almost black) albedo do not bounce any light. The Shader pass that renders albedo biases it towards a brighter color with the hue of the metal. Dielectric materials (wood, plastic, plastic, stone, concrete, leather, skin) have white specular reflectance. Metals have spectral specular reflectance.</p>
+
+<p>
+<strong>Note</strong>: Using the Meta pass is not as fast as <a href="http://docs.unity3d.com/ScriptReference/DynamicGI.SetEmissive.html">DynamicGI.SetEmissive</a>, but it is more flexible because you are not limited to a single color.</p>
+
+<p><br></p>
+
+<h3>Legacy material mappings</h3>
+
+<p>The built-in legacy Shaders in Unity version 5.0 and newer contain a Meta pass already. If you are upgrading projects from Unity versions before 5.0, you should add a Meta pass. See <a href="#ExampleMetaPass">Example Shader with a Meta pass</a>, below, to learn how.</p>
+
+<h4>Custom RGB transparency</h4>
+
+<p>You can add custom color-based RGB transparency by adding a texture property called <code>_TransparencyLM</code> to a Shader. In this case, the standard behavior is dropped and only the values of this texture are used to evaluate the transmission through the material. This is useful when you want to create color-based transparency that is independent of the material color or albedo texture.</p>
+
+<p>To create custom transmission behavior, add the following line to a Shader and assign a Texture:</p>
+
+<p><code>_TransparencyLM (&quot;Transmissive Texture&quot;, 2D) = &quot;white&quot; {}</code></p>
+
+<p>
+<strong>Note</strong>: Unity detects certain legacy Shaders by the Shader’s properties and path/name keywords, such as <code>Transparent</code>, <code>Tree</code>, <code>Leaf</code>, <code>Leaves</code>.</p>
+
+<p>
+<br>
+<a name="ExampleMetaPass"></a>
+</p>
+
+<h3>Example Shader with a Meta pass</h3>
+
+<p>The Shader below allows for specifying a custom albedo color and Texture just for the GI system.</p>
+
+<pre><code>Shader &quot;Custom/metaPassShader&quot;{
+ 
+    Properties {
+        _Color (&quot;Color&quot;, Color)=(1,1,1,1)
+        _MainTex (&quot;Albedo (RGB)&quot;,2D)=&quot;white&quot;{}
+        _Glossiness (&quot;Smoothness&quot;, Range(0,1))=0.5
+        _Metallic (&quot;Metallic&quot;, Range(0,1))=0.0
+ 
+        _GIAlbedoColor (&quot;Color Albedo (GI)&quot;, Color)=(1,1,1,1)
+        _GIAlbedoTex (&quot;Albedo (GI)&quot;,2D)=&quot;white&quot;{}
+    }
+ 
+    <span class="tooltip">__SubShader__<span class="tooltiptext">Each shader in Unity consists of a list of subshaders. When Unity has to display a mesh, it will find the shader to use, and pick the first subshader that runs on the user's graphics card. [More info](SL-SubShader.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#subshader)&lt;/span&gt;</span></span> {
+    // ------------------------------------------------------------------
+    // Extracts information for lightmapping, GI (emission, albedo, ...)
+    // This pass is not used during regular rendering.
+        Pass
+        {
+            Name &quot;META&quot;
+            Tags {&quot;LightMode&quot;=&quot;Meta&quot;}
+            Cull Off
+            CGPROGRAM
+ 
+            #include&quot;UnityStandardMeta.cginc&quot;
+ 
+            sampler2D _GIAlbedoTex;
+            fixed4 _GIAlbedoColor;
+            float4 frag_meta2 (v2f_meta i): SV_Target
+            {
+                // We're interested in diffuse &amp; specular colors
+                // and surface roughness to produce final albedo.
+               
+                FragmentCommonData data = UNITY_SETUP_BRDF_INPUT (i.uv);
+                UnityMetaInput o;
+                UNITY_INITIALIZE_OUTPUT(UnityMetaInput, o);
+                fixed4 c = tex2D (_GIAlbedoTex, i.uv);
+                o.Albedo = fixed3(c.rgb * _GIAlbedoColor.rgb);
+                o.Emission = Emission(i.uv.xy);
+                return UnityMetaFragment(o);
+            }
+           
+            #pragma vertex vert_meta
+            #pragma fragment frag_meta2
+            #pragma shader_feature _EMISSION
+            #pragma shader_feature _METALLICGLOSSMAP
+            #pragma shader_feature ___ _DETAIL_MULX2
+            ENDCG
+        }
+       
+        Tags {&quot;RenderType&quot;=&quot;Opaque&quot;}
+        <span class="tooltip">__LOD__<span class="tooltiptext">A system for building multiplayer capabilities for Unity games. It is built on top of the lower level transport real-time communication layer, and handles many of the common tasks that are required for multiplayer games. [More info](UNetUsingHLAPI.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#LOD)&lt;/span&gt;</span></span> 200
+ 
+        CGPROGRAM
+        // Physically-based Standard lighting model, and enable shadows on all light types
+        #pragma surface surf Standard fullforwardshadows nometa
+        // Use Shader model 3.0 target, to get nicer looking lighting
+        #pragma target 3.0
+ 
+        sampler2D _MainTex;
+ 
+        struct Input {
+            float2 uv_MainTex;
+        };
+       
+        half _Glossiness;
+        half _Metallic;
+        fixed4 _Color;
+       
+        void surf (Input IN,inout SurfaceOutputStandard o){
+            // Albedo comes from a texture tinted by color
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex)* _Color;
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+ 
+    FallBack &quot;Diffuse&quot;
+}
+</code></pre>
+
+<p>
+<br><br>
+</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–10–31 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lightmaps-TechnicalInformation.html"></a></span><div class="tip"> Lightmaps: Technical information</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingGiUvs.html"></a></span><div class="tip"> Global Illumination UVs</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

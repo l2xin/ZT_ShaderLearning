@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Light troubleshooting and performance</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/LightPerformance.html">English</a></li>
+<li><a href="/ja/current/Manual/LightPerformance.html">日本語</a></li>
+<li><a href="/es/current/Manual/LightPerformance.html">Español</a></li>
+<li><a href="/kr/current/Manual/LightPerformance.html">한국어</a></li>
+<li><a href="/ru/current/Manual/LightPerformance.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li> Light troubleshooting and performance</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GICache.html"></a></span><div class="tip"> GI cache</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingRelated.html"></a></span><div class="tip">Related topics</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Light troubleshooting and performance</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Lights can be rendered using either of two methods: </p>
+
+<ul>
+<li><p>
+<strong>Vertex lighting</strong> calculates the illumination only at the vertices of meshes and interpolates the vertex values over the rest of the surface. Some lighting effects are not supported by vertex lighting but it is the cheaper of the two methods in terms of processing overhead. Also, this may be the only method available on older graphics cards. </p></li>
+<li><p>
+<strong>Pixel lighting</strong> is calculated separately at every screen <strong>pixel</strong>. While slower to render, <strong>pixel</strong> lighting does allow some effects that are not possible with vertex lighting. Normal-mapping, light cookies and realtime shadows are only rendered for <strong>pixel</strong> lights. Additionally, spotlight shapes and point light highlights look much better when rendered in <strong>pixel</strong> mode.</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/LightPixVertComp.svg" alt="Comparison of a spotlight rendered in pixel vs vertex mode">
+<figcaption>Comparison of a spotlight rendered in pixel vs vertex mode</figcaption>
+</figure>
+
+<p>Lights have a big impact on <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> speed, so lighting quality must be traded off against frame rate. Since pixel lights have a much higher <strong>rendering</strong> overhead than vertex lights, Unity will only render the brightest lights at per-pixel quality and render the rest as vertex lights. The maximum number of pixel lights can be set in the <a href="class-QualitySettings.html">Quality Settings</a> for standalone build targets.</p>
+
+<p>You can favour a light to be rendered as a pixel light using its <strong>Render Mode</strong> property. A light with the mode set to <strong>Important</strong> will be given higher priority when deciding whether or not to render it as a pixel light. With the mode set to <strong>Auto</strong> (the default), Unity will classify the light automatically based on how much a given object is affected by the light. The lights that are rendered as pixel lights are determined on an object-by-object basis.</p>
+
+<p>See the page about <a href="OptimizingGraphicsPerformance.html">Optimizing Graphics Performance</a> for further information.</p>
+
+<h3>Lighting window statistics</h3>
+
+<p>The bottom of the Lighting window displays statistics showing important metrics with regard to run time performance. See documentation on the <a href="GlobalIllumination.html">Lighting window</a> for more details.</p>
+
+<h2>Shadow performance</h2>
+
+<p>Realtime shadows have quite a high rendering overhead, so you should use them sparingly. Any objects that might cast shadows must first be rendered into the shadow map and then that map will be used to render objects that might receive shadows. Enabling shadows has an even bigger impact on performance than the pixel/vertex trade-off mentioned above.</p>
+
+<p>Soft shadows have a greater rendering overhead than hard shadows but this only affects the GPU and does not cause much extra CPU work.</p>
+
+<p>The <a href="class-QualitySettings.html">Quality Settings</a> include a <strong>Shadow Distance</strong> value. Objects that are beyond this distance from the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> will be rendered with no shadows at all. Since the shadows on distant objects will not usually be noticed anyway, this can be a useful optimisation to reduce the number of shadows that must be rendered.</p>
+
+<p>A particular issue with directional lights is that a single light can potentially illuminate the whole of a <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. This means that the shadow map will often cover a large portion of the <strong>scene</strong> at once and this makes the shadows susceptible to a problem known as “perspective aliasing”. Simply put, perspective aliasing means that shadow map pixels seen close to the camera look enlarged and “chunky” compared to those farther away. Although you can just increase the shadow map resolution to reduce this effect, the result is that rendering resources are wasted for distant areas whose shadow map looked fine at the lower resolution.</p>
+
+<p>A good solution to the problem is therefore to use separate shadow maps that decrease in resolution as the distance from camera increases. These separate maps are known as <strong>cascades</strong>. From the <a href="class-QualitySettings.html">Quality Settings</a>, you can choose zero, two or four cascades; Unity will calculate the positioning of the cascades within the camera’s frustum. Note that cascades are only enabled for directional lights. See <a href="DirLightShadows.html">directional light shadows</a> page for details.</p>
+
+<h2>How the size of a shadow map is calculated</h2>
+
+<p>The first step in calculating the size of the map is to determine the area of the screen view that the light can illuminate. For directional lights, the whole screen can be illuminated but for spot lights and point lights, the area is the onscreen projection of the shape of the light’s extent (a sphere for point lights or a cone for spot lights). The projected shape has a certain width and height in pixels on the screen; the larger of those two values is then taken as the light’s “pixel size”.</p>
+
+<p>When the shadow map resolution is set to <strong>High</strong> (from the <a href="class-QualitySettings.html">Quality Settings</a>) the shadow map’s size is calculated as follows:</p>
+
+<ul>
+<li>
+<strong>Directional lights</strong>: <a href="../ScriptReference/Mathf.NextPowerOfTwo.html">NextPowerOfTwo</a> (pixelSize * 1.9), up to a maximum of 2048.</li>
+<li>
+<strong>Spot lights</strong>: <a href="../ScriptReference/Mathf.NextPowerOfTwo.html">NextPowerOfTwo</a> (pixelSize), up to a maximum of 1024.</li>
+<li>
+<strong>Point lights</strong>: <a href="../ScriptReference/Mathf.NextPowerOfTwo.html">NextPowerOfTwo</a> (pixelSize * 0.5), up to a maximum of 512.</li>
+</ul>
+
+<p>If the graphics card has 512MB or more video memory, the upper shadow map limits are increased to 4096 for directional lights, 2048 for spot lights and 1024 for point lights.</p>
+
+<p>At <em>Medium</em> shadow resolution, the shadow map size is half the value for <strong>High</strong> resolution and for <em>Low</em>, it is a quarter of the size.</p>
+
+<p>Point lights have a lower limit on size than the other types is because they use <span class="tooltip"><strong>cubemaps</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> for shadows. That means that six cubemap faces at this resolution must be kept in video memory at once. They are also quite expensive to render, as potential shadow casters might need to be rendered into all six cubemap faces. </p>
+
+<h2>Troubleshooting shadows</h2>
+
+<p>If you find that one or more objects are not casting shadows then you should check the following points:</p>
+
+<ul>
+<li><p>Old graphics hardware may not support shadows. See below for a list of minimal hardware specs that can handle shadows.</p></li>
+<li><p>Shadows can be disabled in the <a href="class-QualitySettings.html">Quality Settings</a>. Make sure that you have the correct quality level enabled and that shadows are switched on for that setting.</p></li>
+<li><p>All <span class="tooltip"><a href="class-MeshRenderer.html">Mesh Renderers</a><span class="tooltiptext">A mesh component that takes the geometry from the Mesh Filter and renders it at the position defined by the object’s Transform component. <a href="class-MeshRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> in the scene must be set up with their <em>Receive Shadows</em> and <em>Cast Shadows</em> correctly set. Both are enabled by default but check that they haven’t been disabled unintentionally.</p></li>
+<li><p>Only opaque objects cast and receive shadows so objects using the built-in <a href="shader-TransparentFamily.html">Transparent</a> or Particle shaders will neither cast nor receive. Generally, you can use the <a href="shader-TransparentCutoutFamily.html">Transparent Cutout</a> shaders instead for objects with “gaps” such as fences, vegetation, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>. Custom <span class="tooltip"><a href="Shaders.html">Shaders</a><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> must be pixel-lit and use the <a href="SL-SubShaderTags.html">Geometry render queue</a>.</p></li>
+<li><p>Objects using <strong>VertexLit</strong> shaders can’t receive shadows but they can cast them.</p></li>
+<li><p>With the <a href="RenderTech-ForwardRendering.html">Forward rendering path</a>, some shaders allow only the brightest directional light to cast shadows (in particular, this happens with Unity’s legacy built-in shaders from 4.x versions). If you want to have more than one shadow-casting light then you should use the <span class="tooltip"><a href="RenderTech-DeferredShading.html">Deferred Shading</a><span class="tooltiptext">A rendering path that places no limit on the number of lights that can affect a GameObject. All lights are evaluated per-pixel, which means that they all interact correctly with normal maps and so on. Additionally, all lights can have cookies and shadows. <a href="RenderTech-DeferredShading.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Deferredshading">Glossary</a></span></span></span> <span class="tooltip"><strong>rendering path</strong><span class="tooltiptext">The technique Unity uses to render graphics. Choosing a different path affects the performance of your game, and how lighting and shading are calculated. Some paths are more suited to different platforms and hardware than others. <a href="RenderingPaths.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> instead. You can enabled your own shaders to support “full shadows” by using the <code>fullforwardshadows</code> <span class="tooltip"><a href="SL-SurfaceShaders.html">surface shader</a><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span> directive.</p></li>
+</ul>
+
+<h2>Hardware support for shadows</h2>
+
+<p>Built-in shadows work on almost all devices supported by Unity. The following cards are supported on each platform:</p>
+
+<h3>PC (Windows/Mac/Linux)</h3>
+
+<ul>
+<li>Generally all GPUs support shadows. Exceptions might occur in some really old GPUs (for example, Intel GPUs made in 2005).</li>
+</ul>
+
+<h3>Mobile</h3>
+
+<ul>
+<li>iPhone 4 does not support shadows. All later models starting with iPhone 4S and iPad 2 support shadows.</li>
+<li>Android: Requires Android 4.0 or later, and <code>GL_OES_depth_texture</code> support. Most notably, some Android Tegra 2/3-based Android devices do not have this, so they don’t support shadows.</li>
+<li>Windows Phone: Shadows are only supported on DX11-class GPUs (Adreno 4xx/5xx).</li>
+</ul>
+
+<h3>Consoles</h3>
+
+<ul>
+<li>All consoles support shadows.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Lighting window statistics added in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GICache.html"></a></span><div class="tip"> GI cache</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingRelated.html"></a></span><div class="tip">Related topics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

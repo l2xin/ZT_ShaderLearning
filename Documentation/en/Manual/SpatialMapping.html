@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  HoloLens Spatial Mapping</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SpatialMapping.html">English</a></li>
+<li><a href="/ja/current/Manual/SpatialMapping.html">日本語</a></li>
+<li><a href="/es/current/Manual/SpatialMapping.html">Español</a></li>
+<li><a href="/kr/current/Manual/SpatialMapping.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SpatialMapping.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="wmr_sdk_overview.html"> Windows Mixed Reality</a></li>
+<li> HoloLens Spatial Mapping</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsholographic-videocapture.html"></a></span><div class="tip">HoloLens video capture</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingComponents.html"></a></span><div class="tip"> Spatial Mapping components</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>HoloLens Spatial Mapping</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/spatialmapping_image.jpg" alt="">
+</figure>
+
+<p>HoloLens has built-in <span class="tooltip"><strong>cameras</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> that continuously scan the environment, allowing it to construct virtual world geometry for real-world objects. This ability allows <span class="tooltip"><strong>HoloLens</strong><span class="tooltiptext">An XR headset for using apps made for the Windows Mixed Reality platform. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HoloLens">Glossary</a></span></span></span> to create convincing interactions between virtual content and the real world (such as occluding and physically interacting with real-world objects). The process of mapping real-world surfaces into the virtual world is called <strong>Spatial Mapping</strong>.</p>
+
+<p>The Unity Editor has a low-level Scripting API for gathering information about Surfaces in your project environment. This API gives you maximum control over when to query the device for Surface changes, and when to create or update the corresponding Surface game objects. Unity’s Spatial Mapping <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> allow you to quickly get up and running with <span class="tooltip"><strong>Windows Mixed Reality</strong><span class="tooltiptext">A mixed reality platform developed by Microsoft, built around the API of Windows 10. <a href="mr-devices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WindowsMixedReality">Glossary</a></span></span></span>, without directly using the low-level Scripting API.</p>
+
+<figure>
+<img src="../uploads/Main/spatialmapping_example.jpg" alt="An example of the Spatial Mapping feature applied to a real-world space">
+<figcaption>An example of the Spatial Mapping feature applied to a real-world space</figcaption>
+</figure>
+
+<h2>Spatial Mapping concepts</h2>
+
+<p>
+<strong>Spatial Mapping</strong> is a great way to add better real-world interaction to your HoloLens application.</p>
+
+<h3>Mapping</h3>
+
+<p>The HoloLens device constantly scans its surroundings and refines its understanding of the world based on incoming sensor data. The device frequently updates that data so that the device can pick up environmental changes, such as people moving through the room or doors opening and closing. Spatial Mapping saves the world mapping data set to the HoloLens device and this data persists across multiple applications and device restarts.</p>
+
+<p>Transparent, black, and reflective Surfaces do not work well with Spatial Mapping on the HoloLens. If the device cannot detect a real-world object, an empty patch appears in the Spatial Mapping data. The same is true for parts of the world that the device has not been in or cannot see. For example, no data exists for rooms that the HoloLens has not observed.</p>
+
+<h3>Data organization</h3>
+
+<p>The device’s world mapping is divided into uniform chunks called Surfaces. The Spatial Mapping system orients Surfaces in the world in a way convenient to the system itself. There is no guarantee that the system will arrange Surfaces in any particular orientation, and Surfaces may also improperly intersect a given real-world space (such as a room). When Spatial Mapping generates data for a Surface, the data slightly overlaps with neighboring Surfaces.</p>
+
+<p>
+<strong>Note:</strong> There is no semantic meaning or interpretation associated with any of the Surface data. Spatial Mapping does not know and cannot report on what is actually on a Surface. For example, it can’t tell that what it detects as a blob on a desk is actually a mug, or what the chair-shaped object in the middle of the room is. It only reports on the configuration of the geometry in that area based on its understanding of the world, which it constructs using its sensory input.</p>
+
+<h3>Spatial Mapping important considerations</h3>
+
+<p>To avoid performance issues when developing applications using Spatial Mapping, consider the following:</p>
+
+<ol>
+<li><p>The amount of Spatial Mapping data can be very large, which can cause scalability challenges.</p></li>
+<li><p>Objects or people moving quickly around the room can make Spatial Mapping data very irregular, so you should avoid this where possible.</p></li>
+<li><p>Holes in the data can sometimes cause issues, particularly if you need continuous data for design reasons. These holes are most commonly caused by transparent or black surfaces.</p></li>
+</ol>
+
+<p>See Microsoft’s documentation on <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/spatial_mapping">Spatial Mapping</a> to learn more about Spatial Mapping concepts.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Spatial Mapping for Hololens documentation updated in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsholographic-videocapture.html"></a></span><div class="tip">HoloLens video capture</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingComponents.html"></a></span><div class="tip"> Spatial Mapping components</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

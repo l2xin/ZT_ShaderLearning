@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Spawning GameObjects</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetSpawning.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetSpawning.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetSpawning.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetSpawning.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetSpawning.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li><a href="UNetGameObjects.html"> Networked GameObjects</a></li>
+<li> Spawning GameObjects</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetPlayersCustom.html"></a></span><div class="tip"> Custom Player Spawning</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetCustomSpawning.html"></a></span><div class="tip"> Custom Spawn Functions</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Spawning GameObjects</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>In Unity, you usually “spawn” (that is, create) new <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> with <code>Instantiate()</code>. However, in the multiplayer High Level API, the word “spawn” means something more specific. In the server-authoritative model of the HLAPI, to “spawn” a GameObject on the server means that the GameObject is created on clients connected to the server, and is managed by the spawning system. </p>
+
+<p>Once the GameObject is spawned using this system, state updates are sent to clients whenever the GameObject changes on the server. When Unity destroys the GameObject on the server, it also destroys it on the clients. The server manages spawned GameObjects alongside all other networked GameObjects, so that if another client joins the game later, the server can spawn the GameObjects on that client. These spawned GameObjects have a unique network instance ID called “<span class="tooltip"><strong>netId</strong><span class="tooltiptext">A unique identifier given to an object instance to track it between networked clients and the server. <a href="class-NetworkBehaviour.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#netId">Glossary</a></span></span></span>” that is the same on the server and clients for each GameObject. The unique network instance ID is used to route messages set across the network to GameObjects, and to identify GameObjects.</p>
+
+<p>When the server spawns a GameObject with a <a href="class-NetworkIdentity.html">Network Identity</a>** **<span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>, the GameObject spawned on the client has the same “state”. This means it is identical to the GameObject on the server; it has the same Transform, movement state, and (if <span class="tooltip"><a href="../ScriptReference/Networking.NetworkTransform.html">NetworkTransform</a><span class="tooltiptext">A Networking component that allows you to synchronise the movements of GameObjects across the network. <a href="class-NetworkTransform.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkTransform">Glossary</a></span></span></span> and <a href="UNetStateSync.html">SyncVars</a> are used) synchronized variables. Therefore, client GameObjects are always up-to-date when Unity creates them. This avoids issues such as GameObjects spawning at the wrong initial location, then reappearing at their correct position when a state update arrives.</p>
+
+<p>The <span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">A Networking component that manages the network state of a Project. <a href="class-NetworkManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span> can only spawn and synchronize GameObjects from registered Prefabs, so you must register the specific GameObject Prefabs with the <strong>Network Manager</strong> that you want to be able to spawn during your game. The <strong>Network Manager</strong> will only accept GameObject Prefabs which have a Network Identity component attached, so you must make sure you add a Network Identity component to your <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> before trying to register it with the <strong>Network Manager</strong>.</p>
+
+<p>To register a Prefab with the Network Manager in the Editor, select the Network Manager GameObject, and in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, navigate to the Network Manager component. Click the triangle next to <strong>Spawn Info</strong> to open the settings, then under <strong>Registered Spawnable Prefabs</strong>, click the plus (<strong>+</strong>) button. Drag and drop Prefabs into the empty field to assign them to the list.</p>
+
+<figure>
+<img src="../uploads/Main/UNetManagerSpawnInfo.png" alt="The Network Manager Inspector with the Spawn Info* foldout expanded, displaying three assigned Prefabs under Registered Spawnable Prefabs">
+<figcaption>The Network Manager Inspector with the <em>Spawn Info</em>* foldout expanded, displaying three assigned Prefabs under <em>Registered Spawnable Prefabs</em></figcaption>
+</figure>
+
+<h2>Spawning without the Network Manager</h2>
+
+<p>For more advanced users, you may find that you want to register Prefabs and spawn GameObjects without using the NetworkManager component.</p>
+
+<p>To spawn GameObjects without using the Network Manager, you can handle the Prefab registration yourself via script. Use the <a href="../ScriptReference/Networking.ClientScene.RegisterPrefab.html">ClientScene.RegisterPrefab</a> method to register Prefabs to the Network Manager.</p>
+
+<h3>Example: MyNetworkManager</h3>
+
+<pre><code>
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class MyNetworkManager : MonoBehaviour 
+{
+    public GameObject treePrefab;
+    NetworkClient myClient;
+
+    // Create a client and connect to the server port
+    public void ClientConnect() {
+        ClientScene.RegisterPrefab(treePrefab);
+        myClient = new NetworkClient();
+        myClient.RegisterHandler(MsgType.Connect, OnClientConnect);
+        myClient.Connect(&quot;127.0.0.1&quot;, 4444);
+    }
+
+    void OnClientConnect(NetworkMessage msg) {
+        Debug.Log(&quot;Connected to server: &quot; + msg.conn);
+    }
+}
+</code></pre>
+
+<p>In this example, you create an empty GameObject to act as the Network Manager, then create and attach the <code>MyNetworkManager</code> script (above) to that GameObject. Create a Prefab that has a Network Identity component attached to it, and drag that onto the <strong>treePrefab</strong> slot on the MyNetworkManager component in the Inspector. This ensures that when the server spawns the tree GameObject, it also creates the same kind of GameObject on the clients. </p>
+
+<p>Registering Prefabs ensures that the <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> is loaded with the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, so that there is no stalling or loading time for creating the <strong>Asset</strong>. </p>
+
+<p>However, for the script to work, you also need to add code for the server. Add this to the <strong>MyNetworkManager </strong>script:</p>
+
+<pre><code>public void ServerListen() {
+    NetworkServer.RegisterHandler(MsgType.Connect, OnServerConnect);
+    NetworkServer.RegisterHandler(MsgType.Ready, OnClientReady);
+    if (NetworkServer.Listen(4444))
+        Debug.Log(&quot;Server started listening on port 4444&quot;);
+}
+
+// When client is ready spawn a few trees
+void OnClientReady(NetworkMessage msg) {
+    Debug.Log(&quot;Client is ready to start: &quot; + msg.conn);
+    NetworkServer.SetClientReady(msg.conn);
+    SpawnTrees();
+}
+
+void SpawnTrees() {
+    int x = 0;
+    for (int i = 0; i &lt; 5; ++i) {
+        var treeGo = Instantiate(treePrefab, new Vector3(x++, 0, 0), Quaternion.identity);
+        NetworkServer.Spawn(treeGo);
+    }
+}
+
+void OnServerConnect(NetworkMessage msg) {
+    Debug.Log(&quot;New client connected: &quot; + msg.conn);
+}
+
+</code></pre>
+
+<p>The server does not need to register anything, as it knows what GameObject is being spawned (and the asset ID is sent in the spawn message). The client needs to be able to look up the GameObject, so it must be registered on the client.</p>
+
+<p>When writing your own network manager, it’s important to make the client ready to receive state updates before calling the spawn command on the server, otherwise they won’t be sent. If you’re using Unity’s built-in Network Manager component, this happens automatically.</p>
+
+<p>For more advanced uses, such as object pools or dynamically created Assets, you can use the <a href="../ScriptReference/Networking.ClientScene.RegisterSpawnHandler.html">ClientScene.RegisterSpawnHandler</a> method, which allows callback functions to be registered for client-side spawning. See documentation on <a href="UNetCustomSpawning.html">Custom Spawn Functions</a> for an example of this.</p>
+
+<p>If the GameObject has a network state like synchronized variables, then that state is synchronized with the spawn message. In the following example, this script is attached to the tree Prefab:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+class Tree : NetworkBehaviour {
+    [SyncVar]
+    public int numLeaves;
+    public override void OnStartClient() {
+        Debug.Log(&quot;Tree spawned with leaf count &quot; + numLeaves);
+    }
+}
+</code></pre>
+
+<p>With this script attached, you can change the <code>numLeaves</code> variable and modify the <code>SpawnTrees</code> function to see it accurately reflected on the client:</p>
+
+<pre><code>void SpawnTrees() {
+    int x = 0;
+    for (int i = 0; i &lt; 5; ++i) {
+        var treeGo = Instantiate(treePrefab, new Vector3(x++, 0, 0), Quaternion.identity);
+        var tree = treeGo.GetComponent&lt;Tree&gt;();
+        tree.numLeaves = Random.Range(10,200);
+        Debug.Log(&quot;Spawning leaf with leaf count &quot; + tree.numLeaves);
+        NetworkServer.Spawn(treeGo);
+    }
+}
+</code></pre>
+
+<p>Attach the <code>Tree</code> script to the <code>treePrefab</code> script created earlier to see this in action.</p>
+
+<h3>Constraints</h3>
+
+<ul>
+<li><p>A <span class="tooltip"><strong>NetworkIdentity</strong><span class="tooltiptext">A Networking component that allows you to assign an identity to your GameObject for the network to recognise it as a Local Player GameObject or a Server Only GameObject. <a href="class-NetworkIdentity.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkIdentity">Glossary</a></span></span></span> must be on the root GameObject of a spawnable Prefab. Without this, the Network Manager can’t register the Prefab.</p></li>
+<li><p>NetworkBehaviour <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> must be on the same GameObject as the NetworkIdentity, not on child GameObjects</p></li>
+</ul>
+
+<h2>GameObject creation flow</h2>
+
+<p>The actual flow of internal operations that takes place for spawning GameObjects is:</p>
+
+<ul>
+<li><p>Prefab with Network Identity component is registered as spawnable.</p></li>
+<li><p>GameObject is instantiated from the Prefab on the server.</p></li>
+<li><p>Game code sets initial values on the instance (note that 3D physics forces applied here do not take effect immediately).</p></li>
+<li><p>
+<code>NetworkServer.Spawn()</code> is called with the instance.</p></li>
+<li><p>The state of the SyncVars on the instance on the server are collected by calling <code>OnSerialize()</code> on <a href="class-NetworkBehaviour.html">Network Behaviour</a> components.</p></li>
+<li><p>A network message of type <code>MsgType.ObjectSpawn</code> is sent to connected clients that includes the SyncVar data.</p></li>
+<li><p>
+<code>OnStartServer()</code> is called on the instance on the server, and <code>isServer</code> is set to <code>true</code>
+</p></li>
+<li><p>Clients receive the <code>ObjectSpawn</code> message and create a new instance from the registered Prefab.</p></li>
+<li><p>The SyncVar data is applied to the new instance on the client by calling <a href="../ScriptReference/Networking.NetworkBehaviour.OnDeserialize.html">OnDeserialize()</a> on Network Behaviour components.</p></li>
+<li><p>
+<code>OnStartClient()</code> is called on the instance on each client, and <code>isClient</code> is set to <code>true</code>
+</p></li>
+<li><p>As gameplay progresses, changes to SyncVar values are automatically synchronized to clients. This continues until game ends.</p></li>
+<li><p>
+<code>NetworkServer.Destroy()</code> is called on the instance on the server.</p></li>
+<li><p>A network message of type <code>MsgType.ObjectDestroy</code> is sent to clients.</p></li>
+<li><p>
+<code>OnNetworkDestroy()</code> is called on the instance on clients, then the instance is destroyed.</p></li>
+</ul>
+
+<h3>Player GameObjects</h3>
+
+<p>Player GameObjects in the HLAPI work slightly differently to non-player GameObjects. The flow for spawning player GameObjects with the Network Manager is:</p>
+
+<ul>
+<li><p>Prefab with <code>NetworkIdentity</code> is registered as the <code>PlayerPrefab</code>
+</p></li>
+<li><p>Client connects to the server</p></li>
+<li><p>Client calls <code>AddPlayer()</code>, network message of type <code>MsgType.AddPlayer</code> is sent to the server</p></li>
+<li><p>Server receives message and calls <code>NetworkManager.OnServerAddPlayer()</code>
+</p></li>
+<li><p>GameObject is instantiated from the PlayerPrefab on the server</p></li>
+<li><p>
+<code>NetworkManager.AddPlayerForConnection()</code> is called with the new player instance on the server</p></li>
+<li><p>The player instance is spawned - you do not have to call <code>NetworkServer.Spawn()</code> for the player instance. The spawn message is sent to all clients like on a normal spawn.</p></li>
+<li><p>A network message of type <code>MsgType.Owner</code> is sent to the client that added the player (only that client!)</p></li>
+<li><p>The original client receives the network message</p></li>
+<li><p>
+<code>OnStartLocalPlayer()</code> is called on the player instance on the original client, and <code>isLocalPlayer</code> is set to true</p></li>
+</ul>
+
+<p>Note that <code>OnStartLocalPlayer()</code> is called after <code>OnStartClient()</code>, because it only happens when the ownership message arrives from the server after the player GameObject is spawned, so <code>isLocalPlayer</code> is not set in <code>OnStartClient()</code>.</p>
+
+<p>Because <code>OnStartLocalPlayer</code> is only called for the client’s local player GameObject, it is a good place to perform initialization that should only be done for the local player. This could include enabling input processing, and enabling <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> tracking for the player GameObject.</p>
+
+<h2>Spawning GameObjects with client authority</h2>
+
+<p>To spawn GameObjects and assign authority of those GameObjects to a particular client, use <a href="../ScriptReference/Networking.NetworkServer.SpawnWithClientAuthority.html">NetworkServer.SpawnWithClientAuthority</a>, which takes as an argument the <code>NetworkConnection</code> of the client that is to be made the authority.</p>
+
+<p>For these GameObjects, the property <code>hasAuthority</code> is true on the client with authority, and <code>OnStartAuthority()</code> is called on the client with authority. That client can issue commands for that GameObject. On other clients (and on the host), <code>hasAuthority</code> is false.</p>
+
+<p>Objects spawned with client authority must have <code>LocalPlayerAuthority</code> set in their <code>NetworkIdentity</code>.</p>
+
+<p>For example, the tree spawn example above can be modified to allow the tree to have client authority like this (note that we now need to pass in a NetworkConnection GameObject for the owning client’s connection):</p>
+
+<pre><code>void SpawnTrees(NetworkConnection conn) {
+    int x = 0;
+    for (int i = 0; i &lt; 5; ++i)
+    {
+        var treeGo = Instantiate(treePrefab, new Vector3(x++, 0, 0), Quaternion.identity);
+        var tree = treeGo.GetComponent&lt;Tree&gt;();
+        tree.numLeaves = Random.Range(10,200);
+        Debug.Log(&quot;Spawning leaf with leaf count &quot; + tree.numLeaves);
+        NetworkServer.SpawnWithClientAuthority(treeGo, conn);
+    }
+}
+</code></pre>
+
+<p>The Tree script can now be modified to send a command to the server:</p>
+
+<pre><code>public override void OnStartAuthority() {
+    CmdMessageFromTree(&quot;Tree with &quot; + numLeaves + &quot; reporting in&quot;);
+}
+
+[Command]
+void CmdMessageFromTree(string msg) {
+    Debug.Log(&quot;Client sent a tree message: &quot; + msg);
+}
+</code></pre>
+
+<p>Note that you can’t just add the <code>CmdMessageFromTree</code> call into <code>OnStartClient</code>, because at that point the authority has not been set yet, so the call would fail.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetPlayersCustom.html"></a></span><div class="tip"> Custom Player Spawning</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetCustomSpawning.html"></a></span><div class="tip"> Custom Spawn Functions</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Unity Analytics A/B Testing</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityAnalyticsABTesting.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityAnalyticsABTesting.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityAnalyticsABTesting.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityAnalyticsABTesting.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityAnalyticsABTesting.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li> Unity Analytics A/B Testing</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettingsTesting.html"></a></span><div class="tip"> Testing Remote Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsMonetization.html"></a></span><div class="tip">Monetization</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Unity Analytics A/B Testing</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>An A/B test is a controlled experiment that exposes different groups of players to variations of some aspect of your game. The aspect of a game that you test can be fundamental, such as the input control scheme, or it can be cosmetic, like a different color treatment, or something else in between. An A/B test allows you to compare key metrics collected during the experiment to help you analyze which variation performs better.</p>
+
+<p><strong>How does A/B testing work?</strong></p>
+
+<p>Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span> A/B testing groups players according to the variants you define in your experiment. Each group sees the treatment of your game that you specify for that variant group. A treatment is a set of one or more <span class="tooltip"><a href="https://docs.unity3d.com/Manual/UnityAnalyticsRemoteSettings.html">Remote Settings</a><span class="tooltiptext">Remote settings are game variables that you can set remotely on your Analytics Dashboard. See Remote Settings. <a href="UnityAnalyticsRemoteSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span> to which you assign unique values for each variant group. At runtime, the A/B testing service randomly assigns a player to one of the groups based on your variant allocation percentages. The player receives the values of the Remote Settings for their assigned group. Your application then uses those Remote Settings so that the player experiences the aspect of your game you wish to test.</p>
+
+<p>The key parts of an A/B test include:</p>
+
+<ul>
+<li><p>
+<strong>Experiment</strong> — a test run by showing different treatments to different groups of players.</p></li>
+<li><p>
+<strong>Variant</strong> — defines the number of groups and the distribution of players to those groups. One variant is always the control group.</p></li>
+<li><p>
+<strong>Treatment</strong> — defines the Remote Settings to use for the experiment and the specific setting values for each variant.</p></li>
+<li><p>
+<strong>Goal</strong> — The Analytics metric that you want to improve with the experiment. An experiment compares the goal metric across the variant groups so that you can see which treatment has the most desirable effect.</p></li>
+</ul>
+
+<p>You can run more than one experiment at the same time, but you should be careful that the different experiments do not interact since some players will see the experimental treatments for both experiments. For example, if you run a test to compare the ordering of the steps in your onboarding tutorial in one experiment and run a different test to test tutorial pacing, you will have difficulty figuring out which experiment caused any changes in results. While that example might be pretty obvious, even tests of unrelated parts of your game could interact. The more fundamental the part of your game you are testing and the larger your experimental groups, the more chance there is for experimental interaction.</p>
+
+<p>Create and run A/B tests from the <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">See Analytics <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> Dashboard. You must also implement the experiment treatment in your application using the <a href="UnityAnalyticsRemoteSettings.html">Remote Settings</a> API.</p>
+
+<h1>Creating an experiment</h1>
+
+<p>To create an experiment:</p>
+
+<ol>
+<li><p>Go to the Analytics Dashboard for your project.</p></li>
+<li><p>Click <strong>A/B Testing</strong> to open the A/B Testing page.</p></li>
+<li>
+<p>Click the <strong>Create Experiment</strong> button.</p>
+
+<p>The <strong>Create new experiment</strong> dialog opens.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting0.png" alt="">
+</figure>
+</li>
+<li><p>Enter a name for the experiment.</p></li>
+<li><p>Click <strong>Create</strong>.</p></li>
+</ol>
+
+<p>Once the experiment has been created, you must define the goals, variants and the treatments.</p>
+
+<h2>Choose an experiment goal</h2>
+
+<p>The experiment goal defines the analytics metric that the experiment treatments are designed to influence. You can choose:</p>
+
+<ul>
+<li><p><span class="tooltip"><strong>Day 1 Retention</strong><span class="tooltiptext">The percentage of players who returned to your game one day after playing the first time. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Day1Retention">Glossary</a></span></span></span> — the percentage of users who return to your game exactly one day after the first time they play.</p></li>
+<li><p><span class="tooltip"><strong>Day 7 Retention</strong><span class="tooltiptext">The percentage of players who returned to your game seven days after playing the first time. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Day7Retention">Glossary</a></span></span></span> — the percentage of users who return to your game exactly seven days after the first time they play.</p></li>
+</ul>
+
+<p>The <a href="#reports">report</a> generated for your experiment shows the difference in the metric across the experiment variants. The chosen goal also influences the amount of time an experiment must run to collect statistically significant data. For example, it takes longer to run an experiment measuring Day 7 retention than one measuring Day 1 retention. </p>
+
+<p>To choose the experiment goal:</p>
+
+<ol>
+<li>
+<p>Click the <strong>Select Experiment Goal</strong> button.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting1.png" alt="">
+</figure>
+</li>
+<li>
+<p>Choose a goal from the drop-down list.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting2.png" alt="">
+</figure>
+</li>
+<li><p>Click <strong>Save</strong>.</p></li>
+</ol>
+
+<h2>Set up the experiment variants</h2>
+
+<p>Use the <strong>Variants</strong> section of the experiment to define the player groups for the A/B test and the assign the percentage of players the testing service allocates to each group. </p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting3.png" alt="Variants section">
+<figcaption>Variants section</figcaption>
+</figure>
+
+<p>A <span class="tooltip"><strong>Control</strong><span class="tooltiptext">A function for displaying text, buttons, checkboxes, scrollbars and other features on the user interface. <a href="gui-Controls.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Control">Glossary</a></span></span></span> group always exists. The control group should receive the current or default experience in your game. This group provides the basis to which the results of the other groups can be compared.</p>
+
+<p>To add an additional variant, click the <strong>ADD</strong> button at the top of the section. Assign a name and an allocation percentage for the group. The allocation percentages for all groups must add up to 100%. The <strong>Estimate</strong> column displays the number of players expected to be allocated to each variant per day.</p>
+
+<p>To delete a variant, click the trash can icon next to its name. </p>
+
+<p>The estimated time to complete the experiment is based on the on how long it should take to achieve a statistically valid number of samples. The more players (DAU) your application typically has and the larger the allocation of players to the experimental variants, the shorter the estimated time will be. </p>
+
+<p>Click <strong>Save</strong> when your variants are set up as desired.</p>
+
+<h2>Set up the experiment treatments</h2>
+
+<p>Use the <strong>Treatments</strong> section to define the settings used in the experiment and assign the individual setting values for each group.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting4.png" alt="Treatments section">
+<figcaption>Treatments section</figcaption>
+</figure>
+
+<p>Click the <strong>ADD</strong> button to add a setting to the experiment. </p>
+
+<p>You can use existing Remote Settings from the Release configuration as long as the settings are not used in any other active experiments. Note that the Remote Settings page only displays the default value used for the control group. The variant settings can only be viewed or changed on the A/B Testing page.</p>
+
+<p>You can create new settings without going to the Remote Settings page. Settings created in A/B Testing are not shown on the Remote Settings page. If you want to continue using a setting after the experiment is finished, you can create a Remote Setting with the same name.</p>
+
+<p>Click <strong>Save</strong> when your treatments are defined. </p>
+
+<h2>Implementing your treatments</h2>
+
+<p>Use the <a href="UnityAnalyticsRemoteSettingsUsing.html">Remote Settings API</a> to access the values defined in your experiment at runtime. Use the setting name shown in the Treatments section as the key when accessing the setting in your game. You can implement Remote Settings in <a href="UnityAnalyticsRemoteSettingsScripting.html">code</a> or use the <a href="UnityAnalyticsRemoteSettingsComponent.html">Remote Settings component</a> to access and apply the settings values in the Unity <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window. </p>
+
+<h1>Managing experiments</h1>
+
+<p>After you create at least one experiment, the A/B Testing page displays your experiments in a list.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting5.png" alt="Experiment queue">
+<figcaption>Experiment queue</figcaption>
+</figure>
+
+<p><strong>To start an experiment:</strong></p>
+
+<ol>
+<li><p>Click the name of an experiment in the <strong>Not Started</strong> status.</p></li>
+<li><p>Click the <strong>Start Experiment</strong> button.</p></li>
+</ol>
+
+<p>
+<strong>Note: </strong>After an experiment has started, you can no longer make changes, since that would invalidate the test results.</p>
+
+<p><strong>To stop an experiment:</strong></p>
+
+<ol>
+<li><p>Click the name of an experiment in the <strong>Running</strong> status.</p></li>
+<li><p>Click the <strong>Stop Experiment</strong> button.</p></li>
+</ol>
+
+<p>
+<strong>Note:</strong> You cannot restart an experiment.</p>
+
+<p><strong>To view a report:</strong></p>
+
+<ol>
+<li><p>Click the name of an experiment in the <strong>Ended</strong> status.</p></li>
+<li><p>The Reporting section displays the experiment results.</p></li>
+</ol>
+
+<p><a name="reports"></a></p>
+
+<h1>Reports</h1>
+
+<p>Use the Reports section to review the results of an experiment once it has finished.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsABTesting6.png" alt="Reports section">
+<figcaption>Reports section</figcaption>
+</figure>
+
+<p>The report lists the variant groups, the metrics recorded for the experiment goal, and how each variant compared to the control group. (The significance rating uses the standard statistical significance level of 5%.)</p>
+
+<ul>
+<li>
+<span class="page-edit">2018–08–01 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span>
+
+<ul>
+<li><span class="page-edit">2018–08–01 - Service compatible with Unity 5.5 onwards at this date but version compatibility may be subject to change.</span></li>
+<li><span class="page-history">New feature in 2018.1</span></li>
+</ul>
+</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettingsTesting.html"></a></span><div class="tip"> Testing Remote Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsMonetization.html"></a></span><div class="tip">Monetization</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

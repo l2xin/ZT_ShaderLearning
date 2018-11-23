@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Gizmos menu</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/GizmosMenu.html">English</a></li>
+<li><a href="/ja/current/Manual/GizmosMenu.html">日本語</a></li>
+<li><a href="/es/current/Manual/GizmosMenu.html">Español</a></li>
+<li><a href="/kr/current/Manual/GizmosMenu.html">한국어</a></li>
+<li><a href="/ru/current/Manual/GizmosMenu.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UsingTheEditor.html">The Main Windows</a></li>
+<li><a href="UsingTheSceneView.html">The Scene View</a></li>
+<li> Gizmos menu</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ViewModes.html"></a></span><div class="tip">Scene view Control Bar</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GameView.html"></a></span><div class="tip">The Game view</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Gizmos menu</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <span class="tooltip"><a href="UsingTheSceneView.html">Scene view</a><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> and the <a href="GameView.html">Game view</a> both have a <span class="tooltip"><strong>Gizmos</strong><span class="tooltiptext">A graphic overlay associated with a GameObject in a Scene, and displayed in the Scene View. Built-in scene tools such as the move tool are Gizmos, and you can create custom Gizmos using textures or scripting. Some Gizmos are only drawn when the GameObject is selected, while other Gizmos are drawn by the Editor regardless of which GameObjects are selected. <a href="GizmosMenu.html#gizmos">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> menu. Click the <strong>Gizmos</strong> button in the <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">A row of buttons and basic controls at the top of the Unity Editor that allows you to interact with the Editor in various ways (e.g. scaling, translation). <a href="Toolbar.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> of the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> view or the Game view to access the <strong>Gizmos</strong> menu.</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenu1.png" alt="The Gizmos button in the Scene view">
+<figcaption>The <strong>Gizmos</strong> button in the Scene view</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/GizmosMenu.png" alt="The Gizmos menu at the top of the Scene view and Game view window">
+<figcaption>The Gizmos menu at the top of the Scene view and Game view window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>3D Icons</strong></td>
+	<td style="text-align:left;">The <strong>3D Icons</strong> checkbox controls whether component icons (such as those for Lights and Cameras) are drawn by the Editor in 3D in the Scene view.<br><br>When the <strong>3D Icons</strong> checkbox is ticked, component icons are scaled by the Editor according to their distance from the Camera, and obscured by GameObjects in the Scene. Use the slider to control their apparent overall size. When the <strong>3D Icons</strong> checkbox is not ticked, component icons are drawn at a fixed size, and are always drawn on top of any GameObjects in the Scene view.<br><br>See <a href="#GizmosIcons">Gizmos and Icons</a>, below, for images and further information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Grid</strong></td>
+	<td style="text-align:left;">The <strong>Show Grid</strong> checkbox switches the standard Scene measurement grid on (checked) and off (unchecked) in the Scene view. To change the colour of the grid, go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors</strong> and alter the <strong>Grid</strong> setting.<br><br>This option is only available in the Scene view Gizmos menu; you cannot enable it in the Game view Gizmos menu. <br><br>See <a href="#ShowGrid">Show Grid</a>, below, for images and further information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Selection Outline</strong></td>
+	<td style="text-align:left;">Check <strong>Selection Outline</strong> to show the selected GameObjects with a colored outline around them. If the selected GameObject extends beyond the edges of the Scene view, the outline is cropped to follow the edge of the window. To change the colour of the Selection Outline, go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors</strong> and alter the <strong>Selected Outline</strong> setting.<br><br>This option is only available in the Scene view Gizmos menu; you cannot enable it in the Game view Gizmos menu. <br><br>See <a href="#SelectionOutlineWire">Selection Outline and Selection Wire</a>, below, for images and further information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Selection Wire</strong></td>
+	<td style="text-align:left;">Check <strong>Selection Wire</strong> to show the selected GameObjects with their wireframe Mesh visible. To change the colour of the Selection Wire, go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors</strong> and alter the <strong>Selected Wireframe</strong> setting.<br><br>This option is only available in the Scene view Gizmos menu; you cannot enable it in the Game view Gizmos menu.<br><br>See <a href="#SelectionOutlineWire">Selection Outline and Selection Wire</a>, below, for images and further information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Built-in Components</strong></td>
+	<td style="text-align:left;">The <strong>Built-in Components</strong> list controls the visibility of the icons and Gizmos of all component types that have an icon or Gizmo.<br><br>See <a href="#Components">Built-in Components</a>, below, for further information.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a name="GizmosIcons"></a> </p>
+
+<h2>Gizmos and Icons</h2>
+
+<h3>Gizmos</h3>
+
+<p>
+<strong>Gizmos</strong> are graphics associated with <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in the Scene. Some Gizmos are only drawn when the GameObject is selected, while other Gizmos are drawn by the Editor regardless of which <strong>GameObjects</strong> are selected. They are usually wireframes, drawn with code rather than bitmap graphics, and can be interactive. The <strong><span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span></strong> Gizmo and <strong>Light direction</strong> Gizmo (shown below) are both examples of built-in Gizmos; you can also create your own Gizmos using script. See documentation on <a href="UnderstandingFrustum.html">Understanding Frustum</a> for more information about the Camera.</p>
+
+<p>Some Gizmos are passive graphical overlays, shown for reference (such as the <strong>Light direction</strong> Gizmo, which shows the direction of the light). Other Gizmos are interactive, such as the <a href="class-AudioSource.html">AudioSource</a> <strong>spherical range</strong> Gizmo, which you can click and drag to adjust the maximum range of the AudioSource.</p>
+
+<p>The <strong>Move</strong>, <strong>Scale</strong>, <strong>Rotate</strong> and <strong>Transform</strong> tools are also interactive Gizmos. See documentation on <a href="PositioningGameObjects.html">Positioning GameObjects</a> to learn more about these tools.</p>
+
+<figure>
+<img src="../uploads/Main/IconAndGizmoForLightAndCamera.png" alt="The Camera Gizmo and a Light Gizmo. These Gizmos are only visible when they are selected.">
+<figcaption>The Camera Gizmo and a Light Gizmo. These Gizmos are only visible when they are selected.</figcaption>
+</figure>
+
+<p>See the Script Reference page for the <a href="../ScriptReference/MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a> function for further information about implementing custom Gizmos in your <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p>
+
+<h3>Icons</h3>
+
+<p>You can display <strong>icons</strong> in the Game view or Scene view. They are flat, billboard-style overlays which you can use to clearly indicate a GameObject’s position while you work on your game. The <strong>Camera</strong> icon and <strong>Light</strong> icon are examples of built-in icons; you can also assign your own to GameObjects or individual scripts (see documentation on <a href="AssigningIcons.html">Assigning Icons</a> to lean how to do this).</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenu2.png" alt="The built-in icons for a Camera and a Light">
+<figcaption>The built-in icons for a Camera and a Light</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/GizmoMenu2Dvs3Dicons.jpg" alt="Left: icons in 3D mode. Right: icons in 2D mode.">
+<figcaption><strong>Left</strong>: icons in 3D mode. <strong>Right</strong>: icons in 2D mode.</figcaption>
+</figure>
+
+<p>
+<a name="ShowGrid"></a> </p>
+
+<h2>Show Grid</h2>
+
+<p>The <strong>Show Grid</strong> feature toggles a grid on the plane of your Scene. The following images show how this appears in the Scene view:</p>
+
+<figure>
+<img src="../uploads/Main/SceneViewGridWithAndWithout.jpg" alt="Left: Scene view grid is enabled. Right: Scene view grid is disabled.">
+<figcaption><strong>Left</strong>: Scene view grid is enabled. <strong>Right</strong>: Scene view grid is disabled.</figcaption>
+</figure>
+
+<p>To change the colour of the grid, go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors</strong> and alter the <strong>Grid</strong> setting. In this image, the Scene view grid is colored dark blue so that it shows up better against the light-colored floor:</p>
+
+<figure>
+<img src="../uploads/Main/SceneViewGridCustomColor.jpg" alt="">
+</figure>
+
+<p><a name="SelectionOutlineWire"></a></p>
+
+<h2>Selection Outline and Selection Wire</h2>
+
+<h3>Selection Outline</h3>
+
+<p>When <strong>Selection Outline</strong> is enabled, then when you select a GameObject in the Scene view or Hierarchy window, an orange outline appears around that GameObject in the Scene view:</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedOutline.jpg" alt="">
+</figure>
+
+<p>If the selected GameObject fills most of the Scene view and extends beyond the edges of the window, the selection outline runs along the edge of the window:</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedBeyondEdges.png" alt="">
+</figure>
+
+<h3>Selection Wire</h3>
+
+<p>When <strong>Selection Wire</strong> is enabled, then when you select a GameObject in the Scene view or Hierarchy window, the wireframe <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> for that GameObject is made visible in the Scene view:</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedWire.jpg" alt="">
+</figure>
+
+<h3>Selection colors</h3>
+
+<p>You can set custom colours to selection wireframes; to do this, go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors</strong> and alter the <strong>Selected Outline</strong> setting to change the <strong>Selection Outline</strong>, or the <strong>Selected Wireframe</strong> to change the <strong>Selection Wire</strong> setting.</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedCustomColors.jpg" alt="">
+</figure>
+
+<p><a name="Components"></a></p>
+
+<h2>Built-in Components</h2>
+
+<p>Use the <strong>Built-in Components</strong> list to control the visibility of the icons and Gizmos of all <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> types that have an icon or Gizmo.</p>
+
+<p>Some built-in component types (such as Rigidbody) are not listed here because they do not have an icon or Gizmo shown in the Scene view. Only components which have an icon or a Gizmo are listed.</p>
+
+<p>The Editor also lists some of your project scripts here, above the built-in components. These are:</p>
+
+<ul>
+<li><p>Scripts with an icon assigned to them (see documentation on <a href="AssigningIcons.html">Assigning icons</a>).</p></li>
+<li><p>Scripts which implement the <a href="../ScriptReference/MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a> function.</p></li>
+<li><p>Scripts which implement the <a href="../ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a> function.</p></li>
+</ul>
+
+<p>Recently changed items are at the top of the list.</p>
+
+<figure>
+<img src="../uploads/GizmosMenuAll.png" alt="The Gizmos menu, displaying some items with custom icons assigned and some recently modified items">
+<figcaption>The Gizmos menu, displaying some items with custom icons assigned and some recently modified items</figcaption>
+</figure>
+
+<p>The <strong>icon</strong> column shows or hides the icons for each listed type of component. Click the small icon under the <strong>icon</strong> column to toggle visibility of that icon. If the icon is in full colour in the menu then it is displayed in the Scene view; if it is greyed out in the menu, then it is not visible in the Scene view. Any scripts with custom icons show a small drop-down menu arrow. Click this to show the icon selector menu, where you can change the script’s icon.</p>
+
+<p>
+<strong>Note</strong>: If an item in the list has a Gizmo but no icon, there is no option in the icon column.</p>
+
+<p>Tick the checkboxes in the <strong>Gizmo</strong> column to select whether Gizmo graphics are drawn by the Editor for a particular component type. For example, <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> have a predefined wireframe Gizmo to show their shape, and Cameras have a Gizmo which shows the <a href="UnderstandingFrustum.html">view frustum</a>. Your own scripts can draw custom Gizmos appropriate to their purpose; implement <a href="../ScriptReference/MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a> or <a href="../ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a> to do this. Uncheck the checkboxes in this column to turn these Gizmos off.</p>
+
+<p>
+<strong>Note</strong>: If an item in the list has an icon but no Gizmo, there is no checkbox in this column.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ViewModes.html"></a></span><div class="tip">Scene view Control Bar</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GameView.html"></a></span><div class="tip">The Game view</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

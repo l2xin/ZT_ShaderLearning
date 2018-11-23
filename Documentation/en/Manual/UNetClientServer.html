@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Network clients and servers</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetClientServer.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetClientServer.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetClientServer.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetClientServer.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetClientServer.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li><a href="UNetDealingWithClientsServers.html"> Dealing with clients and servers</a></li>
+<li>Network clients and servers</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetDealingWithClientsServers.html"></a></span><div class="tip"> Dealing with clients and servers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetHostMigration.html"></a></span><div class="tip"> Host Migration</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Network clients and servers</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Many multiplayer games can use the <span class="tooltip"><a href="class-NetworkManager.html">Network Manager</a><span class="tooltiptext">A Networking component that manages the network state of a Project. <a href="class-NetworkManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span> to manage connections, but you can also use the lower-level <a href="../ScriptReference/Networking.NetworkServer.html">NetworkServer</a> and <a href="../ScriptReference/Networking.NetworkClient.html">NetworkClient</a> classes directly.</p>
+
+<p>When using the <a href="UNetUsingHLAPI.html">High-Level API</a>, every game must have a host server to connect to. Each participant in a multiplayer game can be a client, a dedicated server, or a combination of server and client at the same time. This combination role is the common case of a multiplayer game with no dedicated server.</p>
+
+<p>For multiplayer games with no dedicated server, one of the players running the game acts as the server for that game. That player’s instance of the game runs a “local client” instead of a normal remote client. The local client uses the same Unity <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> and <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> as the server, and communicates internally using message queues instead of sending messages across the network. To HLAPI code and systems, the local client is just another client, so almost all user code is the same, whether a client is local or remote. This makes it easy to make a game that works in both multiplayer and standalone mode with the same code.</p>
+
+<p>A common pattern for multiplayer games is to have a GameObject that manages the network state of the game. Below is the start of a NetworkManager script. This script would be attached to a GameObject that is in the start-up Scene of the game. It has a simple <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> and keyboard handling functions that allow the game to be started in different network modes. Before you release your game you should create a more visually appealing menu, with options such as “Start single player game” and “Start multiplayer game”.</p>
+
+<pre><code>
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class MyNetworkManager : MonoBehaviour {
+    public bool isAtStartup = true;
+    NetworkClient myClient;
+    void Update () 
+    {
+        if (isAtStartup)
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                SetupServer();
+            }
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                SetupClient();
+            }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                SetupServer();
+                SetupLocalClient();
+            }
+        }
+    }
+    void OnGUI()
+    {
+        if (isAtStartup)
+        {
+            GUI.Label(new Rect(2, 10, 150, 100), &quot;Press S for server&quot;);     
+            GUI.Label(new Rect(2, 30, 150, 100), &quot;Press B for both&quot;);       
+            GUI.Label(new Rect(2, 50, 150, 100), &quot;Press C for client&quot;);
+        }
+    }   
+}
+
+</code></pre>
+
+<p>This basic code calls setup functions to get things going. Below are the simple setup functions for each of the scenarios. These functions create a server, or the right kind of client for each scenario. Note that the remote client assumes the server is on the same machine (127.0.0.1). For a finished game this would be an internet address, or something supplied by the <a href="UnityMultiplayerSettingUp.html">Matchmaking system</a>.</p>
+
+<pre><code>
+// Create a server and listen on a port
+    public void SetupServer()
+    {
+        NetworkServer.Listen(4444);
+        isAtStartup = false;
+    }
+    
+    // Create a client and connect to the server port
+    public void SetupClient()
+    {
+        myClient = new NetworkClient();
+        myClient.RegisterHandler(MsgType.Connect, OnConnected);     
+        myClient.Connect(&quot;127.0.0.1&quot;, 4444);
+        isAtStartup = false;
+    }
+    
+    // Create a local client and connect to the local server
+    public void SetupLocalClient()
+    {
+        myClient = ClientScene.ConnectLocalServer();
+        myClient.RegisterHandler(MsgType.Connect, OnConnected);     
+        isAtStartup = false;
+    }
+</code></pre>
+
+<p>The clients in this code register a callback function for the connection event <a href="../ScriptReference/Networking.MsgType.Connect.html">MsgType.Connect</a>. This is a built-in message of the HLAPI that the script invokes when a client connects to a server. In this case, the code for the handler on the client is:</p>
+
+<pre><code>
+// client function
+    public void OnConnected(NetworkMessage netMsg)
+    {
+        Debug.Log(&quot;Connected to server&quot;);
+    }
+</code></pre>
+
+<p>This is enough to get a multiplayer application up and running. With this script you can then send network messages using <a href="../ScriptReference/Networking.NetworkClient.Send.html">NetworkClient.Send</a> and <a href="../ScriptReference/Networking.NetworkServer.SendToAll.html">NetworkServer.SendToAll</a>. Note that sending messages is a low level way of interacting with the system.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetDealingWithClientsServers.html"></a></span><div class="tip"> Dealing with clients and servers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetHostMigration.html"></a></span><div class="tip"> Host Migration</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Rigidbody</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-Rigidbody.html">English</a></li>
+<li><a href="/ja/current/Manual/class-Rigidbody.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-Rigidbody.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-Rigidbody.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-Rigidbody.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li><a href="Physics3DReference.html">3D Physics Reference</a></li>
+<li>Rigidbody</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-MeshCollider.html"></a></span><div class="tip">Mesh Collider</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SphereCollider.html"></a></span><div class="tip">Sphere Collider</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Rigidbody</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/Rigidbody.html' title='Go to Rigidbody page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<strong>Rigidbodies</strong> enable your <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> to act under the control of physics. The Rigidbody can receive forces and torque to make your objects move in a realistic way. Any GameObject must contain a Rigidbody to be influenced by gravity, act under added forces via scripting, or interact with other objects through the NVIDIA PhysX <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-Rigidbody.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Mass</strong></td>
+	<td style="text-align:left;">The mass of the object (in kilograms by default).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Drag</strong></td>
+	<td style="text-align:left;">How much air resistance affects the object when moving from forces. 0 means no air resistance, and infinity makes the object stop moving immediately.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Drag</strong></td>
+	<td style="text-align:left;">How much air resistance affects the object when rotating from torque. 0 means no air resistance. Note that you cannot make the object stop rotating just by setting its Angular Drag to infinity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Gravity</strong></td>
+	<td style="text-align:left;">If enabled, the object is affected by gravity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Is Kinematic</strong></td>
+	<td style="text-align:left;">If enabled, the object will not be driven by the physics engine, and can only be manipulated by its <strong>Transform</strong>. This is useful for moving platforms or if you want to animate a Rigidbody that has a <strong>HingeJoint</strong> attached.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Interpolate</strong><span class="tooltiptext">The process of calculating values in-between two defined values. Used in animation (between keyframes), physics (between physics time-steps), and multiplayer (between network updates) <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Interpolate">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Try one of the options only if you are seeing jerkiness in your Rigidbody’s movement.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>None</strong>
+</td>
+	<td style="text-align:left;">No <span class="tooltip"><strong>Interpolation</strong><span class="tooltiptext">The estimation of values that determine the shape of an animation curve between two keys. <a href="TimelineChangingInterpolation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#interpolation">Glossary</a></span></span></span> is applied.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Interpolate</strong>
+</td>
+	<td style="text-align:left;">Transform is smoothed based on the Transform of the previous frame.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <span class="tooltip"><strong>Extrapolate</strong><span class="tooltiptext">The process of storing the last few known values using them to predict future values. Used in animation, physics and multiplayer. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Extrapolate">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Transform is smoothed based on the estimated Transform of the next frame.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Collision Detection</strong><span class="tooltiptext">An automatic process performed by Unity which determines whether a moving GameObject with a rigidbody and collider component has come into contact with any other colliders. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Used to prevent fast moving objects from passing through other objects without detecting <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Discrete</strong>
+</td>
+	<td style="text-align:left;">Use Discrete collision detection against all other colliders in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Other colliders will use Discrete collision detection when testing for collision against it. Used for normal collisions (This is the default value).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Continuous</strong>
+</td>
+	<td style="text-align:left;">Use Discrete collision detection against dynamic colliders (with a rigidbody) and continuous collision detection against static MeshColliders (without a rigidbody). Rigidbodies set to Continuous Dynamic will use continuous collision detection when testing for collision against this rigidbody. Other rigidbodies will use Discrete Collision detection. Used for objects which the Continuous Dynamic detection needs to collide with. (This has a big impact on physics performance, leave it set to Discrete, if you don’t have issues with collisions of fast objects)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Continuous Dynamic</strong>
+</td>
+	<td style="text-align:left;">Use continuous collision detection against objects set to Continuous and Continuous Dynamic Collision. It will also use continuous collision detection against static MeshColliders (without a rigidbody). For all other colliders it uses Discrete collision detection. Used for fast moving objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Constraints</strong><span class="tooltiptext">Settings on Joint components which limit movement or rotation. The type and number of constraints vary depending on the type of Joint. <a href="Joints2D.html#constraints">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Constraints">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Restrictions on the Rigidbody’s motion:-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Freeze Position</strong>
+</td>
+	<td style="text-align:left;">Stops the Rigidbody moving in the world X, Y and Z axes selectively.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Freeze Rotation</strong>
+</td>
+	<td style="text-align:left;">Stops the Rigidbody rotating around the local X, Y and Z axes selectively.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>Rigidbodies allow your GameObjects to act under control of the physics engine. This opens the gateway to behaviors such as realistic collisions and varied types of <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span>. Manipulating your GameObjects by adding forces to a Rigidbody creates a very different feel and look than adjusting the Transform <span class="tooltip"><strong>Component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> directly. Generally, you shouldn’t manipulate the Rigidbody and the Transform of the same GameObject - only one or the other.</p>
+
+<p>The biggest difference between manipulating the Transform versus the Rigidbody is the use of forces. Rigidbodies can receive forces and torque, but Transforms cannot. Transforms can be translated and rotated, but this is not the same as using physics. You’ll notice the distinct difference when you try it for yourself. Adding forces/torque to the Rigidbody will actually change the object’s position and rotation of the <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">A Transform component determines the Position, Rotation, and Scale of each object in the scene. Every GameObject has a Transform. <a href="Transforms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span>. This is why you should only be using one or the other. Changing the Transform while using physics could cause problems with collisions and other calculations.</p>
+
+<p>Rigidbodies must be explicitly added to your GameObject before they will be affected by the physics engine. You can add a Rigidbody to your selected object from <strong>Components-&gt;Physics-&gt;Rigidbody</strong> in the menu. Now your object is physics-ready; it will fall under gravity and can receive forces via scripting, but you may need to add a <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> or a Joint to get it to behave exactly how you want.</p>
+
+<h3>Parenting</h3>
+
+<p>When an object is under physics control, it moves semi-independently of the way its transform parents move. If you move any parents, they will pull the Rigidbody child along with them. However, the Rigidbodies will still fall down due to gravity and react to collision events.</p>
+
+<h3>Scripting</h3>
+
+<p>To control your Rigidbodies, you will primarily use <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> to add forces or torque. You do this by calling <strong><a href="../ScriptReference/Rigidbody.AddForce.html">AddForce()</a></strong> and <strong><a href="../ScriptReference/Rigidbody.AddTorque.html">AddTorque()</a></strong> on the object’s Rigidbody. Remember that you shouldn’t be directly altering the object’s Transform when you are using physics.</p>
+
+<h3>Animation</h3>
+
+<p>For some situations, mainly creating ragdoll effects, it is neccessary to switch control of the object between animations and physics. For this purpose Rigidbodies can be marked <strong><a href="../ScriptReference/Rigidbody-isKinematic.html">isKinematic</a></strong>. While the Rigidbody is marked <strong>isKinematic</strong>, it will not be affected by collisions, forces, or any other part of the physics system. This means that you will have to control the object by manipulating the <a href="class-Transform.html">Transform</a> component directly. Kinematic Rigidbodies will affect other objects, but they themselves will not be affected by physics. For example, Joints which are attached to Kinematic objects will constrain any other Rigidbodies attached to them and Kinematic Rigidbodies will affect other Rigidbodies through collisions.</p>
+
+<h3>Colliders</h3>
+
+<p>Colliders are another kind of component that must be added alongside the Rigidbody in order to allow collisions to occur. If two Rigidbodies bump into each other, the physics engine will not calculate a collision unless both objects also have a Collider attached. Collider-less Rigidbodies will simply pass through each other during physics simulation.</p>
+
+<figure>
+<img src="../uploads/Main/RigidbodyandCollider.png" alt="Colliders define the physical boundaries of a Rigidbody">
+<figcaption>Colliders define the physical boundaries of a Rigidbody</figcaption>
+</figure>
+
+<p>Add a Collider with the <strong>Component-&gt;Physics</strong> menu. View the Component Reference page of any individual Collider for more specific information:</p>
+
+<ul>
+<li><span class="tooltip"><a href="class-BoxCollider.html">Box Collider</a><span class="tooltiptext">A cube-shaped collider component that handles collisions for GameObjects like dice and ice cubes. <a href="class-BoxCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#boxcollider">Glossary</a></span></span></span> - primitive shape of a cube</li>
+<li><span class="tooltip"><a href="class-SphereCollider.html">Sphere Collider</a><span class="tooltiptext">A sphere-shaped collider component that handles collisions for GameObjects like balls or other things that can be roughly approximated as a sphere for the purposes of physics. <a href="class-SphereCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span> - primitive shape of a sphere</li>
+<li><span class="tooltip"><a href="class-CapsuleCollider.html">Capsule Collider</a><span class="tooltiptext">A capsule-shaped collider component that handles collisions for GameObjects like barrels and character limbs. <a href="class-CapsuleCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#capsulecollider">Glossary</a></span></span></span> - primitive shape of a capsule</li>
+<li><span class="tooltip"><a href="class-MeshCollider.html">Mesh Collider</a><span class="tooltiptext">A free-form collider component which accepts a mesh reference to define its collision surface shape. <a href="class-MeshCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span> - creates a collider from the object’s <strong>mesh</strong>, cannot collide with another <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Collider</li>
+<li><span class="tooltip"><a href="class-WheelCollider.html">Wheel Collider</a><span class="tooltiptext">A special collider for grounded vehicles. It has built-in collision detection, wheel physics, and a slip-based tire friction model. It can be used for objects other than wheels, but it is specifically designed for vehicles with wheels. <a href="class-WheelCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WheelCollider">Glossary</a></span></span></span> - specifically for creating cars or other moving vehicles</li>
+<li><span class="tooltip"><a href="class-TerrainCollider.html">Terrain Collider</a><span class="tooltiptext">A terrain-shaped collider component that handles collisions for collision surface with the same shape as the Terrain object it is attached to. <a href="class-TerrainCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TerrainCollider">Glossary</a></span></span></span> - handles collision with Unity’s <span class="tooltip"><strong>terrain</strong><span class="tooltiptext">The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape. <a href="terrain-UsingTerrains.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Terrain">Glossary</a></span></span></span> system</li>
+</ul>
+
+<h3>Compound Colliders</h3>
+
+<p>Compound Colliders are combinations of primitive Colliders, collectively acting as a single Collider. They come in handy when you have a model that would be too complex or costly in terms of performance to simulate exactly, and want to simulate the collision of the shape in an optimal way using simple approximations. To create a Compound Collider, create child objects of your colliding object, then add a Collider component to each child object. This allows you to position, rotate, and scale each Collider easily and independently of one another. You can build your compound collider out of a number of primitive colliders and/or convex mesh colliders.</p>
+
+<figure>
+<img src="../uploads/Main/CompoundCollider.png" alt="A real-world Compound Collider setup">
+<figcaption>A real-world Compound Collider setup</figcaption>
+</figure>
+
+<p>In the above picture, the <em>Gun Model</em> GameObject has a Rigidbody attached, and multiple primitive Colliders as child GameObjects. When the Rigidbody parent is moved around by forces, the child Colliders move along with it. The primitive Colliders will collide with the environment’s Mesh Collider, and the parent Rigidbody will alter the way it moves based on forces being applied to it and how its child Colliders interact with other Colliders in the Scene.</p>
+
+<p>Mesh Colliders can’t normally collide with each other. If a Mesh Collider is marked as <strong>Convex</strong>, then it can collide with another Mesh Collider. The typical solution is to use primitive Colliders for any objects that move, and Mesh Colliders for static background objects.</p>
+
+<h3>Continuous Collision Detection</h3>
+
+<p>Continuous collision detection is a feature to prevent fast-moving colliders from passing each other. This may happen when using normal (<strong>Discrete</strong>) collision detection, when an object is one side of a collider in one frame, and already passed the collider in the next frame. To solve this, you can enable continuous collision detection on the rigidbody of the fast-moving object. Set the collision detection mode to <strong>Continuous</strong> to prevent the rigidbody from passing through any static (ie, non-rigidbody) MeshColliders. Set it to <strong>Continuous Dynamic</strong> to also prevent the rigidbody from passing through any other supported rigidbodies with collision detection mode set to <strong>Continuous</strong> or <strong>Continuous Dynamic</strong>.
+Continuous collision detection is supported for Box-, Sphere- and CapsuleColliders. Note that continuous collision detection is intended as a safety net to catch collisions in cases where objects would otherwise pass through each other, but will not deliver physically accurate collision results, so you might still consider decreasing the fixed Time step value in the TimeManager <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> to make the simulation more precise, if you run into problems with fast moving objects.</p>
+
+<h2>Use the right size</h2>
+
+<p>The size of the your GameObject’s mesh is much more important than the mass of the Rigidbody. If you find that your Rigidbody is not behaving exactly how you expect - it moves slowly, floats, or doesn’t collide correctly - consider adjusting the scale of your mesh <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>. Unity’s default unit scale is 1 unit = 1 meter, so the scale of your imported mesh is maintained, and applied to physics calculations. For example, a crumbling skyscraper is going to fall apart very differently than a tower made of toy blocks, so objects of different sizes should be modeled to accurate scale.</p>
+
+<p>If you are modeling a human make sure the model is around 2 meters tall in Unity. To check if your object has the right size compare it to the default cube. You can create a cube using <strong>GameObject &gt; 3D Object &gt; Cube</strong>. The cube’s height will be exactly 1 meter, so your human should be twice as tall.</p>
+
+<p>If you aren’t able to adjust the mesh itself, you can change the uniform scale of a particular mesh asset by selecting it in <span class="tooltip"><strong>Project View</strong><span class="tooltiptext">A view that shows the contents of your Assets folder (Project tab) <a href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectView">Glossary</a></span></span></span> and choosing <strong>Assets-&gt;Import Settings…</strong> from the menu. Here, you can change the scale and re-import your mesh.</p>
+
+<p>If your game requires that your GameObject needs to be instantiated at different scales, it is okay to adjust the values of your Transform’s scale axes. The downside is that the physics simulation must do more work at the time the object is instantiated, and could cause a performance drop in your game. This isn’t a terrible loss, but it is not as efficient as finalizing your scale with the other two options. Also keep in mind that non-uniform scales can create undesirable behaviors when Parenting is used. For these reasons it is always optimal to create your object at the correct scale in your modeling application.</p>
+
+<h2>Hints</h2>
+
+<ul>
+<li>The relative <strong>Mass</strong> of two Rigidbodies determines how they react when they collide with each other.</li>
+<li>Making one Rigidbody have greater <strong>Mass</strong> than another does not make it fall faster in free fall. Use <strong>Drag</strong> for that.</li>
+<li>A low <strong>Drag</strong> value makes an object seem heavy. A high one makes it seem light. Typical values for <strong>Drag</strong> are between .001 (solid block of metal) and 10 (feather).</li>
+<li>If you are directly manipulating the Transform component of your object but still want physics, attach a Rigidbody and make it Kinematic.</li>
+<li>If you are moving a GameObject through its Transform component but you want to receive Collision/Trigger messages, you must attach a Rigidbody to the object that is moving.</li>
+<li>You cannot make an object stop rotating just by setting its Angular Drag to infinity.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-MeshCollider.html"></a></span><div class="tip">Mesh Collider</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SphereCollider.html"></a></span><div class="tip">Sphere Collider</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

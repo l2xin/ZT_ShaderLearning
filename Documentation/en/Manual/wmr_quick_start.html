@@ -1,0 +1,448 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  WMR quick start guide</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/wmr_quick_start.html">English</a></li>
+<li><a href="/ja/current/Manual/wmr_quick_start.html">日本語</a></li>
+<li><a href="/es/current/Manual/wmr_quick_start.html">Español</a></li>
+<li><a href="/kr/current/Manual/wmr_quick_start.html">한국어</a></li>
+<li><a href="/ru/current/Manual/wmr_quick_start.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="wmr_sdk_overview.html"> Windows Mixed Reality</a></li>
+<li> WMR quick start guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_requirements.html"></a></span><div class="tip"> WMR hardware and software requirements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_input_types.html"></a></span><div class="tip"> WMR input and interaction concepts</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>WMR quick start guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Windows Mixed Reality (WMR) applications are Universal Windows Applications, and follow the same general guidelines as other <a href="windowsstore-gettingstarted.html">Windows Store applications</a>. The development environment is Visual Studio 2017, and does not require an additional SDK installation (Visual Studio installs the necessary SDKs).</p>
+
+<h2>Installing required tools</h2>
+
+<p>You must install a number of tools on your PC and headset before you can develop Windows Mixed Reality applications. These tools include:</p>
+
+<ul>
+<li><p>
+<a href="https://www.visualstudio.com/downloads/">Visual Studio 2017</a> with required workloads installed (Universal Windows Platform development and Game development with Unity).</p></li>
+<li><p>
+<a href="https://go.microsoft.com/fwlink/?linkid=852626">HoloLens Emulator and Holographic Templates</a> (Only required for HoloLens development).</p></li>
+</ul>
+
+<p>To ensure that you install all of the required tools for developing Windows Mixed Reality applications (on both HoloLens and immersive headsets) follow the instructions from Microsoft’s documentation on <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/install_the_tools">Installing the Tools</a>.</p>
+
+<p>For detailed information on developing for Windows Mixed Reality, see <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/development_overview">Microsoft’s WMR documentation</a>.</p>
+
+<p>After you have installed the required tools, follow the short guide below to set up a Unity project and publish on Windows Mixed Reality devices.</p>
+
+<h2>Project set up</h2>
+
+<p>A Unity project for Windows Mixed Reality is very similar to a Unity project for other platforms, with a few notable exceptions. To fully support Windows Mixed Reality features, you need to change <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>, performance and publishing settings as outlined in the following sections. </p>
+
+<h3>Camera settings</h3>
+
+<p>Ensure that the <span class="tooltip"><strong>Tag</strong><span class="tooltiptext">A reference word which you can assign to one or more GameObjects to help you identify GameObjects for scripting purposes. For example, you might define and “Edible” Tag for any item the player can eat in your game. <a href="Tags.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Tag">Glossary</a></span></span></span> for the Camera you intend to use to track the HMD’s position is set to <strong>MainCamera</strong>. To check this, select the Camera you want to use, and in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window, see the <strong>Tag</strong> drop-down. Unity automatically applies this tag to the default Camera in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. </p>
+
+<figure>
+<img src="../uploads/Main/hololens_camera_settings.png" alt="Camera settings for HoloLens">
+<figcaption>Camera settings for HoloLens</figcaption>
+</figure>
+
+<p>For HoloLens , set the <strong>Clear Flags</strong> property of the <strong>Main Camera</strong> to <strong>Solid Color</strong> rather than the default <strong>Skybox,</strong> and set the <strong>Background</strong> color to black (R = 0, G = 0, B = 0, A = 0). You should also make sure the Camera’s <strong>Transform</strong> position is set to (0, 0, 0).</p>
+
+<h3>Performance settings</h3>
+
+<p>For HoloLens only, use the <strong>Fastest</strong> quality setting in <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Quality</strong>. This maximizes performance and reduces power consumption. In particular, avoid soft shadows and shadow cascades, because they require too many resources to use on the HoloLens.</p>
+
+<figure>
+<img src="../uploads/Main/hololens_quality_settings.png" alt="Setting quality settings for HoloLens">
+<figcaption>Setting quality settings for HoloLens</figcaption>
+</figure>
+
+<p>To learn more about optimizing your Windows Mixed Reality application, see Microsoft’s documentation on <a href="https://dev.windows.com/en-us/holographic/Performance_recommendations_for_Unity">Performance recommendations for Unity</a>.</p>
+
+<h3>Publishing settings</h3>
+
+<p>To enable important system capabilities for a Windows Mixed Reality application, go to <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> &gt; <strong>Publishing Settings</strong> and check the box for each option you want to use from the <strong>Capabilities </strong>list.</p>
+
+<figure>
+<img src="../uploads/Main/capabilities.png" alt="System capability settings found in Player Settings &amp;gt; Publishing Settings">
+<figcaption>System capability settings found in <strong>Player Settings</strong> &gt; <strong>Publishing Settings</strong></figcaption>
+</figure>
+
+<p>
+<strong>Note:</strong> Not all of the publishing settings in the <strong>Capabilities</strong> list are specific to Windows Mixed Reality. For more information, see <a href="class-PlayerSettingsWSA.html">WSA Player Settings</a>.</p>
+
+<p>The following table describes the important capability settings for publishing Windows Mixed Reality applications:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Capability Setting</strong></th>
+	<th style="text-align:left;"><strong>Immersive headset support</strong></th>
+	<th style="text-align:left;"><strong>HoloLens<br>support</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>InternetClient</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Provides access to your Internet connection for outgoing connections to the Internet. WMR requires this for voice recognition.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>InternetClientServer</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Provides access to your Internet connection, including incoming unsolicited connections from the Internet. The app can send information to or from your computer through a firewall. WMR requires this for voice recognition. <br>Note: If this is active, you don’t need to use <strong>InternetClient</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MusicLibrary</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">N</td>
+	<td style="text-align:left;">Provides access to your music library and playlists, including the capability to add, change, or delete files. This allows you to use <span class="tooltip"><strong>VideoCapture</strong><span class="tooltiptext">A Unity API that allows you to record videos directly to the file system in the MP4 format. <a href="windowsholographic-videocapture.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VideoCapture">Glossary</a></span></span></span> audio recording functionality in your WMR app.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>PicturesLibrary</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Your picture library, including the capability to add, change, or delete files. This capability also includes pictures libraries on HomeGroup computers, along with picture file types on locally connected media servers.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>VideosLibrary</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">N</td>
+	<td style="text-align:left;">Your video library, including the capability to add, change, or delete files. This capability also includes video libraries on HomeGroup computers, along with video file types on locally connected media servers.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>WebCam</strong></td>
+	<td style="text-align:left;">N</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Allows you to use <span class="tooltip"><strong>PhotoCapture</strong><span class="tooltiptext">An API that enables you to take photos from a HoloLens web camera and store them in memory or on disk. <a href="windowsholographic-photocapture.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhotoCapture">Glossary</a></span></span></span> and <strong>VideoCapture </strong>functionality in your app.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Microphone</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Allows you to use voice recognition functionality in your app.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bluetooth</strong></td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Enables bluetooth communication in your app. WMR requires this to allow you to use Windows Mixed Reality spatial controllers.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SpatialPerception </strong></td>
+	<td style="text-align:left;">N</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Allows you to use <span class="tooltip"><a href="SpatialMapping.html">Spatial Mapping</a><span class="tooltiptext">The process of mapping real-world surfaces into the virtual world. <a href="SpatialMapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SpatialMapping">Glossary</a></span></span></span> in your app.</td>
+</tr>
+</tbody>
+</table>
+
+<p>For more detail on these capabilities, see the <a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-capability">Microsoft documentation</a>.</p>
+
+<h2>Exporting a Visual Studio solution</h2>
+
+<p>When you have created your project and are ready to test it, export the project to a Visual Studio solution. To deploy your WMR application you must first build a Visual Studio solution with Unity.</p>
+
+<p>Go to <strong>File</strong> &gt; <strong>Build Settings</strong> and select <span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">An IAP feature that supports Microsoft’s In App Purchase simulator, which allows you to test IAP purchase flows on devices before publishing your application. <a href="UnityIAPUniversalWindows.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span> from the <strong>Platform</strong> list. Now click the <strong>Switch Platform</strong> button at the bottom left of the window to configure the Editor to build for Windows. </p>
+
+<figure>
+<img src="../uploads/Main/Build_setting_UWP.png" alt="Build Settings window showing Universal Windows Platform default settings">
+<figcaption><strong>Build Settings</strong> window showing Universal Windows Platform default settings</figcaption>
+</figure>
+
+<p>For a standard build, the default settings work correctly for Windows Mixed Reality immersive headsets. </p>
+
+<p>To build for HoloLens, you should change the <strong>Target Device</strong> setting to <span class="tooltip"><strong>HoloLens</strong><span class="tooltiptext">An XR headset for using apps made for the Windows Mixed Reality platform. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HoloLens">Glossary</a></span></span></span>.</p>
+
+<p>The table below provides a list of the Build Settings available for the Universal Windows Platform and describes their usage.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>Setting</em></strong></th>
+	<th style="text-align:left;"><strong><em>Description</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Target Device</strong></td>
+	<td style="text-align:left;">Choose <strong>Any Device</strong> to build for immersive headsets and <strong>HoloLens</strong> to build for HoloLens. This is important for optimisation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Build Type</strong></td>
+	<td style="text-align:left;">Choose from D3D (Direct3D) or XAML.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>D3D</strong></td>
+	<td style="text-align:left;">Gives faster results than XAML because there is no XAML layer in the app. This builds the app in 3D exclusive space, and you can’t switch to a 2D XAML app or modify this after generation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>XAML</strong></td>
+	<td style="text-align:left;">Adds an XAML code layer over the app, which allows the user to switch from the 3D app and open a 2D app. XAML code can be modified after generation. The most common example of this is using a touch keyboard for the HoloLens.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>SDK</strong></td>
+	<td style="text-align:left;">Select the specific version of Windows 10 SDK your app uses. This is set to <strong>Latest installed</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Visual Studio Version</strong></td>
+	<td style="text-align:left;">Select the specific version of Visual Studio to generate a solution (.sln) for. This is set to <strong>Latest installed</strong> by default, which is the recommended setting if you have Visual Studio 2017 installed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Build and Run on</strong></td>
+	<td style="text-align:left;">Choose which device your application runs on when you click the <strong>Build and Run</strong> button. This is set to <strong>Local Machine</strong> by default, and you should not need to change this. <br><strong>Note</strong>: Unity ignores this option when you click the <strong>Build </strong>button.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Copy References</strong></td>
+	<td style="text-align:left;">Enables copying of UnityPlayer.dll, associated dlls and data to the generated solution folder instead of referencing them directly from Unity installation folder. This requires extra space, but enables the generated solution to be portable (you can copy it to another machine and build it even if Unity is not installed on that machine).</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Unity C# Projects</strong></td>
+	<td style="text-align:left;">Allows inclusion of the scripting files from your project in the generated solution. This setting is only available when you set the <span class="tooltip"><strong>Scripting Backend</strong><span class="tooltiptext">A framework that powers scripting in Unity. Unity supports three different scripting backends depending on target platform: Mono, .NET and IL2CPP. Universal Windows Platform, however, supports only two: .NET and IL2CPP. <a href="windowsstore-scriptingbackends.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span> to <strong>.NET</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Unlocks debug features and allows developers to test and debug built projects. This allows you to connect the built project to the Unity <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span>, and provides other development features such as more verbose debug log outputs. Enabling this setting also makes the <strong>Scripts Only Build</strong> and <strong>Autoconnect Profiler</strong> settings available.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Autoconnect Profiler</strong></td>
+	<td style="text-align:left;">Allow Unity’s built-in profiler to automatically connect to the build. This is only available when <strong>Development Build</strong> is enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripts Only Build</strong></td>
+	<td style="text-align:left;">Build only the <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> of a project. This is only available when <strong>Development Build</strong> is enabled.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Before you can build your app, you should configure your Player Settings to build Windows Mixed Reality applications correctly:</p>
+
+<ol>
+<li><p>From the Build Settings window, click <strong>Player Settings</strong> &gt; <strong>XR Settings</strong>.</p></li>
+<li><p>Enable <strong>Virtual Reality Supported</strong>.</p></li>
+<li><p>Click the <strong>+</strong> button on the <strong>Virtual Reality Devices</strong> list and select <span class="tooltip"><strong>Windows Mixed Reality</strong><span class="tooltiptext">A mixed reality platform developed by Microsoft, built around the API of Windows 10. <a href="mr-devices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WindowsMixedReality">Glossary</a></span></span></span>.</p></li>
+</ol>
+
+<p>After you have configured your Build Settings, click the <span class="tooltip"><strong>Build</strong><span class="tooltiptext">The process of compiling your project into a format that is ready to run on a specific platform or platforms. <a href="BuildSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#build">Glossary</a></span></span></span> button. Build your project to a new folder and remember the location. </p>
+
+<p>To deploy your app from Visual Studio, do the following:</p>
+
+<ol>
+<li><p>In Visual Studio, open the generated solution file (.sln) located inside the folder where you built your project.</p></li>
+<li>
+<p>In the main Visual Studio taskbar (left to right in image below), change the target platform for your solution, and select which device to run the solution on. </p>
+
+<figure>
+<img src="../uploads/Main/VS_buildOptions.png" alt="">
+</figure>
+</li>
+<li><p>Click the dropdown arrow on the right of the Run button (marked by a green arrowhead) and a list of possible devices will appear. </p></li>
+</ol>
+
+<p>There are four main options to test and run your Windows Mixed Reality application from Visual Studio: </p>
+
+<ul>
+<li><strong>Local Machine</strong></li>
+<li><strong>Remote Machine</strong></li>
+<li><strong>Device</strong></li>
+<li><strong>HoloLens Emulator</strong></li>
+</ul>
+
+<p>The sections below describe these options in more detail. Not all of these options work for all WMR devices; some are specific to HoloLens or immersive headsets.</p>
+
+<h3>Local Machine (immersive headsets only)</h3>
+
+<p>
+<strong>Local Machine</strong> allows you to build your application and install it to the Mixed Reality Portal on your Windows 10 PC. When built, your app automatically runs on your PC, and you can test it through your immersive headset.</p>
+
+<p>You can launch your application again at any time through the Start menu from the Mixed Reality Portal.</p>
+
+<h3>Remote Machine (HoloLens only)</h3>
+
+<p>
+<strong>Remote Machine</strong> prompts you to enter the IP address of the HoloLens or other headset you wish deploy to. When you click <strong>Run</strong> with <strong>Remote Machine</strong> selected, a dialog box asks you for a PIN for the device. </p>
+
+<p>To get this PIN:</p>
+
+<ol>
+<li><p>Switch on your HoloLens and go to <strong>HoloLens Settings</strong>. </p></li>
+<li><p>Select the <strong>For Developers</strong> tab and enable <strong>Developer Mode</strong> using the provided toggle button.</p></li>
+<li><p>Select the <strong>Pair</strong> button to get the <strong>PIN</strong> and enter it into Visual Studio in the popup box.</p></li>
+</ol>
+
+<p>Your application remote installs onto your HoloLens and, when the build process is complete, runs on the device automatically.</p>
+
+<h3>Device (HoloLens only)</h3>
+
+<p>
+<strong>Device</strong> allows you to build your Visual Studio project and deploy it to a HoloLens device connected to your PC via a USB cable. </p>
+
+<p>When you click <strong>Run</strong>, Visual Studio builds the project, installs the app on the connected HoloLens, and runs on the device automatically once the build process is complete.</p>
+
+<h3>HoloLens Emulator (HoloLens only)</h3>
+
+<p>
+<strong>HoloLens Emulator</strong> allows you to build the Visual Studio project and run the app on an installed HoloLens emulator. This emulator lets you test your app and simulate gestures and other inputs on your PC before you deploy it to a HoloLens device.</p>
+
+<h3>Including Scripts in your generated solution (optional)</h3>
+
+<p>Tick the <strong>Unity C# Projects</strong> checkbox to include the scripting files from your project in the generated solution. This allows you to edit and debug your scripts without needing to re-export from Unity. You only need to re-export when your project settings or content change. This setting is only available when you set the <strong>Scripting Backend</strong> to <strong>.NET</strong>. </p>
+
+<p>You can use either <span class="tooltip"><strong>IL2CPP</strong><span class="tooltiptext">A Unity-developed scripting back-end which you can use as an alternative to Mono when building projects for some platforms. <a href="IL2CPP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> or <strong>.NET</strong> scripting backends for your application. To change the <strong>Scripting Backend</strong>, go to <strong>Player Settings</strong> &gt; <strong>Other Settings</strong> and select the relevant backend in the <strong>Configuration</strong> section.</p>
+
+<p>For more information on ILCPP, see Unity’s documentation on <a href="IL2CPP-HowItWorks.html">How IL2CCP works</a>.</p>
+
+<p>For more information on building to Windows Mixed Reality devices, see Microsoft’s documentation on <a href="https://dev.windows.com/en-us/holographic/Exporting_and_building_a_Unity_Visual_Studio_solution">Exporting and building a Unity Visual Studio solution</a>.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New content added for XR API changes in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_requirements.html"></a></span><div class="tip"> WMR hardware and software requirements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_input_types.html"></a></span><div class="tip"> WMR input and interaction concepts</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

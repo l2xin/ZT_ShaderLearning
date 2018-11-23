@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Google VR quick start guide</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/googlevr_quick_start.html">English</a></li>
+<li><a href="/ja/current/Manual/googlevr_quick_start.html">日本語</a></li>
+<li><a href="/es/current/Manual/googlevr_quick_start.html">Español</a></li>
+<li><a href="/kr/current/Manual/googlevr_quick_start.html">한국어</a></li>
+<li><a href="/ru/current/Manual/googlevr_quick_start.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="googlevr_sdk_overview.html"> Google VR</a></li>
+<li> Google VR quick start guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="googlevr_requirements.html"></a></span><div class="tip"> Google VR hardware and software requirements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="googlevr_apis_and_sdks.html"></a></span><div class="tip"> Supported APIs and SDKs</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Google VR quick start guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This section helps you get started with developing Google VR applications using Unity. Many of the instructions for developing Google VR content are available on the <a href="https://developers.google.com/vr/">Google VR Developer website</a>.</p>
+
+<p>Use the following guides to install Unity and the Google VR SDK:</p>
+
+<ol>
+<li>
+<p>See <a href="InstallingUnity.html">Downloading and installing Unity</a> to help install the Unity Editor.</p>
+
+<p>i ) When targeting Android, make sure you install Unity Android Support through the <strong>Unity Installer</strong>.</p>
+
+<p>ii ) When targeting iOS, make sure you install Unity iOS support through the <strong>Unity Installer</strong> and that you have a macOS machine to compile and deploy to your device.</p>
+</li>
+<li><p>Follow the instructions on the <a href="https://developers.google.com/vr/">Google developer site for VR</a> for your targeted platform(s).</p></li>
+</ol>
+
+<h2>Official Google VR guides</h2>
+
+<p>Google provides starter guides for developing Google VR applications with Unity for both Android and <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span>. Links to specific guides are given below:</p>
+
+<ul>
+<li><p>Getting started with <a href="https://developers.google.com/vr/unity/get-started">Google VR SDK for Unity for Android</a>.</p></li>
+<li><p>Getting started with <a href="https://developers.google.com/vr/unity/get-started-ios">Google VR SDK for Unity for iOS</a>.</p></li>
+</ul>
+
+<h2>Unity Platform configuration settings</h2>
+
+<p>This section provides a step-by-step guide for configuring your Unity Project to build Google VR applications.</p>
+
+<p>Follow the steps in the next sections to ensure your Unity project can successfully build for your target Google VR devices.</p>
+
+<h3>Targeting Cardboard (Android and iOS)</h3>
+
+<p>Unity provides a number of platform-specific build options for building applications to Cardboard-supported devices. </p>
+
+<p>To access these settings, open the <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> in the Unity Editor (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong>) and click either the iPhone or Android icon, depending on which device you want to build to. Navigate to <strong>XR Settings</strong> and make sure <strong>Virtual Reality Supported</strong> is checked. Next, navigate to the <strong>Virtual Reality SDKs</strong> list and click the plus <strong>(+)</strong> button. Select <span class="tooltip"><strong>Cardboard</strong><span class="tooltiptext">See Google Cardboard <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cardboard">Glossary</a></span></span></span> to add it to the list.</p>
+
+<figure>
+<img src="../uploads/Main/cardboard_settings.jpg" alt="Finding Cardboard-specific settings for iOS/Android (Edit &gt; Project Settings &gt; Player &gt; XR Settings)">
+<figcaption>Finding Cardboard-specific settings for iOS/Android (Edit &gt; Project Settings &gt; Player &gt; XR Settings)</figcaption>
+</figure>
+
+<p>When you have added <strong>Cardboard</strong> to the <strong>Virtual Reality SDKs</strong> list, click the foldout arrow next to it to view additional <strong>Cardboard</strong> settings.</p>
+
+<figure>
+<img src="../uploads/Main/additional_cardboard_settings.png" alt="Cardboard-specific settings in VR SDK list">
+<figcaption>Cardboard-specific settings in VR SDK list</figcaption>
+</figure>
+
+<p>The table below provides a list of properties available in the <strong>Cardboard</strong> settings, along with a description of their functionality.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Property</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Description<br></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Depth Format</strong></td>
+	<td style="text-align:left;">Use this drop-down to set the Z buffer depth. Unity uses this to sort the visible data and determine what is actually rendered to the screen.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Transition View</strong></td>
+	<td style="text-align:left;">The transition view is the view that Google VR provides to inform the user that they must put their device in a Cardboard-compatible viewer. You can enable it to provide users some time to insert their device into a viewer. By default, this is disabled.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The minimum platform requirement for Cardboard is Android 5.0 (Lollipop) (SDK API level 21). </p>
+
+<p>To ensure Unity uses the correct <span class="tooltip"><strong>APK</strong><span class="tooltiptext">The Android Package format output by Unity. An APK is automatically deployed to your device when you select File &gt; Build &amp; Run. <a href="android-BuildProcess.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#APK">Glossary</a></span></span></span>, and only runs on devices upgraded to the latest version of Android, you need to change the <strong>Minimum API Level</strong>.</p>
+
+<p>To do this, go to the <strong>Player Settings</strong> and navigate to <strong>Other Settings</strong>. Under <strong>Identification,</strong> use the <strong>Minimum API Level</strong> drop-down to set it to the latest API in the list.</p>
+
+<p>Set the <strong>Target API Level</strong> to API level 21 or higher for Cardboard only. If you are targeting Daydream then this needs to be 24 or higher. By default, this property uses the highest level you have installed. For more information about API levels for Android, see documentation on <a href="class-PlayerSettingsAndroid.html">Android PlayerSettings</a>.</p>
+
+<p>You are now ready to create your Unity content for Cardboard. Follow the same workflow you would for normal Android or iOS development (see documentation on <a href="android.html">Android development</a> or <a href="iphone.html">iOS development</a> for more information). Make sure you build and run your game on a Cardboard-capable device (menu: <strong>File</strong> &gt; <strong>Build &amp; Run</strong>).</p>
+
+<h3><strong>Targeting Daydream (Android only)</strong></h3>
+
+<p>Unity provides a number of platform-specific build options for building applications to Daydream-supported devices. </p>
+
+<p>To access these settings, open the <strong>Player Settings</strong> (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>) and navigate to the Android section (click the Android icon marked in the figure below). Navigate to <strong>XR Settings</strong> and make sure the <strong>Virtual Reality Supported</strong> checkbox is ticked. Next, navigate to the <strong>Virtual Reality SDKs</strong> list and click the plus (+) button. Select <strong>Daydream</strong> to add it to the list.</p>
+
+<figure>
+<img src="../uploads/Main/Daydream_settings.jpg" alt="Finding the Daydream-specific settings for Android (Edit &gt; Project Settings &gt; Player &gt; XR Settings)">
+<figcaption>Finding the Daydream-specific settings for Android (Edit &gt; Project Settings &gt; Player &gt; XR Settings)</figcaption>
+</figure>
+
+<p>When you add <strong>Daydream</strong> to the <strong>Virtual Reality SDKs</strong> List, click the foldout arrow next to it to view additional Daydream settings.</p>
+
+<figure>
+<img src="../uploads/Main/Daydream_VR_list.png" alt="Daydream-specific settings in VR SDK list">
+<figcaption>Daydream-specific settings in VR SDK list</figcaption>
+</figure>
+
+<p>The table below provides a list of properties available in the Daydream settings, along with a description of their functionality.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Description<br></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Depth Format</strong></td>
+	<td style="text-align:left;">Use this drop-down to set the Z buffer depth. This is used for sorting the visible data and determining what is actually rendered to the screen.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Foreground Icon</strong></td>
+	<td style="text-align:left;">Set the foreground icon for presentation in the Google VR Play store.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Background Icon</strong></td>
+	<td style="text-align:left;">Set the background icon for presentation in the Google VR Play store.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Sustained Performance Mode</strong></td>
+	<td style="text-align:left;">Enable <strong>Sustained Performance Mode</strong> for longer <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XR">Glossary</a></span></span></span> experiences. This reduces performance to improve battery life.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Video Surface</strong></td>
+	<td style="text-align:left;">Enable Asynchronous Video Reprojection. For more information, see the documentation about <a href="VRDevices-GoogleVRVideoAsyncReprojection.html">Asynchronous Video Reprojection</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Protected Memory</strong></td>
+	<td style="text-align:left;">Enables memory protection for DRM protected content when using Asynchronous Video Reprojection. This option only appears if <strong>Enable Video Surface</strong> has been selected. For more information, see <a href="VRDevices-GoogleVRVideoAsyncReprojection.html">Asynchronous Video Reprojection</a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The minimum platform requirement for targeting Daydream only is Android 7.0 (Nougat) (SDK API level 24). If you are targeting Cardboard as well as Daydream, then the minimum supported API level is 21.</p>
+
+<p>To ensure Unity uses the correct APK, and only runs on devices upgraded to the latest version of Android, you need to change the <strong>Minimum API Level</strong>.</p>
+
+<p>To do this in the Player Settings, navigate to <strong>Other Settings</strong>. Under <strong>Identification,</strong> use the <strong>Minimum API Level</strong> drop-down to set it to the latest API in the list. </p>
+
+<p>Set <strong>Target API Level</strong> should be set to API level 24 if you are Daydream. By default, this property uses the highest level you have installed. For more information about API levels for Android, see documentation on <a href="class-PlayerSettingsAndroid.html">Android PlayerSettings</a>.</p>
+
+<p>You are now ready to create your Unity content for Daydream. Follow the same workflow you would for normal Android development (see documentation on <a href="android.html">Android development</a> for more information). Make sure you build and run your game on a Daydream-capable device (menu: <strong>File</strong> &gt; <strong>Build &amp; Run</strong>).</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Google VR documentation updated for Unity XR API in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="googlevr_requirements.html"></a></span><div class="tip"> Google VR hardware and software requirements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="googlevr_apis_and_sdks.html"></a></span><div class="tip"> Supported APIs and SDKs</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

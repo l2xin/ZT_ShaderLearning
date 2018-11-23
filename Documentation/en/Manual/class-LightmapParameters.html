@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Lightmap Parameters</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-LightmapParameters.html">English</a></li>
+<li><a href="/ja/current/Manual/class-LightmapParameters.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-LightmapParameters.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-LightmapParameters.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-LightmapParameters.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li> Lightmap Parameters</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip"> Custom fall-off</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingBakedAmbientOcclusion.html"></a></span><div class="tip"> Baked ambient occlusion</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Lightmap Parameters</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/LightmapParameters.html' title='Go to LightmapParameters page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>A <span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> Parameters <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> stores a set of values for the parameters which control Unity’s <a href="GIIntro.html">Global Illumination</a> (GI) features. These Assets allow you to define and save different sets of values for lighting, for use in different situations. </p>
+
+<p>To create a new Lightmap Parameters Asset, right-click in the Project window and go to <strong>Create</strong> &gt; <strong>New Parameters Asset</strong>. Unity stores this in your Project folder.</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters1.png" alt="A Lightmap Parameters Asset called New LightmapParameters, shown in the Project window">
+<figcaption>A Lightmap Parameters Asset called <strong>New LightmapParameters</strong>, shown in the Project window</figcaption>
+</figure>
+
+<p>Lightmap Parameters Assets allow you to quickly create presets optimized for different types of <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, or for different platforms and different Scene types (for example, indoor or outdoor Scenes).</p>
+
+<p>When you click on a Lightmap Parameters Asset in the Project window, the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window displays the values defined in that Asset. The parameters and their descriptions are listed in the table below.</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters2.png" alt="">
+</figure>
+
+<h2>Precomputed Realtime GI</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Property</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Resolution</strong></td>
+	<td style="text-align:left;">This value scales the <strong>Realtime Resolution</strong> value in the Scene tab of the Lighting Window (menu: <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt; <strong>Lighting Settings</strong> &gt; <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>) to give the final resolution of the lightmap in texels per unit of distance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cluster Resolution</strong></td>
+	<td style="text-align:left;">The ratio of the cluster resolution (the resolution at which the light bounces are calculated internally) to the final lightmap resolution. See documentation on <a href="GIVis.html">GI Visualizations in the Scene view</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Irradiance Budget</strong></td>
+	<td style="text-align:left;">This value determines the precision of the incoming light data used to light each texel in the lightmap. Each texel’s lighting is obtained by sampling a “view” of the Scene from the texel’s position. Lower values of irradiance budget result in a more blurred sample. Higher values increase the sharpness of the sample. A higher irradiance budget improves the lighting, but this increases run-time memory usage and might increase CPU usage.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Irradiance Quality</strong></td>
+	<td style="text-align:left;">Use the slider to define the number of rays that are cast and used to compute which clusters affect a given output lightmap texel. Higher values offer visual improvements in the lightmap, but increase precomputing time in the Unity Editor. The value does not affect runtime performance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Modelling Tolerance</strong></td>
+	<td style="text-align:left;">This value controls the minimum size of gaps in <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> geometry that allows light to pass through. Make this value lower to allow light to pass through smaller gaps in your environment.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Edge Stitching</strong></td>
+	<td style="text-align:left;">If enabled, this property indicates that UV charts in the lightmap should be joined together seamlessly, to avoid unwanted visual artifacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Is Transparent</strong></td>
+	<td style="text-align:left;">If enabled, the object appears transparent during the Global Illumination calculations. Back-faces do not contribute to these calculations, and light travels through the surface. This is useful for invisible emissive surfaces.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>System Tag</strong></td>
+	<td style="text-align:left;">A group of objects whose lightmap Textures are combined in the same lightmap atlas is known as a “system”. The Unity Editor automatically defines additional systems and their accompanying atlases if all the objects can’t be fitted into a single atlas. However, it is sometimes useful to define separate systems yourself (for example, to ensure that objects inside different rooms are grouped into one system per room). Change the <strong>System Tag</strong> number to force new system and lightmap creation. The exact numeric sequence values of the tag are not significant.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Baked GI</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">The lighting system by Geomerics used in Unity for computing global illumination (GI). <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Enlighten">Glossary</a></span></span></span></td>
+	<td style="text-align:left;"><strong>Progressive Lightmapper</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Blur Radius</strong></td>
+	<td style="text-align:left;">The radius of the blur filter that is applied to direct lighting during post-processing in texels. The radius is essentially the distance over which neighboring texels are averaged out. A larger radius gives a more blurred effect. Higher levels of blur tend to reduce visual artifacts but also soften the edges of shadows.</td>
+	<td style="text-align:left;">
+<strong>Blur Radius</strong> is not available when you use Progressive <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anti-aliasing Samples</strong></td>
+	<td style="text-align:left;">The degree of anti-aliasing (the reduction of “blocky” artifacts) that is applied. Higher numbers increase quality and bake time.</td>
+	<td style="text-align:left;">The number of times to supersample a texel to reduce aliasing. Samples [1;3] disables supersampling, samples [4;8] give 2x supersampling, and samples [9;256] give 4x supersampling. This mostly affects the amount of memory used for the positions and normals buffers (2x uses four times the amount of memory, 4x uses 16 times the amount of memory).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Direct Light Quality</strong></td>
+	<td style="text-align:left;">The number of rays used to evaluate direct lighting. A higher number of rays tends to produce more accurate soft shadows but increases bake time.</td>
+	<td style="text-align:left;">
+<strong>Direct Light Quality</strong> is not available when you use Progressive Lightmapper.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Backface Tolerance</strong></td>
+	<td style="text-align:left;">The structure of a Mesh sometimes causes some texels to have a “view” that includes back-facing geometry. Incoming light from a backface is meaningless in any Scene. Because of this, this property lets you select a percentage threshold of light that must come from front-facing geometry in order for a texel to be considered valid. Invalid texels have their lighting approximated from their neighbors’ values. Lowering this value can solve lighting problems caused by incoming light from backfaces.</td>
+	<td style="text-align:left;">The percentage of rays shot from an output texel that must hit front faces to be considered usable. Allows a texel to be invalidated if too many of the rays cast from it hit backfaces (the texel is inside some geometry). In that case artefacts are avoided by cloning valid values from surrounding texels. For example, if backface tolerance is 0.0, the texel is rejected only if it sees nothing but backfaces. If it is 1.0, the ray origin is rejected if it has even one ray that hits a backface. In the Baked Texel Validity <span class="tooltip"><strong>scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> mode one case see valid (green) and invalid (red) texels. If you have a single sided mesh in your scene, you may want to disable this feature by setting it to zero. A two-sided flag will later be added in the editor to address this.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Baked Tag</strong></td>
+	<td style="text-align:left;" colspan="2">Similar to the <strong>System Tag</strong> property above, this number lets you group specific sets of objects together in separate baked lightmaps. As with the System Tag, the exact numeric value is not significant. Objects with different Baked Tag values are never put in the same atlas; however, there is no guarantee that objects with the same tag end up in the same atlas, because those objects might not necessarily fit into one lightmap (see image A, below, for an example of this). You don’t have to set this when using the multi-scene bake API, because grouping is done automatically (use the <strong>Baked Tag</strong> to replicate some of the behavior of the <strong>Lock Atlas</strong> option). See <a href="#BakedTags">Baked Tags: Details</a>, below, for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pushoff</strong></td>
+	<td style="text-align:left;">The distance to push away from the surface geometry before starting to trace rays in modelling units. It is applied to all baked lightmaps, so it affects direct light, indirect light, and AO. <strong>Pushoff</strong> is useful for getting rid of unwanted AO or shadowing. Use this setting to solve problems where the surface of an object is shadowing itself, causing speckled shadow patterns to appear on the surface with no apparent source. You can also use this setting to remove unwanted artifacts on huge objects, where floating point precision isn’t high enough to accurately ray-trace fine detail.</td>
+	<td style="text-align:left;">The amount to push off ray origins away from geometry along the normal for ray tracing, in modelling units. It is applied to all baked lightmaps, so it affects direct light, indirect light and <span class="tooltip"><strong>ambient occlusion</strong><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>. It is useful for getting rid of unwanted occlusion/shadowing.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="BakedTags"> </a></p>
+
+<h3>Baked Tags: Details</h3>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters.jpg" alt="">
+</figure>
+
+<p>The image above shows two views of the same Scene:</p>
+
+<ol>
+<li><p>
+<strong>Left:</strong> Everything is in one atlas because all the GameObjects have the same <strong>Baked Tag</strong>.</p></li>
+<li><p>
+<strong>Right:</strong> One GameObject is assigned a different <strong>Baked Tag</strong>, and forced into a second lightmap.</p></li>
+</ol>
+
+<h2>Baked AO</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Quality</strong></td>
+	<td style="text-align:left;">The number of rays cast when evaluating ambient occlusion (AO). A higher numbers of rays increases AO quality but also increases bake time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anti-aliasing Samples</strong></td>
+	<td style="text-align:left;">The number of samples to take when doing anti-aliasing of AO. A higher number of samples increases the AO quality but also increases the bake time.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>General GI</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Backface Tolerance</strong></td>
+	<td style="text-align:left;">The percentage of rays shot from an output texel that must hit front faces for the lighting system to consider them usable. This allows Unity to invalidate a texel if too many of the rays cast from it hit back faces ( (for example, if the texel is inside some geometry). The lighting system clones valid values from the surrounding texels to avoid unintended artifacts.<br><br>If <strong>Backface Tolerance</strong> is 0.0, the lighting system rejects the texel only if it sees nothing but backfaces. If it is 1.0, the lighting system rejects the ray origin if it has even one ray that hits a backface.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Assigning Lightmap Parameters Assets</h2>
+
+<h3>Scenes</h3>
+
+<p>To assign a Lightmap Parameters Asset to the whole Scene, open the <a href="GlobalIllumination.html">Lighting window</a> (<strong>Window</strong> &gt; <strong>rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene</strong> tab, and navigate to the <strong>General GI</strong> settings.</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters3.png" alt="">
+</figure>
+
+<p>Use the <strong>Default Parameters</strong> drop-down to assign a default Lightmap Parameters Asset. This drop-down lists all available Lightmap Parameters Assets.</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters4.png" alt="">
+</figure>
+
+<h3>GameObjects</h3>
+
+<p>To assign a Lightmap Parameters Asset to a single GameObject, ensure the GameObject has a <span class="tooltip"><strong>Mesh Renderer</strong><span class="tooltiptext">A mesh component that takes the geometry from the Mesh Filter and renders it at the position defined by the object’s Transform component. <a href="class-MeshRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> or <span class="tooltip"><strong>Terrain</strong><span class="tooltiptext">The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape. <a href="terrain-UsingTerrains.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Terrain">Glossary</a></span></span></span> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> attached. </p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters5.png" alt="">
+</figure>
+
+<p>To assign a Lightmap Parameters Asset to a Mesh Renderer, tick the component’s <strong>Lightmap Static</strong> checkbox and select an option from <strong>Lightmap Parameters </strong>under <strong>Lightmap Settings</strong>. Choose <strong>Scene Default Parameter</strong> to use the same Lightmap Parameters Asset that is assigned to the whole Scene.</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters6.png" alt="">
+</figure>
+
+<p>To assign a Lightmap Parameters Asset to a Terrain, tick the Terrain’s <strong>Lightmap Static</strong> checkbox and select an option from <strong>Advanced Parameters</strong>. Choose <strong>Scene Default Parameters</strong> to use the same Lightmap Parameters Asset that is assigned to the whole Scene.</p>
+
+<hr>
+
+<p><span class="page-edit"> 2018–03–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+
+<p><span class="page-history">Progressive Lightmapper added in <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> <span class="search-words">NewIn20181</span></span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip"> Custom fall-off</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingBakedAmbientOcclusion.html"></a></span><div class="tip"> Baked ambient occlusion</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Exhaust Smoke from a Vehicle</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PartSysExhaust.html">English</a></li>
+<li><a href="/ja/current/Manual/PartSysExhaust.html">日本語</a></li>
+<li><a href="/es/current/Manual/PartSysExhaust.html">Español</a></li>
+<li><a href="/kr/current/Manual/PartSysExhaust.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PartSysExhaust.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="ParticleSystems.html">Particle Systems</a></li>
+<li><a href="ParticleSystemHowTo.html">Particle System How-Tos</a></li>
+<li>Exhaust Smoke from a Vehicle</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysExplosion.html"></a></span><div class="tip">A Simple Explosion</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysVertexStreams.html"></a></span><div class="tip"> Particle System vertex streams and Standard Shader support</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Exhaust Smoke from a Vehicle</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Cars and many other vehicles emit exhaust smoke as they convert fuel into power. You can use a <span class="tooltip"><strong>particle system</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span> to add an exhaust as a nice finishing touch for a vehicle.</p>
+
+<figure>
+<img src="../uploads/Main/PartSysExhaustScreenshot.png" alt="An exhaust generated by a particle system">
+<figcaption>An exhaust generated by a particle system</figcaption>
+</figure>
+
+<h2>Timeline of a Particle</h2>
+
+<p>Exhaust smoke emerges from the pipe quite fast but then rapidly slows down on contact with the atmosphere. As it slows, it spreads out, becoming fainter and soon dissipating into the air. Since the exhaust gas is hot, it also rises slightly as it passes through the colder air surrounding it.</p>
+
+<p>A particle of exhaust smoke must start off no larger than the width of the pipe but it will then grow in size considerably over its short lifetime. It will usually start off partly transparent and fade to total transparency as it mixes with the air. As regards dynamics, the particle will be emitted quite fast but then slow rapidly and will also lift upward slightly.</p>
+
+<h2>Implementation</h2>
+
+<p>In the <em>Shape</em> module, select the <em>Cone</em> shape and set its <em>Angle</em> property to zero; the “cone” in this case will actually be a cylindrical pipe. The <em>Radius</em> of the pipe naturally depends on the size of the vehicle but you can usually set it by matching the radius <span class="tooltip"><strong>Gizmo</strong><span class="tooltiptext">A graphic overlay associated with a GameObject in a Scene, and displayed in the Scene View. Built-in scene tools such as the move tool are Gizmos, and you can create custom Gizmos using textures or scripting. Some Gizmos are only drawn when the GameObject is selected, while other Gizmos are drawn by the Editor regardless of which GameObjects are selected. <a href="GizmosMenu.html#gizmos">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> in the <span class="tooltip"><strong>scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> to the vehicle model (eg, a car model will usually feature an exhaust pipe or a hole at the back whose size you can match). The radius actually determines quite a few things about the property settings you choose, such as the particle size and emission rate. For the purposes of this example, we will assume the vehicle is a car which follows Unity’s standard size convention of one world unit to one metre; the radius is thus set to about 0.05 or 5cm.</p>
+
+<p>A suitable graphic for the smoke particle is provided by the <em>Smoke4</em> material provided in the standard assets. If you don’t already have these installed then select <strong>Assets &gt; Import Package &gt; Particles</strong> from the menu. Then, go to the <em>Renderer</em> module of the particle system and set the <em>Material</em> property to <em>Smoke4</em>.</p>
+
+<p>The default lifetime of five seconds is generally too long for car exhaust fumes, so you should open the Particle System module (which has the same name as the GameObject, eg, “Exhaust”) and set the <em>Start Lifetime</em> to about 2.5 seconds. Also in this module, set the <em>Simulation Space</em> to <em>World</em> and the <em>Gravity Modifier</em> to a small negative value, say about –0.1. Using a world simulation space allows the smoke to hang where it is produced even when the vehicle moves. The negative gravity effect causes the smoke particles to rise as if they are composed of hot gas. A nice extra touch is to use the small menu arrow next to <em>Start Rotation</em> to select the <em>Random Between Two Constants</em> option. Set the two values to 0 and 360, respectively, and the smoke particles will be randomly rotated as they are emitted. Having many particles that are identically aligned is very noticeable and detracts from the effect of a random, shapeless smoke trail.</p>
+
+<p>At this stage, the smoke particles are starting to look realistic and the default emission rate creates a nice “chugging” effect of an engine. However, the smoke doesn’t billow outwards and dissipate as yet. Open the <em>Color Over Lifetime</em> module and click the top gradient stop on the right hand end of the gradient (this controls the transparency of “alpha” value of the color). Set the alpha value to zero and you should see the smoke particles fading to nothing in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Depending on how clean your engine is, you may also want to reduce the alpha value of the gradient at the start; thick, dark smoke tends to suggest dirty, inefficient combustion.</p>
+
+<p>As well as fading, the smoke should also increase in size as it escapes and you can easily create this effect with the <em>Size Over Lifetime</em> module. Open the module, select the curve and slide the curve handle at the left hand end to make the particles start off at a fraction of their full size. The exact size you choose depends on the size of the exhaust pipe but a value slightly larger than the pipe gives a good impression of escaping gas. (Starting the particles at the same size as the pipe suggests that the gas is being held to its shape by the pipe but of course, gas doesn’t have a defined shape.) Use the simulation of the particle system in the scene view to get a good visual impression of how the smoke looks. You may also want to increase the <em>Start Size</em> in the particle system module at this point if the smoke doesn’t disperse far enough to create the effect you want.</p>
+
+<p>Finally, the smoke should also slow down as it disperses. An easy way to make this happen is with the <em>Force Over Lifetime</em> module. Open the module and set the <em>Space</em> option to <em>Local</em> and the Z <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> of the force to a negative value to indicate that the particles are pushed back by the force (the system emits the particles along the positive Z direction in the object’s local space). A value of about –0.75 works quite well for the system if the other parameters are set up as suggested above.</p>
+
+<h2>Usage</h2>
+
+<p>You can position the exhaust particle system by placing it on a child object of the main vehicle. For simple games, you can just enable the <em>Play On Awake</em> and <em>Looping</em> properties and let the system run. In most cases, however, you will probably want to vary at least the emission rate as the vehicle moves. This is firstly for authenticity (ie, an engine produces more smoke as it works harder) but it also helps to prevent the smoke particles from being spread out as the vehicle moves. A fast-moving vehicle with too low an emission rate will appear to produce distinct “puffs” of smoke, which is highly unrealistic.</p>
+
+<p>You can vary the emission rate very easily from a script. If you have a variable in the script that represents the engine revs or the speed of the vehicle then you can simply multiply this value by a constant and assign the result to the ParticleSystem’s emissionRate property.</p>
+
+<pre><code>    // C#
+
+    using UnityEngine;
+    using System.Collections;
+
+    public class PartScriptTestCS : MonoBehaviour {
+
+        public float engineRevs;
+        public float exhaustRate;
+
+        ParticleSystem exhaust;
+
+
+        void Start () {
+            exhaust = GetComponent&lt;ParticleSystem&gt;();
+        }
+    
+
+        void Update () {
+            exhaust.emissionRate = engineRevs * exhaustRate;
+        }
+
+    }
+
+
+
+    // JS
+
+    var engineRevs: float;
+    var exhaustRate: float;
+
+    var exhaust: ParticleSystem;
+
+
+    function Start() {
+        exhaust = GetComponent.&lt;ParticleSystem&gt;();
+    }
+
+
+    function Update () {
+        exhaust.emissionRate = engineRevs * exhaustRate;
+    }
+</code></pre>
+
+<h2>Further Ideas</h2>
+
+<p>The basic scheme creates quite a convincing impression of exhaust smoke but you will probably have noticed that the “character” of the engine changes as you vary the parameters. An poorly tuned, inefficient engine tends to burn its fuel incompletely, resulting in heavy, dark smoke that persists for a long time in the air. This would be perfect for an old farm tractor but not for a high-performance sports car. For a “clean” engine, you should use small values for the lifetime, opacity and size increase of the particles. For a “dirty” engine, you should increase these values and perhaps use the <em>Bursts</em> property of the <em>Emission</em> module to create the impression of the engine spluttering.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysExplosion.html"></a></span><div class="tip">A Simple Explosion</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysVertexStreams.html"></a></span><div class="tip"> Particle System vertex streams and Standard Shader support</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

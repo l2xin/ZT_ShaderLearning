@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: ShaderLab: Blending</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-Blend.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-Blend.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-Blend.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-Blend.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-Blend.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-Shader.html">ShaderLab Syntax</a></li>
+<li><a href="SL-SubShader.html">ShaderLab: SubShader</a></li>
+<li><a href="SL-Pass.html">ShaderLab: Pass</a></li>
+<li>ShaderLab: Blending</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-CullAndDepth.html"></a></span><div class="tip">ShaderLab: Culling &amp; Depth Testing</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-PassTags.html"></a></span><div class="tip">ShaderLab: Pass Tags</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>ShaderLab: Blending</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Blending is used to make transparent objects.</p>
+
+<figure>
+<img src="../uploads/SL/PipelineBlend.png" alt="">
+</figure>
+
+<p>When graphics are rendered, after all <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> have executed and all Textures have been applied, the <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> are written to the screen. How they are combined with what is already there is controlled by the Blend command.</p>
+
+<h2>Syntax</h2>
+
+<p>
+<code>Blend Off</code>: Turn off blending (this is the default)</p>
+
+<p>
+<code>Blend SrcFactor DstFactor</code>: Configure and enable blending. The generated color is multiplied by the <strong>SrcFactor</strong>. The color already on screen is multiplied by <strong>DstFactor</strong> and the two are added together.</p>
+
+<p>
+<code>Blend SrcFactor DstFactor, SrcFactorA DstFactorA</code>: Same as above, but use different factors for blending the alpha channel.</p>
+
+<p>
+<code>BlendOp Op</code>: Instead of adding blended colors together, carry out a different operation on them.</p>
+
+<p>
+<code>BlendOp OpColor, OpAlpha</code>: Same as above, but use different blend operation for color (RGB) and alpha (A) channels.</p>
+
+<p>Additionally, you can set upper-rendertarget blending modes. When
+using multiple render target (MRT) rendering, the regular syntax
+above sets up the same blending modes for all render targets. The following syntax can set up different blending modes for individual render targets, where <code>N</code> is the render target index (0..7). This feature works on most modern APIs/GPUs (DX11/12, GLCore, Metal, PS4):</p>
+
+<ul>
+<li><code>Blend N SrcFactor DstFactor</code></li>
+<li><code>Blend N SrcFactor DstFactor, SrcFactorA DstFactorA</code></li>
+<li><code>BlendOp N Op</code></li>
+<li><code>BlendOp N OpColor, OpAlpha</code></li>
+</ul>
+
+<p>
+<code>AlphaToMask On</code>: Turns on alpha-to-coverage. When MSAA is used, alpha-to-coverage modifies multisample coverage mask proportionally to the pixel Shader result alpha value. This is typically used for less aliased outlines than regular alpha test; useful for vegetation and other alpha-tested Shaders.</p>
+
+<h2>Blend operations</h2>
+
+<p>The following blend operations can be used:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Add</strong></td>
+	<td style="text-align:left;">Add source and destination together.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sub</strong></td>
+	<td style="text-align:left;">Subtract destination from source.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>RevSub</strong></td>
+	<td style="text-align:left;">Subtract source from destination.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min</strong></td>
+	<td style="text-align:left;">Use the smaller of source and destination.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max</strong></td>
+	<td style="text-align:left;">Use the larger of source and destination.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalClear</strong></td>
+	<td style="text-align:left;">Logical operation: Clear (0) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalSet</strong></td>
+	<td style="text-align:left;">Logical operation: Set (1) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalCopy</strong></td>
+	<td style="text-align:left;">Logical operation: Copy (s) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalCopyInverted</strong></td>
+	<td style="text-align:left;">Logical operation: Copy inverted (!s) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalNoop</strong></td>
+	<td style="text-align:left;">Logical operation: Noop (d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalInvert</strong></td>
+	<td style="text-align:left;">Logical operation: Invert (!d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalAnd</strong></td>
+	<td style="text-align:left;">Logical operation: And (s &amp; d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalNand</strong></td>
+	<td style="text-align:left;">Logical operation: Nand !(s &amp; d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalOr</strong></td>
+	<td style="text-align:left;">Logical operation: Or (s | d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalNor</strong></td>
+	<td style="text-align:left;">Logical operation: Nor !(s | d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalXor</strong></td>
+	<td style="text-align:left;">Logical operation: Xor (s ^ d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalEquiv</strong></td>
+	<td style="text-align:left;">Logical operation: Equivalence !(s ^ d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalAndReverse</strong></td>
+	<td style="text-align:left;">Logical operation: Reverse And (s &amp; !d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalAndInverted</strong></td>
+	<td style="text-align:left;">Logical operation: Inverted And (!s &amp; d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalOrReverse</strong></td>
+	<td style="text-align:left;">Logical operation: Reverse Or (s | !d) <strong>DX11.1 only</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>LogicalOrInverted</strong></td>
+	<td style="text-align:left;">Logical operation: Inverted Or (!s | d) <strong>DX11.1 only</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Blend factors</h2>
+
+<p>All following properties are valid for both SrcFactor &amp; DstFactor in the <strong>Blend</strong> command. <strong>Source</strong> refers to the calculated color, <strong>Destination</strong> is the color already on the screen. The blend factors are ignored if <strong>BlendOp</strong> is using logical operations.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>One</strong></td>
+	<td style="text-align:left;">The value of one - use this to let either the source or the destination color come through fully.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Zero</strong></td>
+	<td style="text-align:left;">The value zero - use this to remove either the source or the destination values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SrcColor</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by the source color value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SrcAlpha</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by the source alpha value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>DstColor</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by frame buffer source color value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>DstAlpha</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by frame buffer source alpha value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OneMinusSrcColor</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by (1 - source color).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OneMinusSrcAlpha</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by (1 - source alpha).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OneMinusDstColor</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by (1 - destination color).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OneMinusDstAlpha</strong></td>
+	<td style="text-align:left;">The value of this stage is multiplied by (1 - destination alpha).</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>Below are the most common <span class="tooltip"><strong>blend types</strong><span class="tooltiptext">A Blend Tree property that allows you to configure the Blend Tree for 1D, 2D or Direct blending. <a href="class-BlendTree.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#BlendType">Glossary</a></span></span></span>:</p>
+
+<pre><code>Blend SrcAlpha OneMinusSrcAlpha // Traditional transparency
+Blend One OneMinusSrcAlpha // Premultiplied transparency
+Blend One One // Additive
+Blend OneMinusDstColor One // Soft Additive
+Blend DstColor Zero // Multiplicative
+Blend DstColor SrcColor // 2x Multiplicative
+</code></pre>
+
+<h2>Alpha blending, alpha testing, alpha-to-coverage</h2>
+
+<p>For drawing mostly fully opaque or fully transparent objects, where transparency is defined by the Texture’s alpha channel (e.g. leaves, grass, chain fences etc.), several approaches are commonly used:</p>
+
+<h4>Alpha blending</h4>
+
+<figure>
+<img src="../uploads/SL/AlphaToMask-Blending.png" alt="Regular alpha blending">
+<figcaption>Regular alpha blending</figcaption>
+</figure>
+
+<p>This often means that objects have to be considered as “semitransparent”, and thus can’t use some of the <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> features (for example: deferred shading, can’t receive shadows). Concave or overlapping alpha-blended objects often also have draw ordering issues.</p>
+
+<p>Often, alpha-blended Shaders also set transparent <a href="SL-SubShaderTags.html">render queue</a>, and turn off depth writes. So the Shader code looks like:</p>
+
+<pre><code>// inside SubShader
+Tags { &quot;Queue&quot;=&quot;Transparent&quot; &quot;RenderType&quot;=&quot;Transparent&quot; &quot;IgnoreProjector&quot;=&quot;True&quot; }
+
+// inside Pass
+ZWrite Off
+Blend SrcAlpha OneMinusSrcAlpha
+</code></pre>
+
+<h4>Alpha testing/cutout</h4>
+
+<figure>
+<img src="../uploads/SL/AlphaToMask-clip.png" alt="clip() in pixel Shader">
+<figcaption>clip() in pixel Shader</figcaption>
+</figure>
+
+<p>By using <code>clip()</code> HLSL instruction in the pixel Shader, a pixel can be “discarded” or not based on some criteria. This means that object can still be considered as fully opaque, and has no draw ordering issues. However, this means that all pixels are fully opaque or transparent, leading to aliasing (“jaggies”).</p>
+
+<p>Often, alpha-tested Shaders also set cutout <a href="SL-SubShaderTags.html">render queue</a>, so the Shader code looks like this:</p>
+
+<pre><code>// inside SubShader
+Tags { &quot;Queue&quot;=&quot;AlphaTest&quot; &quot;RenderType&quot;=&quot;TransparentCutout&quot; &quot;IgnoreProjector&quot;=&quot;True&quot; }
+
+// inside CGPROGRAM in the fragment Shader:
+clip(textureColor.a - alphaCutoffValue);
+</code></pre>
+
+<h4>Alpha-to-coverage</h4>
+
+<figure>
+<img src="../uploads/SL/AlphaToMask-4x.png" alt="AlphaToMask On, at 4xMSAA">
+<figcaption>AlphaToMask On, at 4xMSAA</figcaption>
+</figure>
+
+<p>When using multisample anti-aliasing (MSAA, see <a href="class-QualitySettings.html">QualitySettings</a>), it is possible to improve the alpha testing approach by using alpha-to-coverage GPU functionality. This improves edge appearance, depending on the MSAA level used.</p>
+
+<p>This functionality works best on texures that are mostly opaque or transparent, and have very thin “partially transparent” areas (grass, leaves and similar).</p>
+
+<p>Often, alpha-to-coverage Shaders also set cutout <a href="SL-SubShaderTags.html">render queue</a>. So the Shader code looks like:</p>
+
+<pre><code>// inside SubShader
+Tags { &quot;Queue&quot;=&quot;AlphaTest&quot; &quot;RenderType&quot;=&quot;TransparentCutout&quot; &quot;IgnoreProjector&quot;=&quot;True&quot; }
+
+// inside Pass
+AlphaToMask On
+</code></pre>
+
+<h2>Example</h2>
+
+<p>Here is a small example Shader that adds a Texture to whatever is on the screen already:</p>
+
+<pre><code>Shader &quot;Simple Additive&quot; {
+    Properties {
+        _MainTex (&quot;Texture to blend&quot;, 2D) = &quot;black&quot; {}
+    }
+    SubShader {
+        Tags { &quot;Queue&quot; = &quot;Transparent&quot; }
+        Pass {
+            Blend One One
+            SetTexture [_MainTex] { combine texture }
+        }
+    }
+}
+</code></pre>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-CullAndDepth.html"></a></span><div class="tip">ShaderLab: Culling &amp; Depth Testing</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-PassTags.html"></a></span><div class="tip">ShaderLab: Pass Tags</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

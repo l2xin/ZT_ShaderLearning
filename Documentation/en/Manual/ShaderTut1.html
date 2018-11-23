@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Shaders: ShaderLab and fixed function shaders</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/ShaderTut1.html">English</a></li>
+<li><a href="/ja/current/Manual/ShaderTut1.html">日本語</a></li>
+<li><a href="/es/current/Manual/ShaderTut1.html">Español</a></li>
+<li><a href="/kr/current/Manual/ShaderTut1.html">한국어</a></li>
+<li><a href="/ru/current/Manual/ShaderTut1.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsTutorials.html">Graphics Tutorials</a></li>
+<li> Shaders: ShaderLab and fixed function shaders</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GraphicsTutorials.html"></a></span><div class="tip">Graphics Tutorials</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ShaderTut2.html"></a></span><div class="tip"> Shaders: vertex and fragment programs</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Shaders: ShaderLab and fixed function shaders</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This tutorial teaches you the first steps of creating your own shaders, to help you control the look of your game and optimise the performance of the graphics.</p>
+
+<p>Unity is equipped with a powerful shading and material language called <span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Unity’s declarative language for writing shaders. <a href="SL-Shader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ShaderLab">Glossary</a></span></span></span>. In style it is similar to CgFX and Direct3D Effects (.FX) languages - it describes everything needed to display a <span class="tooltip"><a href="class-Material.html">Material</a><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#material">Glossary</a></span></span></span>.</p>
+
+<p>Shaders describe properties that are exposed in Unity’s <a href="class-Material.html">Material Inspector</a> and multiple shader implementations (<span class="tooltip"><strong>SubShaders</strong><span class="tooltiptext">Each shader in Unity consists of a list of subshaders. When Unity has to display a mesh, it will find the shader to use, and pick the first subshader that runs on the user’s graphics card. <a href="SL-SubShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#subshader">Glossary</a></span></span></span>) targeted at different graphics hardware capabilities, each describing complete graphics hardware <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> state, and vertex/fragment programs to use. Shader programs are written in the high-level <a href="SL-ShadingLanguage.html">Cg/HLSL</a> programming language.</p>
+
+<p>In this tutorial we’ll describe how to write <em>very simple</em> shaders using so-called “fixed function” notation. In the <a href="ShaderTut2.html">next chapter</a> we’ll introduce vertex and fragment <a href="SL-ShaderPrograms.html">shader programs</a>. We assume that the reader has a basic understanding of <a href="http://opengl.org/documentation/red_book">OpenGL</a> or Direct3D render states, and has some knowledge of <a href="https://msdn.microsoft.com/en-us/library/bb509561.aspx">HLSL</a>, <a href="http://http.developer.nvidia.com/Cg/Cg_language.html">Cg</a>, <a href="http://www.opengl.org/documentation/glsl">GLSL</a> or <a href="https://developer.apple.com/library/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html">Metal</a> shader programming languages.</p>
+
+<h2>Getting started</h2>
+
+<p>To create a new shader, either choose <strong>Assets &gt; Create &gt; Shader &gt; Unlit Shader</strong> from the main menu, or duplicate an existing shader and work from that. The new shader can be edited by double-clicking it in the <span class="tooltip"><a href="ProjectView.html">Project View</a><span class="tooltiptext">A view that shows the contents of your Assets folder (Project tab) <a href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectView">Glossary</a></span></span></span>.</p>
+
+<p>Unity has a way of writing <em>very simple</em> shaders in so-called “fixed-function” notation. We’ll start with this for simplicity. Internally the fixed function shaders are converted to regular <a href="SL-ShaderPrograms.html">vertex and fragment programs</a> at shader import time.</p>
+
+<p>We’ll start with a very basic shader:</p>
+
+<pre><code>Shader &quot;Tutorial/Basic&quot; {
+    Properties {
+        _Color (&quot;Main Color&quot;, Color) = (1,0.5,0.5,1)
+    }
+    SubShader {
+        Pass {
+            Material {
+                Diffuse [_Color]
+            }
+            Lighting On
+        }
+    }
+}
+</code></pre>
+
+<p>This simple shader demonstrates one of the most basic shaders possible. It defines a color property called <strong>Main Color</strong> and assigns it a default pink color (red=100% green=50% blue=50% alpha=100%). It then renders the object by invoking a <strong>Pass</strong> and in that pass setting the diffuse material <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> to the property <strong>_Color</strong> and turning on per-vertex lighting.</p>
+
+<p>To test this shader, create a new material, select the shader from the drop-down menu (<strong>Tutorial-&gt;Basic</strong>) and assign the Material to some object. Tweak the color in the Material Inspector and watch the changes. Time to move onto more complex things!</p>
+
+<figure>
+<img src="../uploads/SL/ShaderTutSimplestLit.png" alt="">
+</figure>
+
+<h2>Basic vertex lighting</h2>
+
+<p>If you open an existing complex shader, it can be a bit hard to get a good overview. To get you started, we will dissect the built-in <strong>VertexLit</strong> shader that ships with Unity. This shader uses fixed-function pipeline to do standard per-vertex lighting.</p>
+
+<pre><code>Shader &quot;VertexLit&quot; {
+    Properties {
+        _Color (&quot;Main Color&quot;, Color) = (1,1,1,0.5)
+        _SpecColor (&quot;Spec Color&quot;, Color) = (1,1,1,1)
+        _Emission (&quot;Emmisive Color&quot;, Color) = (0,0,0,0)
+        _Shininess (&quot;Shininess&quot;, Range (0.01, 1)) = 0.7
+        _MainTex (&quot;Base (RGB)&quot;, 2D) = &quot;white&quot; { }
+    }
+
+    SubShader {
+        Pass {
+            Material {
+                Diffuse [_Color]
+                Ambient [_Color]
+                Shininess [_Shininess]
+                Specular [_SpecColor]
+                Emission [_Emission]
+            }
+            Lighting On
+            SeparateSpecular On
+            SetTexture [_MainTex] {
+                constantColor [_Color]
+                Combine texture * primary DOUBLE, texture * constant
+            }
+        }
+    }
+}
+
+</code></pre>
+
+<p>All shaders start with the keyword <span class="tooltip"><a href="SL-Shader.html">Shader</a><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> followed by a string that represents the name of the shader. This is the name that is shown in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. All code for this shader must be put within the curly braces after it: <strong>{ }</strong> (called a block).</p>
+
+<ul>
+<li>The name should be short and descriptive. It does not have to match the <strong>.shader</strong> file name.</li>
+<li>To put shaders in submenus in Unity, use slashes - e.g. <strong>MyShaders/Test</strong> would be shown as <strong>Test</strong> in a submenu called <strong>MyShaders</strong>, or <strong>MyShaders-&gt;Test</strong>.</li>
+</ul>
+
+<p>The shader is composed of a <span class="tooltip"><strong>Properties</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span> block followed by <strong>SubShader</strong> blocks. Each of these is described in sections below.</p>
+
+<h2>Properties</h2>
+
+<p>At the beginning of the shader block you can define any properties that artists can edit in the <a href="class-Material.html">Material Inspector</a>. In the <strong>VertexLit</strong> example the properties look like this:</p>
+
+<figure>
+<img src="../uploads/Main/ShaderTutProperties.png" alt="">
+</figure>
+
+<p>The properties are listed on separate lines within the <a href="SL-Properties.html">Properties</a> block. Each property starts with the internal name (<strong>Color</strong>, <strong>MainTex</strong>). After this in parentheses comes the name shown in the inspector and the type of the property. After that, the default value for this property is listed:</p>
+
+<figure>
+<img src="../uploads/Main/ShaderTutPropertyDetail.png" alt="">
+</figure>
+
+<p>The list of possible types are in the <a href="SL-Properties.html">Properties Reference</a>. The default value depends on the property type. In the example of a color, the default value should be a four component vector.</p>
+
+<p>We now have our properties defined, and are ready to start writing the actual shader.</p>
+
+<h2>The shader body</h2>
+
+<p>Before we move on, let’s define the basic structure of a shader file.</p>
+
+<p>Different graphic hardware has different capabilities. For example, some graphics cards support fragment programs and others don’t; some can lay down four textures per pass while the others can do only two or one; <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>. To allow you to make full use of whatever hardware your user has, a shader can contain multiple <strong>SubShaders</strong>. When Unity renders a shader, it will go over all subshaders and use the first one that the hardware supports.</p>
+
+<pre><code>Shader &quot;Structure Example&quot; {
+    Properties { /* ...shader properties... }
+    SubShader {
+        // ...subshader that requires DX11 / GLES3.1 hardware...
+    }
+    SubShader {
+        // ...subshader that might look worse but runs on anything :)
+    }
+}
+
+</code></pre>
+
+<p>This system allows Unity to support all existing hardware and maximize the quality on each one. It does, however, result in some long shaders.</p>
+
+<p>Inside each SubShader block you set the rendering state shared by all passes; and define rendering passes themselves. A complete list of available commands can be found in the <a href="SL-SubShader.html">SubShader Reference</a>.</p>
+
+<h2>Passes</h2>
+
+<p>Each subshader is a collection of passes. For each pass, the object geometry is rendered, so there must be at least one pass. Our VertexLit shader has just one pass:</p>
+
+<pre><code>// ...snip...
+Pass {
+    Material {
+        Diffuse [_Color]
+        Ambient [_Color]
+        Shininess [_Shininess]
+        Specular [_SpecColor]
+        Emission [_Emission]
+    }
+    Lighting On
+    SeparateSpecular On
+    SetTexture [_MainTex] {
+        constantColor [_Color]
+        Combine texture * primary DOUBLE, texture * constant
+    }
+}
+// ...snip...
+
+</code></pre>
+
+<p>Any commands defined in a pass configures the graphics hardware to render the geometry in a specific way.</p>
+
+<p>In the example above we have a <strong><a href="SL-Material.html">Material</a></strong> block that binds our property values to the fixed function lighting material settings. The command <strong>Lighting On</strong> turns on the standard vertex lighting, and <strong>SeparateSpecular On</strong> enables the use of a separate color for the specular highlight.</p>
+
+<p>All of these command so far map very directly to the fixed function OpenGL/Direct3D hardware model. Consult <a href="http://opengl.org/documentation/red_book">OpenGL red book</a> for more information on this.</p>
+
+<p>The next command, <strong><a href="SL-SetTexture.html">SetTexture</a></strong>, is very important. These commands define the textures we want to use and how to mix, combine and apply them in our rendering. <strong>SetTexture</strong> command is followed by the property name of the texture we would like to use (<strong>_MainTex</strong> here) This is followed by a <strong>combiner block</strong> that defines how the texture is applied. The commands in the combiner block are executed for each <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> that is rendered on screen.</p>
+
+<p>Within this block we set a constant color value, namely the Color of the Material, <strong>_Color</strong>. We’ll use this constant color below.</p>
+
+<p>In the next command we specify how to mix the texture with the color values. We do this with the <strong>Combine</strong> command that specifies how to blend the texture with another one or with a color. Generally it looks like this:
+ <strong>Combine ColorPart, AlphaPart</strong>
+</p>
+
+<p>Here <strong>ColorPart</strong> and <strong>AlphaPart</strong> define blending of color (RGB) and alpha (A) components respectively. If <strong>AlphaPart</strong> is omitted, then it uses the same blending as <strong>ColorPart</strong>.</p>
+
+<p>In our VertexLit example:
+ <strong>Combine texture * primary DOUBLE, texture * constant</strong>
+</p>
+
+<p>Here <span class="tooltip"><strong>texture</strong><span class="tooltiptext">An image used when rendering a GameObject, Sprite, or UI element. Textures are often applied to the surface of a mesh to give it visual detail. <a href="class-TextureImporter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#texture">Glossary</a></span></span></span> is the color coming from the current texture (here <strong>_MainTex</strong>). It is multiplied (*) with the <strong>primary</strong> vertex color. Primary color is the vertex lighting color, calculated from the Material values above. Finally, the result is multiplied by two to increase lighting intensity (<strong>DOUBLE</strong>). The alpha value (after the comma) is <strong>texture</strong> multiplied by <strong>constant</strong> value (set with <strong>constantColor</strong> above). Another often used combiner mode is called <strong>previous</strong> (not used in this shader). This is the result of any previous <strong>SetTexture</strong> step, and can be used to combine several textures and/or colors with each other.</p>
+
+<h2>Summary</h2>
+
+<p>Our VertexLit shader configures standard vertex lighting and sets up the texture combiners so that the rendered lighting intensity is doubled.</p>
+
+<p>We could put more passes into the shader, they would get rendered one after the other. For now, though, that is not nessesary as we have the desired effect. We only need one SubShader as we make no use of any advanced features - this particular shader will work on any graphics card that Unity supports.</p>
+
+<p>The VertexLit shader is one of the most basic shaders that we can think of. We did not use any hardware specific operations, nor did we utilize any of the more special and cool commands that ShaderLab and Cg/HLSL has to offer.</p>
+
+<p>In the <a href="ShaderTut2.html">next chapter</a> we’ll proceed by explaining how to write custom vertex &amp; fragment programs using Cg/HLSL language.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GraphicsTutorials.html"></a></span><div class="tip">Graphics Tutorials</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ShaderTut2.html"></a></span><div class="tip"> Shaders: vertex and fragment programs</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

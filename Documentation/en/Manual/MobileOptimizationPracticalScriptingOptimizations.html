@@ -1,0 +1,638 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Optimizing Scripts</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/MobileOptimizationPracticalScriptingOptimizations.html">English</a></li>
+<li><a href="/ja/current/Manual/MobileOptimizationPracticalScriptingOptimizations.html">日本語</a></li>
+<li><a href="/es/current/Manual/MobileOptimizationPracticalScriptingOptimizations.html">Español</a></li>
+<li><a href="/kr/current/Manual/MobileOptimizationPracticalScriptingOptimizations.html">한국어</a></li>
+<li><a href="/ru/current/Manual/MobileOptimizationPracticalScriptingOptimizations.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="MobileDeveloperChecklist.html">Mobile Developer Checklist</a></li>
+<li><a href="MobileOptimizationPracticalGuide.html"> Practical guide to optimization for mobiles</a></li>
+<li>Optimizing Scripts</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationPracticalRenderingOptimizations.html"></a></span><div class="tip">Rendering Optimizations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Experimental.html"></a></span><div class="tip"> Experimental</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Optimizing Scripts</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This section demonstrates how you would go about optimizing the actual <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> and methods your game uses, and it also goes into detail about the reasons why the optimizations work, and why applying them will benefit you in certain situations.</p>
+
+<h2>
+<a href="Profiler.html">Profiler</a> is King</h2>
+
+<p>There is no such thing as a list of boxes to check that will ensure your project runs smoothly. To optimize a slow project, you have to profile to find specific offenders that take up a disproportionate amount of time. Trying to optimize without profiling or without thoroughly understanding the results that the profiler gives is like trying to optimize with a blindfold on.</p>
+
+<h3>Internal mobile profiler</h3>
+
+<p>You can use the <a href="iphone-InternalProfiler.html">internal profiler</a> to figure out what kind of process is slowing your game down, be it physics, scripts, or <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>, but you can’t drill down into specific scripts and methods to find the actual offenders. However, by building switches into your game which enable and disable certain functionality, you can narrow down the worst offenders significantly. For example, if you remove the enemy characters’ AI script and the framerate doubles, you know that the script, or something that it brings into the game, has to be optimized. The only problem is that you may have to try a lot of different things before you find the problem.</p>
+
+<p>For more about profiling on mobile devices, see the <a href="MobileOptimizationPracticalGuide.html">profiling section</a>.</p>
+
+<h2>Optimized by Design</h2>
+
+<p>Attempting to develop something which is fast from the beginning is risky, because there is a trade-off between wasting time making things that would be just as fast if they weren’t optimized and making things which will have to be cut or replaced later because they are too slow. It takes intuition and knowledge of the hardware to make good decisions in this regard, especially because every game is different and what might be a crucial optimization for one game may be a flop in another.</p>
+
+<h3>Object Pooling</h3>
+
+<p>We gave object pooling as an example of the intersection between good gameplay and good code design in the <a href="MobileOptimizationScriptingMethods.html">introduction to optimized scripting methods</a>. Using object pooling for ephemeral objects is faster than creating and destroying them, because it makes memory allocation simpler and removes dynamic memory allocation overhead and Garbage Collection, or GC.</p>
+
+<h3>Memory Allocation</h3>
+
+<h4>Simple Explanation of what Automatic Memory Management is</h4>
+
+<p>Scripts you write in Unity use automatic memory management. Just about all scripting languages do this. In contrast, lower level languages such as C and C++ use manual memory allocation, where the programmer is allowed to read and write from memory addresses directly, and as a consequence they are responsible for removing every object they create. For example, if you create objects in your C++, you have to manually de-allocate the memory that they take up when you are done with them. In a scripting language, it is enough to say <code>objectReference = null;</code>
+</p>
+
+<p>
+<strong>Note:</strong> If I have a game object variable like <code>GameObject myGameObject;</code> or <code>var myGameObject : <span class="tooltip">__GameObject__<span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject's functionality is defined by the Components attached to it. [More info](class-GameObject.html)&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in [Glossary](Glossary.html#GameObject)&lt;/span&gt;</span></span>;</code>, why isn’t it destroyed when I say <code>myGameObject = null;</code>?</p>
+
+<ul>
+<li>The game object is still referenced by Unity, because Unity has to maintain a reference to it in order for it to be drawn, updated, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>. Calling <code>Destroy(myGameObject);</code> removes that reference and deletes the object.</li>
+</ul>
+
+<p>But if you create an object that Unity has no idea about, for example, an instance of a class that does not inherit from anything (in contrast, most classes or “script components” inherit from MonoBehaviour) and then set your reference variable to it to null, what actually happens is that the object is lost as far as your script and Unity are concerned; they can’t access it and will never see it again, but it stays in memory. Then, some time later, the Garbage Collector runs, and it removes anything in memory that is not referenced anywhere. It is able to do this because, behind the <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, the number of references to each block of memory is kept track of. This is one reason why scripting languages are slower than C++.</p>
+
+<ul>
+<li>Read more about <a href="UnderstandingAutomaticMemoryManagement.html">Automatic Memory Management and the Garbage Collector</a>.</li>
+</ul>
+
+<h3>How to Avoid Allocating Memory</h3>
+
+<p>Every time an object is created, memory is allocated. Very often in code, you are creating objects without even knowing it.</p>
+
+<ul>
+<li>
+<code>Debug.Log(&quot;boo&quot; + &quot;hoo&quot;);</code> creates an object.
+
+<ul>
+<li>Use <code>System.String.Empty</code> instead of <code>&quot;&quot;</code> when dealing with lots of strings.</li>
+</ul>
+</li>
+<li>Immediate Mode GUI (UnityGUI) is slow and should not be used at any time when performance is an issue.</li>
+<li>Difference between class and struct:</li>
+</ul>
+
+<p>Classes are objects and behave as references. If <strong>Foo</strong> is a class and</p>
+
+<pre><code>  Foo foo = new Foo();
+  MyFunction(foo); 
+</code></pre>
+
+<p>then <strong>MyFunction</strong> will receive a reference to the original Foo object that was allocated on the heap. Any changes to <strong>foo</strong> inside <strong>MyFunction</strong> will be visible anywhere foo is referenced.</p>
+
+<p>Classes are data and behave as such. If <strong>Foo</strong> is a struct and</p>
+
+<pre><code>  Foo foo = new Foo();
+  MyFunction(foo); 
+</code></pre>
+
+<p>then <strong>MyFunction</strong> will receive a copy of <strong>foo</strong>. <strong>foo</strong> is never allocated on the heap and never garbage collected. If <strong>MyFunction</strong> modifies it’s copy of <strong>foo</strong>, the other <strong>foo</strong> is unaffected.</p>
+
+<ul>
+<li>Objects which stick around for a long time should be classes, and objects which are ephemeral should be structs. Vector3 is probably the most famous struct. If it were a class, everything would be a lot slower.</li>
+</ul>
+
+<h3>Why Object Pooling is Faster</h3>
+
+<p>The upshot of this is that <strong>using Instantiate and Destroy a lot gives the Garbage Collector a lot to do</strong>, and this can cause a “hitch” in gameplay. As the <a href="UnderstandingAutomaticMemoryManagement.html">Automatic Memory Management</a> page explains, there are other ways to get around the common performance hitches that surround Instantiate and Destroy, such as triggering the Garbage Collector manually when nothing is going on, or triggering it very often so that a large backlog of unused memory never builds up.</p>
+
+<p>Another reason is that, when a specific <span class="tooltip"><strong>prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> is instantiated for the first time, sometimes additional things have to be loaded into RAM, or textures and meshes need to be uploaded to the GPU. This can cause a hitch as well, and with object pooling, this happens when the level loads instead of during gameplay.</p>
+
+<p>Imagine a puppeteer who has an infinite box of puppets, where every time the script calls for a character to appear, they get a new copy of its puppet out of the box, and every time the character exits the stage, they toss the current copy. Object pooling is the equivalent of getting all the puppets out of the box before the show starts, and leaving them on the table behind the stage whenever they are not supposed to be visible.</p>
+
+<h3>Why Object Pooling can be Slower</h3>
+
+<p>One issue is that the creation of a pool reduces the amount of heap memory available for other purposes; so if you keep allocating memory on top of the pools you just created, you might trigger garbage collection even more often. Not only that, every collection will be slower, because the time taken for a collection increases with the number of live objects. With these issues in mind, it should be apparent that performance will suffer if you allocate pools that are too large or keep them active when the objects they contain will not be needed for some time. Furthermore, many types of objects don’t lend themselves well to object pooling. For example, the game may include spell effects that persist for a considerable time or enemies that appear in large numbers but which are only killed gradually as the game progresses. In such cases, the performance overhead of an object pool greatly outweighs the benefits and so it should not be used.</p>
+
+<h3>Implementation</h3>
+
+<p>Here’s a simple side by side comparison of a script for a simple projectile, one using Instantiation, and one using Object Pooling.</p>
+
+<pre><code> // GunWithInstantiate.js                                                  // GunWithObjectPooling.js
+
+ #pragma strict                                                            #pragma strict
+
+ var prefab : ProjectileWithInstantiate;                                   var prefab : ProjectileWithObjectPooling;
+                                                                           var maximumInstanceCount = 10;
+ var power = 10.0;                                                         var power = 10.0;
+
+                                                                           private var instances : ProjectileWithObjectPooling[];
+
+                                                                           static var stackPosition = Vector3(-9999, -9999, -9999);
+
+                                                                           function Start () {
+                                                                               instances = new ProjectileWithObjectPooling[maximumInstanceCount];
+                                                                               for(var i = 0; i &lt; maximumInstanceCount; i++) {
+                                                                                   // place the pile of unused objects somewhere far off the map
+                                                                                   instances[i] = Instantiate(prefab, stackPosition, Quaternion.identity);
+                                                                                   // disable by default, these objects are not active yet.
+                                                                                   instances[i].enabled = false;
+                                                                               }
+                                                                           }
+
+ function Update () {                                                      function Update () {
+     if(Input.GetButtonDown(&quot;Fire1&quot;)) {                                        if(Input.GetButtonDown(&quot;Fire1&quot;)) {
+         var instance : ProjectileWithInstantiate =                                var instance : ProjectileWithObjectPooling = GetNextAvailiableInstance();
+             Instantiate(prefab, transform.position, transform.rotation);          if(instance != null) {
+         instance.velocity = transform.forward * power;                                instance.Initialize(transform, power);
+     }                                                                             }
+ }                                                                             }
+                                                                           }
+
+                                                                           function GetNextAvailiableInstance () : ProjectileWithObjectPooling {
+                                                                               for(var i = 0; i &lt; maximumInstanceCount; i++) {
+                                                                                   if(!instances[i].enabled) return instances[i];
+                                                                               }
+                                                                               return null;
+                                                                           }
+
+
+
+
+ // ProjectileWithInstantiate.js                                           // ProjectileWithObjectPooling.js
+
+ #pragma strict                                                            #pragma strict
+
+ var gravity = 10.0;                                                       var gravity = 10.0;
+ var drag = 0.01;                                                          var drag = 0.01;
+ var lifetime = 10.0;                                                      var lifetime = 10.0;
+
+ var velocity : Vector3;                                                   var velocity : Vector3;
+
+ private var timer = 0.0;                                                  private var timer = 0.0;
+
+                                                                           function Initialize(parent : Transform, speed : float) {
+                                                                               transform.position = parent.position;
+                                                                               transform.rotation = parent.rotation;
+                                                                               velocity = parent.forward * speed;
+                                                                               timer = 0;
+                                                                               enabled = true;
+                                                                           }
+
+ function Update () {                                                      function Update () {
+     velocity -= velocity * drag * Time.deltaTime;                             velocity -= velocity * drag * Time.deltaTime;
+     velocity -= Vector3.up * gravity * Time.deltaTime;                        velocity -= Vector3.up * gravity * Time.deltaTime;
+     transform.position += velocity * Time.deltaTime;                          transform.position += velocity * Time.deltaTime;
+
+     timer += Time.deltaTime;                                                  timer += Time.deltaTime;
+     if(timer &gt; lifetime) {                                                    if(timer &gt; lifetime) {
+                                                                                   transform.position = GunWithObjectPooling.stackPosition;
+         Destroy(gameObject);                                                      enabled = false;
+     }                                                                         }
+ }                                                                         }
+
+
+</code></pre>
+
+<p>Of course, for a large, complicated game, you will want to make a generic solution that works for all your prefabs.</p>
+
+<h2>Another Example: Coin Party!</h2>
+
+<p>The example of “Hundreds of rotating, dynamically lit, collectable coins onscreen at once” which was given in the <a href="MobileOptimizationScriptingMethods.html">Scripting Methods</a> section will be used to demonstrate how script code, Unity <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> like the <span class="tooltip"><strong>Particle System</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>, and custom <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> can be used to create a stunning effect without taxing the weak mobile hardware.</p>
+
+<p>Imagine that this effect lives in the context of a 2D sidescrolling game with tons of coins that fall, bounce, and rotate. The coins are dynamically lit by point lights. We want to capture the light glinting off the coins to make our game more impressive.</p>
+
+<p>If we had powerful hardware, we could use a standard approach to this problem. Make every coin an object, shade the object with either vertex-lit, forward, or deferred lighting, and then add glow on top as an image effect to get the brightly reflecting coins to bleed light onto the surrounding area.</p>
+
+<p>But mobile hardware would choke on that many objects, and a glow effect is totally out of the question. So what do we do?</p>
+
+<figure>
+<img src="../uploads/Main/MobileOptimization-coinsLighting.jpg" alt="">
+</figure>
+
+<h3>Animated Sprite Particle System</h3>
+
+<p>If you want to display a lot of objects which all move in a similar way and can never be carefully inspected by the player, you might be able to render large amounts of them in no time using a particle system. Here are a few stereotypical applications of this technique:</p>
+
+<ul>
+<li>Collectables or Coins</li>
+<li>Flying Debris</li>
+<li>Hordes or Flocks of Simple Enemies</li>
+<li>Cheering Crowds</li>
+<li>Hundreds of Projectiles or Explosions</li>
+</ul>
+
+<p>There is a free editor extension called <span class="tooltip"><a href="http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E">Sprite Packer</a><span class="tooltiptext">A facility that packs graphics from several sprite textures tightly together within a single texture known as an atlas. Unity provides a Sprite Packer utility to automate the process of generating atlases from the individual sprite textures. <a href="SpritePacker.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SpritePacker">Glossary</a></span></span></span> that facilitates the creation of animated <span class="tooltip"><strong>sprite</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span> particle systems. It renders frames of your object to a texture, which can then be used as an animated <strong>sprite</strong> sheet on a particle system. For our use case, we would use it on our rotating coin.</p>
+
+<figure>
+<img src="../uploads/Main/MobileOptimization-coinsParts.jpg" alt="">
+</figure>
+
+<h3>Reference Implementation</h3>
+
+<p>Included in the <a href="http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E">Sprite Packer</a> project is an example that demonstrates a solution to this exact problem.</p>
+
+<p>It uses a family of <span class="tooltip"><strong>assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> of all different kinds to achieve a dazzling effect on a low computing budget:</p>
+
+<ul>
+<li>A control script</li>
+<li>Specialized textures created from the output of the SpritePacker</li>
+<li>A specialized shader which is intimately connected with both the control script and the texture.</li>
+</ul>
+
+<p>A readme file is included with the example which attempts to explain why and how the system works, outlining the process that was used to determine what features were needed and how they were implemented. This is that file:</p>
+
+<p>The problem was defined as “Hundreds of rotating, dynamically lit, collectable coins onscreen at once.”</p>
+
+<p>The naive approach is to Instantiate a bunch of copies of a coin prefab, but instead we are going to use particles to render our coins. However, this introduces a number of challenges that we have to overcome.</p>
+
+<ul>
+<li>Viewing angles are a problem because particles don’t have them.
+
+<ul>
+<li>We assume that the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> stays right-side up and the coins rotate around the Y-axis.</li>
+<li>We create the illusion of coin rotation with an animated texture that we packed using the SpritePacker.
+
+<ul>
+<li>This introduces a new problem: Monotony of rotating coins all rotating at the same speed and in the same direction</li>
+<li>We keep track of rotation and lifetime ourselves and “render” rotation to the particle lifetimes in script to fix this.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Normals are a problem because particles don’t have them, and we need real time lighting.
+
+<ul>
+<li>Generate a single normal vector for the face of the coin in each animation frame generated by the Sprite Packer.</li>
+<li>Do Blinn-Phong lighting for each particle in script, based on the normal vector grabbed from the above list.</li>
+<li>Apply the result to the particle as a color.</li>
+<li>Handle the face of the coin and the rim of the coin separately in the shader.
+Introduces a new problem: How does the shader know where the rim is, and what part of the rim it’s on?
+
+<ul>
+<li>Can’t use UV’s, they are already used for the animation.</li>
+<li>Use a texture map.
+
+<ul>
+<li>Need Y-position relative to coin.</li>
+<li>Need binary “on face” vs “on rim”.</li>
+</ul>
+</li>
+<li>We don’t want to introduce another texture, more texture reads, more texture memory.</li>
+<li>Combine needed information into one channel and replace one of the texture’s color channels with it.
+
+<ul>
+<li>Now our coin is the wrong color! What do we do?</li>
+<li>Use the shader to reconstruct missing channel as a combination of the two remaining channels.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Say we want glow from light glinting off our coins. Post process is too expensive for mobile devices.
+
+<ul>
+<li>Create another particle system and give it a softened, glowy version of the coin animation.</li>
+<li>Color a glow only when the corresponding coin’s color is super bright.</li>
+<li>Can’t have glow rendered on every coin every frame - fill rate killer.
+
+<ul>
+<li>Reset glows every frame, only position ones with brightness &gt; 0.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Physics is a problem, collecting coins is a problem - particles don’t collide very well.
+
+<ul>
+<li>Could use built-in particle <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span>?</li>
+<li>Instead, just wrote collision into the script.</li>
+</ul>
+</li>
+<li>Finally, we have one more problem - this script does a lot, and its getting slow!
+
+<ul>
+<li>Performance scales linearly with number of active coins.
+
+<ul>
+<li>Limit maximum coins. This works well enough to acheive our goal: 100 coins, 2 lights, runs really fast on mobile devices.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Things to try to optimize further:
+
+<ul>
+<li>Instead of calculating lighting for every coin individually, cut the world into chunks and calculate lighting conditions for every rotation frame in every chunk.
+
+<ul>
+<li>Use as a lookup table with coin position and coin rotation as indices.</li>
+<li>Increase fidelity by using bilinear <span class="tooltip"><strong>interpolation</strong><span class="tooltiptext">The estimation of values that determine the shape of an animation curve between two keys. <a href="TimelineChangingInterpolation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#interpolation">Glossary</a></span></span></span> with position.</li>
+<li>Sparse updates on the lookup table, or, entirely static lookup table.</li>
+<li>Use <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> for this?
+*Instead of calculating lighting in script, use normal-mapped particles?</li>
+<li>Use “Display Normals” shader to bake frame animation of normals.</li>
+<li>Limits number of lights.</li>
+<li>Fixes slow script problem.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>The end goal of this example or “moral of the story” is that if there is something which your game really needs, and it causes lag when you try to achieve it through conventional means, that doesn’t mean that it is impossible, it just means that you have to put in some work on a system of your own that runs much faster.</p>
+
+<h3>Techniques for Managing Thousands of Objects</h3>
+
+<p>These are specific scripting optimizations which are applicable in situations where hundreds or thousands of dynamic objects are involved. Applying these techniques to every script in your game is a terrible idea; they should be reserved as tools and design guidelines for large scripts which handle tons of objects or data at run time.</p>
+
+<h4>Avoid or minimize O(n2) operations on large data sets</h4>
+
+<p>In computer science, the Order of an operation, denoted by O(n), refers to the way that the number of times that the operation has to be evaluated increases as the number of objects it is applied to (n) increases.</p>
+
+<p>For example, consider a basic sorting algorithm. I have <strong>n</strong> numbers and I want to sort them from smallest to largest.</p>
+
+<pre><code> void sort(int[] arr) {
+    int i, j, newValue;
+    for (i = 1; i &lt; arr.Length; i++) {
+        // record
+        newValue = arr[i];
+        //shift everything that is larger to the right
+        j = i;
+        while (j &gt; 0 &amp;&amp; arr[j - 1] &gt; newValue) {
+            arr[j] = arr[j - 1];
+            j--;
+        }
+        // place recorded value to the left of large values
+        arr[j] = newValue;
+    }
+ }
+</code></pre>
+
+<p>The important part is that there are two loops here, one inside the other.</p>
+
+<pre><code> for (i = 1; i &lt; arr.Length; i++) {
+    ...
+    j = i;
+    while (j &gt; 0 &amp;&amp; arr[j - 1] &gt; newValue) {
+        ...
+        j--;
+    }
+ }
+</code></pre>
+
+<p>Let’s assume that we give the algorithm the worst possible case: the input numbers are sorted, but in reverse order. In that case, the innermost loop will run <strong>j</strong> times. On average, as <strong>i</strong> goes from <strong>1</strong> to <strong>arr.Length–1</strong>, <strong>j</strong> will be <strong>arr.Length/2</strong>. In terms of <strong>O(n)</strong>, <strong>arr.Length</strong> is our <strong>n</strong>, so, in total, the innermost loop runs <strong>n<em>n/2</em>* times, or </strong>n<sup>2</sup>/2** times. But in <strong>O(n)</strong> terms, we chuck all constants like <strong>1/2</strong>, because we want to talk about the way that the number of operations increases, not the actual number of operations. So the algorithm is <strong>O(n<sup>2</sup>)</strong>. The order of an operation matters a lot if the data set is large, because the number of operations can explode exponentially.</p>
+
+<p>An in-game example of an <strong>O(n<sup>2</sup>)</strong> operation is 100 enemies, where the AI of each enemy takes the movements of every other enemy into account. It might be faster to divide the map into cells, record the movement of each enemy into the nearest cell, and then have each enemy sample the nearest few cells. That would be an <strong>O(n)</strong> operation.</p>
+
+<h4>Cache references instead of performing unnecessary searches</h4>
+
+<p>Say you have 100 enemies in your game, and they all move towards the player.</p>
+
+<pre><code> // EnemyAI.js
+ var speed = 5.0;
+ 
+ function Update () {
+    transform.LookAt(GameObject.FindWithTag(&quot;Player&quot;).transform);
+    // this would be even worse:
+    //transform.LookAt(FindObjectOfType(Player).transform);
+ 
+    transform.position += transform.forward * speed * Time.deltaTime;
+ }
+</code></pre>
+
+<p>That could be slow, if there are enough of them running at the same time. Little known fact: all of the component accessors in MonoBehaviour, things like <strong>transform</strong>, <strong>renderer</strong>, and <strong>audio</strong>, are equivalent to their <strong>GetComponent(Transform)</strong> counterparts, and they are actually a bit slow. <strong>GameObject.FindWithTag</strong> has been optimized, but in some cases, for example, in inner loops, or on scripts that run on a lot of instances, this script might be a bit slow.</p>
+
+<p>This is a better version of the script.</p>
+
+<pre><code> // EnemyAI.js
+ var speed = 5.0;
+ 
+ private var myTransform : Transform;
+ private var playerTransform : Transform;
+ 
+ function Start () {
+    myTransform = transform;
+    playerTransform = GameObject.FindWithTag(&quot;Player&quot;).transform;
+ }
+ 
+ function Update () {
+    myTransform.LookAt(playerTransform);
+ 
+    myTransform.position += myTransform.forward * speed * Time.deltaTime;
+ }
+
+</code></pre>
+
+<h4>Minimize expensive math functions</h4>
+
+<p>Transcendental functions (<strong>Mathf.Sin</strong>, <strong>Mathf.Pow</strong>, etc), Division, and Square Root all take about 100x the time of a multiplication. (In the grand scheme of things, no time at all, but if you are calling them thousands of times per frame it can add up).</p>
+
+<p>The most common case of this is vector normalization. If you are normalizing the same vector over and over, consider normalizing it once instead and caching the result for use later.</p>
+
+<p>If you are both using the length of a vector and normalizing it, it would be faster to obtain the normalized vector by multiplying the vector by the reciprocal of the length rather than by using the <strong>.normalized</strong> property.</p>
+
+<p>If you are comparing distances, you don’t have to compare the actual distances. You can compare the squares of the distances instead by using the <strong>.sqrMagnitude</strong> property and save a square root or two.</p>
+
+<p>Another one, if you are dividing over and over by a constant c, you can multiply by the reciprocal instead. Calculate the reciprocal first by doing <strong>1.0/c</strong>.</p>
+
+<h4>Only execute expensive operations occasionally, e.g. Physics.Raycast()</h4>
+
+<p>If you have to do something expensive, you might be able to optimize it by doing it less often and caching the result. For example, consider a projectile script that uses Raycast:</p>
+
+<pre><code> // Bullet.js
+ var speed = 5.0;
+ 
+ function FixedUpdate () {
+    var distanceThisFrame = speed * Time.fixedDeltaTime;
+    var hit : RaycastHit;
+ 
+    // every frame, we cast a ray forward from where we are to where we will be next frame
+    if(Physics.Raycast(transform.position, transform.forward, hit, distanceThisFrame)) {
+        // Do hit
+    } else {
+        transform.position += transform.forward * distanceThisFrame;
+    }
+ }
+</code></pre>
+
+<p>Right away, we could improve the script by replacing FixedUpdate with Update and fixedDeltaTime with deltaTime. FixedUpdate refers to the Physics update, which happens more often than the frame update. But let’s go even further by only raycasting every n seconds. A smaller n gives greater temporal resolution, and a bigger n gives better performance. The bigger and slower your targets are, the bigger n can be before temporal aliasing occurs. (Appearance of latency, where the player hit the target, but the explosion appears where the target used to be n seconds ago, or the player hit the target, but the projectile goes right through).</p>
+
+<pre><code> // BulletOptimized.js
+ var speed = 5.0;
+ var interval = 0.4; // this is 'n', in seconds.
+ 
+ private var begin : Vector3;
+ private var timer = 0.0;
+ private var hasHit = false;
+ private var timeTillImpact = 0.0;
+ private var hit : RaycastHit;
+ 
+ // set up initial interval
+ function Start () {
+    begin = transform.position;
+    timer = interval+1;
+ }
+ 
+ function Update () {
+    // don't allow an interval smaller than the frame.
+    var usedInterval = interval;
+    if(Time.deltaTime &gt; usedInterval) usedInterval = Time.deltaTime;
+ 
+    // every interval, we cast a ray forward from where we were at the start of this interval
+    // to where we will be at the start of the next interval
+    if(!hasHit &amp;&amp; timer &gt;= usedInterval) {
+        timer = 0;
+        var distanceThisInterval = speed * usedInterval;
+ 
+        if(Physics.Raycast(begin, transform.forward, hit, distanceThisInterval)) {
+            hasHit = true;
+            if(speed != 0) timeTillImpact = hit.distance / speed;
+        }
+ 
+        begin += transform.forward * distanceThisInterval;
+    }
+ 
+    timer += Time.deltaTime;
+ 
+    // after the Raycast hit something, wait until the bullet has traveled
+    // about as far as the ray traveled to do the actual hit
+    if(hasHit &amp;&amp; timer &gt; timeTillImpact) {
+        // Do hit
+    } else {
+        transform.position += transform.forward * speed * Time.deltaTime;
+    }
+ }
+</code></pre>
+
+<h4>Minimize callstack overhead in inner loops</h4>
+
+<p>Just calling a function has a little bit of overhead in itself. If you are calling things like <strong>x = Mathf.Abs(x)</strong> thousands of times per frame, it might be better to just do <strong>x = (x &gt; 0 ? x : -x);</strong> instead.</p>
+
+<h3>Optimizing Physics Performance</h3>
+
+<p>The NVIDIA PhysX <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> used by Unity is available on mobiles, but the performance limits of the hardware will be reached more easily on mobile platforms than desktops.</p>
+
+<p>Here are some tips for tuning physics to get better performance on mobiles:-</p>
+
+<ul>
+<li>You can adjust the <strong><span class="tooltip"><strong>Fixed Timestep</strong><span class="tooltiptext">A customizable framerate-independent interval that dictates when physics calculations and FixedUpdate() events are performed. <a href="class-TimeManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FixedTimestep">Glossary</a></span></span></span></strong> setting (in the <span class="tooltip"><a href="class-TimeManager.html">Time manager</a><span class="tooltiptext">A Unity Settings Manager that lets you set a number of properties that control timing within your game. <a href="class-TimeManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimeManager">Glossary</a></span></span></span>) to reduce the time spent on physics updates. Increasing the timestep will reduce the CPU overhead at the expense of the accuracy of the physics. Often, lower accuracy is an acceptable tradeoff for increased speed.</li>
+<li>Set the <strong>Maximum Allowed Timestep</strong> in the <a href="class-TimeManager.html">Time manager</a> in the 8–10fps range to cap the time spent on physics in the worst case scenario.</li>
+<li><span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> colliders have a much higher performance overhead than primitive colliders, so use them sparingly. It is often possible to approximate the shape of a <strong>mesh</strong> by using child objects with primitive colliders. The child colliders will be controlled collectively as a single compound <span class="tooltip"><strong>collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> by the <span class="tooltip"><strong>rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> on the parent.</li>
+<li>While <span class="tooltip"><strong>wheel colliders</strong><span class="tooltiptext">A special collider for grounded vehicles. It has built-in collision detection, wheel physics, and a slip-based tire friction model. It can be used for objects other than wheels, but it is specifically designed for vehicles with wheels. <a href="class-WheelCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WheelCollider">Glossary</a></span></span></span> are not strictly colliders in the sense of solid objects, they nonetheless have a high CPU overhead.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationPracticalRenderingOptimizations.html"></a></span><div class="tip">Rendering Optimizations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Experimental.html"></a></span><div class="tip"> Experimental</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

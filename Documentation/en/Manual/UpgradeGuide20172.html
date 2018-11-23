@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 2017.2</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide20172.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide20172.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide20172.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide20172.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide20172.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 2017.2</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20173.html"></a></span><div class="tip">Upgrading to Unity 2017.3</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20171.html"></a></span><div class="tip">Upgrading to Unity 2017.1</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 2017.2</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page lists any changes in 2017.2 which might affect existing projects when you upgrade from earlier versions of Unity.</p>
+
+<p>For example:</p>
+
+<ul>
+<li><p>Changes in data format which may require re-baking.</p></li>
+<li><p>Changes to the meaning or behavior of any existing functions, parameters or <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> values.</p></li>
+<li><p>Deprecation of any function or feature. (Alternatives are suggested.)</p></li>
+</ul>
+
+<hr>
+
+<p><strong>MonoBehaviour.OnValidate is now called when MonoBehaviour is added to a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in the Editor</strong></p>
+
+<p>MonoBehaviour.OnValidate is called when a <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> loads, when GameObjects are duplicated or when a value changes in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. It is now also called when adding a MonoBehaviour to a GameObject in the Editor.</p>
+
+<hr>
+
+<p><strong>Scripting: InitializeOnLoad callback now invoked after deserialization</strong></p>
+
+<p>The callback timing for InitializeOnLoad has changed. It was previously invoked at a point that could lead to invalid object states for existing serialized objects when calling Unity API. It is now invoked after deserialization and after all objects have been created. As part of the creation of objects, the default constructor must be invoked. This change means that objects constructors are now invoked before InitializeOnLoad static constructors, whereas InitializeOnLoad was previously called before some object constructors.</p>
+
+<p>Example:</p>
+
+<pre><code>[System.Serializable]
+public class SomeClass
+{
+    public SomeClass()
+    {
+        Debug.Log(&quot;SomeClass constructor&quot;);
+    }
+}
+
+public class SomeMonoBehaviour : MonoBehaviour
+{
+    public SomeClass SomeClass;
+}
+
+[InitializeOnLoad]
+public class SomeStaticClass
+{
+    static SomeStaticClass()
+    {
+        Debug.Log(&quot;SomeStaticClass static constructor&quot;);
+    }
+}
+</code></pre>
+
+<p>This would previously result in:<br>
+<code>SomeStaticClass static constructor</code> (InitializeOnLoad)<br>
+<code>SomeClass constructor</code> (object constructor)</p>
+
+<p>After this change it will now be:<br>
+<code>SomeClass constructor</code> (object constructor)<br>
+<code>SomeStaticClass static constructor</code> (InitializeOnLoad)</p>
+
+<hr>
+
+<p><strong>New normal map type that support BC5 format.</strong></p>
+
+<p>Up to now Unity was supporting either RGB normal map or swizzled AG normal map (with x in alpha channel and y in green channel) with different <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> format. There is now support for RG normal map (with x in red channel and y in green channel).
+UnpackNormal <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> function have been upgraded to allow to use RGB, AG and RG normal map without adding <strong>shader</strong> variants. To be able to do this, the UnpackNormal function rely on having unused channel of the normal map set to 1. I.e a swizzled AG normal map must be encoded as (1, y, 1, x) and a RG (x, y, 0, 1). Unity normal map encoder enforce it.</p>
+
+<p>There is no upgrade to do if users were using unmodified Unity. However in case users have done their own normal map shaders or their own encoding, they may need to take into account the need for swizzled AG normal map to be encoded as (1, y, 1, x). In case users were mixing normal map in swizzled AG before unpacking normal map, they may require to use UnpackNormalDXT5nm instead of UnpackNormal.</p>
+
+<hr>
+
+<p><strong>Always precompiled managed assemblies (.dlls) and assembly definition file assemblies on startup in the Editor.</strong></p>
+
+<p>Load precompiled managed assemblies (.dlls) and assembly definition file assemblies on Editor startup even if there are compile errors in other <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. This is useful for Editor extension assemblies that should always be loaded on startup, regardless of other script compile errors in the project.</p>
+
+<hr>
+
+<p><strong><span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> emission.</strong></p>
+
+<p>If you are using precomputed realtime GI or baked GI, intense emissive materials set up in earlier versions of Unity could look more intense now, because their range is not capped any more. The RGBM encoding used previously gave an effective range of 97 for gamma space and 8 for linear color space. The HDR color picker had a maximum range of 99 so some materials could be set to be more intense than they seemed.
+After the upgrade, emission color is passed to the GI systems as true HDR 16 bit floating point values (range is now 64K). Internally, the realtime GI system is using the rgb9e5 shared exponent format that can represent these intense values but the baked <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> are limited by their RGBM encoding. HDR for baked <strong>lightmaps</strong> will be added in a later release.</p>
+
+<hr>
+
+<p><strong>VR to <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XR">Glossary</a></span></span></span> rename.</strong></p>
+
+<p>The UnityEngine.VR.* namespaces have been renamed to UnityEngine.XR.*. All types with VR in their name have also been renamed to their XR versions. For example: UnityEngine.VR.VRSettings is now UnityEngine.XR.XRSettings, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</p>
+
+<p>The API updater has been configured to automatically update existing scripts and assemblies to the new type names and namespaces. If don’t want to use the API updater, you can also manually update namespaces and types.</p>
+
+<p>Namespace changes:</p>
+
+<ul>
+<li>UnityEngine.VR -&gt; UnityEngine.XR</li>
+<li>UnityEngine.VR.WSA -&gt; UnityEngine.XR.WSA</li>
+<li>UnityEngine.VR.WSA.Input -&gt; UnityEngine.XR.WSA.Input</li>
+<li>UnityEngine.VR.WSA.Persistence -&gt; UnityEngine.XR.WSA.Persistence</li>
+<li>UnityEngine.VR.WSA.Sharing -&gt; UnityEngine.XR.WSA.Sharing</li>
+<li>UnityEngine.VR.WSA.WebCam -&gt; UnityEngine.XR.WSA.WebCam</li>
+</ul>
+
+<p>UnityEngine.VR type changes:</p>
+
+<ul>
+<li>VRDevice -&gt; XRDevice</li>
+<li>VRNodeState -&gt; XRNodeState</li>
+<li>VRSettings -&gt; XRSettings</li>
+<li>VRStats -&gt; XRStats</li>
+<li>VRNode -&gt; XRNode</li>
+</ul>
+
+<p>All <code>VR.*</code> <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span> entries have also been changed to <code>XR.*</code>.</p>
+
+<hr>
+
+<p><strong>UnityEngine.dll is now split into separate dlls for each UnityEngine module.</strong></p>
+
+<p>The UnityEngine.dll (which contains all public scripting API) has been separated into modules of code covering different subsystems of the engine. This makes the Unity code base better organized with cleaner internal dependencies, better for internal tooling and makes the code base more strippable. The separated modules include UnityEngine.<span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> which is now in UnityEngine.PhysicsModule.dll and UnityEngine.Font which is now in UnityEngine.TextRendering.dll.</p>
+
+<p>This change should typically not affect any of your existing projects and your scripts now automatically compiles against the correct assemblies. Unity now includes a UnityEngine.dll assembly file containing <a href="https://docs.microsoft.com/en-us/dotnet/framework/app-domains/type-forwarding-in-the-common-language-runtime">type forwarders</a> of all UnityEngine types for all pre-compiled assemblies referencing the DLL which ensures backwards compatibility by forwarding the files to their new locations.</p>
+
+<p>However, there is one case where existing code might break from this change. That is if your code uses reflection to get UnityEngine types, and assumes that all types live in the same assembly. This means such code would fail, because Collider and Font are now in different assemblies:</p>
+
+<pre><code>System.Type colliderType = typeof(Collider);
+System.Type fontType = colliderType.Assembly.GetType(&quot;Font&quot;);
+</code></pre>
+
+<p>Getting either Collider or Font types from the “UnityEngine” assembly still works due to the use of type forwarders, like this: </p>
+
+<pre><code>System.Type.GetType(&quot;UnityEngine.Collider, UnityEngine&quot;)
+</code></pre>
+
+<p>Unity does still bundle a fully monolithic UnityEngine.dll which contains all UnityEngine APIs in the Unity Editor’s Managed/UnityEngine.dll folder. This makes sure that any existing Visual Studio/<span class="tooltip"><strong>MonoDevelop</strong><span class="tooltiptext">An integrated development environment (IDE) supplied with Unity 2017.3 and previous versions. From Unity 2018.1 onwards, MonoDevelop is replaced by Visual Studio. <a href="https://www.monodevelop.com/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MonoDevelop">Glossary</a></span></span></span> solutions referencing UnityEngine.dll continues to build without needing to be updated to reference the new modular assemblies. You should continue to use this assembly to reference UnityEngine API in your custom solutions, as the internal split of modules is subject to change.</p>
+
+<hr>
+
+<p><strong>Material smoothness in <span class="tooltip"><strong>Standard shader</strong><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardShader">Glossary</a></span></span></span>.</strong></p>
+
+<p>Purely smooth materials that use the GGX version of the standard shader now receive specular highlights which increases the realism of such materials. </p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–10–06 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20173.html"></a></span><div class="tip">Upgrading to Unity 2017.3</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20171.html"></a></span><div class="tip">Upgrading to Unity 2017.1</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

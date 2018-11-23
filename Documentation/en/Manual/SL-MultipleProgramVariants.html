@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Making multiple shader program variants</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-MultipleProgramVariants.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-MultipleProgramVariants.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-MultipleProgramVariants.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-MultipleProgramVariants.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-MultipleProgramVariants.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-ShaderPrograms.html">Writing vertex and fragment shaders</a></li>
+<li>Making multiple shader program variants</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-UnityShaderVariables.html"></a></span><div class="tip">Built-in shader variables</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-GLSLShaderPrograms.html"></a></span><div class="tip">GLSL Shader programs</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Making multiple shader program variants</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Often it is convenient to keep most of a piece of <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> code fixed but also allow slightly different <strong>shader</strong> “variants” to be produced. This is commonly called “mega shaders” or “uber shaders”, and is achieved by compiling the <strong>shader</strong> code multiple times with different preprocessor directives for each case.</p>
+
+<p>In Unity this can be achieved by adding a <code>#pragma multi_compile</code> or <code>#pragma shader_feature</code> directive to a <a href="SL-ShaderPrograms.html">shader snippet</a>. This works in <span class="tooltip"><a href="SL-SurfaceShaders.html">surface shaders</a><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span> too.</p>
+
+<p>At runtime, the appropriate shader variant is picked up from the Material keywords (Material.EnableKeyword and DisableKeyword) or global shader keywords (Shader.EnableKeyword and DisableKeyword).</p>
+
+<h2>How multi_compile works</h2>
+
+<p>A directive like:</p>
+
+<pre><code>#pragma multi_compile FANCY_STUFF_OFF FANCY_STUFF_ON
+</code></pre>
+
+<p>Will produce two shader variants, one with <code>FANCY_STUFF_OFF</code> defined, and another with <code>FANCY_STUFF_ON</code>. At runtime, one of them will be activated based on the Material or global shader keywords. If neither of these two keywords are enabled then the first one (“off”) will be used.</p>
+
+<p>There can be more than two keywords on a multi_compile line, for example this will produce four shader variants:</p>
+
+<pre><code>#pragma multi_compile SIMPLE_SHADING BETTER_SHADING GOOD_SHADING BEST_SHADING
+</code></pre>
+
+<p>When any of the names are all underscores, then a shader variant will be produced, with no preprocessor macro defined. This is commonly used for shaders features, to avoid using up two keywords (see notes on keywork limit below). For example, the directive below will produce two shader variants; first one with nothing defined, and second one with <code>FOO_ON</code> defined:</p>
+
+<pre><code>#pragma multi_compile __ FOO_ON
+</code></pre>
+
+<h2>Difference between shader_feature and multi_compile</h2>
+
+<p>
+<code>#pragma shader_feature</code> is very similar to <code>#pragma multi_compile</code>, the only difference is that unused variants of shader_feature shaders will not be included into game build. So shader_feature makes most sense for keywords that will be set on the materials, while multi_compile for keywords that will be set from code globally.</p>
+
+<p>Additionally, it has a shorthand notation with just one keyword:</p>
+
+<pre><code>#pragma shader_feature FANCY_STUFF
+</code></pre>
+
+<p>Which is just a shortcut for <code>#pragma shader_feature _ FANCY_STUFF</code>, i.e. it expands into two shader variants (first one without the define; second one with it).</p>
+
+<h2>Combining several multi_compile lines</h2>
+
+<p>Several multi_compile lines can be provided, and the resulting shader will be compiled for all possible combinations of the lines:</p>
+
+<pre><code>#pragma multi_compile A B C
+#pragma multi_compile D E
+</code></pre>
+
+<p>This would produce three variants for first line, and two for the second line, or in total six shader variants (A+D, B+D, C+D, A+E, B+E, C+E).</p>
+
+<p>It’s easiest to think of each multi_compile line as controlling a single shader “feature”. Keep in mind that the total number of shader variants grows really fast this way. For example, ten multi_compile “features” with two options each produces 1024 shader variants in total!</p>
+
+<h2>Keyword limit</h2>
+
+<p>When using Shader variants, remember that there is a limit of 256 keywords in Unity, and around 60 of them are used internally (therefore lowering the available limit). Also, the keywords are enabled globally throughout a particular Unity project, so be careful not to exceed the limit when multiple keywords are defined in several different Shaders.</p>
+
+<h2>Built-in multi_compile shortcuts</h2>
+
+<p>There are several “shortcut” notations for compiling multiple shader variants; they are mostly to deal with different light, shadow and lightmap types in Unity. See <a href="SL-RenderPipeline.html">rendering pipeline</a> for details.</p>
+
+<ul>
+<li>
+<code>multi_compile_fwdbase</code> compiles all variants needed by <code>ForwardBase</code> (forward rendering base) pass type. The variants deal with different lightmap types and main directional light having shadows on or off.</li>
+<li>
+<code>multi_compile_fwdadd</code> compiles variants for <code>ForwardAdd</code> (forward rendering additive) pass type. This compiles variants to handle directional, spot or point light types, and their variants with cookie textures.</li>
+<li>
+<code>multi_compile_fwdadd_fullshadows</code> - same as above, but also includes ability for the lights to have realtime shadows.</li>
+<li>
+<code>multi_compile_fog</code> expands to several variants to handle different fog types (off/linear/exp/exp2).</li>
+</ul>
+
+<p>Most of the built-in shortcuts result in many shader variants. It is possible to skip compiling some of them if you know they are not needed, by using <code>#pragma skip_variants</code>. For example:</p>
+
+<pre><code>#pragma multi_compile_fwdadd
+// will make all variants containing
+// &quot;POINT&quot; or &quot;POINT_COOKIE&quot; be skipped
+#pragma skip_variants POINT POINT_COOKIE
+</code></pre>
+
+<h2>Shader Hardware Variants</h2>
+
+<p>One common reason for using shader variants is to create fallbacks or simplified shaders that can run efficiently on both high and low end hardware within a single target platform - such as OpenGL ES. To provide a specially optimised set of variants for different levels of hardware capability, you can use shader hardware variants.</p>
+
+<p>To enable the generation of shader hardware variants, add <code>#pragma hardware_tier_variants renderer</code>, where <code>renderer</code> is one of the available renderering platforms for <a href="SL-ShaderPrograms.html">shader program pragmas</a>. With this <code>#pragma</code> 3 shader variants will be generated for each shader, regardless of any other keywords. Each variant will have one of the following defined:</p>
+
+<pre><code>UNITY_HARDWARE_TIER1
+UNITY_HARDWARE_TIER2
+UNITY_HARDWARE_TIER3
+</code></pre>
+
+<p>You can use these to write conditional fallbacks or extra features for lower or higher end. In the editor you can test any of the tiers by using the Graphics Emulation menu, which allows you to change between each of the tiers.</p>
+
+<p>To help keep the impact of these variants as small as possible, only one set of shaders is ever loaded in the player. In addition, any shaders which end up identical - for example if you only write a specialised version for TIER1 and all others are the same - will not take up any extra space on disk.</p>
+
+<p>At load time Unity will examine the GPU that it is using and auto-detect a tier value; it will default to the highest tier if the GPU is not auto-detected. You can override this tier value by setting <code>Shader.globalShaderHardwareTier</code>, but this must be done before any shaders you want to vary are loaded. Once the shaders are loaded they will have selected their set of variants and this value will have no effect. A good place to set this would be in a pre-load scene before you load your main scene.</p>
+
+<p>Note that these shader hardware tiers are not related to the quality settings of the player, they are purely detected from the relative capability of the GPU the player is running on.</p>
+
+<h2>Platform Shader Settings</h2>
+
+<p>Apart from tweaking your shader code for different hardware tiers, you might want to tweak unity internal defines (e.g. you might want to force cascaded shadowmaps on mobiles). You can find details on this in the <a href="../ScriptReference/Rendering.PlatformShaderSettings.html">UnityEditor.Rendering.PlatformShaderSettings</a> documentation, which provides a list of currently supported features for overriding per-tier.
+Use <a href="../ScriptReference/Rendering.EditorGraphicsSettings.SetShaderSettingsForPlatform.html">UnityEditor.Rendering.EditorGraphicsSettings.SetShaderSettingsForPlatform</a> to tweak Platform Shader Settings per-platform per-tier.</p>
+
+<p>Please note that if <code>PlatformShaderSetting</code>s set to different tiers are not identical, then tier variants will be generated for the shader even if <code>#pragma hardware_tier_variants</code> is missing.</p>
+
+<h3>See Also</h3>
+
+<ul>
+<li>
+<a href="OptimizingShaderLoadTime.html">Optimizing Shader Load Time</a>.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-UnityShaderVariables.html"></a></span><div class="tip">Built-in shader variables</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-GLSLShaderPrograms.html"></a></span><div class="tip">GLSL Shader programs</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Light Probe Proxy Volume component</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-LightProbeProxyVolume.html">English</a></li>
+<li><a href="/ja/current/Manual/class-LightProbeProxyVolume.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-LightProbeProxyVolume.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-LightProbeProxyVolume.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-LightProbeProxyVolume.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li><a href="LightProbes.html"> Light Probes</a></li>
+<li>Light Probe Proxy Volume component</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-MeshRenderer.html"></a></span><div class="tip"> Light Probes and the Mesh Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ReflectionProbes.html"></a></span><div class="tip">Reflection probes</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Light Probe Proxy Volume component</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/LightProbeProxyVolume.html' title='Go to LightProbeProxyVolume page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/LPPV.png" alt="">
+</figure>
+
+<p>The <strong>Light Probe Proxy Volume</strong> (LPPV) <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> allows you to use more lighting information for large dynamic <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> that cannot use baked <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> (for example, large Particle Systems or skinned Meshes).</p>
+
+<p>By default, a probe-lit Renderer receives lighting from a single <a href="LightProbes.html">Light Probe</a> that is interpolated between the surrounding Light Probes in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Because of this, GameObjects have constant ambient lighting across the surface. This lighting has a rotational gradient because it is using spherical harmonics, but it lacks a spatial gradient. This is more noticeable on larger GameObjects or <span class="tooltip"><strong>Particle Systems</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>. The lighting across the GameObject matches the lighting at the anchor point, and if the GameObject straddles a lighting gradient, parts of the GameObject may look incorrect.</p>
+
+<p>The <strong>Light Probe Proxy Volume</strong> component generates a 3D grid of interpolated Light Probes inside a <span class="tooltip"><strong>Bounding Volume</strong><span class="tooltiptext">A closed shape representing the edges and faces of a collider or trigger. <a href="SpatialMappingComponentsGeneralSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Boundingvolume">Glossary</a></span></span></span>. You can specify the resolution of this grid in the <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> of the component. The spherical harmonics (SH) coefficients of the interpolated Light Probes are uploaded into 3D textures. The 3D textures containing SH coefficients are then sampled at render time to compute the contribution to the diffuse ambient lighting. This adds a spatial gradient to probe-lit GameObjects.</p>
+
+<p>The <span class="tooltip"><a href="shader-StandardShader.html">Standard Shader</a><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardShader">Glossary</a></span></span></span> supports this feature. To add this to a custom <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>, use the <code>ShadeSHPerPixel</code> function. To learn how to implement this function, see the <a href="#SampleShader">Particle System sample Shader</a> code example at the bottom of this page.</p>
+
+<h2>When to use the component</h2>
+
+<p>Most of the Renderer components in Unity contain Light Probes. There are three options for Light Probes:</p>
+
+<ul>
+<li><p>
+<strong>Off</strong>: the Renderer doesn’t use any interpolated Light Probes.</p></li>
+<li><p>
+<strong>Blend Probes</strong> (default value): the Renderer uses one interpolated Light Probe.</p></li>
+<li><p>
+<strong>Use Proxy Volume</strong>: the Renderer uses a 3D grid of interpolated Light Probes.</p></li>
+</ul>
+
+<p>When you set the <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> property to <strong>Use Proxy Volume</strong>, the GameObject must have a <strong>Light Probe Proxy Volume</strong> (LPPV) component attached. You can add a LPPV component on the same GameObject, or you can use (borrow) a LPPV component from another GameObject using the <strong>Proxy Volume Override</strong> property. If Unity cannot find a LPPV component in the current GameObject or in the Proxy Volume Override GameObject, a warning message is displayed at the bottom of the Renderer.</p>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeMeshRendererWindow.png" alt="">
+</figure>
+
+<h3>Example</h3>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeExample.png" alt="An example of a simple Mesh Renderer using a Light Probe Proxy Volume component">
+<figcaption>An example of a simple Mesh Renderer using a Light Probe Proxy Volume component</figcaption>
+</figure>
+
+<p>In the Scene above, there are two planes on the floor using Materials that emit a lot of light. Note that:</p>
+
+<ul>
+<li><p>The ambient light changes across the geometry when using a LPPV component. Use one interpolated Light Probe to create a constant color on each side of the geometry. </p></li>
+<li><p>The geometry doesn’t use static lightmaps, and the spheres represent interpolated Light Probes. They are part of the <strong>Gizmo Renderer</strong>.</p></li>
+</ul>
+
+<h3>How to use the component</h3>
+
+<p>The area in which the 3D grid of interpolated Light Probes are generated is affected by the <strong>Bounding Box Mode</strong> property.</p>
+
+<figure>
+<img src="../uploads/Main/LPPVBoundingBoxMode.png" alt="">
+</figure>
+
+<p>There are three options available:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Bounding Box Mode:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Automatic Local</strong> (default value)</td>
+	<td style="text-align:left;">A local-space bounding box is computed. The interpolated Light Probe positions are generated inside this bounding box. If a Renderer component isn’t attached to the GameObject, then a default bounding box is generated. The bounding box computation encloses the current Renderer, and sets all the Renderers down the hierarchy that have the <strong>Light Probes</strong> property to <strong>Use Proxy Volume</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Automatic World</strong></td>
+	<td style="text-align:left;">A bounding box is computed which encloses the current Renderer and all the Renderers down the hierarchy that have the <strong>Light Probes</strong> property set to <strong>Use Proxy Volume</strong>. The bounding box is world-aligned.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">A custom bounding box is used. The bounding box is specified in the local-space of the GameObject. The bounding box editing tools are available. You can edit the bounding volume manually by modifying the <strong>Size</strong> and <strong>Origin</strong> values in the UI.</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeWindow2.png" alt="">
+</figure>
+
+<p>The main difference between <strong>Automatic Local</strong> and <strong>Automatic World</strong> is that in <strong>Automatic Local</strong>, the bounding box is more resource-intensive to compute when a large hierarchy of GameObjects uses the same LPPV component from a parent GameObject. However, the resulting bounding box may be smaller in size, meaning the lighting data is more compact.</p>
+
+<p>The number of interpolated Light Probes from within the bounding volume is affected by the <strong>Proxy Volume Resolution</strong> property. There are two options:</p>
+
+<ul>
+<li><p>
+<strong>Automatic</strong> (default value) - The resolution on each axis is computed using the number of interpolated Light Probes per unit area that you specify, and the size of the bounding box.</p></li>
+<li><p>
+<strong>Custom</strong> - Allows you to specify a different resolution on each axis (see below).</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeWindow3.png" alt="">
+</figure>
+
+<p>
+<strong>Note:</strong> The final resolution on each axis must be a power of two, and the maximum value of the resolution is 32.</p>
+
+<p>
+<strong>Probe Position Mode</strong> specifies the relative position of an interpolated Light Probe to a cell center. This option may be useful in situations when some of the interpolated Light Probes pass through walls or other geometries and cause light leaking. The example below shows the difference between <strong>Cell Corner</strong> and <strong>Cell Center</strong> in a 2D view, using a 4x4 grid resolution:</p>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeWindow4.png" alt="">
+</figure>
+
+<h2>Images for comparison</h2>
+
+<ol>
+<li>
+<p>A simple <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderer using a Standard Shader:</p>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeExample1.png" alt="With Light Probe Proxy Volume (resolution: 4x1x1)">
+<figcaption>With Light Probe Proxy Volume (resolution: 4x1x1)</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeExample2.png" alt="Without Light Probe Proxy Volume">
+<figcaption>Without Light Probe Proxy Volume</figcaption>
+</figure>
+</li>
+<li>
+<p>A skinned <span class="tooltip"><strong>Mesh Renderer</strong><span class="tooltiptext">A mesh component that takes the geometry from the Mesh Filter and renders it at the position defined by the object’s Transform component. <a href="class-MeshRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> using a Standard Shader:</p>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeExample3.png" alt="With Light Probe Proxy Volume (resolution: 2x2x2)">
+<figcaption>With Light Probe Proxy Volume (resolution: 2x2x2)</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeExample4.png" alt="Without Light Probe Proxy Volume">
+<figcaption>Without Light Probe Proxy Volume</figcaption>
+</figure>
+</li>
+</ol>
+
+<p><a name="SampleShader"></a></p>
+
+<h2>Particle System sample Shader using the ShadeSHPerPixel function</h2>
+
+<pre><code>Shader &quot;Particles/AdditiveLPPV&quot; {
+Properties {
+    _MainTex (&quot;Particle Texture&quot;, 2D) = &quot;white&quot; {}
+    _TintColor (&quot;Tint Color&quot;, Color) = (0.5,0.5,0.5,0.5)
+}
+
+Category {
+    Tags { &quot;Queue&quot;=&quot;Transparent&quot; &quot;IgnoreProjector&quot;=&quot;True&quot; &quot;RenderType&quot;=&quot;Transparent&quot; }
+    Blend SrcAlpha One
+    ColorMask RGB
+    Cull Off Lighting Off ZWrite Off
+    
+    SubShader {
+        Pass {
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_particles
+            #pragma multi_compile_fog
+
+            // Specify the target
+            #pragma target 3.0
+            
+            #include &quot;UnityCG.cginc&quot;
+            
+            // You must include this header to have access to ShadeSHPerPixel
+            #include &quot;UnityStandardUtils.cginc&quot;
+                        
+            fixed4 _TintColor;
+            sampler2D _MainTex;
+            
+            struct appdata_t {
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;                
+            };
+
+            struct v2f {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float3 worldPos : TEXCOORD2;
+                float3 worldNormal : TEXCOORD3;
+            };
+            
+            float4 _MainTex_ST;
+
+            v2f vert (appdata_t v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.worldNormal = UnityObjectToWorldNormal(v.normal);
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                o.color = v.color;
+                o.texcoord = TRANSFORM_TEX(v.texcoord,_MainTex);
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+            
+            fixed4 frag (v2f i) : SV_Target
+            {           
+                half3 currentAmbient = half3(0, 0, 0);
+                half3 ambient = ShadeSHPerPixel(i.worldNormal, currentAmbient, i.worldPos);
+                fixed4 col = _TintColor * i.color * tex2D(_MainTex, i.texcoord);
+                col.xyz += ambient;
+                UNITY_APPLY_FOG_COLOR(i.fogCoord, col, fixed4(0,0,0,0)); // fog towards black due to our blend mode
+                return col;
+            }
+            ENDCG 
+        }
+    }   
+}
+}
+
+</code></pre>
+
+<h2>Hardware requirements</h2>
+
+<p>The component requires at least Shader Model 4 graphics hardware and API support, including support for 3D Textures with 32-bit floating-point format and linear filtering.</p>
+
+<p>To work correctly, the Scene needs to contain Light Probes via <span class="tooltip"><strong>Light Probe Group</strong><span class="tooltiptext">A component that enables you to add Light Probes to GameObjects in your scene. <a href="class-LightProbeGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbeGroup">Glossary</a></span></span></span> components. If a requirement is not fulfilled, the Renderer or Light Probe Proxy Volume component <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> displays a warning message.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-MeshRenderer.html"></a></span><div class="tip"> Light Probes and the Mesh Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ReflectionProbes.html"></a></span><div class="tip">Reflection probes</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

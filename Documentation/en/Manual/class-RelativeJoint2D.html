@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Relative Joint 2D</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Unity2D" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-RelativeJoint2D.html">English</a></li>
+<li><a href="/ja/current/Manual/class-RelativeJoint2D.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-RelativeJoint2D.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-RelativeJoint2D.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-RelativeJoint2D.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Physics2DReference.html">Physics Reference 2D</a></li>
+<li><a href="Joints2D.html"> 2D Joints</a></li>
+<li>Relative Joint 2D</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-HingeJoint2D.html"></a></span><div class="tip">Hinge Joint 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SliderJoint2D.html"></a></span><div class="tip">Slider Joint 2D</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Relative Joint 2D</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/RelativeJoint2D.html' title='Go to RelativeJoint2D page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This <span class="tooltip"><strong>joint</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> allows two game objects controlled by <span class="tooltip"><strong>rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> physics to maintain in a position based on each other’s location. Use this <strong>joint</strong> to keep two objects offset from each other, at a position and angle you decide. </p>
+
+<p>See <em>Details</em> below for more information about the differences between <strong>RelativeJoint2D</strong> and <strong>FixedJoint2D</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/RelativeJoint2DInspector.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Enable Collision</strong></td>
+	<td style="text-align:left;">Can the two connected objects collide with each other? Check the box for yes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Connected Rigid Body</strong></td>
+	<td style="text-align:left;">Specify here the other object this joint connects to. Leave this as <strong>None</strong> and the other end of the joint will be fixed at a point in space. Select the circle to the right of the field to view a list of objects to connect to.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Force</strong></td>
+	<td style="text-align:left;">Sets the linear (straight line) offset between joined objects - a high value (of up to 1,000) uses high force to maintain the offset.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Torque</strong></td>
+	<td style="text-align:left;">Sets the angular (rotation) movement between joined objects - a high value (of up to 1,000) uses high force to maintain the offset.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Correction Scale</strong></td>
+	<td style="text-align:left;">Tweaks the joint to make sure it behaves as required. (Increasing the Max Force or Max Torque may affect behaviour so that the joint doesn’t reach its target, use this setting to correct it.) The default setting of 0.3 is usually appropriate but it may need tweaking between the range of 0 and 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Configure Offset</strong></td>
+	<td style="text-align:left;">Check this box to automatically set and maintain the distance and angle between the connected objects. (Selecting this option means you don’t need to manually enter the <strong>Linear Offset</strong> and <strong>Angular Offset</strong>.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Linear Offset</strong></td>
+	<td style="text-align:left;">Enter local space co-ordinates to specify and maintain the distance between the connected objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Offset</strong></td>
+	<td style="text-align:left;">Enter local space co-ordinates to specify and maintain the angle between the connected objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Force</strong></td>
+	<td style="text-align:left;">Specify the force level needed to break and so delete the joint. <strong>Infinity</strong> means it is unbreakable.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Torque</strong></td>
+	<td style="text-align:left;">Specify the torque level needed to break and so delete the joint. <strong>Infinity</strong> means it is unbreakable.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>(See also <a href="Joints2D.html">Joints 2D</a>: <em>Details and Hints</em> for useful background information on all 2D joints.)</p>
+
+<p>The aim of this joint is to maintain a relative linear and angular distance (offset) between two points. Those two points can be two <strong>Rigidbody2D</strong> components or a <strong>Rigidbody2D</strong> component and a fixed position in the world. (Connect to a fixed position in the world by setting <strong>Connected Rigidbody</strong> to None). </p>
+
+<p>The joint applies a linear and angular (torque) force to both connected rigid body objects. It uses a simulated motor that is pre-configured to be quite powerful: It has a high <strong>Max Force</strong> and <strong>Max Torque</strong> limit. You can lower these values to make the motor less powerful motor or turn-off it off completely.</p>
+
+<p>This joint has two simultaneous constraints:</p>
+
+<ul>
+<li>Maintain the specified linear offset between the two rigid body objects.</li>
+<li>Maintain the starting angular offset between the two rigid body objects.</li>
+</ul>
+
+<p><strong>For Example:</strong></p>
+
+<p>You can use this joint to construct physical objects that need to:</p>
+
+<ul>
+<li>Keep a distance apart from each other, as if they are unable to move further away from each other or closer together. (You decide the distance they are apart from each other. The distance can change in real-time.)</li>
+<li>Rotate with respect to each other only at particular angle. (You decide the angle.)</li>
+</ul>
+
+<p>Some uses may need the connection to be flexible, such as: A space-shooter game where the player has extra gun batteries that follow them. You can use the Relative Joint to give the trailing gun batteries a slight lag when they follow, but make them rotate with the player with no lag. </p>
+
+<p>Some uses may need a configurable force, such as: A game where the the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> follows a player using a configurable force to keep track.</p>
+
+<h2>Fixed vs. Relative Joint</h2>
+
+<p>
+<strong>FixedJoint2D</strong> is spring type joint. <strong>RelativeJoint2D</strong> is a motor type joint with a maximum force and/or torque. </p>
+
+<ul>
+<li>The <span class="tooltip"><strong>Fixed Joint</strong><span class="tooltiptext">A joint type that is completely constrained, allowing two objects to be held together. Implemented as a spring so some motion may still occur. <a href="class-FixedJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FixedJoint">Glossary</a></span></span></span> uses a spring to maintain the relative linear and angular offsets and the Relative joint uses a motor. You can configure a joint’s spring or motor.</li>
+<li>The Fixed joint works with anchor points (it’s derived from script <strong>AnchoredJoint2D</strong>): It maintains the relative linear and angular offset between the anchors. The Relative joint doesn’t have anchor points (it’s derived directly from script <strong>Joint2D</strong>).</li>
+<li>The Relative joint can modify the relative linear and angular offsets in real time: The Fixed joint cannot.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-HingeJoint2D.html"></a></span><div class="tip">Hinge Joint 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SliderJoint2D.html"></a></span><div class="tip">Slider Joint 2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Wheel Collider Tutorial</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/WheelColliderTutorial.html">English</a></li>
+<li><a href="/ja/current/Manual/WheelColliderTutorial.html">日本語</a></li>
+<li><a href="/es/current/Manual/WheelColliderTutorial.html">Español</a></li>
+<li><a href="/kr/current/Manual/WheelColliderTutorial.html">한국어</a></li>
+<li><a href="/ru/current/Manual/WheelColliderTutorial.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li>Wheel Collider Tutorial</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RagdollStability.html"></a></span><div class="tip"> Joint and Ragdoll stability</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptingSection.html"></a></span><div class="tip">Scripting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Wheel Collider Tutorial</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Wheel <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> is powered by the PhysX 3 Vehicles SDK.</p>
+
+<p>This tutorial takes you through the process of creating a basic functioning car.</p>
+
+<p>To start, select <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> &gt; <span class="tooltip"><strong>3D Object</strong><span class="tooltiptext">A 3D GameObject such as a cube, terrain or ragdoll. <a href="GameObjects.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#3DObject">Glossary</a></span></span></span> &gt; <strong>Plane</strong>. This is the ground the car is going to drive on. To keep it simple, make sure the ground has a Transform of <strong>0</strong> (on the Transform component in the Inspector Window, click the Settings cog and click <strong>Reset</strong>). Increase the Transform’s Scale fields to <strong>100</strong> to make the Plane bigger.</p>
+
+<h2>Create a basic car skeleton</h2>
+
+<ol>
+<li>First, add a GameObject to act as the car root GameObject. To do this, go to <strong>GameObject</strong> &gt; <strong>Create Empty</strong>. Change the GameObject’s name to <code>car_root</code>.</li>
+<li>Add a Physics 3D <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> component to <code>car_root</code>. The default mass of 1kg is too light for the default suspension settings; change it to 1500kg to make it much heavier.</li>
+<li>Next, create the car body Collider. Go to <strong>GameObject</strong> &gt; <strong>3D Object</strong> &gt; <strong>Cube</strong>. Make this cube a child GameObject under <code>car_root</code>. Reset the Transform to <strong>0</strong> to make it perfectly aligned in local space. The car is oriented along the Z axis, so set the Transform’s <strong>Z</strong> <strong>Scale</strong> to <strong>3</strong>.</li>
+<li>Add the wheels root. Select <code>car_root</code> and <strong>GameObject</strong> &gt; <strong>Create Empty Child</strong>. Change the name to <code>wheels</code>. Reset the Transform on it. This GameObject is not mandatory, but it is useful for tuning and debugging later.</li>
+<li>To create the first wheel, select the <code>wheels</code> GameObject, go to <strong>GameObject</strong> &gt; <strong>Create Empty Child</strong>, and name it <code>frontLeft</code>. Reset the Transform, then set the Transform <strong>Position</strong> <strong>X</strong> to –1, <strong>Y</strong> to 0, and <strong>Z</strong> to 1. To add a Collider to the wheel, go to <strong>Add component</strong> &gt; <strong>Physics</strong> &gt; <span class="tooltip"><strong>Wheel Collider</strong><span class="tooltiptext">A special collider for grounded vehicles. It has built-in collision detection, wheel physics, and a slip-based tire friction model. It can be used for objects other than wheels, but it is specifically designed for vehicles with wheels. <a href="class-WheelCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WheelCollider">Glossary</a></span></span></span>.</li>
+<li>Duplicate the <code>frontLeft</code> GameObject. Change the <strong>Transform</strong>’s <strong>X</strong> position to 1. Change the name to <code>frontRight</code>.</li>
+<li>Select both the <code>frontLeft</code> and <code>frontRight</code> GameObjects. Duplicate them. Change the <strong>Transform</strong>’s <strong>Z</strong> position of both GameObjects to –1. Change the names to <code>rearLeft</code> and <code>rearRight</code> respectively.</li>
+<li>Finally, select the <code>car_root</code> GameObject and use the Move Tool to raise it slightly above the ground.</li>
+</ol>
+
+<p>Now you should be able to see something like this:</p>
+
+<figure>
+<img src="../uploads/Main/WheelColliderTutorial.png" alt="">
+</figure>
+
+<p>To make this car actually drivable, you need to write a controller for it. The following code sample works as a controller:</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+    
+public class SimpleCarController : MonoBehaviour {
+    public List&lt;AxleInfo&gt; axleInfos; // the information about each individual axle
+    public float maxMotorTorque; // maximum torque the motor can apply to wheel
+    public float maxSteeringAngle; // maximum steer angle the wheel can have
+        
+    public void FixedUpdate()
+    {
+        float motor = maxMotorTorque * Input.GetAxis(&quot;Vertical&quot;);
+        float steering = maxSteeringAngle * Input.GetAxis(&quot;Horizontal&quot;);
+            
+        foreach (AxleInfo axleInfo in axleInfos) {
+            if (axleInfo.steering) {
+                axleInfo.leftWheel.steerAngle = steering;
+                axleInfo.rightWheel.steerAngle = steering;
+            }
+            if (axleInfo.motor) {
+                axleInfo.leftWheel.motorTorque = motor;
+                axleInfo.rightWheel.motorTorque = motor;
+            }
+        }
+    }
+}
+    
+[System.Serializable]
+public class AxleInfo {
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor; // is this wheel attached to motor?
+    public bool steering; // does this wheel apply steer angle?
+}
+</code></pre>
+
+<p>Create a new C# script (<strong>Add Component</strong> &gt; <strong>New Script</strong>), on the <code>car_root</code> GameObject, copy this sample into the script file and save it. You can tune the script parameters as shown below; experiment with the settings and enter Play Mode to test the results. </p>
+
+<p>The following settings are very effective as a car controller:</p>
+
+<figure>
+<img src="../uploads/Main/WheelColliderSettings.png" alt="">
+</figure>
+
+<p>You can have up to 20 wheels on a single vehicle instance, with each of them applying steering, motor or braking torque.</p>
+
+<p>Next, move on to visual wheels. As you can see, a Wheel Collider doesn’t apply the simulated wheel position and rotation back to the Wheel Collider’s Transform, so adding visual wheel requires some tricks. </p>
+
+<p>You need some wheel geometry here. You can make a simple wheel shape out of a cylinder. There could be several approaches to adding visual wheels: making it so that you have to assign visual wheels manually in script properties, or writing some logic to find the corresponding visual wheel automatically. This tutorial follows the second approach. Attach the visual wheels to the Wheel Collider GameObjects.</p>
+
+<p>Next, change the controller script:</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class AxleInfo {
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor;
+    public bool steering;
+}
+     
+public class SimpleCarController : MonoBehaviour {
+    public List&lt;AxleInfo&gt; axleInfos; 
+    public float maxMotorTorque;
+    public float maxSteeringAngle;
+     
+    // finds the corresponding visual wheel
+    // correctly applies the transform
+    public void ApplyLocalPositionToVisuals(WheelCollider collider)
+    {
+        if (collider.transform.childCount == 0) {
+            return;
+        }
+     
+        Transform visualWheel = collider.transform.GetChild(0);
+     
+        Vector3 position;
+        Quaternion rotation;
+        collider.GetWorldPose(out position, out rotation);
+     
+        visualWheel.transform.position = position;
+        visualWheel.transform.rotation = rotation;
+    }
+     
+    public void FixedUpdate()
+    {
+        float motor = maxMotorTorque * Input.GetAxis(&quot;Vertical&quot;);
+        float steering = maxSteeringAngle * Input.GetAxis(&quot;Horizontal&quot;);
+     
+        foreach (AxleInfo axleInfo in axleInfos) {
+            if (axleInfo.steering) {
+                axleInfo.leftWheel.steerAngle = steering;
+                axleInfo.rightWheel.steerAngle = steering;
+            }
+            if (axleInfo.motor) {
+                axleInfo.leftWheel.motorTorque = motor;
+                axleInfo.rightWheel.motorTorque = motor;
+            }
+            ApplyLocalPositionToVisuals(axleInfo.leftWheel);
+            ApplyLocalPositionToVisuals(axleInfo.rightWheel);
+        }
+    }
+}
+</code></pre>
+
+<p>One important parameter of the Wheel Collider component is <strong>Force App Point Distance</strong>. This is the distance from the base of the resting wheel to the point where the wheel forces are applied. The default value is 0, which means to apply the forces at the base of the resting wheel, but actually, it is wise to have this point located somewhere slightly below the car’s centre of mass.</p>
+
+<p>
+<strong>Note</strong>: To see the Wheel Collider in action, download the <a href="https://www.assetstore.unity3d.com/en/#!/content/83660">Vehicle Tools</a> package, which includes tools to rig wheeled vehicles and create suspension for wheel colliders.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–11–24 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RagdollStability.html"></a></span><div class="tip"> Joint and Ragdoll stability</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptingSection.html"></a></span><div class="tip">Scripting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: ﻿Universal Windows Platform: Debugging on .NET Scripting Backend</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/windowsstore-debugging.html">English</a></li>
+<li><a href="/ja/current/Manual/windowsstore-debugging.html">日本語</a></li>
+<li><a href="/es/current/Manual/windowsstore-debugging.html">Español</a></li>
+<li><a href="/kr/current/Manual/windowsstore-debugging.html">한국어</a></li>
+<li><a href="/ru/current/Manual/windowsstore-debugging.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="Windows.html">Windows</a></li>
+<li><a href="WindowsStore.html">Universal Windows Platform</a></li>
+<li><a href="windowsstore-scriptingbackends.html"> Scripting Backends</a></li>
+<li><a href="windowsstore-dotnet.html"> Universal Windows Platform: .NET Scripting Backend</a></li>
+<li>﻿Universal Windows Platform: Debugging on .NET Scripting Backend</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-plugins.html"></a></span><div class="tip">Universal Windows Platform: Plugins on .NET Scripting Backend</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-il2cpp.html"></a></span><div class="tip">Universal Windows Platform: IL2CPP scripting back end</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Universal Windows Platform: Debugging on .NET Scripting Backend</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When you have a crash, or a weird behavior, always check the player log which is located here - <strong>&lt;user&gt;\AppData\Local\Packages&lt;productname&gt;\TempState\UnityPlayer.log</strong>. When submitting a bug, please include the player log as well, it can give invaluable information.</p>
+
+<p>Currently it’s only possible to debug C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p>
+
+<p>
+<strong>Note</strong>: <span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">An IAP feature that supports Microsoft’s In App Purchase simulator, which allows you to test IAP purchase flows on devices before publishing your application. <a href="UnityIAPUniversalWindows.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span> are running with Microsoft .NET, that’s why it’s not possible to debug scripts with <span class="tooltip"><strong>MonoDevelop</strong><span class="tooltiptext">An integrated development environment (IDE) supplied with Unity 2017.3 and previous versions. From Unity 2018.1 onwards, MonoDevelop is replaced by Visual Studio. <a href="https://www.monodevelop.com/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MonoDevelop">Glossary</a></span></span></span>, instead you have to use Visual Studio 2013.</p>
+
+<p>Here are simple steps how to do it:</p>
+
+<ul>
+<li>When building to Universal Windows Platform, check <strong>Unity C# projects</strong>
+</li>
+<li><img src="../uploads/Main/WSADebugging1.png" alt=""></li>
+<li>This will create Assembly-CSharp-* projects compatible with Universal Windows Apps</li>
+<li>
+<strong>Note</strong>: if previously <strong>Unity C# projects</strong> was unchecked, build to empty folder or delete <em>.sln and </em>.csproj, because Unity needs to add references to those files, but if they’ll be present - Unity won’t overwrite them</li>
+<li>Open the solution, you should see Assembly-CSharp-* projects included</li>
+<li>Place breakpoints in places of interest, and simply start application with the debugger</li>
+<li><img src="../uploads/Main/WSADebugging2.png" alt=""></li>
+</ul>
+
+<h3>Exceptions</h3>
+
+<p>When you run the application, you can tell Visual Studio to stop during exception. Go to <strong>Debug</strong> -&gt; <strong>Exceptions</strong>:</p>
+
+<ul>
+<li>Enable Common Language Runtime Exceptions and Managed Debugging Assistants - for managed exceptions</li>
+<li>Enable all exceptions if you’re getting exception in some unknown place</li>
+</ul>
+
+<p>
+<strong>Note</strong>: enabling all exceptions will make Visual Studio to stop even at the harmless exceptions like <strong>WinRT originate error</strong>, <strong>WinRT transform error</strong>, ignore those and simply continue</p>
+
+<h3>Resolving callstack from UnityPlayer.dll</h3>
+
+<p>There will be cases when you’ll have a crash in Unity engine itself, you can get useful information if you’re able to resolve the callstack, and provide it in the bug report if needed.</p>
+
+<p>
+<strong>Note</strong>: Callstacks from Unity engine can be resolved if <em>.pdb files are available, Unity provides </em>.pdb files for Debug configuration.</p>
+
+<p>Suppose you’ve encountered a crash in Unity engine and hit the breakpoint (<strong>Note</strong>: Visual Studio can stop at the crash if you enable all exceptions via <strong>Debug</strong> -&gt; <strong>Exceptions</strong> menu), go to <strong>Debug</strong> -&gt; <strong>Windows</strong> -&gt; <strong>Call Stack</strong>, Call Stack window should open up, if you don’t see function names from UnityPlayer.dll, that means the symbols weren’t loaded, to fix that, right click on that function and Load Symbols, UnityPlayer.pdb file will be located in [PathToYourProject]&gt;\Players\[Windows80 or Windows81]\[X86 or ARM or X64]\debug.</p>
+
+<figure>
+<img src="../uploads/Main/WSADebugging3.png" alt="">
+</figure>
+
+<h3>Microsoft-Windows-TWinUI</h3>
+
+<p>This is a log which might provide information why your application didn’t launch without debugger, it can be found in:</p>
+
+<p>
+<strong>Control Panel</strong> -&gt; <strong>Administrative Tools</strong> -&gt; <strong>Event Viewer</strong> -&gt; <strong>Applications And Services Log</strong> -&gt; <strong>Microsoft</strong> -&gt; <strong>Windows</strong> -&gt; <strong>Apps</strong> -&gt; <strong>Microsoft-Windows-TWinUI/Operational</strong>
+</p>
+
+<hr>
+
+<p>
+<span class="page-edit">• 2017–05–16 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br>
+</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-plugins.html"></a></span><div class="tip">Universal Windows Platform: Plugins on .NET Scripting Backend</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-il2cpp.html"></a></span><div class="tip">Universal Windows Platform: IL2CPP scripting back end</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

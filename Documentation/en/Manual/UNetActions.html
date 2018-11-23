@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Remote Actions</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetActions.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetActions.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetActions.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetActions.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetActions.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li><a href="UNetActionsAndCommunication.html"> Actions and communication</a></li>
+<li>Remote Actions</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetActionsAndCommunication.html"></a></span><div class="tip"> Actions and communication</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="NetworkManagerCallbacks.html"></a></span><div class="tip"> Network Manager callbacks</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Remote Actions</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The network system has ways to perform actions across the network. These type of actions are sometimes called Remote Procedure Calls. There are two types of RPCs in the network system, Commands - which are called from the client and run on the server; and ClientRpc calls - which are called on the server and run on clients.</p>
+
+<p>The diagram below shows the directions that remote actions take:</p>
+
+<figure>
+<img src="../uploads/Main/UNetDirections.jpg" alt="">
+</figure>
+
+<h2>Commands</h2>
+
+<p>Commands are sent from player objects on the client to player objects on the server. For security, Commands can only be sent from YOUR <span class="tooltip"><strong>player object</strong><span class="tooltiptext">A High Level API (HPAPI) object that represents the player on the server and has the ability to run commands (which are secure client-to-server remote procedure calls) from the player’s client. <a href="UNetPlayers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerObject">Glossary</a></span></span></span>, so you cannot control the objects of other players. To make a function into a command, add the [Command] custom attribute to it, and add the “Cmd” prefix. This function will now be run on the server when it is called on the client. Any arguments will automatically be passed to the server with the command.</p>
+
+<p>Commands functions must have the prefix “Cmd”. This is a hint when reading code that calls the command - this function is special and is not invoked locally like a normal function.</p>
+
+<pre><code>class Player : NetworkBehaviour
+{
+
+    public GameObject bulletPrefab;
+
+    [Command]
+    void CmdDoFire(float lifeTime)
+    {
+        GameObject bullet = (GameObject)Instantiate(
+            bulletPrefab, 
+            transform.position + transform.right,
+            Quaternion.identity);
+            
+        var bullet2D = bullet.GetComponent&lt;Rigidbody2D&gt;();
+        bullet2D.velocity = transform.right * bulletSpeed;
+        Destroy(bullet, lifeTime);
+
+        NetworkServer.Spawn(bullet);
+    }
+
+    void Update()
+    {
+        if (!isLocalPlayer)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CmdDoFire(3.0f);
+        }
+
+    }
+}
+</code></pre>
+
+<p>Be careful of sending commands from the client every frame! This can cause a lot of network traffic.</p>
+
+<p>By default, Commands are sent on channel zero - the default reliable channel. So by default all commands are reliably sent to the server. This can be customized with the “Channel” parameter of the [Command] custom attribute. This parameter should be an integer, representing the channel number.</p>
+
+<p>Channel 1 is also set up by default to be an unreliable channel, so to use this, use the value 1 for the parameter in the Command attribute, like this:</p>
+
+<pre><code>    [Command(channel=1)]
+</code></pre>
+
+<p>Starting with Unity release 5.2 it is possible to send commands from non-player objects that have client authority. These objects must have been spawned with <a href="../ScriptReference/Networking.NetworkServer.SpawnWithClientAuthority.html">NetworkServer.SpawnWithClientAuthority</a> or have authority set with <a href="../ScriptReference/Networking.NetworkIdentity.AssignClientAuthority.html">NetworkIdentity.AssignClientAuthority</a>. Commands sent from these object are run on the server instance of the object, not on the associated player object for the client.</p>
+
+<p><a name="ClientRPC"></a></p>
+
+<h2>ClientRpc Calls</h2>
+
+<p>ClientRpc calls are sent from objects on the server to objects on clients. They can be sent from any server object with a <span class="tooltip"><strong>NetworkIdentity</strong><span class="tooltiptext">A Networking component that allows you to assign an identity to your GameObject for the network to recognise it as a Local Player GameObject or a Server Only GameObject. <a href="class-NetworkIdentity.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkIdentity">Glossary</a></span></span></span> that has been spawned. Since the server has authority, then there no security issues with server objects being able to send these calls. To make a function into a ClientRpc call, add the [ClientRpc] custom attribute to it, and add the “Rpc” prefix. This function will now be run on clients when it is called on the server. Any arguments will automatically be passed to the clients with the ClientRpc call..</p>
+
+<p>ClientRpc functions must have the prefix “Rpc”. This is a hint when reading code that calls the method - this function is special and is not invoked locally like a normal function.</p>
+
+<pre><code>class Player : NetworkBehaviour
+{
+
+    [SyncVar]
+    int health;
+
+    [ClientRpc]
+    void RpcDamage(int amount)
+    {
+        Debug.Log(&quot;Took damage:&quot; + amount);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        if (!isServer)
+            return;
+
+        health -= amount;
+        RpcDamage(amount);
+    }
+}
+</code></pre>
+
+<p>When running a game as a host with a LocalClient, ClientRpc calls will be invoked on the LocalClient - even though it is in the same process as the server. So the behaviour of LocalClients and RemoteClients is the same for ClientRpc calls.</p>
+
+<h2>Arguments to Remote Actions</h2>
+
+<p>The arguments passed to commands and ClientRpc calls are serialized and sent over the network. These arguments can be:</p>
+
+<ul>
+<li>basic types (byte, int, float, string, UInt64, etc)</li>
+<li>arrays of basic types</li>
+<li>structs containing allowable types</li>
+<li>built-in unity math types (Vector3, Quaternion, etc)</li>
+<li>NetworkIdentity</li>
+<li>NetworkInstanceId</li>
+<li>NetworkHash128</li>
+<li><span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> with a NetworkIdentity <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> attached</li>
+</ul>
+
+<p>Arguments to remote actions cannot be subcomponents of GameObjects, such as script instances or Transforms. They cannot be other types that cannot be serialized across the network.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetActionsAndCommunication.html"></a></span><div class="tip"> Actions and communication</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="NetworkManagerCallbacks.html"></a></span><div class="tip"> Network Manager callbacks</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

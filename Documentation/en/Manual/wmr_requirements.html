@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  WMR hardware and software requirements</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/wmr_requirements.html">English</a></li>
+<li><a href="/ja/current/Manual/wmr_requirements.html">日本語</a></li>
+<li><a href="/es/current/Manual/wmr_requirements.html">Español</a></li>
+<li><a href="/kr/current/Manual/wmr_requirements.html">한국어</a></li>
+<li><a href="/ru/current/Manual/wmr_requirements.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="wmr_sdk_overview.html"> Windows Mixed Reality</a></li>
+<li> WMR hardware and software requirements</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_sdk_overview.html"></a></span><div class="tip"> Windows Mixed Reality</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_quick_start.html"></a></span><div class="tip"> WMR quick start guide</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>WMR hardware and software requirements</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This section discusses hardware compatibilities and software requirements for using <span class="tooltip"><strong>Windows Mixed Reality</strong><span class="tooltiptext">A mixed reality platform developed by Microsoft, built around the API of Windows 10. <a href="mr-devices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WindowsMixedReality">Glossary</a></span></span></span> devices and applications.</p>
+
+<h2>Checking compatibility</h2>
+
+<p>You can use Microsoft’s <a href="https://www.microsoft.com/en-us/store/p/windows-mixed-reality-pc-check/9nzvl19n7cnc?rtc=1#">Mixed Reality PC Check</a> app to see if your PC is ready to run Windows Mixed Reality applications. The check tests your system and reports back on whether or not your PC meets the requirements.</p>
+
+<p>After the check is complete, the results window displays one of the following result messages:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Compatibility check result</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>You’re good to go</strong></td>
+	<td style="text-align:left;">Your PC matches the requirements needed to run Windows Mixed Reality<br>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>You’re nearly there</strong></td>
+	<td style="text-align:left;">Some functions might be limited, but Windows Mixed Reality applications can run</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Can’t Run Mixed Reality</strong></td>
+	<td style="text-align:left;">Your PC doesn’t meet the requirements needed to run Windows Mixed Reality</td>
+</tr>
+</tbody>
+</table>
+
+<p>The results window also displays a green tick beside any of your PC components or drivers that meet Microsoft’s minimum requirements. It also displays a red ‘X’ beside the components on your PC that do not meet minimum requirements. The following image below illustrates this:</p>
+
+<figure>
+<img src="../uploads/Main/Check_results.jpg" alt="Windows Mixed Reality compatibility check results screen. In this example, the graphics driver and the RAM are insufficient for Windows Mixed Reality.">
+<figcaption>Windows Mixed Reality compatibility check results screen. In this example, the graphics driver and the RAM are insufficient for Windows Mixed Reality.</figcaption>
+</figure>
+
+<p>The table below lists the minimum and recommended hardware and software requirements to successfully run Windows Mixed Reality applications on a Windows desktop PC. The recommended requirements let you run Windows Mixed Reality applications on a Windows desktop PC at the highest quality settings.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Minimum requirements</strong></th>
+	<th style="text-align:left;"><strong>Recommended requirements</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating System</strong></td>
+	<td style="text-align:left;">Windows 10 Fall Creators Update (RS3) - Home, Pro, Business, Education.</td>
+	<td style="text-align:left;">Windows 10 Fall Creators Update (RS3) - Home, Pro, Business, Education.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU Processor</strong></td>
+	<td style="text-align:left;">Intel Core i5 7200U (7th generation mobile), dual-core with Intel® Hyper-Threading Technology enabled (or better).</td>
+	<td style="text-align:left;">Intel Core i5 4590 (4th generation), quad-core (or better) AMD Ryzen 5 1400 3.4Ghz (desktop), quad-core (or better).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Disk Space</strong></td>
+	<td style="text-align:left;">At least 10 GB.</td>
+	<td style="text-align:left;">At least 10 GB.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>RAM</strong></td>
+	<td style="text-align:left;">8GB DDR3 dual channel (or better).</td>
+	<td style="text-align:left;">8GB DDR3 dual channel (or better).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bluetooth (for controllers)</strong></td>
+	<td style="text-align:left;">Bluetooth 4.0</td>
+	<td style="text-align:left;">Bluetooth 4.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>USB connectivity </strong></td>
+	<td style="text-align:left;">USB 3.0 Type-A or Type-C</td>
+	<td style="text-align:left;">USB 3.0 Type-A or Type-C</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics Driver</strong></td>
+	<td style="text-align:left;">Windows Display Driver Model (WDDM) 2.2</td>
+	<td style="text-align:left;">Windows Display Driver Model (WDDM) 2.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics Card</strong></td>
+	<td style="text-align:left;">Integrated Intel® HD Graphics 620 (or greater) DX12-capable integrated GPU (<a href="https://en.wikipedia.org/wiki/List-of-Intel-graphics-processing-units#Ninth-generation">check if your model is greater</a>) <br>NVIDIA MX150/965M (or greater) DX12-capable discrete GPU.</td>
+	<td style="text-align:left;">NVIDIA GTX 960/1050 (or greater) DX12-capable discrete GPU. AMD RX 460/560 (or greater) DX12-capable discrete GPU. GPU must be hosted in a PCIe 3.0 x4+ Link slot.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics Display Port</strong></td>
+	<td style="text-align:left;">HDMI 1.4 or DisplayPort 1.2</td>
+	<td style="text-align:left;">HDMI 2.0 or DisplayPort 1.2</td>
+</tr>
+</tbody>
+</table>
+
+<p>For additional details and information relating to Microsoft’s Mixed Reality PC requirements, see <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/windows_mixed_reality_minimum_pc_hardware_compatibility_guidelines">Microsoft’s Mixed Reality hardware compatibility guidelines</a>. </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New content added for XR API changes in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_sdk_overview.html"></a></span><div class="tip"> Windows Mixed Reality</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_quick_start.html"></a></span><div class="tip"> WMR quick start guide</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

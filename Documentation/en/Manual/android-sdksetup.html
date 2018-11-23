@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Android environment setup</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/android-sdksetup.html">English</a></li>
+<li><a href="/ja/current/Manual/android-sdksetup.html">日本語</a></li>
+<li><a href="/es/current/Manual/android-sdksetup.html">Español</a></li>
+<li><a href="/kr/current/Manual/android-sdksetup.html">한국어</a></li>
+<li><a href="/ru/current/Manual/android-sdksetup.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-GettingStarted.html"> Getting started with Android development</a></li>
+<li> Android environment setup</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-GettingStarted.html"></a></span><div class="tip"> Getting started with Android development</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityRemote5.html"></a></span><div class="tip"> Unity Remote</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Android environment setup</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Whether you’re building an Android application in Unity or programming it from scratch, you must set up the Android Software Development Kit (SDK) before you can build and run any code on your Android device.</p>
+
+<h3>1. Install the Java Development Kit</h3>
+
+<p>Download and install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java Development Kit (JDK)</a>. Unity requires the 64-bit version JDK 8 (1.8).</p>
+
+<h3>2. Download the Android SDK</h3>
+
+<p>You can install the Android SDK using command line tools or through Android Studio. Android Studio provides an easy to use GUI based tool, but installs additional software on your computer. Using the command line tools is a smaller download and does not install additional software, but it can be more challenging to use.</p>
+
+<h4>2a. Install the Android SDK using the command line tools</h4>
+
+<p>Install or unpack the Android SDK. After installing, open the Android SDK Manager and add: at least one Android SDK Platform, the Platform Tools, the Build Tools, and the USB drivers if you’re using Windows.</p>
+
+<p>To install an Android platform SDK and the associated tools:</p>
+
+<ol>
+<li><p>Download the <a href="https://developer.android.com/studio/index.html#downloads">Android Software command line tool</a>.</p></li>
+<li><p>Unzip the tools folder to a location on your hard drive.</p></li>
+<li><p>Open a command-prompt window.</p></li>
+<li><p>Navigate to the bin folder in the location where you unzipped the tools folder:
+“install folder” &gt; tools &gt; bin</p></li>
+<li>
+<p>Use the <a href="https://developer.android.com/studio/command-line/sdkmanager.html">sdkmanager</a> command line tool to retrieve the list of packages that you can install. The installable packages include the Platform SDKs, Build Tools, Platform tools, and other tools.</p>
+
+<p><em>sdkmanager –list</em></p>
+</li>
+<li>
+<p>Select a version of the Platform SDK to install. Platform SDKs take the following form in the list: platforms;android-xx. The <em>xx</em> indicates the SDK level. The larger the number, the newer the package.
+Typically, you can install the latest available version. But, there might be cases in which Google has released a new version of the SDK that causes errors when you build your Unity Project. In that case you must uninstall the SDK and install an earlier version.
+The general format of the command for package installation is <em>sdkmanager &lt;package name&gt;</em>. You can install the corresponding Platform Tools and Build Tools at the same time.</p>
+
+<p>Example:
+<em>sdkmanager “platform-tools” “platforms;android–27” “build-tools;27.0.3”</em>
+</p>
+</li>
+<li>
+<p>If you are running on Windows, install the USB device drivers.</p>
+
+<p><em>sdkmanager “extras;google;usb_driver”</em></p>
+</li>
+</ol>
+
+<p>This installs the SDK in a directory named “platforms” in the directory in which you unzipped the tools folder.
+Example:
+c:\&lt;install folder&gt;\platforms</p>
+
+<h4>2b. Install the SDK using Android Studio</h4>
+
+<p>Install Android studio from the <a href="https://developer.android.com/index.html">Android developer portal</a>. The Android developer portal provides detailed installation instructions. </p>
+
+<p>
+<strong>Note</strong>: Android Studio provides some ease of use benefits, but it is not fully tested for compatibility with Unity installs. If you encounter errors, Unity recommends using the command line method.</p>
+
+<p>When installing the Android platform SDK and other tools, you can typically install the latest available version. There might be cases in which Google has released a new version of the SDK that causes errors when you build your Unity Project. In that case you must uninstall the SDK and install an earlier version. </p>
+
+<p>Install the associated Platform and Build tools at the same time. If you are running on Windows, install the USB device drivers.</p>
+
+<h3>3. Enable USB debugging on your device</h3>
+
+<p>To enable USB debugging, you must enable Developer options on your device. To do this, find the build number in your device’s <strong>Settings</strong> menu. The location of the build number varies between devices. The stock Android setting can be found by navigating to <strong>Settings</strong> &gt; <strong>About phone</strong> &gt; <strong>Build number</strong>. For specific information on your device and Android version, refer to your hardware manufacturer.</p>
+
+<figure>
+<img src="../uploads/Main/android-sdksetup-0.png" alt="Build number as displayed in Android 5.0 (Lollipop) on a Samsung Galaxy Note 3">
+<figcaption>Build number as displayed in Android 5.0 (Lollipop) on a Samsung Galaxy Note 3</figcaption>
+</figure>
+
+<p>
+<strong>Note:</strong> On Android versions prior to 4.2 (Jelly Bean), the Developer options aren’t hidden. Go to <strong>Settings</strong> &gt; <strong>Developer options</strong>, then enable USB debugging.</p>
+
+<p>After you navigate to the build number using the instructions above, tap on the build number seven times. A pop-up notification saying “You are now X steps away from being a developer” appears, with “X” being a number that counts down with every additional tap. On the seventh tap, Developer options are unlocked. </p>
+
+<p>Connect your device to your computer using a USB cable. If you are developing on a Windows computer, you might need to install the a device specific USB driver. See the manufacture web site for your device for additional information.</p>
+
+<p>The setup process differs for Windows and macOS, and is explained in detail on the Android developer website. For more information on connecting your Android device to the SDK, refer to the <a href="https://developer.android.com/training/basics/firstapp/running-app.html#Emulator">Running Your App</a> section of the Android Developer documentation.</p>
+
+<p>Go to <strong>Settings</strong> &gt; <strong>Developer options</strong>, and check the USB debugging checkbox to enable debug mode when the device is connected to a computer via USB.</p>
+
+<figure>
+<img src="../uploads/Main/android-sdksetup-1.png" alt="Developer options as displayed in Android 5.0 (Lollipop) - Samsung Galaxy Note 3">
+<figcaption>Developer options as displayed in Android 5.0 (Lollipop) - Samsung Galaxy Note 3</figcaption>
+</figure>
+
+<h3>4. Configure the Android SDK path in Unity</h3>
+
+<p>The first time you create a Project for Android (or if Unity later fails to locate the SDK), Unity asks you to locate the folder in which you installed the Android SDK. </p>
+
+<p>If you installed the SDK using the sdkmanager, you can find the folder in &lt;android tools install location&gt;\platforms\&lt;android sdk folder&gt;.</p>
+
+<p>Example:</p>
+
+<p><em>c:\&lt;android tools install location&gt;\platforms\android–27</em></p>
+
+<p>If you installed the SDK when you installed Android Studio, you can find the location in the Android Studio SDK Manager. To open the SDK Manager from Android Studio, click <strong>Tools &gt; Android &gt; SDK Manager</strong> or click <strong>SDK Manager</strong> in the toolbar. </p>
+
+<figure>
+<img src="../uploads/Main/androidsdkmanagertoolbarbutton.png" alt="SDK Manager toolbar button">
+<figcaption>SDK Manager toolbar button</figcaption>
+</figure>
+
+<p>To change the location of the Android SDK, in the menu bar go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>External Tools</strong>.</p>
+
+<h3>5. Download and set up the Android NDK</h3>
+
+<p>If you are using the <span class="tooltip"><a href="https://docs.unity3d.com/Manual/IL2CPP.html">IL2CPP</a><span class="tooltiptext">A Unity-developed scripting back-end which you can use as an alternative to Mono when building projects for some platforms. <a href="IL2CPP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> <span class="tooltip"><strong>scripting backend</strong><span class="tooltiptext">A framework that powers scripting in Unity. Unity supports three different scripting backends depending on target platform: Mono, .NET and IL2CPP. Universal Windows Platform, however, supports only two: .NET and IL2CPP. <a href="windowsstore-scriptingbackends.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span> for Android, you need the Android Native Development Kit (NDK). It contains the toolchains (such as compiler and linker) needed to build the necessary libraries, and finally produce the output package (APK). If you are not targeting the IL2CPP back end, you can skip this step.</p>
+
+<p>Download Android NDK version r13b (64-bit) from the <a href="https://developer.android.com/ndk/downloads/index.html">NDK Downloads</a> web page. Extract the <em>android-ndk</em> folder to a directory on your computer and note the location. </p>
+
+<p>The first time you build a Project for Android using IL2CPP, you are asked to locate the folder in which you installed the Android NDK. Select the root folder of your NDK installation. To change the location of the Android NDK, in the Unity Editor, navigate to the menu: <strong>Unity</strong> &gt; <strong>Preferences</strong> to display the Unity Preferences dialog box. Here, click <strong>External Tools</strong>.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-GettingStarted.html"></a></span><div class="tip"> Getting started with Android development</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityRemote5.html"></a></span><div class="tip"> Unity Remote</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

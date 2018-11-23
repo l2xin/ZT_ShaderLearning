@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using the Network Manager</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetManager.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetManager.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetManager.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetManager.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetManager.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li> Using the Network Manager</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetGettingStarted.html"></a></span><div class="tip"> Setting up a multiplayer project</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetManagerHUD.html"></a></span><div class="tip"> Using the Network Manager HUD</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Using the Network Manager</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong><span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">A Networking component that manages the network state of a Project. <a href="class-NetworkManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span></strong> is a <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> for managing the <span class="tooltip"><strong>networking</strong><span class="tooltiptext">The Unity system that enables multiplayer gaming across a computer network. <a href="UNetOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Networking">Glossary</a></span></span></span> aspects of a multiplayer game.</p>
+
+<p>The Network Manager features include:</p>
+
+<ul>
+<li><p>Game state management</p></li>
+<li><p>Spawn management</p></li>
+<li><p><span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> management</p></li>
+<li><p>Debugging information</p></li>
+<li><p>Matchmaking</p></li>
+<li><p>Customization</p></li>
+</ul>
+
+<h2>Getting Started with the Network Manager</h2>
+
+<p>The Network Manager is the core controlling component of a multiplayer game. To get started, create an empty <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in your starting Scene, and add the NetworkManager component. The newly added Network Manager component looks like this:</p>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerInspector.png" alt="The Network Manager as seen in the inspector window">
+<figcaption>The Network Manager as seen in the inspector window</figcaption>
+</figure>
+
+<p>The <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> for the Network Manager in the Editor allows you to configure and control many things related to networking.</p>
+
+<p>
+<strong>Note</strong>: You should only ever have one active Network Manager in each Scene. Do not place the Network Manager component on a networked GameObject (one which has a <a href="class-NetworkIdentity.html">Network Identity</a> component), because Unity disables these when the Scene loads.</p>
+
+<p>If you are already familiar with multiplayer game development, you might find it useful to know that the Network Manager component is implemented entirely using the <a href="UNetUsingHLAPI.html">High-level API</a> (HLAPI), so everything it does is also available to you through scripting. For advanced users, if you find that you need to expand on the Network Manager component’s features, you can use scripting to derive your own class from NetworkManager and customize its behaviour by overriding any of the virtual function hooks that it provides. However, the Network Manager component wraps up a lot of useful functionality into a single place, and makes creating, running and debugging multiplayer games as simple as possible.</p>
+
+<h2>Game state management</h2>
+
+<p>A Networking multiplayer game can run in three modes - as a client, as a dedicated server, or as a “Host” which is both a client and a server at the same time. </p>
+
+<p>If you’re using the <a href="class-NetworkManagerHUD.html">Network Manager HUD</a>, it automatically tells the Network Manager which mode to start in, based on which options the player selects. If you’re writing your own <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> that allows the player to start the game, you’ll need to call these from your own code. These methods are:</p>
+
+<ul>
+<li><p><a href="../ScriptReference/Networking.NetworkManager.StartClient.html">NetworkManager.StartClient</a></p></li>
+<li><p><a href="../ScriptReference/Networking.NetworkManager.StartServer.html">NetworkManager.StartServer</a></p></li>
+<li><p><a href="../ScriptReference/Networking.NetworkManager.StartHost.html">NetworkManager.StartHost</a></p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/NetworkAddressAndPortSettings.png" alt="The network address and port settings in the Network Manager component">
+<figcaption>The network address and port settings in the Network Manager component</figcaption>
+</figure>
+
+<p>Whichever mode the game starts in (client, server, or host), the <strong>Network Address</strong> and <strong>Network Port</strong> properties are used. In client mode, the game attempts to connect to the address and port specified. In server or host mode, the game listens for incoming connections on the port specified.</p>
+
+<p>During development of your game, it can be useful to put a fixed address and port setting into these properties. However, eventually you might want your players to be able to choose the host they to connect to. When you get to that stage, the <a href="class-NetworkDiscovery.html">Network Discovery</a> component (see <a href="UNetDiscovery.html">Local Discovery</a>) can be used for broadcasting and finding addresses and ports on a local area network (LAN), and the Matchmaker service can be used for players to find internet matches to connect to (see <a href="UnityMultiplayerService.html">Multiplayer Service</a>).</p>
+
+<h2>Spawn management</h2>
+
+<p>Use the Network Manager to manage the spawning (networked instantiation) of networked GameObjects from <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerSpawnInfo.png" alt="The Spawn Info section of the Network Manager component">
+<figcaption>The “Spawn Info” section of the Network Manager component</figcaption>
+</figure>
+
+<p>Most games have a Prefab which represents the player, so the Network Manager has a <strong>Player Prefab</strong> slot. You should assign this slot with your player Prefab. When you have a player Prefab set, a player GameObject is automatically spawned from that Prefab for each user in the game. This applies to the local player on a hosted server, and remote players on remote clients. You must attach a <a href="class-NetworkIdentity.html">Network Identity</a> component to the Player Prefab.</p>
+
+<p>Once you have assigned a player Prefab, you can start the game as a host and see the player GameObject spawn. Stopping the game destroys the player GameObject. If you build and run another copy of the game and connect it as a client to <em>localhost</em>, the Network Manager makes another player GameObject appear. When you stop that client, it destroys that player’s GameObject.</p>
+
+<p>In addition to the player Prefab, you must also register other Prefabs that you want to dynamically spawn during gameplay with the Network Manager.</p>
+
+<p>You can add Prefabs to the list shown in the inspector labelled <strong>Registered Spawnable Prefabs</strong>. You can also can register prefabs via code, with the <a href="../ScriptReference/Networking.ClientScene.RegisterPrefab.html">ClientScene.RegisterPrefab()</a> method.</p>
+
+<p>If you have only one Network Manager, you need to register to it all prefabs which might be spawned in any Scene. If you have a separate Network Manager in each Scene, you only need to register the prefabs relevant for that Scene.</p>
+
+<h3>Customizing Player Instantiation</h3>
+
+<p>The Network Manager spawns player GameObjects using its implementation of <a href="../ScriptReference/Networking.NetworkManager.OnServerAddPlayer.html">NetworkManager.OnServerAddPlayer()</a>. If you want to customize the way player GameObjects are created, you can override that virtual function. This code shows an example of the default implementation:</p>
+
+<pre><code>
+public virtual void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+{
+    var player = (GameObject)GameObject.Instantiate(playerPrefab, playerSpawnPos, Quaternion.identity);
+    NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+}
+</code></pre>
+
+<p>
+<strong>Note: </strong>If you are implementing a custom version of OnServerAddPlayer, the method <a href="../ScriptReference/Networking.NetworkServer.AddPlayerForConnection.html">NetworkServer.AddPlayerForConnection()</a> must be called for the newly created player GameObject, so that it is spawned and associated with the client’s connection. AddPlayerForConnection spawns the GameObject, so you do not need to use <a href="../ScriptReference/Networking.NetworkServer.Spawn.html">NetworkServer.Spawn()</a>.</p>
+
+<h2>Start positions</h2>
+
+<p>To control where players are spawned, you can use the <a href="class-NetworkStartPosition.html">Network Start Position</a> component. To use these, attach a Network Start Position component to a GameObject in the Scene, and position the GameObject where you would like one of the players to start. You can add as many start positions to your Scene as you like. The Network Manager detects all start positions in your Scene, and when it spawns each player instance, it uses the position and orientation of one of them.</p>
+
+<p>The Network Manager has a <strong>Player Spawn Method</strong> property, which allows you to configure how start positions are chosen.</p>
+
+<ul>
+<li><p>Choose <strong>Random</strong> to spawn players at randomly chosen startPosition options.</p></li>
+<li><p>Choose <strong>Round Robin</strong> to cycle through startPosition options in a set list.</p></li>
+</ul>
+
+<p>If the Random or Round Robin modes don’t suit your game, you can customize how the start positions are selected by using code. You can access the available Network Start Position components by the list <a href="../ScriptReference/Networking.NetworkManager-startPositions.html">NetworkManager.startPositions</a>, and you can use the helper method <a href="../ScriptReference/Networking.NetworkManager.GetStartPosition.html">GetStartPosition()</a> on the Network Manager that can be used in implementation of OnServerAddPlayer to find a start position.</p>
+
+<h2>Scene management</h2>
+
+<p>Most games have more than one Scene. At the very least, there is usually a title screen or starting menu Scene in addition to the Scene where the game is actually played. The Network Manager is designed to automatically manage Scene state and Scene transitions in a way that works for a multiplayer game.</p>
+
+<p>There are two slots on the NetworkManager Inspector for scenes: the Offline Scene and the Online Scene. Dragging Scene <span class="tooltip"><strong>assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> into these slots activates networked Scene management.</p>
+
+<p>When a server or host is started, the Online Scene is loaded. This then becomes the current network Scene. Any clients that connect to that server are instructed to also load that Scene. The name of this Scene is stored in the <a href="../ScriptReference/Networking.NetworkManager-networkSceneName.html">networkSceneName</a> property.</p>
+
+<p>When the network is stopped, by stopping the server or host or by a client disconnecting, the offline Scene is loaded. This allows the game to automatically return to a menu Scene when disconnected from a multiplayer game.</p>
+
+<p>You can also change Scenes while the game is active by calling <a href="../ScriptReference/Networking.NetworkManager.ServerChangeScene.html">NetworkManager.ServerChangeScene()</a>. This makes all the currently connected clients change Scene too, and updates networkSceneName so that new clients also load the new Scene.</p>
+
+<p>While networked Scene management is active, any calls to game state management functions such NetworkManager.StartHost() or NetworkManager.StopClient() can cause Scene changes. This applies to the runtime control UI. By setting up Scenes and calling these methods, you can control the flow of your multiplayer game.</p>
+
+<p>Note that Scene changes cause all the GameObjects in the previous Scene to be destroyed. </p>
+
+<p>You should normally make sure the Network Manager persists between Scenes, otherwise the network connection is broken upon a Scene change. To do this, ensure the <strong>Don’t Destroy On Load</strong> box is checked in the Inspector. However it is also possible to have a separate Network Manager in each Scene with different settings, which may be helpful if you wish to control incremental Prefab loading, or different Scene transitions.</p>
+
+<h2>Customization</h2>
+
+<p>There are virtual functions on the NetworkManager class that you can customize by creating your own derived class that inherits from NetworkManager. When implementing these functions, be sure to take care of the functionality that the default implementations provide. For example, in OnServerAddPlayer(), the function NetworkServer.AddPlayer must be called to activate the player GameObject for the connection.</p>
+
+<p>These are all the callbacks that can happen for host/server and clients, in some cases it’s important to invoke the base class function to maintain default behaviour. To see the implementation itself you can view it in the <a href="https://bitbucket.org/Unity-Technologies/networking">networking bitbucket repository</a>.</p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Networking;
+
+using UnityEngine.Networking.Match;
+
+public class CustomManager : NetworkManager {
+
+    // Server callbacks
+
+    public override void OnServerConnect(NetworkConnection conn) {
+
+        Debug.Log(&quot;A client connected to the server: &quot; + conn);
+
+    }
+
+    public override void OnServerDisconnect(NetworkConnection conn) {
+
+        NetworkServer.DestroyPlayersForConnection(conn);
+
+        if (conn.lastError != NetworkError.Ok) {
+
+            if (LogFilter.logError) { Debug.LogError(&quot;ServerDisconnected due to error: &quot; + conn.lastError); }
+
+        }
+
+        Debug.Log(&quot;A client disconnected from the server: &quot; + conn);
+
+    }
+
+    public override void OnServerReady(NetworkConnection conn) {
+
+        NetworkServer.SetClientReady(conn);
+
+        Debug.Log(&quot;Client is set to the ready state (ready to receive state updates): &quot; + conn);
+
+    }
+
+    public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId) {
+
+        var player = (GameObject)GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+
+        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+
+        Debug.Log(&quot;Client has requested to get his player added to the game&quot;);
+
+    }
+
+    public override void OnServerRemovePlayer(NetworkConnection conn, PlayerController player) {
+
+        if (player.gameObject != null)
+
+            NetworkServer.Destroy(player.gameObject);
+
+    }
+
+    public override void OnServerError(NetworkConnection conn, int errorCode) {
+
+        Debug.Log(&quot;Server network error occurred: &quot; + (NetworkError)errorCode);
+
+    }
+
+    public override void OnStartHost() {
+
+        Debug.Log(&quot;Host has started&quot;);
+
+    }
+
+    public override void OnStartServer() {
+
+        Debug.Log(&quot;Server has started&quot;);
+
+    }
+
+    public override void OnStopServer() {
+
+        Debug.Log(&quot;Server has stopped&quot;);
+
+    }
+
+    public override void OnStopHost() {
+
+        Debug.Log(&quot;Host has stopped&quot;);
+
+    }
+
+    // Client callbacks
+
+    public override void OnClientConnect(NetworkConnection conn)
+
+    {
+
+        base.OnClientConnect(conn);
+
+        Debug.Log(&quot;Connected successfully to server, now to set up other stuff for the client...&quot;);
+
+    }
+
+    public override void OnClientDisconnect(NetworkConnection conn) {
+
+        StopClient();
+
+        if (conn.lastError != NetworkError.Ok)
+
+        {
+
+            if (LogFilter.logError) { Debug.LogError(&quot;ClientDisconnected due to error: &quot; + conn.lastError); }
+
+        }
+
+        Debug.Log(&quot;Client disconnected from server: &quot; + conn);
+
+    }
+
+    public override void OnClientError(NetworkConnection conn, int errorCode) {
+
+        Debug.Log(&quot;Client network error occurred: &quot; + (NetworkError)errorCode);
+
+    }
+
+    public override void OnClientNotReady(NetworkConnection conn) {
+
+        Debug.Log(&quot;Server has set client to be not-ready (stop getting state updates)&quot;);
+
+    }
+
+    public override void OnStartClient(NetworkClient client) {
+
+        Debug.Log(&quot;Client has started&quot;);
+
+    }
+
+    public override void OnStopClient() {
+
+        Debug.Log(&quot;Client has stopped&quot;);
+
+    }
+
+    public override void OnClientSceneChanged(NetworkConnection conn) {
+
+        base.OnClientSceneChanged(conn);
+
+        Debug.Log(&quot;Server triggered scene change and we've done the same, do any extra work here for the client...&quot;);
+
+    }
+
+}
+
+</code></pre>
+
+<p>The inspector for the NetworkManager provides the ability to change some connection parameters and timeouts. Some parameters have not been exposed here but can be changed through code. </p>
+
+<pre><code>
+using UnityEngine;
+
+using UnityEngine.Networking;
+
+public class CustomManager : NetworkManager {
+
+    // Set custom connection parameters early, so they are not too late to be enforced
+
+    void Start()
+
+    {
+
+        customConfig = true;
+
+        connectionConfig.MaxCombinedReliableMessageCount = 40;
+
+        connectionConfig.MaxCombinedReliableMessageSize = 800;
+
+        connectionConfig.MaxSentMessageQueueSize = 2048;
+
+        connectionConfig.IsAcksLong = true;
+
+        globalConfig.ThreadAwakeTimeout = 1;
+
+    }
+
+}
+
+</code></pre>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetGettingStarted.html"></a></span><div class="tip"> Setting up a multiplayer project</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetManagerHUD.html"></a></span><div class="tip"> Using the Network Manager HUD</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  WebGL: Deploying compressed builds</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/webgl-deploying.html">English</a></li>
+<li><a href="/ja/current/Manual/webgl-deploying.html">日本語</a></li>
+<li><a href="/es/current/Manual/webgl-deploying.html">Español</a></li>
+<li><a href="/kr/current/Manual/webgl-deploying.html">한국어</a></li>
+<li><a href="/ru/current/Manual/webgl-deploying.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">Getting started with WebGL development</a></li>
+<li> WebGL: Deploying compressed builds</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-building.html"></a></span><div class="tip">Building and running a WebGL project</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-debugging.html"></a></span><div class="tip">Debugging and troubleshooting WebGL builds</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>WebGL: Deploying compressed builds</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When you build a WebGL project in release mode (see <a href="PublishingBuilds.html">Publishing builds</a>), Unity compresses your build output files to reduce the download size of your build. You can choose the type of compression it uses from the Compression Format options in Publishing Settings (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong> &gt; <strong>Publishing Settings</strong>):</p>
+
+<ul>
+<li><p>
+<strong>gzip</strong>: This is the default option. gzip files are bigger than Brotli files, but faster to build, and natively supported by all browsers over both http and https.</p></li>
+<li><p>
+<strong>Brotli</strong>: Brotli <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> offers the best <strong>compression</strong> ratios. Brotli compressed files are significantly smaller than gzip, but take a long time to compress, increasing your iteration times on release builds. Brotli <strong>compression</strong> is natively supported by Chrome and Firefox over https (see <a href="webgl-browsercompatibility.html">WebGL browser compatibility</a> for more information).</p></li>
+<li><p>
+<strong>Disabled</strong>: This disables compression. Use this if you want to implement your own compression in post-processing <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p></li>
+</ul>
+
+<p>Compression-built Unity builds work on any browser. Unity contains a software decompressor written in JavaScript, which it falls back to when compression on the http transfer level is not enabled by the server.</p>
+
+<h2>Advanced: Native browser decompression</h2>
+
+<p>The browser can handle decompression of Unity builds natively while it downloads the build data. This has the advantage of avoiding the additional delay caused by decompressing your files in JavaScript, therefore reducing your startup time. To let the browser handle decompression natively, you need to configure your web server to serve the compressed files with the appropriate http headers: These tell the browser that the data is compressed with gzip or Brotli so it decompresses the data while it is being transferred. Brotli compression is supported by Firefox and Chrome on https only, while gzip compression is supported by all browsers. See <a href="webgl-browsercompatibility.html">WebGL browser compatibility</a> for more information.</p>
+
+<h2>Setting up web servers</h2>
+
+<p>The setup process for native browser decompression depends on your web server. The instructions on this page apply to the two most common web servers, <strong>Apache</strong> and <strong>IIS</strong>. Note that these are designed to work on a default setup, but may need adjustments to match your specific configuration. In particular, there may be issues if you already have other server-side configuration to compress hosted files, which may interfere with this setup. The basic idea is to append a <em>Content-Encoding</em> header to the server response, corresponding to the type of compression used at build time. This will allow the browser to perform decompression natively and asynchronously during download.</p>
+
+<h3>Apache</h3>
+
+<p>Apache server uses invisible <em>.htaccess</em> files for server configuration. The code below shows examples of <em>.htaccess</em> files which can be used to enforce native browser decompression. Note that Apache server configuration setup is optional.</p>
+
+<p>For gzip-compressed builds put the following <em>.htaccess</em> file into your <em>Build</em> subfolder:</p>
+
+<pre><code>&lt;IfModule mod_mime.c&gt;
+  AddEncoding gzip .unityweb
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>For brotli-compressed builds put the following <em>.htaccess</em> file into your <em>Build</em> subfolder:</p>
+
+<pre><code>&lt;IfModule mod_mime.c&gt;
+  AddEncoding br .unityweb
+&lt;/IfModule&gt;
+</code></pre>
+
+<h2>IIS</h2>
+
+<p><strong>Necessary IIS server configuration steps:</strong></p>
+
+<p>By default IIS server does not serve static content of unknown MIME type. In order to make Unity build work on IIS, you first need to associate the <em>.unityweb</em> extension with the <em>application/octet-stream</em> content typ. There are two ways to achieve that:</p>
+
+<p>
+<em>Using IIS Manager interface:</em>
+Select your website in the IIS Manager panel, open the <em>MIME Types</em> feature and select <em>Add…</em> action. Set <em>.unityweb</em> as file name extension and <em>application/octet-stream</em> as MIME type, click <em>OK</em>.</p>
+
+<p>
+<em>Using server configuration file:</em>
+IIS uses <em>web.config</em> files for server configuration. Those configuration files reflect all the changes made in IIS Manager for a specific folder. In order to associate <em>application/octet-stream</em> MIME type with <em>.unityweb</em> extension, you can use the following <em>web.config</em> file:</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;system.webServer&gt;
+            &lt;staticContent&gt;
+            &lt;remove fileExtension=&quot;.unityweb&quot; /&gt;
+&lt;mimeMap fileExtension=&quot;.unityweb&quot; mimeType=&quot;application/octet-stream&quot; /&gt;
+            &lt;/staticContent&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<p>Note that configuration file affects all the server subfolders, therefore it is sufficient to set the MIME type for the <em>.unityweb</em> extension just once in the server root folder.</p>
+
+<p>Optional IIS server configuration steps:</p>
+
+<p>In order to speed up the build startup times, you may optionally use the following configuration files. Note that in order to use this setup, you need to have Microsoft’s <a href="http://www.iis.net/downloads/microsoft/url-rewrite">IIS URL Rewrite IIS module</a> installed; otherwise, the browser will throw a 500 Internal Server Error.</p>
+
+<p>For gzip-compressed builds put the following <em>web.config</em> file into the <em>Build</em> subfolder:</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;system.webServer&gt;
+            &lt;staticContent&gt;
+                    &lt;remove fileExtension=&quot;.unityweb&quot; /&gt;
+                    &lt;mimeMap fileExtension=&quot;.unityweb&quot; mimeType=&quot;application/octet-stream&quot; /&gt;
+            &lt;/staticContent&gt;
+            &lt;rewrite&gt;
+                    &lt;outboundRules&gt;
+                        &lt;rule name=&quot;Append gzip Content-Encoding header&quot;&gt;
+                            &lt;match serverVariable=&quot;RESPONSE_Content-Encoding&quot; pattern=&quot;.*&quot; /&gt;
+                            &lt;conditions&gt;
+                                    &lt;add input=&quot;{REQUEST_FILENAME}&quot; pattern=&quot;\.unityweb$&quot; /&gt;
+                            &lt;/conditions&gt;
+                            &lt;action type=&quot;Rewrite&quot; value=&quot;gzip&quot; /&gt;
+                        &lt;/rule&gt;
+                    &lt;/outboundRules&gt;
+            &lt;/rewrite&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<p>For brotli-compressed builds put the following <em>web.config</em> file into the <em>Build</em> subfolder:</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;system.webServer&gt;
+            &lt;staticContent&gt;
+                    &lt;remove fileExtension=&quot;.unityweb&quot; /&gt;
+                    &lt;mimeMap fileExtension=&quot;.unityweb&quot; mimeType=&quot;application/octet-stream&quot; /&gt;
+            &lt;/staticContent&gt;
+            &lt;rewrite&gt;
+                    &lt;outboundRules&gt;
+                        &lt;rule name=&quot;Append br Content-Encoding header&quot;&gt;
+                            &lt;match serverVariable=&quot;RESPONSE_Content-Encoding&quot; pattern=&quot;.*&quot; /&gt;
+                            &lt;conditions&gt;
+                                    &lt;add input=&quot;{REQUEST_FILENAME}&quot; pattern=&quot;\.unityweb$&quot; /&gt;
+                            &lt;/conditions&gt;
+                            &lt;action type=&quot;Rewrite&quot; value=&quot;br&quot; /&gt;
+                        &lt;/rule&gt;
+                    &lt;/outboundRules&gt;
+            &lt;/rewrite&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+
+</code></pre>
+
+<p>Note that the <code>&lt;remove fileExtension=&quot;.unityweb&quot; /&gt;</code> lines are required to handle a situation when content type is already overridden at a higher level in the server directory’s hierarchy, which could otherwise cause a server exception.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–24 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-building.html"></a></span><div class="tip">Building and running a WebGL project</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-debugging.html"></a></span><div class="tip">Debugging and troubleshooting WebGL builds</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

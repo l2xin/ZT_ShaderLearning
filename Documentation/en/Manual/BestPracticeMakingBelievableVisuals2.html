@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Preparing render settings in Unity</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeMakingBelievableVisuals2.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeMakingBelievableVisuals2.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeMakingBelievableVisuals2.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeMakingBelievableVisuals2.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeMakingBelievableVisuals2.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html"> Making believable visuals in Unity</a></li>
+<li> Preparing render settings in Unity</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals1.html"></a></span><div class="tip"> Preparing Assets for Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals3.html"></a></span><div class="tip"> Lighting strategy</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Preparing render settings in Unity</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The following advice helps you understand how to use Unity’s rendering features to realistically mimic the real world, and quickly achieve your project’s believable visual goal. This covers:</p>
+
+<ul>
+<li><a href="#linear">Linear rendering mode</a></li>
+<li><span class="tooltip"><a href="#rendering">Rendering mode</a><span class="tooltiptext">A Standard Shader Material parameter that allows you to choose whether the object uses transparency, and if so, which type of blending mode to use. <a href="StandardShaderMaterialParameterRenderingMode.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderingMode">Glossary</a></span></span></span></li>
+<li><a href="#enablePP">Enabling post-processing</a></li>
+<li><a href="#hdrCamera">High Dynamic Range (HDR) Camera</a></li>
+<li><a href="#hdrLightmap">HDR Light map encoding (optional)</a></li>
+<li><a href="#imageEffects">Enabling Image Effects for viewport</a></li>
+</ul>
+
+<p>For more in-depth information, see Unity’s <a href="https://unity3d.com/learn/tutorials/topics/graphics/introduction-lighting-and-rendering">lighting and rendering tutorial</a>.</p>
+
+<p><a name="linear"></a></p>
+
+<h2>Linear rendering mode</h2>
+
+<p>In simple terms, the linear rendering mode prepares Unity to do lighting and shading calculations using physically accurate mathematics before transforming the final output into the format that works best for monitors. </p>
+
+<p>To specify a gamma or linear workflow: </p>
+
+<ol>
+<li><p>In Unity, select <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong> and open <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>. </p></li>
+<li><p>Go to <strong>Other Settings</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> and change the <strong>Color Space</strong> to <strong>Linear</strong>.</p></li>
+</ol>
+
+<p>Defining your color space should be one of the earliest decisions in your project because of the drastic impact on the final shading and lighting results. For more advice on each workflow, see <a href="LinearRendering-LinearOrGammaWorkflow.html">Linear or gamma workflow</a>.</p>
+
+<p><a name="rendering"></a></p>
+
+<h2>Rendering mode</h2>
+
+<p>The Spotlight Tunnel Sample <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> uses the <span class="tooltip"><strong>deferred shading</strong><span class="tooltiptext">A rendering path that places no limit on the number of lights that can affect a GameObject. All lights are evaluated per-pixel, which means that they all interact correctly with normal maps and so on. Additionally, all lights can have cookies and shadows. <a href="RenderTech-DeferredShading.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Deferredshading">Glossary</a></span></span></span> rendering path. This allows you to:</p>
+
+<ul>
+<li><p>Work with multiple dynamic lights efficiently</p></li>
+<li><p>Combine multiple reflection cubemaps</p></li>
+<li><p>Use the existing Screen Space Reflection features in Unity 2017+</p></li>
+</ul>
+
+<p>To set the rendering path in the Editor, select <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Graphics </strong>or select the <strong>Main Camera</strong> in your Scene, and then set the <span class="tooltip"><strong>Rendering Path</strong><span class="tooltiptext">The technique Unity uses to render graphics. Choosing a different path affects the performance of your game, and how lighting and shading are calculated. Some paths are more suited to different platforms and hardware than others. <a href="RenderingPaths.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> in the Inspector window.</p>
+
+<p>For more information on the rendering mode, see <a href="Rendering-Tech.html">Rendering Pipeline Details</a>.</p>
+
+<p><a name="enablePP"></a></p>
+
+<h2>Enabling post-processing</h2>
+
+<p>To display <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> lighting properly, install the <a href="https://assetstore.unity.com/packages/essentials/post-processing-stack-83912">Unity post-processing stack V1</a> in your project, and follow these steps to set it up and enable tonemapping:</p>
+
+<ol>
+<li>
+<p>Create a <strong>Post-Processing Profile</strong> <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> in your project and configure it:</p>
+
+<ul>
+<li>Enable <strong>Color Grading</strong> &gt; <strong>Tonemapper</strong> &gt; <strong>Filmic (ACES)</strong> (Academy Color Encoding Standards). For advice on using ACES tonemapping to handle high intensity color values, such as colored light or fire, see <a href="BestPracticeMakingBelievableVisuals8.html#highIntensityColor">High intensity color</a>.</li>
+<li>
+<strong>Enable Dithering</strong>. Dithering allows the Scene to alleviate banding artifacts introduced by 8 Bit/channel output from an HDR Scene. Modern engines use this technique to circumvent the limitation of 16M color output.</li>
+<li>Leave the rest of the <strong>Tonemapper</strong> settings with their default values.</li>
+</ul>
+</li>
+<li><p>Select the <strong>Main Camera</strong> in your Scene, click <strong>Add Component</strong> in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window, and choose <strong>Post-Processing Behaviour</strong>.</p></li>
+<li><p>In the <strong>Profile</strong> field, enter the post-processing profile you created.</p></li>
+</ol>
+
+<p>The Spotlight Tunnel sample scene uses the post-processing stack V1. For advice on using post-processing stack V2, refer to the <a href="https://github.com/Unity-Technologies/PostProcessing">package readme</a>.</p>
+
+<p><a name="hdrCamera"></a></p>
+
+<h2>High Dynamic Range (HDR) Camera</h2>
+
+<p>When rendering believable lighting, you’re dealing with lighting values and emissive surfaces that have a brightness higher than 1 (high dynamic range), much like real life. You then need to remap these values to the proper screen range (see <span class="tooltip"><a href="PostProcessing-ColorGrading.html">tonemapping</a><span class="tooltiptext">The process of remapping HDR values of an image into a range suitable to be displayed on screen. <a href="PostProcessing-ColorGrading.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Tonemapping">Glossary</a></span></span></span>). The high dynamic range setting is crucial because it allows the Unity <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> to process high values, rather than clip them.
+To enable HDR, select the <strong>Main Camera</strong> in your Scene and ensure that <strong>Allow HDR</strong> is checked in the Inspector window.</p>
+
+<p><a name="hdrLightmap"></a></p>
+
+<h2>HDR Lightmap encoding (optional)</h2>
+
+<p>The Spotlight Tunnel Sample Scene doesn’t use baked lighting. However, if you’re planning to use HDR baked lighting, set the light map encoding to HDR light map for consistent results.</p>
+
+<p>To set lightmap encoding in Unity, go to <strong>Edit</strong> &gt; <strong>Project</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settingspost</strong> &gt; <strong>Lightmap Encoding</strong>. For more information, see <a href="Lightmaps-TechnicalInformation.html">Lightmaps: Technical information</a>.</p>
+
+<p><a name="imageEffects"></a></p>
+
+<h2>Enabling image effects in the viewport</h2>
+
+<p>To see the tonemapper while working with the Scene, enable <strong>Image Effects</strong> in the drop-down <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">A row of buttons and basic controls at the top of the Unity Editor that allows you to interact with the Editor in various ways (e.g. scaling, translation). <a href="Toolbar.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Toolbar">Glossary</a></span></span></span> menu at the top of the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. In the following image, notice the highlight rendition and the dark tunnel value separation improvements in the tonemapped Scene. If you look at the non-tonemapped Scene, you can see how the highlights didn’t converge to a unified color (the yellowish burning sun in this case).</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsACESTonemapping.jpg" alt="Comparison between non-tonemapped scene and ACES-tonemapped Scene">
+<figcaption>Comparison between non-tonemapped scene and ACES-tonemapped Scene</figcaption>
+</figure>
+
+<p>This setup essentially tries to replicate how a digital camera captures a Scene with a fixed exposure (without exposure adaptation/eye adaptation features enabled).</p>
+
+<p>At this point, you have a proper foundational Scene rendering setup that should give believable results with a wide range of content:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsRenderSetup.png" alt="">
+</figure>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–23 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Making believable visuals Best Practice Guide added in Unity 2017.3</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals1.html"></a></span><div class="tip"> Preparing Assets for Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals3.html"></a></span><div class="tip"> Lighting strategy</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

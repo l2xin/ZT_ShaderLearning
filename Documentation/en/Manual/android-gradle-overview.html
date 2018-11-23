@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Gradle for Android</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/android-gradle-overview.html">English</a></li>
+<li><a href="/ja/current/Manual/android-gradle-overview.html">日本語</a></li>
+<li><a href="/es/current/Manual/android-gradle-overview.html">Español</a></li>
+<li><a href="/kr/current/Manual/android-gradle-overview.html">한국어</a></li>
+<li><a href="/ru/current/Manual/android-gradle-overview.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="android.html">Android</a></li>
+<li> Gradle for Android</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporterAndroid.html"></a></span><div class="tip">Android 2D Textures Overrides</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-gradle-troubleshooting.html"></a></span><div class="tip"> Gradle troubleshooting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Gradle for Android</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Gradle is an Android build system which automates a number of build processes. This automation means that many common build errors are less likely to occur. Most notably in Unity, it reduces the method reference count in DEX (Dalvik Executable format) files, meaning that you are less likely to come across DEX limit problems. However, due to the differences between <strong>Gradle</strong> and the default Unity Android build system, some existing projects may be hard to convert to <strong>Gradle</strong>.</p>
+
+<p>You can either build the output package (APK) using the Gradle build system in Unity, or export the Gradle project and build it in an external tool (such as Android Studio).</p>
+
+<p>To learn more, see Gradle’s resources on <a href="https://gradle.org/getting-started-android-build/">Getting Started with Gradle for Android Build</a>.</p>
+
+<h2>Building with Gradle for Android</h2>
+
+<p>To build your Android build with Gradle in Unity: </p>
+
+<ol>
+<li>In the Unity Editor, open the <a href="BuildSettings.html">Build Settings</a> window (menu: <strong>File</strong> &gt; <strong>Build Settings…</strong>)</li>
+<li>In the <strong>Platform</strong> list, select <strong>Android</strong>
+</li>
+<li>Set the Build System drop-down to <strong>Gradle (new)</strong>, then click <span class="tooltip"><strong>Build</strong><span class="tooltiptext">The process of compiling your project into a format that is ready to run on a specific platform or platforms. <a href="BuildSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#build">Glossary</a></span></span></span></li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/gradlebuildsettings.png" alt="Gradle build settings">
+<figcaption>Gradle build settings</figcaption>
+</figure>
+
+<h2>Exporting the Gradle project</h2>
+
+<p>To export a Gradle project, follow the instructions above, but tick the <strong>Export Project</strong> option in the Build window before you click <strong>Build</strong>. When you click <strong>Build</strong> Unity generates a Gradle project in the specified directory rather than building the <span class="tooltip"><strong>APK</strong><span class="tooltiptext">The Android Package format output by Unity. An APK is automatically deployed to your device when you select File &gt; Build &amp; Run. <a href="android-BuildProcess.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#APK">Glossary</a></span></span></span>. Import this project into Android Studio to make additional modifications or to get full control of the build process.</p>
+
+<p>See <a href="https://developer.android.com/studio/build/index.html">Android Studio’s documentation on configuring your build</a> for more information about building an output package (APK).</p>
+
+<h2>Providing a custom build.gradle template</h2>
+
+<p>To use your own build.gradle file when building the APK from Unity, use the Custom Gradle Template checkbox under <span class="tooltip"><a href="class-PlayerSettingsAndroid.html">Player Settings</a><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>.
+This will generate a default mainTemplate.gradle for you, which you can edit. This template contains several variables that will be filled in by the Unity build process, such as <code>**TARGETSDKVERSION**</code> – you would normally leave these alone.
+You can also use your own settings.gradle by providing a settingsTemplate.gradle in your <span class="tooltip"><strong>Plugins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> directory in the same way (although there is currently no automatic way to do this). This file is responsible for including your library projects, so unless you want to also override that process, the file should at least contain this line: </p>
+
+<p><code>**INCLUDES**</code></p>
+
+<p>which will be replaced by include directives to all your libraries.</p>
+
+<h3>Template Variables</h3>
+
+<p>These variables can be used in the mainTemplate.gradle file;</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Variable:</strong></th>
+	<th style="text-align:left;"><strong>Description:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>DEPS</strong></td>
+	<td style="text-align:left;">List of project dependencies; ie the libraries used.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>API VERSION</strong></td>
+	<td style="text-align:left;">API version to build for (eg 25).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>BUILDTOOLS</strong></td>
+	<td style="text-align:left;">SDK Build tools used (eg 25.0.1).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>TARGETSDKVERSION</strong></td>
+	<td style="text-align:left;">API version to taget (eg 25).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>APPLICATIONID</strong></td>
+	<td style="text-align:left;">Android Application ID (eg com.mycompany.mygame).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MINIFY_DEBUG</strong></td>
+	<td style="text-align:left;">Minify for debug builds enabled (true or false).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>PROGUARD_DEBUG</strong></td>
+	<td style="text-align:left;">Use proguard for minification (true or false.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MINIFY_RELEASE</strong></td>
+	<td style="text-align:left;">Minify for release builds enabled (true or false).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>PROGUARD_RELEASE</strong></td>
+	<td style="text-align:left;">Use proguard for minification (true or false).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>USER_PROGUARD</strong></td>
+	<td style="text-align:left;">Custom user proguard file (ie progard-user.txt).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SIGN</strong></td>
+	<td style="text-align:left;">Complete signingConfigs section if build is to be signed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SIGN_CONFIG</strong></td>
+	<td style="text-align:left;">Set to ‘signingConfig signingConfig.release’ if build is signed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>DIR_GRADLEPROJECT</strong></td>
+	<td style="text-align:left;">Directory where the gradle project is created.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>DIR_UNITYPROJECT</strong></td>
+	<td style="text-align:left;">Directory of your Unity project.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Minification</h3>
+
+<p>You can activate <strong>Proguard Minification</strong> under <a href="class-PlayerSettingsAndroid.html">Player Settings</a> Minify.
+Note that proguard can easily strip out code that is actually needed, so often this process needs to be configured carefully. You can generate a custom proguard.txt using the checkbox User Proguard File under the same settings as a starting point. </p>
+
+<p>See the <a href="https://www.guardsquare.com/en/proguard/manual/usage">ProGuard manual</a> for more information on Proguard.</p>
+
+<h2>Errors when building with Gradle</h2>
+
+<p>If an error occurs during building for Android using Gradle, Unity displays an error dialog box. Click <strong>Troubleshoot</strong> to open the <a href="android-gradle-troubleshooting.html">Gradle troubleshooting</a> Unity documentation in your system’s browser.</p>
+
+<figure>
+<img src="../uploads/Main/gradleerrorapk.png" alt="Unity’s Grade build error dialog box">
+<figcaption>Unity’s Grade build error dialog box</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–10–02 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Expanded custom build.gradle template section.</span></p></li>
+<li><p><span class="page-history">New feature in 5.5</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporterAndroid.html"></a></span><div class="tip">Android 2D Textures Overrides</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-gradle-troubleshooting.html"></a></span><div class="tip"> Gradle troubleshooting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Analytics Event Tracker</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-AnalyticsEventTracker.html">English</a></li>
+<li><a href="/ja/current/Manual/class-AnalyticsEventTracker.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-AnalyticsEventTracker.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-AnalyticsEventTracker.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-AnalyticsEventTracker.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li><a href="UnityAnalyticsEvents.html"> Analytics events</a></li>
+<li> Analytics Event Tracker</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsCustomEventScripting.html"></a></span><div class="tip"> Custom Event scripting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsEventParameters.html"></a></span><div class="tip"> Analytics event parameters</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Analytics Event Tracker</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the <strong>Analytics Event Tracker</strong> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> to send both Standard and Custom Events. While you can send these events using a script, in some cases it can be more convenient to set up the event triggers and parameters directly from the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window of the Unity Editor.</p>
+
+<p>Attach an <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span> Event Tracker component to any <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> to send a Standard or Custom event. Use a separate tracker component for each different type of <strong>Analytics</strong> event that you send.</p>
+
+<p>The Analytics Event Tracker component has two main sections:</p>
+
+<ul>
+<li>
+<strong>When</strong>: Specifies when to dispatch the event.</li>
+<li>
+<strong>Send Event</strong>: Specifies which event to send, and defines the required and optional parameters.</li>
+</ul>
+
+<h2>When to send an event</h2>
+
+<p>There are three ways to trigger the tracker component to send an event: <strong>Lifecycle Event</strong>, <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span>, and <strong>Timer</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsEventTracker.png" alt="Analytics Event Tracker component">
+<figcaption>Analytics Event Tracker component</figcaption>
+</figure>
+
+<ul>
+<li>Choose <strong>Lifecycle Event</strong> to dispatch the Analytics event when a specific <code>MonoBehaviour</code> lifecycle event (such as <code>Start</code> or <code>OnEnable</code>) occurs.</li>
+<li>Choose <strong>UI</strong> if you are using a UI event to trigger the Analytics event. You must set up the UI event separately. For example, to dispatch an event when a button is clicked, you could add the <code>AnalyticsEventTracker.TriggerEvent</code> to the button’s <code>OnClick()</code> list:</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnalyticsEventTrackerWhen.png" alt="Specifying when to report an event to the Analytics service">
+<figcaption>Specifying when to report an event to the Analytics service</figcaption>
+</figure>
+
+<ul>
+<li>Choose <strong>Timer</strong> to dispatch the Analytics event after a specified delay or at regular intervals (measured in seconds). When using a timer to dispatch the event, remember that there is a limit of 100 events per hour per player, so you could quickly reach your application event limit.</li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Trigger Type</strong></td>
+	<td style="text-align:left;">Specifies the type of game event that triggers the Analytics event to be dispatched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Lifecycle Event</strong></td>
+	<td style="text-align:left;">Dispatch when a specific MonoBehaviour event occurs:</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Awake</strong></td>
+	<td style="text-align:left;">Dispatch when Unity invokes this GameObject’s <code>Awake()</code> method.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Start</strong></td>
+	<td style="text-align:left;">Dispatch when Unity invokes this GameObject’s <code>Start()</code> method.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>On Enable</strong></td>
+	<td style="text-align:left;">Dispatch when Unity or your game code enables this GameObject.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>On Disable</strong></td>
+	<td style="text-align:left;">Dispatch when Unity or your game code disables this GameObject.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>On Application Pause</strong></td>
+	<td style="text-align:left;">Dispatch when Unity pauses the application.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>On Application Unpause</strong></td>
+	<td style="text-align:left;">Dispatch when Unity unpauses the application.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>On Destroy</strong></td>
+	<td style="text-align:left;">Dispatch when Unity destroys the object.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>None</strong></td>
+	<td style="text-align:left;">The Analytics event is not dispatched automatically. You must call the <code>AnalyticsEventTracker.TriggerEvent()</code> method.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>UI</strong></td>
+	<td style="text-align:left;">Dispatch when a UI event occurs, such as a button press. Hook up the <code>AnalyticsEventTracker.TriggerEvent()</code> method to a suitable UI event, such as <code>Button.OnClick()</code>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Timer</strong></td>
+	<td style="text-align:left;">Dispatch after a time interval:</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Initial Time</strong></td>
+	<td style="text-align:left;">The interval after which the Analytics event is dispatched. The interval starts when Unity invokes the <code>Start()</code> method of the tracker object.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Poll Time</strong></td>
+	<td style="text-align:left;">The interval at which the Analytics event is repeatedly dispatched. Use Rules to limit the number of repetitions. Set to zero for no repetitions.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Rules</h2>
+
+<p>You can define rules that constrain whether the tracker dispatches the Analytics event when it would otherwise be triggered. For example, if you only want to send an event when the player pushes a button and some other condition is true, you could hook up a UI trigger to the button click event and define one or more rules to specify the condition.</p>
+
+<p>A rule compares the value of the field of one object to either a fixed value or the value of another field. You can use any of the typical comparison operators, such as Is Equals, Is Greater Than, and so on, as well as a couple that aren’t so typical, namely Is Between and Is Between Or Equal To.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsEventTrackerRules.png" alt="Defining rules for event reporting">
+<figcaption>Defining rules for event reporting</figcaption>
+</figure>
+
+<p>If you create more than one rule, you can choose a <strong>Match</strong> type to specify how the rules are combined. </p>
+
+<p>In addition to the comparison rules, you can choose the maximum number of times an Analytics event can be sent by setting the <strong>Repetitions</strong> property. Set to zero for no limit. The repetition limit applies for the lifetime of this instance of the Analytics Event Tracker component. For example, if you put the component on a <strong>Prefab</strong> object and use more than one instance of that <span class="tooltip"><strong>prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> in your game, each <strong>prefab</strong> has an independent repetition count.</p>
+
+<p>Check the <strong>Apply Rules</strong> box to reveal the rule section of the Analytics Event Tracker component.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Apply Rules</strong></td>
+	<td style="text-align:left;">Only dispatch the Analytics event if the specified rules are satisfied.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Repetitions</strong></td>
+	<td style="text-align:left;">The maximum number of times the Analytics event will be dispatched during the GameObject’s lifetime. (If the player repeats a level, for example, the events can be dispatched again.) Leave at zero for unlimited repetitions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Match</strong></td>
+	<td style="text-align:left;">Whether <strong>All</strong> rules must match, <strong>Any</strong> rule may match, or <strong>None</strong> of the rules can match in order for the tracker to dispatch the Analytics.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Rule List</strong></td>
+	<td style="text-align:left;">Click <strong>+</strong> or <strong>-</strong> to create and delete rules. Each rule has the form: <em>target operator value</em> where <em>target</em> is a field of some MonoBehaviour object, <em>value</em> is either a static value or another field of a MonoBehaviour object, and <em>operator</em> is the type of comparison to perform.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Target Object</strong></td>
+	<td style="text-align:left;">The object containing the field you want to test with the rule.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Target Field</strong></td>
+	<td style="text-align:left;">The field of the object to test. You can compare fields and properties with primitive data types (float, int, bool, and string).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Comparison</strong></td>
+	<td style="text-align:left;">How to compare the target field to the test value. For some comparisons, like <em>Is Between</em>, you specify two comparison values instead of one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value</strong></td>
+	<td style="text-align:left;">Use <strong>Static</strong> to compare the target field to a fixed value. Use <strong>Dynamic</strong> to compare the target field to another field.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value Data Type</strong></td>
+	<td style="text-align:left;">One of the supported, primitive data types: float, int, bool, or string. When you set either a target or a value field, the tracker sets the data type to match that field.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value Object</strong></td>
+	<td style="text-align:left;">When using <strong>Dynamic</strong>, this is the object containing the field or property to compare to the target field. This property is only visible when the <strong>Value</strong> is <strong>Dynamic</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value Field</strong></td>
+	<td style="text-align:left;">The field to compare to the target field. The tracker compares the current values of the two fields at the time the event is to be dispatched. This property is only visible when the <strong>Value</strong> is <strong>Dynamic</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Static Value</strong></td>
+	<td style="text-align:left;">When using <strong>Static</strong>, the fixed value to compare to the target field. This property is only visible when the <strong>Value</strong> is <strong>Static</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Parameters</h2>
+
+<p>You can define up to ten parameters to send to the Analytics Service as part of an Analytics event. Many <span class="tooltip"><strong>Standard Events</strong><span class="tooltiptext">Standard events are application-specific events that you dispatch in response to important player actions or milestones. Standard events have standardized names and defined parameter lists. <a href="UnityAnalyticsCustomEvents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Standardevent">Glossary</a></span></span></span> have standard required and optional parameters, which automatically appear in the list when you select the event in the Analytics Event Tracker component. The required and optional parameters do count against the ten parameter limit, but you can set optional parameters to <strong>Disabled</strong> to remove them. See <a href="UnityAnalyticsEventParameters.html">Analytics Event Parameters</a> for additional information.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsEventTrackerParams.png" alt="Setting event parameters">
+<figcaption>Setting event parameters</figcaption>
+</figure>
+
+<p>You can assign a fixed value to a parameter, which the tracker uses every time it dispatches the event. Alternately, you can assign a dynamic value by hooking the parameter to a field or property of a MonoBehaviour object. When you use a dynamic value, the tracker assigns the value of the associated field to the parameter when it dispatches the event.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Name</strong></td>
+	<td style="text-align:left;">The name of the parameter. The name of the standard parameters cannot be changed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Parameter List</strong></td>
+	<td style="text-align:left;">Click <strong>+</strong> or <strong>-</strong> to create and delete parameters. You cannot delete the standard parameters of an Analytics event, but you can disable the optional ones. Disabled parameters are not counted against the ten parameter limit (and are not sent to the Analytics Service).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value</strong></td>
+	<td style="text-align:left;">Use <strong>Static</strong> to assign a fixed value for this parameter. Use <strong>Dynamic</strong> to assign the current value of an object’s field or property. Use <strong>Disabled</strong> to suppress optional standard parameters.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value Data Type</strong></td>
+	<td style="text-align:left;">One of the supported, primitive data types: float, int, bool, or string. When using <strong>Dynamic</strong>, the tracker sets the data type to match the specified field.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value Object</strong></td>
+	<td style="text-align:left;">When using <strong>Dynamic</strong>, the object containing the field or property to assign to the parameter when the Analytics event is dispatched. This property is only visible when the <strong>Value</strong> is <strong>Dynamic</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Value Field</strong></td>
+	<td style="text-align:left;">The field or property containing the value to assign to the parameter. This property is only visible when the <strong>Value</strong> is <strong>Dynamic</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Static Value</strong></td>
+	<td style="text-align:left;">When using <strong>Static</strong>, the fixed value to assign to the parameter. This property is only visible when the <strong>Value</strong> is <strong>Static</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–02 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit">2018–03–02 - Service compatible with Unity 5.2 onwards at this date but version compatibility may be subject to change</span></p></li>
+<li><p><span class="page-history">New feature in 5.2</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsCustomEventScripting.html"></a></span><div class="tip"> Custom Event scripting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsEventParameters.html"></a></span><div class="tip"> Analytics event parameters</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

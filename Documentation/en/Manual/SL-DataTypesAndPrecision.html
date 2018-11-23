@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Shader data types and precision</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-DataTypesAndPrecision.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-DataTypesAndPrecision.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-DataTypesAndPrecision.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-DataTypesAndPrecision.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-DataTypesAndPrecision.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-ShaderPrograms.html">Writing vertex and fragment shaders</a></li>
+<li> Shader data types and precision</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderCompileTargets.html"></a></span><div class="tip"> Shader Compilation Target Levels</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SamplerStates.html"></a></span><div class="tip"> Using sampler states</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Shader data types and precision</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <span class="tooltip"><strong>standard Shader</strong><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardShader">Glossary</a></span></span></span> language in Unity is <a href="SL-ShadingLanguage.html">HLSL</a>, and general HLSL data types are supported. However, Unity has some additions to the HLSL types, particularly for better support on mobile platforms.</p>
+
+<h2>Basic data types</h2>
+
+<p>The majority of calculations in <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> are carried out on floating-point numbers (which would be <code>float</code> in regular programming languages like C#). Several variants of floating point types are present: <code>float</code>, <code>half</code> and <code>fixed</code> (as well as vector/matrix variants of them, such as <code>half3</code> and <code>float4x4</code>). These types differ in precision (and, consequently, performance or power usage):</p>
+
+<h4>High precision: <code>float</code>
+</h4>
+
+<p>Highest precision floating point value; generally 32 bits (just like <code>float</code> from regular programming languages).</p>
+
+<p>Full <code>float</code> precision is generally used for world space positions, texture coordinates, or scalar computations involving complex functions such as trigonometry or power/exponentiation.</p>
+
+<h4>Medium precision: <code>half</code>
+</h4>
+
+<p>Medium precision floating point value; generally 16 bits (range of –60000 to +60000, with about 3 decimal digits of precision).</p>
+
+<p>Half precision is useful for short vectors, directions, object space positions, high dynamic range colors.</p>
+
+<h4>Low precision: <code>fixed</code>
+</h4>
+
+<p>Lowest precision fixed point value. Generally 11 bits, with a range of –2.0 to +2.0 and 1/256th precision.</p>
+
+<p>Fixed precision is useful for regular colors (as typically stored in regular textures) and performing simple operations on them.</p>
+
+<h4>Integer data types</h4>
+
+<p>Integers (<code>int</code> data type) are often used as loop counters or array indices. For this purpose, they generally work fine across various platforms.</p>
+
+<p>Depending on the platform, integer types might not be supported by the GPU. For example, Direct3D 9 and OpenGL ES 2.0 GPUs only operate on floating point data, and simple-looking integer expressions (involving bit or logical operations) might be emulated using fairly complicated floating point math instructions.</p>
+
+<p>Direct3D 11, OpenGL ES 3, Metal and other modern platforms have proper support for integer data types, so using bit shifts and bit masking works as expected.</p>
+
+<h2>Composite vector/matrix types</h2>
+
+<p>HLSL has built-in vector and matrix types that are created from the basic types. For example, <code>float3</code> is a 3D vector with .x, .y, .z <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>, and <code>half4</code> is a medium precision 4D vector with .x, .y, .z, .w components. Alternatively, vectors can be indexed using .r, .g, .b, .a components, which is useful when working on colors.</p>
+
+<p>Matrix types are built in a similar way; for example <code>float4x4</code> is a 4x4 transformation matrix. Note that some platforms only support square matrices, most notably OpenGL ES 2.0.</p>
+
+<h2>Texture/Sampler types</h2>
+
+<p>Typically you declare textures in your HLSL code as follows:</p>
+
+<pre><code>sampler2D _MainTex;
+samplerCUBE _Cubemap;
+</code></pre>
+
+<p>For mobile platforms, these translate into “low precision samplers”, i.e. the textures are expected to have low precision data in them. If you know your texture contains <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> colors, you might want to use half precision sampler:</p>
+
+<pre><code>sampler2D_half _MainTex;
+samplerCUBE_half _Cubemap;
+</code></pre>
+
+<p>Or if your texture contains full float precision data (e.g. <a href="SL-DepthTextures.html">depth texture</a>), use a full precision sampler:</p>
+
+<pre><code>sampler2D_float _MainTex;
+samplerCUBE_float _Cubemap;
+</code></pre>
+
+<h2>Precision, Hardware Support and Performance</h2>
+
+<p>One complication of <code>float</code>/<code>half</code>/<code>fixed</code> data type usage is that PC GPUs are <strong>always</strong> high precision. That is, for all the PC (Windows/Mac/Linux) GPUs, it does not matter whether you write <code>float</code>, <code>half</code> or <code>fixed</code> data types in your shaders. They always compute everything in full 32-bit floating point precision.</p>
+
+<p>The <code>half</code> and <code>fixed</code> types only become relevant when targeting mobile GPUs, where these types primarily exist for power (and sometimes performance) constraints. Keep in mind that you need to test your shaders on mobile to see whether or not you are running into precision/numerical issues.</p>
+
+<p>Even on mobile GPUs, the different precision support varies between GPU families. Here’s an overview of how each mobile GPU family treats each floating point type (indicated by the number of bits used for it):</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">GPU Family</th>
+	<th style="text-align:left;">float</th>
+	<th style="text-align:left;">half</th>
+	<th style="text-align:left;">fixed</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">PowerVR Series 6/7</td>
+	<td style="text-align:left;">32</td>
+	<td style="text-align:left;" colspan="2">16</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PowerVR SGX 5xx</td>
+	<td style="text-align:left;">32</td>
+	<td style="text-align:left;">16</td>
+	<td style="text-align:left;">11</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Qualcomm Adreno 4xx/3xx</td>
+	<td style="text-align:left;">32</td>
+	<td style="text-align:left;" colspan="2">16</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Qualcomm Adreno 2xx</td>
+	<td style="text-align:left;" colspan="3">32 vertex 24 fragment</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ARM Mali T6xx/7xx</td>
+	<td style="text-align:left;">32</td>
+	<td style="text-align:left;" colspan="2">16</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ARM Mali 400/450</td>
+	<td style="text-align:left;" colspan="3">32 vertex 16 fragment</td>
+</tr>
+<tr>
+	<td style="text-align:left;">NVIDIA X1</td>
+	<td style="text-align:left;">32</td>
+	<td style="text-align:left;" colspan="2">16</td>
+</tr>
+<tr>
+	<td style="text-align:left;">NVIDIA K1</td>
+	<td style="text-align:left;" colspan="3">32</td>
+</tr>
+<tr>
+	<td style="text-align:left;">NVIDIA Tegra 3/4</td>
+	<td style="text-align:left;">32</td>
+	<td style="text-align:left;" colspan="2">16</td>
+</tr>
+</tbody>
+</table>
+
+<p>Most modern mobile GPUs actually only support either 32-bit numbers (used for <code>float</code> type) or 16-bit numbers (used for both <code>half</code> and <code>fixed</code> types). Some older GPUs have different precisions for <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> and <span class="tooltip"><strong>fragment shader</strong><span class="tooltiptext">The “per-pixel” part of shader code, performed every pixel that an object occupies on-screen. The fragment shader part is usually used to calculate and output the color of each pixel. <a href="ShaderTut2.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#fragmentshader">Glossary</a></span></span></span> computations.</p>
+
+<p>Using lower precision can often be faster, either due to improved GPU register allocation, or due to special “fast path” execution units for certain lower-precision math operations. Even when there’s no raw performance advantage, using lower precision often uses less power on the GPU, leading to better battery life.</p>
+
+<p>A general rule of thumb is to start with half precision for everything except positions and texture coordinates. Only increase precision if half precision is not enough for some parts of the computation.</p>
+
+<h4>Support for infinities, NaNs and other special floating point values</h4>
+
+<p>Support for special floating point values can be different depending on which (mostly mobile) GPU family you’re running.</p>
+
+<p>All PC GPUs that support Direct3D 10 support very well-specified IEEE 754 floating point standard. This means that float numbers behave exactly like they do in regular programming languages on the CPU.</p>
+
+<p>Mobile GPUs can have slightly different levels of support. On some, dividing zero by zero might result in a NaN (“not a number”); on others it might result in infinity, zero or any other unspecified value. Make sure to test your shaders on the target device to check they are supported.</p>
+
+<h2>External GPU Documentation</h2>
+
+<p>GPU vendors have in-depth guides about the performance and capabilities of their GPUs. See these for details:</p>
+
+<ul>
+<li><a href="https://developer.arm.com/products/software-development-tools/graphics-development-tools/mali-graphics-debugger/docs/100140/0303">ARM Mali Guide for Unity Developers</a></li>
+<li><a href="https://developer.qualcomm.com/software/adreno-gpu-sdk/tools">Qualcomm Adreno OpenGL ES Developer Guide</a></li>
+<li><a href="https://community.imgtec.com/developers/powervr/documentation/">PowerVR Architecture Guides</a></li>
+</ul>
+
+<h2>See Also</h2>
+
+<ul>
+<li><a href="SL-PlatformDifferences.html">Platform Specific Rendering Differences</a></li>
+<li><a href="SL-ShaderPerformance.html">Shader Performance Tips</a></li>
+<li><a href="SL-ShadingLanguage.html">Shading Language</a></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderCompileTargets.html"></a></span><div class="tip"> Shader Compilation Target Levels</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SamplerStates.html"></a></span><div class="tip"> Using sampler states</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

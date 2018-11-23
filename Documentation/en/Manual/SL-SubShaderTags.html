@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: ShaderLab: SubShader Tags</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-SubShaderTags.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-SubShaderTags.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-SubShaderTags.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-SubShaderTags.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-SubShaderTags.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-Shader.html">ShaderLab Syntax</a></li>
+<li><a href="SL-SubShader.html">ShaderLab: SubShader</a></li>
+<li>ShaderLab: SubShader Tags</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-GrabPass.html"></a></span><div class="tip"> ShaderLab: GrabPass</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Fallback.html"></a></span><div class="tip">ShaderLab: Fallback</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>ShaderLab: SubShader Tags</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Subshaders use tags to tell how and when they expect to be rendered to the <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> engine.</p>
+
+<h2>Syntax</h2>
+
+<pre><code>Tags { &quot;TagName1&quot; = &quot;Value1&quot; &quot;TagName2&quot; = &quot;Value2&quot; }
+</code></pre>
+
+<p>Specifies <strong>TagName1</strong> to have <strong>Value1</strong>, <strong>TagName2</strong> to have <strong>Value2</strong>. You can have as many tags as you like.</p>
+
+<h2>Details</h2>
+
+<p>Tags are basically key-value pairs. Inside a <span class="tooltip"><a href="SL-SubShader.html">SubShader</a><span class="tooltiptext">Each shader in Unity consists of a list of subshaders. When Unity has to display a mesh, it will find the shader to use, and pick the first subshader that runs on the user’s graphics card. <a href="SL-SubShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#subshader">Glossary</a></span></span></span> tags are used to determine rendering order and other parameters of a subshader. Note that the following tags recognized by Unity <strong>must</strong> be inside SubShader section and not inside Pass!</p>
+
+<p>In addition to built-in tags recognized by Unity, you can use your own tags and query them using <a href="../ScriptReference/Material.GetTag.html">Material.GetTag</a> function.</p>
+
+<h3>Rendering Order - Queue tag</h3>
+
+<p>You can determine in which order your objects are drawn using the <em>Queue</em> tag. A <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> decides which render queue its objects belong to, this way any Transparent shaders make sure they are drawn after all opaque objects and so on.</p>
+
+<p>There are four pre-defined render queues, but there can be more queues in between the predefined ones. The predefined queues are:</p>
+
+<ul>
+<li>
+<code>Background</code> - this render queue is rendered before any others. You’d typically use this for things that really need to be in the background.</li>
+<li>
+<code>Geometry</code> <em>(default)</em> - this is used for most objects. Opaque geometry uses this queue.</li>
+<li>
+<code>AlphaTest</code> - alpha tested geometry uses this queue. It’s a separate queue from <code>Geometry</code> one since it’s more efficient to render alpha-tested objects after all solid ones are drawn.</li>
+<li>
+<code>Transparent</code> - this render queue is rendered after <em>Geometry</em> and <code>AlphaTest</code>, in back-to-front order. Anything alpha-blended (i.e. shaders that don’t write to depth buffer) should go here (glass, particle effects).</li>
+<li>
+<code>Overlay</code> - this render queue is meant for overlay effects. Anything rendered last should go here (e.g. lens flares).</li>
+</ul>
+
+<pre><code>Shader &quot;Transparent Queue Example&quot;
+{
+     SubShader
+     {
+        Tags { &quot;Queue&quot; = &quot;Transparent&quot; }
+        Pass
+        {
+            // rest of the shader body...
+        }
+    }
+}
+</code></pre>
+
+<p><em>An example illustrating how to render something in the transparent queue</em></p>
+
+<p>For special uses in-between queues can be used. Internally each queue is represented by integer index; <code>Background</code> is 1000, <code>Geometry</code> is 2000, <code>AlphaTest</code> is 2450, <code>Transparent</code> is 3000 and <code>Overlay</code> is 4000. If a shader uses a queue like this:</p>
+
+<pre><code>Tags { &quot;Queue&quot; = &quot;Geometry+1&quot; }
+</code></pre>
+
+<p>This will make the object be rendered after all opaque objects, but before transparent objects, as render queue index will be 2001 (geometry plus one). This is useful in situations where you want some objects be always drawn between other sets of objects. For example, in most cases transparent water should be drawn after opaque objects but before transparent objects.</p>
+
+<p>Queues up to 2500 (“Geometry+500”) are consided “opaque” and optimize the drawing order of the objects for best performance.
+Higher rendering queues are considered for “transparent objects” and sort objects by distance, starting rendering from the furthest ones and ending with the closest ones. Skyboxes are drawn in between all opaque and all transparent objects.</p>
+
+<h3>RenderType tag</h3>
+
+<p>
+<code>RenderType</code> tag categorizes shaders into several predefined groups, e.g. is is an opaque shader, or an alpha-tested shader etc. This is used by <a href="SL-ShaderReplacement.html">Shader Replacement</a> and in some cases used to produce <a href="SL-CameraDepthTexture.html">camera’s depth texture</a>.</p>
+
+<h3>DisableBatching tag</h3>
+
+<p>Some shaders (mostly ones that do object-space vertex deformations) do not work when <a href="DrawCallBatching.html">Draw Call Batching</a> is used – that’s because batching transforms all geometry into world space, so “object space” is lost.</p>
+
+<p>
+<code>DisableBatching</code> tag can be used to indicate that. There are three possible values: “True” (always disables batching for this shader), “False” (does not disable batching; this is default) and “LODFading” (disable batching when LOD fading is active; mostly used on trees).</p>
+
+<h3>ForceNoShadowCasting tag</h3>
+
+<p>If <code>ForceNoShadowCasting</code> tag is given and has a value of “True”, then an object that is rendered using this subshader will never cast shadows. This is mostly useful when you are using shader replacement on transparent objects and you do not wont to inherit a shadow pass from another subshader.</p>
+
+<h3>IgnoreProjector tag</h3>
+
+<p>If <code>IgnoreProjector</code> tag is given and has a value of “True”, then an object that uses this shader will not be affected by <a href="class-Projector.html">Projectors</a>. This is mostly useful on semitransparent objects, because there is no good way for Projectors to affect them.</p>
+
+<h3>CanUseSpriteAtlas tag</h3>
+
+<p>Set <code>CanUseSpriteAtlas</code> tag to “False” if the shader is meant for <span class="tooltip"><strong>sprites</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span>, and will not work when they are packed into atlases (see <span class="tooltip"><a href="SpritePacker.html">Sprite Packer</a><span class="tooltiptext">A facility that packs graphics from several sprite textures tightly together within a single texture known as an atlas. Unity provides a Sprite Packer utility to automate the process of generating atlases from the individual sprite textures. <a href="SpritePacker.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SpritePacker">Glossary</a></span></span></span>).</p>
+
+<h3>PreviewType tag</h3>
+
+<p>
+<code>PreviewType</code> indicates how the material inspector preview should display the material. By default materials are displayed as spheres, but PreviewType can also be set to “Plane” (will display as 2D) or “Skybox” (will display as skybox).</p>
+
+<h2>See Also</h2>
+
+<p>Passes can be given Tags as well, see <a href="SL-PassTags.html">Pass Tags</a>.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-GrabPass.html"></a></span><div class="tip"> ShaderLab: GrabPass</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Fallback.html"></a></span><div class="tip">ShaderLab: Fallback</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

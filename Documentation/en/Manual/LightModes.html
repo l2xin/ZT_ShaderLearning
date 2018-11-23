@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Lighting Modes</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/LightModes.html">English</a></li>
+<li><a href="/ja/current/Manual/LightModes.html">日本語</a></li>
+<li><a href="/es/current/Manual/LightModes.html">Español</a></li>
+<li><a href="/kr/current/Manual/LightModes.html">한국어</a></li>
+<li><a href="/ru/current/Manual/LightModes.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li> Lighting Modes</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RefProbePerformance.html"></a></span><div class="tip"> Reflection probe performance and optimisation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightModes-TechnicalInformation.html"></a></span><div class="tip"> Lighting: Technical information and terminology</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Lighting Modes</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page assumes you have already read documentation on <a href="LightingInUnity.html">lighting in Unity</a>.</p>
+
+<p>To control lighting precomputation and composition in Unity, you need to assign a <strong>Light Mode</strong> to a Light. This <strong>Light Mode</strong> defines the Light’s intended use. To assign a Light Mode, select the Light in your Scene and, in the <a href="GlobalIllumination.html">Light Inspector window</a>, select <strong>Mode</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/LightModes-0.png" alt="">
+</figure>
+
+<p>The Modes and their possible mappings are:</p>
+
+<ul>
+<li><a href="LightMode-Realtime.html">Realtime</a></li>
+<li>
+<a href="LightMode-Mixed.html">Mixed</a> - Mixed Lights have their own sub-modes. Set these in the Lighting window:
+
+<ul>
+<li><a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a></li>
+<li><span class="tooltip"><a href="LightMode-Mixed-DistanceShadowmask.html">Shadowmask</a><span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span></li>
+<li><span class="tooltip"><a href="LightMode-Mixed-Shadowmask.html">Distance Shadowmask</a><span class="tooltiptext">A version of the Shadowmask lighting mode that includes high quality shadows cast from static GameObjects onto dynamic GameObjects. <a href="LightMode-Mixed-DistanceShadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DistanceShadowmask">Glossary</a></span></span></span></li>
+<li><a href="LightMode-Mixed-Subtractive.html">Subtractive</a></li>
+</ul>
+</li>
+<li>Baked(LightMode-Baked)</li>
+</ul>
+
+<p>For more information, see the <a href="https://drive.google.com/open?id=1v-LnDOJcsSsa0ViF7kBs6xgY9Q_z-1k6h95LE0lf46U">Reference card for Light Modes</a>.</p>
+
+<p>The Modes are listed above in the order of least to most light path precomputations required (See <em>How Modes work</em>, below). Note that this order does not necessarily correlate with the amount of time the actual precomputation requires.</p>
+
+<h2>How Modes work</h2>
+
+<p>Each <strong>Mode</strong> in the Light Inspector window corresponds to a group of settings in the Lighting window (menu: <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt; <strong>Lighting Settings</strong> &gt; <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>). </p>
+
+<figure>
+<img src="../uploads/Main/LightModes-1.jpg" alt="The available Light Modes in the Light component (left), and the corresponding settings available for those modes in the Lighting Scene window (right).">
+<figcaption>The available <strong>Light Modes</strong> in the Light component (left), and the corresponding settings available for those modes in the Lighting Scene window (right).</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Light Inspector</strong></th>
+	<th style="text-align:left;"><strong>Lighting window</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Realtime</strong></td>
+	<td style="text-align:left;"><strong>Realtime Lighting</strong></td>
+	<td style="text-align:left;">Unity calculates and updates the lighting of <strong>Realtime</strong> Lights every frame during run time. No Realtime Lights are precomputed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mixed</strong></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>Mixed Lighting</strong><span class="tooltiptext">A Light Mode for creating indirect lighting, shadowmasks and subtractive lighting. Indirect lighting gets baked into lightmaps and light probes. Shadowmasks and light probes occlusion get generated for baked shadows. <a href="LightMode-Mixed.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MixedLighting">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Unity can calculate some properties of <strong>Mixed</strong> Lights during run time, but only within strong limitations. Some Mixed Lights are precomputed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Baked</strong></td>
+	<td style="text-align:left;"><strong>Lightmapping Settings</strong></td>
+	<td style="text-align:left;">Unity pre-calculates the illumination from <strong>Baked</strong> Lights before run time, and does not include them in any run-time lighting calculations. All <span class="tooltip"><strong>Baked Lights</strong><span class="tooltiptext">A Light Mode for creating local ambience, rather than fully featured lights for increasing brightness in dark areas without needing to adjust all of the lighting within a Scene. Unity pre-calculates the illumination from these lights before run time, and does not include them in any run-time lighting calculations. <a href="LightMode-Baked.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#BakedLights">Glossary</a></span></span></span> are precomputed.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Use these settings to adjust each mode. The adjustments you make apply to all Lights with that Mode assigned to them. For example, if you open the Lighting window, navigate to the <strong>Realtime Lighting Settings</strong> and tick <strong>Realtime Global Illumination</strong>, all Lights that have their <strong>Mode</strong> set to <strong>Realtime</strong> mode use <strong>Realtime Global Illumination</strong>.</p>
+
+<p>Precomputation yields two sets of results:</p>
+
+<ul>
+<li><p>Unity stores results for static <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> as Texture atlases in UV Texture coordinate space. Unity provides several settings to <a href="GlobalIllumination.html">control this layouting</a>. </p></li>
+<li><p><span class="tooltip"><a href="LightProbes.html">Light Probes</a><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> store a representation of light in empty space as seen from their particular position. Dynamic GameObjects moving through this portion of empty space use this information to receive illumination from the precomputed lighting.</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RefProbePerformance.html"></a></span><div class="tip"> Reflection probe performance and optimisation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightModes-TechnicalInformation.html"></a></span><div class="tip"> Lighting: Technical information and terminology</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

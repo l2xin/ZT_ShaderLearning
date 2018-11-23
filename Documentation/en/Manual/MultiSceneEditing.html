@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Multi-Scene editing</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/MultiSceneEditing.html">English</a></li>
+<li><a href="/ja/current/Manual/MultiSceneEditing.html">日本語</a></li>
+<li><a href="/es/current/Manual/MultiSceneEditing.html">Español</a></li>
+<li><a href="/kr/current/Manual/MultiSceneEditing.html">한국어</a></li>
+<li><a href="/ru/current/Manual/MultiSceneEditing.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AdvancedDevelopment.html">Advanced Development</a></li>
+<li>Multi-Scene editing</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerUI.html"></a></span><div class="tip">UI Profiler </div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LoadingResourcesatRuntime.html"></a></span><div class="tip">Loading Resources at Runtime</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Multi-Scene editing</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Multi Scene Editing allows you to have multiple <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> open in the editor simultaneously, and makes it easier to manage <strong>scenes</strong> at runtime.</p>
+
+<p>The ability to have multiple scenes open in the editor allows you to create large streaming worlds and improves the workflow when collaborating on scene editing.</p>
+
+<p>This page describes:</p>
+
+<ul>
+<li>The multi scene editing integration in the Editor</li>
+<li>The Editor scripting and the Runtime scripting APIs</li>
+<li>Current known issues</li>
+</ul>
+
+<h2>In the editor</h2>
+
+<p>To open a new scene and add it to the current list of scenes in the Hierarchy, either select <em>Open Scene Additive</em> in the context menu for a scene <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>, or drag one or more scenes from the Project window into the Hierarchy Window. </p>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingOpenSceneAdditive.png" alt="Open Scene Additive will add the selected scene asset to the current scenes shown in the hierarchy">
+<figcaption>Open Scene Additive will add the selected scene asset to the current scenes shown in the hierarchy</figcaption>
+</figure>
+
+<p>When you have multiple scenes open in the editor, each scene’s contents are displayed separately in the hierarchy window. Each scene’s contents appears below a scene divider bar which shows the scene’s name and its save state.</p>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingHierarchy.png" alt="The Hierarchy window showing multiple scenes open simultaneously">
+<figcaption>The Hierarchy window showing multiple scenes open simultaneously</figcaption>
+</figure>
+
+<p>While present in the hierarchy, scenes can be <strong>loaded</strong> or <strong>unloaded</strong> to reveal or hide the <span class="tooltip"><strong>gameobjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> contained within each scene. This is different to <strong>adding</strong> and <strong>removing</strong> them from the hierarchy window.</p>
+
+<p>The scene dividers can be collapsed in the hierarchy to the scene’s contents which may help you to navigate your hierarchy if you have lots of scenes loaded.</p>
+
+<p>When working on multiple scenes, each scene that is modified will need its changes saved, so it is possible to have multiple unsaved scenes open at the same time. Scenes with unsaved changes will have an asterisk shown next to the name in the scene divider bar.</p>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingUnsavedScene.png" alt="An asterisk in the scene divider indicating this scene has unsaved changes">
+<figcaption>An asterisk in the scene divider indicating this scene has unsaved changes</figcaption>
+</figure>
+
+<p>Each Scene can be saved separately via the context menu in the divider bar. Selecting “Save Scene” from the file menu or pressing Ctrl/Cmd + S will save changes to <strong>all</strong> open scenes.</p>
+
+<p>The context menu in the scene divider bars allow you to perform other actions on the selected scene. </p>
+
+<h4>The Scene divider menu for loaded Scenes</h4>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingLoadedSceneMenu.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Set Active Scene</strong></td>
+	<td style="text-align:left;">This allows you to specify which scene new Game Objects are created/instantiated in. There must always be one scene marked as the active scene</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Save Scene</strong></td>
+	<td style="text-align:left;">Saves the changes to the selected scene only.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Save Scene As</strong></td>
+	<td style="text-align:left;">Saves the selected scene (along with any current modifications) as a new Scene asset.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Save All</strong></td>
+	<td style="text-align:left;">Saves changes to all scenes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Unload Scene</strong></td>
+	<td style="text-align:left;">Unloads the scene, but keeps the scene in the Hierarchy window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Scene</strong></td>
+	<td style="text-align:left;">Unloads and removes the scene from the Hierarchy window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Select Scene Asset</strong></td>
+	<td style="text-align:left;">Selects the scene’s asset in the Project window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GameObject</strong></td>
+	<td style="text-align:left;">Provides a sub-menu allowing you to create GameObjects in the selected scene. The menu mirrors the creatable items available in Unity’s main GameObject menu. (shown below)</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingGameObjectCreateMenu.png" alt="The GameObject sub-menu in the Scene divider bar menu">
+<figcaption>The GameObject sub-menu in the Scene divider bar menu</figcaption>
+</figure>
+
+<h4>The Scene divider menu for unloaded Scenes:</h4>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingUnloadedSceneMenu.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Load Scene</strong></td>
+	<td style="text-align:left;">Loads the scene’s contents</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Scene</strong></td>
+	<td style="text-align:left;">Remove the scene from the Hierarchy window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Select Scene Asset</strong></td>
+	<td style="text-align:left;">Selects the scene’s asset in the Project window.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Baking Lightmaps with multiple Scenes</h2>
+
+<p>To bake <strong><span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> data</strong> for multiple scenes at once, you should open the scenes that you want to bake, turn off “Auto” mode in the Lighting Window, and click the Build button to build the lighting.</p>
+
+<p>The input to the lighting calculations is the static geometry and lights from all scenes. Therefore shadows and GI light bounces will work across all scenes. However, the lightmaps and realtime GI data are separated out into data that is loaded / unloaded separately for each scene. The lightmaps and realtime GI data atlases are split between scenes. This means lightmaps between scenes are never shared and they can be unloaded safely when unloading a scene. Lightprobe data is currently always shared and all lightprobes for all scenes baked together are loaded at the same time.</p>
+
+<p>Alternatively, you can automate building lightmaps for multiple scenes by using the <a href="../ScriptReference/Lightmapping.BakeMultipleScenes.html">Lightmapping.BakeMultipleScenes</a> function in an editor script.</p>
+
+<h2>Baking Navmesh data with multiple Scenes</h2>
+
+<p>To make <strong><span class="tooltip"><strong>Navmesh</strong><span class="tooltiptext">A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation. <a href="nav-BuildingNavMesh.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NavMesh">Glossary</a></span></span></span> data</strong> for multiple scenes at once, you should open the scenes that you want to bake, and click the Bake button in the Navigation Window. The <strong>navmesh</strong> data will be baked into a single asset, shared by all loaded scenes. The data is saved into the folder matching the name of the current active scene (e.g. ActiveSceneName/NavMesh.asset). All loaded scenes will share this navmesh asset. After baking the navmesh, the scenes affected should be saved to make the scene-to-navmesh reference persistent.</p>
+
+<p>Alternatively, you can automate building navmesh data for multiple scenes by using the <a href="../ScriptReference/AI.NavMeshBuilder.BuildNavMeshForMultipleScenes.html">NavMeshBuilder.BuildNavMeshForMultipleScenes</a> function in an editor script.</p>
+
+<h2>Baking Occlusion Culling data with multiple Scenes</h2>
+
+<p>To bake <strong>Occlusion Culling data</strong> for multiple Scenes at once, open the Scenes that you want to bake, open the Occlusion Culling window (menu: <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt; <span class="tooltip"><strong>Occlusion Culling</strong><span class="tooltiptext">A Unity feature that disables rendering of objects when they are not currently seen by the camera because they are obscured (occluded) by other objects. <a href="OcclusionCulling.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#OcclusionCulling">Glossary</a></span></span></span>) and click the <strong>Bake</strong> button. The Occlusion data is saved into <em>Library/Occlusion</em>, and a reference to the data is added in each open Scene. After baking the Occlusion Culling, save the Scenes affected to make the Scene-to-occlusion reference persistent.</p>
+
+<p>Whenever a Scene is loaded additively, if it has the same occlusion data reference as the active Scene, the static renderers and portals culling information for that Scene are initialized from the occlusion data. Hereafter, the occlusion culling system performs as if all static renderers and portals were baked into a single Scene. </p>
+
+<h2>Play mode</h2>
+
+<p>In Play mode, with multiple scenes in the Hierarchy, an additional scene will show up called <em>DontDestroyOnLoad</em>.</p>
+
+<p>Prior to Unity 5.3, any objects you would instantiate in Playmode marked as “DontDestroyOnLoad” would still show up in the hierarchy. These objects are not considered part of any scene but for Unity to still show the objects, and for you to inspect them, these objects are now shown as part of the special DontDestroyOnLoad scene.</p>
+
+<p>You do not have access to the DontDestroyOnLoad scene and it is not available at runtime.</p>
+
+<h2>Scene-specific settings</h2>
+
+<p>A number of settings are specific to each scene. These are:</p>
+
+<ul>
+<li>RenderSettings and LightmapSettings (both found in the Lighting Window)</li>
+<li>NavMesh settings</li>
+<li>Scene settings in the Occlusion Culling Window.</li>
+</ul>
+
+<p>The way it works is that each scene will manage its own settings and only settings associated with that scene will be saved to the scene file.</p>
+
+<p>If you have multiple scenes open, the settings that are used for rendering and navmesh are the ones from the <strong>active scene</strong>. This means that if you want to change the settings of a scene, you must either open only one scene and change the settings, or make the scene in question the active scene and change the settings.</p>
+
+<p>When you switch active scene in the editor or at runtime, all the settings from the new scene will be applied and replace all previous settings.</p>
+
+<h2>Scripting</h2>
+
+<h3>Editor scripting</h3>
+
+<p>For editor scripting we provide a <a href="../ScriptReference/SceneManagement.Scene.html">Scene struct</a> and <a href="../ScriptReference/SceneManagement.EditorSceneManager.html">EditorSceneManager</a> API and a <a href="../ScriptReference/SceneManagement.SceneSetup.html">SceneSetup</a> utility class.</p>
+
+<p>The <a href="../ScriptReference/SceneManagement.Scene.html">Scene struct</a> is available both in the editor and at runtime and contains a handful of read-only properties relating to the scene itself, such as its name and asset path.</p>
+
+<p>The <a href="../ScriptReference/SceneManagement.EditorSceneManager.html">EditorSceneManager class</a> is only available in the editor. It is derived from SceneManager and has a number of functions that allow you to implement all the Multi Scene Editing features described above via editor scripting.</p>
+
+<p>The <a href="../ScriptReference/SceneManagement.SceneSetup.html">SceneSetup class</a> is a small utility class for storing information about a scene currently in the hierarchy.</p>
+
+<p>The <a href="../ScriptReference/Undo.html">Undo</a> and <a href="../ScriptReference/PrefabUtility.html">PrefabUtility</a> classes have been extended to support multiple scenes. You can now instantiate a <span class="tooltip"><strong>prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> in a given scene using
+[PrefabUtility.InstantiatePrefab], and you can move objects to the root of a scene in an un-doable manner using
+(Undo.MoveGameObjectToScene)[ScriptRef:Undo.MoveGameObjectToScene]</p>
+
+<p>
+<strong>NOTE</strong>: <em>To use <code>Undo.MoveGameObjectToScene</code>, you must make sure the GameObject is already at the root of the scene it is currently in.</em>
+</p>
+
+<h3>Runtime scripting</h3>
+
+<p>For scripting at Runtime, the functions to work with multiple scenes such as <strong>LoadScene</strong> and <strong>UnloadScene</strong> are found on the <a href="../ScriptReference/SceneManagement.SceneManager.html">SceneManager</a> class.</p>
+
+<h2>Notes</h2>
+
+<p>In the File menu <em>Save Scene As</em> will only save the active scene. <em>Save Scene</em> will save all modified scenes, including prompting you to name the Untitled scene if it exists.</p>
+
+<figure>
+<img src="../uploads/Main/MultiSceneEditingProjectMenuCreateScene.png" alt="Creating a new Scene asset from the Project windows Create menu">
+<figcaption>Creating a new Scene asset from the Project window’s Create menu</figcaption>
+</figure>
+
+<h2>Tips and tricks</h2>
+
+<p>It is possible to add a scene to the hierarchy while keeping it its <em>unloaded</em> state by holding Alt while dragging. This gives you the option to load the scene later, when desired.</p>
+
+<p>New scenes can be created using the <em>Create</em> menu in the project window. New scenes will contain the default setup of Game Objects.</p>
+
+<p>To avoid having to set up your hierarchy every time you restart unity or to make it easy to store different setups you can use <a href="../ScriptReference/SceneManagement.EditorSceneManager.GetSceneManagerSetup.html">EditorSceneManager.GetSceneManagerSetup</a> to get a list of SceneSetup objects which describes the current setup. You can then serialize these into a ScriptableObject or something else along with any other information you might want to store about your scene setup. To restore the hierarchy simply recreate the list of SceneSetups and use <a href="../ScriptReference/SceneManagement.EditorSceneManager.RestoreSceneManagerSetup.html">EditorSceneManager.RestoreSceneManagerSetup</a>.</p>
+
+<p>At runtime to get the list of loaded scenes simply get sceneCount and iterate over the scenes using <a href="../ScriptReference/SceneManagement.SceneManager.GetSceneAt.html">GetSceneAt</a>.</p>
+
+<p>You can get the scene a GameObject belongs to through <a href="../ScriptReference/GameObject-scene.html">GameObject.scene</a> and you can move a GameObject to the root of a scene using <a href="../ScriptReference/SceneManagement.SceneManager.MoveGameObjectToScene.html">SceneManager.MoveGameObjectToScene</a>.</p>
+
+<p>It is recommended to avoid using DontDestroyOnLoad to persist manager GameObjects that you want to survive across scene loads. Instead, create a <strong>manager scene</strong> that has all your managers and use <a href="../ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene(<em>&lt;path&gt;</em>, LoadSceneMode.Additive)</a> and <a href="../ScriptReference/SceneManagement.SceneManager.UnloadScene.html">SceneManager.UnloadScene</a> to manage your game progress.</p>
+
+<h2>Known issues</h2>
+
+<ul>
+<li>Cross-Scene references are not supported, and are prevented in Edit mode. In Play mode they are allowed, because Scenes cannot be saved.</li>
+</ul>
+
+<hr>
+
+<p><span class="page-edit"> 2017–10–24 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerUI.html"></a></span><div class="tip">UI Profiler </div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LoadingResourcesatRuntime.html"></a></span><div class="tip">Loading Resources at Runtime</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

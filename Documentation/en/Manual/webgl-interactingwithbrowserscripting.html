@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  WebGL: Interacting with browser scripting</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/webgl-interactingwithbrowserscripting.html">English</a></li>
+<li><a href="/ja/current/Manual/webgl-interactingwithbrowserscripting.html">日本語</a></li>
+<li><a href="/es/current/Manual/webgl-interactingwithbrowserscripting.html">Español</a></li>
+<li><a href="/kr/current/Manual/webgl-interactingwithbrowserscripting.html">한국어</a></li>
+<li><a href="/ru/current/Manual/webgl-interactingwithbrowserscripting.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">Getting started with WebGL development</a></li>
+<li> WebGL: Interacting with browser scripting</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-templates.html"></a></span><div class="tip"> Using WebGL Templates</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>WebGL: Interacting with browser scripting</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When building content for the web, you might need to communicate with other elements on your web page. Or you might want to implement functionality using Web APIs which Unity does not currently expose by default. In both cases, you need to directly interface with the browser’s JavaScript engine. Unity <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span> provides different methods to do this.</p>
+
+<h2>Calling JavaScript functions from Unity scripts</h2>
+
+<p>The recommended way of using browser JavaScript in your project is to add your JavaScript sources to your project, and then call those functions directly from your script code. To do so, place files with JavaScript code using the .jslib extension under a “Plugins” subfolder in your <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> folder. The <span class="tooltip"><strong>plugin</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> file needs to have a syntax like this:</p>
+
+<pre><code>mergeInto(LibraryManager.library, {
+
+  Hello: function () {
+    window.alert(&quot;Hello, world!&quot;);
+  },
+
+  HelloString: function (str) {
+    window.alert(Pointer_stringify(str));
+  },
+
+  PrintFloatArray: function (array, size) {
+    for(var i = 0; i &lt; size; i++)
+    console.log(HEAPF32[(array &gt;&gt; 2) + i]);
+  },
+
+  AddNumbers: function (x, y) {
+    return x + y;
+  },
+
+  StringReturnValueFunction: function () {
+    var returnStr = &quot;bla&quot;;
+    var bufferSize = lengthBytesUTF8(returnStr) + 1;
+    var buffer = _malloc(bufferSize);
+    stringToUTF8(returnStr, buffer, bufferSize);
+    return buffer;
+  },
+
+  BindWebGLTexture: function (texture) {
+    GLctx.bindTexture(GLctx.TEXTURE_2D, GL.textures[texture]);
+  },
+
+});
+</code></pre>
+
+<p>Then you can call these functions from your C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> like this:</p>
+
+<pre><code>using UnityEngine;
+using System.Runtime.InteropServices;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    [DllImport(&quot;__Internal&quot;)]
+    private static extern void Hello();
+
+    [DllImport(&quot;__Internal&quot;)]
+    private static extern void HelloString(string str);
+
+    [DllImport(&quot;__Internal&quot;)]
+    private static extern void PrintFloatArray(float[] array, int size);
+
+    [DllImport(&quot;__Internal&quot;)]
+    private static extern int AddNumbers(int x, int y);
+
+    [DllImport(&quot;__Internal&quot;)]
+    private static extern string StringReturnValueFunction();
+
+    [DllImport(&quot;__Internal&quot;)]
+    private static extern void BindWebGLTexture(int texture);
+
+    void Start() {
+        Hello();
+        
+        HelloString(&quot;This is a string.&quot;);
+        
+        float[] myArray = new float[10];
+        PrintFloatArray(myArray, myArray.Length);
+        
+        int result = AddNumbers(5, 7);
+        Debug.Log(result);
+        
+        Debug.Log(StringReturnValueFunction());
+        
+        var texture = new Texture2D(0, 0, TextureFormat.ARGB32, false);
+        BindWebGLTexture(texture.GetNativeTextureID());
+    }
+}
+</code></pre>
+
+<p>Simple numeric types can be passed to JavaScript in function parameters without requiring any conversion. Other data types will be passed as a pointer in the emscripten heap (which is really just a big array in JavaScript). For strings, you can use the <code>Pointer_stringify</code> helper function to convert to a JavaScript string. To return a string value you need to call <code>_malloc</code> to allocate some memory and the <code>stringToUTF8</code> helper function to write a JavaScript string to it. If the string is a return value, then the <span class="tooltip"><strong>il2cpp</strong><span class="tooltiptext">A Unity-developed scripting back-end which you can use as an alternative to Mono when building projects for some platforms. <a href="IL2CPP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> runtime will take care of freeing the memory for you. For arrays of primitive types, <code>emscripten</code> provides different <code>ArrayBufferViews</code> into it’s heap for different sizes of integer, unsigned integer or floating point representations of memory: <strong>HEAP8, HEAPU8, HEAP16, HEAPU16, HEAP32, HEAPU32, HEAPF32, HEAPF64</strong>. To access a texture in WebGL, emscripten provides the <code>GL.textures</code> array which maps native texture IDs from Unity to WebGL texture objects. WebGL functions can be called on emscripten’s WebGL context, <code>GLctx</code>.</p>
+
+<p>For more information on how to interact with JavaScript, refer to the <a href="https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html">emscripten documentation</a>.</p>
+
+<p>In addition, note that in the Unity installation folder there are several plugins that you can use as reference, in <code>PlaybackEngines/WebGLSupport/BuildTools/lib</code> and <code>PlaybackEngines/WebGLSupport/BuildTools/Emscripten/src/library*</code>.</p>
+
+<h3>Legacy ways of calling JavaScript code from Unity</h3>
+
+<p><em>Note: Starting from Unity 5.6 the recommended way of calling JavaScript code from Unity is through a .jslib plugin. The method described below is only supported for compatibility reasons and might become deprecated in the future versions of Unity.</em></p>
+
+<p>You can use the <a href="../ScriptReference/Application.ExternalCall.html">Application.ExternalCall()</a> and <a href="../ScriptReference/Application.ExternalEval.html">Application.ExternalEval()</a> functions to invoke JavaScript code on the embedding web page. Note that expressions are evaluated in the local scope of the build. If you would like to execute JavaScript code in the global scope, see the <em>Code Visibility</em> section below.</p>
+
+<h2>Calling Unity scripts functions from JavaScript</h2>
+
+<p>Sometimes you need to send some data or notification to the Unity script from the browser’s JavaScript. The recommended way of doing it is to call methods on <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in your content. If you are making the call from a JavaScript plugin, embedded in your project, you can use the following code:</p>
+
+<p><code>SendMessage(objectName, methodName, value);</code></p>
+
+<p>Where <strong>objectName </strong>is the name of an object in your scene; <strong>methodName </strong>is the name of a method in the script, currently attached to that object; <strong>value </strong>can be a string, a number, or can be empty. For example:</p>
+
+<pre><code>SendMessage('MyGameObject', 'MyFunction');
+SendMessage('MyGameObject', 'MyFunction', 5);
+
+SendMessage('MyGameObject', 'MyFunction', 'MyString');
+</code></pre>
+
+<p>If you would like to make a call from the global scope of the embedding page, see the <em>Code Visibility</em> section below.</p>
+
+<h2>Calling C functions from Unity scripts</h2>
+
+<p>Unity compiles your sources into JavaScript from C/C++ code using emscripten, so you can also write plugins in C/C++ code, and call these functions from C#. So, instead of the jslib file in the example above, you could have a C/C++ file in your project - it will automatically get compiled with your scripts, and you can call functions from it, just like in the JavaScript example above.</p>
+
+<p>If you are using C++ (.cpp) to implement the plugin then you must ensure the functions are declared with C linkage to avoid name mangling issues:</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+extern &quot;C&quot; void Hello ()
+{
+    printf(&quot;Hello, world!\n&quot;);
+}
+
+extern &quot;C&quot; int AddNumbers (int x, int y)
+{
+    return x + y;
+}
+</code></pre>
+
+<h3>Code visibility</h3>
+
+<p>Starting from Unity 5.6 all the build code is executed in its own scope. This approach makes it possible to embed your game on an arbitrary page without causing conflicts with the embedding page code, as well as makes it possible to embed more than one build on the same page.</p>
+
+<p>If you have all your JavaScript code in the form of <em>.jslib</em> plugins inside your project, then this JavaScript code will run inside the same scope as the compiled build and your code should work pretty much the same way as in previous versions of Unity (for example, the following objects and functions should be directly visible from the JavaScript plugin code: <em>Module, SendMessage, HEAP8, ccall etc.</em>).</p>
+
+<p>However, if you are planning to call the internal JavaScript functions from the global scope of the embedding page, you should always assume that there are multiple builds embedded on the page, so you should explicitly specify which build you are referencing to. For example, if your game has been instantiated as:</p>
+
+<p><code>var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;Build/build.json&quot;, {onProgress: UnityProgress});</code></p>
+
+<p>Then you can send a message to the build using <em>gameInstance.SendMessage()</em>, or access the build Module object using <em>gameInstance.Module</em>.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–11–14 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Fixed error in code example.</span></p></li>
+<li><p><span class="page-history">Updated in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-templates.html"></a></span><div class="tip"> Using WebGL Templates</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

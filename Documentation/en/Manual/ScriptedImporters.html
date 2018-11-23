@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Scripted Importers</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Experimental" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/ScriptedImporters.html">English</a></li>
+<li><a href="/ja/current/Manual/ScriptedImporters.html">日本語</a></li>
+<li><a href="/es/current/Manual/ScriptedImporters.html">Español</a></li>
+<li><a href="/kr/current/Manual/ScriptedImporters.html">한국어</a></li>
+<li><a href="/ru/current/Manual/ScriptedImporters.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Experimental.html"> Experimental</a></li>
+<li> Scripted Importers</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIElements.html"></a></span><div class="tip"> Getting started with UIElements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LookDev.html"></a></span><div class="tip"> Look Dev</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h2>Scripted Importers</h2>
+
+<p>Scripted Importers are part of the <a href="ScriptingSection.html">Unity Scripting API</a>. Use Scripted Importers to write custom Asset importers in C# for file formats not natively supported by Unity.</p>
+
+<p>Create a custom importer by specializing the abstract class <a href="../ScriptReference/Experimental.AssetImporters.ScriptedImporter.html">ScriptedImporter</a> and applying the <a href="../ScriptReference/Experimental.AssetImporters.ScriptedImporterAttribute.html">ScriptedImporter</a> attribute. This registers your custom importer to handle one or more file extensions. When a file matching the registered file extensions is detected by the Asset pipeline as being new or changed, Unity invokes the method <code>OnImportAsset</code> of your custom importer.</p>
+
+<p>Note: Scripted Importers cannot handle a file extension that is already natively handled by Unity.</p>
+
+<p><strong>Note: Limitation</strong></p>
+
+<p>This is an experimental release of the Scripted Importer feature and as such is limited to assets that can be created using the Unity Scripting API. This is not a limitation of the implementation or design of the this feature, but does impose limits on its real-world use.</p>
+
+<h3>Example</h3>
+
+<p>Below is a simple example as Scripted Importer: It imports asset files with the extension “cube” into a Unity <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> with a cube primitive as the main Asset and a default material with a color fetched from the Asset file:</p>
+
+<pre><code>using UnityEngine;
+using UnityEditor.Experimental.AssetImporters;
+using System.IO;
+
+[ScriptedImporter(1, &quot;cube&quot;)]
+public class CubeImporter : ScriptedImporter
+{
+    public float m_Scale = 1;
+
+    public override void OnImportAsset(AssetImportContext ctx)
+    {
+        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        var position = JsonUtility.FromJson&lt;Vector3&gt;(File.ReadAllText(ctx.assetPath));
+
+        cube.transform.position = position;
+        cube.transform.localScale = new Vector3(m_Scale, m_Scale, m_Scale);
+
+        // 'cube' is a a GameObject and will be automatically converted into a prefab
+        // (Only the 'Main Asset' is elligible to become a Prefab.)
+        ctx.AddObjectToAsset(&quot;main obj&quot;, cube);
+        ctx.SetMainObject(cube);
+
+        var material = new Material(Shader.Find(&quot;Standard&quot;));
+        material.color = Color.red;
+
+        // Assets must be assigned a unique identifier string consistent across imports
+        ctx.AddObjectToAsset(&quot;my Material&quot;, material);
+
+        // Assets that are not passed into the context as import outputs must be destroyed
+        var tempMesh = new Mesh();
+        DestroyImmediate(tempMesh);
+    }
+}
+</code></pre>
+
+<p>
+<strong>Note</strong>: </p>
+
+<ul>
+<li>The importer is registered with Unity’s Asset pipeline by placing the the <code>ScriptedImporter</code> attribute on the CubeImporter class.</li>
+<li>The CubeImporter class implements the abstract <code>ScriptedImporter</code> base class.</li>
+<li>
+<code>OnImportAsset</code>’s ctx argument contains both input and output data for the import event.</li>
+<li>Each import event must generate one (and only one) call to <code>SetMainAsset</code>.</li>
+<li>Each import event may generate as many calls to <code>AddSubAsset</code> as necessary.</li>
+<li>Please refer to the <a href="ScrptRef:Experimental.AssetImporters.ScriptedImporter.html">Scripting API documentation</a> for more details.</li>
+</ul>
+
+<p>You may also implement a custom Import Settings Editor by specializing <a href="../ScriptReference/Experimental.AssetImporters.ScriptedImporterEditor.html">ScriptedImporterEditor</a> class and decorating it with the class attribute <code>CustomEditor</code> to tell it what type of importer it is used for.</p>
+
+<p>For example:</p>
+
+<pre><code>using UnityEditor;
+using UnityEditor.Experimental.AssetImporters;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+
+[CustomEditor(typeof(CubeImporter))]
+public class CubeImporterEditor: ScriptedImporterEditor
+{
+    public override void OnInspectorGUI()
+    {
+        var colorShift = new GUIContent(&quot;Color Shift&quot;);
+        var prop = serializedObject.FindProperty(&quot;m_ColorShift&quot;);
+        EditorGUILayout.PropertyField(prop, colorShift);
+        base.ApplyRevertGUI();
+    }
+}
+</code></pre>
+
+<h3>Using a Scripted Importer</h3>
+
+<p>Once you have added a scripted importer class to a project, you may use it just like any other native file type supported by Unity:</p>
+
+<ul>
+<li>Drop a supported file in the Asset directory hierarchy to import.</li>
+<li>Restarting the Unity Editor reimports any files that have changed since last update.</li>
+<li>Editing the Asset file on disk and returning to the Unity Editor triggers a reimport.</li>
+<li>Import a new asset using <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> &gt; <strong>Import New Asset…</strong>.</li>
+<li>Explicitly trigger a re-import via the menu: <strong>Asset</strong> &gt; <strong>Reimport</strong>.</li>
+<li>Click on the Asset to see its settings in the <a href="UsingTheInspector.html">Inspector window</a>. To modify its settings, edit them in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window and click <strong>Apply</strong> .
+<br><br>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ScriptedImporters-2.png" alt="The Inspector window of an Asset (An Alembic Girl) imported by the Scripted Importer">
+<figcaption>The Inspector window of an Asset (An Alembic Girl) imported by the Scripted Importer</figcaption>
+</figure>
+
+<h3>Real-world use of Scripted Importers</h3>
+
+<ul>
+<li><p>
+<strong>Alembic</strong>: The Alembic importer plug-in has been updated to use a Scripted Importer. For more information, visit <a href="https://github.com/unity3d-jp/AlembicImporter">Unity github: AlembicImporter</a>.</p></li>
+<li><p>
+<strong>USD</strong>: The USD importer plug-in has been updated to use a Scripted Importer.
+For more information, please visit <a href="https://github.com/unity3d-jp/USDForUnity">Unity github:: USDForUnity</a>.</p></li>
+</ul>
+
+<p>
+<br>
+<br>
+</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-history">New feature in <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li>
+<li><p><span class="page-edit">2017–07–27 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIElements.html"></a></span><div class="tip"> Getting started with UIElements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LookDev.html"></a></span><div class="tip"> Look Dev</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

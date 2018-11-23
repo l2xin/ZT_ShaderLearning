@@ -1,0 +1,658 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Understanding the managed heap</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeUnderstandingPerformanceInUnity.html"> Understanding optimization in Unity</a></li>
+<li> Understanding the managed heap</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity4.html"></a></span><div class="tip"> Asset auditing</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity5.html"></a></span><div class="tip"> Strings and text</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Understanding the managed heap</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Another common problem faced by many Unity developers is the unexpected expansion of the managed heap. In Unity, the managed heap expands much more readily than it shrinks. Furthermore, Unity’s garbage collection strategy tends to fragment memory, which can prevent a large heap from shrinking.</p>
+
+<h2>How the managed heap operates and why it expands</h2>
+
+<p>The “managed heap” is a section of memory that is automatically managed by the memory manager of a Project’s scripting runtime (Mono or IL2CPP). All objects created in managed code must be allocated on the managed heap(2) (<strong>Note:</strong> Strictly speaking, all non-null reference-typed objects and all boxed value-typed objects must be allocated on the managed heap).</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_0.png" alt="">
+</figure>
+
+<p>In the above diagram, the white box represents a quantity of memory apportioned to the managed heap, and the colored boxes within it represent data values stored within the managed heap’s memory space. When additional values are needed, more space is allocated from within the managed heap.</p>
+
+<p>The garbage collector runs periodically(3) (<strong>Note:</strong> The exact timing is platform-dependent). This sweeps through all objects on the heap, marking for deletion any objects that are no longer referenced. Unreferenced objects are then deleted, freeing up memory.</p>
+
+<p>Crucially, Unity’s garbage collection – which uses the <a href="https://en.wikipedia.org/wiki/Boehm_garbage_collector">Boehm GC algorithm</a> – is non-generational and non-compacting. “Non-generational” means that the GC must sweep through the entire heap when performing a collection pass, and its performance therefore degrades as the heap expands. “Non-compacting” means that objects in memory are not relocated in order to close gaps between objects.</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_1.png" alt="">
+</figure>
+
+<p>The above diagram shows an example of memory fragmentation. When an object is released, its memory is freed. However, the freed space does <strong>not</strong> become part of a single large pool of “free memory”. The objects on either side of the freed object may still be in use. Because of this, the freed space is a “gap” between other segments of memory (this gap is indicated by the red circle in the diagram). The newly-freed space can therefore only be used to store data of identical or lesser size than the freed object.</p>
+
+<p>When allocating an object, remember that the object must always occupy a contiguous block of space in memory.</p>
+
+<p>This leads to the core problem of memory fragmentation: while the overall amount of space available in the heap may be substantial, it is possible that some or all of that space is in small “gaps” between allocated objects. In this case, even though there may be enough total space to accommodate a certain allocation, the managed heap cannot find a large enough block of contiguous memory in which to fit the allocation.</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_2.png" alt="">
+</figure>
+
+<p>However, if a large object is allocated and there is insufficient contiguous free space to accommodate the object, as illustrated above, the Unity memory manager performs two operations.</p>
+
+<p>First, if it has not already done so, the garbage collector runs. This attempts to free up enough space to fulfill the allocation request.</p>
+
+<p>If, after the GC runs, there is still not enough contiguous space to fit the requested amount of memory, the heap must expand. The specific amount that the heap expands is platform-dependent; however, most Unity platforms double the size of the managed heap.</p>
+
+<h2>Key problems with the heap</h2>
+
+<p>The core issues with managed heap expansion are twofold:</p>
+
+<ul>
+<li><p>Unity does not often release the memory pages allocated to the managed heap when it expands; it optimistically retains the expanded heap, even if a large portion of it is empty. This is to prevent the need to re-expand the heap should further large allocations occur.</p></li>
+<li><p>On most platforms, Unity eventually releases the pages used by empty portions of the managed heap back to the operating system. The interval at which this occurs is not guaranteed and should not be relied upon.</p></li>
+<li><p>The address space used by the managed heap is never returned to the operating system.</p></li>
+<li><p>For 32-bit programs, this can lead to address space exhaustion if the managed heap expands and contracts many times. If a program’s available memory address space is exhausted, the operating system will terminate the program.</p></li>
+<li><p>For 64-bit programs, the address space is sufficiently large that this is extremely unlikely to occur for programs whose running time does not exceed the average human lifespan.</p></li>
+</ul>
+
+<h2>Temporary allocations</h2>
+
+<p>Many Unity projects are found to operate with several tens or hundreds of kilobytes of temporary data being allocated to the managed heap each frame. This is often extremely detrimental to a project’s performance. Consider the following math:</p>
+
+<p>If a program allocates one kilobyte (1kb) of temporary memory each frame, and is running at 60 <span class="tooltip"><strong>frames per second</strong><span class="tooltiptext">The frequency at which consecutive frames are displayed in a running game. <a href="RenderingStatistics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#framespersecond">Glossary</a></span></span></span>, then it must allocate 60 kilobytes of temporary memory per second. Over the course of a minute, this adds up to 3.6 megabytes of garbage in memory. Invoking the garbage collector once per second is likely to be detrimental to performance, but allocating 3.6 megabytes per minute is problematic when attempting to run on low-memory devices.</p>
+
+<p>Further, consider loading operations. If a large number of temporary objects are generated during a heavy Asset-loading operation, and those objects are referenced until the operation completes, then the garbage collector is unable to release those temporary objects and the managed heap needs to expand – even though many of the objects it contains will be released a short time later.</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_3.png" alt="">
+</figure>
+
+<p>Keeping track of managed memory allocations is relatively simple. In Unity’s CPU <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span>, the Overview has a “GC Alloc” column. This column displays the number of bytes allocated on the managed heap in a specific frame (4) (<strong>Note:</strong> Note that this is not identical to the number of bytes temporarily allocated during a given frame. The profile displays the number of bytes allocated in a specific frame, even if some/all of the allocated memory is reused in subsequent frames). With the “Deep Profiling” option enabled, it’s possible to track down the method in which these allocations occur.</p>
+
+<p>
+<strong>The Unity Profiler does not track these allocations when they occur off the main thread.</strong> Therefore, the “GC Alloc” column cannot be used to measure managed allocations that occur in user-created threads. Switch the execution of code from separate threads to the main thread for debugging purposes or use the <a href="../ScriptReference/Profiling.Profiler.BeginThreadProfiling.html">BeginThreadProfiling</a> API to display the samples in the <span class="tooltip"><strong>Timeline</strong><span class="tooltiptext">Generic term within Unity that refers to all features, windows, editors, and components related to creating, modifying, or reusing cut-scenes, cinematics, and game-play sequences. <a href="TimelineSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timeline">Glossary</a></span></span></span> Profiler. </p>
+
+<p>Always profile managed allocations with a <span class="tooltip"><strong>development build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> on the target device.</p>
+
+<p>Note that some script methods cause allocations when running in the Editor, but do not produce allocations after the project has been built. <code>GetComponent</code> is the most common example; this method always allocates when executed in the Editor, but not in a built project.</p>
+
+<p>In general, it is strongly recommended that all developers minimize managed heap allocations whenever the project is in an interactive state. Allocations during non-interactive operations, such as <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> loading, are less problematic.</p>
+
+<p>The <a href="https://resharper-plugins.jetbrains.com/packages/ReSharper.HeapView/0.9.1">Jetbrains Resharper Plugin</a> for Visual Studio can help locate allocations in code.</p>
+
+<p>Use Unity’s <a href="ProfilerWindow.html">Deep Profile</a> mode to locate the specific causes of managed allocations. In Deep Profile mode, all method calls are recorded individually, providing a clearer view of where managed allocations occur within the method call tree. Note that Deep Profile mode works not only in the Editor but also on Android and Desktop using the command line argument <code>-deepprofiling</code>. The Deep Profiler button stays grayed out during profiling.</p>
+
+<h2>Basic memory conservation</h2>
+
+<p>There are a handful of relatively simple techniques that can be employed to reduce managed heap allocations.</p>
+
+<h3>Collection and array reuse</h3>
+
+<p>When using C#’s Collection classes or Arrays, consider reusing or pooling the allocated Collection or Array whenever possible. The Collection classes expose a <em>Clear</em> method which eliminates the Collection’s values but does not release the memory allocated to the Collection.</p>
+
+<pre><code>
+void Update() {
+
+    List&lt;float&gt; nearestNeighbors = new List&lt;float&gt;();
+
+    findDistancesToNearestNeighbors(nearestNeighbors);
+
+    nearestNeighbors.Sort();
+
+    // … use the sorted list somehow …
+
+}
+
+</code></pre>
+
+<p>This is particularly useful when allocating temporary “helper” Collections for complex computations. A very simple example might be the following code:</p>
+
+<p>In this example, the <code>nearestNeighbors</code> List is allocated once per frame in order to collect a set of data points. It’s very simple to hoist this List out of the method and into the containing class, which avoids allocating a new List each frame:</p>
+
+<pre><code>
+List&lt;float&gt; m_NearestNeighbors = new List&lt;float&gt;();
+
+void Update() {
+
+    m_NearestNeighbors.Clear();
+
+    findDistancesToNearestNeighbors(NearestNeighbors);
+
+    m_NearestNeighbors.Sort();
+
+    // … use the sorted list somehow …
+
+}
+
+</code></pre>
+
+<p>In this version, the List’s memory is retained and reused across multiple frames. New memory is only allocated when the List needs to expand.</p>
+
+<h2>Closures and anonymous methods</h2>
+
+<p>There are two points to consider when using closures and anonymous methods.</p>
+
+<p>First, all method references in C# are reference types, and are therefore allocated on the heap. Temporary allocations can be easily created by passing a method reference as an argument. This allocation occurs regardless of whether the method being passed is an anonymous method or a predefined one.</p>
+
+<p>Second, converting an anonymous method to a closure significantly increases the amount of memory required to pass the closure to method receiving it.</p>
+
+<p>Consider the following code:</p>
+
+<pre><code>
+List&lt;float&gt; listOfNumbers = createListOfRandomNumbers();
+
+listOfNumbers.Sort( (x, y) =&gt;
+
+(int)x.CompareTo((int)(y/2)) 
+
+);
+
+</code></pre>
+
+<p>This snippet uses a simple anonymous method to control the sorting order of the list of numbers created on the first line. However, if a programmer wished to make this snippet reusable, it is tempting to substitute the constant <code>2</code> for a variable in local scope, like so:</p>
+
+<pre><code>
+List&lt;float&gt; listOfNumbers = createListOfRandomNumbers();
+
+int desiredDivisor = getDesiredDivisor();
+
+listOfNumbers.Sort( (x, y) =&gt;
+
+(int)x.CompareTo((int)(y/desiredDivisor))
+
+);
+
+</code></pre>
+
+<p>The anonymous method now requires the method to be able to access the state of a variable outside of the method’s scope, and so has become a closure. The <code>desiredDivisor</code> variable must be passed into the closure somehow so that it can be used by the actual code of the closure.</p>
+
+<p>To do this, C# generates an anonymous class that can retain the externally-scoped variables needed by the closure. A copy of this class is instantiated when the closure is passed to the <code>Sort</code> method, and the copy is initialized with the value of the <code>desiredDivisor</code> integer.</p>
+
+<p>Because executing the closure requires instantiation of a copy of its generated class, and all classes are reference types in C#, then executing the closure requires allocation of an object on the managed heap.</p>
+
+<p>In general, it is best to avoid closures in C# whenever possible. Anonymous methods and method references should be minimized in performance-sensitive code, and especially in code that executes on a per-frame basis.</p>
+
+<h3>Anonymous methods under IL2CPP</h3>
+
+<p>Currently, inspection of code generated by <span class="tooltip"><strong>IL2CPP</strong><span class="tooltiptext">A Unity-developed scripting back-end which you can use as an alternative to Mono when building projects for some platforms. <a href="IL2CPP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> reveals that the simple declaration and assignment of a variable of type <code>System.Function</code> allocates a new object. This is true whether the variable is explicit (declared in a method/class) or implicit (declared as an argument to another method).</p>
+
+<p>As such, any use of anonymous methods under the IL2CPP <span class="tooltip"><strong>scripting backend</strong><span class="tooltiptext">A framework that powers scripting in Unity. Unity supports three different scripting backends depending on target platform: Mono, .NET and IL2CPP. Universal Windows Platform, however, supports only two: .NET and IL2CPP. <a href="windowsstore-scriptingbackends.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span> allocates managed memory. This is not the case under the Mono <strong>scripting backend</strong>.</p>
+
+<p>Furthermore, IL2CPP displays dramatically different levels of managed memory allocation depending on the way in which a method argument is declared. Closures, as expected, allocate the most memory per call.</p>
+
+<p>Unintuitively, predefined methods allocate <strong>nearly as much memory as closures</strong> when passed as arguments under the IL2CPP scripting backend. Anonymous methods generate the least amount of transient garbage on the heap, by one or more orders of magnitude.</p>
+
+<p>Therefore, if a project is intended to ship on the IL2CPP scripting backend, there are three key recommendations:</p>
+
+<ul>
+<li><p>Prefer coding styles that do not require passing methods as arguments.</p></li>
+<li><p>When unavoidable, prefer anonymous methods over predefined methods.</p></li>
+<li><p>Avoid closures, regardless of scripting backend.</p></li>
+</ul>
+
+<h2>Boxing</h2>
+
+<p>Boxing is one of the most common sources of unintended temporary memory allocations found in Unity projects. It occurs whenever a value-typed value is utilized as a reference type; this most often occurs when passing primitive value-typed variables (such as <code>int</code> and <code>float</code>) to object-typed methods.</p>
+
+<p>In this extremely simple example, the integer in <em>x</em> is boxed in order to be passed to the <code>object.Equals</code> method, because the <code>Equals</code> method on <code>object</code> requires that an <code>object</code> be passed to it.</p>
+
+<pre><code>
+int x = 1;
+
+object y = new object();
+
+y.Equals(x);
+
+</code></pre>
+
+<p>C# IDEs and compilers generally do not issue warnings about boxing, even though it leads to unintended memory allocations. This is because the C# language was developed with the assumption that small temporary allocations would be efficiently handled by generational garbage collectors and allocation-size-sensitive memory pools.</p>
+
+<p>While Unity’s allocator does use different memory pools for small and large allocations, Unity’s garbage collector is <code>not</code> generational and therefore cannot efficiently sweep out the small, frequent temporary allocations generated by boxing.</p>
+
+<p>Boxing should be avoided wherever possible when writing C# code for Unity runtimes.</p>
+
+<h3>Identifying boxing</h3>
+
+<p>Boxing shows up in CPU traces as calls to one of a few methods, depending on the scripting backend in use. These generally take one of the following forms, where <code>&lt;some class&gt;</code> is the name of some other class or struct, and <code>…</code> is some number of arguments:</p>
+
+<ul>
+<li><p><code>&lt;some class&gt;::Box(…)</code></p></li>
+<li><p><code>Box(…)</code></p></li>
+<li><p><code>&lt;some class&gt;_Box(…)</code></p></li>
+</ul>
+
+<p>It can also be located by searching the output of a decompiler or IL viewer, such as the IL viewer tool built into ReSharper or the dotPeek decompiler. The IL instruction is “box”.</p>
+
+<h3>Dictionaries and enums</h3>
+
+<p>One common cause of boxing is the use of <code>enum</code> types as keys for Dictionaries. Declaring an <code>enum</code> creates a new value type that is treated like an integer behind the scenes, but enforces type-safety rules at compile time.</p>
+
+<p>By default, a call to <code>Dictionary.add(key, value)</code> results in a call to <code>Object.getHashCode(Object)</code>. This method is used to obtain the appropriate hash code for the Dictionary’s key, and is used in all methods that accept a key: <code>Dictionary.tryGetValue, Dictionary.remove</code>, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</p>
+
+<p>The <code>Object.getHashCode</code> method is reference-typed, but <code>enum</code> values are always value types. Therefore, for enum-keyed Dictionaries, every method call results in the key being boxed at least once.</p>
+
+<p>The following code snippet illustrates a simple example that demonstrates this boxing problem:</p>
+
+<pre><code>
+enum MyEnum { a, b, c };
+
+var myDictionary = 
+
+new Dictionary&lt;MyEnum, object&gt;();
+
+myDictionary.Add(MyEnum.a, new object());
+
+</code></pre>
+
+<p>To solve this problem, it is necessary to write a custom class that implements the <code>IEqualityComparer</code> interface and assign an instance of that class as the Dictionary’s comparer (<strong>Note:</strong> This object is usually stateless, and therefore can be reused with different Dictionary instances to save memory). </p>
+
+<p>The following is a simple example of an IEqualityComparer for the above code snippet.</p>
+
+<pre><code>
+public class MyEnumComparer : IEqualityComparer&lt;MyEnum&gt; {
+
+    public bool Equals(MyEnum x, MyEnum y) {
+
+        return x == y;
+
+    }
+
+    public int GetHashCode(MyEnum x) {
+
+        return (int)x;
+
+    }
+
+}
+
+</code></pre>
+
+<p>An instance of the above class could be passed to the Dictionary’s constructor. </p>
+
+<h3>Foreach loops</h3>
+
+<p>In Unity’s version of the Mono C# compiler, use of the <code>foreach</code> loop forces Unity to box a value each time the loop terminates (<strong>Note:</strong> The value is boxed once each time the loop as a whole finishes executing. It does not box once per iteration of the loop, so memory usage remains the same regardless of whether the loop runs two times or 200 times). This is because the IL generated by Unity’s C# compiler constructs a generic value-type Enumerator in order to iterate over the value collection. </p>
+
+<p>This Enumerator implements the <code>IDisposable</code> interface, which must be called when the loop terminates. However, calling interface methods on value-typed objects (such as structs and Enumerators) requires boxing them.</p>
+
+<p>Examine the following very simple example code:</p>
+
+<pre><code>
+int accum = 0;
+
+foreach(int x in myList) {
+
+    accum += x;
+
+}
+
+</code></pre>
+
+<p>The above, when run through Unity’s C# compiler, produces the following Intermediate Language:</p>
+
+<pre><code>
+   .method private hidebysig instance void 
+
+    ILForeach() cil managed 
+
+  {
+
+    .maxstack 8
+
+    .locals init (
+
+      [0] int32 num,
+
+      [1] int32 current,
+
+      [2] valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt; V_2
+
+    )
+
+    // [67 5 - 67 16]
+
+    IL_0000: ldc.i4.0     
+
+    IL_0001: stloc.0      // num
+
+    // [68 5 - 68 74]
+
+    IL_0002: ldarg.0      // this
+
+    IL_0003: ldfld        class [mscorlib]System.Collections.Generic.List`1&lt;int32&gt; test::myList
+
+    IL_0008: callvirt     instance valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;!0/*int32*/&gt; class [mscorlib]System.Collections.Generic.List`1&lt;int32&gt;::GetEnumerator()
+
+    IL_000d: stloc.2      // V_2
+
+    .try
+
+    {
+
+      IL_000e: br           IL_001f
+
+    // [72 9 - 72 41]
+
+      IL_0013: ldloca.s     V_2
+
+      IL_0015: call         instance !0/*int32*/ valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;::get_Current()
+
+      IL_001a: stloc.1      // current
+
+    // [73 9 - 73 23]
+
+      IL_001b: ldloc.0      // num
+
+      IL_001c: ldloc.1      // current
+
+      IL_001d: add          
+
+      IL_001e: stloc.0      // num
+
+    // [70 7 - 70 36]
+
+      IL_001f: ldloca.s     V_2
+
+      IL_0021: call         instance bool valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;::MoveNext()
+
+      IL_0026: brtrue       IL_0013
+
+      IL_002b: leave        IL_003c
+
+    } // end of .try
+
+    finally
+
+    {
+
+      IL_0030: ldloc.2      // V_2
+
+      IL_0031: box          valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;
+
+      IL_0036: callvirt     instance void [mscorlib]System.IDisposable::Dispose()
+
+      IL_003b: endfinally   
+
+    } // end of finally
+
+    IL_003c: ret          
+
+  } // end of method test::ILForeach
+
+} // end of class test
+
+</code></pre>
+
+<p>The most relevant code is the <code>__finally { … }__</code> block near the bottom. The <code>callvirt</code> instruction discovers the location of the <code>IDisposable.Dispose</code> method in memory before invoking the method, and requires that the Enumerator be boxed.</p>
+
+<p>In general, <code>foreach</code> loops should be avoided in Unity. Not only do they box, but the method-call cost of iterating over collections via Enumerators is generally much slower than manual iteration via a <code>for</code> or <code>while</code> loop.</p>
+
+<p>Note that the C# compiler upgrade in Unity 5.5 significantly improves Unity’s ability to generate IL. In particular, the boxing operations has been eliminated from <code>foreach</code> loops. This eliminates the memory overhead associated with <code>foreach</code> loops. However, the CPU performance difference compared to equivalent Array-based code remains, due to method-call overhead.</p>
+
+<h3>Array-valued Unity APIs</h3>
+
+<p>A more pernicious and less-visible cause of spurious array allocation is the repeated accessing of Unity APIs that return arrays. All Unity APIs that return arrays create a new copy of the array each time they are accessed. It is extremely non-optimal to access an array-valued Unity API more often than necessary.</p>
+
+<p>As an example, the following code spuriously creates four copies of the <code>vertices</code> array per loop iteration. The allocations are occur each time the <code>.vertices</code> property is accessed.</p>
+
+<pre><code>
+for(int i = 0; i &lt; mesh.vertices.Length; i++)
+
+{
+
+    float x, y, z;
+
+    x = mesh.vertices[i].x;
+
+    y = mesh.vertices[i].y;
+
+    z = mesh.vertices[i].z;
+
+    // ...
+
+    DoSomething(x, y, z);   
+
+}
+
+</code></pre>
+
+<p>This can be trivially refactored into a single array allocation, regardless of the number of loop iterations, by capturing the <code>vertices</code> array before entering the loop:</p>
+
+<pre><code>
+var vertices = mesh.vertices;
+
+for(int i = 0; i &lt; vertices.Length; i++)
+
+{
+
+    float x, y, z;
+
+    x = vertices[i].x;
+
+    y = vertices[i].y;
+
+    z = vertices[i].z;
+
+    // ...
+
+    DoSomething(x, y, z);   
+
+}
+
+</code></pre>
+
+<p>While the CPU cost of accessing a property once is not very high, repeated accesses within tight loops create CPU performance hotspots. Further, repeated accesses unnecessarily expand the managed heap.</p>
+
+<p>This problem is extremely common on mobile, because the <code>Input.touches</code> API behaves similarly to the above. It is extremely common for projects to contain code similar to the following, where an allocation occurs each time the <code>.touches</code> property is accessed.</p>
+
+<pre><code>
+for ( int i = 0; i &lt; Input.touches.Length; i++ )
+
+{
+
+   Touch touch = Input.touches[i];
+
+    // …
+
+}
+
+</code></pre>
+
+<p>This can, of course, be trivially improved by hoisting the array allocation out of the loop condition:</p>
+
+<pre><code>
+Touch[] touches = Input.touches;
+
+for ( int i = 0; i &lt; touches.Length; i++ )
+
+{
+
+   Touch touch = touches[i];
+
+   // …
+
+}
+
+</code></pre>
+
+<p>However, there are now versions of many Unity APIs that do not cause memory allocations. These should generally be favored, when they’re available. </p>
+
+<pre><code>
+int touchCount = Input.touchCount;
+
+for ( int i = 0; i &lt; touchCount; i++ )
+
+{
+
+   Touch touch = Input.GetTouch(i);
+
+   // …
+
+}
+
+</code></pre>
+
+<p>Converting the above example to the allocation-less Touch API is simple:</p>
+
+<p>Note that the property access (<code>Input.touchCount</code>) is still kept outside the loop condition in order to save the CPU cost of invoking the property’s <code>get</code> method.</p>
+
+<h3>Empty array reuse</h3>
+
+<p>Some teams prefer to return empty arrays instead of <code>null</code> when an array-valued method needs to return an empty set. This coding pattern is common in many managed languages, particularly C# and Java.</p>
+
+<p>In general, when returning a zero-length array from a method, it is considerably more efficient to return a pre-allocated singleton instance of the zero-length array than to repeatedly create empty arrays(5) (<strong>Note:</strong> Naturally, an exception should be made when the array is resized after being returned).</p>
+
+<p><strong>Footnotes</strong></p>
+
+<ul>
+<li><p>
+<strong>(1)</strong> This is because, on most platforms, readback from GPU memory is extremely slow. Reading a Texture from GPU memory into a temporary buffer for use by CPU code (e.g. <code>Texture.GetPixel</code>) would be very nonperformant.</p></li>
+<li><p>
+<strong>(2)</strong> Strictly speaking, all non-null reference-typed objects and all boxed value-typed objects must be allocated on the managed heap.</p></li>
+<li><p>
+<strong>(3)</strong> The exact timing is platform-dependent.</p></li>
+<li><p>
+<strong>(4)</strong> Note that this is <strong>not</strong> identical to the number of bytes temporarily allocated during a given frame. The profile displays the number of bytes allocated in a specific frame, even if some/all of the allocated memory is reused in subsequent frames.</p></li>
+<li><p>
+<strong>(5)</strong> Naturally, an exception should be made when the array is resized after being returned.</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li>
+<span class="page-edit">2018–03–05 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br>
+</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity4.html"></a></span><div class="tip"> Asset auditing</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity5.html"></a></span><div class="tip"> Strings and text</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

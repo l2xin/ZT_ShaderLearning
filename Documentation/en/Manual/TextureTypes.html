@@ -1,0 +1,1286 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Texture Types</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/TextureTypes.html">English</a></li>
+<li><a href="/ja/current/Manual/TextureTypes.html">日本語</a></li>
+<li><a href="/es/current/Manual/TextureTypes.html">Español</a></li>
+<li><a href="/kr/current/Manual/TextureTypes.html">한국어</a></li>
+<li><a href="/ru/current/Manual/TextureTypes.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="comp-Textures.html">Texture Components</a></li>
+<li><a href="class-TextureImporter.html"> Textures</a></li>
+<li>Texture Types</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ImportingTextures.html"></a></span><div class="tip"> Importing Textures</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">Texture compression formats for platform-specific overrides</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Texture Types</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can import different <span class="tooltip"><a href="Textures.html">Texture</a><span class="tooltiptext">An image used when rendering a GameObject, Sprite, or UI element. Textures are often applied to the surface of a mesh to give it visual detail. <a href="class-TextureImporter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#texture">Glossary</a></span></span></span> types into the Unity Editor via the <a href="class-TextureImporter.html">Texture Importer</a>.</p>
+
+<p>Below are the properties available to configure the various Texture types in Unity in the Texture <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window. Scroll down or select from the list below to find details of the Texture type you wish to learn about.</p>
+
+<ul>
+<li><a href="#Default">Default</a></li>
+<li><a href="#NormalMap">Normal Map</a></li>
+<li><a href="#Editor">Editor GUI and Legacy</a></li>
+<li><a href="#Sprite">Sprite (2D and UI)</a></li>
+<li><a href="#Cursor">Cursor</a></li>
+<li><a href="#Cookie">Cookie</a></li>
+<li><a href="#Lightmap">Lightmap</a></li>
+<li><a href="#SingleChannel">Single Channel</a></li>
+</ul>
+
+<p><a name="Default"></a></p>
+
+<h2>Texture type: Default</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Default-0.png" alt="Texture Inspector window - Texture Type:Default">
+<figcaption>Texture Inspector window - <strong>Texture Type:Default</strong></figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">
+<strong>Default</strong> is the most common setting used for all Textures. It provides access to most of the properties for Texture importing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>sRGB (Color Texture)</strong></td>
+	<td style="text-align:left;">Check this box to specify that the Texture is stored in gamma space. This should always be checked for non-HDR color Textures (such as Albedo and Specular Color). If the Texture stores information that has a specific meaning, and you need the exact values in the <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> (for example, the smoothness or the metalness), uncheck this box. This box is checked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">Use this to specify how the alpha channel of the Texture is generated. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">The imported Texture does not have an alpha channel, whether or not the input Texture has one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Input Texture Alpha</td>
+	<td style="text-align:left;">This uses the alpha from the input Texture if a Texture is provided.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    From Gray Scale</td>
+	<td style="text-align:left;">This generates the alpha from the mean (average) of the input Texture RGB values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">If the alpha channel you specify is Transparency, enable <strong>Alpha is Transparency</strong> to dilate the color and avoid filtering artifacts on the edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture dimension size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that <span class="tooltip"><strong>PVRTC</strong><span class="tooltiptext">PowerVR Texture Compression (PVRTC) is a fixed-rate texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PVRTC">Glossary</a></span></span></span> formats require Textures to be square (that is width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest dimension size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest dimension size value at import time. For example, a 257x511 px Texture is scaled to 256x256 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="NormalMap"></a></p>
+
+<h2>Texture type: Normal Map</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-NormalMap-1.png" alt="Texture Inspector window - Texture Type:Normal Map">
+<figcaption>Texture Inspector window - <strong>Texture Type:Normal Map</strong></figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <strong>Normal map</strong> to turn the color channels into a format suitable for real-time normal mapping.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Create from Greyscale</strong></td>
+	<td style="text-align:left;">This creates the Normal Map from a greyscale heightmap. Check this to enable it and enabled it and see the <strong>Bumpiness</strong> and <strong>Filtering</strong>. This option is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bumpiness</td>
+	<td style="text-align:left;">Control the amount of bumpiness. A low bumpiness value means that even sharp contrast in the heightmap is translated to gentle angles and bumps. A high value creates exaggerated bumps and very high-contrast lighting responses to the bumps. This option is only visible if Create from Greyscale is checked.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Filtering</td>
+	<td style="text-align:left;">Determine how the bumpiness is calculated:</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Smooth</em>
+</td>
+	<td style="text-align:left;">This generates Normal Maps with standard (forward differences) algorithms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Sharp</em>
+</td>
+	<td style="text-align:left;">Also known as a Sobel filter, this generates Normal Maps that are sharper than Standard.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two dimension sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture dimension size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that PVRTC formats require Textures to be square (width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest dimension size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest dimension size value at import time. For example, a 257x511 px Texture is scaled to 256x256 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture Assets, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Editor"></a></p>
+
+<h2>Texture type: Editor GUI and Legacy GUI</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Editor-2.png" alt="Texture Inspector window - Texture Type:Editor GUI and Legacy GUI">
+<figcaption>Texture Inspector window - <strong>Texture Type:Editor GUI and Legacy GUI</strong></figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <strong>Editor GUI and Legacy GUI</strong> if you are using the Texture on any HUD or GUI controls.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">Use this to specify how the alpha channel of the Texture is generated. This is set to None by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">The imported Texture does not have an alpha channel, whether or not the input Texture has one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Input Texture Alpha</td>
+	<td style="text-align:left;">This uses the alpha from the input Texture if a Texture is provided.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    From Gray Scale</td>
+	<td style="text-align:left;">This generates the alpha from the mean (average) of the input Texture RGB values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">If the alpha channel you specify is Transparency, enable <strong>Alpha is Transparency</strong> to dilate the color and avoid filtering artifacts on the edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture dimension size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that PVRTC formats require Textures to be square (width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest dimension size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest dimension size value at import time. For example, a 257x511px Texture is scaled to 256x256.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture Assets, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Sprite"></a></p>
+
+<h2>Texture type: Sprite (2D and UI)</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Sprite-3.png" alt="Texture Inspector window - Texture Type:Sprite (2D and UI)">
+<figcaption>Texture Inspector window - <strong>Texture Type:Sprite (2D and UI)</strong></figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <strong>Sprite (2D and UI)</strong> if you are using the Texture in a 2D game as a <span class="tooltip"><a href="Sprites.html">Sprite</a><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sprite mode</strong></td>
+	<td style="text-align:left;">Use this setting to specify how the the Sprite graphic is extracted from the image. The default for this option is <strong>Single</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Single</td>
+	<td style="text-align:left;">Use the Sprite image in isolation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Multiple</td>
+	<td style="text-align:left;">Keep multiple related Sprites together in the same image (for example, animation frames or separate Sprite elements that belong to a single game character).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Packing Tag</strong></td>
+	<td style="text-align:left;">Specify by name a Sprite atlas which you want to pack this Texture into.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pixels Per Unit</strong></td>
+	<td style="text-align:left;">The number of <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> of width/height in the Sprite image that correspond to one distance unit in world space.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mesh Type</strong></td>
+	<td style="text-align:left;">This defines the <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> type that is generated for the Sprite. The default for this option is <strong>Tight</strong>. See the example images below for a comparison of the two <strong>Mesh</strong> types.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Full Rect</td>
+	<td style="text-align:left;">This creates a <span class="tooltip"><strong>quad</strong><span class="tooltiptext">A primitive object that resembles a plane but its edges are only one unit long, it uses only 4 vertices, and the surface is oriented in the XY plane of the local coordinate space. <a href="PrimitiveObjects.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Quad">Glossary</a></span></span></span> to map the Sprite onto it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Tight</td>
+	<td style="text-align:left;">This generates a Mesh based on pixel alpha value. The Mesh generated generally follows the shape of the Sprite. <br><strong>Note:</strong> Any Sprite that is smaller than 32x32 uses <strong>Full Rect</strong>, even when <strong>Tight</strong> is specified.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Extrude Edges</strong><span class="tooltiptext">A Texture property that enables you to define how much area to leave around a sprite in a generated mesh. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ExtrudeEdges">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Use the slider to determine how much area to leave around the Sprite in the generated Mesh. See the example images below for a comparison of two <strong>Extrude Edges</strong> values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pivot</strong></td>
+	<td style="text-align:left;">The location in the image where the Sprite’s local coordinate system originates. Choose one of the pre-set options, or select <strong>Custom</strong> to set your own Pivot location.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Custom</td>
+	<td style="text-align:left;">Define the X and Y to set a custom Pivot location in the image.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>sRGB (Color Texture)</strong></td>
+	<td style="text-align:left;">Use this to specify whether or not the Texture is stored in gamma space. This should be the case for all non-HDR color Textures (such as Albedo and Specular Color). If the Texture stores information that has a specific meaning, and you need the exact values in the Shader (for example, the smoothness or the metalness), uncheck this box.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">Use this to specify how the alpha channel of the Texture is generated.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">The imported Texture does not have an alpha channel, whether or not the input Texture has one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Input Texture Alpha</td>
+	<td style="text-align:left;">This uses the alpha from the input Texture. This option does not appear in the menu if there is no alpha in the imported Texture.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    From Gray Scale</td>
+	<td style="text-align:left;">This generates the alpha from the mean (average) of the input Texture RGB values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">If the provided alpha channel is Transparency, enable Alpha is Transparency to dilate the color and avoid filtering artifacts on the edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note however that a copy of the Texture data will be made, doubling the amount of memory required for Texture Asset, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See the Details section at the end of the page.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Select this to avoid colors bleeding out to the edge of the lower MIP levels. Used for Light Cookies (see below).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality:</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wrap Mode</td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled:</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations:</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See the Details section at the end of the page.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Example: Mesh type</strong></p>
+
+<p>|<br>
+Full Rect|<br>
+Tight Mesh |
+|:—|:—| </p>
+
+<p><strong>Example: Extrude Edges</strong></p>
+
+<p>|<br>
+Extrude Edges = 0|<br>
+Extrude Edges = 32 |
+|:—|:—| </p>
+
+<p><a name="Cursor"></a></p>
+
+<h2>Texture type: Cursor</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Cursor-4.png" alt="Texture Inspector window - Texture Type:Cursor ">
+<figcaption>Texture Inspector window - <strong>Texture Type:Cursor</strong> </figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <strong>Cursor</strong> if you are using the Texture as a custom cursor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">Use this to specify how the alpha channel of the Texture is generated. This is set to None by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">The imported Texture does not have an alpha channel, whether or not the input Texture has one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Input Texture Alpha</td>
+	<td style="text-align:left;">This uses the alpha from the input Texture if a Texture is provided.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    From Gray Scale</td>
+	<td style="text-align:left;">This generates the alpha from the mean (average) of the input Texture RGB values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">If the alpha channel you specify is Transparency, enable <strong>Alpha is Transparency</strong> to dilate the color and avoid filtering artifacts on the edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two dimension sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture dimension size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that PVRTC formats require Textures to be square (width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest dimension size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest dimension size value at import time. For example, a 257x511 px Texture is scaled to 256x256.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture Assets, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Cookie"></a></p>
+
+<h2>Texture type: Cookie</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Cookie-5.png" alt="Texture Inspector window - Texture Type:Cookie ">
+<figcaption>Texture Inspector window - <strong>Texture Type:Cookie</strong> </figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <strong>Cookie</strong> to set your Texture up with the basic parameters used for the <a href="Cookies.html">Cookies</a> of your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>’s <a href="class-Light.html">Lights</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Light Type</td>
+	<td style="text-align:left;">Define the type of Light that the Texture is applied to. Directional and Spotlight cookies must be 2D Textures, and Point Light Cookies must be cubemaps. The system automatically enforces the right shape depending on the Light type. <br>For Directional Lights this Texture tiles, so in the Texture inspector set the <strong>Edge Mode</strong> to <strong>Repeat</strong>. <br>For Spotlights, keep the edges of your Cookie Texture solid black to get the proper effect. In the Texture Inspector, set the <strong>Edge Mode</strong> to <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">If the alpha channel you specify is Transparency, enable <strong>Alpha is Transparency</strong> to dilate the color and avoid filtering artifacts on the edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture dimension size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that PVRTC formats require Textures to be square (width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest dimension size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest dimension size value at import time. For example, a 257x511 px Texture is scaled to 256x256.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture Assets, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Lightmap"></a></p>
+
+<h2>Texture type: Lightmap</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-Lightmap-6.png" alt="Texture Inspector window - Texture Type:Lightmap">
+<figcaption>Texture Inspector window - <strong>Texture Type:Lightmap</strong></figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> if you are using the Texture as a <a href="class-LightmapParameters.html">Lightmap</a>. This option enables encoding into a specific format (RGBM or dLDR, depending on the platform) and a post-processing step on Texture data (a push-pull dilation pass).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two dimension sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that PVRTC formats require Textures to be square (width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest dimension size value at import time. For example, a 257x511 px Texture is scaled to 256x256 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture Assets, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="SingleChannel"></a></p>
+
+<h2>Texture type: Single Channel</h2>
+
+<figure>
+<img src="../uploads/Main/TextureTypes-SingleChannel-7.png" alt="Texture Inspector window - Texture Type:Single Channel">
+<figcaption>Texture Inspector window - <strong>Texture Type:Single Channel</strong></figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Texture Type</strong></td>
+	<td style="text-align:left;">Select <strong>Single Channel</strong> if you only need one channel in the Texture.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Shape</strong></td>
+	<td style="text-align:left;">Use this to define the shape of the Texture. See documentation on the <a href="class-TextureImporter.html">Texture Importer</a> for information on all Texture shapes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha Source</strong></td>
+	<td style="text-align:left;">Use this to specify how the alpha channel of the Texture is generated. This is set to None by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">The imported Texture does not have an alpha channel, whether or not the input Texture has one.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Input Texture Alpha</td>
+	<td style="text-align:left;">This uses the alpha from the input Texture if a Texture is provided.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    From Gray Scale</td>
+	<td style="text-align:left;">This generates the alpha from the mean (average) of the input Texture RGB values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alpha is Transparency</strong></td>
+	<td style="text-align:left;">If the alpha channel you specify is Transparency, enable <strong>Alpha is Transparency</strong> to dilate the color and avoid filtering artifacts on the edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Advanced</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">If the Texture has a non-power of two (NPOT) dimension size, this defines a scaling behavior at import time. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on non-power of two sizes. This is set to <strong>None</strong> by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">Texture dimension size stays the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">The Texture is scaled to the nearest power-of-two dimension size at import time. For example, a 257x511 px Texture is scaled to 256x512 px. Note that PVRTC formats require Textures to be square (width equal to height), so the final dimension size is upscaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the largest dimension size value at import time. For example, a 257x511 px Texture is scaled to 512x512 px.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">The Texture is scaled to the power-of-two dimension size of the smallest size value at import time. For example, a 257x511 px Texture is scaled to 256x256.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">Check this box to enable access to the Texture data from script functions (such as <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>, <a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> and other <a href="../ScriptReference/Texture2D.html">Texture2D</a> functions). Note that a copy of the Texture data is made, doubling the amount of memory required for Texture Assets, so only use this property if absolutely necessary. This is only valid for uncompressed and DXT compressed Textures; other types of compressed textures cannot be read from. This property is disabled by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to enable mipmap generation. Mipmaps are smaller versions of the Texture that get used when the Texture is very small on screen. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on mipmaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">Check this box to avoid colors bleeding out to the edge of the lower MIP levels. Used for light cookies (see below). This box is unchecked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">There are two ways of mipmap filtering available for optimizing image quality. The default option is <strong>Box</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">This is the simplest way to fade out mipmaps. The MIP levels become smoother as they go down in dimension size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">A sharpening algorithm runs on the mipmaps as they go down in dimension size. Try this option if your Textures are too blurry in the distance. (The algorothm is of a Kaiser Window type - see <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> for further information.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">Enable this to make the mipmaps fade to gray as the MIP levels progress. This is used for detail maps. The left-most scroll is the first MIP level to begin fading out. The right-most scroll defines the MIP level where the Texture is completely grayed out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture behaves when tiled. The default option is <strong>Clamp</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">The Texture repeats itself in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">The Texture’s edges are stretched.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Select how the Texture is filtered when it gets stretched by 3D transformations. The default option is <strong>Point (no filter)</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">The Texture appears blocky up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">The Texture appears blurry up close.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">Like Bilinear, but the Texture also blurs between the different MIP levels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Increases Texture quality when viewing the Texture at a steep angle. Good for floor and ground Textures. See documentation on <a href="ImportingTextures.html">Importing Textures</a> for more information on Anisotropic filtering.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ImportingTextures.html"></a></span><div class="tip"> Importing Textures</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">Texture compression formats for platform-specific overrides</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

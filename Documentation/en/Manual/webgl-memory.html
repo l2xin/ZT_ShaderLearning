@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Memory in WebGL</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/webgl-memory.html">English</a></li>
+<li><a href="/ja/current/Manual/webgl-memory.html">日本語</a></li>
+<li><a href="/es/current/Manual/webgl-memory.html">Español</a></li>
+<li><a href="/kr/current/Manual/webgl-memory.html">한국어</a></li>
+<li><a href="/ru/current/Manual/webgl-memory.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">Getting started with WebGL development</a></li>
+<li>Memory in WebGL</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-performance.html"></a></span><div class="tip">WebGL performance considerations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-interactingwithbrowserscripting.html"></a></span><div class="tip"> WebGL: Interacting with browser scripting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Memory in WebGL</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Memory in Unity <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span> can be a constraining factor restricting the complexity of the content you can run, so we would like to provide some explanation on how memory is used in <strong>WebGL</strong>. </p>
+
+<p>Your WebGL content will run inside a browser, so any memory has to be allocated by the browser within the browser’s memory space. The amount of available memory can vary a lot depending on the browser, OS and device used. Determining factors include whether the browser is a 32 or 64 bit process, whether the browser uses separate processes for each tab or has your content share a memory space with all other open tabs, and how much memory the browser’s JavaScript engine requires to parse your code.</p>
+
+<p>There are multiple areas where Unity WebGL content will require the browser to allocate significant amounts of memory:</p>
+
+<h2>Unity Heap</h2>
+
+<p>This is the memory Unity uses to store all it’s state, managed and native objects and currently loaded <span class="tooltip"><strong>assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> and <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. This is similar to the memory used by Unity players on any other platform. You can configure the size of this in the Unity WebGL <span class="tooltip"><strong>player settings</strong><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> (But for faster iteration, you can also edit the TOTAL_MEMORY value written to the generated html file). You can use the Unity <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span> to profile and sample the contents of this memory. This memory will be created as a TypedArray of bytes in JavaScript code, and requires the browser be able to allocate a consecutive block of memory of this size. You will want this space to be as small as possible (so that the browser will be able to allocate it even if memory is fragmented), but large enough to fit all the data required to play any scene of your content.</p>
+
+<h2>Asset Data</h2>
+
+<p>When you create a Unity WebGL build, Unity will write out a .data file containing all the scenes and assets needed for your content. Since WebGL does not have a real file system, this file will be downloaded before your content can start, and the uncompressed data will be kept in a consecutive block of browser memory for the whole time your content is run. So, to keep both download times and memory usage low, you should try to keep this data as small as possible. See the documentation page on <a href="ReducingFilesize.html">Reducing File size</a> for information on how to optimize the build size of your assets.</p>
+
+<p>Another thing you can do to reduce load times and the amount of memory used for assets is to pack your asset data into <a href="AssetBundlesIntro.html">AssetBundles</a>. By doing so, you get full control of when your assets need to be downloaded, and you can unload them when you no longer need them, which will free any memory used by them. Note that AssetBundles will be loaded directly into the Unity heap and will not result in additional allocations by the browser (unless you use Asset Bundle Caching using <strong><a href="../ScriptReference/WWW.LoadFromCacheOrDownload.html">WWW.LoadFromCacheOrDownload</a></strong>, which is using a memory-mapped Virtual File System, backed by the browser’s IndexedDB).</p>
+
+<h2>Memory needed to parse the code</h2>
+
+<p>Another issue related to memory is the memory required by the browser’s JavaScript engine. Unity will emit very large files of millions of lines of generated JavaScript code, which is an order of magnitude larger than common uses of JavaScript code in browsers. Some JavaScript engines may allocate some rather large data structures to parse and optimize this code, which may results in memory spikes of up to several Gigabytes of memory when loading the content in some cases. We expect that future technologies like WebAssembly will eventually eliminate this problem, but until then, the best advise we can give is to do what you can to keep the size of the emitted code low. See the comments on distribution size <a href="webgl-building.html">here</a> for more information on how to do that.</p>
+
+<h2>Dealing with memory issues</h2>
+
+<p>When you see an error related to memory in a Unity WebGL build, it is important to understand whether it is the browser which is failing to allocate memory or if the Unity WebGL runtime is failing to allocate a free block of memory within the pre-allocated block of the Unity heap. If the browser is failing to allocate memory, then it may help to try to reduce the size used by one or more of the memory areas above (for instance by reducing the size of the Unity heap). On the other hand, if the Unity runtime is failing to allocate a block inside the Unity heap, you may want to increase the size of that instead.</p>
+
+<p>Unity will try to interpret error messages to tell which of the two it is (and provide suggestions on what to do). Since different browsers may report different messages, that is not always easy, however, and we may not be interpreting all of them. When you see a generic “Out of memory” error from the browser, it is likely to be an issue of the browser running out of memory (where you might want to use a smaller Unity heap). Also, you may sometimes see browsers simply crashing when loading Unity content without showing a human-parseable error message. This can have many reasons, but is frequently caused by JavaScript engines requiring too much memory to parse and optimize the generated code.</p>
+
+<h3>Large-Allocation Http Header</h3>
+
+<p>Your server can emit the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Large-Allocation">Large-Allocation</a> http header for your content. This tells supported browsers (currently only Firefox) about your memory needs, allowing them to spawn a new process with an unfragmented memory space, or to perform other housekeeping to make sure that the large allocation succeeds. This can solve issues where the browser runs out of memory when trying to allocate the Unity heap, especially on 32-bit browsers.</p>
+
+<h2>Garbage Collection considerations</h2>
+
+<p>When you allocate managed objects in Unity, they will need to be garbage collected when they are no longer used. See our documentation on <a href="UnderstandingAutomaticMemoryManagement.html">automatic memory management</a> for more information. In WebGL, this is the same. Managed, garbage collected memory is allocated inside the Unity heap.</p>
+
+<p>One distinction in WebGL, however, concerns the points in time when garbage collection (GC) can take place. To perform garbage collection, the GC would normally need to pause all running threads and inspect their stacks and registers for loaded object references. This is not currently possible in JavaScript. For this reason, the GC will only run in WebGL in situations where the stack is known to be empty (which is currently once after every frame). This is not a problem for most content which deals with managed memory conservatively and has relatively few GC allocations within each frame (you can debug this using the Unity profiler). </p>
+
+<p>However, the following code would fail running on WebGL, becuase it would not get a chance to run the GC between iterations of the loop, to free up memory used by all the intermediate string objects - which would eventually cause it to run out of memory in the Unity heap.</p>
+
+<pre><code>string hugeString = &quot;&quot;;
+
+for (int i = 0; i &lt; 100000; i++)
+{
+    hugeString += &quot;foo&quot;;
+}
+</code></pre>
+
+<h2>Further reading</h2>
+
+<ul>
+<li><p><a href="https://blogs.unity3d.com/2016/09/20/understanding-memory-in-unity-webgl/">Unity blog: Understanding Memory in Unity WebGL</a></p></li>
+<li><p><a href="https://blogs.unity3d.com/2016/12/05/unity-webgl-memory-the-unity-heap/">Unity blog: Unity WebGL Memory: The Unity Heap</a></p></li>
+</ul>
+
+<hr>
+
+<p><span class="page-edit"> 2018–08–23 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-performance.html"></a></span><div class="tip">WebGL performance considerations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-interactingwithbrowserscripting.html"></a></span><div class="tip"> WebGL: Interacting with browser scripting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

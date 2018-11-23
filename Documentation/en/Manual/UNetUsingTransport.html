@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using the Transport Layer API</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetUsingTransport.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetUsingTransport.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetUsingTransport.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetUsingTransport.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetUsingTransport.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li> Using the Transport Layer API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetLobby.html"></a></span><div class="tip"> Multiplayer Lobby</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetReaderWriter.html"></a></span><div class="tip">NetworkReader and NetworkWriter serializers</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Using the Transport Layer API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>In addition to the <a href="UNetUsingHLAPI.html">high-level networking API (HLAPI)</a>, Unity also provides access to a lower-level <span class="tooltip"><strong>networking</strong><span class="tooltiptext">The Unity system that enables multiplayer gaming across a computer network. <a href="UNetOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Networking">Glossary</a></span></span></span> API called the <strong>Transport Layer</strong>. The Transport Layer allows you to build your own <strong>networking</strong> systems with more specific or advanced requirements for your game’s <strong>networking</strong>.</p>
+
+<p>The Transport Layer is a thin <span class="tooltip"><a href="https://en.wikipedia.org/wiki/Multitier_architecture">layer</a><span class="tooltiptext">Layers in Unity can be used to selectively opt groups of GameObjects in or out of certain processes or calculations. This includes camera rendering, lighting, physics collisions, or custom calculations in your own code. <a href="Layers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Layer">Glossary</a></span></span></span> working on top of the operating system’s sockets-based networking. It can send and receive messages represented as arrays of bytes, and offers a number of different “<a href="../ScriptReference/Networking.QosType.html">quality of service</a>” options to suit different scenarios. It is focused on flexibility and performance, and exposes an API within the <a href="../ScriptReference/Networking.NetworkTransport.html">NetworkTransport</a> class.</p>
+
+<p>The Transport Layer supports base services for network communication. These base services include:</p>
+
+<ul>
+<li><p>Establishing connections</p></li>
+<li><p>Communicating using a variety of “quality of services”</p></li>
+<li><p>Flow control</p></li>
+<li><p>Base statistics</p></li>
+<li><p>Additional services, such as communication via relay server or local discovery</p></li>
+</ul>
+
+<p>The Transport Layer can use two protocols: UDP for generic communications, and WebSockets for <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span>. To use the Transport Layer directly, the typical workflow is as follows:</p>
+
+<ol>
+<li><p>Initialize the Network Transport Layer</p></li>
+<li><p>Configure network topology</p></li>
+<li><p>Create a host</p></li>
+<li><p>Start communication (handling connections and sending/receiving messages)</p></li>
+<li><p>Shutdown library after use</p></li>
+</ol>
+
+<p>See the corresponding sections below to learn about the technical details of each section. Each section provides a code snippet to include in your networking script. </p>
+
+<h3>Step 1: Initialize the Network Transport Layer</h3>
+
+<p>When initializing the Network Transport Layer, you can choose between the default initialization demonstrated in the code sample below (with no arguments), or you can provide additional parameters which control the overall behaviour of the network layer, such as the maximum packet size and the thread timeout limit.</p>
+
+<p>To initialize the transport layer with default settings, call <a href="../ScriptReference/Networking.NetworkTransport.Init.html">Init()</a>:</p>
+
+<pre><code>
+    // Initializing the Transport Layer with no arguments (default settings)
+    NetworkTransport.Init();
+
+To initialize the transport layer with your own configuration just add your configuration as a parameter to Init, as shown below.
+
+    // An example of initializing the Transport Layer with custom settings
+    GlobalConfig gConfig = new GlobalConfig();
+    gConfig.MaxPacketSize = 500;
+    NetworkTransport.Init(gConfig);
+</code></pre>
+
+<p>You should only use custom <code>Init</code> values if you have an unusual networking environment and are familiar with the specific settings you need. As a rule of thumb, if you are developing a typical multiplayer game to be played across the internet, the default <code>Init</code> settings are enough.</p>
+
+<h3>Step 2: Configure the network topology</h3>
+
+<p>The next step is to configure connections between peers. Network topology defines how many connections allowed and what connection configuration will used. If your game needs to send network messages which vary in importance (eg low importance such as incidental sound effects, vs high importance such as whether a player scored a point), you might want to define several communication channels, each with a different quality of service level specified to suit the specific types of messages that you want to send, and their relative importance within your game.</p>
+
+<pre><code>
+    ConnectionConfig config = new ConnectionConfig();
+    int myReliableChannelId  = config.AddChannel(QosType.Reliable);
+    int myUnreliableChannelId = config.AddChannel(QosType.Unreliable);
+</code></pre>
+
+<p>The example above defines two communication channels with different quality of service values. <a href="../ScriptReference/Networking.QosType.Reliable.html">QosType.Reliable</a> delivers a message and ensures that the message is delivered, while <a href="../ScriptReference/Networking.QosType.Unreliable.html">QosType.Unreliable</a> sends a message faster, but without any checks to ensure it was delivered.</p>
+
+<p>You can also adjust properties on <a href="../ScriptReference/Networking.ConnectionConfig.html">ConnectionConfig</a> to specify configuration settings for each connection. However, when making a connection from one client to another, the settings should be the same for both connected peers, or the connection fails with a <a href="../ScriptReference/Networking.NetworkError.CRCMismatch.html">CRCMismatch</a> error.</p>
+
+<p>The final step of network configuration is topology definition.</p>
+
+<pre><code>
+HostTopology topology = new HostTopology(config, 10);
+</code></pre>
+
+<p>This example defines host topology as being able to allow up to 10 connections. These connections are the ones you configured in Step 1. </p>
+
+<h3>Step 3: Create a host</h3>
+
+<p>Now that you have performed the first two preliminary set-up steps, you need to create a host (open socket):</p>
+
+<pre><code>
+int hostId = NetworkTransport.AddHost(topology, 8888);
+</code></pre>
+
+<p>This code example adds a new host on port 8888 and any IP addresses. The host supports up to 10 connections (you configured this in Step 2). These connections are the ones you configured in the Step 1.</p>
+
+<h3>Step 4: Start communicating</h3>
+
+<p>In order to start communicating, you need to set up a connection to another host. To do this, call <code>Connect()</code>. This sets up a connection between you and the remote host. An event is received to indicate whether the connection is successful.</p>
+
+<p>First, connect to the remote host at 192.168.1.42 with port 8888. The assigned <code>connectionId</code> is returned.</p>
+
+<pre><code>
+connectionId = NetworkTransport.Connect(hostId, &quot;192.168.1.42&quot;, 8888, 0, out error);
+
+</code></pre>
+
+<p>When the connection is done, a ConnectEvent is received. Now you can start sending data.</p>
+
+<pre><code>
+NetworkTransport.Send(hostId, connectionId, myReliableChannelId, buffer, bufferLength,  out error);
+</code></pre>
+
+<p>When you are done with a connection, call <code>Disconnect()</code> to disconnect the host.</p>
+
+<pre><code>NetworkTransport.Disconnect(hostId, connectionId, out error);
+</code></pre>
+
+<p>To check if your function calls were successful, you can cast the <code>out error</code> to a <a href="../ScriptReference/Networking.NetworkError.html">NetworkError</a>. <a href="../ScriptReference/Networking.NetworkError.Ok.html">NetworkEror.Ok</a> indicates that no errors have been encountered.</p>
+
+<p>To check host status, you can use two functions:</p>
+
+<p>For polling events off the internal event queue you can call either </p>
+
+<p>NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);</p>
+
+<p>Or
+NetworkTransport.ReceiveFromHost(recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);</p>
+
+<p>Both of these functions return events from the queue; the first function will return events from any host, and the recHostId variable will be assigned with the host id that the message comes from, whereas the second function returns events only from the host specified by the recHostId that you provide.</p>
+
+<p>One way to poll data from <code>Receive</code> is to call it in your <code>Update</code> function;</p>
+
+<pre><code>
+void Update()
+{
+
+    int recHostId; 
+    int connectionId; 
+    int channelId; 
+    byte[] recBuffer = new byte[1024]; 
+    int bufferSize = 1024;
+    int dataSize;
+    byte error;
+    NetworkEventType recData = NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);
+    switch (recData)
+    {
+        case NetworkEventType.Nothing:                     break;
+        case NetworkEventType.ConnectEvent:                break;
+        case NetworkEventType.DataEvent:                   break;
+        case NetworkEventType.DisconnectEvent:            break;
+
+  case NetworkEventType.BroadcastEvent:
+
+       break;
+    }
+}
+
+</code></pre>
+
+<p>There are 5 type of events that you can receive.</p>
+
+<ul>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkEventType.Nothing.html">NetworkEventType.Nothing</a>: The event queue has nothing to report.</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkEventType.ConnectEvent.html">NetworkEventType.ConnectEvent</a> : You have received a connect event. This can be either a successful connect request, or a connection response.</p></li>
+</ul>
+
+<pre><code>
+case NetworkEventType.ConnectEvent: 
+    if(myConnectionId == connectionId)
+        //my connect request was approved
+    else
+        //somebody else sent a connect request to me
+    break;
+
+</code></pre>
+
+<ul>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkEventType.DataEvent.html">NetworkEventType.DataEvent</a>: You have received a data event. You receive a data event when there is some data ready to be recieved. If the <code>recBuffer</code> is big enough to contain data, data is copied into the buffer. If not, the event contains a <a href="../ScriptReference/Networking.NetworkError.MessageToLong.html">MessageToLong</a> network error. If this happens, you need to reallocate the buffer to a larger size and call the <code>DataEvent</code> function again.</p></li>
+<li><p>
+<a href="../ScriptReference/Networking.NetworkEventType.DisconnectEvent.html">NetworkEventType.DisconnectEvent</a>: Your established connection has disconnected, or your connect request has failed. Check the error code to find out why this has happened.</p></li>
+</ul>
+
+<pre><code>
+case NetworkEventType. DisconnectEvent: 
+    if(myConnectionId == connectionId)
+        //cannot connect for some reason, see error
+    else
+        //one of the established connections has disconnected
+    break;
+</code></pre>
+
+<ul>
+<li>
+<a href="../ScriptReference/Networking.NetworkEventType.BroadcastEvent.html">NetworkEventType.BroadcastEvent</a>: Indicates that you have received a broadcast event, and you can now call <a href="../ScriptReference/Networking.NetworkTransport.GetBroadcastConnectionInfo.html">GetBroadcastConnectionInfo</a> and <a href="../ScriptReference/30_search.html?q=GetBroadcastConnectionMessage.html">GetBroadcastConnectionMessage</a> to retrieve more information.</li>
+</ul>
+
+<h3>WebGL support</h3>
+
+<p>You can use WebSockets on WebGL, however web clients can only connect to hosts, they cannot be a host themselves. This means the host must be a standalone player (Win, Mac or Linux only). For client-side configuration, all steps described above (including topology and configuration) are the same. On the server, call the following:</p>
+
+<pre><code>
+NetworkTransport.AddWebsocketHost(topology, port, ip);
+
+</code></pre>
+
+<p>The IP address above should be the specific address you want to listen on, or you can pass null as the IP address if you want the host to listen all network interfaces. </p>
+
+<p>A server can only support only one WebSocket host at a time, but it can handle other generic hosts at the same time:</p>
+
+<pre><code>
+NetworkTransport.AddWebsocketHost(topology, 8887, null);
+NetworkTransport.AddHost(topology, 8888);
+
+</code></pre>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetLobby.html"></a></span><div class="tip"> Multiplayer Lobby</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetReaderWriter.html"></a></span><div class="tip">NetworkReader and NetworkWriter serializers</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

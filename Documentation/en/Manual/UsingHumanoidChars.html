@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Humanoid Asset preparation</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ImportingAssets" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UsingHumanoidChars.html">English</a></li>
+<li><a href="/ja/current/Manual/UsingHumanoidChars.html">日本語</a></li>
+<li><a href="/es/current/Manual/UsingHumanoidChars.html">Español</a></li>
+<li><a href="/kr/current/Manual/UsingHumanoidChars.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UsingHumanoidChars.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ImportingAssets.html"> Importing</a></li>
+<li><a href="HOWTO-exportFBX.html"> Exporting from other applications</a></li>
+<li> Humanoid Asset preparation</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-exportFBX.html"></a></span><div class="tip"> Exporting from other applications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Unity2D.html"></a></span><div class="tip">2D</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Humanoid Asset preparation</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>In order to take full advantage of Unity’s <span class="tooltip"><strong>humanoid animation</strong><span class="tooltiptext">An animation using humanoid skeletons. Humanoid models generally have the same basic structure, representing the major articulate parts of the body, head and limbs. This makes it easy to map animations from one humanoid skeleton to another, allowing retargeting and inverse kinematics. <a href="ConfiguringtheAvatar.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Humanoidanimation">Glossary</a></span></span></span> system and <span class="tooltip"><strong>retargeting</strong><span class="tooltiptext">Applying animations created for one model to another. <a href="Retargeting.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Retargeting">Glossary</a></span></span></span>, you need to have a <strong>rigged</strong> and <strong>skinned</strong> humanoid type mesh.</p>
+
+<ol>
+<li><p>A character <span class="tooltip"><strong>Model</strong><span class="tooltiptext">A 3D model representation of an object, such as a character, a building, or a piece of furniture. <a href="3D-formats.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Model">Glossary</a></span></span></span> generally consists of polygons in 3D modeling software or converted to polygon or triangulated mesh, from a more complex mesh type before export.</p></li>
+<li><p>In order to control the movement of a character, you must create a <strong>joint hierarchy</strong> or <strong>skeleton</strong> which defines the bones inside the Mesh and their movement in relation to one another. The process for creating such a <span class="tooltip"><strong>joint</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> hierarchy is known as <strong>rigging</strong>.</p></li>
+<li><p>You must then connect the mesh or <em>skin</em> to the joint hierarchy. This defines which parts of the character mesh move when a given joint is animated. The process of connecting the skeleton to the mesh is known as <strong>skinning</strong>.</p></li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/Char200.png" alt="Stages for preparing a character (modeling, rigging, and skinning)">
+<figcaption>Stages for preparing a character (modeling, rigging, and skinning)</figcaption>
+</figure>
+
+<h2>How to obtain humanoid models</h2>
+
+<p>There are three main ways to obtain humanoid models to use in the Unity Animation system:</p>
+
+<ul>
+<li><p>Use a procedural character system or character generator such as <em>Poser</em>, <em>Makehuman</em> or <a href="http://www.mixamo.com/"><em>Mixamo</em></a>. Some of these systems can rig and skin your mesh (like Mixamo) while others cannot. Furthermore, if you use these methods, you may need to reduce the number of polygons in your original mesh to make it suitable for use in Unity.</p></li>
+<li><p>Purchase demo examples and character content from the <a href="http://unity3d.com/unity/asset-store/">Unity Asset Store</a>.</p></li>
+<li><p>You can also prepare your own character from scratch by following three steps: <a href="#Modeling">modeling</a>, <a href="#Rigging">rigging</a> and <a href="#Skinning">skinning</a>.</p></li>
+</ul>
+
+<p><a name="Modeling"></a></p>
+
+<h3>Modeling</h3>
+
+<p>This is the process of creating your own humanoid <span class="tooltip"><a href="class-Mesh.html">Mesh</a><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> in 3D modeling software (such as 3DSMax, Maya, or Blender). Although this is a whole subject in its own right, there are a few guidelines you can follow to ensure a Model works well with animation in a Unity Project:</p>
+
+<ul>
+<li><p>Use a topology with a <strong>well-formed structure</strong>. The exact nature of a “well-formed” structure for your Mesh is rather subtle but generally, you should bear in mind how the vertices and triangles of the model are distorted as it is animated. A poor topology does not allow the Model to move without distorting the Mesh. Study existing 3D character Meshes to see how the topology is arranged and why.</p></li>
+<li><p>Check the <strong>scale</strong> of your mesh. Do a test import and compare the size of your imported Model with a “meter cube”. The standard Unity cube primitive has a side length of one unit, so it can be taken as a 1m cube for most purposes. Check the units your 3D modeling software uses and adjust the export settings so that the size of the Model is in correct proportion to the cube. It is easy to create models without any notion of their scale and consequently end up with a set of objects that are disproportionate in size when you imported them into Unity.</p></li>
+<li><p>Arrange the mesh so that the character’s feet are standing on the local origin or “anchor point” of the model. Since a character typically walks upright on a floor, it is much easier to handle if its anchor point (that is, its transform position) is directly on that floor.</p></li>
+<li><p>Model in a <span class="tooltip"><strong>T-pose</strong><span class="tooltiptext">The pose in which the character has their arms straight out to the sides, forming a “T”. The required pose for the character to be in, in order to make an Avatar. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#T-pose">Glossary</a></span></span></span> if possible. This gives you space to refine polygon detail where you need it (such as the underarms). This also makes it easier to position your rig inside the Mesh.</p></li>
+<li><p>While you are building, <strong>clean up your Model</strong>. Where possible, cap holes, weld verts, and remove hidden faces. This helps with skinning, especially automated skinning processes.</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/SkinMesh256.png" alt="Skin Mesh, textured and triangulated">
+<figcaption>Skin Mesh, textured and triangulated</figcaption>
+</figure>
+
+<p><a name="Rigging"></a></p>
+
+<h3>Rigging</h3>
+
+<p>This is the process of creating a skeleton of joints to control the movements of your Model.</p>
+
+<p>3D modeling software provides a number of ways to create joints for your humanoid rig. These range from ready-made biped skeletons that you can scale to fit your Mesh, right through to tools for individual bone creation and parenting to create your own bone structure. To work with animation in Unity, make sure they are the root element of the bone hierarchy. A minimum of fifteen bones are required in the skeleton.</p>
+
+<p>Your skeleton needs to have at least the required bones in place for Unity to <a href="class-Avatar.html">produce a valid match</a>. In order to improve your chances for finding a match to the <span class="tooltip"><strong>Avatar</strong><span class="tooltiptext">An interface for retargeting animation from one rig to another. <a href="ConfiguringtheAvatar.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Avatar">Glossary</a></span></span></span>, name your bones in a way that reflects the body parts they represent. For example, “LeftArm” and “RightForearm” make it clear what these bones control. </p>
+
+<p>The joint/bone hierachy should follow a natural structure for the character you are creating. Given that arms and legs come in pairs, you should use a consistent convention for naming them (for example, “arm_L” for the left arm, “arm_R” for the right arm). Possible structures for the hierarchy include:</p>
+
+<pre><code>* HIPS - spine - chest - shoulders - arm - forearm - hand
+* HIPS - spine - chest - neck - head
+* HIPS - UpLeg - Leg - foot - toe - toe_end
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/Skeleton256.png" alt="Biped Skeleton, positioned in T-pose">
+<figcaption>Biped Skeleton, positioned in T-pose</figcaption>
+</figure>
+
+<p><a name="Skinning"></a></p>
+
+<h3>Skinning</h3>
+
+<p>This is the process of attaching the Mesh to the skeleton.</p>
+
+<p>Skinning involves binding vertices in your Mesh to bones, either directly (rigid bind) or with blended influence to a number of bones (soft bind). Different 3D modeling software uses different methods. for example, you can assign individual vertices and paint the weighting of influence per bone onto the Mesh. The initial setup is typically automated, say by finding the nearest influence or using “<span class="tooltip"><strong>heatmaps</strong><span class="tooltiptext">Heatmaps are a spatial visualization of analytics data. <a href="UnityAnalyticsOverview.html#Heatmaps">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Heatmaps">Glossary</a></span></span></span>”. Skinning usually requires a fair amount of work and testing with animations in order to ensure satisfactory results for the skin deformation. Some general guidelines for this process include:</p>
+
+<ul>
+<li><p>Use an automated process initially to set up some of the skinning (see the skinning tutorials available for your 3D modeling software).</p></li>
+<li><p>Create a simple animation for your rig or import some animation data to act as a test for the skinning. This should give you a quick way to evaluate whether or not the skinning looks good in motion.</p></li>
+<li><p>Incrementally edit and refine your skinning solution.</p></li>
+<li><p>Limit the number of influences when using a soft bind to a maximum of four, since this is the maximum number that Unity supports. If your Mesh uses more than four influences, then you lose some information when playing the animation in Unity.</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/Skinning256.png" alt="Interactive Skin Bind, one of many skinning methods">
+<figcaption>Interactive Skin Bind, one of many skinning methods</figcaption>
+</figure>
+
+<h2>Export and verify</h2>
+
+<p>Unity imports a number of different generic and native 3D file formats. FBX is the recommended format for exporting and verifying your Model since you can use it to:</p>
+
+<ul>
+<li>Export the Mesh with the skeleton hierarchy, normals, textures and animation.</li>
+<li>Re-import the Mesh into your 3D modeling software to verify your animated Model looks as expected.</li>
+<li>Export animations without the Mesh.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-exportFBX.html"></a></span><div class="tip"> Exporting from other applications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Unity2D.html"></a></span><div class="tip">2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

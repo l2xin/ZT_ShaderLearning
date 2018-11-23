@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Vuforia hardware and software requirements</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/vuforia_requirements.html">English</a></li>
+<li><a href="/ja/current/Manual/vuforia_requirements.html">日本語</a></li>
+<li><a href="/es/current/Manual/vuforia_requirements.html">Español</a></li>
+<li><a href="/kr/current/Manual/vuforia_requirements.html">한국어</a></li>
+<li><a href="/ru/current/Manual/vuforia_requirements.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="vuforia-sdk-overview.html"> Vuforia</a></li>
+<li> Vuforia hardware and software requirements</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="vuforia-sdk-overview.html"></a></span><div class="tip"> Vuforia</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="vuforia_get_started.html"></a></span><div class="tip"> Vuforia quick start guide</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Vuforia hardware and software requirements</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page provides an overview of both hardware and software requirements for using the Vuforia SDK with Unity.</p>
+
+<h2>Mobile devices</h2>
+
+<p>The table below lists the supported mobile device operating system (OS) versions required for running applications created with the Vuforia SDK. The table also includes supported OS and Unity versions for developing applications with Vuforia.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Device OS</strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong>Development OS </strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong>Unity Version</strong></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Android (1)</td>
+	<td style="text-align:left;">4.1.x+</td>
+	<td style="text-align:left;">Windows (2)</td>
+	<td style="text-align:left;">7+</td>
+	<td style="text-align:left;">Windows (2)</td>
+	<td style="text-align:left;">2017.2+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">iOS (2)</td>
+	<td style="text-align:left;">9+</td>
+	<td style="text-align:left;">OS X</td>
+	<td style="text-align:left;">10.11+</td>
+	<td style="text-align:left;">OS X</td>
+	<td style="text-align:left;">2017.2+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Windows (2)</td>
+	<td style="text-align:left;">10 UWP</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>32-bit only</li>
+<li>32 &amp; 64-bit</li>
+</ol>
+
+<h2>Optical see-through digital eyewear</h2>
+
+<p>The Vuforia SDK supports a range of optical see-through digital eyewear devices. The table below lists supported devices, along with their required operating system (OS) versions. The table also includes supported OS and Unity versions for developing applications with Vuforia for these devices.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Device</strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong>Device OS</strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong>Development OS</strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong>Unity Version</strong></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>HoloLens</strong><span class="tooltiptext">An XR headset for using apps made for the Windows Mixed Reality platform. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HoloLens">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Current version</td>
+	<td style="text-align:left;">Android (1)(2)</td>
+	<td style="text-align:left;">4.0.3+</td>
+	<td style="text-align:left;">Windows (3)</td>
+	<td style="text-align:left;">7+</td>
+	<td style="text-align:left;">Windows (3)</td>
+	<td style="text-align:left;">2017.2+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ODG</td>
+	<td style="text-align:left;">R7+</td>
+	<td style="text-align:left;">Windows (1)</td>
+	<td style="text-align:left;">10 UWP</td>
+	<td style="text-align:left;">OS X</td>
+	<td style="text-align:left;">10.11+</td>
+	<td style="text-align:left;">OS X</td>
+	<td style="text-align:left;">2017.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Epson</td>
+	<td style="text-align:left;">BT–200</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>32-bit only</li>
+<li>4.0.3 Native only support for Epson BT–200</li>
+<li>32 &amp; 64-bit</li>
+</ol>
+
+<h2>Vuforia tools</h2>
+
+<p>Some Vuforia tools are only supported on specific hardware. The table below lists these tools, along with their supported devices and required OS versions. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>App</strong></th>
+	<th style="text-align:left;"><strong>Devices</strong></th>
+	<th style="text-align:left;"><strong>OS Version</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Calibration Assistant</td>
+	<td style="text-align:left;">Moverio BT–200<br>ODG R–7</td>
+	<td style="text-align:left;">Android 4.0.3+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Object Scanner</td>
+	<td style="text-align:left;">Samsung Galaxy S8+<br>Samsung Galaxy S8 <br>Samsung Galaxy S7<br>Samsung Galaxy S6</td>
+	<td style="text-align:left;">Latest supported OS on the device</td>
+</tr>
+</tbody>
+</table>
+
+<p>For more detailed information on these tools, see the <a href="https://library.vuforia.com/articles/Training/Vuforia-Calibration-App">Vuforia Calibration Assistant</a> and <a href="https://library.vuforia.com/articles/Training/Vuforia-Object-Scanner-Users-Guide">Object Scanner</a> pages in the <a href="https://library.vuforia.com/">Vuforia developer library</a>.</p>
+
+<h3>Virtual Reality SDK integration support</h3>
+
+<p>Below is a list of VR SDKs fully integrated into the Unity Editor, along with the release version of the Editor where they were first integrated.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>VR SDK</strong></th>
+	<th style="text-align:left;"><strong>Versions</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Google VR SDK</td>
+	<td style="text-align:left;">Unity 2017.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Cardboard Android SDK</td>
+	<td style="text-align:left;">Unity 2017.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Windows Mixed Reality</strong><span class="tooltiptext">A mixed reality platform developed by Microsoft, built around the API of Windows 10. <a href="mr-devices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WindowsMixedReality">Glossary</a></span></span></span> (HoloLens only)</td>
+	<td style="text-align:left;">Unity 2017.2</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Graphics API support</h3>
+
+<p>The table below lists all the Graphics APIs supported by Vuforia when developing applications on supported operating systems.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Android</strong></th>
+	<th style="text-align:left;"><span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Windows</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">OpenGL ES 2.0<br>OpenGL ES 3.x</td>
+	<td style="text-align:left;">OpenGL ES 2.0<br>OpenGL ES 3.x <br>Metal (iOS 8+)</td>
+	<td style="text-align:left;">DirectX 11 on Windows 10</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>For more information on using Vuforia with digital eyewear (such as the ODG R7+ and Epson BT–200), see Vuforia documentation on <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Training/Vuforia-for-Digital-Eyewear.html">Vuforia for digital eyewear</a>
+</p></li>
+<li><p>For more information on using Vuforia with HoloLens, see Vuforia documentation on <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Solution/Working-with-the-HoloLens-sample-in-Unity.html">working with the Hololens sample in Unity</a>
+</p></li>
+<li><p>For more information on using Vuforia with the Google VR SDK, see Vuforia documentation on <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Solution/Developing-for-Google-Cardboard.html">Developing for Google Cardboard</a>
+</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–28 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Vuforia documentation updated for Unity XR API in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="vuforia-sdk-overview.html"></a></span><div class="tip"> Vuforia</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="vuforia_get_started.html"></a></span><div class="tip"> Vuforia quick start guide</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

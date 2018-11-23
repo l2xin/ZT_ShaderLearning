@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Global Illumination UVs</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/LightingGiUvs.html">English</a></li>
+<li><a href="/ja/current/Manual/LightingGiUvs.html">日本語</a></li>
+<li><a href="/es/current/Manual/LightingGiUvs.html">Español</a></li>
+<li><a href="/kr/current/Manual/LightingGiUvs.html">한국어</a></li>
+<li><a href="/ru/current/Manual/LightingGiUvs.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li> Global Illumination UVs</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MetaPass.html"></a></span><div class="tip"> Material properties and the GI system</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip"> Importing UVs from Maya to Unity</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Global Illumination UVs</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>There are two sets of GI lightmaps: <strong>Baked</strong> and <strong>Realtime</strong>. How you define which set to use depends on whether you’re working with environment lighting or specific lights:</p>
+
+<ul>
+<li><p>
+<a href="GlobalIllumination.html">Global illumination</a> (environment lighting) can be set to <strong>Realtime</strong> or <strong>Baked</strong>. Go to <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt; <strong>Lighting Settings</strong> and choose an option from the <span class="tooltip"><strong>Ambient GI</strong><span class="tooltiptext">A ambient light source generated by the Global Illumination (GI) system that provides omni-directional light to all objects in the scene equally. <a href="GlobalIllumination.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AmbientGI">Glossary</a></span></span></span> drop-down menu.</p></li>
+<li><p>
+<a href="class-Light.html">Lights</a> can be set to <strong>Realtime</strong>, <strong>Baked</strong> or <strong>Mixed</strong>. Go to the Inspector window and choose an option from the <strong>Baking </strong>drop-down menu.</p></li>
+<li><p>Materials have emission controls that can be set to <strong>Realtime</strong> or <strong>Baked</strong>. See documentation on <a href="StandardShaderMaterialParameterEmission.html">Standard Shader Material parameter emissions</a> to learn more.</p></li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><span class="tooltip"><strong>Properties</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Baked</strong></td>
+	<td style="text-align:left;">Baked lightmaps are mainly useful for lights which do not change at all during run time (for example, a lit streetlamp), and are therefore stored as a static rendering in the lightmap. Features include direct lighting, indirect lighting, and <span class="tooltip"><strong>ambient occlusion</strong><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Realtime</strong></td>
+	<td style="text-align:left;">Real-time lightmaps are mainly useful for lights that are animated during runtime (for example, a flickering street lamp), and therefore need to be rendered in real time. Features include indirect lighting only, and typically low resolution. Direct light is not in the lightmap, but is rendered in real time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mixed</strong></td>
+	<td style="text-align:left;">When you set a light to Mixed mode, it contributes to the baked lightmaps, and also gives direct real-time lighting to non-static objects.</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can use either one or both of these lightmap sets to light your <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Your choice determines which lightmaps the light contributions and resulting GI is added to.</p>
+
+<h2>Visualising your UVs</h2>
+
+<p>It is important to be able to view the UVs that are being used, and Unity has a visualization tool to help you with this. First, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and tick the <strong>Auto</strong> checkbox at the bottom. This ensures that your bake and precompute are up-to-date, and outputs the data that is needed to view the UVs. Wait for the process to finish (this can take some time for large or complex Scenes).</p>
+
+<h3>Visualising real-time UVs</h3>
+
+<p>To see the precomputed real-time GI UVs:</p>
+
+<ul>
+<li>Select a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> with a <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Renderer in your Scene</li>
+<li>Open the Lighting window and select the <span class="tooltip"><strong>Object</strong><span class="tooltiptext">See GameObject. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Object">Glossary</a></span></span></span> tab</li>
+<li>In the <strong>Preview</strong> area, select <strong>Charting</strong> from the drop-down.
+<img src="../uploads/Main/LightingGiUvs-0.jpg" alt="">
+</li>
+</ul>
+
+<p>This displays the UV layout for the real-time lightmap of the selected instance of this Mesh. </p>
+
+<ul>
+<li>The charts are indicated by the different colored areas in the Preview (show in the image above on the right-hand side).</li>
+<li>The UVs of the selected instance are laid over the charts, as a wireframe representation of the GameObject’s Mesh.</li>
+<li>Dark gray texels show unused areas of the lightmap.</li>
+</ul>
+
+<p>Multiple instances can be packed into a real-time lightmap, so some of the charts you see might actually belong to other GameObjects.</p>
+
+<p>
+<strong>NOTE:</strong> There is no direct correspondence in the grouping of instances between real-time and baked lightmaps. Two instances in the same real-time lightmap may also be in two different baked lightmaps, and vice versa.</p>
+
+<h3>Visualising baked UVs</h3>
+
+<p>To see the baked UVs:</p>
+
+<ul>
+<li>Select an instance.</li>
+<li>Open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and select the <strong>Object </strong>tab.</li>
+<li>In the <strong>Preview</strong> area, select <strong>Baked Intensity</strong> from the dropdown.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/LightingGiUvs-1.jpg" alt="">
+</figure>
+
+<p>As you can see, the baked UVs are very different to the precomputed real-time UVs. This is because the requirements for baked and precomputed real-time UVs are different.</p>
+
+<h2>Real-time UVs</h2>
+
+<p>It is important to note that you can never get the same UVs for precomputed real-time GI as for baked GI, even if you tick <strong>Preserve UVs</strong>.</p>
+
+<p>If you could, you would see heavy aliasing (such as light or dark edges) in unexpected places. This is because the resolution of real-time lightmaps is intentionally low, so that it is feasible to update them in real time. This doesn’t affect the graphical quality, because it only stores indirect lighting, which is generally low frequency (meaning it does not usually have sudden changes in intensity or detailed patterns). The direct light and shadows are rendered separately using the standard real-time lighting and shadowmaps. Direct light is generally higher frequency (meaning it is more likely to have sudden changes in intensity or detailed patterns, such as sharp edges to shadows) and therefore requires higher resolution lightmaps to capture this information.</p>
+
+<p>Low resolution lightmaps can create bleeding issues, caused when charts share texels. This has a detrimental effect on the quality of the lighting, but is solved by repacking the UV charts to ensure a half-pixel boundary around them. This way you are never sampling <em>across</em> charts (at the most detailed mip), even with bilinear <span class="tooltip"><strong>interpolation</strong><span class="tooltiptext">The estimation of values that determine the shape of an animation curve between two keys. <a href="TimelineChangingInterpolation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#interpolation">Glossary</a></span></span></span>. The other benefit of charts with a guaranteed half-pixel boundary is that you can place charts right next to each other, saving lightmap space.</p>
+
+<figure>
+<img src="../uploads/Main/LightingGiUvs-2.png" alt="">
+</figure>
+
+<p>In summary, UVs used for precomputed realtime GI lightmaps are always repacked.</p>
+
+<p>Because repacking guarantees a half-pixel boundary around the charts, the UVs are dependent on the scale and lightmap resolution of the instance. If you scale up the UVs to get a higher resolution lightmap, you are no longer guaranteed this half-pixel boundary. The UVs are packed individually, with the scale and resolution of the instance taken into account. The real-time UVs are therefore <em>per instance</em>. Note that if you have 1000 objects with the same scale and resolution, they share the UVs.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–07–04 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2017–07–04 Documentation update only, no change to Unity functionality</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MetaPass.html"></a></span><div class="tip"> Material properties and the GI system</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip"> Importing UVs from Maya to Unity</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

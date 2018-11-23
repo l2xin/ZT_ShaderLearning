@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Physics Profiler</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/ProfilerPhysics.html">English</a></li>
+<li><a href="/ja/current/Manual/ProfilerPhysics.html">日本語</a></li>
+<li><a href="/es/current/Manual/ProfilerPhysics.html">Español</a></li>
+<li><a href="/kr/current/Manual/ProfilerPhysics.html">한국어</a></li>
+<li><a href="/ru/current/Manual/ProfilerPhysics.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AdvancedDevelopment.html">Advanced Development</a></li>
+<li><a href="Profiler.html">Profiler overview</a></li>
+<li>Physics Profiler</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerAudio.html"></a></span><div class="tip"> Audio Profiler</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerGPU.html"></a></span><div class="tip"> GPU Profiler</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Physics Profiler</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Physics <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span> displays statistics about physics that have been processed by the <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> in your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. This information can help you diagnose and resolve performance issues or unexpected discrepancies related to the physics in your <strong>Scene</strong>. </p>
+
+<p>See also <a href="PhysicsDebugVisualization.html">Physics Debug Visualization</a>.</p>
+
+<figure>
+<img src="../uploads/Main/physicsProfiler0.png" alt="Physics Profiler">
+<figcaption>Physics Profiler</figcaption>
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Active Dynamic</strong></td>
+	<td style="text-align:left;">The number of non-Kinematic <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> that are not sleeping.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Active Kinematic</strong></td>
+	<td style="text-align:left;">The number of Kinematic Rigidbody components that are not sleeping. Note that Kinematic Rigidbody components with <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> attached may be processed multiple times per frame, and this contributes to the number shown. A Kinematic Rigidbody is active when <a href="../ScriptReference/Rigidbody.MovePosition.html">MovePosition</a> or <a href="../ScriptReference/Rigidbody.MoveRotation.html">MoveRotation</a> is called in a frame, and remains active in the next frame.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Static Colliders</strong></td>
+	<td style="text-align:left;">The number of <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> components on <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> that don’t have Rigidbody components attached to the <strong>GameObjects</strong> or their parent <strong>GameObjects</strong>. If such <strong>GameObjects</strong> or their parent <strong>GameObjects</strong> have Rigidbody components, the Colliders will not count as Static Colliders. Those Colliders are instead referred to as Compound Colliders. These help to arrange multiple Colliders of a body in a convenient way, rather than having all the Colliders on the same GameObject as the Rigidbody component.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rigidbody</strong></td>
+	<td style="text-align:left;">The number of Rigidbody components processed by the physics engine, irrespective of the components’ sleeping state.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Trigger Overlaps</strong></td>
+	<td style="text-align:left;">The number of overlapping triggers (counted in pairs).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Active Constraints</strong></td>
+	<td style="text-align:left;">The number of primitive constraints processed by the physics engine. Constraints are used as a building block of Joints as well as <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> response. For example, restricting a linear or rotational degree of freedom of a <a href="../ScriptReference/ConfigurableJoint.html">ConfigurableJoint</a> involves a primitive constraint per each restriction.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Contacts</strong></td>
+	<td style="text-align:left;">The total number of contact pairs between all Colliders in the Scene, including the amount of trigger overlap pairs as well. Note that contact pairs are created per Collider pair once the distance between them is below a certain user configurable limit, so you may see contacts generated for Rigidbody components that are not yet touching or overlapping. Refer to <a href="../ScriptReference/Collider-contactOffset.html">Collider.contactOffset</a> and <a href="../ScriptReference/ContactPoint-separation.html">ContactPoint.separation</a> for more details.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<strong>Notes</strong>:</p>
+
+<ul>
+<li><p>The numbers might not correspond to the exact number of GameObjects with physics components in your Scene. This is because some physics components are processed at a different rate depending on which other components affect it (for example, an attached Joint component). To calculate the exact number of GameObjects with specific physics components attached, write a custom script using the <a href="https://docs.unity3d.com/ScriptReference/Object.FindObjectsOfType.html">FindObjectsOfType</a> function.</p></li>
+<li><p>The Physics Profiler does not show the number of sleeping Rigidbody components. These are components which are not engaging with the physics engine, and are therefore not processed by the Physics Profiler. Refer to <a href="RigidbodiesOverview.html">Rigidbody overview: Sleeping</a> for more information on sleeping Rigidbody components.</p></li>
+</ul>
+
+<h2>Using the Physics Profiler to understand performance issues</h2>
+
+<p>The physics simulation runs on a separate fixed frequency update cycle from the main logic’s update loop, and can only advance time via a <code>Time.fixedDeltaTime</code> per call. This is similar to the difference between <code>Update()</code> and <code>FixedUpdate()</code> (see documentation on the <span class="tooltip"><a href="class-TimeManager.html">Time Manager</a><span class="tooltiptext">A Unity Settings Manager that lets you set a number of properties that control timing within your game. <a href="class-TimeManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimeManager">Glossary</a></span></span></span> for more). </p>
+
+<p>When a heavy logics or graphics frame occurs that takes a long amount of time, the Physics Profiler has to call the physics simulation multiple times per frame. This means that an already resource-intensive frame takes even more time and resources, which can easily cause the physics simulation to temporarily stop due to the <strong>Maximum Allowed Timestep</strong> value (which can be set in <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Time</strong>). </p>
+
+<p>You can detect this in your project by selecting the <a href="ProfilerCPU.html">CPU Usage Profiler</a> and checking the number of calls for <strong>Physics.Processing</strong> or <strong>Physics.Simulate</strong> in the <strong>Overview</strong> section. </p>
+
+<figure>
+<img src="../uploads/Main/physicsProfiler1.jpg" alt="Physics Profiler with the value of 1 in the Calls column">
+<figcaption>Physics Profiler with the value of 1 in the <strong>Calls</strong> column</figcaption>
+</figure>
+
+<p>In this example image, the value of 1 in the <strong>Calls</strong> column indicates that the physics simulation was called one time over the last logical frame. </p>
+
+<p>A call count close to 10 might indicate an issue. As a first solution, reduce the frequency of the physics simulation; if the issue continues, check what could have caused the heavy frame right before the Physics Profiler had to use that many simulation calls in order to catch up with the game time. Sometimes, a heavy graphics frame may cause more physics simulation calls later on in a Scene. </p>
+
+<p>For more detailed information about the physics simulation in your Scene, click the triangle arrow to expand <strong>Physics.Processing</strong> as shown in the screenshot above. This displays the actual names of the physics engine tasks that run to update your Scene. The two most common names you’re likely to see are:</p>
+
+<ul>
+<li><p>
+<strong>Pxs</strong>: short for ‘PhysX solver’, which are physics engine tasks required by joints as well as resolving contacts for overlapping bodies.</p></li>
+<li><p>
+<strong>ScScene</strong>: used for tasks required for updating the Scene, running the broad phase and narrow phase, and integrating bodies (moving them in space due to forces and impulses). See <a href="http://planning.cs.uiuc.edu/node214.html">Steven M. LaValle’s work on Planning Algorithms</a> for a definition on two-phase <span class="tooltip"><strong>collision detection</strong><span class="tooltiptext">An automatic process performed by Unity which determines whether a moving GameObject with a rigidbody and collider component has come into contact with any other colliders. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span> phases.</p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerAudio.html"></a></span><div class="tip"> Audio Profiler</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerGPU.html"></a></span><div class="tip"> GPU Profiler</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

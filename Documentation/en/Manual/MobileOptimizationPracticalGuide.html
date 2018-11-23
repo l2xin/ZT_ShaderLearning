@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Practical guide to optimization for mobiles</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/MobileOptimizationPracticalGuide.html">English</a></li>
+<li><a href="/ja/current/Manual/MobileOptimizationPracticalGuide.html">日本語</a></li>
+<li><a href="/es/current/Manual/MobileOptimizationPracticalGuide.html">Español</a></li>
+<li><a href="/kr/current/Manual/MobileOptimizationPracticalGuide.html">한국어</a></li>
+<li><a href="/ru/current/Manual/MobileOptimizationPracticalGuide.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="MobileDeveloperChecklist.html">Mobile Developer Checklist</a></li>
+<li> Practical guide to optimization for mobiles</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimisation.html"></a></span><div class="tip">Optimizations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationGraphicsMethods.html"></a></span><div class="tip">Graphics Methods</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Practical guide to optimization for mobiles</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This guide is for developers new to mobile game development, who are probably feeling overwhelmed and are either planning and prototyping a new mobile game or porting an existing project to run smoothly on a mobile device. This guide should also be useful as a reference for anyone making mobile games or browser games that target old PCs and netbooks.</p>
+
+<p>Optimization is a broad topic, and how you do it depends a lot on your game. Because of this, this guide is best read as an introduction or reference rather than a step-by-step guide that guarantees a smooth product.</p>
+
+<h2>All mobile devices are not created equal</h2>
+
+<p>The information here assumes hardware around the level of the Apple A4 chipset, which is used on the original iPad, the iPhone 3GS, and the third generation iPod Touch. On the Android side, that would mean an Android phone such as the Nexus One, or most phones that run Android 2.3 Gingerbread. Most of these devices were released around early 2010. Out of the app-hungry market, these devices are the older, slower portion, but they should be supported because they represent a large portion of the market. </p>
+
+<p>For an overview of Apple mobile device tech specs, see documentation on <a href="iphone-Hardware.html">iPhone hardware</a>. The very low-end Apple mobile devices (such as the iPhone 3G) and the first and second generation iPod Touches are extremely limited, and even more care must be taken to optimize for them. However, there is some question as to whether consumers who have not upgraded their device will be buying apps at all. So, unless you are making a free app, it might not be worthwhile to support the old hardware.</p>
+
+<p>There are much slower and much faster phones out there, and the computational capability of mobile devices is increasing at an extraordinary rate. It’s not unheard of for a new generation of a mobile GPU to be five times faster than its predecessor. That’s incredibly fast when compared to the PC industry.</p>
+
+<h2>Make optimization a design consideration, not a final step</h2>
+
+<p>British computer scientist Michael A. Jackson is often quoted for his rules of program optimization:</p>
+
+<p><em>“The first rule of program optimization: don’t do it. The second rule of program optimization (for experts only!): don’t do it yet.”</em></p>
+
+<p>His rationale was that, considering how fast computers are and how quickly their speed is increasing, there is a good chance that, if you program something, it will run fast enough. Additionally, if you try to optimize too heavily, you might over-complicate things, limit yourself, or create bugs.</p>
+
+<p>However, if you are developing mobile games, there is another consideration: The hardware that is on the market right now is very limited compared to the computers we are used to working with, so the risk of creating something that simply won’t run on the device balances out the risk of over-complication that comes with optimizing from the start.</p>
+
+<p>Throughout this guide, we will try to point out situations where an optimization would help a lot, versus situations where it would just be frivolous.</p>
+
+<h3>Optimization: not just for programmers</h3>
+
+<p>Artists also need to know the limitations of the platform, and the methods that are used to get around them, so they can make creative choices that pay off without having to re-produce work.</p>
+
+<ul>
+<li>More responsibility can fall on the artist if the game design calls for atmosphere and lighting to be drawn into Textures instead of being baked.</li>
+<li>Whenever anything can be baked, artists can produce content for baking instead of real-time <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>. This allows them to ignore technical limitations and work freely.</li>
+</ul>
+
+<h3>Design your game for a smooth runtime</h3>
+
+<p>These two pages detail general trends in game performance, and explain how you can best design your game to be optimized or how you can intuitively figure out which things need to be optimized if you’ve already gone into production.</p>
+
+<ul>
+<li><a href="MobileOptimizationPracticalRenderingOptimizations.html">Practical Methods for Optimized Rendering</a></li>
+<li><a href="MobileOptimizationPracticalScriptingOptimizations.html">Practical Methods for Optimized Scripting and Gameplay</a></li>
+</ul>
+
+<h2>Profile early and often</h2>
+
+<p>Profiling is important because it helps you discern which optimizations will pay off with big performance increases and which ones are a waste of your time. Because of the way that rendering is handled on a separate chip (GPU), the time it takes to render a frame is not the time that the CPU takes plus the time that the GPU takes. Instead, it is the longer of the two.</p>
+
+<p>That means that if the CPU is slowing things down, optimizing your <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> won’t increase the frame rate at all, and if the GPU is slowing things down, optimizing physics and <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> won’t help at all.</p>
+
+<p>Often, different parts of the game and different situations perform differently as well. This means one part of the game might cause 100 millisecond frames entirely due to a script, and another part of the game might cause the same slowdown but because of something that is being rendered. At the very least, you need to know where all the bottlenecks are if you’re going to optimize your game.</p>
+
+<h3>Unity Profiler</h3>
+
+<p>You can use the main Profiler in Unity when targeting <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span>, Android or Tizen. See documentation on the <span class="tooltip"><a href="Profiler.html">Profiler</a><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span> for basic instructions on how to use it.</p>
+
+<h3>Internal profilers</h3>
+
+<p>Andriod and iOS both have a built-in internal profiler, which spews out text every 30 frames. It can help you figure out which aspects of your game are slowing things down (such as physics, scripts, or rendering), but it doesn’t go into much detail (for example, it can’t tell you which script or renderer is the culprit).</p>
+
+<ul>
+<li>If the profiler indicates that most of your processing time is spent in rendering, see documentation on <a href="MobileOptimizationPracticalRenderingOptimizations.html">Rendering Optimizations</a>
+</li>
+<li>If the profiler indicates that most of your processing time is spent outside of rendering, see documentation on <a href="MobileOptimizationPracticalScriptingOptimizations.html">Scripting Optimizations</a>
+</li>
+</ul>
+
+<p>See documentation on <a href="iphone-InternalProfiler.html">Internal profilers</a> for information on how they work and how to turn them on.</p>
+
+<h3>Table of contents</h3>
+
+<ul>
+<li><a href="MobileOptimizationGraphicsMethods.html">Practical Guide to Optimization for Mobiles - Graphics Methods</a></li>
+<li><a href="MobileOptimizationScriptingMethods.html">Practical Guide to Optimization for Mobiles - Scripting and Gameplay Methods</a></li>
+<li><a href="MobileOptimizationPracticalRenderingOptimizations.html">Practical Guide to Optimization for Mobiles - Rendering Optimizations</a></li>
+<li><a href="MobileOptimizationPracticalScriptingOptimizations.html">Practical Guide to Optimization for Mobiles - Optimizing Scripts</a></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimisation.html"></a></span><div class="tip">Optimizations</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationGraphicsMethods.html"></a></span><div class="tip">Graphics Methods</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

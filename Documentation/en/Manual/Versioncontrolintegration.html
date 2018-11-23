@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Version control integration</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/Versioncontrolintegration.html">English</a></li>
+<li><a href="/ja/current/Manual/Versioncontrolintegration.html">日本語</a></li>
+<li><a href="/es/current/Manual/Versioncontrolintegration.html">Español</a></li>
+<li><a href="/kr/current/Manual/Versioncontrolintegration.html">한국어</a></li>
+<li><a href="/ru/current/Manual/Versioncontrolintegration.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="EditorFeatures.html">Editor Features</a></li>
+<li><a href="VersionControl.html">Version Control</a></li>
+<li> Version control integration</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VersionControl.html"></a></span><div class="tip">Version Control</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="perForceIntegration.html"></a></span><div class="tip">Perforce Integration</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Version control integration</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity supports version control integration with <span class="tooltip"><a href="perForceIntegration.html">Perforce</a><span class="tooltiptext">A version control system for file change management. <a href="perForceIntegration.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Perforce">Glossary</a></span></span></span> and <a href="plasticSCMIntegration.html">Plastic SCM</a>. Refer to those pages for specific information regarding your choice of version control.</p>
+
+<p>Using a <strong>version control system</strong> makes it easier for a user (or multiple users) to manage their code. It is a repository of files with monitored access. In the case of Unity, this is all the files associated with a Unity project. With version control, it is possible to follow every change to the source, along with information on who made the change, why they made it, and what they changed. This makes it easy to revert back to an earlier version of the code, or to compare differences in versions. It also becomes easier to find out when a bug first occurred, and with what changes might have caused it. </p>
+
+<h2>Setting up your version control in Unity</h2>
+
+<p>Get your version control software setup according to its instructions, then follow these steps:</p>
+
+<ol>
+<li><p>Set up or sync a workspace on your computer using your chosen client (refer to the <a href="plasticSCMIntegration.html">Plastic SCM Integration guide</a> or the <a href="perForceIntegration.html">Perforce Integration guide</a> for help with this step).</p></li>
+<li><p>Copy an existing project into the workspace, or start Unity and create a new project in the workspace.</p></li>
+<li><p>Open the project and go to <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Editor</strong>.</p></li>
+<li><p>Under <span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM. <a href="VersionControl.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VersionControl">Glossary</a></span></span></span>, choose your <strong>Mode</strong> according to the version control system that you chose.<br>
+ <img src="../uploads/Main/EditorVersionControlSettings.png" alt="">
+</p></li>
+<li><p>Fill out your version control settings, such as username / password / server / workspace.</p></li>
+<li><p>Keep <strong>Automatic add</strong> checked if you want your files to be automatically added to version control when they’re added to the project (or the folder on disk). Otherwise, you need to add new files manually.</p></li>
+<li><p>You have the option to work offline. This mode is only recommended if you know how to manually integrate changes back into your version control software (<a href="perForceIntegration.html">Working offline with Perforce</a>).</p></li>
+<li><p>You can edit the <strong>Asset Serialization</strong>, <strong>Default Behaviour Mode</strong> and <span class="tooltip"><strong>Sprite Packer</strong><span class="tooltiptext">A facility that packs graphics from several sprite textures tightly together within a single texture known as an atlas. Unity provides a Sprite Packer utility to automate the process of generating atlases from the individual sprite textures. <a href="SpritePacker.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SpritePacker">Glossary</a></span></span></span> options to suit your team’s preferences and choice of version control. </p></li>
+<li><p>Click <strong>Connect</strong> and verify that “Connected” is displayed above the <strong>Connect</strong> button after a short while.</p></li>
+<li><p>Use your standard client (e.g. p4v) to make sure that all files in the <em>Assets</em> and <em>ProjectSettings</em> folders (including files ending with <em>.meta</em>) are added.</p></li>
+</ol>
+
+<p>N.B. At any point you can go to the <strong>Prefences</strong> menu and select <strong>External Tools</strong> and adjust your Revision Control Diff/Merge tool.</p>
+
+<h2>Using version control</h2>
+
+<p>At this point you should be able to do most of the important version control operations directly by right-clicking on the <span class="tooltip"><strong>assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> in the <span class="tooltip"><strong>project view</strong><span class="tooltiptext">A view that shows the contents of your Assets folder (Project tab) <a href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectView">Glossary</a></span></span></span>, instead of going through the version control client. The version control operations vary depending on which version control you choose, this table shows what actions are directly available for each version control:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Version Control Operation</strong></td>
+	<td style="text-align:left;"><strong>Description</strong></td>
+	<td style="text-align:left;"><strong>Perforce</strong></td>
+	<td style="text-align:left;"><strong>Plastic SCM</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Check Out</td>
+	<td style="text-align:left;">Allows changes to be made to the file</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Diff against head</td>
+	<td style="text-align:left;">Compares differences between file locally and in the head</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Get Latest</td>
+	<td style="text-align:left;">Pull the latest changes and update file</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">No*</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Lock</td>
+	<td style="text-align:left;">Prevents other users from making changes to file</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">No**</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mark Add</td>
+	<td style="text-align:left;">Add locally but not into version control</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Resolve Conflicts</td>
+	<td style="text-align:left;">To resolve conflicts on a file that has been changed by multiple users</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">No***</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Revert</td>
+	<td style="text-align:left;">Discards changes made to open changed files</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Revert Unchanged</td>
+	<td style="text-align:left;">Discards changes made to open unchanged files</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Submit</td>
+	<td style="text-align:left;">Submits current state of file to version control</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Unlock</td>
+	<td style="text-align:left;">Releases lock and allows changes to be made by anyone</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">No**</td>
+</tr>
+</tbody>
+</table>
+
+<p>* To get the latest changes and update the file using Plastic SCM, you need to use the version control window.</p>
+
+<p>** Locking and Unlocking using Plastic SCM require you to edit a specific Plastic SCM lock file externally, see the <a href="plasticSCMIntegration.html">Plastic SCM Integration</a> page for more information.</p>
+
+<p>*** Conflicts are shown within the version control menu but resolved in the Plastic SCM GUI.</p>
+
+<figure>
+<img src="../uploads/Main/plasticSCM_version_control_ops.png" alt="Plastic SCM Version Control Operations on Mac">
+<figcaption>Plastic SCM Version Control Operations on Mac</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Source_control_menu.png" alt="Perforce Version Control Operations on Windows">
+<figcaption>Perforce Version Control Operations on Windows</figcaption>
+</figure>
+
+<h2>Version Control Window</h2>
+
+<p>You can overview the files in your changelist from the <strong>Version Control Window</strong> (<strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>). It is shown here docked next to Inspector in the editor:</p>
+
+<figure>
+<img src="../uploads/Main/VersionControlWindowOutgoingChanges.png" alt="">
+</figure>
+
+<p>The ‘Outgoing’ tab lists all of the local changes that are pending a commit into version control whereas the ‘Incoming’ tab lists all of the changes that need to be pulled from version control.</p>
+
+<p>By right clicking assets or changelists in this window you perform operations on them. To move assets between changelists just drag the assets from one changelist to the header of the target changelist.</p>
+
+<h2>Icons</h2>
+
+<p>The following icons are displayed in Unity editor to visualize version control status for files/assets:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Icon</strong></td>
+	<td style="text-align:left;"><strong>Meaning</strong></td>
+	<td style="text-align:left;"><strong>Additional information</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_AddedLocal.png" alt=""></td>
+	<td style="text-align:left;">File added locally</td>
+	<td style="text-align:left;">Pending add into version control</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_AddedRemote.png" alt=""></td>
+	<td style="text-align:left;">File added to version control by another user</td>
+	<td style="text-align:left;">Pending add into version control</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_CheckOutLocal.png" alt=""></td>
+	<td style="text-align:left;">File is checked out by you</td>
+	<td style="text-align:left;">Checked out locally</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_CheckOutRemote.png" alt=""></td>
+	<td style="text-align:left;">File is checked out by another user</td>
+	<td style="text-align:left;">Checked out remotely</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_Conflicted.png" alt=""></td>
+	<td style="text-align:left;">There has been a conflict merging this file</td>
+	<td style="text-align:left;">Needs to be resolved</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_DeletedLocal.png" alt=""></td>
+	<td style="text-align:left;">File has been deleted by you</td>
+	<td style="text-align:left;">Pending deletion in version control</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_DeletedRemote.png" alt=""></td>
+	<td style="text-align:left;">File has been deleted by another user</td>
+	<td style="text-align:left;">Pending deletion in version control</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_Local.png" alt=""></td>
+	<td style="text-align:left;">File is not yet under version control</td>
+	<td style="text-align:left;">n/a</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_LockedLocal.png" alt=""></td>
+	<td style="text-align:left;">File is locked by you</td>
+	<td style="text-align:left;">Cannot be modified by other users</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_LockedRemote.png" alt=""></td>
+	<td style="text-align:left;">File is locked by another user</td>
+	<td style="text-align:left;">Cannot be modified by you</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_OutOfSync.png" alt=""></td>
+	<td style="text-align:left;">Another user has checked in a new version of this file</td>
+	<td style="text-align:left;">Use “Apply Incoming Changes” to get latest version</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_AsyncUpdate.png" alt=""></td>
+	<td style="text-align:left;">The server is requesting the version control status of this file, or is waiting for a response</td>
+	<td style="text-align:left;">You can only see this when using a centralised version control system like Perforce</td>
+</tr>
+</tbody>
+</table>
+
+<p>Things to note:</p>
+
+<ul>
+<li>Certain version controls will not allow you to edit assets until they’re marked as <em>Checked out</em> (unless you have <strong>Work offline</strong> checked).</li>
+<li>When saving changes to a .<span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> file it will automatically be checked out.</li>
+<li>Project Settings <span class="tooltip"><strong>inspectors</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> have a <strong>checkout</strong> button in the bottom right that allow you to checkout settings.</li>
+<li>A yellow warning will often appear to remind you to check out items in order to make changes to them, this mostly applies to Project Settings inspectors.</li>
+<li>In Plastic SCM automatically generated assets such as light maps are automatically added/checked out.</li>
+</ul>
+
+<h2>Automatic revert of unchanged files on submit</h2>
+
+<p>When working with assets, Unity automatically checks out both the asset file as well as the associated .meta file. In most situations however, the .meta file is not modified, which might cause some extra work e.g. when merging branches at a later point.</p>
+
+<h2>Offline mode</h2>
+
+<p>Unity supports working in offline mode, e.g. to continue working without a network connection to your version control repository.</p>
+
+<ul>
+<li>Select <strong>Work offline</strong> from Version Control Settings if you want to be able to work disconnected from version control.</li>
+</ul>
+
+<h2>Allow Async Update</h2>
+
+<p>Unity supports asynchronous version control status queries for some version control providers, such as Perforce. This option allows those providers to update the version control status of files without stalling Unity. Use this option when the connection to your version control server has high latency.</p>
+
+<ul>
+<li>If you experience stalls during status queries, go to <strong>Version Control Settings</strong> and select <strong>Allow Async Update</strong>.</li>
+</ul>
+
+<p>
+<strong>Note</strong>: Only status queries are asynchronous. Operations that change the state of files, or require up-to-date knowledge of file status, are performed synchronously.</p>
+
+<h2>Troubleshooting</h2>
+
+<p>If Unity cannot commit your changes to your version control client, (for example, if the server is down or license issues occur), your changes are stored in a separate changeset.</p>
+
+<h2>Working with the Asset Server</h2>
+
+<p>To learn more about working with the Asset Server (Unity’s internal version control system), see documentation on the <span class="tooltip"><a href="AssetServer.html">Asset Server</a><span class="tooltiptext">Legacy - An asset and version control system with a graphical user interface integrated into Unity. Enables team members to work together on a project on different computers. <a href="AssetServer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetServer">Glossary</a></span></span></span>.</p>
+
+<h2>Working with other version control systems</h2>
+
+<p>To work with a version control system unsupported by Unity, select <strong>MetaData</strong> as the <strong>Mode</strong> for Version Control in the <a href="class-EditorManager.html">Editor Settings</a>. This allows you to manage the source Assets and metadata for those Assets with a version control system of your choice. For more on this, see documentation on <a href="ExternalVersionControlSystemSupport.html">External Version Control Systems</a>.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–02–12  Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Documentation on asynchronous version control status queries added in Unity 2017.3.</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VersionControl.html"></a></span><div class="tip">Version Control</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="perForceIntegration.html"></a></span><div class="tip">Perforce Integration</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

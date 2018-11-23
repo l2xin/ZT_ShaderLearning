@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: WMR testing during development</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/wmr_testing.html">English</a></li>
+<li><a href="/ja/current/Manual/wmr_testing.html">日本語</a></li>
+<li><a href="/es/current/Manual/wmr_testing.html">Español</a></li>
+<li><a href="/kr/current/Manual/wmr_testing.html">한국어</a></li>
+<li><a href="/ru/current/Manual/wmr_testing.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="wmr_sdk_overview.html"> Windows Mixed Reality</a></li>
+<li>WMR testing during development</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_input_types.html"></a></span><div class="tip"> WMR input and interaction concepts</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsholographic-persistence.html"></a></span><div class="tip"> HoloLens WorldAnchor persistence</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>WMR testing during development</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity provides tools that allow you to test applications during the development process. These tools allow you to debug your application as if it was any other Unity application, as well as wirelessly pushing content to your device. Some of these tools only work with specific WMR devices, such as <span class="tooltip"><strong>HoloLens</strong><span class="tooltiptext">An XR headset for using apps made for the Windows Mixed Reality platform. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HoloLens">Glossary</a></span></span></span>.</p>
+
+<h2>Play in Editor (immersive devices)</h2>
+
+<p>When using an immersive <span class="tooltip"><strong>Windows Mixed Reality</strong><span class="tooltiptext">A mixed reality platform developed by Microsoft, built around the API of Windows 10. <a href="mr-devices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WindowsMixedReality">Glossary</a></span></span></span> device, you can test and iterate on your application directly in the Unity Editor. Make sure the <strong>Windows Mixed Reality</strong> Portal is open and the headset is active, then press the <strong>Play</strong> button in the Editor. Now your application runs within the Editor while also <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> to the headset.</p>
+
+<h3>Known limitations</h3>
+
+<p>There are a couple of limitations to consider when using Play in the Editor with Mixed Reality devices:</p>
+
+<ul>
+<li><p>Keyboard, mouse, and spatial controllers work in the Editor, as long as they are recognized by Windows and Unity.</p></li>
+<li><p>Non-Windows Mixed Reality input devices only work when the game window has focus, otherwise keyboard and mouse controls may not work correctly.</p></li>
+</ul>
+
+<h2>Holographic Emulation (HoloLens only)</h2>
+
+<p>Holographic Emulation allows you to prototype, debug, and run Microsoft HoloLens projects directly in the Unity Editor rather than building and running your application every time you wish to see the effect of an applied change. This vastly reduces the time between iterations when developing HoloLens applications in Unity.</p>
+
+<figure>
+<img src="../uploads/Main/Emulation.jpg" alt="The Unity Editor running with Holographic Emulation">
+<figcaption>The Unity Editor running with Holographic Emulation</figcaption>
+</figure>
+
+<p>Holographic Emulation has three different modes:</p>
+
+<ul>
+<li><p>
+<strong>Remote to Device:</strong> Using a connection to a <span class="tooltip"><strong>Windows Holographic</strong><span class="tooltiptext">The former name for Windows Mixed Reality. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WindowsHolographic">Glossary</a></span></span></span> device, your application behaves as if it were deployed to that device, while in reality it is running in the Unity Editor on your host machine. For more information, see the section <a href="wmr_testing.html#RemoteToDevice">Emulation Mode: Remote to device</a>, below.</p></li>
+<li><p>
+<strong>Simulate in Editor:</strong> Your application runs on a simulated HoloLens device directly in the Unity Editor, with no connection to a real-world Windows Holographic device. For more information, see the section <a href="wmr_testing.html#SimulateInEditor">Emulation Mode: Simulate in Editor</a>, below.</p></li>
+<li><p>
+<strong>None</strong>: This setting allows you to still run your application in the Editor if you have a Windows Holographic device.</p></li>
+</ul>
+
+<p>Holographic emulation is supported on any machine running Windows 10 (with the <strong>Fall Creators</strong> update). Both <strong>Remote to Device</strong> and <strong>Simulate in Editor</strong> aim to mimic the current HoloLens runtime as closely as possible, so newer APIs beyond this are not present. This means that recent additions to input code don’t work in these situations, just like they wouldn’t on a HoloLens. For example, rotation, position accuracy, angular velocity, and the basis vectors for a pose of forward, up, and right, are all absent, so those APIs fail.</p>
+
+<p>To enable remoting or simulation, open the Unity Editor and go to <strong>Window</strong> &gt; <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XR">Glossary</a></span></span></span> &gt; <strong>Holographic Emulation</strong>.</p>
+
+<p>This opens the <span class="tooltip"><strong>Holographic</strong><span class="tooltiptext">The former name for Windows Mixed Reality. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Holographic">Glossary</a></span></span></span> control window, which contains the <strong>Emulation Mode</strong> drop-down menu. You must keep this window visible during development, so that you can access its settings when you launch your application.</p>
+
+<figure>
+<img src="../uploads/Main/Emulation_control_window.png" alt="Default Holographic Emulation control window">
+<figcaption>Default Holographic Emulation control window</figcaption>
+</figure>
+
+<p>
+<strong>Emulation Mode</strong> is set to <strong>None</strong> by default, which means that if you have an immersive headset connection, your application runs in the Editor and plays on the HMD. See the <strong>Play in Editor</strong> section above for more details.</p>
+
+<p>Change the <strong>Emulation Mode</strong> to <strong>Remote to Device</strong> or <strong>Simulate in Editor</strong> to enable emulation for HoloLens development. This overrides Play in Editor support for any connected immersive device.</p>
+
+<p><a name="RemoteToDevice"> </a></p>
+
+<h3>Emulation Mode: Remote to Device</h3>
+
+<p>Holographic Remoting allows your application to behave as if it were deployed to a HoloLens device, while actually running in the Unity Editor on the host machine. Even while remoting, spatial sensor data and head tracking from the connected device are still active and work correctly. The Unity Editor Game view allows you to see what is being rendered on the device, but not what the wearer of the device sees of the real-world. (See an example in the image above titled ‘The Unity Editor running with Holographic Emulation’.)</p>
+
+<p>
+<strong>Note:</strong> Holographic Remoting is a quick way to iterate over changes during development, but you should avoid using it to validate performance. Your application is running on the host machine rather than the device itself, so you might get inaccurate results. </p>
+
+<p>To enable this mode in the Unity Editor, set the <strong>Emulation Mode</strong> to <strong>Remote to Device</strong>. The Holographic window then changes to reflect the additional settings available with this mode.</p>
+
+<h4>Connecting your device</h4>
+
+<p>To remote to a HoloLens device, you need to install the <a href="https://www.microsoft.com/en-us/store/p/holographic-remoting-player/9nblggh4sv40?activetab=pivot:overviewtab">Holographic Remoting Player</a> on your HoloLens device. </p>
+
+<p>To install the Holographic Remoting Player application and configure the Unity Editor:</p>
+
+<ol>
+<li>
+<p>Install and run the Holographic Remoting Player from your HoloLens store. This is available from the Windows Store app on your Hololens. When launched, the remoting player enters a waiting state and displays the IP address of the device on the HoloLens screen: </p>
+
+<figure>
+<img src="../uploads/Main/remoting_player_screen.png" alt="The Holographic Remoting Player screen">
+<figcaption>The Holographic Remoting Player screen</figcaption>
+</figure>
+
+<p>For additional information about this Player, including how to enable connection diagnostics, see the <a href="https://developer.microsoft.com/en-us/windows/holographic/holographic_remoting_player">Microsoft Windows Dev Center</a>.</p>
+</li>
+<li>
+<p>Enter the IP address of your HoloLens device into the <strong>Remote Machine</strong> field from the Holographic window in the Unity Editor. The drop-down button to the right of the field allows you to select recently used addresses:</p>
+
+<figure>
+<img src="../uploads/Main/Remote_to_device_emulation.png" alt="Configuring Remote to Device emulation mode">
+<figcaption>Configuring Remote to Device emulation mode</figcaption>
+</figure>
+</li>
+<li><p>Click the <strong>Connect</strong> button. The connection status should change to a green light with a connected message.</p></li>
+<li><p>Click <strong>Play</strong> in the Unity Editor to run your device remotely. </p></li>
+</ol>
+
+<p>When remoting starts, you can pause, inspect <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, and debug in the same way as if you were running any app in the Editor. The HoloLens device and your host machine transmit video, audio, and device input back and forth across the network.</p>
+
+<h4>Known limitations</h4>
+
+<p>There are a couple of limitations you should consider when using <strong>Remote to Device</strong> emulation with HoloLens:</p>
+
+<ul>
+<li><p>Unity does not support Speech (<a href="../ScriptReference/Windows.Speech.PhraseRecognizer.html">PhraseRecognizer</a>) when using <strong>Remote to Device</strong> emulation mode. When in this mode, the emulator intercepts speech from the host machine running the Unity Editor. The application uses the microphone in the PC you are remoting from, instead of the Hololens microphone.</p></li>
+<li><p>While <strong>Remote to Device</strong> is running, all audio on the host machine redirects to the device, including audio from outside your application.</p></li>
+</ul>
+
+<p><a name="SimulateInEditor"> </a></p>
+
+<h3>Emulation Mode: Simulate in Editor</h3>
+
+<p>When using this emulation mode, your application runs on a simulated Holographic device directly in the Unity Editor, with no connection to a real-world HoloLens device. This is useful when developing for Windows Holographic if you do not have access to a HoloLens device. </p>
+
+<p>
+<strong>Note:</strong> You should test your application on a HoloLens device to ensure it works as expected. Don’t rely exclusively on emulation during development.</p>
+
+<p>To enable this mode, set the <strong>Emulation Mode</strong> to <strong>Simulate in Editor</strong> and click the <strong>Play</strong> button. Your application then starts in an emulator built into the Unity Editor.</p>
+
+<p>In the Holographic Emulation control window, use the <strong>Room</strong> drop-down menu to choose an available virtual room (the same as those supplied with the <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/using_the_hololens_emulator">XDE HoloLens Emulator</a>). Use the <strong>Gesture Hand</strong> drop-down menu to specify which virtual hand performs gestures (left or right).</p>
+
+<figure>
+<img src="../uploads/Main/simulate_in_editor.png" alt="Configuring Simulate in Editor emulation mode">
+<figcaption>Configuring Simulate in Editor emulation mode</figcaption>
+</figure>
+
+<p>In <strong>Simulate in Editor</strong> mode, you need to use a <span class="tooltip"><strong>game controller</strong><span class="tooltiptext">A device to control objects and characters in a game. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#gamecontroller">Glossary</a></span></span></span> (such as an Xbox 360 or Xbox One controller) to control the virtual human player. The simulation still works if you do not have a controller, but you cannot move the virtual human player around.</p>
+
+<p>The table below lists the controller inputs and their usage during <strong>Simulate in Editor</strong> mode.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Control</strong><span class="tooltiptext">A function for displaying text, buttons, checkboxes, scrollbars and other features on the user interface. <a href="gui-Controls.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Control">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Usage<br></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Left-stick</strong></td>
+	<td style="text-align:left;">Up and down move the virtual human player backward and forward. Left and right move the human player left and right.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Right-stick</strong></td>
+	<td style="text-align:left;">Up and down rotate the virtual human player’s head up and down (rotation about the X axis - Pitch). Left and right turn the virtual human player left and right (rotation about the Y axis - Yaw).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>D-pad</strong></td>
+	<td style="text-align:left;">Move the virtual human player up and down or tilt the player’s head left and right (rotation about the Z axis - Roll ).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Left and right trigger buttons or A button</strong></td>
+	<td style="text-align:left;">Perform a tap gesture with a virtual hand.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Y button</strong></td>
+	<td style="text-align:left;">Reset the pitch (X rotation) and roll (Z rotation) of the virtual human player’s head.</td>
+</tr>
+</tbody>
+</table>
+
+<p>To use a game controller, focus the Unity Editor on the Game view. If you are currently focused on another Unity Editor window, click on the Game view window to refocus on the Game view.</p>
+
+<h4>Known limitations</h4>
+
+<p>There are a couple of limitations you should consider when using <strong>Simulate in Editor</strong> emulation with HoloLens:</p>
+
+<ul>
+<li><p>Most game controllers work in <strong>Simulate in Editor</strong> mode, as long Windows and Unity recognise them. However, unsupported controllers might cause compatibility issues.</p></li>
+<li><p>You can use <span class="tooltip"><a href="../ScriptReference/XR.WSA.WebCam.PhotoCapture.html">PhotoCapture</a><span class="tooltiptext">An API that enables you to take photos from a HoloLens web camera and store them in memory or on disk. <a href="windowsholographic-photocapture.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhotoCapture">Glossary</a></span></span></span> during <strong>Simulate in Editor</strong> mode, but you must use an externally connected <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> (such as a webcam) due to the lack of a connected HoloLens device. This also prevents you from retrieving a matrix with <code>TryGetProjectionMatrix</code> or <code>TryGetCameraToWorldMatrix</code>, because a normal external camera cannot compute where it is in relation to the real world.</p></li>
+</ul>
+
+<h2>Useful resources and troubleshooting</h2>
+
+<p>When troubleshooting development issues for Windows Mixed Reality applications, you might find these external resources useful:</p>
+
+<ul>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/development">Windows Mixed Reality development official documentation</a></p></li>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/academy">Microsoft Windows Mixed Reality Tutorials</a></p></li>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_213#unity_setup">Microsoft Windows Mixed Reality immersive headset development tutorial</a></p></li>
+<li><p><a href="https://support.microsoft.com/en-us/help/13456/hololens-and-holograms-faq">Microsoft HoloLens frequently asked questions (FAQ)</a></p></li>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/hololens_known_issues">Microsoft HoloLens known issues</a></p></li>
+<li><p><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality">Microsoft Windows Mixed Reality troubleshooting guides</a></p></li>
+<li><p><a href="https://forum.unity.com/threads/custom-build-2017-2-rc-mrtp-windows-mixed-reality-technical-preview.498253/">Unity Forum post on WMR Tech Preview</a></p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New content added for XR API changes in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_input_types.html"></a></span><div class="tip"> WMR input and interaction concepts</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsholographic-persistence.html"></a></span><div class="tip"> HoloLens WorldAnchor persistence</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Lighting strategy</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeMakingBelievableVisuals3.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeMakingBelievableVisuals3.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeMakingBelievableVisuals3.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeMakingBelievableVisuals3.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeMakingBelievableVisuals3.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html"> Making believable visuals in Unity</a></li>
+<li> Lighting strategy</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals2.html"></a></span><div class="tip"> Preparing render settings in Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals4.html"></a></span><div class="tip"> Modelling</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Lighting strategy</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Before starting to create final <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> and approach lighting for a <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, you need to figure out your lighting strategy. Altering your lighting strategy late in development has a high impact on your workflow. Taking the time to get this right before you enter production saves time overall, and allows you to achieve better performance and higher visual fidelity.</p>
+
+<p>As with all development, there’s almost always a trade-off between the benefits and impacts of one setup over another. There are times, however, where certain technologies give you options to mitigate these trade-offs within specific constraints. Knowing each feature’s trade-offs allows you to choose what’s best for your project. </p>
+
+<p>A typical daytime Scene with outdoor areas has the following lighting <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>:</p>
+
+<ul>
+<li>Hemisphere lighting (sky contribution)</li>
+<li>Direct lights (Sun + local lights)</li>
+<li>Indirect lights (bounced and reflected lighting)</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsHemisphereLighting.png" alt="">
+</figure>
+
+<p>This seems like three simple components. But because you can mix and match <strong>Realtime</strong> lights, <strong>Mixed</strong> lights, <strong>Baked</strong> lights, static <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> and dynamic <strong>GameObjects</strong>, you can end up with a diverse range of lighting options.</p>
+
+<p>Unity caters to lots of different lighting strategies and project scenarios. To understand lighting modes and setup, see documentation on <a href="LightModes.html">Lighting Modes</a>.</p>
+
+<p>For newcomers, it can be overwhelming to figure out which setup works best for their Scene, and what the trade-offs are. So let’s consider the most commonly used lighting setups:</p>
+
+<ul>
+<li>
+<a href="#realtime">Basic real-time lighting</a>: The specular highlights from the light are visible, but there is no indirect lighting.</li>
+<li>
+<a href="#baked">Baked lighting</a>: Soft baked shadows are visible, and static indirect lighting is visible in high resolution, but there are no specular highlights from lights, and dynamically lit GameObjects don’t cast shadows.</li>
+<li><span class="tooltip"><a href="#mixed">Mixed lighting</a><span class="tooltiptext">A Light Mode for creating indirect lighting, shadowmasks and subtractive lighting. Indirect lighting gets baked into lightmaps and light probes. Shadowmasks and light probes occlusion get generated for baked shadows. <a href="LightMode-Mixed.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MixedLighting">Glossary</a></span></span></span>: Similar to <strong>Baked</strong> lighting, but there is specular response from lights, and dynamically lit GameObjects do cast shadows.</li>
+<li>
+<a href="#realtimeGI">Real-time lighting and GI</a>: Proper indirect lighting response and specular response are visible, lights are all moveable and updateable, but there’s no angular soft shadow.</li>
+<li>
+<a href="#all">All options enabled</a>): Depending on the settings of each light, you can achieve the combination of all the above options.</li>
+</ul>
+
+<p>The following images show the notable differences between these setups:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisuals5LightModes.gif" alt="Five different lighting modes without Ambient Occlusion or Baked lighting enabled">
+<figcaption>Five different lighting modes without Ambient Occlusion or Baked lighting enabled</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/BelievableVisuals4LightModes.gif" alt="Four different lighting modes with Ambient Occlusion and Baked lighting enabled">
+<figcaption>Four different lighting modes with Ambient Occlusion and Baked lighting enabled</figcaption>
+</figure>
+
+<p>
+<strong>Note</strong>: <strong>Realtime GI</strong> can’t bake static <span class="tooltip"><strong>ambient occlusion</strong><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>, so it’s not included.</p>
+
+<p><a name="realtime"></a></p>
+
+<h2>Basic real-time lighting and ambient (with no Realtime GI or Baked GI)</h2>
+
+<p>Basic real-time lighting is generally used in stylistic visual projects and prototype phases.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBaked.gif" alt="Basic real-time lighting">
+<figcaption>Basic real-time lighting</figcaption>
+</figure>
+
+<p>
+<strong>Typical platform target</strong>: Console and PC</p>
+
+<p>
+<strong>Advantages</strong>:</p>
+
+<ul>
+<li>All direct lights and shadows are applied in real time, and are therefore movable.</li>
+<li>Allows for fast iteration, because there is no precomputation, baking, or <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> preparation.</li>
+<li>Dynamic and Static GameObjects are lit using the same method, so <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> are not required.</li>
+</ul>
+
+<p>
+<strong>Disadvantages</strong>:</p>
+
+<ul>
+<li>No hemisphere occlusion, just <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">A special type of Material used to represent skies. Usually six-sided. <a href="class-Skybox.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skybox">Glossary</a></span></span></span>/ambient value, and the color in the area is not lit by direct lighting.</li>
+<li>Without GI or indirect lighting component, the Scene might not give the best visual outcome.</li>
+</ul>
+
+<p><a name="baked"></a></p>
+
+<h2>All baked lighting and Light Probes</h2>
+
+<p>Baked lighting is generally useful for games where run-time performance is an issue but there’s room in memory, such as top-down isometric mobile games and high frame-rate VR games.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBakedLightProbes.gif" alt="Comparison for full baked lighting with and without Ambient Occlusion">
+<figcaption>Comparison for full baked lighting with and without Ambient Occlusion</figcaption>
+</figure>
+
+<p>
+<strong>Typical platform target</strong>: Mobile platform, VR, console and low end PC</p>
+
+<p>
+<strong>Advantages</strong>:</p>
+
+<ul>
+<li>All lights are baked for static GameObjects. They produce ambient occlusion and indirect lighting.</li>
+<li>Unity can bake area light bake support and soft shadow angles onto statically lit GameObjects.</li>
+<li>Fastest run-time performance among the common setups listed here.</li>
+</ul>
+
+<p>
+<strong>Disadvantages</strong>:</p>
+
+<ul>
+<li>Can slow down lighting iteration because lights are baked, which means Unity needs to re-compute lights whenever the Scene changes (unless you’re using Progressive Lightmapper)</li>
+<li>Dynamically lit GameObjects are only lit using Light Probes.</li>
+<li>Specular highlights only rely on <span class="tooltip"><strong>cubemaps</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> and reflections, not on light sources.</li>
+<li>There is no shadowing from dynamic GameObjects.</li>
+<li>Can require a lot of run-time memory, depending on how many light map textures are used in the Scene.</li>
+<li>Might require authoring texture coordinates channel 2 (UV2 for light map) if GameObjects texture charts overlap.</li>
+</ul>
+
+<p><a name="mixed"></a></p>
+
+<h2>Mixed lighting with Shadowmask and Light Probes</h2>
+
+<p>Mixed lighting is often useful in games where time-of-day lighting (such as sun movement) is not important.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsShadowmaskLightProbes.gif" alt="Comparison for <span class="tooltip">Shadowmask<span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. More info&lt;span class=&quot;tooltipGlossaryLink&quot;&gt;See in Glossary&lt;/span&gt;</span></span> Mixed Lighting with and without Ambient Occlusion">
+<figcaption>Comparison for <span class="tooltip"><strong>Shadowmask</strong><span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span> <strong>Mixed</strong> Lighting with and without Ambient Occlusion</figcaption>
+</figure>
+
+<p>
+<strong>Typical platform target</strong>: VR, console and PC</p>
+
+<p>
+<strong>Advantages</strong>:</p>
+
+<ul>
+<li>Similar to all Baked lighting, but in Mixed lighting, Dynamic GameObjects get real-time specular lighting and cast real-time shadows, while static GameObjects get baked shadowmasking, resulting in better visual quality.</li>
+</ul>
+
+<p>
+<strong>Disadvantages</strong>:</p>
+
+<ul>
+<li>GameObjects have a limit of 4 Shadowmasks. Additional shadow casting lights gets baked.</li>
+<li><span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> <span class="tooltip"><strong>real-time lights</strong><span class="tooltiptext">A Lighting Mode for Lights that need to change their properties or which are spawned via scripts during gameplay. Unity calculates and updates the lighting of these Lights every frame at run time. They can change in response to actions taken by the player, or events which take place in the Scene. <a href="LightMode-Realtime.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Real-timelight">Glossary</a></span></span></span> at run time is more resource-intensive.</li>
+<li>Mixed lights can drastically affect performance in certain setups.</li>
+</ul>
+
+<p>For more information on Shadowmask lighting, see <a href="LightMode-Mixed-Shadowmask.html">Shadowmask</a>.</p>
+
+<p><a name="realtimeGI"></a></p>
+
+<h2>Real-time lighting with Realtime GI and Light Probes</h2>
+
+<p>This setup is useful in open area games where you need time-of-day lighting updates (such as the sun moving) and dynamic lighting effects.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsRealtimeGILightProbes.gif" alt="Realtime GI, showcasing indirect lighting updates as the directional light changes">
+<figcaption>Realtime GI, showcasing indirect lighting updates as the directional light changes</figcaption>
+</figure>
+
+<p>
+<strong>Typical platform target</strong>: Console and PC</p>
+
+<p>
+<strong>Advantages</strong>:</p>
+
+<ul>
+<li>This allows for fast lighting iteration with real-time indirect lighting.</li>
+<li>Dynamic and static GameObjects get real-time specular lighting and shadows.</li>
+<li>Can use less memory than Baked lighting for indirect lighting.</li>
+<li>Has a fixed CPU performance impact for updating global illumination.</li>
+</ul>
+
+<p>
+<strong>Disadvantages</strong>:</p>
+
+<ul>
+<li>Occlusion isn’t as detailed as Baked lighting, and usually must be augmented by Screen Space Ambient Occlusion (SSAO) and per-object texture baked AO.</li>
+<li>No area/light angle soft shadows for static GameObjects.</li>
+<li>Real-time lights can drastically affect performance in certain setups.</li>
+<li>Precompute times can take a significant amount of time if there are too many GameObjects contributing to the static lighting, especially without an optimized UV setup. For more information, see <a href="LightingGiUvs.html">Global Illumination UVs</a>.</li>
+</ul>
+
+<p>For in-depth information on optimizing <strong>Realtime GI</strong>, see Unity’s tutorial on <a href="https://unity3d.com/learn/tutorials/topics/graphics/introduction-precomputed-realtime-gi">Introduction to Precomputed Realtime GI</a>.</p>
+
+<p><a name="all"></a></p>
+
+<h2>All options enabled</h2>
+
+<p>You would only want to generally enable all lighting options in games with high fidelity requirements that have tightly controlled memory usage and performance limits. You should only do this if you fully understand each individual system, and know how to handle each lighting combination.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsAllLightOptions.gif" alt="All options enabled, allowing all possible lighting techniques available in Unity">
+<figcaption>All options enabled, allowing all possible lighting techniques available in Unity</figcaption>
+</figure>
+
+<p>
+<strong>Typical platform target</strong>: Console and PC</p>
+
+<p>
+<strong>Advantages</strong>:</p>
+
+<ul>
+<li>This is the complete set of lighting features, giving you full functionality.</li>
+</ul>
+
+<p>
+<strong>Disadvantages</strong>:</p>
+
+<ul>
+<li>Has high performance requirements at run time, with high memory usage.</li>
+<li>Increases the workflow time, by requiring more UV authoring and baking time.</li>
+</ul>
+
+<p>To help you learn about lighting, the Spotlight Tunnel Sample Scene uses real-time lighting with Realtime GI. This provides a diverse range of specular responses, good bounce lighting, and allows you to quickly iterate on lighting.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Making believable visuals Best Practice Guide added in Unity 2017.3</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals2.html"></a></span><div class="tip"> Preparing render settings in Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals4.html"></a></span><div class="tip"> Modelling</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

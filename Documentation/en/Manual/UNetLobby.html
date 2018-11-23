@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Multiplayer Lobby</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetLobby.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetLobby.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetLobby.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetLobby.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetLobby.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li><a href="UNetDealingWithClientsServers.html"> Dealing with clients and servers</a></li>
+<li> Multiplayer Lobby</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetDiscovery.html"></a></span><div class="tip"> Network Discovery</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetUsingTransport.html"></a></span><div class="tip"> Using the Transport Layer API</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Multiplayer Lobby</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Most multiplayer games have a “lobby”; a <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> in the game for players to join before playing the actual game. In the lobby, players can pick options and set themselves as ready for the game to start.</p>
+
+<p>Unity provides the <a href="class-NetworkLobbyManager.html">Network Lobby Manager component</a> as a way for you to implement a Lobby for your game easily.</p>
+
+<p>The Network Lobby Manager <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> provides a lobby for Unity Multiplayer games. It includes the following features:</p>
+
+<ul>
+<li>A simple built-in user interface for interacting with the lobby</li>
+<li>Limits the number of players that can join</li>
+<li>Supports multiple players per client, with a limit on number of players per client</li>
+<li>Prevents players from joining games that are in-progress</li>
+<li>Supports a “ready” state for clients, so a game starts when all players are ready</li>
+<li>Configuration data for each player</li>
+<li>Players re-join the lobby when the game finishes</li>
+<li>Virtual functions that allow custom logic for lobby events</li>
+</ul>
+
+<p>Below are the Network Lobby Manager virtual methods. See API Reference documentation on the <a href="../ScriptReference/Networking.NetworkLobbyManager.html">NetworkLobbyManager</a> class for more details. There is a separate list for methods that are called on the client and on the server. You can write your own implementations for these methods to take action when any of these events occur.</p>
+
+<p>
+<code>NetworkLobbyManager</code> virtual methods called on the <strong>server</strong>:</p>
+
+<ul>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyStartHost.html">OnLobbyStartHost</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyStopHost.html">OnLobbyStopHost</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyStartServer.html">OnLobbyStartServer</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerConnect.html">OnLobbyServerConnect</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerDisconnect.html">OnLobbyServerDisconnect</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerSceneChanged.html">OnLobbyServerSceneChanged</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerCreateLobbyPlayer.html">OnLobbyServerCreateLobbyPlayer</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerCreateGamePlayer.html">OnLobbyServerCreateGamePlayer</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerPlayerRemoved.html">OnLobbyServerPlayerRemoved</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerSceneLoadedForPlayer.html">OnLobbyServerSceneLoadedForPlayer</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerPlayersReady.html">OnLobbyServerPlayersReady</a></li>
+</ul>
+
+<p>
+<code>NetworkLobbyManager</code> virtual methods called on the <strong>client</strong>:</p>
+
+<ul>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyClientEnter.html">OnLobbyClientEnter</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyClientExit.html">OnLobbyClientExit</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyClientConnect.html">OnLobbyClientConnect</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyClientDisconnect.html">OnLobbyClientDisconnect</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyStartClient.html">OnLobbyStartClient</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyStopClient.html">OnLobbyStopClient</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyClientSceneChanged.html">OnLobbyClientSceneChanged</a></li>
+<li><a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyClientAddPlayerFailed.html">OnLobbyClientAddPlayerFailed</a></li>
+</ul>
+
+<p>All of the above server and client methods have empty default implementations, except for <code>OnLobbyServerPlayersReady**</code>**, which calls <a href="../ScriptReference/Networking.NetworkManager.ServerChangeScene.html">ServerChangeScene</a> with the PlayScene (the scene assigned to the <strong>Play Scene</strong> field in the Lobby Manager inspector.</p>
+
+<h2>Lobby Player GameObjects</h2>
+
+<p>There are two kinds of player Prefabs for the Lobby Manager: the <strong>Lobby Player <span class="tooltip"><strong>Prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span></strong> and the** Game Player <strong>Prefab</strong>**. There is a field for each in the Network Lobby Manager component. </p>
+
+<figure>
+<img src="../uploads/Main/NetworkLobbyManager.png" alt="">
+</figure>
+
+<p>The Network Lobby Manager component</p>
+
+<h3>Lobby Player Prefab</h3>
+
+<p>The Prefab that you assign to the <strong>Lobby Player Prefab</strong> slot must have a <a href="class-NetworkLobbyPlayer.html">Network Lobby Player component</a> attached. Each client that joins the Lobby gets a new Lobby player <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, created from the <strong>Lobby Player Prefab</strong>. Unity creates the Lobby player <strong>GameObject</strong> when a client connects (that is, when a player joins the game), and it exists until the client disconnects.</p>
+
+<p>The Network Lobby Player component holds the “ready” state for each player, and handles commands while in the lobby. You can add user <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> to the prefab to hold game-specific player data.</p>
+
+<p>The Network Lobby Player component supplies some virtual method callbacks that can be used for custom lobby behaviour. These are:</p>
+
+<pre><code>public virtual void OnClientEnterLobby();
+public virtual void OnClientExitLobby();
+public virtual void OnClientReady(bool readyState);
+</code></pre>
+
+<p>Unity calls the method <a href="../ScriptReference/Networking.NetworkLobbyPlayer.OnClientEnterLobby.html">OnClientEnterLobby</a> on the client when the game enters the lobby. This happens when the lobby Scene starts for the first time, and also when returning to the lobby from the gameplay Scene.</p>
+
+<p>Unity calls the method <a href="../ScriptReference/Networking.NetworkLobbyPlayer.OnClientExitLobby.html">OnClientExitLobby</a> on the client when the game exits the lobby. This happens when switching to the gameplay Scene.</p>
+
+<p>Unity calls the method <a href="../ScriptReference/Networking.NetworkLobbyPlayer.OnClientReady.html">OnClientReady</a> on the client when the ready state of that player changes.</p>
+
+<h3>Game Player Prefab</h3>
+
+<p>A game starts when all players have indicated they are ready. When the game starts, Unity creates a GameObject for each player, based on the the <strong>Game Player Prefab</strong>. Unity destroys these GameObjects at the end of the game, when players when re-enter the lobby. The <strong>Game Player Prefab</strong> handles commands while in the game. This prefab is a standard networked GameObject, and must have a <a href="class-NetworkIdentity.html">Network Identity component</a> attached.</p>
+
+<h2>Minimum Players</h2>
+
+<p>On the Network Lobby Manager component, the <strong>Minimum Players</strong> field represents the minimum number of players that need to indicate that they are ready before the game starts. If the number of connected clients reaches the <strong>Minimum Players</strong> value, then waiting for all connected clients to become “Ready” starts the Match.</p>
+
+<p>For example if “Minimum Players” is set to 2:</p>
+
+<ul>
+<li>Start one instance of the game, and begin the game in host mode. Then in your game’s lobby interface, press “Start” for your player. You are still in the lobby, because the minimum number of ready players to start a game is 2.</li>
+<li>Start two more instances of the game, and begin those games in client mode in those instances. Wait for all connected players (in this example, three) to become ready.
+Press “Start” in the Lobby <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> for one player. Now, two players are ready, but still in the lobby. Press “Start” in the Lobby <strong>UI</strong> for the last player. All players move to the main game Scene.</li>
+</ul>
+
+<h2>Adding the Lobby to a game</h2>
+
+<p>These steps outline the basic process for adding a Network Lobby to a multiplayer game using Unity’s built-in <span class="tooltip"><strong>networking</strong><span class="tooltiptext">The Unity system that enables multiplayer gaming across a computer network. <a href="UNetOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Networking">Glossary</a></span></span></span> features:</p>
+
+<ul>
+<li>Create a new Scene for the lobby</li>
+<li>Add the Scene to the Build Settings (<strong>File</strong> &gt; <strong>Build Settings…</strong> &gt; <strong>Add Open Scenes</strong>), as the first Scene</li>
+<li>Create a new GameObject in the new Scene and rename it <em>LobbyManager</em>
+</li>
+<li>Add the Network Lobby Manager component to the <em>LobbyManager</em> GameObject</li>
+<li>Add the <span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">A Networking component that manages the network state of a Project. <a href="class-NetworkManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span> HUD component to the <em>LobbyManager</em> GameObject</li>
+<li>Open the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> for the Network Lobby Manager component</li>
+<li>In the Network Lobby Manager, set the <strong>Lobby Scene</strong> to the Scene that contains the <em>LobbyManager</em> GameObject</li>
+<li>In the Network Lobby Manager, set the <strong>Play Scene</strong> to the main gameplay Scene for the game</li>
+<li>Create a new GameObject and rename it <em>LobbyPlayer</em>
+</li>
+<li>Add the Network Lobby Player component to the <em>LobbyPlayer</em>
+</li>
+<li>Create a prefab for the <em>LobbyPlayer</em> GameObject, and delete the instance from the Scene</li>
+<li>Set the LobbyPlayerPrefab field (in the Network Lobby Manager inspector) to the <em>LobbyPlayer</em> prefab</li>
+<li>Set the GamePlayerPrefab field (in the Network Lobby Manager inspector) to the prefab for the player in the main game</li>
+<li>Save the Scene</li>
+<li>Run the game</li>
+</ul>
+
+<p>This version of the Network Lobby Manager is a very simple implementation, and uses a placeholder user interface, much like like the Network Manager HUD. Before you release your game, you should replace this with your own own user interface that matches your game’s visual design and feature requirements.</p>
+
+<p>For an example of a better user interface, see the [multiplayer-lobby asset package]((https://www.assetstore.unity3d.com/en/#!/content/41836) available on the Asset Store.</p>
+
+<p>The <a href="../ScriptReference/Networking.NetworkLobbyManager.html">NetworkLobbyManager</a> class has many virtual function callbacks for custom lobby behaviour. The most important function is <a href="../ScriptReference/Networking.NetworkLobbyManager.OnLobbyServerSceneLoadedForPlayer.html">OnLobbyServerSceneLoadedForPlayer</a>, which is called on the server for each player when they transition from the lobby to the main game. This is the ideal place to apply settings from the lobby GameObject to the player GameObject.</p>
+
+<pre><code>    // for users to apply settings from their lobby player GameObject to their in-game player GameObject
+    public override bool OnLobbyServerSceneLoadedForPlayer(GameObject lobbyPlayer, GameObject gamePlayer)
+    {
+        var cc = lobbyPlayer.GetComponent&lt;ColorControl&gt;();
+        var player = gamePlayer.GetComponent&lt;Player&gt;();
+        player.myColor = cc.myColor;
+        return true;
+    }
+</code></pre>
+
+<h2>Sample Project</h2>
+
+<p>There is a sample project on the** Unity <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>** that uses the Network Lobby Manager and provides a GUI for the lobby. You can use this as a starting point for making your own Lobby for your multiplayer game. See <a href="https://www.assetstore.unity3d.com/en/#!/content/41836">Asset Store: Lobby Sample Project</a>.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetDiscovery.html"></a></span><div class="tip"> Network Discovery</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetUsingTransport.html"></a></span><div class="tip"> Using the Transport Layer API</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

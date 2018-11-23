@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Key manipulation in Curves mode</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="AnimationSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/animeditor-KeyManipulationInCurvesMode.html">English</a></li>
+<li><a href="/ja/current/Manual/animeditor-KeyManipulationInCurvesMode.html">日本語</a></li>
+<li><a href="/es/current/Manual/animeditor-KeyManipulationInCurvesMode.html">Español</a></li>
+<li><a href="/kr/current/Manual/animeditor-KeyManipulationInCurvesMode.html">한국어</a></li>
+<li><a href="/ru/current/Manual/animeditor-KeyManipulationInCurvesMode.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="AnimationSection.html">Animation</a></li>
+<li><a href="AnimationClips.html">Animation Clips</a></li>
+<li><a href="AnimationEditorGuide.html">Animation Window Guide</a></li>
+<li>Key manipulation in Curves mode</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="animeditor-AdvancedKeySelectionAndManipulation.html"></a></span><div class="tip">Key manipulation in Dopesheet mode</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="animeditor-MultipleParts.html"></a></span><div class="tip">Objects with Multiple Moving Parts</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Key manipulation in Curves mode</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Box Selection is used to select multiple keys while viewing the Animation window in <strong>Curves</strong> mode. This allows you to select and manipulate several keys at once. </p>
+
+<p>The following actions allow you to select multiple keys:</p>
+
+<ul>
+<li>Hold Shift+click to add individual keys to your selection</li>
+<li>Drag a rectangle with the mouse to select a group of keys</li>
+<li>Hold Shift and drag a rectangle to add or remove group of keys to the current selection</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/animeditor-CurvesDragSelectKeys.png" alt="A rectangle dragged across to select multiple keys in Curves mode">
+<figcaption>A rectangle dragged across to select multiple keys in <strong>Curves</strong> mode</figcaption>
+</figure>
+
+<p>As you add keys to the selection, Box Selection handles appear on either side of the selected keys, and at the top and bottom. If you add or remove more keys to the selection, the handles automatically adapt their position and size to enclose all the currently selected keys.</p>
+
+<figure>
+<img src="../uploads/Main/animeditor-CurvesSelectedKeys.png" alt="Box Selection handles, displayed on all sides of the selected keys">
+<figcaption>Box Selection handles, displayed on all sides of the selected keys</figcaption>
+</figure>
+
+<h2>Moving selected keys</h2>
+
+<p>Click anywhere within the Box Selection handles to drag the selected keys and move them. You do not need to click directly on a key to do this; you can drag by clicking the empty space within the Box Selection handles.</p>
+
+<p>While you drag, the time of first and last key is displayed under the <span class="tooltip"><strong>timeline</strong><span class="tooltiptext">Generic term within Unity that refers to all features, windows, editors, and components related to creating, modifying, or reusing cut-scenes, cinematics, and game-play sequences. <a href="TimelineSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timeline">Glossary</a></span></span></span> bar to help you place your keys at the desired position. While dragging a selection of keys to the left, any keys that end up at a negative time (that is, to the left of the 0 marker on the timeline) are deleted when you release the mouse button.</p>
+
+<figure>
+<img src="../uploads/Main/animeditor-CurvesDraggingKeys.png" alt="Dragging a selection of keys. Note the start and end times of the selection displayed under the top timeline bar.">
+<figcaption>Dragging a selection of keys. Note the start and end times of the selection displayed under the top timeline bar.</figcaption>
+</figure>
+
+<h2>Scaling selected keys</h2>
+
+<p>When you have multiple keys selected, you can <strong>Scale</strong> the selected keys. In Curve mode, you can scale horizontally to change the time placement of the keys, or vertically to change the value of the keys.</p>
+
+<h3>Horizontally scaling selected keys</h3>
+
+<p>Use the Box Selection handles to the left and right of the selected keys to scale the selection horizontally. This changes the time placement of the keys without modifying their values. Pull the handles apart to stretch the keys over a longer period of time (making the selected animation slower), or push them closer together to place the keys over a shorter period of time (making the selected animation faster).</p>
+
+<p>While you scale the selection horizontally, the minimum and maximum time of the keys are shown at the top of the view, to help you set your selection to the desired time.</p>
+
+<figure>
+<img src="../uploads/Main/animeditor-CurvesScalingKeysHorizontal.png" alt="Scaling a selection of keys horizontally. Note the minimum and maximum times of the scaled keys shown at the top of the view.">
+<figcaption>Scaling a selection of keys horizontally. Note the minimum and maximum times of the scaled keys shown at the top of the view.</figcaption>
+</figure>
+
+<h3>Vertically scaling selected keys</h3>
+
+<p>Use the Box Selection handles to the top and bottom of the selected keys to scale the selection vertically. This changes the value of the keys without modifying their time placement.</p>
+
+<p>While you scale the selection vertically, the minimum and maximum time of the keys are shown to the left of the view, to help you set your selection to the desired values.</p>
+
+<figure>
+<img src="../uploads/Main/animeditor-CurvesScalingKeysVertical.png" alt="Scaling a selection of keys vertically, modifying their values while preserving their time. Note the new minimum and maximum values of the scaled keys shown to the left if the view.">
+<figcaption>Scaling a selection of keys vertically, modifying their values while preserving their time. Note the new minimum and maximum values of the scaled keys shown to the left if the view.</figcaption>
+</figure>
+
+<h2>Manipulation bars</h2>
+
+<p>In addition to the Box Selection handles that appear around your selected keys, there are also grey manipulation bars to the top and left of the <strong>Curves</strong> window, which provide additional ways to manipulate the current selection.</p>
+
+<figure>
+<img src="../uploads/Main/animeditor-CurvesGreyBars.png" alt="The manipulation bars, highlighted in red">
+<figcaption>The manipulation bars, highlighted in red</figcaption>
+</figure>
+
+<p>The manipulation bar at the top allows you to modify the time placement of the selected keys, while preserving their values. The bar at the side allows you to modify the values of the keys while preserving their time placement.</p>
+
+<p>When you have multiple keys selected, the bars at the top and right display a square at each end. Drag the centre of the bar to move the selected keys (either horizontally or vertically), or drag the squares at the end of each bar to scale the selected keys.</p>
+
+<p>Just like the Box Selection handles, when moving or scaling the selected keys using grey bars, the minimum and maximum values or <span class="tooltip"><strong>keyframe</strong><span class="tooltiptext">A frame that marks the start or end point of a transition in an animation. Frames in between the keyframes are called inbetweens. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#keyframe">Glossary</a></span></span></span> times are shown. For the time manipulation bar (at the top of the window), the times of the first and last keyframes are displayed. For the value manipulation bar (at the left of the window), the lowest and highest values of the keys are displayed.</p>
+
+<p>
+<strong>Note</strong>: the scale boxes at the end of the bars are only visible if you have multiple keys selected, and the view is sufficiently zoomed in so that the bar is long enough to show the scale boxes at each end. </p>
+
+<h2>Ripple editing</h2>
+
+<p>Ripple editing is a method of moving and scaling selected keys. This method also affects non-selected keys on the same timeline as the keys that you are manipulating. The name refers to having the rest of your content automatically move along the timeline to accommodate content you have added, expanded or shrunk. The effects of your edit have a “ripple effect” along the whole timeline.</p>
+
+<p>Press and hold the <strong>R</strong> key while dragging inside the Box Selection to perform a <strong>Ripple Move</strong>. This has the effect of “pushing” any unselected keys, plus the original amount of space between your selection and those keys, to the left or right of your selection when you drag the selected keys along the timeline.</p>
+
+<p>Press and hold the <strong>R</strong> key while dragging a Box Selection handle to perform a <strong>Ripple Scale</strong>. The effect on the rest of the unselected keys in the timeline is exactly the same as with a Ripple Move - they are pushed to the left or right as you scale to the left or right side of your Box Selection.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="animeditor-AdvancedKeySelectionAndManipulation.html"></a></span><div class="tip">Key manipulation in Dopesheet mode</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="animeditor-MultipleParts.html"></a></span><div class="tip">Objects with Multiple Moving Parts</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

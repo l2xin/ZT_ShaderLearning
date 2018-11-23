@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Network Manager</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-NetworkManagerUNet.html">English</a></li>
+<li><a href="/ja/current/Manual/class-NetworkManagerUNet.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-NetworkManagerUNet.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-NetworkManagerUNet.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-NetworkManagerUNet.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetReference.html">Multiplayer Component Reference</a></li>
+<li>Network Manager</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NetworkManagerHUD.html"></a></span><div class="tip"> Network Manager HUD</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkProximityChecker.html"></a></span><div class="tip"> Network Proximity Checker</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Network Manager</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <span class="tooltip"><strong>Network Manager</strong><span class="tooltiptext">A Networking component that manages the network state of a Project. <a href="class-NetworkManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> allows you to control the state of a networked game. It provides an interface in the Editor for you to configure the network, the <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> you use for spawning <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, and the <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> you use for different game states.</p>
+
+<p>For more details on implementing the Network Manager in your game, see documentation on <a href="https://docs.unity3d.com/Manual/UNetManager.html">Using the Network Manager</a>.</p>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerUNetComponent.png" alt="The Network Manager component in the Inspector window">
+<figcaption>The Network Manager component in the Inspector window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Dont Destroy On Load</strong></td>
+	<td style="text-align:left;">Use this property to control whether or not Unity should destroy the GameObject with the Network Manager when the Scene changes. Tick this checkbox to ensure Unity does not destroy your Network Manager GameObject when the Scene changes in your game. Untick the checkbox if you want Unity to destroy the GameObject when the Scene it exists in is no longer the active Scene. This is useful if you want to manage multiple, separate Network Manager GameObjects in each of your Scenes. This checkbox is ticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Run In Background</strong></td>
+	<td style="text-align:left;">Use this property to control whether the networked game runs when the window it is running in is not focused. Tick the checkbox if you want it to run; untick it if you want the game to stop running when the window is not focused. This checkbox is ticked by default. You need to enable this property if you want to run multiple instances of a program on the same machine, such as when testing using localhost. You should disable it when deploying to mobile platforms. When enabled, it sets <a href="../ScriptReference/Application-runInBackground.html">Application.runInBackground</a> to true when the Network Manager starts up. You can also set this property from the Unity menu: Edit &gt; Project Settings &gt; Player Settings &gt; Resolution &amp; Presentation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Log Level</strong></td>
+	<td style="text-align:left;">Use this property to control the amount of information Unity outputs to the <span class="tooltip"><strong>console window</strong><span class="tooltiptext">A Unity Editor window that shows errors, warnings and other messages generated by Unity, or your own scripts. <a href="Console.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Consolewindow">Glossary</a></span></span></span>. A low level results in more information; a high level results in less information. Each level includes message from all the levels higher than itself (for example, if you select “Warn”, the console also prints outputs all “Error” and “Fatal” log messages). The drop-down lists the levels from low to high. This property is set to Info by default. You can set Log Level to <strong>Set in Scripting</strong> to prevent the Network Manager from setting the log level at all. This means you can control the level from your own <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> instead.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Offline Scene</strong></td>
+	<td style="text-align:left;">If you assign a Scene to this field, the Network Manager automatically switches to the specified Scene when a network session stops - for example, when the client disconnects, or when the server shuts down.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Online Scene</strong></td>
+	<td style="text-align:left;">If you assign a Scene to this field, the Network Manager automatically switches to the specified Scene when a network session starts - for example, when the client connects to a server, or when the server starts listening for connections.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Network Info</strong></td>
+	<td style="text-align:left;">You can expand this section of the <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> to access network-related settings, listed below</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Web Sockets</strong></td>
+	<td style="text-align:left;">When running as a host, enable this setting to make the host listen for WebSocket connections instead of normal transport layer connections, so that <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span> clients can connect to it (if you build your game for the WebGL platform). These WebGL instances of your game cannot act as a host (in either peer-hosted or server-only mode). Therefore, for WebGL instances of your multiplayer game to be able to find each other and play together, you must host a server-only instance of your game running in LAN mode, with a publicly reachable IP address, and it must have this option enabled. This checkbox is unticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Network Address</strong></td>
+	<td style="text-align:left;">The network address currently in use. For clients, this is the address of the server that is connected to. For servers, this is the local address. This is set to ‘localhost’ by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Network Port</strong></td>
+	<td style="text-align:left;">The network port currently in use. For clients, this is the port of the server connected to. For servers, this is the listen port. This is set to 7777 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Server Bind To IP</strong></td>
+	<td style="text-align:left;">Allows you to tell the server whether to bind to a specific IP address. If this checkbox is not ticked, then there is no specific IP address bound to (IP_ANY). This checkbox is unticked by default. Use this if your server has multiple network addresses (eg, internal LAN, external internet, VPN) and you want to specific the IP address to serve your game on.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Server Bind Address</strong></td>
+	<td style="text-align:left;">This field is only visible when the Server Bind To IP checkbox is ticked. Use this to enter the specific IP address that the server should bind to.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Script CRC Check</strong></td>
+	<td style="text-align:left;">When this is enabled, Unity checks that the clients and the server are using matching scripts. This is useful to make sure outdated versions of your client are not connecting to the latest (updated) version of your server. This checkbox is ticked by default. It does this by performing a (CRC check)[https://en.wikipedia.org/wiki/Cyclic_redundancy_check] between the server and client that ensures the NetworkBehaviour scripts match. This may not be appropriate in some cases, such as when you are intentionally using different Unity projects for the client and server. In most other cases however, you should leave it enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Delay</strong></td>
+	<td style="text-align:left;">The maximum time in seconds to delay buffered messages. The default of 0.01 seconds means packets are delayed at most by 10 milliseconds. Setting this to zero disables HLAPI connection buffering. This is set to 0.01 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Buffered Packets</strong></td>
+	<td style="text-align:left;">The maximum number of packets that a <a href="../ScriptReference/Networking.NetworkConnection.html">NetworkConnection</a> can buffer for each channel. This corresponds to the <a href="../ScriptReference/Networking.ChannelOption.MaxPendingBuffers.html">ChannelOption.MaxPendingBuffers</a> channel option. This is set to 16 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Packet Fragmentation</strong></td>
+	<td style="text-align:left;">This allows the <code>NetworkConnection</code> instances to fragment packets that are larger than <code>maxPacketSize</code>, to up a maximum of 64K. This can cause delays in sending large packets. This checkbox is ticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MatchMaker Host URI</strong></td>
+	<td style="text-align:left;">The host address for the MatchMaker server. By default this points to the global Unity Multiplayer Service at mm.unet.unity3d.com, and usually you should not need to change this. Unity automatically groups players of your game into regional servers around the world, which ensures fast multiplayer response times between players in the same region. This means, for example, that players from Europe, the US, and Asia generally end up playing with other players from their same global region. You can override this value to explicitly control which regional server your game connects to. You might want to do this via scripting if you want to give your players the option of joining a server outside of their global region. For example, if “Player A” (in the US) wanted to connect to a match created via matchmaker by “Player B” (in Europe), they would need to be able to set their desired global region in your game. Therefore you would need to write a <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> feature which allows them to select this. See API reference documentation on <a href="../ScriptReference/Networking.Match.NetworkMatch-baseUri.html">NetworkMatch.baseUri</a> for more information, and for the regional server URIs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MatchMaker Port</strong></td>
+	<td style="text-align:left;">The host port for the Matchmaker server. By default this points to port 443, and usually you should not need to change this.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Match Name</strong></td>
+	<td style="text-align:left;">Define the name of the current match. This is set to “default” by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Match Size</strong></td>
+	<td style="text-align:left;">Define the maximum number of players in the current match. This is set to 4 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SpawnInfo</strong></td>
+	<td style="text-align:left;">You can expand this section of the inspector to access spawn-related settings, listed below</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Player Prefab</strong></td>
+	<td style="text-align:left;">Define the default prefab Unity should use to create player GameObjects on the server. Unity creates Player GameObjects in the default handler for <a href="../ScriptReference/Networking.MsgType.AddPlayer.html">AddPlayer</a> on the server. Implement (OnServerAddPlayer)[https://docs.unity3d.com/ScriptReference/Networking.NetworkManager.OnServerAddPlayer.html] to override this behaviour.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Create Player</strong></td>
+	<td style="text-align:left;">Tick this checkbox if you want Unity to automatically create player GameObjects on connect, and when the Scene changes. This checkbox is ticked by default. Note that if you are using the MigrationManager and you do not enable Auto Create Player, you need to call <a href="../ScriptReference/Networking.ClientScene.SendReconnectMessage.html">ClientScene.SendReconnectMessage</a> when your client reconnects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Player Spawn Method</strong></td>
+	<td style="text-align:left;">Define how Unity should decide where to spawn new player GameObjects. This is set to Random by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Random</td>
+	<td style="text-align:left;">Choose Random to spawn players at randomly chosen startPositions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Round Robin</td>
+	<td style="text-align:left;">Choose Round Robin to cycle through startPositions in a set list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Registered Spawnable Prefabs</strong></td>
+	<td style="text-align:left;">Use this list to add prefabs that you want the Network Manager to be aware of, so that it can spawn them. You can also add and remove them via scripting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Advanced Configuration</strong></td>
+	<td style="text-align:left;">Tick this checkbox to reveal advanced configuration options in the Network Manager Inspector window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Max Connections</td>
+	<td style="text-align:left;">Define the maximum number of concurrent network connections to support. This is set to 4 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Qos Channels</td>
+	<td style="text-align:left;">A list containing the different communication channels the current Network Manager has, and the Quality Of Service (QoS) setting for each channel. Use this list to add or remove channels, and adjust their QoS setting. You can also configure the channels via scripting. For the descriptions of each QoS option, see <a href="../ScriptReference/Networking.QosType.html">QosType</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">    Timeouts</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Min Update Timeout</td>
+	<td style="text-align:left;">Set the minimum time (in milliseconds) the network thread waits between sending network messages. The network thread doesn’t send multiplayer network messages immediately. Instead, it check each connection periodically at a fixed rate to see if it has something to send. This is set to 10ms by default. See API reference documentation on <a href="../ScriptReference/Networking.ConnectionConfig.MinUpdateTimeout.html">MinUpdateTimeout</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Connect Timeout</td>
+	<td style="text-align:left;">Define the amount of time (in milliseconds) Unity should wait while trying to connect before attempting the connection again. This is set to 2000ms by default. See API reference documentation on <a href="../ScriptReference/Networking.ConnectionConfig.ConnectTimeout.html">ConnectTimeout</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Disconnect Timeout</td>
+	<td style="text-align:left;">The amount of time (in milliseconds) before Unity considers a connection to be disconnected. This is set to 2000ms by default. See API reference documentation on <a href="../ScriptReference/Networking.ConnectionConfig.DisconnectTimeout.html">DisconnectTimeout</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Ping Timeout</td>
+	<td style="text-align:left;">The amount of time (in milliseconds) between sending pings (also known as “keep-alive” packets). The ping timeout duration should be approximately one-third to one-quarter of the Disconnect Timeout duration, so that Unity doesn’t assume that clients are disconnected until the server has failed to receive at least three pings from the client. This is set to 500ms by default. See API reference documentation on <a href="../ScriptReference/Networking.ConnectionConfig.PingTimeout.html">ConnectionConfig.PingTimeout</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Global Config</td>
+	<td style="text-align:left;">These settings relate to the Reactor. The Reactor is the part of the multiplayer system which receives network packets from the underlying operating system, and passes them into the multiplayer system for processing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Thread Awake Timeout</td>
+	<td style="text-align:left;">The timeout duration in milliseconds, used by the Reactor. How the Reactor uses this value depends on which Reactor Model you select (see below). This is set to 1ms by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Reactor Model</td>
+	<td style="text-align:left;">Choose which type of reactor to use. The reactor model defines how Unity reads incoming packets. For most games and applications, the default Select reactor is appropriate. If you want to trade a small delay in the processing of network messages for lower CPU usage and improved battery life, use the Fix Rate reactor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Select Reactor</td>
+	<td style="text-align:left;">This model uses the <code>select()</code> API which means that the network thread “awakens” (becomes active) as soon as a packet is available. Using this method means your game gets the data as fast as possible. This is the default Reactor Model setting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Fix Rate Reactor</td>
+	<td style="text-align:left;">This model lets the network thread sleep manually for a given amount of time (defined by the value in Thread Awake Timeout) before checking whether there are incoming packets waiting to be processed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Reactor Max Recv Messages</td>
+	<td style="text-align:left;">Set the maximum number of messages stored in the receive queue. This is set to 1024 messages by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Reactor Max Sent Messages</td>
+	<td style="text-align:left;">Set the maximum number of messages stored in the send queue. This is set to 1024 messages by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Network Simulator</strong></td>
+	<td style="text-align:left;">Tick this checkbox to enable the usage of the network simulator. The network simulator introduces simulated latency and packet loss based on the following settings:</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Simulated Average Latency</td>
+	<td style="text-align:left;">The amount of delay in milliseconds to simulate.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Simulated Packet Loss</td>
+	<td style="text-align:left;">The amount of packet loss to simulate in percent.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NetworkManagerHUD.html"></a></span><div class="tip"> Network Manager HUD</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkProximityChecker.html"></a></span><div class="tip"> Network Proximity Checker</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

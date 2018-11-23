@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Asset Store Publishing Guide</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="AssetStorePublishing" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AssetStorePublishingGuide.html">English</a></li>
+<li><a href="/ja/current/Manual/AssetStorePublishingGuide.html">日本語</a></li>
+<li><a href="/es/current/Manual/AssetStorePublishingGuide.html">Español</a></li>
+<li><a href="/kr/current/Manual/AssetStorePublishingGuide.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AssetStorePublishingGuide.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="AssetStorePublishing.html">Asset Store Publishing</a></li>
+<li>Asset Store Publishing Guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetStoreFAQ.html"></a></span><div class="tip">Asset Store FAQ</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DeprecateAssetGuide.html"></a></span><div class="tip"> DeprecateAssetGuide</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Asset Store Publishing Guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Creating a Publisher Account</h2>
+
+<p>Visit the <a href="https://publisher.assetstore.unity3d.com/">Publisher Administration</a> page and log in with your Unity Account. If you are not already a Publisher, you will be prompted to create an <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> Publisher Account. Fill out the form and save the data to create your account. Unless otherwise noted, the information you provide will be displayed on the <strong>Asset Store</strong> on your customer-facing Publisher Page (<a href="https://www.assetstore.unity3d.com/en/#!/publisher/1950"><em>Example</em></a>).</p>
+
+<h2>Creating a new package</h2>
+
+<p>The first thing you want to do if you are ready to submit an <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> is to create a draft for your package. Go to the Packages tab of your <a href="https://publisher.assetstore.unity3d.com/packages.html">Publisher Administration</a> page and click the button <em>“Create New Package”</em>
+</p>
+
+<figure>
+<img src="../uploads/Main/ASPG_CreateNewPackage.png" alt="">
+</figure>
+
+<h2>Uploading a package</h2>
+
+<p>To prevent confusion during upload and import for your users, make sure that your submission content is inside a top-level folder that has the same title as your submission. This folder contains all of the <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> for your Project:</p>
+
+<figure>
+<img src="../uploads/Main/UploadPackageSubmissionFolder.png" alt="">
+</figure>
+
+<p>To upload your Asset to the Publisher Administration portal:</p>
+
+<ol>
+<li><p>In the Unity Editor, import the <a href="https://assetstore.unity.com/packages/KATEGORY-MISSING/asset-store-tools-115">Asset Store Tools</a> into your Project.</p></li>
+<li>
+<p>Go to <strong>Asset Store Tools &gt; Package Upload</strong>. This dialog box appears:</p>
+
+<figure>
+<img src="../uploads/Main/UploadPackageLogin.png" alt="">
+</figure>
+</li>
+<li><p>Enter your Unity Publisher account information into this box. The Package Upload tool fetches your drafts and packages via your Publisher Portal. When the tool has fetched your packages from the Portal, the Package Upload window appears. </p></li>
+<li>
+<p>Select the folder that contains your entire Project, and then select an Asset to showcase within that Project. If you have multiple draft packages in your publisher account, make sure you click on the package for the Asset you are submitting. The Package Upload window shows the folder and Assets you are uploading:</p>
+
+<figure>
+<img src="../uploads/Main/UploadPackageSelectPackage.png" alt="">
+</figure>
+</li>
+<li><p>Click <strong>Upload</strong> to connect your Assets to your Publisher Portal. The status bar next to the title of your selected folder shows the progress of the upload. </p></li>
+</ol>
+
+<p>When upload is complete, the Editor displays a dialog box to verify that the package is now on your Publisher Portal:</p>
+
+<figure>
+<img src="../uploads/Main/UploadPackageSuccessful.png" alt="">
+</figure>
+
+<p>Your package is now available on the Publisher Portal:</p>
+
+<figure>
+<img src="../uploads/Main/CoUploadPackageComplete.png" alt="">
+</figure>
+
+<p>Continue to prepare your package submission for review on the Publisher Portal.</p>
+
+<h2>Summary</h2>
+
+<p>In the summary of your asset you can change things like the <strong><em>Version Number</em></strong> and the <strong><em>Price USD</em></strong> of your asset. </p>
+
+<figure>
+<img src="../uploads/Main/ASPG_Summary.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Status:</strong></td>
+	<td style="text-align:left;">Current Status of the asset. (<em>Draft, Published, Declined, Pending</em>)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Version:</strong></td>
+	<td style="text-align:left;">The version number for your asset ( <em>eg; 1.5, 1.6, 1.7</em> )</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Version Changes:</strong></td>
+	<td style="text-align:left;">A place to enter notes on what you have changed to the asset (<em>mainly used for updates</em>)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Price USD:</strong></td>
+	<td style="text-align:left;">The price you wish for customers to buy your asset for.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Naming your asset and adding a description</h2>
+
+<p>You can change the name of your asset by clicking the Edit link below the <em>“Metadata”</em> tab under <strong>Metadata and Artwork</strong>.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Title:</strong></td>
+	<td style="text-align:left;">This is the name of your asset. <em>This field is required</em>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Description:</strong></td>
+	<td style="text-align:left;">This is the description of your asset ( <em>Description may only contain the EM, STRONG, A, P and BR tags</em> )</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Tagging your Description:</strong></p>
+
+<p>The description section of your asset requires tags in order to use bold text or break to a new line. Here is a table below to help you.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Bold:</strong></td>
+	<td style="text-align:left;">This allows you to make the containing text bold</td>
+	<td style="text-align:left;">&lt;strong&gt;Bold Text&lt;/strong&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Italic:</strong></td>
+	<td style="text-align:left;">This allows you to make the containing text italic</td>
+	<td style="text-align:left;">&lt;e&gt;italic text &lt;/em&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Link:</strong></td>
+	<td style="text-align:left;">This allows you to add a URL link</td>
+	<td style="text-align:left;">&lt;a href = “url”&gt;My Link&lt;/a&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break:</strong></td>
+	<td style="text-align:left;">This allows you to make a line break</td>
+	<td style="text-align:left;">&lt;br&gt;</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Paragraph:</strong></td>
+	<td style="text-align:left;">This Defines a paragraph.</td>
+	<td style="text-align:left;">&lt;p&gt;A Paragraph &lt;/p&gt;</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/ASPG_MetaData.png" alt="">
+</figure>
+
+<h2>Adding Key Images</h2>
+
+<p>You can change the Key Images of your asset by clicking the Edit link below the <strong><em>“Key Images”</em></strong> tab under <strong>Metadata &amp; Artwork</strong>.</p>
+
+<p>
+<strong>Upload and Remove Image:</strong>
+Click on the <strong><em>Select</em></strong> button to upload the image and Click <strong><em>Clear</em></strong> to remove it.</p>
+
+<figure>
+<img src="../uploads/Main/ASPG_UploadKeyIcon.png" alt="">
+</figure>
+
+<p><strong>Icon &amp; Key Image Sizes:</strong></p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Icon:</strong></td>
+	<td style="text-align:left;">128 x 128 (<em>pixels</em>)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Small:</strong></td>
+	<td style="text-align:left;">200 x 258 (<em>pixels</em>)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Large:</strong></td>
+	<td style="text-align:left;">860 x 389 (<em>pixels</em>)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<strong>Eye Catching:</strong>
+These key images must aim to capture the eyes of customers just as a colorful cartoon captures the eyes of children. A lot of customers browse on the asset store and can commonly buy under impulse. Your Key images must help your asset stand out.</p>
+
+<p>Icon Images:</p>
+
+<p>The Icon Image is the most common key image that users will see. Here are a few well made icon images from the asset store as examples:</p>
+
+<figure>
+<img src="../uploads/Main/ASPG_KeyIcons.png" alt="">
+</figure>
+
+<h2>Adding Screenshots</h2>
+
+<p>You can change the screenshots attached to your asset by clicking the Edit link below the <strong><em>“Screenshots”</em></strong> tab under <strong>Metadata &amp; Artwork</strong>.</p>
+
+<p>Click the <strong>“Insert Image”</strong> button in order to upload the image and add it as a screenshot for your asset. You can add multiple screenshots this way. Remove a screenshot by clicking the <strong>“Remove”</strong> button next to the image you wish to remove.</p>
+
+<p>The <strong>“Up”</strong> and <strong>“Down”</strong> buttons allow you to put your screenshots into any order you like.</p>
+
+<p><strong>How screenshots :</strong></p>
+
+<p>Screenshots are just as important as key images when trying to sell your asset. Your asset may be the best asset in the world, however, if your screenshots do not communicate that then it will not sell.</p>
+
+<figure>
+<img src="../uploads/Main/ASPG_Screenshots.jpg" alt="">
+</figure>
+
+<p>Adding screenshots and making them help sell your asset</p>
+
+<h2>Adding Audio and Video</h2>
+
+<p>You can change the name of your asset by clicking the Edit link below the <strong><em>“Audio/Video”</em></strong> tab under <strong>Metadata &amp; Artwork</strong>.</p>
+
+<p>This allows you to add Audio or Video to the asset and embed it in the show reel with the screenshots of your asset. This is done by providing a link to either of the services below:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>YouTube</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Vimeo</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SoundCloud</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MixCloud</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SketchFab</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p>Adding Audio/Video to your asset</p>
+
+<figure>
+<img src="../uploads/Main/ASPG_AddingVideo.jpg" alt="">
+</figure>
+
+<h2>Deleting a Draft</h2>
+
+<p>You can delete a draft by clicking the drop down text field under the Packages tab of your <a href="https://publisher.assetstore.unity3d.com/">Publisher Administration</a> page and selecting draft. This will deisplay your drafts.</p>
+
+<p>Click on the name of the draft you wish to delete and click on the <strong><em>“Delete Draft”</em></strong> button below the <strong>Metadata &amp; Artwork</strong> section at the bottom of the page.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–06–29 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetStoreFAQ.html"></a></span><div class="tip">Asset Store FAQ</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DeprecateAssetGuide.html"></a></span><div class="tip"> DeprecateAssetGuide</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

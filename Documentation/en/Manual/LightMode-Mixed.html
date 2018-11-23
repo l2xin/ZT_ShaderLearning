@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Mixed lighting</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/LightMode-Mixed.html">English</a></li>
+<li><a href="/ja/current/Manual/LightMode-Mixed.html">日本語</a></li>
+<li><a href="/es/current/Manual/LightMode-Mixed.html">Español</a></li>
+<li><a href="/kr/current/Manual/LightMode-Mixed.html">한국어</a></li>
+<li><a href="/ru/current/Manual/LightMode-Mixed.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li><a href="LightModes.html"> Lighting Modes</a></li>
+<li> Mixed lighting</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightMode-Realtime.html"></a></span><div class="tip"> Real-time lighting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightMode-Mixed-BakedIndirect.html"></a></span><div class="tip"> Baked Indirect mode</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h3>Mixed lighting</h3>
+
+<p>
+<strong>Mixed</strong> Lights are <a href="class-Light.html">Light components</a> which have their <strong>Mode</strong> property set to <strong>Mixed</strong>. </p>
+
+<p>
+<strong>Mixed</strong> Lights can change their Transform and visual properties (such as colour or intensity) during run time, but only within strong limitations. They illuminate both static and dynamic <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, always provide direct lighting, and can optionally provide indirect lighting. Dynamic <strong>GameObjects</strong> lit by <strong>Mixed</strong> Lights always cast real-time shadows on other dynamic <strong>GameObjects</strong>.</p>
+
+<p>All <strong>Mixed</strong> Lights in a Scene use the same <strong>Mixed</strong> <strong>Lighting Mode</strong>. To set the <strong>Lighting Mode</strong>, open the Lighting window (menu: <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt; <strong>Lighting Settings</strong>), click the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> tab, and navigate to the <strong>Mixed Lighting</strong> section. </p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-0.png" alt="The Mixed Lighting section of the Lighting window">
+<figcaption>The <strong>Mixed Lighting</strong> section of the Lighting window</figcaption>
+</figure>
+
+<p>The available modes are:</p>
+
+<ul>
+<li><a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a></li>
+<li><a href="LightMode-Mixed-ShadowmaskMode.html">Shadowmask</a></li>
+<li><a href="LightMode-Mixed-Subtractive.html">Subtractive</a></li>
+</ul>
+
+<h4>Using Mixed Lights</h4>
+
+<p>Mixed lighting is useful for Lights that are not part of gameplay, but which illuminate the static environment (for example, a non-moving sun in the sky). Direct lighting from Mixed Lights is still calculated at run time, so Materials on static Meshes retain their visual fidelity, including full <a href="shader-StandardShader.html">physically based shading (PBS)</a> support.</p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-1.jpg" alt="An example of Mixed Lights">
+<figcaption>An example of Mixed Lights</figcaption>
+</figure>
+
+<p>The <span class="tooltip"><strong>Shadowmask</strong><span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. <a href="LightMode-Mixed-Shadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span> mode’s <a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a> is the most resource-intensive option, but provides the best results: it yields high-quality shadows within the <strong>Shadow Distance</strong> (<strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Quality</strong> &gt; <span class="tooltip"><strong>Shadows</strong><span class="tooltiptext">A UI component that adds a simple outline effect to graphic components such as Text or Image. It must be on the same GameObject as the graphic component. <a href="script-Shadow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadow">Glossary</a></span></span></span>), and baked high-quality shadows beyond. For example, you could create large landscapes with realistic shadows right up to the horizon, as long as the sun does not travel across the sky.</p>
+
+<p>
+<strong>Subtractive</strong> mode provides the lowest-quality results: it renders shadows in real time for only one Light, and composites them with baked direct and indirect lighting. Only use this as a fallback solution for target platforms that are unable to use any of the other modes (for example, when the application needs to run on low-end mobile devices, but memory constraints prevent the use of <strong>Shadowmask</strong> or <span class="tooltip"><strong>Distance Shadowmask</strong><span class="tooltiptext">A version of the Shadowmask lighting mode that includes high quality shadows cast from static GameObjects onto dynamic GameObjects. <a href="LightMode-Mixed-DistanceShadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DistanceShadowmask">Glossary</a></span></span></span>).</p>
+
+<p>See the <a href="https://docs.google.com/spreadsheets/d/18R663xpccuyRns1kOvGAiqj0qU9QFMbbXyrOCQMsU5w/edit#gid=1748986211">Unity Lighting Modes Reference Card</a> for a condensed comparison of the various modes.</p>
+
+<p>All Mixed Lighting Modes are supported on all platforms. However, there are some rendering limitations:</p>
+
+<ul>
+<li><p>
+<strong>Subtractive</strong> mode falls back to <span class="tooltip"><a href="RenderTech-ForwardRendering.html">forward rendering</a><span class="tooltiptext">A rendering path that renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity. <a href="RenderTech-ForwardRendering.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> (no deferred or light prepass support).</p></li>
+<li><p>
+<strong>Shadowmask</strong> mode falls back to <a href="RenderTech-ForwardRendering.html">forward rendering</a> (no deferred or light prepass support) on platforms which only support four render targets, such as many mobile GPUs. </p></li>
+</ul>
+
+<p>See documentation on <span class="tooltip"><a href="RenderingPaths.html">Rendering paths</a><span class="tooltiptext">The technique Unity uses to render graphics. Choosing a different path affects the performance of your game, and how lighting and shading are calculated. Some paths are more suited to different platforms and hardware than others. <a href="RenderingPaths.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderingPath">Glossary</a></span></span></span> to learn more about forward and deferred rendering.</p>
+
+<h4>Advanced use</h4>
+
+<p>
+<strong>Mixed</strong> Lights can change their Transform and visual properties (such as colour or intensity) during run time, but only within strong limitations. In fact, because some lighting is baked (and therefore precomputed), changing any parameters at run time leads to inconsistent results when combining real-time and precomputed lighting. </p>
+
+<p>In the case of <strong>Baked Indirect</strong> and <strong>Shadowmask</strong>, the direct lighting contribution behaves just like a <strong>Realtime</strong> Light, so you can change parameters like the color, intensity and even the Transform of the Light. However, baked values are precomputed, and cannot change at run time. </p>
+
+<p>For example: if you bake a red <strong>Mixed</strong> Light into the light map, but change its color from red to green at run time, all direct lighting switches to the green color. However, all indirect lighting is baked into the light maps, so it remains red. The same applies to moving a Mixed Light at run time - direct lighting will follow the Light, but indirect lighting will remain at the position at which the Light was baked.</p>
+
+<p>If only subtle changes are introduced to direct lighting (for example, by only slightly modifying the hue or intensity of a Light), it is possible to get the benefits of indirect lighting and for the Light to appear somewhat dynamic, without the extra processing time required for a <strong>Realtime</strong> Light. Indirect lighting is still incorrect, but the error might be subtle enough not to be objectionable. This works especially well for Lights without precomputed shadow information. This is achieved either by having shadows disabled for the Light, or by using Baked Indirect mode where shadows are real time. As shadowmasks are part of the direct lighting computation, moving such Lights causes visual inconsistencies with shadows not lining up correctly.</p>
+
+<p>The following video shows an example of what happens when a Mixed Light is moved too far away from the spot where it was baked. Note how the indirect red light on the walls remains in place despite the object moving far away: <a href="https://youtu.be/o6pVBqrj8-s">https://youtu.be/o6pVBqrj8-s</a> </p>
+
+<p>The following video shows an example of how to slightly modify a Mixed Light without causing noticeable inconsistencies with indirect lighting: <a href="https://youtu.be/XN6ya31gm1I">https://youtu.be/XN6ya31gm1I</a> </p>
+
+<h4>Technical Details</h4>
+
+<p>In the case of Mixed Lights, the last segment of a light path (that is, the path from the Light to the surface) becomes part of the precomputation as well. However, Unity still handles direct lighting and indirect lighting separately. It bakes indirect lighting into light maps and <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>, which are then sampled at run time. Indirect lighting is generally low frequency, meaning it looks smooth and doesn’t contain detailed shadows or light transitions. Therefore, shadows are handled with direct lighting where they have a high visible impact.</p>
+
+<p>The difference in how shadows are precomputed and stored is reflected in the various submodes for Mixed Lights:</p>
+
+<ul>
+<li><a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a></li>
+<li><a href="LightMode-Mixed-ShadowmaskMode.html">Shadowmask</a></li>
+<li><a href="LightMode-Mixed-Subtractive.html">Subtractive</a></li>
+</ul>
+
+<p>Shadow information can be precomputed and stored in a shadowmask. A shadowmask is a Texture which shares the same UV layout and resolution with its corresponding light map. It stores occlusion information for up to four Lights per texel (because Textures are limited to up to four channels on current GPUs). The values range from 0 to 1, with values in-between marking soft shadow areas. </p>
+
+<p>If shadowmasks are enabled, Light Probes also store occlusion information for up to four Lights. If more than four Lights intersect, the excess Lights fall back to <span class="tooltip"><strong>Baked Lights</strong><span class="tooltiptext">A Light Mode for creating local ambience, rather than fully featured lights for increasing brightness in dark areas without needing to adjust all of the lighting within a Scene. Unity pre-calculates the illumination from these lights before run time, and does not include them in any run-time lighting calculations. <a href="LightMode-Baked.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#BakedLights">Glossary</a></span></span></span>. You can inspect this behavior with the <a href="GIVis.html">shadowmask overlap visualization</a> mode. This information is precomputed, so the only shadows Unity stores in the shadowmask are shadows cast from static GameObjects onto other static GameObjects. These shadows can have smoother edges providing better quality than real-time shadow maps, depending on the light map resolution. Because each Mixed Light retains its shadowmask channel mapping at run time, shadows cast by dynamic GameObjects via shadow maps can be correctly composited with precomputed shadows from static GameObjects, avoiding inconsistencies like double shadowing. </p>
+
+<p>The only perceptible differences between shadows from static GameObjects and shadows from dynamic GameObjects are the differences in resolution and filtering of the precomputed shadowmask and the run-time shadow map, and that precomputed shadows support various forms of area Lights, so soft shadows can have more realistic penumbras.</p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-2.jpg" alt="In this image, the Baked shadowmask resolution is similar to the Realtime shadow resolution">
+<figcaption>In this image, the Baked shadowmask resolution is similar to the Realtime shadow resolution</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-3.jpg" alt="In this image, the Baked shadowmask resolution is much lower than the Realtime shadow resolution.">
+<figcaption>In this image, the Baked shadowmask resolution is much lower than the Realtime shadow resolution.</figcaption>
+</figure>
+
+<p>What <strong>Baked Indirect</strong> and <strong>Shadowmask</strong> have in common is that direct lighting is always computed in real time and added to the indirect lighting stored in the light map, so all Material effects that require a light direction continue to work. Dynamic GameObjects always cast shadows on other dynamic GameObjects via shadow maps within the <strong>Shadow Distance</strong> (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong> &gt; <strong>Shadows</strong>), if shadows are enabled for that Light.</p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-4.png" alt="Baked Indirect mode: Only indirect lighting is precomputed">
+<figcaption><strong>Baked Indirect</strong> mode: Only indirect lighting is precomputed</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-5.png" alt="Shadowmask and Distance Shadowmask modes: Indirect lighting and direct occlusion are precomputed">
+<figcaption><strong>Shadowmask</strong> and <strong>Distance Shadowmask</strong> modes: Indirect lighting and direct occlusion are precomputed</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-6.png" alt="Subtractive mode: All light paths are precomputed">
+<figcaption><strong>Subtractive</strong> mode: All light paths are precomputed</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–09–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Light Modes added in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightMode-Realtime.html"></a></span><div class="tip"> Real-time lighting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightMode-Mixed-BakedIndirect.html"></a></span><div class="tip"> Baked Indirect mode</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

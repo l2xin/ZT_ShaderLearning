@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using the Unity Developer Dashboard to configure Unity Cloud Build for Git</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCloudBuildVcsGit.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityCloudBuildVcsGit.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCloudBuildVcsGit.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCloudBuildVcsGit.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCloudBuildVcsGit.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityCloudBuild.html">Unity Cloud Build</a></li>
+<li><a href="UnityCloudBuildVcs.html"> Version control systems</a></li>
+<li> Using the Unity Developer Dashboard to configure Unity Cloud Build for Git</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildVcs.html"></a></span><div class="tip"> Version control systems</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildVcsGitUsingEditor.html"></a></span><div class="tip"> Using the Unity Editor to configure Unity Cloud Build for Git</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Using the Unity Developer Dashboard to configure Unity Cloud Build for Git</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Cloud Build supports projects stored in Git repositories. Your repository can be hosted on <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/">Bitbucket</a>, or private servers.</p>
+
+<p>
+<strong>Note</strong>: This feature requires a subscription to Unity Teams Advanced. For more information, see the <a href="https://unity3d.com/teams">Unity Teams</a> page.</p>
+
+<p>This topic covers:</p>
+
+<ul>
+<li><p><a href="#configure">Configuring GIT in the Dashboard</a></p></li>
+<li><p><a href="#private">Using private repositories</a></p></li>
+<li><p><a href="#target">Setting up a target build platform</a></p></li>
+<li><p><a href="#submodules">Using Git submodules</a></p></li>
+</ul>
+
+<p><a name="configure"></a></p>
+
+<h2>Configuring Git on the Dashboard</h2>
+
+<p>To configure Cloud Build to build your Project from a GitHub repository:</p>
+
+<ol>
+<li>Sign in to the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>On the <strong>Projects</strong> page, select your Project.</li>
+<li>In the dashboard <strong>Overview</strong> window, on the <span class="tooltip"><strong>Cloud Build</strong><span class="tooltiptext">A continuous integration service for Unity projects that automates the process of creating builds on Unity’s servers. <a href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CloudBuild">Glossary</a></span></span></span> tile, click <strong>OPEN CLOUD BUILD DASHBOARD</strong>.</li>
+<li>In the <strong>Build History</strong> window, click <strong>Set up Cloud Build</strong>.</li>
+</ol>
+
+<p>You can configure access to your repository using the following authorization protocols:</p>
+
+<ul>
+<li>OAuth (default)</li>
+<li>SSH</li>
+</ul>
+
+<p>To configure Cloud Build to use OAuth to access your repository:</p>
+
+<ol>
+<li>In the <strong>Source Control</strong> window, click the <strong>GitHub</strong>, <strong>Bitbucket</strong>, or <strong>GitLab</strong> tile.</li>
+<li>Authorize access to your account as appropriate for the selected source code control service.</li>
+<li>In the <strong>Select a Repository</strong> window, choose a repository from which to build the Project and then click the <strong>NEXT: TARGET SETUP</strong> button.</li>
+</ol>
+
+<p>
+<strong>Note</strong>: If you are currently signed into the source code management service, Cloud Build uses your current credentials to retrieve the repository list. To configure a Project that retrieves a repository from a different account, sign out of the source code management service first, then configure the Project.</p>
+
+<p>For the next step, see the <a href="#target">Setting up a target build platform</a> section.</p>
+
+<p>To configure Cloud Build to use SSH to access your repository:</p>
+
+<ol>
+<li><p>In the <strong>Source Control</strong> window, click the <strong>Manual</strong> tab.</p></li>
+<li>
+<p>In the <strong>SCM URL</strong> field, enter the URL of your Git server in either of the following formats:</p>
+
+<ul>
+<li>Non-SSL: host:port</li>
+<li>SSL: ssl:host:port</li>
+</ul>
+</li>
+<li><p>To connect to your repository, you must specify the URL to your Git server. For information on the format of the URL, see the <strong>URL syntax</strong> section below.</p></li>
+<li><p>From the <strong>SCM Type</strong> drop-down menu, select <strong>GIT</strong>.</p></li>
+<li><p>Click the <strong>NEXT: ACCESS</strong> button.</p></li>
+</ol>
+
+<p>When Unity Cloud Build connects to the hosting site, it automatically detects whether your repository is public or private. If your repository is public, Cloud Build automatically connects to it and you can skip to <a href="#target">Setting up a target build platform</a>. If your repository is private, see the <a href="#private">Using private repositories</a>section.</p>
+
+<p>When Unity Cloud Build connects to the hosting site, it automatically detects whether your repository is public or private. If your repository is public, Cloud Build automatically connects to it and you can skip to <a href="#target">Setting up a target build platform</a>.</p>
+
+<h3>URL syntax</h3>
+
+<p>To connect to your repository, you must specify the URL to your Git server. You can specify the URL to use the following protocols:</p>
+
+<ul>
+<li>HTTPS</li>
+<li>GIT</li>
+<li>SSH</li>
+</ul>
+
+<p>The following are examples of URLs for <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">bitbucket</a>, and <a href="https://about.gitlab.com/">GitLab</a>:</p>
+
+<ul>
+<li>https://github.com/youraccount/yourrepo</li>
+<li>git://github.com/youraccount/yourrepo.git</li>
+<li>git@bitbucket.org:youraccount/yourrepo.git</li>
+<li>git@gitlab.com:youracccount/yourrepo.git</li>
+</ul>
+
+<p>
+<strong>Note</strong>: If you are hosting Git on a private server, you must use SSH to connect to your repository.</p>
+
+<p>Use the format that is most convenient for you.; Unity Cloud Build automatically re-writes the URL into the format it needs.</p>
+
+<p><a name="private"></a></p>
+
+<h2>Using private repositories</h2>
+
+<p>If your repository is private, Cloud Build must use SSH to connect to it. When Cloud Build detects that the repository is private, it displays the <strong>Grant us access to your source control</strong> screen.</p>
+
+<figure>
+<img src="../uploads/Main/dashgit_1.jpg" alt="">
+</figure>
+
+<h3>Setting your SSH key on GitHub</h3>
+
+<p>To add your SSH key to your project in GitHub</p>
+
+<ol>
+<li><p>Sign in to <a href="https://github.com/">GitHub</a>.</p></li>
+<li><p>In the upper-right corner of any GitHub page, click your profile photo, then click Your profile.</p></li>
+<li><p>On your profile page, click <strong>Repositories</strong>, then click the name of your repository.</p></li>
+<li><p>In your repository, click the <strong>Settings</strong> tab.</p></li>
+<li><p>In the sidebar, click <strong>Deploy Keys</strong>, then click the <strong>Add deploy key</strong> button.</p></li>
+<li><p>In the <strong>Title</strong> textbox, type name to identify this key. </p></li>
+<li><p>In the <span class="tooltip"><strong>Key</strong><span class="tooltiptext">Can refer to an Input Key or an Animation Key <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#key">Glossary</a></span></span></span> field, paste in your public key from the <strong>Grant us access to your source control</strong> window, and then click the <strong>Add key </strong>button.</p></li>
+</ol>
+
+<p>For more information on deploy keys, see <a href="https://developer.github.com/v3/guides/managing-deploy-keys/">Managing Deploy Keys</a> in the GitHub documentation.</p>
+
+<p>You can also add your SSH key to your GitHub account so that all repositories in your account are accessible to Cloud Build. For more information, see <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">Adding a new SSH key to your GitHub account</a> in the GitHub documentation.</p>
+
+<h3>Setting your SSH key on Bitbucket</h3>
+
+<p>To add your SSH key to your Bitbucket account:</p>
+
+<ol>
+<li><p>Log in to <a href="https://bitbucket.org/">Bitbucket</a>.</p></li>
+<li><p>Click your <span class="tooltip"><strong>avatar</strong><span class="tooltiptext">An interface for retargeting animation from one rig to another. <a href="ConfiguringtheAvatar.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Avatar">Glossary</a></span></span></span> in the lower left of the page.</p></li>
+<li><p>Click <strong>Bitbucket Settings</strong>.</p></li>
+<li><p>On the <strong>Settings page</strong>, in the <strong>SECURITY</strong> section, click <strong>SSH Keys</strong>.</p></li>
+<li><p>In <strong>SSH Keys</strong>, click the <strong>Add key</strong> button.</p></li>
+<li><p>In the <strong>Label</strong> field, enter a recognizable name for the key (such as <span class="tooltip"><strong>Unity Cloud Build</strong><span class="tooltiptext">See Cloud Build <a href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityCloudBuild">Glossary</a></span></span></span>.)</p></li>
+<li><p>Paste the Unity Cloud Build SSH key from the <strong>Grant us access to your source control</strong> window into the <strong>Key</strong> field.</p></li>
+<li><p>Click <strong>Add Key</strong>.</p></li>
+</ol>
+
+<p>On the <strong>Grant us access to your source control</strong> window, click <strong>Next: Target Setup</strong>.</p>
+
+<p><a name="target"></a></p>
+
+<h2>Setting up a target build platform</h2>
+
+<p>In the dashboard, on the <strong>NEW BUILD TARGET: BASIC INFO</strong> window:</p>
+
+<ol>
+<li><p>In the <strong>Target Label</strong> field, enter a name for the build. </p></li>
+<li><p>If the root folder of your repository doesn’t contain your <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> and <span class="tooltip"><strong>Project settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>, in the <strong>Project Subfolder</strong> field, enter the URL of the folder that contains your <strong>Assets</strong> and <strong>Project settings</strong>.</p></li>
+<li><p>From the <strong>Unity Version</strong> drop-down menu, select the version of Unity with which to build the Project.</p></li>
+<li><p>If you do not want the Project to automatically build whenever your repository is updated, click the <strong>Auto-build</strong> toggle to disable this feature.</p></li>
+</ol>
+
+<p>If you are building for the <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> or Android platforms, your next step is to enter credentials for the build. Click <strong>Next: Credentials</strong>. For all other platforms, click <strong>Next: Build</strong> to complete the configuration and start the initial build.</p>
+
+<h3>Android credentials</h3>
+
+<p>In the IOS <strong>SIGNING CREDS</strong> window supply the following information:</p>
+
+<ul>
+<li><p>A <strong>Bundle ID</strong> to uniquely identify your app on the device and in Google Play Store. </p></li>
+<li><p>Enter your Android <span class="tooltip"><strong>keystore</strong><span class="tooltiptext">An Android system that lets you store cryptographic key entries for enhanced device security. <a href="class-PlayerSettingsAndroid.html#keystore">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Keystore">Glossary</a></span></span></span> credentials or select <strong>Auto Generated Debug Keystore</strong> to use a development <strong>keystore</strong>. For more information on Android keystores, see <a href="https://developer.android.com/training/articles/keystore.html">Android Keystore System</a>.</p></li>
+</ul>
+
+<h3>iOS Credentials</h3>
+
+<p>In the IOS <strong>SIGNING CREDS</strong> window supply the following information:</p>
+
+<ul>
+<li><p>A <strong>Bundle ID</strong> to uniquely identify your app on the device.</p></li>
+<li><p>The Xcode version with which to build the app.</p></li>
+<li><p>Enter your IOS credentials. For more information on iOS credentials, see <a href="UnityCloudBuildiOS.html">Building for iOS</a>.</p></li>
+</ul>
+
+<p><a name="submodules"></a></p>
+
+<h2>Using Git submodules</h2>
+
+<p>If your project is using private Git submodules, make sure that the URLs present in your <em>.gitmodules</em> file are using the <code>git@</code> syntax instead of <code>https://</code> or <code>git://</code>.</p>
+
+<p>For example:</p>
+
+<ul>
+<li><p>git@github.com:youraccount/yourrepo.git (for GitHub)</p></li>
+<li><p>git@bitbucket.org:youraccount/yourrepo.git (for Bitbucket)</p></li>
+<li><p>git@gitlab.com:youracccount/yourrepo.git (for GitLab)</p></li>
+</ul>
+
+<hr>
+
+<p><span class="page-edit">2018–07–16Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildVcs.html"></a></span><div class="tip"> Version control systems</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildVcsGitUsingEditor.html"></a></span><div class="tip"> Using the Unity Editor to configure Unity Cloud Build for Git</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

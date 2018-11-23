@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Positioning GameObjects</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PositioningGameObjects.html">English</a></li>
+<li><a href="/ja/current/Manual/PositioningGameObjects.html">日本語</a></li>
+<li><a href="/es/current/Manual/PositioningGameObjects.html">Español</a></li>
+<li><a href="/kr/current/Manual/PositioningGameObjects.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PositioningGameObjects.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UsingTheEditor.html">The Main Windows</a></li>
+<li><a href="UsingTheSceneView.html">The Scene View</a></li>
+<li> Positioning GameObjects</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SceneViewNavigation.html"></a></span><div class="tip">Scene View navigation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ViewModes.html"></a></span><div class="tip">Scene view Control Bar</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Positioning GameObjects</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>To select a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, click on it in the <span class="tooltip"><a href="UsingTheSceneView.html">Scene view</a><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> or click its name in the <a href="Hierarchy.html">Hierarchy window</a>. To select or de-select multiple GameObjects, hold the <strong>Shift</strong> key while clicking, or drag a rectangle around multiple GameObjects to select them.</p>
+
+<p>Selected GameObjects are highlighted in the Scene view. By default, this highlight is an orange outline around the GameObject; to change the highlight color and style, go to <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Color</strong> and edit the <strong>Selected Wireframe</strong> and <strong>Selected Outline</strong> colours. See documentation on the <a href="GizmosMenu.html">Gizmo Menu</a> for more information about the outline and wireframe selection visualizations. The selected GameObjects also display a <span class="tooltip"><strong>Gizmo</strong><span class="tooltiptext">A graphic overlay associated with a GameObject in a Scene, and displayed in the Scene View. Built-in scene tools such as the move tool are Gizmos, and you can create custom Gizmos using textures or scripting. Some Gizmos are only drawn when the GameObject is selected, while other Gizmos are drawn by the Editor regardless of which GameObjects are selected. <a href="GizmosMenu.html#gizmos">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> in the Scene view if you have one of the four Transform tools selected:</p>
+
+<h2>Move, Rotate, Scale, and RectTransform</h2>
+
+<figure>
+<img src="../uploads/Main/Editor-MoveRotateScaleTransform.png" alt="">
+</figure>
+
+<p>The first tool in the <span class="tooltip"><strong>toolbar</strong><span class="tooltiptext">A row of buttons and basic controls at the top of the Unity Editor that allows you to interact with the Editor in various ways (e.g. scaling, translation). <a href="Toolbar.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Toolbar">Glossary</a></span></span></span>, the <strong>Hand Tool</strong>, is for panning around the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. The <strong>Move</strong>, <strong>Rotate</strong>, <strong>Scale</strong>, <strong>Rect Transform</strong> and <strong>Transform</strong> tools allow you to edit individual GameObjects. To alter the <a href="class-Transform.html">Transform</a> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> of the GameObject, use the mouse to manipulate any Gizmo axis, or type values directly into the number fields of the <strong>Transform</strong> <strong>component</strong> in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p>
+
+<p>Alternatively, you can select each of the four <strong>Transform</strong> modes with a hotkey: <strong>W</strong> for Move, <strong>E</strong> for Rotate, <strong>R</strong> for Scale, <strong>T</strong> for RectTransform, and <strong>Y</strong> for Transform.</p>
+
+<figure>
+<img src="../uploads/Main/MoveRotateScaleTransform.jpg" alt="The Move, Scale, Rotate, Rect Transform and Transform Gizmos">
+<figcaption>The Move, Scale, Rotate, Rect Transform and Transform Gizmos</figcaption>
+</figure>
+
+<h3>Move</h3>
+
+<p>At the center of the <strong>Move</strong> Gizmo, there are three small squares you can use to drag the GameObject within a single plane (meaning you can move two axes at once while the third keeps still). </p>
+
+<p>If you hold shift while clicking and dragging in the center of the Move Gizmo, the center of the Gizmo changes to a flat square. The flat square indicates that you can move the GameObject around on a plane relative to the direction the Scene view <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> is facing.</p>
+
+<h3>Rotate</h3>
+
+<p>With the <strong>Rotate</strong> tool selected, change the GameObject’s rotation by clicking and dragging the axes of the wireframe sphere Gizmo that appears around it. As with the Move Gizmo, the last axis you changed will be colored yellow. Think of the red, green and blue circles as performing rotation around the red, green and blue axes that appear in the Move mode (red is the x-axis, green in the y-axis, and blue is the z-axis). Finally, use the outermost circle to rotate the GameObject around the Scene view z-axis. Think of this as rotating in screen space.</p>
+
+<h3>Scale</h3>
+
+<p>The <strong>Scale</strong> tool lets you rescale the GameObject evenly on all axes at once by clicking and dragging on the cube at the center of the Gizmo. You can also scale the axes individually, but you should take care if you do this when there are child GameObjects, because the effect can look quite strange.</p>
+
+<h3>RectTransform</h3>
+
+<p>The <a href="class-RectTransform.html">RectTransform</a> is commonly used for positioning 2D elements such as <span class="tooltip"><strong>Sprites</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span> or <a href="UIBasicLayout.html">UI elements</a>, but it can also be useful for manipulating 3D GameObjects. It combines moving, scaling and rotation into a single Gizmo:</p>
+
+<ul>
+<li>Click and drag within the rectangular Gizmo to move the GameObject.</li>
+<li>Click and drag any corner or edge of the rectangular Gizmo to scale the GameObject.</li>
+<li>Drag an edge to scale the GameObject along one axis.</li>
+<li>Drag a corner to scale the GameObject on two axes.</li>
+<li>To rotate the GameObject, position your cursor just beyond a corner of the rectangle. The cursor changes to display a rotation icon. Click and drag from this area to rotate the GameObject.</li>
+</ul>
+
+<p>Note that in 2D mode, you can’t change the z-axis in the Scene using the Gizmos. However, it is useful for certain scripting techniques to use the z-axis for other purposes, so you can still set the z-axis using the Transform component in the Inspector.</p>
+
+<p>For more information on transforming GameObjects, see documentation on the <span class="tooltip"><a href="class-Transform.html">Transform Component</a><span class="tooltiptext">A Transform component determines the Position, Rotation, and Scale of each object in the scene. Every GameObject has a Transform. <a href="Transforms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span>.</p>
+
+<h3>Transform</h3>
+
+<p>The <strong>Transform</strong> tool combines the <strong>Move</strong>, <strong>Rotate</strong> and <strong>Scale</strong> tools. Its Gizmo provides handles for movement and rotation. When the <strong>Tool Handle Rotation</strong> is set to <strong>Local</strong> (see below), the Transform tool also provides handles for scaling the selected GameObject.</p>
+
+<h2>Gizmo handle position toggles</h2>
+
+<figure>
+<img src="../uploads/Main/GizmoDisplayToggles.png" alt="">
+</figure>
+
+<p>The <strong>Gizmo handle position toggles</strong> are used to define the location of any Transform tool Gizmo, and the handles use to manipulate the Gizmo itself.</p>
+
+<figure>
+<img src="../uploads/Main/HandlePositionButtons.png" alt="Gizmo display toggles">
+<figcaption>Gizmo display toggles</figcaption>
+</figure>
+
+<h3>For position</h3>
+
+<p>Click the <strong>Pivot</strong>/<strong>Center</strong> button on the left to toggle between <strong>Pivot</strong> and <strong>Center</strong>.</p>
+
+<ul>
+<li>
+<strong>Pivot</strong> positions the Gizmo at the actual pivot point of a <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span>.</li>
+<li>
+<strong>Center</strong> positions the Gizmo at the center of the GameObject’s rendered bounds.</li>
+</ul>
+
+<h3>For rotation</h3>
+
+<p>Click the <strong>Local</strong>/<strong>Global</strong> button on the right to toggle between <strong>Local</strong> and <strong>Global</strong>.</p>
+
+<ul>
+<li>
+<strong>Local</strong> keeps the Gizmo’s rotation relative to the GameObject’s.</li>
+<li>
+<strong>Global</strong> clamps the Gizmo to world space orientation.</li>
+</ul>
+
+<h3>Unit snapping</h3>
+
+<p>While dragging any Gizmo Axis using the <strong>Move</strong> tool or the <strong>Transform</strong> tool, hold the <span class="tooltip"><strong>Control</strong><span class="tooltiptext">A function for displaying text, buttons, checkboxes, scrollbars and other features on the user interface. <a href="gui-Controls.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Control">Glossary</a></span></span></span> key (<strong>Command</strong> on Mac) to snap to increments defined in the <strong>Snap Settings</strong> (menu: <strong>Edit</strong> &gt; <strong>Snap Settings…</strong>)</p>
+
+<figure>
+<img src="../uploads/Main/SceneViewUnitSnappingSettings.png" alt="">
+</figure>
+
+<h3>Surface snapping</h3>
+
+<p>While dragging in the center using the <strong>Move</strong> tool or the <strong>Transform</strong> tool, hold <strong>Shift</strong> and <strong>Control</strong> (<strong>Command</strong> on Mac) to quickly snap the GameObject to the intersection of any <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span>.</p>
+
+<h3>Look-at rotation</h3>
+
+<p>While using the <strong>Rotate</strong> tool or the <strong>Transform</strong> tool, hold <strong>Shift</strong> and <strong>Control</strong> (<strong>Command</strong> on Mac) to rotate the GameObject towards a point on the surface of any <strong>Collider</strong>.</p>
+
+<h3>Vertex snapping</h3>
+
+<p>Use <strong>vertex snapping</strong> to quickly assemble your Scenes: take any vertex from a given Mesh and place that vertex in the same position as any vertex from any other Mesh you choose. For example, use vertex snapping to align road sections precisely in a racing game, or to position power-up items at the vertices of a Mesh.</p>
+
+<p>Follow the steps below to use vertex snapping:</p>
+
+<ol>
+<li><p>Select the Mesh you want to manipulate and make sure the <strong>Move</strong> tool or the <strong>Transform</strong> tool is active.</p></li>
+<li><p>Press and hold the <strong>V</strong> key to activate the vertex snapping mode.</p></li>
+<li><p>Move your cursor over the vertex on your Mesh that you want to use as the pivot point.</p></li>
+<li><p>Hold down the left mouse button once your cursor is over the vertex you want and drag your Mesh next to any other vertex on another Mesh.</p></li>
+<li><p>Release the mouse button and the <strong>V</strong> key when you are happy with the results (<strong>Shift+V</strong> acts as a toggle of this functionality).</p></li>
+</ol>
+
+<p>
+<strong>Note:</strong> You can snap vertex to vertex, vertex to surface, and pivot to vertex.</p>
+
+<h3>Screen Space Transform</h3>
+
+<p>While using the <strong>Transform</strong> tool, hold down the <strong>Shift</strong> key to enable Screen Space mode. This mode allows you to move, rotate and scale GameObjects as they appear on the screen, rather than in the Scene. </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-history">Transform tool added in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-edit"> 2017–05–18 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SceneViewNavigation.html"></a></span><div class="tip">Scene View navigation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ViewModes.html"></a></span><div class="tip">Scene view Control Bar</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

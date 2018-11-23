@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 2018.1</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide20181.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide20181.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide20181.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide20181.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide20181.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 2018.1</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20182.html"></a></span><div class="tip">Upgrading to Unity 2018.2</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20173.html"></a></span><div class="tip">Upgrading to Unity 2017.3</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 2018.1</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page lists any changes in 2018.1 which might affect existing projects when you upgrade from earlier versions of Unity</p>
+
+<hr>
+
+<h3>Coroutines returned from a MonoBehaviour while its GameObject is being disabled or destroyed are no longer started.</h3>
+
+<p>Historically, when a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> is disabled or destroyed, it stops all running coroutines on its children MonoBehaviours. In certain cases, however, coroutines started from methods called during these times (for example, <code>OnBecameInvisible()</code>) were previously allowed to start. This led to <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> order-specific behavior and, in some cases, crashes.</p>
+
+<p>In Unity 2018.1, coroutines returned during GameObject disable or destroy are no longer started.</p>
+
+<hr>
+
+<h3>BuildPipeline APIs now return a BuildReport object instead of a string</h3>
+
+<p>The BuildPipeline APIs, such as <code>BuildPipeline.BuildPlayer</code>, and <code>BuildPipeline.BuildAssetBundles</code>, previously returned a string. This was empty if the build succeeded and contained an error message if the build failed.</p>
+
+<p>In 2018.1, this has been replaced with the new BuildReport object, which contains much richer information about the build process.</p>
+
+<p>To check whether the build succeeded, retrieve the <code>summary</code> property of the report object, and check its <em>result</em> property - it will be <code>BuildResult.Succeeded</code> for a successful build. For example:</p>
+
+<pre><code>var report = BuildPipeline.BuildPlayer(...);
+
+if (report.summary.result != BuildResult.Succeeded)
+{
+    throw new Exception(&quot;Build failed&quot;);
+}
+</code></pre>
+
+<hr>
+
+<h3>Player Quit notifications have changed from messages to Events</h3>
+
+<p>Previously, to be notified when the Unity standalone player was quitting, you would implement the <code>OnApplicationQuit</code> method on a MonoBehaviour and to abort the player from quitting you would call <code>Application.CancelQuit</code>. </p>
+
+<p>Two new events have been introduced. These are <code>Application.wantsToQuit</code> and <code>Application.quitting</code>. You can listen to these events to get notified when the Unity standalone player is quitting. <code>Application.wantsToQuit</code> is called when the player is intending to quit, the listener for <code>wantsToQuit</code> must return true or false. Return true if you want the player to continue quitting or false to abort the quit. The <code>Application.quitting</code> event is called when the player is guaranteed to quit and cannot be aborted. </p>
+
+<p>
+<code>Application.CancelQuit</code> has been deprecated, please use the <code>Application.wantsToQuit</code> instead.</p>
+
+<pre><code>using UnityEngine;
+
+public class PlayerQuitExample
+
+{
+
+    static bool WantsToQuit()
+
+    {
+
+        // Do you want the editor to quit?
+
+        return true;
+
+    }
+
+    static void Quit()
+
+    {
+
+        Debug.Log(&quot;Quitting the Player&quot;);
+
+    }
+
+    [RuntimeInitializeOnLoadMethod]
+
+    static void RunOnStart()
+
+    {
+
+        Application.wantsToQuit += WantsToQuit;
+
+        Application.quit += Quit;
+
+    }
+
+}
+</code></pre>
+
+<hr>
+
+<h3>Deprecating AvatarBuilder.BuildHumanAvatar on .Net platform</h3>
+
+<p>This change affect the following runtime platform: WSAPlayerX86, WSAPlayerX64, and WSAPlayerARM.</p>
+
+<p>There is no replacement for now.</p>
+
+<hr>
+
+<h3>TouchScreenKeyboard.wasCanceled and TouchScreenKeyboard.done have been made obsolete</h3>
+
+<p>There is a new TouchScreenKeyboard.status that can be queried to cover the deprecated states and more states.</p>
+
+<hr>
+
+<h3>MonoDevelop 5.9.6 removed from Unity Installers and support for it has been deprecated in Unity.</h3>
+
+<p>MonoDevelop 5.9.6 has been replaced by Visual Studio for Mac on macOS as the bundle C# script editor in the macOS installer. Visual Studio 2017 Community is now the only C# script editor installed with Unity on Windows.</p>
+
+<p>When it is installed in the default location next to the Unity executable, Unity no longer recognises MonoDevelop as the “MonoDevelop (built-in)” external script editor in preferences. When no C# code editor is installed and selected in preferences, Unity uses the system default application for opening C# (.cs) scripts.</p>
+
+<hr>
+
+<h3>BuildPipeline callback interfaces now take a BuildReport object</h3>
+
+<p>The BuildPipeline callback interfaces: <code>IPreprocessBuild</code>, <code>IPostprocessBuild</code> and <code>IProcessScene</code> have been changed so that they now require you to pass in a <code>BuildReport</code> object. This replaces the previous parameters for build path / target platform; you will need to change your code if you are implementing these interfaces.</p>
+
+<p>Both the build path and the target platform can be accessed via the <code>BuildReport</code> object. The build path is now <code>report.summary.outputPath</code> and the target platform is <code>report.summary.platform</code>.</p>
+
+<hr>
+
+<h3>Assets located in plugin folders will no longer be imported via specialized importers</h3>
+
+<p>Previously, assets located in plugin folders (for example, in directories with the extension .bundle, .plugin, or .folder) were imported using specialized importers. Textures were imported via texture importers, AudioClips via the audio importer, etc. Now all those assets will be imported using default importer, that means you won’t be able to reference those assets like you did before, because they no longer have a specialized type (Texture, AudioClip, etc). Plugin folders are contained packages, thus assets inside shouldn’t be accessible externally, except through plugin accessing techniques.</p>
+
+<p>To continue using those assets, you’ll need to move them outside of your plugin folders.</p>
+
+<hr>
+
+<h3>Particle System Mesh particles applied the Pivot Offset value incorrectly</h3>
+
+<p>The mathematical formula used for applying pivot offsets to Meshes was incorrect, and was inconsistent with how it worked for Billboard particles. To achieve the correct scale, the Pivot Offset should be multiplied by the size of the particle, so a Pivot Offset of 1 is equal to one full width of the particle.</p>
+
+<p>For Meshes, the size was being multiplied twice, meaning the pivot amount was based on the squared particle size. This made it impossible to get consistent results in systems containing varying sized particles. </p>
+
+<p>For systems using particles of equal size, the formula can be reverse-engineered to decide how much to adjust the pivot offset by, to compensate for this change in behavior:</p>
+
+<p>Old formula: <strong>offset = size * size * pivot</strong>
+</p>
+
+<p>New formula: <strong>offset = size * pivot</strong>
+</p>
+
+<p>Therefore, if all particles are of equal size:</p>
+
+<p><strong>newOffset = pivot / size</strong></p>
+
+<p>In systems where the size varies between particles, a visual reassessment of the systems in question will be necessary.</p>
+
+<hr>
+
+<h3>GPU Instancing supports Global Illumination</h3>
+
+<p>From 2018.1, Global Illumination (GI) is supported by GPU Instancing rendering in Unity. Each GPU instance can support GI coming from either different <span class="tooltip"><a href="https://docs.unity3d.com/Manual/LightProbes.html">Light Probes</a><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>, one <span class="tooltip"><a href="https://docs.unity3d.com/Manual/Lightmapping.html">lightmap</a><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> (but different region in the atlas), or one <span class="tooltip"><a href="https://docs.unity3d.com/Manual/class-LightProbeProxyVolume.html">Light Probe Proxy Volume</a><span class="tooltiptext">A component that allows you to use more lighting information for large dynamic GameObjects that cannot use baked lightmaps (for example, large Particle Systems or skinned Meshes). <a href="class-LightProbeProxyVolume.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbeProxyVolume">Glossary</a></span></span></span> component (baked for the space volume containing all the instances). Standard shaders and surface shaders come with these changes automatically, but you need to update custom shader code to enable these features.</p>
+
+<hr>
+
+<h3>Handle Draw and Size Function Defaults</h3>
+
+<p>Complex handles in the UnityEditor.IMGUI.Controls namespace, such as BoxBoundsHandle, CapsuleBoundsHandle, SphereBoundsHandle, ArcHandle, and JointAngularLimitHandle have delegates that can be assigned to, in order to alter the appearance of their control points. Previously, assigning a value of null to these delegates would fall back to a default behavior. Assigning a value of null to them now results in no behavior, making it easier to disable particular control handles. Respectively, each class now has public API points for the default methods if you need to reset the control handles to their default behavior.</p>
+
+<hr>
+
+<h3>Compiling ‘unsafe’ C# code in the Unity Editor now requires enabling of option.</h3>
+
+<p>Compiling ‘unsafe’ C# code now requires the <strong>Allow ‘unsafe’ code</strong> option to be enabled in the Player Settings for predefined assemblies (like Assembly-CSharp.dll) and in the inspector for Assembly Definition Files assemblies. Enabling this option will make Unity pass /unsafe option to the C# compiler when compiling scripts.</p>
+
+<hr>
+
+<h3>‘UnityPackageManager’ directory renamed to ‘Packages’</h3>
+
+<p>In 2017.2 and 2017.3, the Unity Package Manager introduced the <strong>UnityPackageManager </strong>directory, which was used to store a file named <strong>manifest.json</strong>. Package content could be accessed by scripts using virtual relative paths starting with <strong>Packages</strong>.</p>
+
+<p>In 2018.1, the <strong>UnityPackageManager </strong>directory has been renamed to <strong>Packages</strong> for consistency with the virtual relative paths of packaged assets. The <strong>manifest.json</strong> file should automatically be moved to the new directory.</p>
+
+<p>As a result:</p>
+
+<ul>
+<li><p>If your project uses a Version Control System (VCS) such as Perforce or Git, it may be necessary to update its configuration to track the <strong>Packages </strong>directory instead of the <strong>UnityPackageManager</strong> directory.</p></li>
+<li>
+<p>If your project uses Nuget (or any external package manager) in a way that makes it use the <strong>Packages</strong> directory, its configuration should be changed to use a different directory. This is recommended to eliminate the small chance that a package be picked up by the Unity Package Manager, which could result in hard-to-debug issues like compilation errors or import errors.</p>
+
+<ul>
+<li>To configure Nuget to use a different directory to store its packages, please refer to <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior">the official Microsoft documentation</a>.</li>
+</ul>
+</li>
+<li><p>After migrating to the new directory, the <strong>UnityPackageManager</strong> directory can safely be deleted.</p></li>
+</ul>
+
+<p>
+<br><br> For more information about what’s new in 2018.1 and for more detailed upgrade notes, see the <a href="https://unity3d.com/unity/whats-new/unity-2018.1.0">2018.1 Release Notes</a>
+</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20182.html"></a></span><div class="tip">Upgrading to Unity 2018.2</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20173.html"></a></span><div class="tip">Upgrading to Unity 2017.3</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

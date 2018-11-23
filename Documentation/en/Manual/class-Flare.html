@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Flare</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-Flare.html">English</a></li>
+<li><a href="/ja/current/Manual/class-Flare.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-Flare.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-Flare.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-Flare.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="comp-Effects.html">Visual Effects Reference</a></li>
+<li><a href="class-LensFlare.html">Lens Flare</a></li>
+<li>Flare</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-LensFlare.html"></a></span><div class="tip">Lens Flare</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-LineRenderer.html"></a></span><div class="tip">Line Renderer</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Flare</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/Flare.html' title='Go to Flare page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<strong>Flare</strong> objects are the source <span class="tooltip"><strong>assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> that are used by <a href="class-LensFlare.html">Lens Flare Components</a>. The Flare itself is a combination of a texture file and specific information that determines how the Flare behaves. Then when you want to use the Flare in a <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, you reference the specific Flare from inside a <strong>LensFlare</strong> <span class="tooltip"><strong>Component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> attached to a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>.</p>
+
+<p>There are some sample Flares in the <span class="tooltip"><a href="AssetTypes.html#Standard">Standard Assets</a><span class="tooltiptext">A collection of useful assets supplied with Unity. Unity ships with multiple Standard Asset such as 2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, and Vehicles. <a href="AssetTypes.html#Standard">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardAsset">Glossary</a></span></span></span> package. If you want to add one of these to your scene, attach a <a href="class-LensFlare.html">Lens Flare</a> Component to a GameObject, and drag the Flare you want to use into the <strong>Flare</strong> property of the Lens Flare, just like assigning a <span class="tooltip"><strong>Material</strong><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#material">Glossary</a></span></span></span> to a <span class="tooltip"><strong>Mesh Renderer</strong><span class="tooltiptext">A mesh component that takes the geometry from the Mesh Filter and renders it at the position defined by the object’s Transform component. <a href="class-MeshRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/FlareInspector.png" alt="The Flare Inspector">
+<figcaption>The Flare Inspector</figcaption>
+</figure>
+
+<p>Flares work by containing several Flare <strong>Elements</strong> on a single <span class="tooltip"><strong>Texture</strong><span class="tooltiptext">An image used when rendering a GameObject, Sprite, or UI element. Textures are often applied to the surface of a mesh to give it visual detail. <a href="class-TextureImporter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#texture">Glossary</a></span></span></span>. Within the Flare, you pick and choose which <strong>Elements</strong> you want to include from any of the Textures. </p>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Elements</strong></td>
+	<td style="text-align:left;">The number of Flare images included in the Flare.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Image Index</strong>
+</td>
+	<td style="text-align:left;">Which Flare image to use from the <span class="tooltip"><strong>Flare Texture</strong><span class="tooltiptext">A texture containing images used by a Flare asset. It must be arranged according to one of the TextureLayout options. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FlareTexture">Glossary</a></span></span></span> for this Element. See the <em>Flare Textures</em> section below for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position</strong>
+</td>
+	<td style="text-align:left;">The Element’s offset along a line running from the containing GameObject’s position through the screen center. 0 = GameObject position, 1 = screen center.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Size</strong>
+</td>
+	<td style="text-align:left;">The size of the element.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Color</strong>
+</td>
+	<td style="text-align:left;">Color tint of the element.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Use Light Color</strong>
+</td>
+	<td style="text-align:left;">If the Flare is attached to a Light, enabling this will tint the Flare with the Light’s color.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Rotate</strong>
+</td>
+	<td style="text-align:left;">If enabled, bottom of the Element will always face the center of the screen, making the Element spin as the Lens Flare moves around on the screen.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <span class="tooltip"><strong>Zoom</strong><span class="tooltiptext">A camera control that lets you scale the view on your screen. To zoom a camera in the Unity Editor, press Alt + right click and drag. <a href="SceneViewNavigation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#zoom">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">If enabled, the Element will scale up when it becomes visible and scale down again when it isn’t.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Fade</strong>
+</td>
+	<td style="text-align:left;">If enabled, the Element will fade in to full strength when it becomes visible and fade out when it isn’t.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare Texture</strong></td>
+	<td style="text-align:left;">A texture containing images used by this Flare’s <strong>Elements</strong>. It must be arranged according to one of the <strong>TextureLayout</strong> options.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Layout</strong></td>
+	<td style="text-align:left;">How the individual Flare Element images are laid out inside the <strong>Flare Texture</strong> (see <em>Texture Layouts</em> below for further details).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Fog</strong></td>
+	<td style="text-align:left;">If enabled, the Flare will fade away with distance fog. This is used commonly for small Flares.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>A Flare consists of multiple <strong>Elements</strong>, arranged along a line. The line is calculated by comparing the position of the GameObject containing the Lens Flare to the center of the screen. The line extends beyond the containing GameObject and the screen center. All Flare <strong>Elements</strong> are strung out on this line.</p>
+
+<h2>Flare Textures</h2>
+
+<p>For performance reasons, all <strong>Elements</strong> of one Flare must share the same Texture. This Texture contains a collection of the different images that are available as Elements in a single Flare. The <strong>Texture Layout</strong> defines how the <strong>Elements</strong> are laid out in the <strong>Flare Texture</strong>.</p>
+
+<h2>Texture Layouts</h2>
+
+<p>These are the options you have for different Flare <strong>Texture Layouts</strong>. The numbers in the images correspond to the <strong>Image Index</strong> property for each <strong>Element</strong>.</p>
+
+<h3>1 Large 4 Small</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout0.png" alt="">
+</figure>
+
+<p>Designed for large sun-style Flares where you need one of the <strong>Elements</strong> to have a higher fidelity than the others. This is designed to be used with Textures that are twice as high as they are wide.</p>
+
+<h3>1 Large 2 Medium 8 Small</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout1.png" alt="">
+</figure>
+
+<p>Designed for complex flares that require 1 high-definition, 2 medium and 8 small images. This is used in the standard assets “50mm Zoom Flare” where the two medium Elements are the rainbow-colored circles. This is designed to be used with textures that are twice as high as they are wide.</p>
+
+<h3>1 Texture</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout2.png" alt="">
+</figure>
+
+<p>A single image.</p>
+
+<h2>2x2 grid</h2>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout3.png" alt="">
+</figure>
+
+<p>A simple 2x2 grid.</p>
+
+<h3>3x3 grid</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout4.png" alt="">
+</figure>
+
+<p>A simple 3x3 grid.</p>
+
+<h3>4x4 grid</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout5.png" alt="">
+</figure>
+
+<p>A simple 4x4 grid.</p>
+
+<h2>Hints</h2>
+
+<ul>
+<li>If you use many different Flares, using a single <strong>Flare Texture</strong> that contains all the <strong>Elements</strong> will give you best <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> performance.</li>
+<li>Lens Flares are blocked by <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span>. A Collider in-between the Flare GameObject and the <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> will hide the Flare, even if the Collider does not have a <strong>Mesh Renderer</strong>. If the in-between Collider is marked as Trigger it will block the flare if and only if <strong>Physics.queriesHitTriggers</strong> is true.</li>
+<li>To override the <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> used for Flares, open the <a href="class-GraphicsSettings.html">Graphics Settings</a> and set <span class="tooltip"><strong>Lens Flares</strong><span class="tooltiptext">A component that simulates the effect of lights refracting inside a camera lens. Use a Lens Flare to represent very bright lights or add atmosphere to your scene. <a href="class-LensFlare.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LensFlare">Glossary</a></span></span></span> to the shader that you would like to use as the override.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-LensFlare.html"></a></span><div class="tip">Lens Flare</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-LineRenderer.html"></a></span><div class="tip">Line Renderer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

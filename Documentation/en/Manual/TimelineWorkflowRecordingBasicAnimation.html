@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Recording basic animation with an Infinite clip</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="TimelineSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/TimelineWorkflowRecordingBasicAnimation.html">English</a></li>
+<li><a href="/ja/current/Manual/TimelineWorkflowRecordingBasicAnimation.html">日本語</a></li>
+<li><a href="/es/current/Manual/TimelineWorkflowRecordingBasicAnimation.html">Español</a></li>
+<li><a href="/kr/current/Manual/TimelineWorkflowRecordingBasicAnimation.html">한국어</a></li>
+<li><a href="/ru/current/Manual/TimelineWorkflowRecordingBasicAnimation.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="TimelineSection.html"> Timeline</a></li>
+<li><a href="TimelineWorkflows.html"> Timeline workflows</a></li>
+<li> Recording basic animation with an Infinite clip</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TimelineWorkflowCreatingAssetInstance.html"></a></span><div class="tip"> Creating a Timeline Asset and Timeline instance</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TimelineWorkflowConvertingInfiniteClip.html"></a></span><div class="tip"> Converting an Infinite clip to an Animation clip</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h2>Recording basic animation with an Infinite clip</h2>
+
+<p>You can record animation directly to an Animation track. When you record directly to an empty Animation track, you create an <strong>Infinite clip</strong>.</p>
+
+<p>An Infinite clip is defined as a clip that contains basic key animation recorded through the <span class="tooltip"><strong>Timeline</strong><span class="tooltiptext">Generic term within Unity that refers to all features, windows, editors, and components related to creating, modifying, or reusing cut-scenes, cinematics, and game-play sequences. <a href="TimelineSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timeline">Glossary</a></span></span></span> Editor window. An Infinite clip cannot be positioned, trimmed, or split because it does not have a defined size: it spans the entirety of an Animation track. </p>
+
+<p>Before creating an Infinite clip, you must <a href="TimelineAddingTracks.html">add an empty Animation track</a> for the <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> that you want to animate.</p>
+
+<p>In the <span class="tooltip"><strong>Track list</strong><span class="tooltiptext">The area in the Timeline Editor window where you add, group, and modify tracks. <a href="TimelineTrackList.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Tracklist">Glossary</a></span></span></span>, click the Record button for the empty Animation track to enable Record mode. The Record button is available for Animation tracks bound to simple GameObjects such as cubes, spheres, lights, and so on. The Record button is disabled for Animation tracks bound to humanoid GameObjects.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_record_button.png" alt="Click the Record button on an empty track to enable Record mode">
+<figcaption>Click the Record button on an empty track to enable Record mode</figcaption>
+</figure>
+
+<p>When a track is in Record mode, the clip area of the track is drawn in red with the “Recording…” message. The Record button blinks.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_recording.png" alt="Timeline Editor window in Record mode">
+<figcaption>Timeline Editor window in Record mode</figcaption>
+</figure>
+
+<p>When in Record mode, any modification to an <span class="tooltip"><strong>animatable property</strong><span class="tooltiptext">A property belonging to a GameObject, or belonging to a component added to a GameObject, that can have different values over time. <a href="animeditor-AnimatingAGameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animatableproperty">Glossary</a></span></span></span> of the GameObject sets a key at the location of the <span class="tooltip"><strong>Timeline Playhead</strong><span class="tooltiptext">The white marker and line that indicates the exact point in time being previewed in the Timeline Editor window. <a href="TimelinePositioningClips.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimelinePlayhead">Glossary</a></span></span></span>. Animatable properties include transforms and the animatable properties for all <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> added to the GameObject.</p>
+
+<p>To start creating an animation, move the Timeline Playhead to the location of the first key, and do one of the following: </p>
+
+<ul>
+<li><p>In the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window, Right-click the name of the property and choose <strong>Add Key</strong>. This adds an <span class="tooltip"><strong>animation key</strong><span class="tooltiptext">The value of an animatable property, set at a specific point in time. Setting at least two keys for the same property creates an animation. <a href="animeditor-AnimationCurves.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnimationKey">Glossary</a></span></span></span> for the property without changing its value. A white diamond appears in the infinite clip to show the position of the key.</p></li>
+<li><p>In the Inspector window, change the value of the animatable property of the GameObject. This adds an animation key for the property with its changed value. A white diamond appears in the infinite clip.</p></li>
+<li><p>In the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, move, rotate, or scale the GameObject to add a key. This automatically adds a key for the properties you change. A white diamond appears in the infinite clip.</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/timeline_property_red.png" alt="Red background indicates that an animation curve for the property has been added to the clip">
+<figcaption>Red background indicates that an animation curve for the property has been added to the clip</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_recording_diamonds.png" alt="Setting a key adds a white diamond to the infinite clip">
+<figcaption>Setting a key adds a white diamond to the infinite clip</figcaption>
+</figure>
+
+<p>Move the playhead to a different position on the timeline and change the animatable properties of the GameObject. At each position, the <span class="tooltip"><strong>Timeline Editor window</strong><span class="tooltiptext">The name of the window where you create, modify, and preview a Timeline instance. Modifications to a Timeline instance also affects the Timeline Asset. <a href="TimelineEditorWindow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimelineEditorwindow">Glossary</a></span></span></span> adds a white diamond to the Infinite clip for any changed properties and adds a key to its associated <span class="tooltip"><strong>animation curves</strong><span class="tooltiptext">The curve drawn between keys set for the same animatable property, at different frames or seconds. The position of the tangents and the selected interpolation mode for each key determines the shape of the animation curve. <a href="AnimationCurvesOnImportedClips.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcurve">Glossary</a></span></span></span>. </p>
+
+<p>While in Record mode, you can Right-click the name of an animatable property name to perform keying operations such as setting a key without changing its value, jumping to the next or previous keys, removing keys, and so on. For example, to set a key for the position of a GameObject without changing its value, Right-click <strong>Position</strong> and select <strong>Add Key</strong> from the context menu.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_keyframing_menu.png" alt="Right-click the name of an animatable property to perform keying operations">
+<figcaption>Right-click the name of an animatable property to perform keying operations</figcaption>
+</figure>
+
+<p>When you finish the animation, click the blinking Record button to disable Record mode.</p>
+
+<p>An Infinite clip appears as a dopesheet in the Timeline Editor window, but you cannot edit the keys in this view. Use <a href="TimelineEditingKeys.html">the Curves view to edit keys</a>. You can also Double-click the Infinite clip and edit the keys with the Animation window. </p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_dopesheet.png" alt="An Infinite clip appear as a dopesheet">
+<figcaption>An Infinite clip appear as a dopesheet</figcaption>
+</figure>
+
+<p>Save the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> or project to save the <span class="tooltip"><strong>Timeline Asset</strong><span class="tooltiptext">Refers to the tracks, clips, and recorded animation that comprise a cinematic, cut-scene, game-play sequence, or other effect created with the Timeline Editor window. A Timeline Asset does not include bindings to the GameObjects animated by the Timeline Asset. The bindings to scene GameObjects are stored in the Timeline instance. The Timeline Asset is project-based. <a href="TimelineOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimelineAsset">Glossary</a></span></span></span> and the Infinite clip. The Timeline Editor window saves the key animation from the Infinite clip as a source <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>. The source <strong>asset</strong> is named “Recorded” and saved as a child of the <strong>Timeline Asset</strong> in the project. </p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_clip_in_project.png" alt="Recorded clips are saved under the Timeline Asset in the project">
+<figcaption>Recorded clips are saved under the Timeline Asset in the project</figcaption>
+</figure>
+
+<p>For every additional recorded Infinite clip, each clip is sequentially numbered starting at “(1)”. For example, a Timeline Asset with three recorded Infinite clips are named “Recorded”, “Recorded (1)”, and “Recorded (2)”. If you delete a Timeline Asset, its child clips are also removed.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–10 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TimelineWorkflowCreatingAssetInstance.html"></a></span><div class="tip"> Creating a Timeline Asset and Timeline instance</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TimelineWorkflowConvertingInfiniteClip.html"></a></span><div class="tip"> Converting an Infinite clip to an Animation clip</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

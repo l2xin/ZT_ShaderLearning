@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Script compilation and assembly definition files</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ScriptingSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/ScriptCompilationAssemblyDefinitionFiles.html">English</a></li>
+<li><a href="/ja/current/Manual/ScriptCompilationAssemblyDefinitionFiles.html">日本語</a></li>
+<li><a href="/es/current/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Español</a></li>
+<li><a href="/kr/current/Manual/ScriptCompilationAssemblyDefinitionFiles.html">한국어</a></li>
+<li><a href="/ru/current/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ScriptingSection.html">Scripting</a></li>
+<li><a href="ScriptingConcepts.html">Scripting Overview</a></li>
+<li>Script compilation and assembly definition files</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ScriptCompileOrderFolders.html"></a></span><div class="tip">Special folders and script compilation order</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="dotnetProfileSupport.html"></a></span><div class="tip"> .NET profile support</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Script compilation and assembly definition files</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>About</h2>
+
+<p>Unity automatically defines how <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> compile to managed assemblies. Typically, compilation times in the Unity Editor for iterative script changes increase as you add more <strong>scripts</strong> to the Project. </p>
+
+<p>Use an assembly definition file to define your own managed assemblies based upon scripts inside a folder. To do this, separate Project scripts into multiple assemblies with well-defined dependencies in order to ensure that only required assemblies are rebuilt when making changes in a script. This reduces compilation time. Think of each managed assembly as a single library within the Unity Project. </p>
+
+<figure>
+<img src="../uploads/Main/ScriptCompilation.png" alt="Figure 1 - Script compilation">
+<figcaption>Figure 1 - Script compilation</figcaption>
+</figure>
+
+<p>
+<strong>Figure 1</strong> above illustrates how to split the Project scripts into several assemblies. Changing only scripts in Main.dll causes none of the other assemblies to recompile. Since Main.dll contains fewer scripts, it also compiles faster than Assembly-CSharp.dll.
+Similarly, script changes in only Stuff.dll causes Main.dll and Stuff.dll to recompile.</p>
+
+<h2>How to use assembly definition files</h2>
+
+<p>Assembly definition files are Asset files that you create by going to <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> &gt; <strong>Create</strong> &gt; <strong>Assembly Definition</strong>. They have the extension .asmdef.</p>
+
+<p>Add an assembly definition file to a folder in a Unity Project to compile all the scripts in the folder into an assembly. Set the name of the assembly in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</p>
+
+<p>
+<strong>Note</strong>: The name of the folder in which the assembly definition file resides and the filename of the assembly definition file have no effect on the name of the assembly.</p>
+
+<figure>
+<img src="../uploads/Main/ExampleImportSettings.png" alt="Figure 2 - Example Import Settings">
+<figcaption>Figure 2 - Example Import Settings</figcaption>
+</figure>
+
+<p>Add references to other assembly definition files in the Project using the Inspector too. To view the Inspector, click your Assembly Definition file and it should appear. To add a reference, click the <strong>+</strong> icon under the <strong>References</strong> section and choose your file.</p>
+
+<p>Unity uses the references to compile the assemblies and also defines the dependencies between the assemblies.</p>
+
+<p>To mark the assembly for testing, enable Test Assemblies in the Inspector. This adds references to unit.framework.dll and UnityEngine.TestRunner.dll in the Assembly Definition file.</p>
+
+<p>When you mark an assembly for testing, makes sure that:</p>
+
+<ul>
+<li><p>Predefined assemblies (Assembly-CSharp.dll etc.) do not automatically reference Assembly Definition Files flagged for testing.</p></li>
+<li><p>The assembly is not included in a normal build. To include the assemblies in a player build, use <a href="../ScriptReference/BuildOptions.IncludeTestAssemblies.html">BuildOptions.IncludeTestAssemblies</a> in your building script. Note that this only includes the assemblies in your build and does not execute any tests.</p></li>
+</ul>
+
+<p>
+<strong>Note</strong>: If you use the <em>unsafe</em> keyword in a script inside an assembly, you must enable the <strong>Allow ‘unsafe’ Code</strong> option in the Inspector. This will pass the /unsafe option to the C# compiler when compiling the assembly.</p>
+
+<p>You set the platform compatibility for the assembly definition files in the Inspector. You have the option to exclude or include specific platforms.</p>
+
+<h2>Multiple assembly definition files inside a folder hierarchy</h2>
+
+<p>Having multiple assembly definition files (extension: .asmdef) inside a folder hierarchy causes each script to be added to the assembly definition file with the shortest path distance.</p>
+
+<p>Example:</p>
+
+<p>If you have an <em>Assets/ExampleFolder/MyLibrary.asmdef</em> file and an <em>Assets/ExampleFolder/ExampleFolder2/Utility.asmdef</em> file,
+then:</p>
+
+<ul>
+<li><p>Any scripts inside the <strong>Assets</strong> &gt; <strong>ExampleFolder</strong> &gt; <strong>ExampleFolder2</strong> folder will be compiled into the Assets/ExampleFolder/ExampleFolder2/Utility.asmdef defined assembly.</p></li>
+<li><p>Any files in the <strong>Assets</strong> &gt; <strong>ExampleFolder</strong> folder that are not inside the <strong>Assets</strong> &gt; <strong>ExampleFolder</strong> &gt; <strong>ExampleFolder2</strong> folder will be compiled into the Assets/ExampleFolder/MyLibrary.asmdef defined assembly.</p></li>
+</ul>
+
+<h2>Assembly definition files are not build system files</h2>
+
+<p>
+<strong>Note</strong>: The assembly definition files are not assembly build files. They do not support conditional build rules typically found in build systems.</p>
+
+<p>This is also the reason why the assembly definition files do not support setting of preprocessor directives (defines), as those are static at all times.</p>
+
+<h2>Backwards compatibility and implicit dependencies</h2>
+
+<p>Assembly definition files are backwards compatible with the existing <a href="ScriptCompileOrderFolders.html">Predefined Compilation System</a> in Unity. This means that the predefined assemblies always depend on every assembly definition file’s assemblies.
+This is similar to how all scripts are dependent on all precompiled assemblies (plugins / .dlls) compatible with the active build target in Unity.</p>
+
+<figure>
+<img src="../uploads/Main/AssemblyDependencies.png" alt="Figure 3 - Assembly dependencies">
+<figcaption>Figure 3 - Assembly dependencies</figcaption>
+</figure>
+
+<p>The diagram in <strong>Figure 3</strong> illustrates the dependencies between predefined assemblies, assembly definition files assemblies and precompiled assemblies.</p>
+
+<p>Unity gives priority to the assembly definition files over the <a href="ScriptCompileOrderFolders.html">Predefined Compilation System</a>.
+This means that having any of the special folder names from the predefined compilation inside a assembly definition file folder does not have any effect on the compilation. Unity treats these as regular folders without any special meaning.</p>
+
+<p>It is highly recommended that you use assembly definition files for all the scripts in the Project, or not at all. Otherwise, the scripts that are not using assembly definition files always recompile every time an assembly definition file recompiles. This reduces the benefit of using assembly definition files.</p>
+
+<h2>API</h2>
+
+<p>In the UnityEditor.Compilation namespace there is a static <a href="../ScriptReference/Compilation.CompilationPipeline.html">CompilationPipeline</a> class that you use to retrieve information about assembly definition files and all assemblies built by Unity.</p>
+
+<h2>File format</h2>
+
+<p>Assembly definition files are JSON files. They have the following fields:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Field</strong></th>
+	<th style="text-align:left;"><strong>Type</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>name</strong></td>
+	<td style="text-align:left;">string</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>references(optional)</strong></td>
+	<td style="text-align:left;">string array</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>includePlatforms (optional)</strong></td>
+	<td style="text-align:left;">string array</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>excludePlatforms (optional)</strong></td>
+	<td style="text-align:left;">string array</td>
+</tr>
+</tbody>
+</table>
+
+<p>Do not use the <strong>includePlatforms</strong> and <strong>excludePlatforms</strong> fields in the same assembly definition file.</p>
+
+<p>Retrieve the platform names by using <code>CompilationPipeline.GetAssemblyDefinitionPlatforms.</code>
+</p>
+
+<h2>Examples</h2>
+
+<p>MyLibrary.asmdef</p>
+
+<pre><code>{
+    &quot;name&quot;: &quot;MyLibrary&quot;,
+    &quot;references&quot;: [ &quot;Utility&quot; ],
+    &quot;includePlatforms&quot;: [&quot;Android&quot;, &quot;iOS&quot;]
+}
+</code></pre>
+
+<p>MyLibrary2.asmdef</p>
+
+<pre><code>{
+    &quot;name&quot;: &quot;MyLibrary2&quot;,
+    &quot;references&quot;: [ &quot;Utility&quot; ],
+     &quot;excludePlatforms&quot;: [&quot;WebGL&quot;]
+}
+</code></pre>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–07 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New feature in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">Custom Script Assemblies updated in 2018.1</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ScriptCompileOrderFolders.html"></a></span><div class="tip">Special folders and script compilation order</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="dotnetProfileSupport.html"></a></span><div class="tip"> .NET profile support</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

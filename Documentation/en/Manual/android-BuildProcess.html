@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Building apps for Android</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/android-BuildProcess.html">English</a></li>
+<li><a href="/ja/current/Manual/android-BuildProcess.html">日本語</a></li>
+<li><a href="/es/current/Manual/android-BuildProcess.html">Español</a></li>
+<li><a href="/kr/current/Manual/android-BuildProcess.html">한국어</a></li>
+<li><a href="/ru/current/Manual/android-BuildProcess.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-GettingStarted.html"> Getting started with Android development</a></li>
+<li> Building apps for Android</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TroubleShootingAndroid.html"></a></span><div class="tip"> Troubleshooting Android development</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-bugreporting.html"></a></span><div class="tip"> Reporting crash bugs under Android</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Building apps for Android</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>There are two locations to configure settings that affect how your app is built:</p>
+
+<ul>
+<li>Player Settings - Allows you to configure runtime settings for the app. For more information on Player Settings, see <a href="https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html">Android Player Settings</a>.</li>
+<li>Build settings - Allows you to configure build system parameters and build the app.</li>
+</ul>
+
+<p>The output package includes an <strong>APK</strong>, and an <strong>APK</strong> expansion file (OBB) if the <strong>Split Application Binary</strong> option is selected in the Unity Editor’s <a href="class-PlayerSettings.html">Player Settings</a> window. For more information on OBB files, see <a href="android-OBBsupport.html">OBB Support</a>.</p>
+
+<p>To optimize for download and installation size, enable the <strong>Split APKs by target architecture</strong> option in <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>. The <strong>Split APKs by target architecture</strong> option produces one set of APKs and OBBs for each device architecture selected in the <strong>Target Architecture</strong> list in the <strong>Player Settings</strong>. You can upload this set of APKs (and OBBs, if enabled) to the Google Play, or other, store instead of a FAT APK in which all of the selected architectures are included into a single APK. For more information on this feature, see Multiple APK support on the<a href="https://developer.android.com/google/play/publishing/multiple-apks"> Android Developer</a> website. </p>
+
+<h2>Configuring Build Settings</h2>
+
+<p>To configure and build apps for Android, access the Build Settings window, select <strong>File</strong> &gt; <strong>Build Setting</strong>. In <strong>Platforms</strong>, select <strong>Android</strong>. </p>
+
+<p>To set Android as your default build platform, click the <strong>Switch Platform</strong> button.</p>
+
+<p>When you have specified your build settings, click the <span class="tooltip"><strong>Build</strong><span class="tooltiptext">The process of compiling your project into a format that is ready to run on a specific platform or platforms. <a href="BuildSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#build">Glossary</a></span></span></span> button to create your build. To build the app, click <strong>Build And Run</strong> to create and run your build on the platform you have specified. In Platform, select <strong>Android</strong>.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Option</th>
+	<th style="text-align:left;">Purpose</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Texture <strong>Compression</strong>
+</td>
+	<td style="text-align:left;">The Unity Android build system supports the following texture <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> format options: Don’t override, DXT (Tegra), <span class="tooltip"><strong>PVRTC</strong><span class="tooltiptext">PowerVR Texture Compression (PVRTC) is a fixed-rate texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PVRTC">Glossary</a></span></span></span> (PowerVR), <span class="tooltip"><strong>ETC</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span> (default), ETC2 (GLES 3.0), and <span class="tooltip"><strong>ASTC</strong><span class="tooltiptext">Adaptive Scalable Texture Compression (ASTC) A block-based texture format that compresses textures to significantly reduce file sizes without cau sing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ASTC">Glossary</a></span></span></span>. For advice on using these formats, see the Texture Compression section.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ETC2 fallback</td>
+	<td style="text-align:left;">32-bit, 16-bit, and 32-bit, half resolution.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Build System</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Internal - Generate the output package (APK) using the internal Unity build process, based on Android SDK utilities. Selecting Internal hides the Export Project checkbox.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Gradle - Generate the output package (APK) using the Gradle build system. Supports direct Build and Run and exporting the Project to a directory. This is the default Build System for Unity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Export Project</td>
+	<td style="text-align:left;">Export the Project as a Gradle project that you can import into Android Studio.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Development Build</td>
+	<td style="text-align:left;">A development build includes debug symbols and enables the <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span>. Selecting Development Build allows you to select the Autoconnect <strong>Profiler</strong>, Script Debugging, and <span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> Only Build options.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Autoconnect Profiler</td>
+	<td style="text-align:left;">Allows the Profiler to automatically connect to the build. Selectable when the Development Build option is selected. For more information on the Profiler, see Profiler Overview.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Script Debugging</td>
+	<td style="text-align:left;">Allow script debuggers to attach to the Player remotely. Enabled when the Development Build option is selected.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Scripts Only Build</td>
+	<td style="text-align:left;">Check this option to build just the scripts in the current Project. Enabled when the Development Build option is selected.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Compression Method</td>
+	<td style="text-align:left;">Compress the data in your Project at build time. Choose between the following methods:</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Default - The default compression is ZIP, which gives slightly better compression results than LZ4 and LZ4HC, but data is slower to decompress.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">LZ4 - A fast compression format that is useful for development builds. Using LZ4 compression can significantly improve loading time of games/apps built with Unity. For more information, see BuildOptions.CompressWithLz4.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">LZ4HC - A high compression variant of LZ4 that is slower to build but produces better results for release builds. Using LZ4HC compression can significantly improve loading time of games/apps built with Unity. For more information, see <a href="../ScriptReference/BuildOptions.CompressWithLz4HC.html">BuildOptions.CompressWithLz4HC</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SDKs for App Stores</td>
+	<td style="text-align:left;">Select which third party app stores to integrate with. To include an integration, click Add next to an App Store name. The Unity Package Manager automatically downloads and includes the relevant integration package.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Texture compression</h2>
+
+<p>Unity uses the Ericsson Texture Compression (ETC) format for textures that don’t have individual <span class="tooltip"><strong>texture format</strong><span class="tooltiptext">A file format for handling textures during realtime rendering by 3D graphics hardware, such as a graphics card or mobile device. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureFormat">Glossary</a></span></span></span> overrides. When building an APK to target specific hardware, use the <span class="tooltip"><strong>Texture Compression</strong><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span> option to override this default behavior. <strong>Texture Compression</strong> is a global setting for the Project. If a texture has a specific override on it, that texture is not affected by the <strong>Texture Compression</strong> setting. For additional information, see <span class="tooltip"><a href="https://docs.unity3d.com/Manual/class-TextureImporter.html">Textures</a><span class="tooltiptext">An image used when rendering a GameObject, Sprite, or UI element. Textures are often applied to the surface of a mesh to give it visual detail. <a href="class-TextureImporter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#texture">Glossary</a></span></span></span>.</p>
+
+<p>For additional information on textures and texture compression, see <a href="https://docs.unity3d.com/Manual/class-TextureImporterAndroid.html">Android 2D Textures Overrides</a>.</p>
+
+<p>For additional information on the texture compression formats, see <a href="class-TextureImporterOverride.html">Texture compression formats for platform-specific overrides</a>. In particular, see the <strong>Notes on Android</strong> at the end of the topic.</p>
+
+<p>
+<strong>Note</strong>: <strong>Texture Compression</strong> is a global setting. Individual textures override the global setting. </p>
+
+<h2>ETC2 fallback</h2>
+
+<p>For Android devices that don’t support ETC2 (which don’t support GL ES3), you can override the default ETC2 texture decompression by choosing from 32-bit, 16-bit, or 32-bit with half the resolution formats.</p>
+
+<p>This option allows you to choose between the uncompressed image quality and the amount of memory the uncompressed texture occupies. 32-bit RGBA texture is the highest quality format, and takes twice the required disk space as the 16-bit format, but a texture in 16-bit might lose some valuable color information. 32-bit half-resolution reduces the memory requirement further, but the texture is likely to become blurry.</p>
+
+<h2>Build system</h2>
+
+<p>Unity supports two Android build systems: <span class="tooltip"><strong>Gradle</strong><span class="tooltiptext">An Android build system that automates several build processes. This automation means that many common build errors are less likely to occur. <a href="android-gradle-overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gradle">Glossary</a></span></span></span> and <strong>Internal</strong>.</p>
+
+<p>The steps involved with building for Android are:</p>
+
+<ul>
+<li><p>Preparing and building the Unity <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>.</p></li>
+<li><p>Compiling scripts.</p></li>
+<li><p>Processing the plug-ins.</p></li>
+<li><p>Splitting the resources into the parts that go to the APK and the OBB, if <strong>Split Application Binary</strong> is selected.</p></li>
+<li><p>Building the Android resources using the AAPT utility (internal build only.)</p></li>
+<li><p>Generating the Android manifest.</p></li>
+<li><p>Merging the library manifests into the Android manifest (internal build only.)</p></li>
+<li><p>Compiling the Java code into the Dalvik Executable format (DEX) (internal build only.)</p></li>
+<li><p>Building the <span class="tooltip"><a href="IL2CPP.html">IL2CPP</a><span class="tooltiptext">A Unity-developed scripting back-end which you can use as an alternative to Mono when building projects for some platforms. <a href="IL2CPP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#IL2CPP">Glossary</a></span></span></span> library, if <strong>IL2CPP Scripting Backend</strong> is selected.</p></li>
+<li><p>Building and optimizing the APK and OBB packages.</p></li>
+</ul>
+
+<p><strong>Gradle build system</strong></p>
+
+<p>The Gradle build system uses Gradle to build an APK or export a Project in Gradle format, which can then be imported to Android Studio. When you select this build system, Unity goes through the same steps as the <strong>Internal</strong> build system excluding resource compilation with AAPT, merging manifests, and running DEX. Unity then generates the <em>build.gradle</em> file (along with the other required configuration files) and invokes the Gradle executable, passing it the task name and the working directory. Finally, the APK is built by Gradle.</p>
+
+<p>For more details, see <a href="android-gradle-overview.html">Gradle for Android</a>.</p>
+
+<p><strong>Internal build system</strong></p>
+
+<p>The <strong>Internal</strong> build system creates an APK using the Android SDK utilities to build and optimize the APK and OBB packages. For more information about OBB files, see <a href="android-OBBsupport.html">OBB Support</a>. </p>
+
+<h2>Exporting the Project</h2>
+
+<p>If you need more control over the build pipeline, or to make changes that Unity does not normally allow (for example, fine tuning the manifest files that are automatically generated by Unity), you can export your Project and import it into Android Studio. Exporting a Project is only available when you have selected <strong>Gradle</strong> as your <strong>Build System</strong>.</p>
+
+<p>To export the Project:</p>
+
+<ol>
+<li>From the <strong>Build System</strong> drop-down menu, select <strong>Gradle</strong>.</li>
+<li>Check the <strong>Export Project</strong> checkbox. When <strong>Export Project</strong> is checked, the <strong>Build</strong> button is relabeled <strong>Export</strong> and the <strong>Build And Run</strong> button is disabled.</li>
+<li>Click the <strong>Export</strong> button and select a destination folder for the roject.</li>
+</ol>
+
+<p>When the export finishes, open Android Studio and import your project. For more information on importing projects to Android Studio, see the <a href="https://developer.android.com/studio/intro/migrate.html">Migrate to Android Studio</a> section of the Android Developer documentation.</p>
+
+<h2>Build or Build and Run</h2>
+
+<p>The <strong>Build Settings</strong> window offers two options: <strong>Build</strong> and <strong>Build and Run</strong>. Using either option saves the output packages (APK and OBB, if enabled) to the path that you select. You can publish these packages to the Google Play Store, or install them on your device manually with the help of Android Debug Bridge (ADB). For further information about installing apps manually, see the <a href="https://developer.android.com/training/basics/firstapp/running-app.html">Run your app</a> section of the Android Developer documentation. For information on <span class="tooltip"><strong>ADB</strong><span class="tooltiptext">An Android Debug Bridge (ADB). You can use an ADB to deploy an Android package (APK) manually after building. <a href="https://developer.android.com/studio/command-line/adb.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ADB">Glossary</a></span></span></span> commands, see the <a href="https://developer.android.com/studio/command-line/adb.html">Android Debug Bridge</a> section of the Android Developer documentation.</p>
+
+<p>Selecting <strong>Build and Run</strong> saves the output packages to the file path you specify, while also installing your app on the Android device connected to your computer.</p>
+
+<p>If the <strong>Split Application Binary</strong> option is enabled, the OBB file is pushed to the correct location on your device. If <span class="tooltip"><strong>Development Build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> is checked, Unity also sets up a Profiler tunnel and enables <strong>CheckJNI</strong>. After that, the app is launched. The <strong>Split Application Binary</strong> setting is located in the <strong>Publishing Settings</strong> section of the <strong>Player Settings</strong> window.</p>
+
+<p>
+<strong>Tip</strong>: Specify the output path for the packages and then use the <strong>Ctrl+B</strong> (Windows) or <strong>Cmd+B</strong> (macOS) keyboard shortcut to <strong>Build and Run</strong> using the saved output path.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–09–03 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated functionality in 5.5</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TroubleShootingAndroid.html"></a></span><div class="tip"> Troubleshooting Android development</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-bugreporting.html"></a></span><div class="tip"> Reporting crash bugs under Android</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

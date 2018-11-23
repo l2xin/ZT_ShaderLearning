@@ -1,0 +1,441 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Custom Editors</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/editor-CustomEditors.html">English</a></li>
+<li><a href="/ja/current/Manual/editor-CustomEditors.html">日本語</a></li>
+<li><a href="/es/current/Manual/editor-CustomEditors.html">Español</a></li>
+<li><a href="/kr/current/Manual/editor-CustomEditors.html">한국어</a></li>
+<li><a href="/ru/current/Manual/editor-CustomEditors.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AdvancedEditor.html">Advanced Editor Topics</a></li>
+<li><a href="ExtendingTheEditor.html">Extending the Editor</a></li>
+<li>Custom Editors</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="editor-PropertyDrawers.html"></a></span><div class="tip">Property Drawers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TreeViewAPI.html"></a></span><div class="tip"> TreeView</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Custom Editors</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>A key to increasing the speed of game creation is to create custom editors for commonly used <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>. For the sake of example, we’ll use this very simple script that always keeps an object looking at a point. Add this script to your project, and place it onto a cube <span class="tooltip"><strong>gameobject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in your <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. The script should be named “LookAtPoint”</p>
+
+<pre><code>//C# Example (LookAtPoint.cs)
+using UnityEngine;
+public class LookAtPoint : MonoBehaviour
+{
+    public Vector3 lookAtPoint = Vector3.zero;
+
+    void Update()
+    {
+        transform.LookAt(lookAtPoint);
+    }
+}
+</code></pre>
+
+<pre><code>//JS Example (LookAtPoint.js)
+#pragma strict
+var lookAtPoint = Vector3.zero;
+function Update()
+{
+    transform.LookAt(lookAtPoint);
+}
+</code></pre>
+
+<p>This will keep an object oriented towards a world-space point. Currently this script will only become active in <strong>play mode</strong>, that is, when the game is running. When writing editor <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> it’s often useful to have certain <strong>scripts</strong> execute during <strong>edit mode</strong> too, while the game is not running. You can do this by adding an ExecuteInEditMode attribute to it:</p>
+
+<pre><code>//C# Example (LookAtPoint.cs)
+using UnityEngine;
+[ExecuteInEditMode]
+public class LookAtPoint : MonoBehaviour
+{
+    public Vector3 lookAtPoint = Vector3.zero;
+
+    void Update()
+    {
+        transform.LookAt(lookAtPoint);
+    }
+}
+</code></pre>
+
+<pre><code>//JS Example (LookAtPoint.js)
+#pragma strict
+@script ExecuteInEditMode()
+var lookAtPoint = Vector3.zero;
+function Update()
+{
+    transform.LookAt(lookAtPoint);
+}
+</code></pre>
+
+<p>Now if you move the object which has this script around in the editor, or change the values of “Look At Point” in the <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> - even when not in play mode - the object will update its orientation correspondingly so it remains looking at the target point in world space.</p>
+
+<h3>Making a Custom Editor</h3>
+
+<p>The above demonstrates how you can get simple scripts running during edit-time, however this alone does not allow you to create your own editor tools. The next step is to create a <strong>Custom Editor</strong> for script we just created.</p>
+
+<p>When you create a script in Unity, by default it inherits from MonoBehaviour, and therefore is a <strong>Component</strong> which can be placed on a game object. When placed on a game object, the Inspector displays a default interface for viewing and editing all public variables that can be shown - such as integers, floats, strings, Vector3’s, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</p>
+
+<p>Here’s how the default inspector looks for our script above:</p>
+
+<figure>
+<img src="../uploads/Main/NoCustomInspector.png" alt="A default inspector with a public Vector3 field">
+<figcaption>A default inspector with a public Vector3 field</figcaption>
+</figure>
+
+<p><strong>A custom editor is a separate script which <em>replaces</em> this default layout with any editor controls that you choose.</strong></p>
+
+<p>To begin creating the custom editor for our LookAtPoint script, you should create another script with the same name, but with “Editor” appended. So for our example: “LookAtPointEditor”.</p>
+
+<pre><code>//c# Example (LookAtPointEditor.cs)
+using UnityEngine;
+using UnityEditor;
+​
+[CustomEditor(typeof(LookAtPoint))]
+[CanEditMultipleObjects]
+public class LookAtPointEditor : Editor 
+{
+    SerializedProperty lookAtPoint;
+    
+    void OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty(&quot;lookAtPoint&quot;);
+    }
+​
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+    }
+}
+</code></pre>
+
+<pre><code>//JS Example (LookAtPointEditor.js)
+#pragma strict
+@CustomEditor(LookAtPoint)
+@CanEditMultipleObjects
+class LookAtPointEditor extends Editor {
+
+    var lookAtPoint : SerializedProperty;
+
+    function OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty(&quot;lookAtPoint&quot;);
+    }
+
+    function OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+    }
+}
+</code></pre>
+
+<p>This class has to derive from <strong>Editor</strong>. The <strong>CustomEditor</strong> attribute informs Unity which component it should act as an editor for. The <strong>CanEditMultipleObjects</strong> attribute tells Unity that you can select multiple objects with this editor and change them all at the same time.</p>
+
+<p>The code in OnInspectorGUI is executed whenever Unity displays the editor in the Inspector. You can put any GUI code in here - it works just like OnGUI does for games, but is run inside the Inspector. Editor defines the target property that you can use to access the object being inspected. Here’s what our custom inspector looks like:</p>
+
+<figure>
+<img src="../uploads/Main/CustomInspector.png" alt="">
+</figure>
+
+<p>It’s not very interesting because all we have done so far is to recreate the Vector3 field, exactly like the default inspector shows us, so the result looks very similar (although the “Script” field is now not present, because we didn’t add any inspector code to show it).</p>
+
+<p>However now that you have control over how the inspector is displayed in an Editor script, you can use any code you like to lay out the inspector fields, allow the user to adjust the values, and even display graphics or other visual elements. In fact all of the inspectors you see within the Unity Editor including the more complex inspectors such as the <span class="tooltip"><strong>terrain</strong><span class="tooltiptext">The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape. <a href="terrain-UsingTerrains.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Terrain">Glossary</a></span></span></span> system and animation import settings, are all made using the same API that you have access to when creating your own custom Editors.</p>
+
+<p>Here’s a simple example which extends your editor script to display a message indicating whether the target point is above or below the gameobject:</p>
+
+<pre><code>//c# Example (LookAtPointEditor.cs)
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(LookAtPoint))]
+[CanEditMultipleObjects]
+public class LookAtPointEditor : Editor
+{
+    SerializedProperty lookAtPoint;
+
+    void OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty(&quot;lookAtPoint&quot;);
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+        if (lookAtPoint.vector3Value.y &gt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Above this object)&quot;);
+        }
+        if (lookAtPoint.vector3Value.y &lt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Below this object)&quot;);
+        }
+    }
+}
+</code></pre>
+
+<pre><code>//JS Example (LookAtPointEditor.js)
+#pragma strict
+@CustomEditor(LookAtPoint)
+@CanEditMultipleObjects
+class LookAtPointEditor extends Editor {
+
+    var lookAtPoint : SerializedProperty;
+
+    function OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty(&quot;lookAtPoint&quot;);
+    }
+
+    function OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+        if (lookAtPoint.vector3Value.y &gt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Above this object)&quot;);
+        }
+        if (lookAtPoint.vector3Value.y &lt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Below this object)&quot;);
+        }
+    }
+}
+</code></pre>
+
+<p>So now we have an new element to our inspector which prints a message showing if the target point is above or below the gameobject.</p>
+
+<figure>
+<img src="../uploads/Main/CustomInspector2.png" alt="">
+</figure>
+
+<p>This is just scratching the surface of what you can do with Editor scripting. You have full access to all the IMGUI commands to draw any type of interface, including <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> scenes using a <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> within editor windows.</p>
+
+<h3>Scene View Additions</h3>
+
+<p>You can add extra code to the <span class="tooltip"><strong>Scene View</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> by implementing an OnSceneGUI in your custom editor. </p>
+
+<p>OnSceneGUI works just like OnInspectorGUI - except it gets run in the scene view. To help you make your own editing controls in the scene view, you can use the functions defined in <a href="../ScriptReference/Handles.html">Handles</a> class. All functions in there are designed for working in 3D Scene views.</p>
+
+<pre><code>//C# Example (LookAtPointEditor.cs)
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(LookAtPoint))]
+[CanEditMultipleObjects]
+public class LookAtPointEditor : Editor
+{
+    SerializedProperty lookAtPoint;
+
+    void OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty(&quot;lookAtPoint&quot;);
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        if (lookAtPoint.vector3Value.y &gt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Above this object)&quot;);
+        }
+        if (lookAtPoint.vector3Value.y &lt; (target as LookAtPoint).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Below this object)&quot;);
+        }
+        
+            
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    public void OnSceneGUI()
+    {
+        var t = (target as LookAtPoint);
+
+        EditorGUI.BeginChangeCheck();
+        Vector3 pos = Handles.PositionHandle(t.lookAtPoint, Quaternion.identity);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(target, &quot;Move point&quot;);
+            t.lookAtPoint = pos;
+            t.Update();
+        }
+    }
+}
+</code></pre>
+
+<pre><code>//JS Example (LookAtPointEditor.js)
+#pragma strict
+@CustomEditor(LookAtPointJS)
+@CanEditMultipleObjects
+class LookAtPointEditorJS extends Editor {
+
+    var lookAtPoint : SerializedProperty;
+
+    function OnEnable()
+    {
+        lookAtPoint = serializedObject.FindProperty(&quot;lookAtPoint&quot;);
+    }
+
+    function OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(lookAtPoint);
+        serializedObject.ApplyModifiedProperties();
+        if (lookAtPoint.vector3Value.y &gt; (target as LookAtPointJS).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Above this object)&quot;);
+        }
+        if (lookAtPoint.vector3Value.y &lt; (target as LookAtPointJS).transform.position.y)
+        {
+            EditorGUILayout.LabelField(&quot;(Below this object)&quot;);
+        }
+    }
+
+
+    function OnSceneGUI()
+    {
+        var t : LookAtPointJS = (target as LookAtPointJS);
+
+        EditorGUI.BeginChangeCheck();
+        var pos = Handles.PositionHandle(t.lookAtPoint, Quaternion.identity);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(target, &quot;Move point&quot;);
+            t.lookAtPoint = pos;
+            t.Update();
+        }
+    }
+}
+
+</code></pre>
+
+<p>If you want to put 2D GUI objects (GUI, EditorGUI and friends), you need to wrap them in calls to Handles.BeginGUI() and Handles.EndGUI().</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="editor-PropertyDrawers.html"></a></span><div class="tip">Property Drawers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TreeViewAPI.html"></a></span><div class="tip"> TreeView</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

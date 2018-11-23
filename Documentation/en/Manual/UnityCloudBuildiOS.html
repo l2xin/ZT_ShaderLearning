@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Building for iOS</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCloudBuildiOS.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityCloudBuildiOS.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCloudBuildiOS.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCloudBuildiOS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCloudBuildiOS.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityCloudBuild.html">Unity Cloud Build</a></li>
+<li>Building for iOS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildVcsPerforceUsingEditor.html"></a></span><div class="tip"> Using the Unity Editor to configure Unity Cloud Build for Perforce</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildAdvancedOptions.html"></a></span><div class="tip"> Advanced options</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Building for iOS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity <span class="tooltip"><strong>Cloud Build</strong><span class="tooltiptext">A continuous integration service for Unity projects that automates the process of creating builds on Unity’s servers. <a href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CloudBuild">Glossary</a></span></span></span> helps you automate the process of building your Unity Project for <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> devices.</p>
+
+<p>This article describes the prerequisites necessary to build your Project for iOS and how to create the supporting <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> to configure Cloud Build. Topics covered include:</p>
+
+<ul>
+<li>Joining the Apple Developer Program</li>
+<li>Creating an iOS certificate and and p12 file</li>
+<li>Adding devices to your profile</li>
+<li>Creating a provisioning profile</li>
+<li>Configuring your app to build for iOS</li>
+</ul>
+
+<h2>Joining the Apple Developer Program</h2>
+
+<p>To develop iOS apps, you must be a member of the iOS Developer Program. The cost is currently $99 per year, and allows you to build, test, and eventually release your apps in the Apple App Store.</p>
+
+<p>
+<strong>Note</strong>: You must have an Intel-based Mac running OS X Yosemite (v10.10) or later to develop and distribute iOS apps and Mac apps.</p>
+
+<p>To join the iOS Developer program:</p>
+
+<ol>
+<li>
+<p>Log in to the <a href="https://developer.apple.com/programs/">Apple Developer Program</a> page.</p>
+
+<p>
+<strong>Important</strong>: Use the Safari browser. You might encounter issues if you use the Chrome or Firefox browsers.</p>
+</li>
+<li><p>Click the <strong>Enroll</strong> button.</p></li>
+<li><p>Read the information on the <strong>What You Need To Enroll</strong> page and then click the <strong>Start Your Enrollment</strong> button.</p></li>
+<li><p>Log in with your Apple ID, or create a new Apple ID if you don’t have one</p></li>
+<li>Choose whether to enroll for an Individual/Sole Proprietor/Single Person Business or as a Company/Organization
+
+<ol>
+<li>
+<strong>Individual/Sole Proprietor/Single Person Business</strong>: Select this option if you are an individual or sole proprietor/single person company.</li>
+<li>
+<strong>Company/Organization</strong>: Select this option if you are a company, non-profit organization, <span class="tooltip"><strong>joint</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> venture, partnership, or government organization.</li>
+</ol>
+</li>
+<li><p>Enter your contact information and any requested business information.</p></li>
+<li><p>Read the license agreement. If you agree to the terms, check the acceptance checkbox and click the <strong>Continue</strong> button.</p></li>
+<li>
+<p>Purchase the program</p>
+
+<p>
+<strong>Note</strong>: You cannot access the Apple Developer Program until your membership has been approved. Apple typically takes around 24 hours to approve your membership.</p>
+</li>
+<li><p>Activate the Program</p></li>
+</ol>
+
+<p>After you sign in to the Apple Program Developer portal, you’ll see a list labeled <strong>Program Resources</strong> on the left. <strong>Click Certificates, IDs &amp; Profiles</strong> to manage the certificates, identifiers, profiles, and devices you need to develop and distribute apps.</p>
+
+<h2>Provisioning profiles</h2>
+
+<p>A provisioning profile ties developers and devices to an authorized Development Team and enables you to use a device for testing. You must install a <em>Development Provisioning Profile</em> on each device on which you plan to run your application code.</p>
+
+<p>Each Development Provisioning Profile contains a set of <em>Development Certificates, Unique Device Identifiers (UDID)</em> and an App ID.</p>
+
+<p>To use a device for testing, you must also include your Development Certificate in the profile. A single device can contain multiple provisioning profiles.</p>
+
+<h2>Components of a provisioning profile</h2>
+
+<p>Certificates determine whether your app is development-only or a release candidate for the App Store. You should use an Ad Hoc Production Certificate so that you can test all the features of your game (like GameCenter, etc).</p>
+
+<p>Identifiers are the unique IDs that you use to identify your project. For basic projects, or if this is your first iOS project, you’ll probably want to make an App ID. This is often the same as your Unity3D Project’s Bundle ID.</p>
+
+<p>
+<strong>Tip</strong>: For more information on signing identities and certificates, see <a href="https://help.apple.com/xcode/mac/current/#/dev3a05256b8">Maintaining Your Signing Identities and Certificates</a> on the Apple developer website.</p>
+
+<p>Devices are the hardware, such as an iPhone, iPad, or iPod on which you plan to test your project. You must retrieve the UDID for each device on which you plan to test your game. You then add the UDID to the Devices section in the iOS developer portal.</p>
+
+<p>
+<strong>Note</strong>: Each year, you’re allowed to register a fixed number of devices. The maximum number of devices you can register is 100 devices per product family per membership year. For more information see, <a href="https://help.apple.com/xcode/mac/current/#/dev8b4250b57">Registering Devices Using Your Developer Account</a> in the <strong>Maintaining Identifiers, Devices, and Profiles</strong> topic on the Apple developer website.</p>
+
+<h2>Creating an iOS certificate and p12 file</h2>
+
+<p>When you create a certificate, you must decide whether to create a <em>Development Certificate</em> (used only for testing), or a <em>Production Certificate</em>, which you use to distribute your app via the App Store.</p>
+
+<p>
+<strong>Tip</strong>: Create a Production Certificate. While either certificate type works for development, using a Production certificate makes the process of releasing your app to the Apple store easier.</p>
+
+<h3>Create a certificate</h3>
+
+<ol>
+<li>Sign in to your <a href="https://developer.apple.com/programs/">Apple Developer Program</a>.</li>
+<li>Click <strong>Member Center</strong> &gt; <strong>Certificates</strong> &gt; <strong>Identifiers &amp; Profiles</strong> &gt; <strong>Certificates</strong>.</li>
+<li>In the left-hand column, under <strong>Certificates</strong>, click <strong>All</strong>.</li>
+<li>In the screen labeled <strong>What type of certificate do you need</strong>, choose the type of certificate to generate. Typically, if you’re just starting off, you want to pick an <strong>App Store and Ad Hoc certificate production certificate</strong>.</li>
+<li>Next, use the <em>Keychain Access</em> program on your Mac (open up your Finder and find it in <em>Applications/Utilities</em>) to generate a Certificate Signing Request (CSR) file. Follow the instructions in the iOS portal to complete this step. Make a note of where you save the CSR file, as you’ll need it for the next step.</li>
+<li>From the <strong>Generate your certificate</strong> screen, upload your CSR file (which might have the extension <em>.certSigningRequest</em>). Click the <strong>Choose File</strong> button and select your CSR file, and then click the <strong>Generate</strong> button.</li>
+<li>To download your certificate to your Mac, click the <strong>Download</strong> button on the <strong>Your Certificate is Ready</strong> screen. Make sure to store this file somewhere safe, and back it up.</li>
+</ol>
+
+<p>To add the certificate to a keychain, locate the certificate file and double-click it. This opens the Keychain Access program. If you get a popup with the message “Do you want to add the certificate to a keychain?”, choose login and click the <strong>Add</strong> button.</p>
+
+<h3>Export a p12 file</h3>
+
+<p>To create apps using <span class="tooltip"><strong>Unity Cloud Build</strong><span class="tooltiptext">See Cloud Build <a href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityCloudBuild">Glossary</a></span></span></span>, you must convert your certificate file to a p12 file. A p12 file is a file that contains your private key and certificate and is used to sign your code. Typically, if you are developing a project in native Xcode, this process is handled for you behind the <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p>
+
+<p>To generate a p12 file:</p>
+
+<ol>
+<li><p>On your Mac, open up your Finder and in Applications/Utilities, open the Keychain Access program.</p></li>
+<li><p>In the left-hand column, under keychains verify that <strong>Login</strong> is selected.</p></li>
+<li>
+<p>In the left-hand column, under <strong>Category</strong> verify that <strong>My Certificates</strong> is selected. In the main <strong>Keychain Access</strong> pane, select your certificate. </p>
+
+<p>
+<strong>Note</strong>: Typically your certificate is located under <strong>My Certificates</strong>. If you do not find it there, check under <strong>Certificates</strong>.</p>
+</li>
+<li><p>From the <strong>File menu</strong>, select <strong>File</strong> &gt; <strong>Export Items</strong>, or right-click and select <strong>Export</strong>.</p></li>
+<li>
+<p>Select Personal Information Exchange (.p12) from the File Format drop-down menu. </p>
+
+<p>
+<strong>Note</strong>: If <strong>Login</strong> under <strong>Keychains and My Certificates</strong> under <strong>Category</strong> is not selected, the p12 option is greyed out.</p>
+</li>
+<li>
+<p>You are asked to create a password for the p12 file. </p>
+
+<p>
+<strong>Important</strong>: Record the password somewhere safe. You must supply the password when setting up iOS builds on Unity Cloud Build.</p>
+</li>
+</ol>
+
+<h2>Adding devices</h2>
+
+<p>Apple requires the UDID for each device on which you intend to install your app. This is only required for development purposes. Once your app is accepted into the App Store, it is available for anyone to download and install; provided they have the correct version of iOS and meet any other necessary requirements.</p>
+
+<h2>Finding your UDIDs</h2>
+
+<p>You can use iTunes to retrieve the UDID of your device. For a thorough walkthrough of the retrieval process, see <a href="http://whatsmyudid.com/">WhatsMyUDID.com</a>.</p>
+
+<p>The basic steps are:</p>
+
+<ol>
+<li>Open <em>iTunes</em> on your Mac.</li>
+<li>Connect the device (iPhone, iPad, etc) to the computer.</li>
+<li>In <em>iTunes</em>, select the device.</li>
+<li>You should see a screen with the device name, capacity, and other details about the device. To display the UDID, click the <strong>Serial #</strong> field.</li>
+<li>Copy and paste the UDID into a document where you can retrieve it later.</li>
+<li>Close <em>iTunes</em> and disconnect your device.</li>
+</ol>
+
+<h2>Add the UDID in the Apple developer portal</h2>
+
+<p>Now that you have your device UDID(s), you’re ready to add them to the Apple Developer Portal:</p>
+
+<ol>
+<li>Click the <strong>All</strong> section under <strong>Devices</strong> in the left column of the iOS Developer Portal.</li>
+<li>To add a new UDID, click the Add button (<strong>+</strong>) in the upper-right corner</li>
+<li>Give the device a name you will recognize, and copy-paste the UDID you got from <em>iTunes</em> into the UDID field.</li>
+<li>Click <strong>Continue</strong>.</li>
+</ol>
+
+<p>Repeat the steps for each of your devices.</p>
+
+<h2>Create App ID</h2>
+
+<p>Now that you’ve created your iOS Certificate, you can create an App ID which is used to create an App ID:</p>
+
+<ol>
+<li><p>In the left-hand column of the Apple Developer Portal, click <strong>App ID</strong>.</p></li>
+<li><p>In the <strong>Register iOS App IDs</strong> pane, at the top right, click the Add button (<strong>+</strong>).</p></li>
+<li>In the <strong>Registering an App ID</strong> pane, enter the following information:
+
+<ol>
+<li>
+<strong>App ID Description</strong>: The name of your app, without any special characters.</li>
+<li>
+<strong>App ID Suffix</strong>: If you intend to incorporate specific services such as Game Center or In-App Purchases, create an Explicit ID. If you don’t need these services, then create a <strong>Wildcard App ID</strong>. A Wildcard App ID allows you to re-use the App ID for multiple projects.</li>
+<li>
+<strong>App Services</strong>: Optional. Indicate whether you plan on using any of the App Services provided by Apple.</li>
+</ol>
+
+<p>For more information on registering an App ID, see <a href="https://help.apple.com/xcode/mac/current/#/dev8b4250b57">Maintaining Identifiers, Devices, and Profiles</a>.</p>
+</li>
+<li><p>Click the <strong>Continue</strong> button.</p></li>
+<li><p>On the <strong>Confirm your App ID</strong> page, check the information you’ve provided and then click the <strong>Submit</strong> button.</p></li>
+</ol>
+
+<h2>Create a provisioning profile</h2>
+
+<p>The next step is to generate a <em>.mobileprovision</em> file. The <em>.mobileprovision</em> file combines your p12 certificate, App ID, and identifies the UDIDs of the devices on which you are testing your app.</p>
+
+<ol>
+<li>In the Apple Developer portal, click <strong>Certificates, IDs &amp; Profiles</strong>.</li>
+<li>In the left-hand column of the Apple Developer Portal, under <strong>Provisioning Profiles</strong>, select <strong>All</strong>.</li>
+<li>To add a new Provisioning Profile, click the Add button (<strong>+</strong>) in the upper-right corner.</li>
+<li>Under <strong>Development</strong>, select the type of provisioning profile to create and click <strong>Continue</strong>.
+<strong>Note</strong>: If you’re just getting started, you should use a <strong>Distribution</strong> &gt; <strong>Ad Hoc certificate</strong>, as this allows you to build your game and test it on devices.</li>
+<li>Select the App ID you want to use for development, and click the <strong>Continue</strong> button.</li>
+<li>Select one or more development certificates, and click the <strong>Continue</strong> button.</li>
+<li>Select one or more devices, and click the <strong>Continue</strong> button.</li>
+<li>Enter a profile name, and click the <strong>Generate</strong> button.</li>
+<li>Click the <strong>Done</strong> button.</li>
+</ol>
+
+<p>Download the generated <em>.mobileprovision</em> file to your desktop machine.</p>
+
+<h2>Configuring your app to build for iOS</h2>
+
+<p>To configure your iOS Cloud Build, you need the following items:</p>
+
+<ul>
+<li>Your provisioning profile (.mobileprovision)</li>
+<li>Your .p12 file</li>
+<li>The password that you used to protect your .p12 file</li>
+</ul>
+
+<p>For basic iOS usage this process should be sufficient. For projects that include Xcode frameworks, you must perform some additional configuration.</p>
+
+<h2>Using Xcode Frameworks</h2>
+
+<p>To add Xcode frameworks manually, use the <a href="../ScriptReference/iOS.Xcode.PBXProject.html">Xcode Manipulation API</a>. The API is maintained by the Unity iOS team and API allows you to manage external Xcode frameworks.</p>
+
+<p>For an example of a Unity Project that uses the API, see the <a href="https://bitbucket.org/Unity-Technologies/iosnativecodesamples/src/4bf7fa2fe42037e324fd322d615c4194b0317731/NativeIntegration/Misc/UpdateXcodeProject/?at=stable">UpdateXcodeProject</a> example Project on BitBucket. You can use the example to experiment and to learn from.</p>
+
+<p>One of the <span class="tooltip"><strong>plugins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> of the example Project is an external Xcode project manipulation DLL. The DLL is the build product of the source available in Unity’s Bitbucket repository. A preferred way to include Xcode project manipulation functionality is to copy the C# source code files to the <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>/Editor folder in your Project.</p>
+
+<p>There are two ways you can use the Xcode Manipulation API:</p>
+
+<ul>
+<li>Use the built-in Unity <a href="../ScriptReference/Callbacks.PostProcessBuildAttribute.html">PostProcessBuildAttribute</a>, which is executed before the Unity Cloud Build Post-Export method runs.</li>
+<li>Use the Unity Cloud Build <a href="UnityCloudBuildPreAndPostExportMethods.html">Post-Export</a> method (requires access to advanced settings).</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildVcsPerforceUsingEditor.html"></a></span><div class="tip"> Using the Unity Editor to configure Unity Cloud Build for Perforce</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildAdvancedOptions.html"></a></span><div class="tip"> Advanced options</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

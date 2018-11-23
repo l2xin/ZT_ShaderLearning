@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Audio Source</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Audio" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-AudioSource.html">English</a></li>
+<li><a href="/ja/current/Manual/class-AudioSource.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-AudioSource.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-AudioSource.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-AudioSource.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Audio.html">Audio</a></li>
+<li>Audio Reference</li>
+<li>Audio Source</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AudioListener.html"></a></span><div class="tip">Audio Listener</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioMixer.html"></a></span><div class="tip">Audio Mixer</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Audio Source</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/AudioSource.html' title='Go to AudioSource page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Audio Source</strong> plays back an <a href="class-AudioClip.html">Audio Clip</a> in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. The clip can be played to an <a href="class-AudioListener.html">audio listener</a> or through an <a href="class-AudioMixer.html">audio mixer</a>. The audio source can play any type of <a href="class-AudioClip.html">Audio Clip</a> and can be configured to play these as 2D, 3D, or as a mixture (<em>SpatialBlend</em>). The audio can be spread out between speakers (stereo to 7.1) (<em>Spread</em>) and morphed between 3D and 2D (<em>SpatialBlend</em>). This can be controlled over distance with falloff curves. Also, if the <a href="class-AudioListener.html">listener</a> is within one or multiple <a href="class-AudioReverbZone.html">Reverb Zones</a>, reverberation is applied to the source. Individual filters can be applied to each audio source for an even richer audio experience. See <span class="tooltip"><a href="class-AudioEffect.html">Audio Effects</a><span class="tooltiptext">Any effect that can modify the output of Audio Mixer components, such as filtering frequency ranges of a sound or applying reverb. <a href="class-AudioEffectMixer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AudioEffect">Glossary</a></span></span></span> for more details.</p>
+
+<figure>
+<img src="../uploads/Main/AudioSourceInspector.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Audio Clip</strong><span class="tooltiptext">A container for audio data in Unity. Unity supports mono, stereo and multichannel audio assets (up to eight channels). Unity can import .aif, .wav, .mp3, and .ogg audio file format, and .xm, .mod, .it, and .s3m tracker module formats. <a href="class-AudioClip.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AudioClip">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Reference to the sound clip file that will be played.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Output</strong></td>
+	<td style="text-align:left;">The sound can be output through an <a href="class-AudioListener.html">audio listener</a> or an <a href="class-AudioMixer.html">audio mixer</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mute</strong></td>
+	<td style="text-align:left;">If enabled the sound will be playing but muted.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bypass Effects</strong></td>
+	<td style="text-align:left;">This is to quickly “by-pass” filter effects applied to the audio source. An easy way to turn all effects on/off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bypass Listener Effects</strong></td>
+	<td style="text-align:left;">This is to quickly turn all Listener effects on/off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bypass Reverb Zones</strong></td>
+	<td style="text-align:left;">This is to quickly turn all Reverb Zones on/off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Play On Awake</strong><span class="tooltiptext">Set this to true to make an Audio Source start playing on awake <a href="class-AudioClip.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayOnAwake">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">If enabled, the sound will start playing the moment the scene launches. If disabled, you need to start it using the <strong>Play()</strong> command from scripting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Loop</strong></td>
+	<td style="text-align:left;">Enable this to make the <strong>Audio Clip</strong> loop when it reaches the end.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Priority</strong></td>
+	<td style="text-align:left;">Determines the priority of this audio source among all the ones that coexist in the scene. (Priority: 0 = most important. 256 = least important. Default = 128.). Use 0 for music tracks to avoid it getting occasionally swapped out.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Volume</strong></td>
+	<td style="text-align:left;">How loud the sound is at a distance of one world unit (one meter) from the <span class="tooltip"><strong>Audio Listener</strong><span class="tooltiptext">A component that acts like a microphone, receiving sound from Audio Sources in the scene and outputting to the computer speakers. <a href="class-AudioListener.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AudioListener">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pitch</strong></td>
+	<td style="text-align:left;">Amount of change in pitch due to slowdown/speed up of the <strong>Audio Clip</strong>. Value 1 is normal playback speed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stereo Pan</strong></td>
+	<td style="text-align:left;">Sets the position in the stereo field of 2D sounds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spatial Blend</strong></td>
+	<td style="text-align:left;">Sets how much the 3D engine has an effect on the audio source.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reverb Zone Mix</strong></td>
+	<td style="text-align:left;">Sets the amount of the output signal that gets routed to the reverb zones. The amount is linear in the (0 - 1) range, but allows for a 10 dB amplification in the (1 - 1.1) range which can be useful to achieve the effect of near-field and distant sounds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><strong>3D Sound Settings</strong></strong></td>
+	<td style="text-align:left;">Settings that are applied proportionally to the Spatial Blend parameter.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Doppler Level</strong></td>
+	<td style="text-align:left;">Determines how much doppler effect will be applied to this audio source (if is set to 0, then no effect is applied).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spread</strong></td>
+	<td style="text-align:left;">Sets the spread angle to 3D stereo or multichannel sound in speaker space.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Distance</strong></td>
+	<td style="text-align:left;">Within the MinDistance, the sound will stay at loudest possible. Outside MinDistance it will begin to attenuate. Increase the MinDistance of a sound to make it ‘louder’ in a 3d world, and decrease it to make it ‘quieter’ in a 3d world.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Distance</strong></td>
+	<td style="text-align:left;">The distance where the sound stops attenuating at. Beyond this point it will stay at the volume it would be at MaxDistance units from the listener and will not attenuate any more.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rolloff Mode</strong></td>
+	<td style="text-align:left;">How fast the sound fades. The higher the value, the closer the Listener has to be before hearing the sound. (This is determined by a Graph).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>- Logarithmic Rolloff</strong></td>
+	<td style="text-align:left;">The sound is loud when you are close to the audio source, but when you get away from the object it decreases significantly fast.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>- Linear Rolloff</strong></td>
+	<td style="text-align:left;">The further away from the audio source you go, the less you can hear it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>- Custom Rolloff</strong></td>
+	<td style="text-align:left;">The sound from the audio source behaves accordingly to how you set the graph of roll offs.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Types of Rolloff</h2>
+
+<p>There are three Rolloff modes: Logarithmic, Linear and Custom Rolloff. The Custom Rolloff can be modified by modifying the volume distance curve as described below. If you try to modify the volume distance function when it is set to Logarithmic or Linear, the type will automatically change to Custom Rolloff.</p>
+
+<figure>
+<img src="../uploads/Main/TypesOfRollOff.png" alt="Rolloff Modes that an audio source can have.">
+<figcaption>Rolloff Modes that an audio source can have.</figcaption>
+</figure>
+
+<h2>Distance Functions</h2>
+
+<p>There are several properties of the audio that can be modified as a function of the distance between the audio source and the audio listener.</p>
+
+<p>
+<strong>Volume</strong>: Amplitude(0.0 - 1.0) over distance. </p>
+
+<p>
+<strong>Spatial Blend</strong>: 2D (original channel mapping) to 3D (all channels downmixed to mono and attenuated according to distance and direction). </p>
+
+<p>
+<strong>Spread</strong>: Angle (degrees 0.0 - 360.0) over distance. </p>
+
+<p>
+<strong>Low-Pass</strong> (only if LowPassFilter is attached to the AudioSource): Cutoff Frequency (22000.0–10.0) over distance.</p>
+
+<p>
+<strong>Reverb Zone</strong>: Amount of signal routed to the reverb zones. Note that the volume property and distance and directional attenuation are applied to the signal first and therefore affect both the direct and reverberated signals.</p>
+
+<figure>
+<img src="../uploads/Main/AudioDistanceFunctions.png" alt="Distance functions for Volume, Spatial Blend, Spread, Low-Pass audio filter, and Reverb Zone Mix. The current distance to the Audio Listener is marked in the graph by the red vertical line.">
+<figcaption>Distance functions for Volume, Spatial Blend, Spread, Low-Pass audio filter, and Reverb Zone Mix. The current distance to the Audio Listener is marked in the graph by the red vertical line.</figcaption>
+</figure>
+
+<p>To modify the distance functions, you can edit the curves directly. For more information, see the guide to <a href="EditingCurves.html">Editing Curves</a>.</p>
+
+<h2>Creating Audio Sources</h2>
+
+<p>Audio Sources don’t do anything without an assigned <strong>Audio Clip</strong>. The Clip is the actual sound file that will be played back. The Source is like a controller for starting and stopping playback of that clip, and modifying other audio properties.</p>
+
+<p>To create a new Audio Source:</p>
+
+<ol>
+<li>Import your audio files into your Unity Project. These are now Audio Clips.</li>
+<li>Go to <strong>GameObject-&gt;Create Empty</strong> from the menubar.</li>
+<li>With the new GameObject selected, select <strong>Component-&gt;Audio-&gt;Audio Source</strong>.</li>
+<li>Assign the <strong>Audio Clip</strong> property of the Audio Source <span class="tooltip"><strong>Component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li>
+</ol>
+
+<p>
+<strong>Note:</strong> If you want to create an <strong>Audio Source</strong> just for one <strong>Audio Clip</strong> that you have in the <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> folder then you can just drag that clip to the <span class="tooltip"><strong>scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> - a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> with an <strong>Audio Source</strong> component will be created automatically for it. Dragging a clip onto on existing <strong>GameObject</strong> will attach the clip along with a new <strong>Audio Source</strong> if there isn’t one already there. If the object does already have an <strong>Audio Source</strong> then the newly dragged clip will replace the one that the source currently uses.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AudioListener.html"></a></span><div class="tip">Audio Listener</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioMixer.html"></a></span><div class="tip">Audio Mixer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

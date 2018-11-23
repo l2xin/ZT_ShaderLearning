@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Shaders in Unity 5.0</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide5-Shaders.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide5-Shaders.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide5-Shaders.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide5-Shaders.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide5-Shaders.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li><a href="UpgradeGuide5.html">Upgrading to Unity 5.0</a></li>
+<li>Shaders in Unity 5.0</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Physics.html"></a></span><div class="tip">Physics in Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Other Upgrade Notes for Unity 5.0</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Shaders in Unity 5.0</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>These are notes to be aware of when upgrading projects from Unity 4 to Unity 5, if your project uses custom <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> code.</p>
+
+<h3>Shaders no longer apply a 2x multiply of light intensity</h3>
+
+<p>Shaders no longer apply a 2x multiply of light intensity. Instead lights are automatically upgraded to be twice as bright. This creates more consistency and simplicity in light rigs. For example a directional light shining on a white diffuse surface will get the exact color of the light. The upgrade does not affect animation, thus if you have an animated light intensity value you must change your <span class="tooltip"><strong>animation curves</strong><span class="tooltiptext">The curve drawn between keys set for the same animatable property, at different frames or seconds. The position of the tangents and the selected interpolation mode for each key determines the shape of the animation curve. <a href="AnimationCurvesOnImportedClips.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcurve">Glossary</a></span></span></span> or script code and make them 2x as large to get the same look.</p>
+
+<p>In the case of custom shaders where you define your own lighting functions, you need to remove the * 2 yourself.</p>
+
+<pre><code>// A common pattern in shader code that has this problem will look like this
+c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten * 2);
+// You need to fix the code so it looks more like this
+c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten);
+</code></pre>
+
+<h3>Increased interpolator and instruction counts for some surface shaders</h3>
+
+<p>Built-in lighting pipeline in Unity 5 can in some cases use more texture coordinate interpolators or math instruction count (to get things like non-uniform mesh scale, dynamic GI etc. working). Some of your existing <span class="tooltip"><strong>surface shaders</strong><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span> might be running into texture coordinate or ALU instruction limits, especially if they were targeting shader model 2.0 (default). Adding “#pragma target 3.0” can work around this issue. See <a href="http://docs.unity3d.com/Manual/SL-ShaderPrograms.html">http://docs.unity3d.com/Manual/SL-ShaderPrograms.html</a> for the reference.</p>
+
+<h3>Non-uniform mesh scale has to be taken into account in shaders</h3>
+
+<p>In Unity 5.0, non-uniform meshes are not “prescaled” on the CPU anymore. This means that normal &amp; tangent vectors can be non-normalized in the <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>. If you’re doing manual lighting calculations there, you’d have to normalize them. If you’re using Unity’s surface shaders, then all necessary code will be generated for you.</p>
+
+<h3>Fog handling was changed</h3>
+
+<p>Unity 5.0 makes built-in Fog work on Windows Phone and consoles, but in order to achieve that we’ve changed how Fog is done a bit. For surface shaders and fixed function shaders, nothing extra needs to be done - fog will be added automatically (you can add “nofog” to surface shader #pragma line to explicitly make it not support fog).</p>
+
+<p>For manually written vertex/<span class="tooltip"><strong>fragment shaders</strong><span class="tooltiptext">The “per-pixel” part of shader code, performed every pixel that an object occupies on-screen. The fragment shader part is usually used to calculate and output the color of each pixel. <a href="ShaderTut2.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#fragmentshader">Glossary</a></span></span></span>, fog does not happen automagically now. You need to add #pragma multi_compile_fog and fog handling macros to your shader code. Check out built-in shader source, for example Unlit-Normal how to do it.</p>
+
+<h3>Surface shaders alpha channel change</h3>
+
+<p>By default all opaque surface shaders output 1.0 (“white”) into alpha channel now. If you want to stop that, use “keepalpha” option on the #pragma surface line.</p>
+
+<p>All alpha blended surface shaders use alpha <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> computed by the lighting function as blend factor now (instead of s.Alpha). If you’re using custom lighting functions, you probably want to add something like “c.a = s.Alpha” towards the end of it.</p>
+
+<h3>Sorting by material index has been removed</h3>
+
+<p>Unity no longer sorts by material index in the forward renderloop. This improves performance because more objects can be rendered without state changes between them. This breaks compatibility for content that relies on material index as a way of sorting. In 4.x a <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> with two materials would always render the first material first, and the second material second. In Unity 5 this is not the case, the order depends on what reduces the most state changes to render the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p>
+
+<h3>Fixed function TexGen, texture matrices and some SetTexture combiner modes were removed</h3>
+
+<p>Unity 5.0 removed support for this fixed function shader functionality:</p>
+
+<ul>
+<li>UV coordinate generation (TexGen command).</li>
+<li>UV transformation matrices (Matrix command on a texture property or inside a SetTexture).</li>
+<li>Rarely used SetTexture combiner modes: signed add (a+-b), multiply signed add (a<em>b+-c), multiply subtract (a</em>b-c), dot product (dot3, dot3rgba).</li>
+</ul>
+
+<p>Any of the above will do nothing now, and shader <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> will show warnings about their usage. You should rewrite affected shaders using programmable vertex+fragment shaders instead. All platforms support them nowadays, and there are no advantages whatsoever to use fixed function shaders.</p>
+
+<p>If you have fairly old versions of Projector or Water shader packages in your project, the shaders there might be using this functionality. Upgrade the packages to 5.0 version.</p>
+
+<h3>Mixing programmable &amp; fixed function shader parts is not allowed anymore</h3>
+
+<p>Mixing partially fixed function &amp; partially programmable shaders (e.g. fixed function vertex lighting &amp; pixel shader; or a vertex shader and texture combiners) is not supported anymore. It was never working on mobile, consoles or DirectX 11 anyway. This required changing behavior of Legacy/Reflective/VertexLit shader to not do that - it lost per-vertex specular support; on the plus side it now behaves consistently between platforms.</p>
+
+<h3>D3D9 shader compiler was switched from Cg 2.2 to HLSL</h3>
+
+<p>Mostly this should be transparent (just result in less codegen bugs and slightly faster shaders). However HLSL compiler can be slightly more picky about syntax. Some examples:</p>
+
+<ul>
+<li>You need to fully initialize output variables. Use UNITY_INITIALIZE_OUTPUT helper macro, just like you would on D3D11.</li>
+<li>“float3(a_4_component_value)” constructors do not work. Use “a_4_component_value.xyz” instead.</li>
+</ul>
+
+<h3>“unity_Scale” shader variable has been removed</h3>
+
+<p>The “unity_Scale” shader property has been removed. In 4.x unity_Scale.w was the 1 / uniform Scale of the transform, Unity 4.x only rendered non-scaled or uniformly scaled models. Other scales were performed on the CPU, which was very expensive &amp; had an unexpected memory overhead.</p>
+
+<p>In Unity 5.0 all this is done on the GPU by simply passing matrices with non-uniform scale to the shaders. Thus unity_Scale has been removed because it can not represent the full scale. In most cases where “unity_Scale” was used we recommend instead transforming to world space first. In the case of transforming normals, you always have to use normalize on the transformed normal now. In some cases this leads to slightly more expensive code in the vertex shader. </p>
+
+<pre><code>// Unity 4.x
+float3 norm = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal * unity_Scale.w);
+// Becomes this in Unity 5.0
+float3 norm = normalize(mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal));
+</code></pre>
+
+<pre><code>// Unity 4.x
+temp.xyzw = v.vertex.xzxz * unity_Scale.xzxz * _WaveScale4 + _WaveOffset;
+ 
+// Becomes this in Unity 5.0
+float4 wpos = mul (_Object2World, v.vertex);
+temp.xyzw = wpos.xzxz * _WaveScale4 + _WaveOffset;
+</code></pre>
+
+<h3>Shadows, Depth Textures and ShadowCollector passes</h3>
+
+<p>Forward rendered directional light shadows do not do separate “shadow collector” pass anymore. Now they calculate screenspace shadows from a <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>’s depth texture (just like in deferred lighting).</p>
+
+<p>This means that LightMode=ShadowCollector passes in shaders aren’t used for anything; you can just remove them from your shaders.</p>
+
+<p>Depth texture itself is not generated using shader replacement anymore; it is rendered with ShadowCaster shader passes. This means that as long as your objects can cast proper shadows, then they will also appear in camera’s depth texture properly (was very hard to do before, if you wanted custom vertex animation or funky alpha testing). It also means that Camera-DepthTexture.shader is not used for anything now. And also, all built-in shadow shaders used no backface culling; that was changed to match culling mode of regular <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Physics.html"></a></span><div class="tip">Physics in Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Other Upgrade Notes for Unity 5.0</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

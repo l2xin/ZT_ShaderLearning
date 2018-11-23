@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone='yes'?>
+
+<WindowsPerformanceRecorder Version="1.0">
+  <Profiles>
+  
+    <SystemCollector Id="SystemCollector" Name="Kernel Logger" Realtime="false">
+      <BufferSize Value="1024"/>
+      <Buffers Value="40"/>
+      <MaximumFileSize Value="128" FileMode="Circular"/>
+      <FileMax Value="3"/>
+    </SystemCollector>
+  
+    <SystemProvider Id="SystemProvider">
+      <Keywords>
+        <Keyword Value="HardFaults"/>
+        <Keyword Value="Memory"/>
+        <Keyword Value="MemoryInfo"/>
+        <Keyword Value="MemoryInfoWS"/>
+        <Keyword Value="Pool"/>
+        <Keyword Value="ReferenceSet"/>
+        <Keyword Value="VirtualAllocation"/>
+      </Keywords>
+      <Stacks>
+        <Stack Value="HardFault"/>
+        <Stack Value="HeapAllocation"/>
+        <Stack Value="HeapFree"/>
+        <Stack Value="PoolAllocation"/>
+        <Stack Value="PoolAllocationSession"/>        
+        <Stack Value="PageRangeAccess"/>
+        <Stack Value="VirtualAllocation"/>
+        <Stack Value="VirtualFree"/>
+      </Stacks>
+    </SystemProvider>
+
+    <Profile Id="Category.Verbose.File" LoggingMode="File" Name="Category" DetailLevel="Verbose" Description="VirtualAlloc profile">
+      <Collectors>
+        <SystemCollectorId Value="SystemCollector">
+          <SystemProviderId Value="SystemProvider"/>
+        </SystemCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+
+  <TraceMergeProperties>
+    <TraceMergeProperty  Id="TraceMerge_Default" Name="TraceMerge_Default">
+      <CustomEvents>
+        <CustomEvent Value="ImageId"/>
+        <CustomEvent Value="BuildInfo"/>
+        <CustomEvent Value="VolumeMapping"/>
+        <CustomEvent Value="EventMetadata"/>
+        <CustomEvent Value="PerfTrackMetadata"/>
+        <CustomEvent Value="WinSAT"/>
+        <CustomEvent Value="NetworkInterface"/>
+      </CustomEvents>
+    </TraceMergeProperty>
+  </TraceMergeProperties>
+
+</WindowsPerformanceRecorder>

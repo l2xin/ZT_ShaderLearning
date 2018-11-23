@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  NativeContainer</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ScriptingSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/JobSystemNativeContainer.html">English</a></li>
+<li><a href="/ja/current/Manual/JobSystemNativeContainer.html">日本語</a></li>
+<li><a href="/es/current/Manual/JobSystemNativeContainer.html">Español</a></li>
+<li><a href="/kr/current/Manual/JobSystemNativeContainer.html">한국어</a></li>
+<li><a href="/ru/current/Manual/JobSystemNativeContainer.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ScriptingSection.html">Scripting</a></li>
+<li><a href="JobSystem.html"> C# Job System</a></li>
+<li> NativeContainer</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="JobSystemSafetySystem.html"></a></span><div class="tip"> The safety system in the C# Job System</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="JobSystemCreatingJobs.html"></a></span><div class="tip"> Creating jobs</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>NativeContainer</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The drawback to the <a href="JobSystemSafetySystem.html">safety system’s</a> process of copying data is that it also isolates the results of a job within each copy. To overcome this limitation you need to store the results in a type of shared memory called <a href="../ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeContainerAttribute.html">NativeContainer</a>.</p>
+
+<h2>What is a NativeContainer?</h2>
+
+<p>A <code>NativeContainer</code> is a managed value type that provides a relatively safe C# wrapper for native memory. It contains a pointer to an unmanaged allocation. When used with the Unity C# Job System, a <code>NativeContainer</code> allows a job to access data shared with the main thread rather than working with a copy. </p>
+
+<h2>What types of NativeContainer are available?</h2>
+
+<p>Unity ships with a <code>NativeContainer</code> called <a href="../ScriptReference/Unity.Collections.NativeArray_1.html">NativeArray</a>. You can also manipulate a <code>NativeArray</code> with <a href="../ScriptReference/Unity.Collections.NativeSlice_1.html">NativeSlice</a> to get a subset of the <code>NativeArray</code> from a particular position to a certain length. </p>
+
+<p>
+<strong>Note</strong>: The <a href="https://github.com/Unity-Technologies/EntityComponentSystemSamples">Entity Component System</a> (ECS) package extends the <code>Unity.Collections</code> namespace to include other types of <code>NativeContainer</code>:</p>
+
+<ul>
+<li>
+<code>NativeList</code> - a resizable <code>NativeArray</code>.</li>
+<li>
+<code>NativeHashMap</code> - key and value pairs.</li>
+<li>
+<code>NativeMultiHashMap</code> - multiple values per key.</li>
+<li>
+<code>NativeQueue</code> - a first in, first out (<a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">FIFO</a>) queue.</li>
+</ul>
+
+<h2>NativeContainer and the safety system</h2>
+
+<p>The safety system is built into all <code>NativeContainer</code> types. It tracks what is reading and writing to any <code>NativeContainer</code>. </p>
+
+<p>
+<strong>Note</strong>: All safety checks on <code>NativeContainer</code> types (such as out of bounds checks, deallocation checks, and race condition checks) are only available in the Unity <strong>Editor</strong> and <strong>Play Mode</strong>. </p>
+
+<p>Part of this safety system is the <a href="../ScriptReference/Unity.Collections.LowLevel.Unsafe.DisposeSentinel.html">DisposeSentinel</a> and <a href="../ScriptReference/Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle.html">AtomicSafetyHandle</a>. The <code>DisposeSentinel</code> detects memory leaks and gives you an error if you have not correctly freed your memory. Triggering the memory leak error happens long after the leak occurred.</p>
+
+<p>Use the <code>AtomicSafetyHandle</code> to transfer ownership of a <code>NativeContainer</code> in code. For example, if two scheduled jobs are writing to the same <code>NativeArray</code>, the safety system throws an exception with a clear error message that explains why and how to solve the problem. The safety system throws this exception when you schedule the offending job.</p>
+
+<p>In this case, you can schedule a job with a dependency. The first job can write to the <code>NativeContainer</code>, and once it has finished executing, the next job can then safely read and write to that same <code>NativeContainer</code>. The read and write restrictions also apply when accessing data from the main thread. The safety system does allow multiple jobs to read from the same data in parallel.</p>
+
+<p>By default, when a job has access to a <code>NativeContainer</code>, it has both read and write access. This configuration can slow performance. The C# Job System does not allow you to schedule a job that has write access to a <code>NativeContainer</code> at the same time as another job that is writing to it.</p>
+
+<p>If a job does not need to write to a <code>NativeContainer</code>, mark the <code>NativeContainer</code> with the <code>[ReadOnly]</code> attribute, like so:</p>
+
+<pre><code>[ReadOnly]
+public NativeArray&lt;int&gt; input;
+</code></pre>
+
+<p>In the above example, you can execute the job at the same time as other jobs that also have read-only access to the first <code>NativeArray</code>.</p>
+
+<p>
+<strong>Note</strong>: There is no protection against accessing static data from within a job. Accessing static data circumvents all safety systems and can crash Unity. For more information, see <a href="JobSystemTroubleshooting.html">C# Job System tips and troubleshooting</a>. </p>
+
+<h2>NativeContainer Allocator</h2>
+
+<p>When creating a <code>NativeContainer</code>, you must specify the type of memory allocation you need. The allocation type depends on the length of time the job runs. This way you can tailor the allocation to get the best performance possible in each situation. </p>
+
+<p>There are three <a href="../ScriptReference/Unity.Collections.Allocator.html">Allocator</a> types for <code>NativeContainer</code> memory allocation and release. You need to specify the appropriate one when instantiating your <code>NativeContainer</code>.</p>
+
+<ul>
+<li>
+<strong>Allocator.Temp</strong> has the fastest allocation. It is for allocations with a lifespan of one frame or fewer. You should not pass <code>NativeContainer</code> allocations using <code>Temp</code> to jobs. You also need to call the <code>Dispose</code> method before you return from the method call (such as <a href="../ScriptReference/MonoBehaviour.Update.html">MonoBehaviour.Update</a>, or any other callback from native to managed code).</li>
+<li>
+<strong>Allocator.TempJob</strong> is a slower allocation than <code>Temp</code> but is faster than <code>Persistent</code>. It is for allocations within a lifespan of four frames and is thread-safe. If you don’t <code>Dispose</code> of it within four frames, the console prints a warning, generated from the native code. Most small jobs use this <code>NativeContainer</code> allocation type.</li>
+<li>
+<strong>Allocator.Persistent</strong> is the slowest allocation but can last as long as you need it to, and if necessary, throughout the application’s lifetime. It is a wrapper for a direct call to <a href="http://www.cplusplus.com/reference/cstdlib/malloc/">malloc</a>. Longer jobs can use this <code>NativeContainer</code> allocation type. You should not use <code>Persistent</code> where performance is essential.</li>
+</ul>
+
+<p>For example:</p>
+
+<pre><code>NativeArray&lt;float&gt; result = new NativeArray&lt;float&gt;(1, Allocator.TempJob);
+</code></pre>
+
+<p>
+<strong>Note</strong>: The number 1 in the example above indicates the size of the <code>NativeArray</code>. In this case, it has only one array element (as it only stores one piece of data in <code>result</code>).</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–15 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p>
+<span class="page-history">C# Job System exposed in <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> <span class="search-words">NewIn20181</span></span> </p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="JobSystemSafetySystem.html"></a></span><div class="tip"> The safety system in the C# Job System</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="JobSystemCreatingJobs.html"></a></span><div class="tip"> Creating jobs</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

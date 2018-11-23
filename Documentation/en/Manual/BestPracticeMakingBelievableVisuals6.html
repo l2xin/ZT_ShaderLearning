@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Outdoor lighting and Scene setup</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeMakingBelievableVisuals6.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeMakingBelievableVisuals6.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeMakingBelievableVisuals6.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeMakingBelievableVisuals6.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeMakingBelievableVisuals6.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html"> Making believable visuals in Unity</a></li>
+<li> Outdoor lighting and Scene setup</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals5.html"></a></span><div class="tip"> Shading</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals7.html"></a></span><div class="tip"> Indoor and local lighting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Outdoor lighting and Scene setup</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>At this stage, you should have meshes that are properly textured and an assembled Scene with proper tonemapped Unity render settings. But the Scene still needs a proper lighting setup. The advice in this section assumes you have set the Scene with a <strong>Realtime GI</strong> strategy and then lit with Realtime lights for instant feedback. The same advice and lighting principles also apply when baking. </p>
+
+<p>For outdoor lighting and Scene setup, consider the following:</p>
+
+<ul>
+<li><a href="#environment">Environment lighting</a></li>
+<li><a href="#directional">Global Illumination</a></li>
+<li><a href="#gi">Light Probes and Reflection Probes</a></li>
+<li><a href="#probes">HDR Lighting Value</a></li>
+<li><a href="#hdr">Screen Space Ambient Occlusion and Screen Space Reflection</a></li>
+<li><a href="#fog">Fog</a></li>
+</ul>
+
+<p><a name="environment"></a></p>
+
+<h2>Environment lighting</h2>
+
+<p>One of the main components in outdoor lighting is Environment lighting, which is also referred to as hemisphere lighting or skylight. Night sky has minimal contribution, while daytime sky has very bright contribution. Environment lighting settings can be found under the Lighting tab (<strong>Window</strong> &gt; <strong>Lighting</strong> &gt; <strong>Settings</strong> &gt; <strong>Environment</strong>).</p>
+
+<p>A procedural <span class="tooltip"><strong>Skybox</strong><span class="tooltiptext">A special type of Material used to represent skies. Usually six-sided. <a href="class-Skybox.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skybox">Glossary</a></span></span></span> material is better than a <span class="tooltip"><strong>HDRI</strong><span class="tooltiptext">high dynamic range image <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDRI">Glossary</a></span></span></span> <span class="tooltip"><strong>cubemap</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span>, for its simplicity and ease of use. </p>
+
+<p>To create a procedural Skybox material:</p>
+
+<ol>
+<li><p>Add a new material in the project and name it <strong>SkyMaterial</strong>. </p></li>
+<li><p>In the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, set the material’s <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> to Skybox/Procedural</p></li>
+<li><p>In the Lighting window, on the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> tab, assign <strong>SkyMaterial</strong> to <strong>Environment</strong> &gt; <strong>Skybox Material</strong>:</p></li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSkyMaterial.png" alt="">
+</figure>
+
+<p>The Scene is now slightly lit. It has ambient lighting, but not proper environment lighting:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsAmbientLighting.jpg" alt="">
+</figure>
+
+<p><a name="directional"></a></p>
+
+<h2>Directional Light</h2>
+
+<p>Typical sunlight or moonlight is usually represented by a directional light. This is due to the parallel nature of its light and shadow direction mimicking the light source at close to infinity distance.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsDirectionalLighting.jpg" alt="">
+</figure>
+
+<p><a name="gi"></a></p>
+
+<h2>Global Illumination (GI)</h2>
+
+<p>Directional and ambient light alone don’t create believable lighting. Proper environment lighting requires occlusion of the skylight lighting, and sunlight requires indirect lighting bounce. In our example, the sky currently renders a single color value to the Scene, making it flat. This is where you need Realtime GI or Baked lighting to calculate occlusion and indirect bounce lighting. To achieve that, follow these steps:</p>
+
+<ol>
+<li>
+<p>To make sure all the relevant meshes contribute to the Realtime GI or baking, select the <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in your Scene and, in the Inspector window in the <strong>Static</strong> drop-down menu, enable <strong>Lightmap Static</strong> and <span class="tooltip"><strong>Reflection Probes</strong><span class="tooltiptext">A rendering component that captures a spherical view of its surroundings in all directions, rather like a camera. The captured image is then stored as a Cubemap that can be used by objects with reflective materials. <a href="class-ReflectionProbe.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span>:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsStaticDropdown.png" alt="">
+</figure>
+
+<p>
+<strong>Note</strong>: You should generally apply this to all large static meshes.</p>
+</li>
+<li><p>Ensure that your Scene is set to use <strong>Realtime Global Illumination</strong> on the Lighting window &gt; <strong>Scene</strong> &gt; <strong>Realtime Lighting</strong> &gt; <strong>Realtime Global Illumination</strong>. </p></li>
+<li><p>At the bottom of the Lighting window, make sure <strong>Auto Generate</strong> is checked.</p></li>
+</ol>
+
+<p>At this stage, the example Scene is now dark, and some elements of the Scene look out of place, such as the tram and the door on the background:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsDarkScene.jpg" alt="">
+</figure>
+
+<p>The static GameObjects in the Scene currently have proper occlusion for environment lighting (hemisphere lighting) and indirect bounce response from the directional light, but the rest of the GameObjects need a proper lighting setup.</p>
+
+<p><a name="probes"></a></p>
+
+<h4>Light Probes and Reflection Probes</h4>
+
+<p>For dynamic GameObjects and non-lightmap GameObjects to receive Realtime or Baked GI, you need to have Light Probes distributed in the Scene. Distribute <span class="tooltip"><strong>Light Probe groups</strong><span class="tooltiptext">A component that enables you to add Light Probes to GameObjects in your scene. <a href="class-LightProbeGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbeGroup">Glossary</a></span></span></span> in the Scene efficiently, such as near dynamically-lit GameObjects or in areas where the player passes by. For more information on Light Probes group, see <span class="tooltip"><a href="LightProbes.html">Light Probes</a><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</p>
+
+<p>Because <strong>Auto Generate</strong> is checked in the Lighting window, the lighting refreshes whenever you make a change. With Light Probes now in the example Scene, the tram and the background door are grounded better, but reflections look out of place. Sky reflection is all over the place and shows up inside the tunnel:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLightProbes.jpg" alt="">
+</figure>
+
+<p>Reflection Probes help resolve this issue. Place Reflection Probes efficiently, with proper coverage in the Scene as needed. In the Scene image above, one Reflection Probe for the entire room is sufficient. A 128 <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> Cubemap Resolution using box projection is a good baseline for most cases, and is also useful for memory and reflection bake times. </p>
+
+<p>The example Scene now looks properly grounded and cohesive, which is an important part of a believable Scene. However, everything is even darker than before, and nowhere near believable quality:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsReflectionProbe.jpg" alt="">
+</figure>
+
+<p>For more information on Reflection Probes, see <a href="https://docs.unity3d.com/Manual/class-ReflectionProbe.html">Reflection Probes</a>.</p>
+
+<p><a name="hdr"></a></p>
+
+<h2>HDR Lighting Value</h2>
+
+<p>In reality, environment lighting and sunlights are very bright light sources. They’re much brighter than pixel value 1. This is where HDR lighting comes into play, because it can accommodate pixel values outside the 0–1 range. To give you a good idea of what environment lighting does to a Scene, let’s turn off the directional sunlight in our example Scene, and set the <strong>SkyMaterial</strong> &gt; <strong>Exposure</strong> to 16:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsHDRExposure.jpg" alt="">
+</figure>
+
+<p>The Scene starts to look believable, as if it is a cloudy day when sunlight is completely diffused in the sky and directional light doesn’t show up. Now, let’s reintroduce sunlight back into the Scene at a much higher value by setting the <strong>Intensity</strong> to 5. Despite the sun looking nearly white, it is important that you choose color properly, because the impact of indirect color from a strong sun can dramatically change the look of the Scene. </p>
+
+<p>Now the sun (directional light) looks like a high energy light, as expected from real life, and the Scene looks quite believable:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsIntenseDirectionalLight.jpg" alt="">
+</figure>
+
+<p><a name="ssao"></a></p>
+
+<h2>Screen Space Ambient Occlusion and Screen Space Reflection</h2>
+
+<p>While the Scene lighting looks pretty good at this point, you can add more details to make the Scene more believable. Baking detailed occlusion usually isn’t possible because of the limited resolution set in the Realtime GI for reasonable performance. This is where Screen Space Ambient Occlusion can help. Enable SSAO in the Post-Process Profile by checking <span class="tooltip"><strong>Ambient Occlusion</strong><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>. The sample Scene contains a post-processing profile called <em>Rin_Post_Basic.asset</em>, set to the following <strong>Ambient Occlusion </strong>settings:</p>
+
+<ul>
+<li>
+<strong>Intensity</strong> 0.5</li>
+<li>
+<strong>Radius</strong> 1</li>
+<li>
+<strong>Sample Count</strong> Medium</li>
+<li>
+<strong>Downsampling</strong> and <strong>Ambient Only</strong> checked</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsPPAmbientOcclusion.jpg" alt="">
+</figure>
+
+<p>While SSAO takes care of extra ambient lighting occlusion, Screen Space Reflection improves the accuracy. When you enable the <strong>Screen Space Reflection</strong> in the post-processing profile, the left side of the wet track no longer renders bright reflections, because SSR gives the Scene more accurate reflections for on-screen GameObjects:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsPPSSR.jpg" alt="">
+</figure>
+
+<p>Both of these post-processing options incur performance impacts at run time, so enable them wisely. Adjust the values so that they have a reasonable performance impact that fits your run-time requirements.</p>
+
+<p><a name="fog"></a></p>
+
+<h2>Fog</h2>
+
+<p>At this stage, our sample Scene has believable outdoor and indoor value separation on a fixed exposure. Reflection is visible in the dark indoor areas as strong highlights and not dim muddy values. However, the Scene foreground and background elements are not showing up, despite being strong perspective elements:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsForegroundBackground.jpg" alt="Scene showing no differentiation between foreground and background scene elements">
+<figcaption>Scene showing no differentiation between foreground and background scene elements</figcaption>
+</figure>
+
+<p>Adding a subtle fog to the Scene creates a massive difference in giving the Scene another dimension:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableExaggeratedFog.jpg" alt="Scene showing exaggerated fog that creates separation between foreground and background elements">
+<figcaption>Scene showing exaggerated fog that creates separation between foreground and background elements</figcaption>
+</figure>
+
+<p>With fog added, the foreground railing is defined better compared to the zero fog Scene above.
+To enable fog, open the Lighting window and go to <strong>Scene</strong> &gt; <strong>Other Settings &gt; Fog</strong>. In the provided Scene, <span class="tooltip"><strong>Fog</strong><span class="tooltiptext">A post-processing effect that overlays a color onto objects depending on the distance from the camera. Use this to simulate fog or mist in outdoor environments, or to hide clipping of objects near the camera’s far clip plane. <a href="PostProcessing-Fog.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Fog">Glossary</a></span></span></span> is set to use <strong>Color</strong> #6D6B4EFF, and it’s in <strong>Exponential</strong> mode with <strong>Density</strong> set to 0.025. In deferred rendering, you might need to enable fog in the post-processing profile if it is not activated automatically.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Making believable visuals Best Practice Guide added in Unity 2017.3</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals5.html"></a></span><div class="tip"> Shading</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals7.html"></a></span><div class="tip"> Indoor and local lighting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

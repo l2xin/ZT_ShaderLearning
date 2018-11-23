@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Custom Spawn Functions</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetCustomSpawning.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetCustomSpawning.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetCustomSpawning.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetCustomSpawning.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetCustomSpawning.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li><a href="UNetGameObjects.html"> Networked GameObjects</a></li>
+<li> Custom Spawn Functions</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetSpawning.html"></a></span><div class="tip"> Spawning GameObjects</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetAuthority.html"></a></span><div class="tip"> Network Authority</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Custom Spawn Functions</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can use spawn handler functions to customize the default behaviour when creating spawned <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> from <span class="tooltip"><strong>prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> on the client. Spawn handler functions ensure you have full control of how you spawn the GameObject, as well as how you destroy it.</p>
+
+<p>Use <a href="../ScriptReference/Networking.ClientScene.RegisterSpawnHandler.html">ClientScene.RegisterSpawnHandler</a> to register functions to spawn and destroy client GameObjects. The server creates GameObjects directly, and then spawns them on the clients through this functionality. This function takes the <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> ID of the GameObject and two function delegates: one to handle creating GameObjects on the client, and one to handle destroying GameObjects on the client. The <strong>asset</strong> ID can be a dynamic one, or just the <strong>asset</strong> ID found on the prefab GameObject you want to spawn (if you have one).</p>
+
+<p>The spawn / un-spawner need to have this GameObject signature. This is defined in the <span class="tooltip"><a href="UNetUsingHLAPI.html">high level API</a><span class="tooltiptext">A system for building multiplayer capabilities for Unity games. It is built on top of the lower level transport real-time communication layer, and handles many of the common tasks that are required for multiplayer games. <a href="UNetUsingHLAPI.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HighLevelAPI">Glossary</a></span></span></span>.</p>
+
+<pre><code>
+// Handles requests to spawn GameObjects on the client
+public delegate GameObject SpawnDelegate(Vector3 position, NetworkHash128 assetId);
+
+// Handles requests to unspawn GameObjects on the client
+public delegate void UnSpawnDelegate(GameObject spawned);
+</code></pre>
+
+<p>The asset ID passed to the spawn function can be found on <a href="../ScriptReference/Networking.NetworkIdentity-assetId.html">NetworkIdentity.assetId</a> for prefabs, where it is populated automatically. The registration for a dynamic asset ID is handled like this:</p>
+
+<pre><code>
+// generate a new unique assetId 
+NetworkHash128 creatureAssetId = NetworkHash128.Parse(&quot;e2656f&quot;);
+
+// register handlers for the new assetId
+ClientScene.RegisterSpawnHandler(creatureAssetId, SpawnCreature, UnSpawnCreature);
+
+// get assetId on an existing prefab
+NetworkHash128 coinAssetId = coinPrefab.GetComponent&lt;NetworkIdentity&gt;().assetId;
+
+// register handlers for an existing prefab you'd like to custom spawn
+ClientScene.RegisterSpawnHandler(coinAssetId, SpawnCoin, UnSpawnCoin);
+
+// spawn a coin - SpawnCoin is called on client
+NetworkServer.Spawn(gameObject, coinAssetId);
+
+</code></pre>
+
+<p>The spawn functions themselves are implemented with the delegate signature. Here is the coin spawner. The SpawnCreature would look the same, but have different spawn logic:</p>
+
+<pre><code>
+public GameObject SpawnCoin(Vector3 position, NetworkHash128 assetId)
+{
+    return (GameObject)Instantiate(m_CoinPrefab, position, Quaternion.identity);
+}
+public void UnSpawnCoin(GameObject spawned)
+{
+    Destroy(spawned);
+}
+</code></pre>
+
+<p>When using custom spawn functions, it is sometimes useful to be able to unspawn GameObjects without destroying them. This can be done by calling <a href="../ScriptReference/Networking.NetworkServer.UnSpawn.html">NetworkServer.UnSpawn</a>. This causes a message to be sent to clients to un-spawn the GameObject, so that the custom un-spawn function will be called on the clients. The GameObject is not destroyed when this function is called.</p>
+
+<p>Note that on the host, GameObjects are not spawned for the local client, because they already exist on the server. This also means that no spawn handler functions are called.</p>
+
+<h2>Setting up a GameObject pool with custom spawn handlers</h2>
+
+<p>Here is an example of how you might set up a very simple GameObject pooling system with custom spawn handlers. Spawning and unspawning then puts GameObjects in or out of the pool.</p>
+
+<pre><code>
+using UnityEngine;
+using UnityEngine.Networking;
+using System.Collections;
+
+public class SpawnManager : MonoBehaviour
+{
+    public int m_ObjectPoolSize = 5;
+    public GameObject m_Prefab;
+    public GameObject[] m_Pool;
+
+    public NetworkHash128 assetId { get; set; }
+    
+    public delegate GameObject SpawnDelegate(Vector3 position, NetworkHash128 assetId);
+    public delegate void UnSpawnDelegate(GameObject spawned);
+
+    void Start()
+    {
+        assetId = m_Prefab.GetComponent&lt;NetworkIdentity&gt; ().assetId;
+        m_Pool = new GameObject[m_ObjectPoolSize];
+        for (int i = 0; i &lt; m_ObjectPoolSize; ++i)
+        {
+            m_Pool[i] = (GameObject)Instantiate(m_Prefab, Vector3.zero, Quaternion.identity);
+            m_Pool[i].name = &quot;PoolObject&quot; + i;
+            m_Pool[i].SetActive(false);
+        }
+        
+        ClientScene.RegisterSpawnHandler(assetId, SpawnObject, UnSpawnObject);
+    }
+
+    public GameObject GetFromPool(Vector3 position)
+    {
+        foreach (var obj in m_Pool)
+        {
+            if (!obj.activeInHierarchy)
+            {
+                Debug.Log(&quot;Activating GameObject &quot; + obj.name + &quot; at &quot; + position);
+                obj.transform.position = position;
+                obj.SetActive (true);
+                return obj;
+            }
+        }
+        Debug.LogError (&quot;Could not grab GameObject from pool, nothing available&quot;);
+        return null;
+    }
+    
+    public GameObject SpawnObject(Vector3 position, NetworkHash128 assetId)
+    {
+        return GetFromPool(position);
+    }
+    
+    public void UnSpawnObject(GameObject spawned)
+    {
+        Debug.Log (&quot;Re-pooling GameObject &quot; + spawned.name);
+        spawned.SetActive (false);
+    }
+}
+</code></pre>
+
+<p>To use this manager, create a new empty GameObject and name it “SpawnManager”. Create a new script called <em>SpawnManager, </em>copy in the code sample above, and attach it to the* *new SpawnManager GameObject. Next, drag a prefab you want to spawn multiple times to the <strong>P</strong><strong>refab </strong>field, and set the <strong>Object Pool Size</strong> (default is 5).</p>
+
+<p>Finally, set up a reference to the SpawnManager in the script you are using for player movement:</p>
+
+<pre><code>
+SpawnManager spawnManager;
+
+void Start()
+{
+    spawnManager = GameObject.Find(&quot;SpawnManager&quot;).GetComponent&lt;SpawnManager&gt; ();
+}
+</code></pre>
+
+<p>Your player logic might contain something like this, which moves and fires coins:</p>
+
+<pre><code>
+void Update()
+{
+    if (!isLocalPlayer)
+        return;
+    
+    var x = Input.GetAxis(&quot;Horizontal&quot;)*0.1f;
+    var z = Input.GetAxis(&quot;Vertical&quot;)*0.1f;
+    
+    transform.Translate(x, 0, z);
+
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        // Command function is called on the client, but invoked on the server
+        CmdFire();
+    }
+}
+</code></pre>
+
+<p>In the fire logic on the player, make it use the GameObject pool:</p>
+
+<pre><code>
+[Command]
+void CmdFire()
+{
+    // Set up coin on server
+    var coin = spawnManager.GetFromPool(transform.position + transform.forward);  
+    coin.GetComponent&lt;Rigidbody&gt;().velocity = transform.forward*4;
+    
+    // spawn coin on client, custom spawn handler is called
+    NetworkServer.Spawn(coin, spawnManager.assetId);
+    
+    // when the coin is destroyed on the server, it is automatically destroyed on clients
+    StartCoroutine (Destroy (coin, 2.0f));
+}
+
+public IEnumerator Destroy(GameObject go, float timer)
+{
+    yield return new WaitForSeconds (timer);
+    spawnManager.UnSpawnObject(go);
+    NetworkServer.UnSpawn(go);
+}
+</code></pre>
+
+<p>The automatic destruction shows how the GameObjects are returned to the pool and re-used when you fire again.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetSpawning.html"></a></span><div class="tip"> Spawning GameObjects</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetAuthority.html"></a></span><div class="tip"> Network Authority</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

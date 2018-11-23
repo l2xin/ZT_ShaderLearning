@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Debug Views</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PostProcessing-DebugViews.html">English</a></li>
+<li><a href="/ja/current/Manual/PostProcessing-DebugViews.html">日本語</a></li>
+<li><a href="/es/current/Manual/PostProcessing-DebugViews.html">Español</a></li>
+<li><a href="/kr/current/Manual/PostProcessing-DebugViews.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PostProcessing-DebugViews.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="PostProcessingOverview.html"> Post-processing overview</a></li>
+<li> Debug Views</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Dithering.html"></a></span><div class="tip"> Dithering</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-Monitors.html"></a></span><div class="tip"> Monitors</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h2>Debug Views</h2>
+
+<p>The <a href="PostProcessing-Stack.html">post-processing stack</a> comes with a selection of debug views to view specific effects or passes such as depth, normals and motion vectors. These can be found at the top of the post-processing profile. Debug views will affect the application of other effects on the Game view.</p>
+
+<p>The debug views included in the post-processing stack are:</p>
+
+<ul>
+<li><p>Depth</p></li>
+<li><p>Normals</p></li>
+<li><p>Motion Vectors</p></li>
+<li><p>Ambient Occlusion</p></li>
+<li><p>Eye Adaptation</p></li>
+<li><p>Focus Plane</p></li>
+<li><p>Pre Grading Log</p></li>
+<li><p>Log Lut</p></li>
+<li><p>User Lut</p></li>
+</ul>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Mode</strong></td>
+	<td style="text-align:left;">The currently selected debug view</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Depth</h3>
+
+<p>The Depth Debug View displays the depth values of the <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> on screen. These values can be shifted for easier viewing by adjusting the Scale value. </p>
+
+<p>The Debug View can be used to identify issues in all effects that use the <a href="SL-DepthTextures.html">depth texture</a>, such as <span class="tooltip"><a href="PostProcessing-AmbientOcclusion.html">Ambient Occlusion</a><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span> and <span class="tooltip"><a href="PostProcessing-DepthOfField.html">Depth of Field</a><span class="tooltiptext">A post-processing effect that simulates the focus properties of a camera lens. <a href="PostProcessing-DepthOfField.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DepthofField">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-0.png" alt="The Depth Debug View">
+<figcaption>The Depth Debug View</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Scale</strong></td>
+	<td style="text-align:left;">Scales the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> far plane before displaying the depth map.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Normals</h3>
+
+<p>The Normals Debug View displays the normals texture used for various effects. This Debug View differs between <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> paths. In the <a href="RenderTech-DeferredShading.html">Deferred rendering path</a> it displays the G-Buffer Normals texture, this includes details from object’s normal maps. In the <span class="tooltip"><strong>Forward rendering</strong><span class="tooltiptext">A rendering path that renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity. <a href="RenderTech-ForwardRendering.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span> path it just displays object’s vertex normals.</p>
+
+<p>This Debug View can be used to identify issues in all effects that use the normals texture such as <a href="PostProcessing-ScreenSpaceReflection.html">Screen Space Reflection</a> and <a href="PostProcessing-AmbientOcclusion.html">Ambient Occlusion</a>.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-1.jpg" alt="The Normals Debug View in the Deferred rendering path">
+<figcaption>The Normals Debug View in the Deferred rendering path</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-2.jpg" alt="The Normals Debug View in the Forward rendering path">
+<figcaption>The Normals Debug View in the Forward rendering path</figcaption>
+</figure>
+
+<h3>Motion Vectors</h3>
+
+<p>The Motion Vectors Debug View displays visualizations of the <a href="../ScriptReference/DepthTextureMode.MotionVectors.html">motion vector</a> texture. There are two types of visualizations in the Motion Vectors Debug View.</p>
+
+<p>The overlay visualization displays motion vector colors of each pixel on screen. Different colors show different movement directions and more saturated values indicate higher velocities. The arrows visualization draws arrows on screen indicating direction and velocity of movement, this is less precise but easier to read.</p>
+
+<p>This Debug View can be used to identify issues with temporal effects such as <span class="tooltip"><a href="PostProcessing-MotionBlur.html">Motion Blur</a><span class="tooltiptext">A common post-processing effect that simulates the blurring of an image when objects filmed by a camera are moving faster than the camera’s exposure time. <a href="PostProcessing-MotionBlur.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MotionBlur">Glossary</a></span></span></span> and <a href="PostProcessing-Antialiasing.html">Temporal Anti-aliasing</a>.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-3.jpg" alt="The Motion Vectors Debug View">
+<figcaption>The Motion Vectors Debug View</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>(Source Image) Opacity</strong></td>
+	<td style="text-align:left;">Opacity of the source render.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>(Motion Vectors (overlay)) Opacity</strong></td>
+	<td style="text-align:left;">Opacity of the per-pixel motion vectors</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>(Motion Vectors (overlay)) Amplitude</strong></td>
+	<td style="text-align:left;">Because motion vectors are mainly very small vectors, you can use this setting to make them more visible.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>(Motion Vectors (arrows)) Opacity</strong></td>
+	<td style="text-align:left;">Opacity for the motion vector arrows.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>(Motion Vectors (arrows)) Resolution</strong></td>
+	<td style="text-align:left;">The arrow density on screen.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>(Motion Vectors (arrows)) Amplitude</strong></td>
+	<td style="text-align:left;">Tweaks the arrows length.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Ambient Occlusion</h3>
+
+<p>The Ambient Occlusion Debug View displays the final result of the <a href="PostProcessing-AmbientOcclusion.html">Ambient Occlusion</a> effect without multiplying it on top of the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. This can be useful for identifying problems in Ambient Occlusion.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-4.jpg" alt="The Ambient Occlusion Debug View.">
+<figcaption>The Ambient Occlusion Debug View.</figcaption>
+</figure>
+
+<h3>Eye Adaptation</h3>
+
+<p>The Eye Adaptation Debug View displays a representation of the histogram used for <a href="PostProcessing-EyeAdaptation.html">Eye Adaptation</a>. This indicates the minimum and maximum for Histogram log and Luminance as well as the current average luminance computed by the effect. These are overlaid onto the luminance values of the screen, updated in real time to indicate the Eye Adaptation effect.</p>
+
+<p>This is useful for fine tuning the Eye Adaptation effect.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-5.jpg" alt="The Eye Adaptation Debug View.">
+<figcaption>The Eye Adaptation Debug View.</figcaption>
+</figure>
+
+<h3>Focus Plane</h3>
+
+<p>The Focus Plane Debug View displays the focus distance and aperture range used for <a href="PostProcessing-DepthOfField.html">Depth of Field</a>.</p>
+
+<p>This is useful for setting up the Depth of Field effect.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-6.jpg" alt="The Focus Plane Debug View.">
+<figcaption>The Focus Plane Debug View.</figcaption>
+</figure>
+
+<h3>Pre Grading Log</h3>
+
+<p>The Pre Grading Log Debug View displays the source image in Log space. This is the input used for most controls of <a href="PostProcessing-ColorGrading.html">Color Grading</a>. It displays a log/compressed view of the current <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> view.</p>
+
+<p>This is useful for identifying problems in Color Grading.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-7.jpg" alt="The Pre Grading Log Debug View.">
+<figcaption>The Pre Grading Log Debug View.</figcaption>
+</figure>
+
+<h3>Log Lut</h3>
+
+<p>The Log Lut Debug View displays the output Lut for <a href="PostProcessing-ColorGrading.html">Color Grading</a>. This is the Lut generated by the Color Grading effect based on parameters set by the user.</p>
+
+<p>This is useful for identifying problems in Color Grading.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-8.jpg" alt="The Log Lut Debug View.">
+<figcaption>The Log Lut Debug View.</figcaption>
+</figure>
+
+<h3>User Lut</h3>
+
+<p>The User Lut Debug View displays the output Lut for <a href="PostProcessing-UserLut.html">User Lut</a>. This is the texture set in the Lut field adjusted by the <strong>Contribution </strong>parameter.</p>
+
+<p>This is useful for identifying problems in User Lut.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-DebugViews-9.jpg" alt="The User Lut Debug View.">
+<figcaption>The User Lut Debug View.</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–24 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New feature in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Dithering.html"></a></span><div class="tip"> Dithering</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-Monitors.html"></a></span><div class="tip"> Monitors</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

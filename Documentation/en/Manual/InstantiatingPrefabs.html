@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Instantiating Prefabs at runtime</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/InstantiatingPrefabs.html">English</a></li>
+<li><a href="/ja/current/Manual/InstantiatingPrefabs.html">日本語</a></li>
+<li><a href="/es/current/Manual/InstantiatingPrefabs.html">Español</a></li>
+<li><a href="/kr/current/Manual/InstantiatingPrefabs.html">한국어</a></li>
+<li><a href="/ru/current/Manual/InstantiatingPrefabs.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="CreatingGameplay.html">Creating Gameplay</a></li>
+<li><a href="GameObjects.html"> GameObjects</a></li>
+<li>Instantiating Prefabs at runtime</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Prefabs.html"></a></span><div class="tip">Prefabs</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Saving.html"></a></span><div class="tip"> Saving Your Work</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Instantiating Prefabs at runtime</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>By this point you should understand the concept of <span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> at a fundamental level. They are a collection of predefined <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> &amp; <span class="tooltip"><strong>Components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> that are re-usable throughout your game. If you don’t know what a Prefab is, we recommend you read the <a href="Prefabs.html">Prefabs</a> page for a more basic introduction.</p>
+
+<p>Prefabs come in very handy when you want to instantiate complicated GameObjects at runtime. The alternative to instantiating Prefabs is to create GameObjects from scratch using code. Instantiating Prefabs has many advantages over the alternative approach:</p>
+
+<ul>
+<li>You can instantiate a Prefab from one line of code, with complete functionality. Creating equivalent GameObjects from code takes an average of five lines of code, but likely more.</li>
+<li>You can set up, test, and modify the Prefab quickly and easily in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> and <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>.</li>
+<li>You can change the Prefab being instanced without changing the code that instantiates it. A simple rocket might be altered into a super-charged rocket, and no code changes are required.</li>
+</ul>
+
+<h2>Common Scenarios</h2>
+
+<p>To illustrate the strength of Prefabs, let’s consider some basic situations where they would come in handy:</p>
+
+<ol>
+<li>Building a wall out of a single “brick” Prefab by creating it several times in different positions.</li>
+<li>A rocket launcher instantiates a flying rocket Prefab when fired. The Prefab contains a <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span>, <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span>, <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span>, and a child GameObject with its own trail <span class="tooltip"><strong>Particle System</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>.</li>
+<li>A robot exploding to many pieces. The complete, operational robot is destroyed and replaced with a wrecked robot Prefab. This Prefab would consist of the robot split into many parts, all set up with Rigidbodies and Particle Systems of their own. This technique allows you to blow up a robot into many pieces, with just one line of code, replacing one object with a Prefab.</li>
+</ol>
+
+<h3>Building a wall</h3>
+
+<p>This explanation will illustrate the advantages of using a Prefab vs creating objects from code.</p>
+
+<p>First, lets build a brick wall from code:</p>
+
+<pre><code>public class Instantiation : MonoBehaviour 
+{
+    void Start()
+    {
+        for (int y = 0; y &lt; 5; y++) 
+        {
+            for (int x = 0; x &lt; 5; x++) 
+            {
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.AddComponent&lt;Rigidbody&gt;();
+                cube.transform.position = new Vector3(x, y, 0);
+            }
+        }
+    }
+}
+</code></pre>
+
+<ul>
+<li>To use the above script we simply save the script and drag it onto an empty GameObject.</li>
+<li>Create an empty GameObject with <strong>GameObject-&gt;Create Empty</strong>.</li>
+</ul>
+
+<p>If you execute that code, you will see an entire brick wall is created when you enter Play mode. There are two lines relevant to the functionality of each individual brick: the <code>CreatePrimitive</code> line, and the <code>AddComponent</code> line. Not so bad right now, but each of our bricks is un-textured. Every additional action to want to perform on the brick, like changing the texture, the friction, or the Rigidbody <strong>mass</strong>, is an extra line.</p>
+
+<p>If you create a Prefab and perform all your setup before-hand, you use one line of code to perform the creation and setup of each brick. This relieves you from maintaining and changing a lot of code when you decide you want to make changes. With a Prefab, you just make your changes and Play. No code alterations required.</p>
+
+<p>If you’re using a Prefab for each individual brick, this is the code you need to create the wall.</p>
+
+<pre><code>//Instantiate accepts any component type, because it instantiates the GameObject 
+
+public Transform brick;
+
+void Start() 
+{
+    for (int y = 0; y &lt; 5; y++)
+    {
+        for (int x = 0; x &lt; 5; x++) 
+        {
+            Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity);
+        }
+    }
+}
+</code></pre>
+
+<p>This is not only very clean but also very reusable. There is nothing saying we are instantiating a cube or that it must contain a rigidbody. All of this is defined in the Prefab and can be quickly created in the Editor.</p>
+
+<p>Now we only need to create the Prefab, which we do in the Editor. Here’s how:</p>
+
+<ol>
+<li>Choose <strong>GameObject &gt; 3D Object &gt; Cube</strong>
+</li>
+<li>Choose <strong>Component &gt; Physics &gt; Rigidbody</strong>
+</li>
+<li>Choose <strong>Assets &gt; Create &gt; Prefab</strong>
+</li>
+<li>In the <span class="tooltip"><strong>Project View</strong><span class="tooltiptext">A view that shows the contents of your Assets folder (Project tab) <a href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectView">Glossary</a></span></span></span>, change the name of your new Prefab to “Brick”</li>
+<li>Drag the cube you created in the <strong>Hierarchy</strong> onto the “Brick” Prefab in the <strong>Project View</strong>
+</li>
+<li>With the Prefab created, you can safely delete the Cube from the Hierarchy (<strong>Delete</strong> on Windows, <strong>Command-Backspace</strong> on Mac)</li>
+</ol>
+
+<p>We’ve created our Brick Prefab, so now we have to attach it to the <strong>brick</strong> variable in our script. When you select the empty GameObject that contains the script, the Brick variable will be visible in the inspector. </p>
+
+<p>Now drag the “Brick” Prefab from the Project View onto the <strong>brick</strong> variable in the Inspector. Press Play and you’ll see the wall built using the Prefab.</p>
+
+<p>This is a workflow pattern that can be used over and over again in Unity. In the beginning you might wonder why this is so much better, because the script creating the cube from code is only 2 lines longer.</p>
+
+<p>But because you are using a Prefab now, you can adjust the Prefab in seconds. Want to change the mass of all those instances? Adjust the Rigidbody in the Prefab only once. Want to use a different <span class="tooltip"><strong>Material</strong><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#material">Glossary</a></span></span></span> for all the instances? Drag the Material onto the Prefab only once. Want to change friction? Use a different <span class="tooltip"><strong>Physic Material</strong><span class="tooltiptext">A physics asset for adjusting the friction and bouncing effects of colliding objects. <a href="class-PhysicMaterial.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicMaterial">Glossary</a></span></span></span> in the Prefab’s collider. Want to add a Particle System to all those boxes? Add a child to the Prefab only once.</p>
+
+<h3>Instantiating rockets &amp; explosions</h3>
+
+<p>Here’s how Prefabs fit into this scenario:</p>
+
+<ol>
+<li>A rocket launcher instantiates a rocket Prefab when the user presses fire. The Prefab contains a mesh, Rigidbody, Collider, and a child GameObject that contains a trail particle system.</li>
+<li>The rocket impacts and instantiates an explosion Prefab. The explosion Prefab contains a Particle System, a light that fades out over time, and a script that applies damage to surrounding GameObjects.</li>
+</ol>
+
+<p>While it would be possible to build a rocket GameObject completely from code, adding Components manually and setting properties, it is far easier to instantiate a Prefab. You can instantiate the rocket in just one line of code, no matter how complex the rocket’s Prefab is. After instantiating the Prefab you can also modify any properties of the instantiated object (e.g. you can set the velocity of the rocket’s Rigidbody).</p>
+
+<p>Aside from being easier to use, you can update the prefab later on. So if you are building a rocket, you don’t immediately have to add a Particle trail to it. You can do that later. As soon as you add the trail as a child GameObject to the Prefab, all your instantiated rockets will have particle trails. And lastly, you can quickly tweak the properties of the rocket Prefab in the Inspector, making it far easier to fine-tune your game.</p>
+
+<p>This script shows how to launch a rocket using the <strong>Instantiate()</strong> function.</p>
+
+<pre><code>// Require the rocket to be a rigidbody.
+// This way we the user can not assign a prefab without rigidbody
+public Rigidbody rocket;
+public float speed = 10f;
+
+void FireRocket () 
+{
+    Rigidbody rocketClone = (Rigidbody) Instantiate(rocket, transform.position, transform.rotation);
+    rocketClone.velocity = transform.forward * speed;
+    
+    // You can also access other components / scripts of the clone
+    rocketClone.GetComponent&lt;MyRocketScript&gt;().DoSomething();
+}
+
+// Calls the fire method when holding down ctrl or mouse
+void Update () 
+{
+    if (Input.GetButtonDown(&quot;Fire1&quot;))
+    {
+        FireRocket();
+    }
+}
+
+
+</code></pre>
+
+<h3>Replacing a character with a ragdoll or wreck</h3>
+
+<p>Let’s say you have a fully rigged enemy character who dies. You could simply play a death animation on the character and disable all <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> that usually handle the enemy logic. You probably have to take care of removing several <strong>scripts</strong>, adding some custom logic to make sure that no one will continue attacking the dead enemy anymore, and other cleanup tasks.</p>
+
+<p>A far better approach is to immediately delete the entire character and replace it with an instantiated wrecked prefab. This gives you a lot of flexibility. You could use a different material for the dead character, attach completely different scripts, spawn a Prefab containing the object broken into many pieces to simulate a shattered enemy, or simply instantiate a Prefab containing a version of the character.</p>
+
+<p>Any of these options can be achieved with a single call to <strong>Instantiate()</strong>, you just have to hook it up to the right prefab and you’re set!</p>
+
+<p>The important part to remember is that the wreck which you <strong>Instantiate()</strong> can be made of completely different objects than the original. For example, if you have an airplane, you would model two versions. One where the plane consists of a single GameObject with <span class="tooltip"><strong>Mesh Renderer</strong><span class="tooltiptext">A mesh component that takes the geometry from the Mesh Filter and renders it at the position defined by the object’s Transform component. <a href="class-MeshRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span> and scripts for airplane physics. By keeping the model in just one GameObject, your game will run faster since you will be able to make the model with less triangles and since it consists of fewer objects it will render faster than using many small parts. Also while your plane is happily flying around there is no reason to have it in separate parts.</p>
+
+<p>To build a wrecked airplane Prefab, the typical steps are:</p>
+
+<ol>
+<li>Model your airplane with lots of different parts in your favorite modeler</li>
+<li>Create an empty Scene</li>
+<li>Drag the model into the empty Scene</li>
+<li>Add Rigidbodies to all parts, by selecting all the parts and choosing <strong>Component-&gt;Physics-&gt;Rigidbody</strong>
+</li>
+<li>Add Box Colliders to all parts by selecting all the parts and choosing <strong>Component-&gt;Physics-&gt;Box Collider</strong>
+</li>
+<li>For an extra special effect, add a smoke-like Particle System as a child GameObject to each of the parts</li>
+<li>Now you have an airplane with multiple exploded parts, they fall to the ground by physics and will create a Particle trail due to the attached particle system. Hit Play to preview how your model reacts and do any necessary tweaks.</li>
+<li>Choose <strong>Assets-&gt;Create Prefab</strong>
+</li>
+<li>Drag the root GameObject containing all the airplane parts into the Prefab</li>
+</ol>
+
+<p>The following example shows how these steps are modelled in code.</p>
+
+<pre><code>public GameObject wreck;
+
+// As an example, we turn the game object into a wreck after 3 seconds automatically
+IEnumerator Start() 
+{
+    yield return new WaitForSeconds(3);
+    KillSelf();
+}
+
+// Calls the fire method when holding down ctrl or mouse
+void KillSelf () 
+{
+    // Instantiate the wreck game object at the same position we are at
+    GameObject wreckClone = (GameObject) Instantiate(wreck, transform.position, transform.rotation);
+    
+    // Sometimes we need to carry over some variables from this object
+    // to the wreck
+    wreckClone.GetComponent&lt;MyScript&gt;().someVariable = GetComponent&lt;MyScript&gt;().someVariable;
+    
+    // Kill ourselves
+    Destroy(gameObject);
+}
+
+</code></pre>
+
+<h3>Placing a bunch of objects in a specific pattern</h3>
+
+<p>Lets say you want to place a bunch of objects in a grid or circle pattern. Traditionally this would be done by either:</p>
+
+<ol>
+<li>Building an object completely from code. This is tedious! Entering values from a script is both slow, unintuitive and not worth the hassle.</li>
+<li>Make the fully rigged object, duplicate it and place it multiple times in the scene. This is tedious, and placing objects accurately in a grid is hard.</li>
+</ol>
+
+<p>So use <strong>Instantiate()</strong> with a Prefab instead! We think you get the idea of why Prefabs are so useful in these scenarios. Here’s the code necessary for these scenarios:</p>
+
+<pre><code>// Instantiates a prefab in a circle
+
+public GameObject prefab;
+public int numberOfObjects = 20;
+public float radius = 5f;
+
+void Start() 
+{
+    for (int i = 0; i &lt; numberOfObjects; i++)
+    {
+        float angle = i * Mathf.PI * 2 / numberOfObjects;
+        Vector3 pos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
+        Instantiate(prefab, pos, Quaternion.identity);
+    }
+}
+
+</code></pre>
+
+<pre><code>// Instantiates a prefab in a grid
+
+public GameObject prefab;
+public float gridX = 5f;
+public float gridY = 5f;
+public float spacing = 2f;
+
+void Start()
+{
+    for (int y = 0; y &lt; gridY; y++) 
+    {
+        for (int x = 0; x &lt; gridX; x++)
+        {
+            Vector3 pos = new Vector3(x, 0, y) * spacing;
+            Instantiate(prefab, pos, Quaternion.identity);
+        }
+    }
+} 
+
+
+</code></pre>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Prefabs.html"></a></span><div class="tip">Prefabs</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Saving.html"></a></span><div class="tip"> Saving Your Work</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

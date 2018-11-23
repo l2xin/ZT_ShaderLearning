@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using WebGL Templates</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/webgl-templates.html">English</a></li>
+<li><a href="/ja/current/Manual/webgl-templates.html">日本語</a></li>
+<li><a href="/es/current/Manual/webgl-templates.html">Español</a></li>
+<li><a href="/kr/current/Manual/webgl-templates.html">한국어</a></li>
+<li><a href="/ru/current/Manual/webgl-templates.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">Getting started with WebGL development</a></li>
+<li> Using WebGL Templates</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-interactingwithbrowserscripting.html"></a></span><div class="tip"> WebGL: Interacting with browser scripting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-cursorfullscreen.html"></a></span><div class="tip">Cursor locking and full-screen mode in WebGL</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Using WebGL Templates</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When you build a WebGL project, Unity embeds the player in an HTML page so that it can be played in the browser. The default page is a simple white page with a loading bar on a grey canvas. Alternatively, you can select a minimal template (with only the necessary boilerplate code to run the WebGL content) in the Player Settings inspector (menu: Edit &gt; Project Settings &gt; Player).</p>
+
+<figure>
+<img src="../uploads/Main/WebGLTemplate1.png" alt="">
+</figure>
+
+<p>The built-in HTML pages are fine for testing and demonstrating a minimal player but for production purposes, it is often desirable to see the player hosted in the page where it will eventually be deployed. For example, if the Unity content interacts with other elements in the page via the external call interface then it must be tested with a page that provides those interacting elements. Unity allows you to supply your own pages to host the player by using <strong>WebGL templates</strong>.</p>
+
+<h2>Structure of a WebGL Template</h2>
+
+<p>Custom templates are added to a project by creating a folder called “WebGLTemplates” in the <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> folder - the templates themselves are sub-folders within this folder. Each template folder contains an <em>index.html</em> file along with any other resources the page needs, such as images or stylesheets.</p>
+
+<figure>
+<img src="../uploads/Main/WebGLTemplate2.png" alt="">
+</figure>
+
+<p>Once created, the template will appear among the options on the <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. (the name of the template will be the same as its folder). Optionally, the folder can contain a file named <em>thumbnail.png</em>, which should have dimensions of 128x128 <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span>. The thumbnail image will be displayed in the inspector to hint at what the finished page will look like.</p>
+
+<p>The html file needs to contain at least the following elements:</p>
+
+<ul>
+<li><p>Script tag for the Unity <span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span> loader:
+ <code>&lt;script src=&quot;%UNITY_WEBGL_LOADER_URL%&quot;&gt;&lt;/script&gt;</code>
+</p></li>
+<li><p>Script for instantiating the game: <code>&lt;script&gt; var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;%UNITY_WEBGL_BUILD_URL%&quot;);&lt;/script&gt;</code>
+</p></li>
+<li><p>A <code>&lt;div&gt;</code> tag, which <em>id</em> is used in the instantiation function. The contents of this div will be replaced with the game instance.</p></li>
+</ul>
+
+<h2><strong>UnityLoader.instantiate(container, url, override)</strong></h2>
+
+<p>
+<em>UnityLoader.instantiate</em> is responsible for creating a new instance of your content. </p>
+
+<ul>
+<li><p>
+<strong>container </strong>can be either a DOM element (normally a <code>&lt;div&gt;</code> element) or an id of a DOM element. If the DOM element is provided, then the game will be instantiated immediately. If an id of a DOM element is provided, then the game will be instantiated after the whole document is parsed (which means you can provide an id of a DOM element which has not yet been created at the time of <em>UnityLoader.instantiate()</em> call).</p></li>
+<li><p>
+<strong>url </strong>specifies the address of the json file, which contains information about the build (you may use the <em>%UNITY_WEBGL_BUILD_URL%</em> variable which will be automatically resolved at build time).</p></li>
+<li><p>
+<strong>override</strong> is an optional parameter which can be used to override the default properties of the game instance. For example, you can override the <em>compatibilityCheck</em>, <em>onProgress</em> and <em>popup</em> functions, as those are properties of the game instance. Note that <em>Module </em>is a property of the game instance as well, so the properties of the <em>Module </em>can be overridden at instantiation time too. Consider the following example:</p></li>
+</ul>
+
+<pre><code>UnityLoader.instantiate(&quot;MyContainer&quot;, &quot;%UNITY_WEBGL_BUILD_URL%&quot;, {
+  compatibilityCheck: function (gameInstance, onsuccess, onerror) {
+    if (!UnityLoader.SystemInfo.hasWebGL) {
+      gameInstance.popup(&quot;Your browser does not support WebGL&quot;,
+        [{text: &quot;OK&quot;, callback: onerror}]);
+    } else if (UnityLoader.SystemInfo.mobile) {
+      gameInstance.popup(&quot;Please note that Unity WebGL is not currently supported on mobiles. Press OK if you wish to continue anyway.&quot;,
+        [{text: &quot;OK&quot;, callback: onsuccess}]);
+    } else if ([&quot;Edge&quot;, &quot;Firefox&quot;, &quot;Chrome&quot;, &quot;Safari&quot;].indexOf(UnityLoader.SystemInfo.browser) == -1) {
+      gameInstance.popup(&quot;Please note that your browser is not currently supported for this Unity WebGL content. Press OK if you wish to continue anyway.&quot;,
+        [{text: &quot;OK&quot;, callback: onsuccess}]);
+    } else {
+      onsuccess();
+    }
+  },
+  onProgress: MyProgressFunction,
+  Module: {
+    onRuntimeInitialized: MyInitializationCallbackFunction,
+  },
+});
+</code></pre>
+
+<h2>Template tags</h2>
+
+<p>During the build process, Unity looks for special tag strings in the page text and replaces them with values supplied by the Editor. These include the name, onscreen dimensions and other useful information about the player.</p>
+
+<p>Tags are delimited by percent signs (%) in the page source. For example, if the product name is defined as <strong>MyPlayer</strong> in the Player settings:-</p>
+
+<p><code>&lt;title&gt;%UNITY_WEB_NAME%&lt;/title&gt;</code></p>
+
+<p>…in the template’s index file will be replaced with</p>
+
+<p><code>&lt;title&gt;MyPlayer&lt;/title&gt;</code></p>
+
+<p>…in the host page generated for the build. The complete set of tags is given below:-</p>
+
+<ul>
+<li><p>
+<strong>UNITY_WEB_NAME</strong>: Name of the player.</p></li>
+<li><p>
+<strong>UNITY_WEBGL_LOADER_URL</strong>: URL of the UnityLoader.js script, which performs instantiation of the build.</p></li>
+<li><p>
+<strong>UNITY_WEBGL_BUILD_URL</strong>: URL of the JSON file, containing all the necessary information about the build.</p></li>
+<li><p>
+<strong>UNITY_WIDTH</strong> and <strong>UNITY_HEIGHT</strong>: Onscreen width and height of the player in pixels.</p></li>
+<li><p>
+<strong>UNITY_CUSTOM_SOME_TAG</strong>: If you add a tag to the index file in the form <code>UNITY_CUSTOM_XXX</code>, then this tag will appear in the Player Settings when your template is selected. For example, if you add <code>&amp;lt;title&amp;gt;Unity Player | %UNITY_CUSTOM_MYTAG%&amp;lt;/title&amp;gt;</code> to the source, the Player Settings will look like this:-</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/WebGLTemplate3.png" alt="">
+</figure>
+
+<p>The textbox next to the tag’s name contains the text that the custom tag will be replaced with during the build.</p>
+
+<h2>Example</h2>
+
+<p>To illustrate the use of the template tags, here is the HTML source that Unity uses for its minimal WebGL template.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-us&quot;&gt;
+
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+    &lt;title&gt;Unity WebGL Player | %UNITY_WEB_NAME%&lt;/title&gt;
+    &lt;script src=&quot;%UNITY_WEBGL_LOADER_URL%&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+    var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;%UNITY_WEBGL_BUILD_URL%&quot;);
+    &lt;/script&gt;
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+    &lt;div id=&quot;gameContainer&quot; style=&quot;width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto&quot;&gt;&lt;/div&gt;
+  &lt;/body&gt;
+  
+&lt;/html&gt;
+</code></pre>
+
+<p>Both minimal and default templates can be found in the Unity installation folder under Editor\Data\PlaybackEngines\WebGLSupport\BuildTools\WebGLTemplates on Windows or /PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates on Mac.</p>
+
+<h2>Adding a progress bar</h2>
+
+<p>Unity WebGL content will automatically render a default progress bar for you when it loads. You can override the default loading bar by providing your own progress function as an additional instantiation parameter. For example:</p>
+
+<pre><code>var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;%UNITY_WEBGL_BUILD_URL%&quot;, {onProgress: UnityProgress});
+</code></pre>
+
+<p>where <code>UnityProgress</code> is a function of 2 arguments: <code>gameInstance</code> (identifies the game instance the progressbar belongs to) and <code>progress</code> (a value from 0.0 to 1.0, providing information about the current loading progress).</p>
+
+<p>For example, the progress function in the default WebGL template looks the following way:</p>
+
+<pre><code>var gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;%UNITY_WEBGL_BUILD_URL%&quot;, {onProgress: UnityProgress});
+</code></pre>
+
+<p>For example, the progress function in the default WebGL template looks the following way:</p>
+
+<pre><code>function UnityProgress(gameInstance, progress) {
+  if (!gameInstance.Module)
+    return;
+  if (!gameInstance.logo) {
+    gameInstance.logo = document.createElement(&quot;div&quot;);
+    gameInstance.logo.className = &quot;logo &quot; + gameInstance.Module.splashScreenStyle;
+    gameInstance.container.appendChild(gameInstance.logo);
+  }
+  if (!gameInstance.progress) {    
+    gameInstance.progress = document.createElement(&quot;div&quot;);
+    gameInstance.progress.className = &quot;progress &quot; + gameInstance.Module.splashScreenStyle;
+    gameInstance.progress.empty = document.createElement(&quot;div&quot;);
+    gameInstance.progress.empty.className = &quot;empty&quot;;
+    gameInstance.progress.appendChild(gameInstance.progress.empty);
+    gameInstance.progress.full = document.createElement(&quot;div&quot;);
+    gameInstance.progress.full.className = &quot;full&quot;;
+    gameInstance.progress.appendChild(gameInstance.progress.full);
+    gameInstance.container.appendChild(gameInstance.progress);
+  }
+  gameInstance.progress.full.style.width = (100 * progress) + &quot;%&quot;;
+  gameInstance.progress.empty.style.width = (100 * (1 - progress)) + &quot;%&quot;;
+  if (progress == 1)
+    gameInstance.logo.style.display = gameInstance.progress.style.display = &quot;none&quot;;
+}
+</code></pre>
+
+<p>You can use it as is or as reference for your own templates. Since the progress bar is completely implemented in JavaScript, you can customize or replace it to show anything you want as a progress indication.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–24 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-interactingwithbrowserscripting.html"></a></span><div class="tip"> WebGL: Interacting with browser scripting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-cursorfullscreen.html"></a></span><div class="tip">Cursor locking and full-screen mode in WebGL</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

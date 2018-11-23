@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: AppCallbacks class</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/windowsstore-appcallbacks.html">English</a></li>
+<li><a href="/ja/current/Manual/windowsstore-appcallbacks.html">日本語</a></li>
+<li><a href="/es/current/Manual/windowsstore-appcallbacks.html">Español</a></li>
+<li><a href="/kr/current/Manual/windowsstore-appcallbacks.html">한국어</a></li>
+<li><a href="/ru/current/Manual/windowsstore-appcallbacks.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="Windows.html">Windows</a></li>
+<li><a href="WindowsStore.html">Universal Windows Platform</a></li>
+<li>AppCallbacks class</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-assocation-launching.html"></a></span><div class="tip">﻿Universal Windows Platform: Association launching</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-scripts.html"></a></span><div class="tip"> Universal Windows Platform: WinRT API in C# scripts</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>AppCallbacks class</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You could call it a bridge between your main application and Unity engine. Here, we’ll try to explain what every call to AppCallbacks exactly does. Let’s build solution and explore App.xaml.cs file, which gets created if you use .NET <span class="tooltip"><strong>Scripting Backend</strong><span class="tooltiptext">A framework that powers scripting in Unity. Unity supports three different scripting backends depending on target platform: Mono, .NET and IL2CPP. Universal Windows Platform, however, supports only two: .NET and IL2CPP. <a href="windowsstore-scriptingbackends.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ScriptingBackend">Glossary</a></span></span></span>.</p>
+
+<pre><code>sealed partial class App : Application
+{
+    private WinRTBridge.WinRTBridge _bridge;
+    private AppCallbacks appCallbacks;
+    public App()
+    {
+        this.InitializeComponent();
+        appCallbacks = new AppCallbacks(false);
+    }
+
+    protected override void OnLaunched(LaunchActivatedEventArgs args)
+    {
+        Frame rootFrame = Window.Current.Content as Frame;
+        if (rootFrame == null)
+        {
+            var mainPage = new MainPage();
+            Window.Current.Content = mainPage;
+            Window.Current.Activate();
+
+            _bridge = new WinRTBridge.WinRTBridge();
+            appCallbacks.SetBridge(_bridge);
+
+            appCallbacks.SetSwapChainBackgroundPanel(mainPage.GetSwapChainBackgroundPanel());
+
+            appCallbacks.SetCoreWindowEvents(Window.Current.CoreWindow);
+
+            appCallbacks.InitializeD3DXAML();
+        }
+
+        Window.Current.Activate();
+    }
+}
+</code></pre>
+
+<p><strong>private WinRTBridge.WinRTBridge _bridge;</strong></p>
+
+<p>So first of all, what is WinRTBridge, it’s used internally by Unity, to perform some of native-to-managed, managed-to-native operations, it’s not intended to be used by developers. Due some WinRT platform restrictions, it cannot be created from Unity engine code, that’s why WinRTBridge is being created here and is passed to Unity engine via appCallbacks.SetBridge(_bridge) instead.</p>
+
+<p><strong>appCallbacks = new AppCallbacks(false);</strong></p>
+
+<p>Now, let’s take a closer look at AppCallbacks class. When you create it, you specify that your game will run on different thread, for backward compatibility reasons you can also specify that your application can run on <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> thread, but that’s not recommended, because there’s a restriction from Microsoft - if your application won’t become responsive after 5 seconds you’ll fail to pass WACK (Windows Application Certification), read more here - <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184840(v=vs.105).aspx">http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184840(v=vs.105).aspx</a>, imagine if your first level is pretty big, it might take significant amount of time to load it, because your application is running on UI thread, UI will be unresponsive until your level is fully loaded. That’s why it’s recommend to always run your game on different thread.</p>
+
+<p>Read more on UI thread here - <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh994635.aspx">http://msdn.microsoft.com/en-us/library/windows/apps/hh994635.aspx</a>
+</p>
+
+<p>
+<strong>Note:</strong> Code located in App.xaml.cs, MainPage.xaml.cs is always running on UI thread, unless called from InvokeOnAppThread function.</p>
+
+<p><strong>appCallbacks.SetSwapChainBackgroundPanel(mainPage.GetSwapChainBackgroundPanel());</strong></p>
+
+<p>This simply passes a XAML control to Unity which will be used as a render target for DirectX 11.</p>
+
+<p><strong>appCallbacks.SetCoreWindowEvents(Window.Current.CoreWindow);</strong></p>
+
+<p>Sets the core window for Unity, Unity subscribes to the following events (there may be more, depending on when this information was updated) :</p>
+
+<ul>
+<li>VisibilityChanged</li>
+<li>Closed</li>
+<li>PointerCursor</li>
+<li>SizeChanged</li>
+<li>Activated</li>
+<li>CharacterReceived</li>
+<li>PointerPressed</li>
+<li>PointerReleased</li>
+<li>PointerMoved</li>
+<li>PointerCaptureLost</li>
+<li>PointerWheelChanged</li>
+<li>AcceleratorKeyActivated</li>
+</ul>
+
+<p><strong>appCallbacks.InitializeD3DXAML();</strong></p>
+
+<p>This is main initialization function for Unity, it does following things:</p>
+
+<ul>
+<li>Parse command line arguments, set by AppCallbacks.AddCommandLineArg()</li>
+<li>Initialize DirectX 11 device</li>
+<li>Load first level</li>
+</ul>
+
+<p>At this point, when Unity finishes loading first level, it enters main loop.</p>
+
+<h2>Other functions</h2>
+
+<ul>
+<li><strong>void InvokeOnAppThread(AppCallbackItem item, bool waitUntilDone)</strong></li>
+</ul>
+
+<p>Invokes a delegate on application thread, useful when you want to call your script function from UI thread.</p>
+
+<ul>
+<li><strong>void InvokeOnUIThread(AppCallbackItem item, bool waitUntilDone)</strong></li>
+</ul>
+
+<p>Invokes a delegate on UI thread, useful when you want to invoke something XAML specific API from your <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p>
+
+<ul>
+<li><strong>bool RunningOnAppThread()</strong></li>
+</ul>
+
+<p>Returns true, if you’re currently running in application thread.</p>
+
+<ul>
+<li><strong>bool RunningOnUIThread()</strong></li>
+</ul>
+
+<p>Returns true, if you’re currently running in UI thread.</p>
+
+<ul>
+<li><strong>void InitializeD3DWindow()</strong></li>
+</ul>
+
+<p>Initialization function for D3D application.</p>
+
+<ul>
+<li><strong>void Run()</strong></li>
+</ul>
+
+<p>Function used by D3D application, for entering main loop.</p>
+
+<ul>
+<li><strong>bool IsInitialized()</strong></li>
+</ul>
+
+<p>Returns true, when first level is fully loaded.</p>
+
+<ul>
+<li><strong>void AddCommandLineArg(string arg)</strong></li>
+</ul>
+
+<p>Sets a command line argument for application, must be called before InitializeD3DWindow, InitializeD3DXAML.</p>
+
+<ul>
+<li>
+<strong>void SetAppArguments(string arg)</strong> / <strong>string GetAppArguments()</strong>
+</li>
+</ul>
+
+<p>Sets application arguments, which can be later accessed from Unity API - <strong>UnityEngine.WSA.Application.arguments</strong>.</p>
+
+<ul>
+<li><strong>void LoadGfxNativePlugin(string pluginFileName)</strong></li>
+</ul>
+
+<p>This function is obsolete and does nothing. In previous versions of Unity, this was needed to register native <span class="tooltip"><strong>plugins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> for callbacks such as UnityRenderEvent. All <strong>plugins</strong> are now registered automatically. This function will be removed in a future update.</p>
+
+<ul>
+<li><strong>void ParseCommandLineArgsFromFiles(string fileName)</strong></li>
+</ul>
+
+<p>Parses command line arguments from a file, arguments must be separated by white spaces.</p>
+
+<ul>
+<li><strong>bool UnityPause(int pause)</strong></li>
+</ul>
+
+<p>Pauses Unity if you pass 1, unpauses if you pass 0, useful if you want to temporary freeze your game, for ex., when your game is snapped.</p>
+
+<ul>
+<li><strong>void UnitySetInput(bool enabled)</strong></li>
+</ul>
+
+<p>Enables/Disables input.</p>
+
+<ul>
+<li><strong>bool UnityGetInput()</strong></li>
+</ul>
+
+<p>Returns true, if Unity will process incoming input.</p>
+
+<ul>
+<li><strong>void SetKeyboardTriggerControl(Windows.UI.Xaml.Controls.Control ctrl)</strong></li>
+</ul>
+
+<p>Sets the control to be used for triggering on screen keyboard. This control will simply receive focus, when on screen keyboard is requested in scripts. Should be called with control, that does open keyboard on focus.</p>
+
+<ul>
+<li><strong>Windows.UI.Xaml.Controls.Control GetKeyboardTriggerControl()</strong></li>
+</ul>
+
+<p>Returns control, currently used control for triggering keyboard input. See SetKeyboardTriggerControl.</p>
+
+<ul>
+<li><strong>void SetCursor(Windows.UI.Core.CoreCursor cursor)</strong></li>
+</ul>
+
+<p>Sets system cursor. The given curosr is set for both CoreWindow and independent input source (if used).</p>
+
+<ul>
+<li><strong>void SetCustomCursor(unsigned int id)</strong></li>
+</ul>
+
+<p>Sets system cursor to custom. Parameter is cursor resource ID. Cursor is set for both CoreWindow and independent input source (if used).</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-assocation-launching.html"></a></span><div class="tip">﻿Universal Windows Platform: Association launching</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-scripts.html"></a></span><div class="tip"> Universal Windows Platform: WinRT API in C# scripts</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

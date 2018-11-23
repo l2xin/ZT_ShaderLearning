@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 5.2</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide52.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide52.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide52.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide52.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide52.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 5.2</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide53.html"></a></span><div class="tip">Upgrading to Unity 5.3</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5.html"></a></span><div class="tip">Upgrading to Unity 5.0</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 5.2</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Global Illumination</h2>
+
+<p>UV packing for baked UVs not filling the 0–1 space (smaller or bigger) has been fixed. It makes the resolution assigned to each object work much more reliably if that object’s unwrap is not filling the 0–1 space and also when its bounds are non-square. Please review the resolution on your instances for baked <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>.</p>
+
+<p>Shader variant stripping was fixed for realtime lightmaps. Now each lightmaps mode (non-directional, directional and directional specular) variant can be picked for baked and realtime GI separately. Please review your settings if you previously selected a specific lightmaps mode variant in the Graphics Settings to make that mode work for realtime lightmaps.</p>
+
+<p>Bounce scale has been changed from the arbitrary value of 0.7 to 1.0. The bounce is the product of the albedo and bounce scale. Artists should set real-life albedo values (the brightest non-metallic is snow with 0.9). This is our PBS reference <a href="http://forum.unity3d.com/threads/official-5-0-pbr-calibration-charts.289416/">http://forum.unity3d.com/threads/official–5–0-pbr-calibration-charts.289416/</a>
+</p>
+
+<p>Since you should author physically correct albedo, it makes sense for us to set the scale close to 1. We already clamp albedo values in the meta pass, so the bounce scale should just be 1.0f.</p>
+
+<p>Please note that if you choose to set albedo to 1.0 in a custom meta pass without clamping, then the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> can look like it’s exploding with light.</p>
+
+<h2>Shaders</h2>
+
+<p>“Fixed Function” style <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> (the ones that use SetTexture, Lighting On etc.) internally get turned into actual shaders at shader import time now. Upside is that they now work on all platforms (previously did not work on consoles), and with more consistency. Also a lot of code and fixed function related inefficiencies got removed from runtime, making <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> a bit faster. Downside is, creating fixed function shaders at runtime - using <code>new Material(fixedFunctionShaderString)</code> - does not work anymore. That constructor was deprecated in Unity 5.1, and now in 5.2 it actually stopped working for fixed function shaders.</p>
+
+<h2>Reflection Probes</h2>
+
+<p>We’ve changed how <strong>Reflection Probes</strong> are rendered when using <span class="tooltip"><strong>Deferred Shading</strong><span class="tooltiptext">A rendering path that places no limit on the number of lights that can affect a GameObject. All lights are evaluated per-pixel, which means that they all interact correctly with normal maps and so on. Additionally, all lights can have cookies and shadows. <a href="RenderTech-DeferredShading.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Deferredshading">Glossary</a></span></span></span>, in order to allow “screen space reflections” effects in the future. Short version is: in <strong>deferred shading</strong>, <span class="tooltip"><strong>reflection probes</strong><span class="tooltiptext">A rendering component that captures a spherical view of its surroundings in all directions, rather like a camera. The captured image is then stored as a Cubemap that can be used by objects with reflective materials. <a href="class-ReflectionProbe.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span> are per-pixel instead of per-object now.</p>
+
+<p><em>Comparison of current behavior (reflection probes per object; in some cases hard to avoid harsh reflection transitions between large objects) and reflection probes per <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> (transitions much less visible; and they happen at probe boundaries not at object boundaries):</em></p>
+
+<figure>
+<img src="../uploads/ReflectionProbeComparison.png" alt="">
+</figure>
+
+<p>Before (5.0 and 5.1)</p>
+
+<ul>
+<li><p>Reflection probes are sampled during the G-buffer pass, in exactly the same way as in <span class="tooltip"><strong>forward rendering</strong><span class="tooltiptext">A rendering path that renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity. <a href="RenderTech-ForwardRendering.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ForwardRendering">Glossary</a></span></span></span>. They are written into “emission” buffer together with <span class="tooltip"><strong>light probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>, lightmaps and emissive material parts.</p></li>
+<li><p>This meant you get one (or two, when probe blending is on) reflection probes <em>per object</em>.</p></li>
+<li><p>Reflections being together with emission/lightmaps in the same buffer means that doing SSRR “properly” is hard. SSRR provides reflections by itself (and falls back to reflection probes where it can’t), but it does not know which part of “emission buffer” color is coming from reflection probes.</p></li>
+</ul>
+
+<p>Now (5.2)</p>
+
+<ul>
+<li><p>When using deferred shading, do not sample reflection probes during G-buffer pass.</p></li>
+<li><p>Instead, after the G-buffer is done, make a separate “deferred reflections” pass that draws reflection probes as boxes in screenspace; that output reflection information into a separate render target.</p></li>
+<li><p><em>[Future: SSRR effect will use this separate reflections buffer]</em></p></li>
+<li><p>Combine reflections buffer &amp; emission buffer at the end.</p></li>
+</ul>
+
+<p>What does this mean? <em>(everything below only affects deferred shading)</em>
+</p>
+
+<ul>
+<li>
+<strong>Reflection probes are no longer per-object</strong>; they are effectively per-pixel. It is easier to have large objects affected by many reflection probes.
+
+<ul>
+<li>Also probes got a “blend distance” which defines how much space around the probe is used for blending into other probes.</li>
+<li>Smaller probes “override” larger ones.</li>
+</ul>
+</li>
+<li><p>
+<strong>Reflection probe Renderer flags (probe blending, etc.) are ignored</strong>; everything is affected by reflection probes in the same way (since it happens in screenspace now). This is very similar to how “receive shadows” flag is ignored in deferred shading.</p></li>
+<li>Your custom-written shaders that do deferred shading should mostly continue to work (in the worst case, they will be sampling a black reflection cubemap). If you do some totally crazy stuff in shaders, they might need to be updated to work with deferred shading in 5.2.
+
+<ul>
+<li>If you are using custom deferred shading light pass shader (with custom BRDF etc.), you’ll probably want to use custom deferred reflections shader too, with the same BRDF applied to reflection probes.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Shuriken</h2>
+
+<p>Particles are now generated in world space, which may require an update to any custom <span class="tooltip"><strong>vertex shaders</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>. This change was made in order to allow re-use of the particle buffers between each eye for VR.</p>
+
+<p>Mesh particles now support the Texture Sheet Animation module. It’s worth checking that your existing effects do not have this enabled by accident, otherwise you may see a change in behaviour.</p>
+
+<p>The Dampen parameter in the Limit Velocity over Lifetime module used to have a stronger effect at higher framerates. This has been fixed, and if your game is targetting 30fps, your old effects will be unaffected by this change. However, if your game targets a differnet <span class="tooltip"><strong>FPS</strong><span class="tooltiptext">See first person shooter, frames per second. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FPS">Glossary</a></span></span></span>, you can update the Dampen value using this formula, to ensure your effect is unchaged in 5.2:</p>
+
+<pre><code>newDampen = 1.0f - pow(1.0f - oldDampen, targetFPS / 30.0f);
+</code></pre>
+
+<h2>Graphics (Other items)</h2>
+
+<p>
+<code>Material.CopyPropertiesFromMaterial</code> now also copies shader keywords and render queue. If you were relying on them being not copied, you’ll have to change your code.</p>
+
+<p>SpeedTree materials now need to be re-generated as there are changes to SpeedTree built-in shaders. You could do so by selecting SpeedTree prefabs in your project and hit “Apply &amp; Generate Materials” button. <em>Please be noted that by doing so your customisations to the generated material assets (if any) will be overwritten.</em>
+</p>
+
+<h2>UI</h2>
+
+<p>In 5.2 we have combined the shaders that text and normal UI element rendering users. A side effect of this is that if you specify a manual font texture in a 32bit format then the color channels will be honored. This means that black texture channels will result in black text where previously the text would be white (we only looked at the alpha). If you wish to use custom textures for your fonts do one of the following:</p>
+
+<ol>
+<li>Change the import format of the texture to A8. This will only keep the alpha component and Unity will generate the text as white by default.</li>
+<li>Specify a color / colors in the texture for Unity to use when rendering the text</li>
+</ol>
+
+<h2>Multiplayer</h2>
+
+<p>The way the project identification is handled has changed in Unity 5.2, now the project is automatically registered and you do not need to manually enter an ID anywhere. There is a Multiplayer panel in the Services Window (open it with cloud icon in upper right corner) and in there you can find a deep link directly to the project on the website (Go to dashboard). When configured the Multiplayer configuration will appear here.</p>
+
+<figure>
+<img src="../uploads/Main/MultiplayerServicesWindowUG.png" alt="">
+</figure>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide53.html"></a></span><div class="tip">Upgrading to Unity 5.3</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5.html"></a></span><div class="tip">Upgrading to Unity 5.0</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

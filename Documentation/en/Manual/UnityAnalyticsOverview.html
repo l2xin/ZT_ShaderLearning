@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Unity Analytics Overview</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityAnalyticsOverview.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityAnalyticsOverview.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityAnalyticsOverview.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityAnalyticsOverview.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityAnalyticsOverview.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li> Unity Analytics Overview</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsSetup.html"></a></span><div class="tip"> Setting Up Analytics</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Unity Analytics Overview</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span> provides the data you need to manage your relationship with your players. </p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview1.png" alt="The Unity Analytics Dashboard">
+<figcaption>The Unity Analytics Dashboard</figcaption>
+</figure>
+
+<p>Understand your players; understand why they play your games; understand why they stop playing your games. Make decisions based on data, not guesses.</p>
+
+<p>By simply enabling <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">See Analytics <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> in your project, you can get data about how many people first start playing your game, how many play every day, how many play in a given month, and other session-based usage data. If you also use the Unity Ads and IAP Services, your analytics data automatically includes the revenue from these sources. This sort of session data paints a valuable picture of the health of your game. It answers question such as: “Am I getting new players?” “How often and how long do they play?” “Do they play again the next day? The next week? The next month?” “How much revenue am I making per player on a given day?” </p>
+
+<p>By dispatching Standard Analytics Events when players perform key actions in your game, you can extend the analytics data available so that it reveals what your players are actually doing when they play. Do they make it through your onboarding tutorial? Do they visit your IAP store? Do they progress through your game levels as you expect? </p>
+
+<p>Analytics data can help you focus on the most fruitful areas to improve your application to better serve your players. You can make these changes by releasing updates, but you can also create <span class="tooltip"><strong>Remote Settings</strong><span class="tooltiptext">Remote settings are game variables that you can set remotely on your Analytics Dashboard. See Remote Settings. <a href="UnityAnalyticsRemoteSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span> that allow you to adapt and tune your game without an update. </p>
+
+<p>By understanding your players and how they play your games, you can make your games better. And when the data shows that your players are changing, you can react and adapt.</p>
+
+<p>See <a href="UnityAnalyticsTerminology.html">Analytics Metrics, Segments, and Terminology</a> for definitions of specific terms used throughout the Analytics documentation.</p>
+
+<h2>Core usage data</h2>
+
+<p>When you enable Analytics, Unity tracks core usage metrics on <a href="#SupportedPlatforms">supported platforms</a> without any effort or implementation on your part. These <a href="UnityAnalyticsTerminology.html">core metrics</a> include:</p>
+
+<ul>
+<li>New installs</li>
+<li>Daily active users (DAU)</li>
+<li>Monthly active users (MAU)</li>
+<li>Total sessions</li>
+<li>Sessions per user</li>
+<li>Time spent in app</li>
+<li>User Segments for Country and Platform</li>
+</ul>
+
+<p>These are all good metrics to use to monitor the health of your game. They tell you how many people are installing your game, how often they play, and how long they stick with it. Many external factors also influence these numbers, but you should watch them for signs of problems that you can correct.</p>
+
+<p>The following chart, displayed on the Overview tab of your <a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a> shows three data plots: <span class="tooltip"><strong>New Users</strong><span class="tooltiptext">Users who played your game for the first time. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NewUsers">Glossary</a></span></span></span>, <span class="tooltip"><strong>DAU</strong><span class="tooltiptext">(Daily Active Users) The number of different players who started a session on a given day. DAU includes both new and returning players. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DAU">Glossary</a></span></span></span> (Daily Active Users), and <span class="tooltip"><strong>MAU</strong><span class="tooltiptext">(Monthly Active Users) The number of players who started a session within the last 30 days. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MAU">Glossary</a></span></span></span> (Monthly Active Users):</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview2.png" alt="DAU, MAU, New Users chart">
+<figcaption>DAU, MAU, New Users chart</figcaption>
+</figure>
+
+<p>The <strong>New Users</strong> plot shows how many people play your game for the first time on a given day. Since new players won’t have had much, if any, exposure to your game, this chart generally reflects external factors. If you launch a marketing campaign or other promotion to attract new players, you would hope to see a bump in the <strong>New Users</strong> plot. </p>
+
+<p>The <strong>DAU</strong> plot shows how many of your players played on a given day. Similar to the <strong>DAU</strong> plot, the <strong>MAU</strong> plot shows how many of your players played in a given 30-day period. </p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview3.png" alt="Sticky Factor chart">
+<figcaption>Sticky Factor chart</figcaption>
+</figure>
+
+<p>The <span class="tooltip"><strong>Sticky Factor</strong><span class="tooltiptext">An estimate of how compelling a game is to its players. A high “sticky factor” means that players stick with an app over time. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StickyFactor">Glossary</a></span></span></span> chart plots the percentage of your monthly players who played on a given day (DAU/MAU). The general idea behind this metric is that it shows how often your players return to play day-after-day. (In other words, how likely players are to “stick” with your game.) </p>
+
+<p>High active player numbers can indicate popularity, but can be tricky to interpret in isolation. In particular, these metrics don’t separate the influence of new versus returning users. For example, an influx of new players could mask the loss of more established players. (The loss of players is called “churn” in common analytics jargon.) <strong>DAU</strong>, <strong>MAU</strong>, and <strong>Sticky Factor</strong> metrics are often used in the Games industry because DAU and MAU have historically been the most widespread publically-available data with which to compare different games. </p>
+
+<p>See <a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a> for information on how to view your analytics data. </p>
+
+<h2>Player behavior data</h2>
+
+<p>To learn about game-specific player behavior, you can send analytics events from your game at the appropriate times. Unity provides easy-to-use APIs for sending both standardized and fully-customized events. You can use these events to instrument your games to monitor player behavior, particularly in the following areas:</p>
+
+<ul>
+<li>Onboarding — are players making it through your onboarding mechanics such as tutorials or starting levels?</li>
+<li>Progression — are players progressing through your levels?</li>
+<li>Economy — are your game economies working out as expected?</li>
+<li>Design validation — are your game design choices working out as you thought they would?</li>
+<li>Application validation — are all areas of your application being utilized as you expect? Are there parts that players ignore or don’t notice?</li>
+<li>Monetization — are your monetization strategies optimal? Are there impediments to players carrying out purchases?</li>
+</ul>
+
+<p>See <span class="tooltip"><a href="UnityAnalyticsCustomEvents.html">Analytics Events</a><span class="tooltiptext">Events dispatched to the Analytics Service by instances of your applications. Analytics events contain the data that is processed and aggregated to provide insights into player behavior. <a href="UnityAnalyticsCustomEvents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnalyticsEvents">Glossary</a></span></span></span> for information on gathering player behavior data. </p>
+
+<p>To help you analyze player behavior, the Analytics Dashboard includes a funnel builder. A funnel is a display that shows how your players progress through a linear sequence of steps. For example, you could create a funnel for a tutorial that showed what percentage of your users made it through the tutorial steps. Funnels are useful for identifying places in your application where you lose players. </p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview4.png" alt="Level progression funnel">
+<figcaption>Level progression funnel</figcaption>
+</figure>
+
+<p>This example funnel shows player progression through a hypothetical game. Each step in the funnel represents the completion of a game level. While you can always expect some drop off from level to level, too large a drop after a given level could indicate a problem on that level. The funnel won’t tell you the cause – it could be a game play problem, a bug, or the level might be too difficult – but the funnel does indicate a worthwhile area for investigation.</p>
+
+<p>See <span class="tooltip"><a href="UnityAnalyticsFunnels.html">Funnels</a><span class="tooltiptext">In Analytics, a funnel is a linear sequence of standard or custom events that you expect a player to complete in order. <a href="UnityAnalyticsFunnels.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Funnel">Glossary</a></span></span></span> for information on implementing funnels.</p>
+
+<h2>Revenue data</h2>
+
+<p>You can analyze in-app purchase (IAP) revenue along with your other analytics data. If you use the <span class="tooltip"><strong>Unity IAP</strong><span class="tooltiptext">See IAP <a href="UnityIAP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityIAP">Glossary</a></span></span></span> Service, the revenue data is available automatically. Otherwise, you can send an event to the Analytics Service whenever a player makes a purchase. If you use the Unity Ads Service, you can also analyze the resulting revenue on the Analytics Dashboard. (There isn’t any way to report outside ad revenue to the Analytics Service, though.) </p>
+
+<p>The following charts, displayed on the Overview tab of your Analytics Dashboard, show the daily revenue numbers for your project:</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview5.png" alt="Revenue totals">
+<figcaption>Revenue totals</figcaption>
+</figure>
+
+<p>The first chart shows verified in-app purchase revenue and transactions and advertising revenue from the Unity Ads Service. The charts on the <strong>Overview</strong> tab only show <span class="tooltip"><strong>verified IAP revenue</strong><span class="tooltiptext">Revenue from verified IAP transactions. IAP verification is currently supported by the Apple App Store and the Google Play Store. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VerifiedIAPRevenue">Glossary</a></span></span></span>, but you can view all reported revenue in the <span class="tooltip"><strong>Data Explorer</strong><span class="tooltiptext">A Unity Analytics Dashboard page that allows you to build, view and export reports on your Analytics metrics and events. You can also see how metrics and custom events change over time. <a href="UnityAnalyticsDataExplorer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DataExplorer">Glossary</a></span></span></span>. Unverified revenue sources include test transactions, fraudulent transactions, transactions from platforms that do not support receipt verification (like Amazon and the Windows store), and transactions reported using missing or incorrect information or without configuring the required store API keys. When you use the Unity IAP Service, IAP transactions are automatically reported and verified. When you use an external IAP API, you can report and verify IAP revenue through the <a href="UnityAnalyticsReceiptVerification.html">Unity Analytics API</a>.</p>
+
+<p>The second chart shows the daily averages of revenue per paying user and per active user:</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview6.png" alt="Average Revenue">
+<figcaption>Average Revenue</figcaption>
+</figure>
+
+<p>
+<strong>Average Revenue Per Paying User</strong> (ARPPU) shows the average amount spent by those players who make IAP transactions on a given day. The <strong>Average Revenue Per Daily Active User</strong> (ARPDAU) shows the average revenue from all users and includes both IAP revenue and advertising revenue on a given day. </p>
+
+<p>The overview charts show revenue for all users. To better understand how different groups of players monetize, use the <a href="UnityAnalyticsDataExplorer.html">Data Explorer</a> to view revenue by segment. The standard segments include lifecycle cohort, geography, monetization category, demographics (when reported), and platform. You can also define your own segments.</p>
+
+<p>The Data Explorer page of the Dashboard provides several additional monetization metrics and segments:</p>
+
+<p>
+<strong>Monetization Metrics</strong>:</p>
+
+<ul>
+<li>ARPDAU (Average Revenue Per Daily Active User)</li>
+<li><span class="tooltip"><strong>ARPPU</strong><span class="tooltiptext">(Average Revenue Per Paying User) Average verified IAP revenue per user who completed a verified IAP transaction. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ARPPU">Glossary</a></span></span></span> (Average revenue Per Paying User)</li>
+<li>Number of Unverified Transactions</li>
+<li>Number of Verified Transactions</li>
+<li>Total IAP Revenue</li>
+<li>Total Verified Revenue</li>
+<li>Unverified IAP Revenue</li>
+<li>Verified IAP Revenue</li>
+<li>Verified Paying Users</li>
+</ul>
+
+<p>
+<strong>Ad Metrics</strong>:</p>
+
+<ul>
+<li>Ad ARPU (Average Revenue Per User)</li>
+<li>Ad Revenue</li>
+<li>Ad Starts</li>
+<li>Ads per DAU</li>
+<li><span class="tooltip"><strong>eCPM</strong><span class="tooltiptext">(estimated Cost Per Mille) The estimated revenue for 1000 ad impressions for your app. See <a href="https://support.unity3d.com/hc/en-us/articles/115000564306-What-is-eCPM-">What is ECPM</a>. <a href="UnityAnalyticsTerminology.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#eCPM">Glossary</a></span></span></span> (estimated Cost Per Thousand Impressions)</li>
+</ul>
+
+<p>
+<strong>Monetization Segments</strong>:</p>
+
+<ul>
+<li>Whales</li>
+<li>Dolphins</li>
+<li>Minnows</li>
+<li>Never Monetized</li>
+<li>All Spenders</li>
+</ul>
+
+<p>See <a href="UnityAnalyticsMonetization.html">Monetization</a> for more information about revenue analytics.</p>
+
+<h2>Data segmentation</h2>
+
+<p>Segments help you better understand player behavior. The standard, predefined segments group players by the following categories:</p>
+
+<ul>
+<li>
+<strong>Lifecycle</strong> – group players by the number of days since install. Lifecycle cohorts are useful for analyzing how player behavior changes with more experience in your application.</li>
+<li>
+<strong>Geography</strong> – group players by country.</li>
+<li>
+<strong>Monetization</strong> – group players by spending category. Monetization categories help you understand the behavior of players by how much revenue they generate.</li>
+<li>
+<strong>Platform</strong> – group by the player’s computer OS or device type.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview7.png" alt="The MAU metric segmented by lifecycle cohorts">
+<figcaption>The MAU metric segmented by lifecycle cohorts</figcaption>
+</figure>
+
+<p>You can use the <strong>Segment Builder</strong> to define your own categories. However, you can only use any new categories that you make on data collected after those categories are created. For example, if you add a segment for players from Gibraltar, the segment is initially empty; only new activity from players in Gibraltar will show up in the segment. </p>
+
+<p>You can use segments in the <a href="UnityAnalyticsDataExplorer.html">Data Explorer</a> and <a href="UnityAnalyticsFunnels.html">Funnel</a> reports. </p>
+
+<p>For more information about creating your own segments, see <a href="UnityAnalyticsSegmentBuilder.html">Segment Builder</a>.</p>
+
+<h2>Remote Settings</h2>
+
+<p>The <strong>Remote Settings</strong> feature allows you to change the values of variables in your games from your Analytics Dashboard. You can create any number of <strong>Remote Settings</strong> while developing your game and assign them to <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> variables in the Editor. After launching your game, you can change the values of these variables at any time, allowing you to adapt game behavior without releasing an update. </p>
+
+<p>You can use <strong>Remote Settings</strong> for tasks such as:</p>
+
+<ul>
+<li>Adjusting game-play tuning variables</li>
+<li>Enabling or disabling features</li>
+<li>Changing graphical themes</li>
+</ul>
+
+<p>See <a href="UnityAnalyticsDashboardRemoteSettings.html">Remote Settings</a> for more information.</p>
+
+<h2>Heatmaps</h2>
+
+<p>Heatmaps visualize Analytics events spatially in your game.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview8.jpg" alt="A heatmap displays Analytics events in the Unity Editor where they occurred in a scene">
+<figcaption>A heatmap displays Analytics events in the Unity Editor where they occurred in a scene</figcaption>
+</figure>
+
+<p>Use heatmaps while playtesting your game to identify performance and gameplay bottlenecks. Because they require a high volume of Analytics events, using heatmaps after your game has shipped and is in production is not supported.</p>
+
+<p>See BitBucket documentation on <span class="tooltip"><a href="https://bitbucket.org/Unity-Technologies/heatmaps/wiki/v2.md">Heatmaps</a><span class="tooltiptext">Heatmaps are a spatial visualization of analytics data. <a href="UnityAnalyticsOverview.html#Heatmaps">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Heatmaps">Glossary</a></span></span></span> for more information.</p>
+
+<p>Heatmaps require <strong>Raw Data Export</strong>, which is only available with a Unity Pro subscription.</p>
+
+<h2>Accessing your raw data</h2>
+
+<p>When the reports available on the Analytics Dashboard don’t support the type of analysis you want to perform, you can export your analytics events using <strong>Raw Data Export</strong>. You can export data from the Analytics Dashboard or using the Raw Data Export REST API in either JSON or tab-separated-value format. From there, you can import the data into a database or analysis tool.</p>
+
+<p>
+<strong>Raw Data Export</strong> requires a Unity-Pro subscription. See <a href="UnityAnalyticsRawDataExport.html">Raw Data Export</a> for more information.</p>
+
+<p><a name="SupportedPlatforms"></a></p>
+
+<h2>Supported platforms</h2>
+
+<p>The Unity Analytics Service supports the following platforms:</p>
+
+<ul>
+<li>iOS</li>
+<li>Android</li>
+<li>Tizen</li>
+<li>Windows Phone 8.1</li>
+<li>Windows Store 8.1 (Desktop)</li>
+<li>Windows Store 10.0 (Desktop)</li>
+<li>Mac, PC, Linux Standalone</li>
+<li><span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span> - 5.3 integration and onwards</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–22 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New feature in Unity 2017.1</span></p></li>
+<li><p><span class="page-history">Removed Demographics section.</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsSetup.html"></a></span><div class="tip"> Setting Up Analytics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

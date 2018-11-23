@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Physics in Unity 5.0</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide5-Physics.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide5-Physics.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide5-Physics.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide5-Physics.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide5-Physics.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li><a href="UpgradeGuide5.html">Upgrading to Unity 5.0</a></li>
+<li>Physics in Unity 5.0</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Plugins.html"></a></span><div class="tip">Plugins in Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-Shaders.html"></a></span><div class="tip">Shaders in Unity 5.0</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h2>Physics in Unity 5.0</h2>
+
+<p>Unity 5.0 features an upgrade to PhysX3.3 SDK. Please give this blogpost a quick look before taking any action on your 4.x projects. It should give you a taste of what to expect from the new codebase: <a href="http://blogs.unity3d.com/2014/07/08/high-performance-physics-in-unity-5/">High Performance Physics in Unity 5</a>.
+Please be warned that PhysX3 is not 100% compatible with PhysX2 and requires some actions from the user when upgrading.</p>
+
+<h3>General overview of updates</h3>
+
+<p>Unity 5.0 physics could be expected to work up to 2x faster than in previous versions. Most of the components you were familiar with are still there, and you will find them working as before. Of course, some behaviours were impossible to get the same and some were just weird behaviours caused by limitations of the pre-existed codebase, so we had to take changes. The two areas that got the most significant change are Cloth <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> and WheelCollider <strong>component</strong>. We’re including a section about each of them below. Then, there are smaller changes all over the physics code that cause incompatibility. </p>
+
+<h3>Changes that are likely to affect projects:</h3>
+
+<h4>Adaptive force is now switched off by default</h4>
+
+<p>Adaptive force was introduced to help with the simulation of large stacks, but it turned out to be great only for demos. In real games it happened to cause wrong behaviour. You can switch it on in the editor physics properties: Edit -&gt; Project settings -&gt; Physics -&gt; Enable adaptive force.</p>
+
+<h4>Smooth sphere collisions are removed both from terrain and meshes.</h4>
+
+<p>PhysX3 has the feature that addresses the same issue and it’s no longer switchable as it’s considered to be a solution without major drawbacks.</p>
+
+<h4>Springs expose larger amplitudes with PhysX3.</h4>
+
+<p>you may want to tune spring parameters after upgrading.</p>
+
+<h4>Setting Terrain Physics Material has changed</h4>
+
+<p>Use TerrainCollider.sharedMaterial and TerrainCollider.material to specify physics material for <span class="tooltip"><strong>terrain</strong><span class="tooltiptext">The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape. <a href="terrain-UsingTerrains.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Terrain">Glossary</a></span></span></span>. The older way of setting physics material through the TerrainData will no longer work. As a bonus, you can now specify <strong>terrain</strong> physics materials on a per <span class="tooltip"><strong>collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> basis.</p>
+
+<h4>Shape casting and sweeping has changed:</h4>
+
+<ul>
+<li>Shape sweeps report all shapes they hit (i.e CapsuleCast and SphereCast would return all shapes they hit, even the ones that fully contain the primitive)</li>
+<li>Raycasts filter out shapes that contain the raycast origin</li>
+</ul>
+
+<h4>Compound Collider events:</h4>
+
+<p>When using compound colliders, OnCollisionEnter is now called once per each contact pair</p>
+
+<h4>Triggers must be convex:</h4>
+
+<p>From now on, you can have triggers only on convex shapes (a PhysX restriction):</p>
+
+<ul>
+<li>TerrainCollider no longer supports IsTrigger flag</li>
+<li>MeshCollider can have IsTrigger only if it’s convex</li>
+</ul>
+
+<h4>Dynamic bodies must be convex:</h4>
+
+<p>Dynamic bodies (i.e. those having Rigidbody attached with Kinematic = false) can no longer have concave <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> colliders (a PhysX limitation).</p>
+
+<p>If you want to have <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> with concave meshes, you can only have them on static colliders and kinematic bodies</p>
+
+<h4>Ragdoll joints:</h4>
+
+<p>Joint setups for ragdolls will likely need tweaking. </p>
+
+<p>These suggestions apply to <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> in general as well.</p>
+
+<p>See the <a href="RagdollStability.html">Joint And Ragdoll Stability</a> page for most recent version of this guide.</p>
+
+<ul>
+<li><p>Avoid small angles of “Angular Y Limit” and “Angular Z Limit”. Depending on your setup the minimum angles should be around 5 to 15 degrees in order to be stable. Instead of using a small angle try setting the angle to zero. This will lock the axis and provide a stable simulation.</p></li>
+<li><p>Set “Enable Preprocessing” to false (unchecked). Disabling the preprocessing can help against joints “blowing up”. Joints can “blow up” if they are forced into situations where there is no possible way to satisfy the joint constraints. This can occur if jointed rigid bodies are pulled apart by static collision geometry, like spawning a ragdoll partially inside a wall.</p></li>
+<li><p>Ragdoll stability or stretching: If ragdolls are given extreme circumstances, such as spawning partially inside a wall or pushed with a large force, the joint solver will be unable to keep the rigid bodies together. This can result in stretching or a “cloud of body parts”. Please enable projection on the joints, using either “ConfigurableJoint.projectionMode” or “CharacterJoint.enableProjection”.</p></li>
+<li><p>If bodies connected with joints are jittering try increase Edit-&gt;Project Settings-&gt;Physics-&gt;“Solver Iteration Count”. Try between 10 or 20.</p></li>
+<li><p>Never use direct transform access with kinematic bodies jointed to other bodies. Doing so skips the step where PhysX computes internal velocities of corresponding bodies and thus makes solver provide unpleasant results. We’ve seen some 2D projects using direct transform access to flip characters via altering transform.direction on the root boon of the rig. This behaves much better if you use MovePosition / MoveRotation / Move instead.</p></li>
+</ul>
+
+<h4>Rigidbody’s constraints are applied in local space</h4>
+
+<p>The locking mechanism we used in Unity 4 was basically discarding changes to locked rotations &amp; was resetting the angular speeds as a post-solver step. This was working mostly fine except that there were issues with bodies failing to go asleep as the solver wanted to adjust the rotations every frame; and a few related cases were noticed over the years. When working on PhysX3 integration we utilised this new feature of PhysX 3.3 where we can set the infinite inertia tensor components for locked rotational degrees of freedom. This is now supported in the solver so the body would now go to sleep appropriately, but since this is inertia, it is applied in local coordinates.</p>
+
+<h4>WheelCollider</h4>
+
+<p>The new WheelCollider is powered by the PhysX3 Vehicles SDK that is basically a completely new vehicle simulation library when compared to the code we had with PhysX2. </p>
+
+<p>
+<a href="WheelColliderTutorial.html">Read more about the new WheelCollider here</a>.</p>
+
+<h4>Cloth</h4>
+
+<p>Unity 5 uses the completely rewritten cloth solver provided by the new PhysX SDK. This cloth solver has been designed with character clothing in mind, and is a great improvement compared to the old version in terms of performance and stability. Unity 5 replaces the SkinnedCloth and InteractiveCloth components in Unity 4 with a single Cloth component, which works in conjunction with a SkinnedMeshRenderer. The functionality is similar to the previous SkinnedCloth component, but it is now possible to assign arbitrary, non-skinned meshes to the SkinnedMeshRenderer, so you can still handle cloth simulation on any random mesh.</p>
+
+<p>However, some functionality which was available on the old InteractiveCloth is now no longer supported by the new version of PhysX as it is difficult to implement these with good performance. Specifically:</p>
+
+<ul>
+<li>you can no longer use cloth to collide with arbitrary world geometry</li>
+<li>tearing is no longer supported</li>
+<li>you can no longer apply pressure on cloth</li>
+<li>you can no longer attach cloth to colliders or have cloth apply forces to <span class="tooltip"><strong>rigidbodies</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Plugins.html"></a></span><div class="tip">Plugins in Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-Shaders.html"></a></span><div class="tip">Shaders in Unity 5.0</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

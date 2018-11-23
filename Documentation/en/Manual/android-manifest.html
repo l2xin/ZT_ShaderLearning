@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Android Manifest</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/android-manifest.html">English</a></li>
+<li><a href="/ja/current/Manual/android-manifest.html">日本語</a></li>
+<li><a href="/es/current/Manual/android-manifest.html">Español</a></li>
+<li><a href="/kr/current/Manual/android-manifest.html">한국어</a></li>
+<li><a href="/ru/current/Manual/android-manifest.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="android.html">Android</a></li>
+<li> Android Manifest</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-gradle-troubleshooting.html"></a></span><div class="tip"> Gradle troubleshooting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Facebook.html"></a></span><div class="tip"> Facebook</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Android Manifest</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Android Manifest is an XML file which contains important metadata about the Android app. This includes the package name, activity names, main activity (the entry point to the app), configurations, Android version support, hardware features support, and permissions.</p>
+
+<p>For more information about the Android Manifest file, refer to the Android Developer documentation on <a href="https://developer.android.com/guide/topics/manifest/manifest-intro.html">Android Manifests</a>.</p>
+
+<h2>How Unity produces the Android Manifest</h2>
+
+<p>When building your app, Unity automatically generates the Android Manifest, following the steps below:</p>
+
+<ol>
+<li><p>Unity takes the main Android Manifest.</p></li>
+<li><p>Unity finds all the Android Manifests of your plug-ins (AARs and Android Libraries).</p></li>
+<li><p>Manifests from plug-ins are merged into the main Manifest using Google’s <a href="https://android.googlesource.com/platform/sdk/+/0386f5d/manifmerger">manifmerger</a> class.</p></li>
+<li><p>Unity modifies the Manifest, automatically adding permissions, configuration options, features used, and other information to the Manifest.</p></li>
+</ol>
+
+<h2>Overriding the Android Manifest</h2>
+
+<p>Although Unity generates a correct Manifest for you, in some cases you might want direct control over its contents.</p>
+
+<p>To use an Android Manifest that you have created outside of Unity, import your Android Manifest file to the following location: <em>Assets/<span class="tooltip"><strong>Plugins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span>/Android/AndroidManifest.xml</em>. This overrides the default Unity-created Manifest.</p>
+
+<p>In this situation, Android Libraries’ Manifests are later merged into your main Manifest, and the resulting Manifest is still tweaked by Unity to make sure the configuration is correct. For full control of the Manifest, including permissions, you need to export the Project and modify the final Manifest in <a href="https://developer.android.com/studio/index.html?gclid=CPbCm_HwptICFVXnGwodghYK5w">Android Studio</a>. Please note that we only support <a href="https://developer.android.com/guide/topics/manifest/activity-element.html#lmode"><em>launchMode - singleTask</em></a>.</p>
+
+<h2>Permissions</h2>
+
+<p>Unity automatically adds the necessary permissions to the Manifest based on the <span class="tooltip"><a href="class-PlayerSettingsAndroid.html">Player Settings</a><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> and Unity APIs that your app calls from the script. For example:</p>
+
+<ul>
+<li><p>
+<a href="../ScriptReference/Network.html">Network</a> classes add the <code>INTERNET</code> permission</p></li>
+<li><p>Using vibration (such as <a href="../ScriptReference/Handheld.Vibrate.html">Handheld.Vibrate</a>) adds <code>VIBRATE</code>
+</p></li>
+<li><p>The <a href="../ScriptReference/Application-internetReachability.html">InternetReachability</a> property adds <code>ACCESS_NETWORK_STATE</code>
+</p></li>
+<li><p>Location APIs (such as <a href="../ScriptReference/LocationService.html">LocationService</a>) adds <code>ACCESS_FINE_LOCATION</code>
+</p></li>
+<li><p>
+<a href="../ScriptReference/WebCamTexture.html">WebCamTexture</a> APIs add <code>CAMERA</code> permission</p></li>
+<li><p>The <a href="../ScriptReference/Microphone.html">Microphone</a> class adds <code>RECORD_AUDIO</code>
+</p></li>
+</ul>
+
+<p>For more information about permissions, see the <a href="https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms">Android Manifest Permissions</a> page of the Android Developer documentation.</p>
+
+<p>Note that if your plug-ins require a permission by declaring it in their Manifests, the permission is automatically be added to the resulting Android Manifest during the merge stage. Any Unity APIs called by the plug-ins also contribute to the permission list.</p>
+
+<h2>Runtime permissions in Android 6.0 (Marshmallow)</h2>
+
+<p>If your app is running on a device with Android 6.0 (Marshmallow) or later and also targets Android API level 23 or higher, your app uses the Android <a href="https://developer.android.com/training/permissions/requesting.html">Runtime Permission System</a>.</p>
+
+<p>The Android Runtime Permission System asks the app’s user to grant permissions while the app is running, instead of when the app is first installed. App users can usually grant or deny each permission when the app needs them while the app is running (for example, requesting camera permission before taking a picture). This allows an app to run with limited functionality without permissions. </p>
+
+<p>Unity does not support the Runtime Permission System, so your app prompts the user to allow what Android calls “dangerous” permissions on startup. See Android’s documentation on <a href="https://developer.android.com/guide/topics/permissions/requesting.html">dangerous permissions</a> for more information.</p>
+
+<p>Prompting your user to allow dangerous permissions is the only way to ensure plug-ins don’t cause crashes when they are missing a permission. However, if you don’t want your Unity Android app to ask for permissions on startup, you can add the following to your Manifest in either the <strong>Application</strong> or <strong>Activity</strong> sections.</p>
+
+<pre><code>&lt;meta-data android:name=&quot;unityplayer.SkipPermissionsDialog&quot; android:value=&quot;true&quot; /&gt;
+
+</code></pre>
+
+<p>Adding this completely suppresses the permission dialog shown on startup, but you must handle runtime permissions carefully to avoid crashes. This method is only recommended for advanced Android app developers.</p>
+
+<p>For further information about the Runtime Permission System and handling permissions, see the <a href="https://developer.android.com/training/permissions/requesting.html">Requesting Permissions</a> section of the Android Developer documentation. </p>
+
+<h2>Examining the resulting Android Manifest</h2>
+
+<p>To examine the final Android Manifest that Unity has generated for your app, open the <em>Temp/StagingArea/AndroidManifest.xml</em> file after you have built your Project but before exiting the Unity Editor.</p>
+
+<p>The Manifest is stored in binary format in the output package (APK). To check the contents of a Manifest inside an <span class="tooltip"><strong>APK</strong><span class="tooltiptext">The Android Package format output by Unity. An APK is automatically deployed to your device when you select File &gt; Build &amp; Run. <a href="android-BuildProcess.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#APK">Glossary</a></span></span></span>, you can use the <a href="https://developer.android.com/studio/build/apk-analyzer.html">Android Studio APK Analyzer</a> or another third-party tool (such as <a href="https://ibotpeaches.github.io/Apktool/">Apktool</a>).</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–25 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated functionality in 5.5</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-gradle-troubleshooting.html"></a></span><div class="tip"> Gradle troubleshooting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Facebook.html"></a></span><div class="tip"> Facebook</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

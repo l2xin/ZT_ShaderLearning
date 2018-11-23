@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Dynamic lighting</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeMakingBelievableVisuals9.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeMakingBelievableVisuals9.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeMakingBelievableVisuals9.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeMakingBelievableVisuals9.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeMakingBelievableVisuals9.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html"> Making believable visuals in Unity</a></li>
+<li> Dynamic lighting</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals8.html"></a></span><div class="tip"> Understanding post-processing</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip"> Best Practice: Setting up the Lighting Pipeline</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Dynamic lighting</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Dynamically-lit <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, especially large <strong>GameObjects</strong>, require more tricks than their static counterparts. <strong>GameObjects</strong> usually require dynamic lighting if they change position in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, so pre-calculated lighting isn’t an option. However, dynamic <strong>GameObjects</strong> have to work within certain limitations. To improve the quality of dynamic GameObject lighting, consider:</p>
+
+<ul>
+<li><a href="#lppv">Light Probe Proxy Volume (LPPV)</a></li>
+<li><a href="#aoMap">Per-object baked Ambient Occlusion Map (AO)</a></li>
+<li><a href="#reflection">Local Reflection</a></li>
+<li><a href="#assumptions">Fake Shadows or occlusion based on assumptions</a></li>
+</ul>
+
+<p><a name="lppv"></a></p>
+
+<h2>Light Probe Proxy Volume (LPPV)</h2>
+
+<p>The surfaces of dynamic GameObjects that aren’t lit by dynamic lighting generally use <span class="tooltip"><strong>Light Probe</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> data to fill in their lighting information (in a Scene where Light Probes are not present, Environment Lighting is used). Depending on the lighting strategy used in a Scene, this can range from indirect lighting information to shadowing and baked diffused Light Probe lighting information. This Light Probe strategy usually works fine for small dynamic GameObjects. However, larger GameObjects require a finer granularity of Light Probe lighting. This is where <span class="tooltip"><strong>Light Probe Proxy Volumes</strong><span class="tooltiptext">A component that allows you to use more lighting information for large dynamic GameObjects that cannot use baked lightmaps (for example, large Particle Systems or skinned Meshes). <a href="class-LightProbeProxyVolume.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbeProxyVolume">Glossary</a></span></span></span> come in. For more information, see <a href="class-LightProbeProxyVolume.html">Light Probe Proxy Volume component</a>.</p>
+
+<p>Using Light Probe Proxy Volumes allows a large dynamically-lit GameObject to use more than a single Light Probe, resulting in higher lighting accuracy. The following example shows how the capsule with LPPV demonstrates higher accuracy of Light Probe sampling, despite only using 2x2x2 Volume grid:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLPPVCapsule.jpg" alt="Capsule comparison showing impact of LLPV">
+<figcaption>Capsule comparison showing impact of LLPV</figcaption>
+</figure>
+
+<p><a name="aoMap"></a></p>
+
+<h2>Per-object baked Ambient Occlusion Map (AO)</h2>
+
+<p>Dynamic GameObjects only receive lighting from Light Probes or ambient lights. So you need to pre-calculate an occlusion for the GameObject, especially if the GameObject involves a concave interior, such as the tram in the example. In the example below, the tram on the left without AO is applying Light Probe lighting data without knowing how to differentiate the interior and the exterior surfaces. With the pre-baked AO, this map serves as a guide to reduce the intensity of light and reflection from the exterior, giving a much more grounded look:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBakedAO.jpg" alt="Tram comparison showing impact of AO">
+<figcaption>Tram comparison showing impact of AO</figcaption>
+</figure>
+
+<p>Per-GameObject AO offline baking can even give further detailed occlusion by baking from a higher detailed <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> to lower a detailed <strong>mesh</strong>, in a similar way to how normal map baking works. </p>
+
+<p>
+<strong>Note</strong>: Per-GameObject AO doesn’t interact with other dynamic GameObjects. For example, a dynamic GameObject (such as character entering the tram) receives Light Probe data from the Scene and doesn’t necessarily match the occlusion of the tram interior.</p>
+
+<p><a name="reflection"></a></p>
+
+<h2>Local reflection</h2>
+
+<p>Most dynamic GameObjects don’t need their own reflection. However, for GameObjects that involve concave interiors, attaching a <span class="tooltip"><strong>Reflection Probe</strong><span class="tooltiptext">A rendering component that captures a spherical view of its surroundings in all directions, rather like a camera. The captured image is then stored as a Cubemap that can be used by objects with reflective materials. <a href="class-ReflectionProbe.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span> to the GameObject and allowing it to run in real time can help reduce false reflection hits coming from the environment <strong>Reflection Probe</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLocalReflection.jpg" alt="Exaggerated material showing reflection issues">
+<figcaption>Exaggerated material showing reflection issues</figcaption>
+</figure>
+
+<p><a name="assumptions"></a></p>
+
+<h2>Fake shadows or occlusion based on assumptions</h2>
+
+<p>If you can make certain assumptions for a GameObject, there are tricks that you can use to improve visual quality. In the sample shown below, the tram should always be on the rails. So to help its ground light occlusion in shaded areas, we can use a “Particle/Multiply” transparent material plane:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsFakeShadows.jpg" alt="Simple Plane trick using a Particle/Multiply transparent material">
+<figcaption>Simple Plane trick using a Particle/Multiply transparent material</figcaption>
+</figure>
+
+<p>A similar trick is to place a blob shadow projector under a character instead of the character casting real shadows. </p>
+
+<p>In real-time <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>, if you can find a trick that works, and it’s cheap on performance, it’s usually a viable solution. There are certainly more tips and tricks that improve visual <strong>rendering</strong>. The above list should give you confidence in thinking of solutions for different kinds of visual requirements.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Making believable visuals Best Practice Guide added in Unity 2017.3</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals8.html"></a></span><div class="tip"> Understanding post-processing</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip"> Best Practice: Setting up the Lighting Pipeline</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

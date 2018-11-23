@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Hinge Joint</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-HingeJoint.html">English</a></li>
+<li><a href="/ja/current/Manual/class-HingeJoint.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-HingeJoint.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-HingeJoint.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-HingeJoint.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li><a href="Physics3DReference.html">3D Physics Reference</a></li>
+<li>Hinge Joint</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-FixedJoint.html"></a></span><div class="tip">Fixed Joint</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MeshCollider.html"></a></span><div class="tip">Mesh Collider</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Hinge Joint</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/HingeJoint.html' title='Go to HingeJoint page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Hinge Joint</strong> groups together two <span class="tooltip"><a href="class-Rigidbody.html">Rigidbodies</a><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span>, constraining them to move like they are connected by a hinge. It is perfect for doors, but can also be used to model chains, pendulums, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-HingeJoint.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Connected Body</strong></td>
+	<td style="text-align:left;">Optional reference to the Rigidbody that the <span class="tooltip"><strong>joint</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> is dependent upon. If not set, the <strong>joint</strong> connects to the world.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Anchor</strong><span class="tooltiptext">A UI layout tool that fixes a UI element to a parent element. Anchors are shown as four small triangular handles in the Scene View and anchor information is also shown in the Inspector. <a href="UIBasicLayout.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Anchor">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">The position of the axis around which the body swings. The position is defined in local space.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Axis</strong></td>
+	<td style="text-align:left;">The direction of the axis around which the body swings. The direction is defined in local space.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Configure Connected Anchor</strong></td>
+	<td style="text-align:left;">If this is enabled, then the Connected Anchor position will be calculated automatically to match the global position of the anchor property. This is the default behavior. If this is disabled, you can configure the position of the connected anchor manually.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Connected Anchor</strong></td>
+	<td style="text-align:left;">Manual configuration of the connected anchor position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Spring</strong></td>
+	<td style="text-align:left;">Spring makes the Rigidbody reach for a specific angle compared to its connected body.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spring</strong></td>
+	<td style="text-align:left;">Properties of the Spring that are used if <strong>Use Spring</strong> is enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Spring</strong>
+</td>
+	<td style="text-align:left;">The force the object asserts to move into the position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Damper</strong>
+</td>
+	<td style="text-align:left;">The higher this value, the more the object will slow down.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <span class="tooltip"><strong>Target Position</strong><span class="tooltiptext">A joint property to set the target position that the joint’s drive force should move it to. <a href="class-ConfigurableJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TargetPosition">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Target angle of the spring. The spring pulls towards this angle measured in degrees.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Motor</strong></td>
+	<td style="text-align:left;">The motor makes the object spin around.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Motor</strong></td>
+	<td style="text-align:left;">Properties of the Motor that are used if <strong>Use Motor</strong> is enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <span class="tooltip"><strong>Target Velocity</strong><span class="tooltiptext">A joint property to set the desired velocity with which the joint should move to the Target Position under the drive force. <a href="class-ConfigurableJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TargetVelocity">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">The speed the object tries to attain.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Force</strong>
+</td>
+	<td style="text-align:left;">The force applied in order to attain the speed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Free Spin</strong>
+</td>
+	<td style="text-align:left;">If enabled, the motor is never used to brake the spinning, only accelerate it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Limits</strong></td>
+	<td style="text-align:left;">If enabled, the angle of the hinge will be restricted within the <strong>Min</strong> &amp; <strong>Max</strong> values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Limits __ |Properties of the Limits that are used if </strong>Use Limits__ is enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Min</strong>
+</td>
+	<td style="text-align:left;">The lowest angle the rotation can go.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Max</strong>
+</td>
+	<td style="text-align:left;">The highest angle the rotation can go.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Bounciness</strong>
+</td>
+	<td style="text-align:left;">How much the object bounces when it hits the minimum or maximum stop limit.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <span class="tooltip"><strong>Contact Distance</strong><span class="tooltiptext">A joint limit property that sets the minimum distance tolerance between the joint position and the limit at which the limit will be enforced. <a href="class-CharacterJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ContactDistance">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Within the contact distance from the limit contacts will persist in order to avoid jitter.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Force</strong></td>
+	<td style="text-align:left;">The force that needs to be applied for this joint to break.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Torque</strong></td>
+	<td style="text-align:left;">The torque that needs to be applied for this joint to break.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Collision</strong></td>
+	<td style="text-align:left;">When checked, this enables <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> between bodies connected with a joint.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Preprocessing</strong></td>
+	<td style="text-align:left;">Disabling preprocessing helps to stabilize impossible-to-fulfil configurations.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>A single Hinge Joint should be applied to a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. The hinge will rotate at the point specified by the <strong>Anchor</strong> property, moving around the specified <strong>Axis</strong> property. You <strong>do not</strong> need to assign a GameObject to the joint’s <strong>Connected Body</strong> property. You should only assign a GameObject to the <strong>Connected Body</strong> property if you want the joint’s <strong>Transform</strong> to be dependent on the attached object’s Transform.</p>
+
+<p>Think about how the hinge of a door works. The <strong>Axis</strong> in this case is up, positive along the Y axis. The <strong>Anchor</strong> is placed somewhere at the intersection between door and wall. You would not need to assign the wall to the <strong>Connected Body</strong>, because the joint will be connected to the world by default.</p>
+
+<p>Now think about a doggy door hinge. The doggy door’s <strong>Axis</strong> would be sideways, positive along the relative X axis. The main door should be assigned as the <strong>Connected Body</strong>, so the doggy door’s hinge is dependent on the main door’s Rigidbody.</p>
+
+<h3>Chains</h3>
+
+<p>Multiple Hinge Joints can also be strung together to create a chain. Add a joint to each link in the chain, and attach the next link as the <strong>Connected Body</strong>.</p>
+
+<h2>Hints</h2>
+
+<ul>
+<li>You do not need to assign a <strong>Connected Body</strong> to your joint for it to work.</li>
+<li>Use <strong>Break Force</strong> in order to make dynamic damage systems. You can use this to allow the player to damage the environment (for example, break a door off its hinges by blasting it with a rocket launcher or running into it with a car).</li>
+<li>The <strong>Spring</strong>, <strong>Motor</strong>, and <strong>Limits</strong> properties allow you to fine-tune your joint’s behaviors.</li>
+<li>Use of <strong>Spring</strong>, <strong>Motor</strong> are intended to be mutually exclusive. Using both at the same time leads to unpredictable results.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-FixedJoint.html"></a></span><div class="tip">Fixed Joint</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MeshCollider.html"></a></span><div class="tip">Mesh Collider</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

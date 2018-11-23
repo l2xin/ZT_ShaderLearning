@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Managed Plugins</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UsingDLL.html">English</a></li>
+<li><a href="/ja/current/Manual/UsingDLL.html">日本語</a></li>
+<li><a href="/es/current/Manual/UsingDLL.html">Español</a></li>
+<li><a href="/kr/current/Manual/UsingDLL.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UsingDLL.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AdvancedDevelopment.html">Advanced Development</a></li>
+<li><a href="Plugins.html">Plugins</a></li>
+<li>Managed Plugins</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PluginInspector.html"></a></span><div class="tip">Plugin Inspector</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="NativePlugins.html"></a></span><div class="tip">Native Plugins</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Managed Plugins</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Usually, <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> are kept in a project as source files and compiled by Unity whenever the source changes. However, it is also possible to compile a script to a <strong>dynamically linked library</strong> (DLL) using an external compiler. The resulting DLL can then be added to the project and the classes it contains can be attached to objects just like normal scripts.</p>
+
+<p>It is generally much easier to work with scripts than DLLs in Unity. However, you may have access to third party Mono code which is supplied in the form of a DLL. When developing your own code, you may be able to use compilers not supported by Unity by compiling the code to a DLL and adding it to your Unity project. You may also want to supply Unity code without the source (for example, for an Asset Store product) and a DLL is an easy way to do this.</p>
+
+<h2>Creating a DLL</h2>
+
+<p>To create a DLL, you will first need a suitable compiler. Not all compilers that produce .NET code are guaranteed to work with Unity, so it may be wise to test the compiler with some available code before doing significant work with it. If the DLL contains no code that depends on the Unity API then you can simply compile it to a DLL using the appropriate compiler options. If you do want to use the Unity API then you will need to make Unity’s own DLLs available to the compiler. On a Mac, these are contained in the application bundle (you can see the internal structure of the bundle by using the Show Package Contents command from the contextual menu; right click or ctrl-click the Unity application):-</p>
+
+<p>The path to the Unity DLLs will typically be</p>
+
+<pre><code>/Applications/Unity/Unity.app/Contents/Managed/
+</code></pre>
+
+<p>…and the two DLLs are called UnityEngine.dll and UnityEditor.dll.</p>
+
+<p>On Windows, the DLLs can be found in the folders that accompany the Unity application. The path will typically be</p>
+
+<pre><code>C:\Program Files\Unity\Editor\Data\Managed
+</code></pre>
+
+<p>…while the names of the DLLs are the same as for Mac OS.</p>
+
+<p>The exact options for compiling the DLL will vary depending on the compiler used. As an example, the command line for the Mono C# compiler, <strong><span class="tooltip"><strong>mcs</strong><span class="tooltiptext">The Mono C# compiler file format. <a href="PlatformDependentCompilation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#mcs">Glossary</a></span></span></span></strong>, might look like this on Mac OS:-</p>
+
+<pre><code>mcs -r:/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll -target:library ClassesForDLL.cs 
+</code></pre>
+
+<p>Here, the <em>-r</em> option specifies a path to a library to be included in the build, in this case the UnityEngine library. The <em>-target</em> option specifies which type of build is required; the word “library” is used to select a DLL build. Finally, the name of the source file to compile is <em>ClassesForDLL.cs</em> (it is assumed that this file is in the current working folder, but you could specify the file using a full path if necessary). Assuming all goes well, the resulting DLL file will appear shortly in the same folder as the source file.</p>
+
+<h2>Using the DLL</h2>
+
+<p>Once compiled, the DLL file can simply be dragged into the Unity project like any other <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>. The DLL <strong>asset</strong> has a foldout triangle which can be used to reveal the separate classes inside the library. Classes that derive from MonoBehaviour can be dragged onto Game Objects like ordinary scripts. Non-MonoBehaviour classes can be used directly from other scripts in the usual way.</p>
+
+<figure>
+<img src="../uploads/Main/DLLScreenshot.png" alt="A folded-out DLL with the classes visible">
+<figcaption>A folded-out DLL with the classes visible</figcaption>
+</figure>
+
+<h2>Step by step guide for Visual Studio</h2>
+
+<p>This section explains how to build and integrate a simple DLL example with Visual Studio, and also how to prepare a debugging session for the DLL.</p>
+
+<h3>Setting Up the Project</h3>
+
+<p>First, open Visual Studio and create a new project. In Visual Studio, you should select <strong>File &gt; New &gt; Project</strong> and then choose <strong>Visual C# &gt; Class Library</strong>.</p>
+
+<p>You then need to fill out the information for the new library:</p>
+
+<ul>
+<li>
+<strong>Name</strong> is the namespace (for this example use “DLLTest” as the name).</li>
+<li>
+<strong>Location</strong> is the parent folder of the project.</li>
+<li>
+<strong>Solution name</strong> is the folder of the project.</li>
+</ul>
+
+<p>Next, you should add references to the Unity DLLs. In Visual Studio, open the contextual menu for <em>References</em> in the Solution Explorer and choose <strong>Add Reference</strong>. Then, choose the option <strong>Browse &gt; Browse &gt; select file</strong>.</p>
+
+<p>At this stage, you will have the option to select the required DLL file. On Mac OS X, the file path is:</p>
+
+<pre><code>Applications/Unity.app/Contents/Managed/UnityEngine.dll
+</code></pre>
+
+<p>On Windows, the path is:</p>
+
+<pre><code>Program Files\Unity\Editor\Data\Managed\UnityEngine.dll
+</code></pre>
+
+<h3>Code</h3>
+
+<p>For this example, rename the class to <code>MyUtilities</code> in the Solution browser and replace its code with the following:</p>
+
+<pre><code>using System;   
+using UnityEngine;
+
+namespace DLLTest {
+
+    public class MyUtilities {
+    
+        public int c;
+
+        public void AddValues(int a, int b) {
+            c = a + b;  
+        }
+    
+        public static int GenerateRandom(int min, int max) {
+            System.Random rand = new System.Random();
+            return rand.Next(min, max);
+        }
+    }
+}
+</code></pre>
+
+<p>With the code in place, build the project to generate the DLL file along with its debug symbols.</p>
+
+<h3>Using the DLL in Unity</h3>
+
+<p>For this example, create a new project in Unity and copy the built file &lt;project folder&gt;/bin/Debug/DLLTest.dll into the Assets folder. Then, create a C# script called “Test” in Assets, and replace its contents with the following code:</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+using DLLTest;
+
+public class Test : MonoBehaviour {
+
+     void Start () {
+        MyUtilities utils = new MyUtilities();
+        utils.AddValues(2, 3);
+        print(&quot;2 + 3 = &quot; + utils.c);
+     }
+    
+     void Update () {
+        print(MyUtilities.GenerateRandom(0, 100));
+     }
+}
+</code></pre>
+
+<p>When you attach this script to an object in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> and press Play, you will see the output of the code from the DLL in the <span class="tooltip"><strong>Console window</strong><span class="tooltiptext">A Unity Editor window that shows errors, warnings and other messages generated by Unity, or your own scripts. <a href="Console.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Consolewindow">Glossary</a></span></span></span>.</p>
+
+<h3>Setting up a debugging session for the DLL</h3>
+
+<p>Firstly, you should prepare the debug symbols for the DLL. In Visual Studio, execute in the command prompt, passing &lt;project folder&gt;\bin\Debug\DLLTest.pdb as a parameter:</p>
+
+<pre><code>Program Files\Unity\Editor\Data\Mono\lib\mono\2.0\pdb2mdb.exe
+</code></pre>
+
+<p>Then, copy the converted file <em>&lt;project folder&gt;\bin\Debug\DLLTest.dll.mdb</em> into <em>Assets/Plugins</em>.</p>
+
+<p>With this setup completed, you can debug code that uses the DLL in Unity in the usual way. See the <a href="ScriptingTools.html">Scripting Tools</a> section for further information about debugging.</p>
+
+<h3>Compiling ‘unsafe’ C# code</h3>
+
+<p>You can enable support for compiling <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">‘unsafe’ C# code</a> in Unity. To do this, go to <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong> and expand the <strong>Other Settings</strong> tab to reveal the <strong>Allow ‘unsafe’ Code</strong> checkbox. </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–20  Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">MonoDevelop replaced by Visual Studio from 2018.1</span></p></li>
+<li><p><span class="page-history"><strong>‘unsafe C# Code checkbox’</strong> added in 2018.1</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PluginInspector.html"></a></span><div class="tip">Plugin Inspector</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="NativePlugins.html"></a></span><div class="tip">Native Plugins</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

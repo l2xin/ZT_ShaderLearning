@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Integration using NetworkTransport</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityMultiplayerIntegratingLowLevel.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityMultiplayerIntegratingLowLevel.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityMultiplayerIntegratingLowLevel.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityMultiplayerIntegratingLowLevel.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityMultiplayerIntegratingLowLevel.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li><a href="UNetUsingHLAPI.html">The Multiplayer High Level API</a></li>
+<li><a href="UnityMultiplayerSettingUp.html">Setting up Unity Multiplayer</a></li>
+<li>Integration using NetworkTransport</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityMultiplayerIntegratingHighLevel.html"></a></span><div class="tip">Integration using Unity's High-Level API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityMultiplayerCommonErrors.html"></a></span><div class="tip">Common Errors</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Integration using NetworkTransport</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>If you need the maximum amount of flexibilty when integrating Unity Multiplayer Services, you can use the <code>NetworkTransport</code> class directly. This method requires more code, but allows you to control every detail of how your game integrates with the Multiplayer Services.</p>
+
+<p>This is an example of how you can connect directly using the <code>NetworkTransport</code> class:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Types;
+using UnityEngine.Networking.Match;
+using System.Collections.Generic;
+
+public class DirectSetup : MonoBehaviour
+{
+    // Matchmaker related
+    List&lt;MatchInfoSnapshot&gt; m_MatchList = new List&lt;MatchInfoSnapshot&gt;();
+    bool m_MatchCreated;
+    bool m_MatchJoined;
+    MatchInfo m_MatchInfo;
+    string m_MatchName = &quot;NewRoom&quot;;
+    NetworkMatch m_NetworkMatch;
+
+    // Connection/communication related
+    int m_HostId = -1;
+    // On the server there will be multiple connections, on the client this will only contain one ID
+    List&lt;int&gt; m_ConnectionIds = new List&lt;int&gt;();
+    byte[] m_ReceiveBuffer;
+    string m_NetworkMessage = &quot;Hello world&quot;;
+    string m_LastReceivedMessage = &quot;&quot;;
+    NetworkWriter m_Writer;
+    NetworkReader m_Reader;
+    bool m_ConnectionEstablished;
+
+    const int k_ServerPort = 25000;
+    const int k_MaxMessageSize = 65535;
+
+    void Awake()
+    {
+        m_NetworkMatch = gameObject.AddComponent&lt;NetworkMatch&gt;();
+    }
+
+    void Start()
+    {
+        m_ReceiveBuffer = new byte[k_MaxMessageSize];
+        m_Writer = new NetworkWriter();
+        // While testing with multiple standalone players on one machine this will need to be enabled
+        Application.runInBackground = true;
+    }
+
+    void OnApplicationQuit()
+    {
+        NetworkTransport.Shutdown();
+    }
+
+    void OnGUI()
+    {
+        if (string.IsNullOrEmpty(Application.cloudProjectId))
+            GUILayout.Label(&quot;You must set up the project first. See the Multiplayer tab in the Service Window&quot;);
+        else
+            GUILayout.Label(&quot;Cloud Project ID: &quot; + Application.cloudProjectId);
+
+        if (m_MatchJoined)
+            GUILayout.Label(&quot;Match joined '&quot; + m_MatchName + &quot;' on Matchmaker server&quot;);
+        else if (m_MatchCreated)
+            GUILayout.Label(&quot;Match '&quot; + m_MatchName + &quot;' created on Matchmaker server&quot;);
+
+        GUILayout.Label(&quot;Connection Established: &quot; + m_ConnectionEstablished);
+
+        if (m_MatchCreated || m_MatchJoined)
+        {
+            GUILayout.Label(&quot;Relay Server: &quot; + m_MatchInfo.address + &quot;:&quot; + m_MatchInfo.port);
+            GUILayout.Label(&quot;NetworkID: &quot; + m_MatchInfo.networkId + &quot; NodeID: &quot; + m_MatchInfo.nodeId);
+            GUILayout.BeginHorizontal();
+            GUILayout.Label(&quot;Outgoing message:&quot;);
+            m_NetworkMessage = GUILayout.TextField(m_NetworkMessage);
+            GUILayout.EndHorizontal();
+            GUILayout.Label(&quot;Last incoming message: &quot; + m_LastReceivedMessage);
+
+            if (m_ConnectionEstablished &amp;&amp; GUILayout.Button(&quot;Send message&quot;))
+            {
+                m_Writer.SeekZero();
+                m_Writer.Write(m_NetworkMessage);
+                byte error;
+                for (int i = 0; i &lt; m_ConnectionIds.Count; ++i)
+                {
+                    NetworkTransport.Send(m_HostId,
+                        m_ConnectionIds[i], 0, m_Writer.AsArray(), m_Writer.Position, out error);
+                    if ((NetworkError)error != NetworkError.Ok)
+                        Debug.LogError(&quot;Failed to send message: &quot; + (NetworkError)error);
+                }
+            }
+
+            if (GUILayout.Button(&quot;Shutdown&quot;))
+            {
+                m_NetworkMatch.DropConnection(m_MatchInfo.networkId,
+                    m_MatchInfo.nodeId, 0, OnConnectionDropped);
+            }
+        }
+        else
+        {
+            if (GUILayout.Button(&quot;Create Room&quot;))
+            {
+                m_NetworkMatch.CreateMatch(m_MatchName, 4, true, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, OnMatchCreate);
+            }
+
+            if (GUILayout.Button(&quot;Join first found match&quot;))
+            {
+                m_NetworkMatch.ListMatches(0, 1, &quot;&quot;, true, 0, 0, (success, info, matches) =&gt;
+                {
+                    if (success &amp;&amp; matches.Count &gt; 0)
+                        m_NetworkMatch.JoinMatch(matches[0].networkId, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, OnMatchJoined);
+                });
+            }
+
+            if (GUILayout.Button(&quot;List rooms&quot;))
+            {
+                m_NetworkMatch.ListMatches(0, 20, &quot;&quot;, true, 0, 0, OnMatchList);
+            }
+
+            if (m_MatchList.Count &gt; 0)
+            {
+                GUILayout.Label(&quot;Current rooms:&quot;);
+            }
+            foreach (var match in m_MatchList)
+            {
+                if (GUILayout.Button(match.name))
+                {
+                    m_NetworkMatch.JoinMatch(match.networkId, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, OnMatchJoined);
+                }
+            }
+        }
+    }
+
+    public void OnConnectionDropped(bool success, string extendedInfo)
+    {
+        Debug.Log(&quot;Connection has been dropped on matchmaker server&quot;);
+        NetworkTransport.Shutdown();
+        m_HostId = -1;
+        m_ConnectionIds.Clear();
+        m_MatchInfo = null;
+        m_MatchCreated = false;
+        m_MatchJoined = false;
+        m_ConnectionEstablished = false;
+    }
+
+    public virtual void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log(&quot;Create match succeeded&quot;);
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+           
+            m_MatchCreated = true;
+            m_MatchInfo = matchInfo;
+
+            StartServer(matchInfo.address, matchInfo.port, matchInfo.networkId,
+                matchInfo.nodeId);
+        }
+        else
+        {
+            Debug.LogError(&quot;Create match failed: &quot; + extendedInfo);
+        }
+    }
+
+    public void OnMatchList(bool success, string extendedInfo, List&lt;MatchInfoSnapshot&gt; matches)
+    {
+        if (success &amp;&amp; matches != null)
+        {
+            m_MatchList = matches;
+        }
+    else if(!success)
+    {
+        Debug.LogError(&quot;List match failed: &quot; + extendedInfo);
+    }
+    }
+
+    // When we've joined a match we connect to the server/host
+    public virtual void OnMatchJoined(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log(&quot;Join match succeeded&quot;);
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+
+            m_MatchJoined = true;
+            m_MatchInfo = matchInfo;
+
+            Debug.Log(&quot;Connecting to Address:&quot; + matchInfo.address +
+                &quot; Port:&quot; + matchInfo.port +
+                &quot; NetworKID: &quot; + matchInfo.networkId +
+                &quot; NodeID: &quot; + matchInfo.nodeId);
+            ConnectThroughRelay(matchInfo.address, matchInfo.port, matchInfo.networkId,
+                matchInfo.nodeId);
+        }
+        else
+        {
+            Debug.LogError(&quot;Join match failed: &quot; + extendedInfo);
+        }
+    }
+
+    void SetupHost(bool isServer)
+    {
+        Debug.Log(&quot;Initializing network transport&quot;);
+        NetworkTransport.Init();
+        var config = new ConnectionConfig();
+        config.AddChannel(QosType.Reliable);
+        config.AddChannel(QosType.Unreliable);
+        var topology = new HostTopology(config, 4);
+        if (isServer)
+            m_HostId = NetworkTransport.AddHost(topology, k_ServerPort);
+        else
+            m_HostId = NetworkTransport.AddHost(topology);
+    }
+
+    void StartServer(string relayIp, int relayPort, NetworkID networkId, NodeID nodeId)
+    {
+        SetupHost(true);
+
+        byte error;
+        NetworkTransport.ConnectAsNetworkHost(
+            m_HostId, relayIp, relayPort, networkId, Utility.GetSourceID(), nodeId, out error);
+    }
+
+    void ConnectThroughRelay(string relayIp, int relayPort, NetworkID networkId, NodeID nodeId)
+    {
+        SetupHost(false);
+
+        byte error;
+        NetworkTransport.ConnectToNetworkPeer(
+            m_HostId, relayIp, relayPort, 0, 0, networkId, Utility.GetSourceID(), nodeId, out error);
+    }
+
+    void Update()
+    {
+        if (m_HostId == -1)
+            return;
+
+        var networkEvent = NetworkEventType.Nothing;
+        int connectionId;
+        int channelId;
+        int receivedSize;
+        byte error;
+
+        // Get events from the relay connection
+        networkEvent = NetworkTransport.ReceiveRelayEventFromHost(m_HostId, out error);
+        if (networkEvent == NetworkEventType.ConnectEvent)
+            Debug.Log(&quot;Relay server connected&quot;);
+        if (networkEvent == NetworkEventType.DisconnectEvent)
+            Debug.Log(&quot;Relay server disconnected&quot;);
+
+        do
+        {
+            // Get events from the server/client game connection
+            networkEvent = NetworkTransport.ReceiveFromHost(m_HostId, out connectionId, out channelId,
+                m_ReceiveBuffer, (int)m_ReceiveBuffer.Length, out receivedSize, out error);
+            if ((NetworkError)error != NetworkError.Ok)
+            {
+                Debug.LogError(&quot;Error while receiveing network message: &quot; + (NetworkError)error);
+            }
+
+            switch (networkEvent)
+            {
+                case NetworkEventType.ConnectEvent:
+                    {
+                        Debug.Log(&quot;Connected through relay, ConnectionID:&quot; + connectionId +
+                            &quot; ChannelID:&quot; + channelId);
+                        m_ConnectionEstablished = true;
+                        m_ConnectionIds.Add(connectionId);
+                        break;
+                    }
+                case NetworkEventType.DataEvent:
+                    {
+                        Debug.Log(&quot;Data event, ConnectionID:&quot; + connectionId +
+                            &quot; ChannelID: &quot; + channelId +
+                            &quot; Received Size: &quot; + receivedSize);
+                        m_Reader = new NetworkReader(m_ReceiveBuffer);
+                        m_LastReceivedMessage = m_Reader.ReadString();
+                        break;
+                    }
+                case NetworkEventType.DisconnectEvent:
+                    {
+                        Debug.Log(&quot;Connection disconnected, ConnectionID:&quot; + connectionId);
+                        break;
+                    }
+                case NetworkEventType.Nothing:
+                    break;
+            }
+        } while (networkEvent != NetworkEventType.Nothing);
+    }
+}
+</code></pre>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityMultiplayerIntegratingHighLevel.html"></a></span><div class="tip">Integration using Unity's High-Level API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityMultiplayerCommonErrors.html"></a></span><div class="tip">Common Errors</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

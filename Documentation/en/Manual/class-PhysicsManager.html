@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Physics Manager</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-PhysicsManager.html">English</a></li>
+<li><a href="/ja/current/Manual/class-PhysicsManager.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-PhysicsManager.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-PhysicsManager.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-PhysicsManager.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="EditorFeatures.html">Editor Features</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li> Physics Manager</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettingsSplashScreen.html"></a></span><div class="tip"> Splash Screen</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D Settings</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Physics Manager</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the Physics Manager to apply global settings for 3D physics. To access it, go to <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Physics</strong>. To manage global settings for 2D physics, use the <a href="class-Physics2DManager.html">Physics 2D Manager</a>.</p>
+
+<p>The settings of the PhysicsManager define limits on the accuracy of the physical simulation. Generally speaking, a more accurate simulation requires more processing overhead, so these settings offer a way to trade off accuracy against performance. See the <a href="PhysicsSection.html">Physics</a> section of the manual for further information.</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsSet.png" alt="The PhysicsManager, shown in the Inspector window.">
+<figcaption>The PhysicsManager, shown in the Inspector window.</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Gravity</strong></td>
+	<td style="text-align:left;">Use the x, y and z axes to set the amount of gravity applied to all Rigidbody components. For realistic gravity settings, apply a negative number to the y axis. Gravity is defined in world units per seconds squared. <br><strong>Note</strong>: If you increase the gravity, you might need to also increase the <strong>Default Solver Iterations</strong> value to maintain stable contacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Material</strong></td>
+	<td style="text-align:left;">Use this field to define the default Physics Material that is used if none has been assigned to an individual <span class="tooltip"><strong>Collider</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounce Threshold</strong></td>
+	<td style="text-align:left;">Use this to set a velocity value. If two colliding objects have a relative velocity below this value, they do not bounce off each other. This value also reduces jitter, so it is not recommended to set it to a very low value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sleep Threshold</strong></td>
+	<td style="text-align:left;">Use this to set a global energy threshold, below which a non-kinematic <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> (that is, one that is not controlled by the physics system) may go to sleep. When a Rigidbody is sleeping, it is not updated every frame, making it less resource-intensive. If a Rigidbody’s kinetic energy divided by its mass is below this threshold, it is a candidate for sleeping.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Contact Offset</strong></td>
+	<td style="text-align:left;">Use this to set the distance the <span class="tooltip"><strong>collision detection</strong><span class="tooltiptext">An automatic process performed by Unity which determines whether a moving GameObject with a rigidbody and collider component has come into contact with any other colliders. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CollisionDetection">Glossary</a></span></span></span> system uses to generate <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> contacts. The value must be positive, and if set too close to zero, it can cause jitter. This is set to 0.01 by default. Colliders only generate <strong>collision</strong> contacts if their distance is less than the sum of their contact offset values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Solver Iterations</strong></td>
+	<td style="text-align:left;">Solvers are small <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> tasks which determine a number of physics interactions, such as the movements of <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> or managing contact between overlapping Rigidbody <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>. Use <strong>Default Solver Iterations</strong> to define how many solver processes Unity runs on every physics frame. This affects the quality of the solver output and it’s advisable to change the property in case non-default <code>Time.fixedDeltaTime</code> is used, or the configuration is extra demanding. Typically, it’s used to reduce the jitter resulting from joints or contacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Solver Velocity Iterations</strong></td>
+	<td style="text-align:left;">Use this to set how many velocity processes a solver performs in each physics frame. The more processes the solver performs, the higher the accuracy of the resulting exit velocity after a Rigidbody bounce. If you experience problems with jointed Rigidbody components or Ragdolls moving too much after collisions, try increasing this value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Queries Hit Backfaces</strong></td>
+	<td style="text-align:left;">Tick the checkbox if you want physics queries (such as <code>Physics.Raycast</code>) to detect hits with the backface triangles of MeshColliders. This setting is unticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Queries Hit Triggers</strong></td>
+	<td style="text-align:left;">Tick the checkbox if you want physics hit tests (such as Raycasts, SphereCasts and SphereTests) to return a hit when they intersect with a Collider marked as a Trigger. Individual raycasts can override this behavior. This setting is ticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Adaptive Force</strong></td>
+	<td style="text-align:left;">The adaptive force affects the way forces are transmitted through a pile or stack of objects, to give more realistic behaviour. Tick this box to enable the adaptive force. This setting is unticked by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Contacts Generation</strong></td>
+	<td style="text-align:left;">Choose a contact generation method:<br><br><strong>Persistent Contacts Manifold (PCM)</strong>: Regenerates fewer contacts every physics frame and shares more contact data across frames. The PCM contacts generation path is also more accurate, and usually produces better collision feedback in most of the cases. See <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/AdvancedCollisionDetection.html#persistent-contact-manifold-pcm">Nvidia documentation on Persistent Contact Manifold</a> for more information.<br><strong>Legacy Contacts Generation</strong>: Generates contacts using the separating axis theorem (see <a href="http://www.dyn4j.org/2010/01/sat/">dyn4j.org’s guide to SAT</a>).<br><br>PCM is more efficient, but for projects made in versions of Unity earlier than Unity 5.5, you might find it easier to continue using SAT, to avoid needing to retweak physics slightly. PCM can result in a slightly different bounce, and fewer useless contacts end up in the contacts buffers (that is, the arrays you get in the Collision instance passed to <code>OnCollisionEnter</code>, <code>OnCollisionStay</code>, and <code>OnCollisionExit</code>).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Simulation</strong></td>
+	<td style="text-align:left;">Run the physics simulation automatically or allow explicit control over it</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Sync Transforms</strong></td>
+	<td style="text-align:left;">Automatically sync transform changes with the physics system whenever a <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">A Transform component determines the Position, Rotation, and Scale of each object in the scene. Every GameObject has a Transform. <a href="Transforms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> changes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Contact Pairs Mode</strong></td>
+	<td style="text-align:left;">Select the type of contact pair generation to use:<br><br><strong>Default Contact Pairs</strong>: Receive collision and trigger events from all contact pairs except kinematic-kinematic and kinematic-static pairs.<br><strong>Enable Kinematic Kinematic Pairs</strong>: Receive collision and trigger events from kinematic-kinematic contact pairs.<br><strong>Enable Kinematic Static Pairs</strong>: Receive collision and trigger events from kinematic-static contact pairs.<br><strong>Enable All Contact Pairs</strong>:Receive collision and trigger events from all contact pairs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Broadphase Type</strong></td>
+	<td style="text-align:left;">Choose which broad-phase algorithm to use in the physics simulation: <strong>Sweep and Prune Broadphase</strong> or <strong>Multibox Pruning Broadphase</strong>. Multi-box pruning uses a grid, and each grid cell performs sweep-and-prune. This usually helps improve performance if, for example, there are many <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in a flat world. For more information, see NVIDIA’s documentation on <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/apireference/files/structPxBroadPhaseType.html">PhysX SDK</a> and <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/RigidBodyCollision.html">Rigid Body Collision</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Bounds</strong></td>
+	<td style="text-align:left;">Define the 2D grid that encloses the world to prevent far away objects from affecting each other when using the <strong>Multibox Pruning Broadphase</strong> algorithm. This option is only available when you set <strong>Broadphase Type</strong> to <strong>Multibox Pruning Broadphase</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Subdivisions</strong></td>
+	<td style="text-align:left;">The number of cells along the x and z axis in the 2D gri__ algorithm. This option is only available when you set <strong>Broadphase Type</strong> to <strong>Multibox Pruning Broadphase</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Layer Collision Matrix</strong></td>
+	<td style="text-align:left;">Use this to define how the <a href="LayerBasedCollision.html">layer-based collision</a> detection system behaves.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cloth Inter-Collision</strong></td>
+	<td style="text-align:left;">Control cloth particle <strong>Distance</strong> and <strong>Stiffness</strong> when setting up particles for <a href="class-Cloth.html#intercollision">Cloth intercollision</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–08–10 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Settings added in 5.5: Default Solver Iterations, Default Solver Velocity Iterations, Queries Hit Backfaces, Enable PCM</span></p></li>
+<li><p><span class="page-history">Physics Manager settings documentation updated in 2017.4</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettingsSplashScreen.html"></a></span><div class="tip"> Splash Screen</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

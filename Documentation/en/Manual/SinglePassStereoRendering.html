@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Single Pass Stereo rendering (Double-Wide rendering)</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SinglePassStereoRendering.html">English</a></li>
+<li><a href="/ja/current/Manual/SinglePassStereoRendering.html">日本語</a></li>
+<li><a href="/es/current/Manual/SinglePassStereoRendering.html">Español</a></li>
+<li><a href="/kr/current/Manual/SinglePassStereoRendering.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SinglePassStereoRendering.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li> Single Pass Stereo rendering (Double-Wide rendering)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VRDevices-OpenVR.html"></a></span><div class="tip"> OpenVR</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SinglePassInstancing.html"></a></span><div class="tip"> Single Pass Instanced rendering</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Single Pass Stereo rendering (Double-Wide rendering)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<strong>Single Pass Stereo rendering</strong> is a feature for PC and Playstation 4-based VR applications. It renders both left and right eye images at the same time into one packed <span class="tooltip"><strong>Render Texture</strong><span class="tooltiptext">A special type of Texture that is created and updated at runtime. To use them, first create a new Render Texture and designate one of your Cameras to render into it. Then you can use the Render Texture in a Material just like a regular Texture. <a href="class-RenderTexture.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span> that is twice the width of a single eye texture. Unity renders the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> twice using 2 draw calls for each <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> that has a Renderer <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>, however, it only iterates through the <strong>Scene</strong> graph once when <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> for both the left and right eyes. During Single Pass Stereo <strong>rendering</strong>, both eyes share the work required by culling and shadow computation. There are also fewer graphics command state change switches, because the GPU renders each <strong>GameObject</strong> in a ping pong fashion (alternates rendering of objects between eyes).</p>
+
+<p>Single Pass Stereo rendering allows the GPU to share culling for both eyes. The GPU only needs to iterate through all the GameObjects in the Scene once for culling purposes, and then renders the GameObjects that survived the culling process. </p>
+
+<p>The comparison images below show the difference between normal VR rendering and Single Pass Stereo rendering.</p>
+
+<p><strong>Normal VR rendering:</strong></p>
+
+<figure>
+<img src="../uploads/Main/SinglePassStereoRendering1.gif" alt="Left-eye image on the left, right-eye image on the right">
+<figcaption>Left-eye image on the left, right-eye image on the right</figcaption>
+</figure>
+
+<p><strong>Single-Pass Stereo VR rendering:</strong></p>
+
+<figure>
+<img src="../uploads/Main/SinglePassStereoRendering2.gif" alt="Left-eye and right-eye images packed together">
+<figcaption>Left-eye and right-eye images packed together</figcaption>
+</figure>
+
+<p>To enable this feature, open <strong>PlayerSettings</strong> (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong>). In <strong>PlayerSettings</strong>, navigate to <strong>XR Settings</strong>, ensure the <strong>Virtual Reality Supported</strong> checkbox is ticked, then select the <strong>Single Pass</strong> option from the <strong>Stereo Rendering Method</strong> dropdown.</p>
+
+<figure>
+<img src="../uploads/Main/SinglePassStereoRendering3.png" alt="Selecting Single Pass rendering from PlayerSettings &gt; XR Settings">
+<figcaption>Selecting Single Pass rendering from <strong>PlayerSettings &gt; XR Settings</strong></figcaption>
+</figure>
+
+<p>Unity’s built-in rendering features and <span class="tooltip"><strong>Standard Assets</strong><span class="tooltiptext">A collection of useful assets supplied with Unity. Unity ships with multiple Standard Asset such as 2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, and Vehicles. <a href="AssetTypes.html#Standard">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardAsset">Glossary</a></span></span></span> all support this feature. However, custom-built <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> and <strong>Shaders</strong> downloaded from the <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> might need to be modified (for example, you might need to scale and offset screen space coordinates to access the appropriate half of the packed Render Texture) to add Single Pass Stereo rendering support.</p>
+
+<h2>Adding Single Pass Stereo rendering support to Shaders</h2>
+
+<p>Existing helper methods in <code>UnityCG.cginc</code> support Single Pass Stereo rendering. Whether your application is <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XR">Glossary</a></span></span></span> or not, you still need to perform transformations on vertices. For example, when creating any type of application, the vertices enter the <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> stage in model space and exit in clip space. The <strong>vertex shader</strong> must output clip space vertex coordinates. The set of vertices affected by the shader normally begins in model space before the <strong>vertex shader</strong> transforms them into clip space. However, in order for these vertices to arrive in clip space, the <strong>vertex shader</strong> first transforms them into world space and then to <span class="tooltip"><strong>viewport</strong><span class="tooltiptext">The user’s visible area of an app on their screen. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Viewport">Glossary</a></span></span></span> space.</p>
+
+<p>In the case of XR, there are multiple view matrices: one for both the left and right eye. You can use the built-in method <code>UnityWorldToClipPos</code> to ensure that Unity takes into consideration whether the calculation requires handling multiple view matrices. If you use the<code>UnityWorldToClipPos</code> method, the shader automatically performs the transformation calculation correctly, regardless of the platform your application is running on.</p>
+
+<p>
+<code>UnityCG.cginc</code> also contains the following helper methods to assist you with authoring stereoscopic Shaders:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Property</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Parameters</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>UnityStereoScreenSpaceUVAdjust(uv, sb)</strong></td>
+	<td style="text-align:left;">
+<code>uv</code>: UV texture coordinates. Either a float2 for a standard UV or a float4 for a packed pair of two UVs.<br><code>sb</code>: A float4 containing a 2D scale and 2D bias which the shader applies to the UV, with scale in xy and bias in zw.</td>
+	<td style="text-align:left;">If <code>UNITY_SINGLE_PASS_STEREO</code> is defined, this returns the result of applying the scale and bias in sb to the texture coordinates in uv. Otherwise, this returns the texture coordinates unmodified. Use this to apply a per-eye scale and bias only when in Single Pass Stereo rendering mode.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UnityStereoTransformScreenSpaceTex(uv)</strong></td>
+	<td style="text-align:left;">
+<code>uv</code>: UV texture coordinates. Either a float2 for a standard UV or a float4 for a packed pair of two UVs.</td>
+	<td style="text-align:left;">If <code>UNITY_SINGLE_PASS_STEREO</code> is defined, this returns the result of applying the current eye’s scale and bias to the texture coordinates in uv. Otherwise, this returns the texture coordinates unaltered.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UnityStereoClamp(uv, sb)</strong></td>
+	<td style="text-align:left;">
+<code>uv</code>: UV texture coordinates. Either a float2 for a standard UV or a float4 for a packed pair of two UVs. <br><code>sb</code>: A float4 containing a 2D scale and 2D bias which the shader applies to the UV, with scale in xy and bias in zw.</td>
+	<td style="text-align:left;">If <code>UNITY_SINGLE_PASS_STEREO</code> is defined, this returns the result of applying the clamp to the x value, using the width, and bias, provided by sb, to the texture’s coordinates in uv. Otherwise returns the texture coordinates unmodified. Use this to apply a per-eye clamping in Single Pass Stereo rendering mode to avoid color bleeding between eyes.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Shaders expose the constant in-built variable ‘unity_StereoEyeIndex’, so that Unity can perform eye-dependent calculations. The value of <code>unity_StereoEyeIndex</code> is 0 for left-eye rendering, and 1 for right-eye rendering.</p>
+
+<p>Here is an example from <code>UnityCG.cginc</code>, demonstrating how you can use<code>unity_StereoEyeIndex</code> to modify screen space coordinates:</p>
+
+<pre><code>float2 TransformStereoScreenSpaceTex(float2 uv, float w)
+{
+    float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
+    return uv.xy * scaleOffset.xy + scaleOffset.zw * w;
+}
+</code></pre>
+
+<p>In most cases, you don’t need to modify your Shaders. However, there are situations in which you might need to sample a <a href="http://www.immersionvr.co.uk/mono-vs-stereo/">monoscopic Texture</a> as a source for Single Pass Stereo rendering (for example, if you are creating a full-screen film grain or noise effect where the source image should be the same for both eyes, rather than packed into a <a href="http://www.immersionvr.co.uk/mono-vs-stereo/">stereoscopic image</a>). In such situations, use <code>ComputeNonStereoScreenPos()</code> instead of <code>ComputeScreenPos()</code> to calculate locations from the full source Texture.</p>
+
+<h2>Post-processing effects</h2>
+
+<p>
+<a href="PostProcessingOverview.html">Post-processing effects</a> require some extra work to support Single Pass Stereo rendering. Each post-processing effect runs once on the packed Render Texture (which contains both the left and right eye images), but applies all draw commands that run during the post-processing twice: once to the left-eye half of the destination Render Texture, and once to the right-eye half.</p>
+
+<p>Post-processing effects do not automatically detect Single Pass Stereo rendering, so you need to adjust any reads of packed Stereo Render Textures so that they only read from the correct side for the eye being rendered. There are two ways to do this depending on how your post-processing effect is being rendered:</p>
+
+<ul>
+<li>Using <a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit()</a>
+</li>
+<li>Mesh-based drawing</li>
+</ul>
+
+<p>Without the above-mentioned adjustments, each draw command reads the whole of the source Render Texture (containing both the left and right eye views), and outputs the entire image pair to both the left and right eye sides of the output Render Texture, resulting in incorrect duplication of the source image in each eye.</p>
+
+<p>This happens when using <code>Graphics.Blit</code> or a fullscreen polygon with a Texture map to draw each post-processing effect . Both methods reference the entire output of the previous post-processing effect in the chain. When referring to an area in a packed stereo Render Texture, they reference the whole packed Render Texture instead of just the relevant half of it.</p>
+
+<h3>Graphics.Blit()</h3>
+
+<p>Post-processing effects rendered with <code>Blit()</code> do not automatically reference the correct part of packed stereo Render Textures. By default, they refer to the entire texture. This incorrectly stretches the post-processing effect across both eyes.</p>
+
+<p>For Single Pass Stereo rendering using <code>Blit()</code>, texture samplers in Shaders have an additional auto-calculated variable which refers to the correct half of a packed stereo Render Texture, depending on the eye being drawn. The variable contains scale and offset values that allow you to transform your target coordinates to the correct location.</p>
+
+<p>To access this variable, declare a <code>half4</code> in your Shader with the same name as your sampler, and add the <code>suffix _ST</code> (see below for a code example of this). To adjust UV coordinates, pass in your <code>_ST</code> variable to <code>scaleAndOffset</code> and use <code>UnityStereoScreenSpaceUVAdjust(uv, scaleAndOffset)</code>. This method compiles to nothing in non-Single Pass Stereo builds, meaning that shaders modified to support this mode are still compatible with non-Single Pass Stereo builds.</p>
+
+<p>The following examples demonstrate what you need to change in your fragment shader code to support Single Pass Stereo rendering.</p>
+
+<p>Without stereo rendering:</p>
+
+<pre><code>uniform sampler2D _MainTex;
+
+fixed4 frag (v2f_img i) : SV_Target
+{   
+    fixed4 myTex = tex2D(_MainTex, i.uv);
+    ...
+}
+</code></pre>
+
+<p>With stereo rendering:</p>
+
+<pre><code>uniform sampler2D _MainTex;
+half4 _MainTex_ST;
+
+fixed4 frag (v2f_img i) : SV_Target
+{   
+    fixed4 myTex = tex2D(_MainTex, UnityStereoScreenSpaceUVAdjust(i.uv, _MainTex_ST));
+    ...
+}
+</code></pre>
+
+<h3>Mesh-based drawing</h3>
+
+<p>Rendering Post-processing effects using meshes (for example, by drawing a quadrilateral in immediate mode using the <a href="../ScriptReference/GL.html">low level graphics API</a>) also need to adjust the UV coordinates on the target Texture when rendering each eye. To adjust your coordinates in these circumstances, use <code>UnityStereoTransformScreenSpaceTex(uv)</code>. This method correctly adjusts for packed stereo Render Textures in Single Pass Stereo rendering mode, and automatically compiles for non-packed Render Textures if you have disabled Single Pass Stereo rendering mode. However, if you intend to use a Shader both for packed and unpacked Render Textures in the same mode, you need to have two separate Shaders.</p>
+
+<h2>Screen space effects</h2>
+
+<p>Screen space effects are visual effects that are drawn over a pre-rendered image. Examples of screen space effects include <span class="tooltip"><a href="PostProcessing-AmbientOcclusion.html">ambient occlusion</a><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span>, <span class="tooltip"><a href="PostProcessing-DepthOfField.html">depth of field</a><span class="tooltiptext">A post-processing effect that simulates the focus properties of a camera lens. <a href="PostProcessing-DepthOfField.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DepthofField">Glossary</a></span></span></span>, and <span class="tooltip"><a href="PostProcessing-Bloom.html">bloom</a><span class="tooltiptext">A post-processing effect used to reproduce an imaging artifact of real-world cameras. The effect produces fringes of light extending from the borders of bright areas in an image, contributing to the illusion of an extremely bright light overwhelming the camera or eye capturing the scene. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Bloom">Glossary</a></span></span></span>.</p>
+
+<p>For example, imagine a screen space effect that requires an image to be drawn over the screen (perhaps you are drawing some kind of dirt spattered on the screen). Instead of applying the effect over the entire output display, which would stretch the dirt image across both eyes, you need to apply it twice: once for each eye. In cases like this, you need to convert from using texture coordinates that reference the whole packed Render Texture, to coordinates that reference each eye.</p>
+
+<p>The following code examples show a Surface Shader that repeats an input Texture (called _<strong>Detail</strong>) 8 x 6 times across the output image. In the second example, the shader transforms the destination coordinates in Single Pass Stereo mode to refer to the part of the output Texture that represents the eye currently being rendered.</p>
+
+<p>
+<strong>Example 1:</strong> Detail Texture with no Single-Pass Stereo support</p>
+
+<pre><code>void surf(Input IN, inout SurfaceOutput o) 
+{
+    o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+    float2 screenUV = IN.screenPos.xy / IN.screenPos.w;
+    screenUV *= float2(8,6);
+    o.Albedo *= tex2D(_Detail, screenUV).rgb * 2;
+}
+</code></pre>
+
+<p>
+<strong>Example 2:</strong> Detail Texture with Single-Pass Stereo support</p>
+
+<pre><code>void surf(Input IN, inout SurfaceOutput o) 
+{
+    o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+    float2 screenUV = IN.screenPos.xy / IN.screenPos.w;
+    #if UNITY_SINGLE_PASS_STEREO
+    // If Single-Pass Stereo mode is active, transform the
+    // coordinates to get the correct output UV for the current eye.
+    float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
+    screenUV = (screenUV - scaleOffset.zw) / scaleOffset.xy;
+    #endif
+    screenUV *= float2(8,6);
+    o.Albedo *= tex2D(_Detail, screenUV).rgb * 2;
+}
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–08–16 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">New in Unity <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VRDevices-OpenVR.html"></a></span><div class="tip"> OpenVR</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SinglePassInstancing.html"></a></span><div class="tip"> Single Pass Instanced rendering</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

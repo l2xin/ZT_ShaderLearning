@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 5.5</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide55.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide55.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide55.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide55.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide55.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 5.5</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide56.html"></a></span><div class="tip">Upgrading to Unity 5.6</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54.html"></a></span><div class="tip">Upgrading to Unity 5.4</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 5.5</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h3>Shaders: Physically Based Shading code changes</h3>
+
+<p>Physically based shading related code has been refactored in
+Unity 5.5 (files <code>UnityStandardBRDF.cginc</code> and so on). In most
+cases this does not affect your <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> code directly, unless
+you are manually calling some functions directly. Notable
+changes are listed below.</p>
+
+<ul>
+<li><p>There are now functions to convert between smoothness,
+ roughness and perceptual roughness:
+ <code>PerceptualRoughnessToRoughness</code>,
+ <code>RoughnessToPerceptualRoughness</code>, <code>SmoothnessToRoughness</code>,
+ <code>RoughnessToSmoothness</code>.</p></li>
+<li><p>The visibility term in <code>UnityStandardBRDF.cginc</code> takes <code>roughness</code> and not <code>perceptualRoughness</code>.</p></li>
+<li><p>In older versions of Unity, it was possible to do a remapping with Marmoset roughness. With the move to GGX it no longer matches, and <code>UNITY_GLOSS_MATCHES_MARMOSET_TOOLBAG2</code> definition and associated code has been removed.</p></li>
+<li><p>All reads and writes into the Gbuffer should go through new functions <code>UnityStandardDataToGbuffer</code> / <code>UnityStandardDataFromGbuffer</code>.</p></li>
+<li><p>Your shader code should call <code>UnityGlossyEnvironmentSetup()</code> to initialize a <code>Unity_GlossyEnvironmentData</code> struct instead of doing it manually.</p></li>
+<li><p>The <code>roughness</code> variable of <code>Unity_GlossyEnvironmentData</code> is actually “perceptual roughness” but it hasn’t been renamed to avoid errors with existing shader code. Note: <code>UnityGlossyEnvironmentSetup</code> takes <code>smoothness</code> as a parameter and calculates perceptual roughness.</p></li>
+<li><p>The <code>ndotl</code> variable value in <code>UnityLight</code> is now calculated on the fly and any value written into the variable is ignored.</p></li>
+<li><p>The <code>UNITY_GI</code> macro is deprecated and should not be used anymore.</p></li>
+</ul>
+
+<h3>Shaders: DirectX 9 half-pixel offset issue</h3>
+
+<p>Unity 5.5 now handles DX9 half-pixel offset rasterization in the background, which means you no longer need to fix DX9 half-pixel issues either in shaders or in code. See more details in <a href="http://aras-p.info/blog/2016/04/08/solving-dx9-half-pixel-offset/">this blog post</a>. If you use any of these checks in your code, they can now be removed:</p>
+
+<ul>
+<li>Checks in shaders for UNITY_HALF_TEXEL_OFFSET and shifting vertices/UVs based on that.</li>
+<li>Checks for D3D9 via SystemInfo.graphicsDeviceType or SystemInfo.graphicsDeviceVersion, and shifting vertices/UVs based on that.</li>
+</ul>
+
+<p>The way Unity solves this now is by inserting half-pixel adjustment code into all vertex shaders that are being compiled. As a result, <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> constant register c255 becomes reserved by Unity, as well as two instructions being added to all shaders, and one more temporary register is used. This should not create problems, unless your vertex shaders use up all the available resources (constant/temporary registers and instruction slots) to the absolute maximum.</p>
+
+<h3>Shaders: Z-buffer float inverted</h3>
+
+<p>The Z-buffer (depth buffer) direction has been inverted and this means the Z-buffer will now contain 1.0 at the near plane, 0.0 at the far plane. This, combined with the floating point depth buffer significantly increases the depth buffer precision resulting in less Z-fighting and better shadows, especially when using small near planes and large far planes.</p>
+
+<p>Graphics API changes: </p>
+
+<ul>
+<li>Clip space range is [near, 0] instead of [0, far]</li>
+<li>_CameraDepthTexture texture range is [1,0] instead of [0,1]</li>
+<li>Z-bias is negated before being applied</li>
+<li>24 bit depth buffers are switched to 32 bit float format</li>
+</ul>
+
+<p>The following macros/functions will handle reversed Z situations without any other steps. If your shader was already using them, then no changes needed from your side:</p>
+
+<ul>
+<li>Linear01Depth(float z)</li>
+<li>LinearEyeDepth(float z)</li>
+<li>UNITY_CALC_FOG_FACTOR(coord)</li>
+</ul>
+
+<p>However if you are fetching the Z buffer value manually you will need to do write code similar to:</p>
+
+<pre><code>float z = tex2D(_CameraDepthTexture, uv);
+#if defined(UNITY_REVERSED_Z)
+    z = 1.0f - z;
+#endif
+</code></pre>
+
+<p>For clip space depth you can use the following macro. Please <strong>note</strong> that this macro will not alter clip space on OpenGL/ES plaforms but will remain <code>[-near, far]</code>:</p>
+
+<pre><code>float clipSpaceRange01 = UNITY_Z_0_FAR_FROM_CLIPSPACE(rawClipSpace);
+</code></pre>
+
+<p>
+<strong>_ZBufferParams</strong> now contains these values on platforms with a reversed depth buffer. See documentation on <a href="SL-PlatformDifferences.html">platform-specific rendering differences</a> for more information.</p>
+
+<pre><code>x = -1+far/near
+y = 1
+z = x/far
+w = 1/far
+</code></pre>
+
+<p>Z-bias is handled automatically by Unity but if you are using a native code <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> <span class="tooltip"><strong>plugin</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> you will need to negate it in your C/C++ code on matching platforms.</p>
+
+<h2>Special Folder: Unity Editor subfolder named “Resources”</h2>
+
+<p>All subfolders of the folder named <strong>“Editor”</strong> will be excluded from the build and will not load in Play mode in the Unity Editor. Previously a subfolder named <strong>“Resources”</strong> would have its <span class="tooltip"><strong>assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> included in the build. These <strong>assets</strong> are still loadable by calling Resources.Load() in your Editor <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. </p>
+
+<p>For example, these files are excluded from the build and will <strong>not</strong> load when in Play mode in the Editor, but <strong>will</strong> load if called from scripts:</p>
+
+<ul>
+<li>Editor/Foo/Resources/Bar.png <em>(this loads from Editor code as “Bar.png”)</em>
+</li>
+<li>Editor/Resources/Foo.png</li>
+<li>Editor/Resources/Editor/Resources/Foo.png <em>(this loads from Editor code as “Foo.png” but not as “Editor/Resources/Foo.png”)</em>
+</li>
+</ul>
+
+<p>These assets will load in all situations:</p>
+
+<ul>
+<li>Resources/Editor/Foo.png</li>
+<li>Resources/Foo/Editor/Bar.png <em>(this loads as “Foo/Editor/Bar.png”)</em>
+</li>
+<li>Resources/Editor/Resources/Foo.png <em>(this loads as “Foo.png” and not as “Editor/Resources/Foo.png”)</em>
+</li>
+</ul>
+
+<h2>Backface Tolerance and Final Gather</h2>
+
+<p>Previously the ‘Backface Tolerance’ parameter in <a href="class-LightmapParameters.html">Lightmap Parameters</a> was not applied when using final gather for baked GI. It is now applied correctly. The parameter now affects both the realtime GI and baked GI stages (including the final gather).</p>
+
+<p>Affected <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> are mainly ones with single sided geometry (like billboards) where it is important to be able to adjust the ‘Backface Tolerance’ in order to avoid invalidating texels that are seeing the backface of single sided geometry. In scenes that use billboards and final gather the <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> can now be improved by adjusting ‘Backface Tolerance’, however other scenes might also be affected, if a non-default ‘Backface Tolerance’ is applied, since it is now correctly accounted for in the final gather stage.</p>
+
+<h2>Standard shader BRDF2 now uses GGX approximation</h2>
+
+<p>BRDF2, the <span class="tooltip"><strong>standard shader</strong><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardShader">Glossary</a></span></span></span> type set on mobile platforms by default, now uses GGX approximation instead of Blinn-Phong. This makes it look closer to BRDF1 (used on desktops by default) and improves on visual quality. </p>
+
+<p>Should you need to preserve legacy approximation you should modify the BRDF2 code in UnityStandardBRDF.cginc which has the new implementation inside the #if UNITY_BRDF_GGX statement (this is also used by BRDF1 to pick GGX). Change the definition in UnityStandardConfig.cginc or change #if UNITY_BRDF_GGX to #if 0 in the BRDF2_Unity_PBS function.</p>
+
+<h2>Gradle for Android</h2>
+
+<p>You can now use <span class="tooltip"><a href="android-gradle-overview.html">Gradle</a><span class="tooltiptext">An Android build system that automates several build processes. This automation means that many common build errors are less likely to occur. <a href="android-gradle-overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gradle">Glossary</a></span></span></span> to build for Android.</p>
+
+<p>Gradle is not as strict about errors compared with the existing Unity Android build system, meaning that some existing projects may be hard to convert to Gradle. See documentation on <a href="android-gradle-troubleshooting.html">Gradle troubleshooting</a> to identify and solve these build failures. </p>
+
+<h2>Instantiate Object overload has changed</h2>
+
+<p>The specific overload of the Instantiate function that by default, takes a parameter for the original <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> and one for a parent Transform has been changed to work differently. It no longer interprets the original <strong>GameObject</strong>’s position and rotation as a world space position and rotation, thus ignoring the position and rotation of the specified parent Transform. </p>
+
+<p>It now interprets the position and rotation as a local position and rotation within the space of the specified parent Transform, by default. This is consistent with behavior in the Editor. Your scripts will not be automatically updated. This means when you run scripts containing calls to this overload of Instantiate that have not been updated to account for this change, you may experience unexpected behavior.</p>
+
+<h2>Renderers and LOD Group components behavior</h2>
+
+<p>Disabling a <span class="tooltip"><strong>LOD Group</strong><span class="tooltiptext">A component to manage level of detail (LOD) for GameObjects. <a href="class-LODGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LODGroup">Glossary</a></span></span></span> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> no longer disables the Renderers attached to it. The <strong>LOD Group</strong> settings only apply to the Renderers when the <strong>LOD Group</strong> <strong>component</strong> is enabled. Unity automatically applies this change when you upgrade your project, and the change cannot be reverted.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide56.html"></a></span><div class="tip">Upgrading to Unity 5.6</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54.html"></a></span><div class="tip">Upgrading to Unity 5.4</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

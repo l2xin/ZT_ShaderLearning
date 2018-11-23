@@ -1,0 +1,712 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Unity IAP Xiaomi integration guide</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityIAPXiaomi.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityIAPXiaomi.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityIAPXiaomi.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityIAPXiaomi.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityIAPXiaomi.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityIAP.html">﻿Unity IAP</a></li>
+<li>Store Guides</li>
+<li>Unity IAP Xiaomi integration guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPMoolahMooStore.html"></a></span><div class="tip"> CloudMoolah MOO store</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPXiaomiAPI.html"></a></span><div class="tip">Unity Channel SDK and API extensions</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Unity IAP Xiaomi integration guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Overview</h2>
+
+<p>
+<a href="https://docs.unity3d.com/Manual/UnityIAP.html">Unity IAP</a> provides a streamlined channel for developers outside of China to publish apps in the Chinese market. This guide introduces the Unity Channel SDK, and describes the end-to-end process for a developer publishing IAP content to the <a href="http://app.mi.com/">Xiaomi Mi Game Center</a> platform.</p>
+
+<p>Publishing a game to the Mi Game Center is a 3-step process:</p>
+
+<ol>
+<li>Submit your Xiaomi-configured game package through <span class="tooltip"><a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Unity Cloud Build</a><span class="tooltiptext">See Cloud Build <a href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityCloudBuild">Glossary</a></span></span></span>.</li>
+<li>In the <a href="https://developer.unity.mi.com/">Xiaomi-Unity developer portal</a>, populate your game’s store metadata.</li>
+<li>Release your game upon Xiaomi approval.</li>
+</ol>
+
+<h3>Xiaomi Mi Game Center</h3>
+
+<p>The Mi Game Center is Xiaomi’s official Android store. It allows users to search, browse and purchase products for the Xiaomi platform using a secure payment portal. For more information, visit <a href="https://unity3d.com/partners/xiaomi">Unity’s Xiaomi partner site</a>.</p>
+
+<h3>Unity Channel</h3>
+
+<p>
+<a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">Unity Channel</a> is an internal <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> of Unity IAP that helps developers outside of China access the Chinese app store market by facilitating user login, payment management, and Chinese Government app distribution regulatory approval.</p>
+
+<p>Because of Unity Channel, Xiaomi Mi Pay integration differs from Google Play and iTunes in the following ways:</p>
+
+<ul>
+<li>Xiaomi games require a <a href="#ProductCatalog">Unity IAP Catalog</a>. Google Play and iTunes support entirely backend-defined Products. However, the Xiaomi client SDK built into Unity IAP depends on the Product IDs and metadata being available on the client.</li>
+<li>Codeless IAP support is planned but not yet available (check forums for updates).</li>
+<li>During Unity IAP initialization, Product ownership information is not returned to the client. Therefore, developers must track user purchases through their servers or locally on the device.</li>
+</ul>
+
+<h3>Requirements</h3>
+
+<ul>
+<li>The Unity Channel SDK is designed for use with Unity versions 2017.1+, however it is backwards compatible with versions 5.3+.</li>
+<li>The Unity Channel SDK is included in <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Unity IAP</a> versions 1.13.0+.</li>
+<li>Xiaomi IAP support is only available for Android builds. The appropriate <a href="#AndroidConfigure">Android and Java SDKs</a> are required.</li>
+<li>Pushing builds to Xiaomi requires the <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Unity Cloud Build</a> service.</li>
+<li>Xiaomi does not currently support <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> implementation.</li>
+</ul>
+
+<h2>Building your Project for Xiaomi</h2>
+
+<p>This section describes the process of configuring your game through the Unity Editor using the Unity IAP SDK:</p>
+
+<ul>
+<li>Setting up your Project</li>
+<li>Adding the Xiaomi package to your Project</li>
+<li>Enabling IAP</li>
+<li>Creating an IAP Catalog</li>
+</ul>
+
+<h3>Setting up your Project</h3>
+
+<p><a name="AndroidConfigure"></a></p>
+
+<h4>Configuring for Android</h4>
+
+<p>Xiaomi only supports Android builds. Configuring your Project for Android is a 4-step process.</p>
+
+<ol>
+<li>Download and install the <a href="https://developer.android.com/studio/index.html">Android</a> and <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a> SDKs. For more information, see documentation on <a href="https://docs.unity3d.com/Manual/android-GettingStarted.html">Getting started with Android Development</a>.</li>
+<li>Set the SDK file path targets. In the Unity Editor, select <strong>Edit</strong> &gt; <strong>Preferences</strong>, then select <strong>External Tools</strong> from the left navigation bar. Scroll down to the <strong>Android</strong> section, and set the <strong>SDK</strong> and <strong>JDK</strong> fields to reflect the file paths where you installed the Android and Java SDKs respectively (see image 1.1, below; note that you can select the <strong>Download</strong> buttons next to each field for direct links to each SDK’s download webpage).</li>
+<li>Set the application’s Package Name. Xiaomi requires the application’s <strong>Package Name</strong> to follow the “BuildName.mi” convention. Select <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> &gt; <strong>Player</strong> to open the Player Settings window. Then select the Android tab (see image below) and, under <strong>Other Settings</strong> &gt; <strong>Identification</strong>, and set the <strong>Package Name</strong> field (see image 1.2, below).</li>
+<li>Build the Project for Android. In the Editor, select <strong>File</strong> &gt; <strong>Build Settings</strong>, then select <strong>Android</strong> from the menu. Select <span class="tooltip"><strong>Build</strong><span class="tooltiptext">The process of compiling your project into a format that is ready to run on a specific platform or platforms. <a href="BuildSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#build">Glossary</a></span></span></span> to test that Unity can locate the SDKs and compile your build.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/SDKSettings.png" alt="Image 1.1: Specifying file locations to the Android and Java SDKs in the Unity Editor.">
+<figcaption>Image 1.1: Specifying file locations to the Android and Java SDKs in the Unity Editor.</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PackageNameSettings.png" alt="Image 1.2: Setting your app’s package name in the Unity Editor Android settings.">
+<figcaption>Image 1.2: Setting your app’s package name in the Unity Editor Android settings.</figcaption>
+</figure>
+
+<p><a name="UnityChannelInstall"></a></p>
+
+<h4>Adding the Xiaomi Asset package to your Project</h4>
+
+<p>In the Editor, enable Unity IAP from the Services window (<strong>Window</strong> &gt; <strong>General</strong> &gt; <span class="tooltip"><strong>Services</strong><span class="tooltiptext">A Unity facility that provides a growing range of complimentary services to help you make games and engage, retain and monetize audiences. <a href="UnityServices.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Services">Glossary</a></span></span></span>; see documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">Setting up Unity IAP</a>). Be sure to Import the IAP Asset package when prompted (see image below). As of version 1.13.0, the Unity IAP Asset package includes the Unity Channel and Xiaomi SDKs.</p>
+
+<figure>
+<img src="../uploads/Main/EnablingIAP.jpg" alt="Enabling Unity IAP and importing the Xiaomi SDK via the Unity Editor’s Services window.">
+<figcaption>Enabling Unity IAP and importing the Xiaomi SDK via the Unity Editor’s Services window.</figcaption>
+</figure>
+
+<h4>[Optional] Standalone SDK</h4>
+
+<p>If you wish to publish your app to the Mi Game Center without in-app purchasing, install the Xiaomi Unity Channel standalone SDK from the Build Settings window (<strong>File</strong> &gt; <strong>Build Settings</strong>) by selecting <strong>Android</strong> from the <strong>Platform</strong> menu and selecting <strong>Add</strong> from the <strong>Xiaomi Game Center</strong> menu option that appears.</p>
+
+<figure>
+<img src="../uploads/Main/StandaloneSDK.png" alt="Installing the Unity Channel standalone SDK from the Build Settings window.">
+<figcaption>Installing the Unity Channel standalone SDK from the Build Settings window.</figcaption>
+</figure>
+
+<p><a name="AppStoreSettings"></a></p>
+
+<h3>App store settings</h3>
+
+<p>Unity Channel includes an Asset that provides an Editor interface for managing app store credentials and test mode functionality. This <strong>AppStoreSettings</strong> Asset installs to <em>Assets/Plugins/UnityChannel/XiaomiSupport/Resources</em> when you import the Unity IAP Asset package. You can also create it manually in the Editor by selecting <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> &gt; <strong>Create</strong> &gt; <strong>App Store Settings</strong>. Access the interface by selecting the Asset and viewing the Inspector.</p>
+
+<figure>
+<img src="../uploads/Main/AppStoreSettings.jpg" alt="The AppStoreSettings asset provides a GUI for managing your app’s credentials.">
+<figcaption>The AppStoreSettings asset provides a GUI for managing your app’s credentials.</figcaption>
+</figure>
+
+<p>
+<strong>Note</strong>: The <strong>AppStoreSettings</strong> Asset is only available in Unity 5.6+.</p>
+
+<p>In order to communicate, the Unity and Xiaomi servers both require unique identifiers for your game. Note that you can retrieve your Unity Client credentials <a href="https://id.unity.com/en/user_clients/settings">here</a> by pasting your Project ID into the search field. Unity 5.3 or 5.4 users must retrieve and set credentials this way, as they cannot access the <strong>AppStoreSettings</strong> Asset. The settings depicted in the image above are described below:</p>
+
+<ol>
+<li>The <strong>Generate Unity Client</strong> button populates Unity credentials that bind to your Project. <br><br> <strong>Note</strong>: Generating, loading, or updating Unity client credentials sends networked requests to Unity’s backend server. Progress for this operation appears in the Console log.<br><br>
+</li>
+<li>
+<strong>Client ID</strong> and <strong>Client Key</strong> are required to communicate through Unity IAP to the Unity Channel and Xiaomi backends. The Unity Channel backend proxies receipt validation requests (for more information, see documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPValidatingReceipts.html">Unity IAP receipt validation</a>, and the <strong>Receipt validation and extensions</strong> section of the <a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">Unity Channel SDK</a> documentation).</li>
+<li><span class="tooltip"><strong>Client RSA Public Key</strong><span class="tooltiptext">An optional security layer that Unity can use when communicating between Unity and Xiaomi servers. Use it to receive server callbacks for client-side receipt validation, or to integrate with Unity server APIs. <a href="UnityIAPXiaomi.html#rsa">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ClientRSAPublicKey">Glossary</a></span></span></span> is an optional security layer. Use it to receive server callbacks for client-side receipt validation, or to integrate with Unity server APIs. <br><br> <strong>Note</strong>: <strong>Client Secret</strong> is another optional security layer should you wish to implement server-side validation. <strong>Client Secret</strong> is auto-generated with the other credentials. Refresh it any time by selecting <strong>Update Client Secret</strong> from the <strong>AssetStoreSettings</strong> Asset.<br><br>
+</li>
+<li>Provide an optional <strong>Callback URL</strong> for your game server to receive purchase transaction data.</li>
+<li>Xiaomi distributes <strong>App ID</strong>, <strong>App Key</strong>, and <strong>App Secret</strong> credentials during the submission process. You must save them to your App Store Settings before submitting your final build for publication.</li>
+<li>
+<strong>Test Mode</strong> is required for <a href="#TestingIntegration">testing your application’s purchase flows</a> and <a href="#XiaomiSubmission">submitting to Xiaomi</a>.</li>
+</ol>
+
+<p>You need these credentials and the test mode toggle at various points of the integration process. Note that App Store Settings data updates server-side, as opposed to saving to your client.</p>
+
+<h2>Implementing IAP</h2>
+
+<h3>Enabling the Unity IAP service</h3>
+
+<p>If you enabled Unity IAP to <a href="#UnityChannelInstall">import the Xiaomi Asset package</a>, no action is required. Otherwise, see documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">Setting up Unity IAP</a> to enable the service.</p>
+
+<p>You can also install the latest Unity IAP <span class="tooltip"><strong>plugin</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> through the <a href="https://www.assetstore.unity3d.com/en/#!/content/68207">Unity Asset Store</a>. </p>
+
+<p><a name="ProductCatalog"></a></p>
+
+<h3>Creating a Product Catalog</h3>
+
+<p>The Xiaomi client SDK built into Unity IAP depends on Product metadata being available in the client. As such, you must define your Products through the Editor’s IAP Catalog GUI (<strong>Window</strong> &gt; <span class="tooltip"><strong>Unity IAP</strong><span class="tooltiptext">See IAP <a href="UnityIAP.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityIAP">Glossary</a></span></span></span> &gt; <strong>IAP Catalog</strong>). </p>
+
+<figure>
+<img src="../uploads/Main/IAPCatalogGUI.png" alt="The IAP Catalog window provides a GUI for building and exporting your app’s Product catalog.">
+<figcaption>The IAP Catalog window provides a GUI for building and exporting your app’s Product catalog.</figcaption>
+</figure>
+
+<p>Populating the Catalog
+The IAP Catalog GUI defines Products along with their metadata for the game client’s runtime. Documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> contains information on configuring Products through the IAP Catalog. The following Product attributes warrant attention for Xiaomi specifically:</p>
+
+<figure>
+<img src="../uploads/Main/CatalogEditor.png" alt="Breakdown of the IAP Catalog editor.">
+<figcaption>Breakdown of the IAP Catalog editor.</figcaption>
+</figure>
+
+<ol>
+<li>
+<strong>ID</strong> is a unique identifier (string data type) required by the Mi Game Center.</li>
+<li>
+<strong>Type</strong> indicates the durability of the Product. Xiaomi supports consumable and non-consumable Product Types. It does not support subscription Product Types.</li>
+<li>The <strong>Descriptions</strong> section controls <strong>Title</strong> and <strong>Description</strong> text for use on the Mi Store. You must specify <strong>Simplified Chinese</strong> from the <strong>Locale</strong> drop-down menu (this is currently the only supported language).</li>
+<li>
+<strong>Pay Configuration</strong> controls the Product’s price point. The Unity Channel SDK supports predefined Chinese yuan pricing tiers for Xiaomi, but not arbitrary values.</li>
+</ol>
+
+<p>For more information about Product attributes and their parameters, see documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPDefiningProducts.html">Defining Products</a>. </p>
+
+<p><a name="ExportCatalog"></a></p>
+
+<h4>Exporting the Catalog for Xiaomi’s developer portal</h4>
+
+<p>In the Editor, in the IAP Catalog window, export the Catalog by selecting <strong>App Store Export</strong> &gt; <strong>Xiaomi Mi Pay Catalog</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/ExportCatalog.png" alt="Exporting your app’s Product catalog for the Xiaomi developer portal.">
+<figcaption>Exporting your app’s Product catalog for the Xiaomi developer portal.</figcaption>
+</figure>
+
+<p>Export the <em>MiGameProductCatalog.prop</em> file to your location of choice. Import your Product catalog on the <a href="https://developer.unity.mi.com/">Xiaomi developer portal</a> by navigating to your Project’s <strong>IAP Configuration</strong> tab and selecting <strong>Import</strong> (see section on <a href="#ImportCatalog">Importing your IAP Product catalog</a>, below). </p>
+
+<figure>
+<img src="../uploads/Main/ImportCatalog.png" alt="Example of the Xiaomi developer portal reading the MiGameProductCatalog.prop file for its interface.">
+<figcaption>Example of the Xiaomi developer portal reading the <em>MiGameProductCatalog.prop</em> file for its interface.</figcaption>
+</figure>
+
+<p>Exporting the IAP Catalog also writes a copy of the <em>MiGameProductCatalog.prop</em> file to your Project’s <em>Assets/Plugins/Android/assets/</em> directory (see image below). Unity IAP uses this file in the IAP Catalog editor and at runtime. It also serves as a default Product catalog for your app if no catalog file is explicitly imported through the Xiaomi developer portal.</p>
+
+<figure>
+<img src="../uploads/Main/PropFile.png" alt="The Product catalog exported.">
+<figcaption>The Product catalog exported.</figcaption>
+</figure>
+
+<p><a name="Initialization"></a></p>
+
+<h3>Client-side initialization</h3>
+
+<p>Unity IAP typically requires a configuration builder that consumes IAP Catalog data to be parsed for the destination store, followed by the Unity IAP <code>Initialize()</code> API (see documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">Initializing IAP</a>).</p>
+
+<p>Xiaomi games require an extra step prior to initializing IAP, because the Mi Game Center requires apps to share their credentials through the <a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">login API</a> at launch.</p>
+
+<p>The modified initialization process becomes:</p>
+
+<ol>
+<li>Initialize the Unity Channel Xiaomi API.</li>
+<li>Log in to the Unity Channel Xiaomi API.</li>
+<li>Initialize Unity IAP as normal by running a configuration builder instance, then call the Unity IAP <code>initialize()</code> API.</li>
+</ol>
+
+<p>Execute these steps early in the game’s runtime lifecycle, preferably at launch. You can implement them in the same script.</p>
+
+<h4>1. Xiaomi Login</h4>
+
+<p>The following example illustrates how to modify initialization using the Unity Channel SDK to call the login API:</p>
+
+<pre><code>using AppStoreSupport;
+using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Purchasing;
+using UnityEngine.Store;
+
+// Run the script once, at game launch.
+public class UnityChannelSample : MonoBehaviour
+{
+    // Xiaomi login requires a login listener.
+    // Create one by implementing the ILoginListener abstract class included in the Unity Channel SDK.
+    class SampleLoginListener : ILoginListener
+    {
+        public Action initializeIAP;
+
+        // Step 1 succeeded; call step 2
+        public void OnInitialized()
+        {
+            Debug.Log(&quot;Initialization succeeded.&quot;);
+            UnityEngine.Store.StoreService.Login(this); // If initialization succeeds, initiate Xiaomi login
+        }
+
+        // Step 1 failed; display error message and recourses
+        public void OnInitializeFailed(string message)
+        {
+            Debug.Log(&quot;Initialization failed.&quot;);
+        }
+
+        // Step 2 completed; call step 3
+        public void OnLogin(UserInfo userInfo)
+        {
+            Debug.Log(string.Format(&quot;Login successful: userId {0}, userLoginToken {1}, channel {2}&quot;, userInfo.userId, userInfo.userLoginToken, userInfo.channel));
+            // When login succeeds, proceed to initializing IAP
+initializeIAP(); 
+        }
+
+        // Step 2 failed; display error message and recourses
+        public void OnLoginFailed(string message)
+        {
+            Debug.Log(&quot;Login failed.&quot;);
+        }
+    }
+}
+</code></pre>
+
+<p>
+<strong>Note</strong>: You must use all of the functions in the above sample code, which account for all possible steps of the login process. However, you can choose the actions called within each function. In this example, debug text appears in place of action calls. In this example, the OnLogin() method initiates a Unity IAP initialization function. </p>
+
+<h4>2. Xiaomi initialization</h4>
+
+<p>Next, initialize the Xiaomi API using a login listener and the app credentials stored in your <strong>AppStoreSettings</strong> Asset:</p>
+
+<pre><code>    void Awake()
+    {
+        // Create a login listener based on the SamleLoginListener class
+        SampleLoginListener loginListener = new SampleLoginListener();
+
+        // Tie the initializeIAP Action (from the SampleLoginListener class) to a function (defined in the next step)
+        loginListener.initializeIAP = ConfigureIAP;
+
+        // Access the AppStoreSettings Asset to generate AppInfo with your stored credentials. The AppStoreSettings class is part of the AppStoreSupport library. 
+        AppStoreSettings appStoreSettings = Resources.Load&lt;AppStoreSettings&gt;(&quot;AppStoreSettings&quot;);
+
+        // Initialize Xiaomi using the credentials and login listener
+        UnityEngine.Store.StoreService.Initialize(appStoreSettings.getAppInfo(), loginListener);
+    }
+</code></pre>
+
+<p>Upon loading your Project’s <strong>AppStoreSettings</strong> Asset, the <code>getAppInfo()</code> function returns credential data for the Mi Game Center store initialization process.</p>
+
+<h4>3. Unity IAP configuration builder and initialization</h4>
+
+<p>Finally, use a configuration builder to translate Product data from your IAP Catalog for Xiaomi, then <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/UnityIAPInitialization.html">initialize Unity IAP</a>:</p>
+
+<pre><code>    // The configuration builder requires a store listener. 
+    // Create one by implementing the IStoreListener abstract class.
+    class StoreListener : IStoreListener
+    {
+        private IStoreController controller;
+        private IExtensionProvider extensions;
+
+        // Called when Unity IAP is ready to make purchases.
+        public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
+        {
+            this.controller = controller;
+            this.extensions = extensions;
+        }
+
+        // Note that this will not be called if Internet is unavailable;
+        // Unity IAP will attempt initialization until it becomes available.
+        public void OnInitializeFailed(InitializationFailureReason error)
+        {
+        }
+
+        // Called when a purchase completes, or Unity IAP encounters an unrecoverable initialization error;
+        // may be called at any time after OnInitialized().
+        public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs e)
+        {
+            return PurchaseProcessingResult.Complete;
+        }
+
+        // Called when a purchase fails.
+        public void OnPurchaseFailed(Product i, PurchaseFailureReason p)
+        {
+        }
+    }
+
+    // Run a configuration builder to define your Products
+    public void ConfigureIAP()
+    {
+        // Load Products from the IAP Catalog
+        var module = StandardPurchasingModule.Instance();
+        var builder = ConfigurationBuilder.Instance(module);
+        var catalog = ProductCatalog.LoadDefaultCatalog();
+
+        // Loop through Products in Catalog, extracting metadata to the builder
+        foreach (var product in catalog.allProducts)
+        {
+            if (product.allStoreIDs.Count &gt; 0)
+            {
+                var ids = new IDs();
+                foreach (var storeID in product.allStoreIDs)
+                {
+                    ids.Add(storeID.id, storeID.store);
+                }
+                builder.AddProduct(product.id, product.type, ids);
+            }
+            else
+            {
+                builder.AddProduct(product.id, product.type);
+            }
+        }
+
+        // Create a store listener based on the StoreListener class
+        StoreListener storeListener = new StoreListener();
+
+        // Initialize Unity IAP
+        UnityPurchasing.Initialize(storeListener, builder);
+    }
+</code></pre>
+
+<p>The configuration builder references Product IDs and Product Types to automate population of Price, Type, Title, and Description metadata. It uses your IAP Catalog’s <em>IAPProductCatalog.json</em> file and the <code>builder</code> object instantiated during Unity IAP initialization.</p>
+
+<h3>Implementing IAP purchasing</h3>
+
+<p>For information on methods for in-game purchase implementation, see documentation on the following:</p>
+
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a></li>
+<li><a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">Unity IAP Initialization</a></li>
+<li><a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">Unity Channel SDK</a></li>
+</ul>
+
+<p><a name="TestingIntegration"></a></p>
+
+<h3>Testing integration</h3>
+
+<p>Test your game’s purchase flows on a non-Xiaomi Android device by toggling test mode in the <a href="#AppStoreSettings"><strong>AppStoreSettings</strong> Asset interface</a>. Unity Channel also provides an API for toggling test mode:</p>
+
+<p>
+<code>AppInfo.debug = true;</code> </p>
+
+<p>The Unity Channel wrapper includes the <code>AppInfo</code> class, and passes data to the Xiaomi SDK. To submit your app to Xiaomi, you must enable test mode. Test mode also bypasses the credit card requirement for testing purposes. After enabling test mode, build your Project and launch the resulting APK file from an Android device.</p>
+
+<p>To test real purchasing, set test mode to false and test on a Xiaomi device. Please note that real purchasing requires a <a href="https://account.xiaomi.com">Xiaomi Mi Pay Account</a> and appropriate currency such as Chinese Yuan.</p>
+
+<p><a name="XiaomiSubmission"></a></p>
+
+<h2>Submitting to Xiaomi</h2>
+
+<p>This section describes the process of submitting your game through the Unity Editor using the Unity IAP SDK:</p>
+
+<ol>
+<li>Set the IAP target</li>
+<li>Test IAP integration</li>
+<li>Register the application</li>
+<li>Push your game to the Xiaomi portal</li>
+</ol>
+
+<h3>Setting the IAP target</h3>
+
+<p>In the Unity Editor, set Unity IAP to target Mi Game Pay by selecting <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>Android</strong> &gt; <strong>Target Xiaomi Mi Game Pay</strong>. This enables Xiaomi for the next build of the game’s APK. It also creates the configuration file that informs Unity IAP at runtime to use the Xiaomi Mi Pay native billing API.</p>
+
+<figure>
+<img src="../uploads/Main/TargetXiaomi.jpg" alt="Setting Unity IAP to target Xiaomi Mi Game Pay during the next construction of your app’s build.">
+<figcaption>Setting Unity IAP to target Xiaomi Mi Game Pay during the next construction of your app’s build.</figcaption>
+</figure>
+
+<h3>Pushing the Project to the Xiaomi developer portal</h3>
+
+<p>Before pushing to Xiaomi, test building your game, either locally or by configuring the Project with an Android build target in Unity Cloud Build (see documentation on <span class="tooltip"><a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Cloud Build</a><span class="tooltiptext">A continuous integration service for Unity projects that automates the process of creating builds on Unity’s servers. <a href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CloudBuild">Glossary</a></span></span></span>).</p>
+
+<p>In the Editor, enable Cloud Build through the Unity Services window (see documentation on <a href="https://developer.cloud.unity3d.com/support/">Cloud Build implementation</a>). </p>
+
+<h4>Upload the build</h4>
+
+<p>Upload your build to the build history for your project, using one of two methods:</p>
+
+<p>
+<strong>From the Editor</strong>: </p>
+
+<ol>
+<li>In the Cloud Build Services window, select <strong>Manage Target Builds</strong> &gt; <strong>Add New Target</strong>.</li>
+<li>In the <strong>TARGET SETUP</strong> menu, set the <strong>PLATFORM</strong> field to <strong>Android</strong> and enter a useful <strong>TARGET LABEL</strong>. Then select <strong>Next: Save</strong>.</li>
+<li>Select <strong>Start Cloud Build</strong>, then select the target build you just created.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/CloudUpload.png" alt="Uploading a Cloud Build via the Editor.">
+<figcaption>Uploading a Cloud Build via the Editor.</figcaption>
+</figure>
+
+<p><strong>From the <a href="https://developer.cloud.unity3d.com/build">Unity Cloud Build Developer Dashboard</a>:</strong></p>
+
+<ol>
+<li>Navigate to your Project’s <strong>Cloud Build History</strong>.</li>
+<li>Select <strong>Upload</strong>, then select the APK file you built from the Editor.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/DashUpload.png" alt="Uploading a Cloud Build via the Developer Dashboard.">
+<figcaption>Uploading a Cloud Build via the Developer Dashboard.</figcaption>
+</figure>
+
+<h4>Push the build to Xiaomi</h4>
+
+<p>Push the the hosted build to Xiaomi’s developer portal, using one of two methods: </p>
+
+<p>
+<strong>From the Editor:</strong> </p>
+
+<p>In the Cloud Build Services window, locate the desired build from the build history timeline and select <strong>Push to Xiaomi</strong>. Verify that you want to push, and that the action completes.</p>
+
+<figure>
+<img src="../uploads/Main/EditorPush.png" alt="Pushing a hosted build to Xiaomi’s developer portal via the Editor.">
+<figcaption>Pushing a hosted build to Xiaomi’s developer portal via the Editor.</figcaption>
+</figure>
+
+<p><strong>From the <a href="https://developer.cloud.unity3d.com/build">Unity Cloud Build Developer Dashboard</a>:</strong></p>
+
+<ol>
+<li>Navigate to your Project’s <strong>Cloud Build History</strong>.</li>
+<li>Select <strong>Download .APK</strong> file, then select <strong>Push to Xiaomi</strong> from the dropdown menu.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/DashPush.png" alt="Pushing a hosted build to Xiaomi’s developer portal via the Unity Developer Dashboard.">
+<figcaption>Pushing a hosted build to Xiaomi’s developer portal via the Unity Developer Dashboard.</figcaption>
+</figure>
+
+<p>
+<strong>Note</strong>: Only the owner of the organization that your project is under will be able to deploy to Xiaomi.</p>
+
+<h3>Configuring the game in the Xiaomi developer portal</h3>
+
+<p>Your UDN credentials grant access to your uploaded Projects in the <a href="https://developer.unity.mi.com/">Xiaomi Unity developer portal</a>. The first time you log in, you must acknowledge Xiaomi’s Terms and Conditions before proceeding to your <strong>Projects</strong> list. Locate the Project you wish to submit. Its status (highlighted below) will initially read <strong>Version1.0: Draft</strong>. Select the clipboard icon to view a submission log of your Project’s status changes throughout the process. Select the status link to expand your Project’s metadata details.</p>
+
+<figure>
+<img src="../uploads/Main/XiaomiProjects.png" alt="Your Projects list in the Xiaomi developer portal.">
+<figcaption>Your Projects list in the Xiaomi developer portal.</figcaption>
+</figure>
+
+<p>The following details are illustrated in the image below:</p>
+
+<figure>
+<img src="../uploads/Main/XiaomiProjectDetails.png" alt="A Project’s store metadata expanded in the Xiaomi developer portal.">
+<figcaption>A Project’s store metadata expanded in the Xiaomi developer portal.</figcaption>
+</figure>
+
+<h4>1. Basic Information</h4>
+
+<p>This section contains the text to display on the Mi Game Center.</p>
+
+<ul>
+<li>
+<strong>Game Name</strong> is the English title of your app. Xiaomi will manually translate the English title to Chinese for the customer-facing storefront.</li>
+<li>
+<strong>Name of Developer</strong> is your customer-facing publisher name.</li>
+<li>
+<strong>Game Introduction</strong> is the English description of your app. Note that Xiaomi will manually translate the English title to Chinese for the customer-facing storefront.</li>
+<li>
+<strong>Email</strong> is the developer contact information Xiaomi should use to initiate feedback.</li>
+</ul>
+
+<h4>2. Target Device</h4>
+
+<p>This section contains marketing assets for Phone and Tablet devices that display on the Mi Game Center. Note the following guidelines: </p>
+
+<ul>
+<li>You must upload a minimum of 3 images for each device type that you check.</li>
+<li>Image dimensions must either be 1080 x 720 pixels (landscape), or 720 x 1080 pixels (portrait).</li>
+</ul>
+
+<h3>Submitting for review</h3>
+
+<p>When you are ready, select <strong>Submit</strong> to submit your game to Xiaomi for review. The status indicator for your Project changes to <strong>In review</strong>. While your Project is in review, you cannot edit its details. Expand the Project and select <strong>Cancel</strong> to cancel the review and revise the Project’s details.</p>
+
+<h4>Regional compliance with regulations</h4>
+
+<p>You need an ISBN publication license to publish your app. Xiaomi provides comprehensive support for the ISBN approval process through the State Administration of Press, Publication, Radio, Film and Television (SAPPRFT).</p>
+
+<p>Xiaomi does not guarantee that the SAPPRFT will approve all games (see <a href="http://www.miit.gov.cn/n1146290/n4388791/c4638978/content.html">SAPPRFT submission guidelines</a>). To meet store and country compliance rules, you may need to make some changes to your game. </p>
+
+<h4>Content guidelines for a smooth approval process</h4>
+
+<p>Consider the following tips when submitting for Chinese government approval: </p>
+
+<ul>
+<li>Avoid depicting Chinese national landmarks and symbolism (for example, the Chinese national flag, or the Great Wall) in a manner that could be considered undignified.</li>
+<li>Avoid depicting Chinese national politics, history, conflicts, or religions entirely.</li>
+<li>When creating maps and regions in your game’s world, avoid defining regions that conflict with China’s existing geopolitics and borders.</li>
+<li>Avoid depiction of gambling, and gambling mechanics of any kind.</li>
+<li>China has tight restrictions on mature content. Avoid depictions of nudity, realistic violence, and drug usage.</li>
+<li>Avoid depicting minors participating in any illegal activities, such as underage drinking and smoking.</li>
+</ul>
+
+<p><a name="ImportCatalog"></a></p>
+
+<h4>Importing your IAP Product catalog</h4>
+
+<p>Before finalizing your submission, follow these steps to ensure Xiaomi has your most current IAP Product catalog:</p>
+
+<ol>
+<li>Select your Project, then select <strong>IAP Configuration</strong> from the left navigation bar.</li>
+<li>Select <strong>Import</strong>.</li>
+<li>Import the <em>MiGameProductCatalog.prop</em> file you <a href="#ExportCatalog">exported from your Project</a>.</li>
+<li>Verify the contents of the catalog, then select <strong>Confirm</strong>.</li>
+<li>A list of your imported Products appears. Select <strong>Submit</strong> to save the catalog to your submission.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/XiaomiCatalogImport.png" alt="Importing an IAP catalog to the Xiaomi developer portal.">
+<figcaption>Importing an IAP catalog to the Xiaomi developer portal.</figcaption>
+</figure>
+
+<h2>Publishing to the Mi Game Center</h2>
+
+<h3>Credentials</h3>
+
+<p>When Xiaomi indicates approval, your project status changes to <strong>Approved</strong> and receives the following credentials: </p>
+
+<ul>
+<li><strong>App ID</strong></li>
+<li><strong>App Key</strong></li>
+<li><strong>App Secret</strong></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ApprovedProject.png" alt="An approved Project on the Xiaomi developer portal.">
+<figcaption>An approved Project on the Xiaomi developer portal.</figcaption>
+</figure>
+
+<p>Enter these credential values in the <a href="#AppStoreSettings"><strong>AppStoreSettings</strong> Asset</a> or <a href="#Initialization">initialization script</a>, then set <a href="#AppStoreSettings">test mode</a> to <code>false</code>. Create a new build of your game, and push this build to Xiaomi as before.</p>
+
+<p>Xiaomi provides a developer contract via email. Once you sign the contract, Xiaomi facilitates the government approval process. It will notify you when the game receives an ISBN license and clearance to publish on the Mi Game Center. </p>
+
+<p>Xiaomi’s content review process typically takes 1–2 business days, unless it recommends changes. The government approval process and license distribution, however, can take 4–8 months. For more information on the review process, please see the <strong>FAQs</strong> section of the <a href="https://unity3d.com/partners/xiaomi">Unity-Xiaomi partner page</a>.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPMoolahMooStore.html"></a></span><div class="tip"> CloudMoolah MOO store</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPXiaomiAPI.html"></a></span><div class="tip">Unity Channel SDK and API extensions</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

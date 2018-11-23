@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 5.4</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide54.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide54.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide54.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide54.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide54.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 5.4</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide55.html"></a></span><div class="tip">Upgrading to Unity 5.5</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 Networking API Changes</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 5.4</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When upgrading projects from Unity 5.3 to Unity 5.4, there are some changes you should be aware of which may affect your existing project.</p>
+
+<h2>Networking: Multiplayer Service API changes</h2>
+
+<p>
+<a href="UpgradeGuide54Networking.html">Numerous changes to the Networking API</a>.</p>
+
+<h2>Networking: WebRequest no longer experimental</h2>
+
+<p>The <code>WebRequest</code> interface has been promoted from <code>UnityEngine.Experimental.Networking</code> to <code>UnityEngine.Networking</code>. Unity 5.2 and 5.3 projects that use <code>UnityWebRequest</code> will have to be updated.</p>
+
+<h2>Scene View: Tone mapping not automatically applied</h2>
+
+<p>An image effect with the <code>ImageEffectTransformsToLDR</code> attribute will no longer be applied directly to the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span> if found. A new attribute exists for applying effects to the <strong>Scene view</strong>: <code>ImageEffectAllowedInSceneView</code>. The 5.4 <span class="tooltip"><strong>Standard Assets</strong><span class="tooltiptext">A collection of useful assets supplied with Unity. Unity ships with multiple Standard Asset such as 2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, and Vehicles. <a href="AssetTypes.html#Standard">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardAsset">Glossary</a></span></span></span> have been upgraded to reflect this change. </p>
+
+<h2>Shaders: Renamed variables</h2>
+
+<p>A number of built-in <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> variables were renamed for consistency:</p>
+
+<ul>
+<li>
+<strong>_Object2World</strong> and <strong>_World2Object</strong> are now <strong>unity_ObjectToWorld</strong> and <strong>unity_WorldToObject</strong>
+</li>
+<li>
+<strong>_World2Shadow</strong> is now <strong>unity_WorldToShadow[0]</strong>, <strong>_World2Shadow1</strong> is <strong>unity_WorldToShadow[1]</strong> <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</li>
+<li>
+<strong>_LightMatrix0</strong> is now <strong>unity_WorldToLight</strong>
+</li>
+<li>
+<strong>_WorldToCamera</strong>, <strong>_CameraToWorld</strong>, <strong>_Projector</strong>, <strong>_ProjectorDistance</strong>, <strong>_ProjectorClip</strong> and <strong>_GUIClipTextureMatrix</strong> are now all prefixed with <strong>unity</strong>
+</li>
+</ul>
+
+<p>The variable references will be automatically renamed in .shader and .cginc files when importing them. However, after the import the shaders will not be usable in Unity 5.3 or earlier, without manually renaming the variables.</p>
+
+<h2>Shaders: Uniform arrays</h2>
+
+<p>In Unity 5.4, the way arrays of shader properties are handled has changed. Now there is “native” support for float/vector/matrix arrays in shaders (via <code>MaterialPropertyBlock.SetFloatArray</code>, <code>Shader.SetGlobalFloatArray</code> etc.). These new APIs allow arrays up to 1,023 elements.</p>
+
+<p>The old way of using number-suffixed names for referring to individual array elements is deprecated (e.g. <code>_Colors0</code>, <code>_Colors1</code>) in both <code>Material</code> and <code>MaterialPropertyBlock</code>. Properties of this kind, serialized with the <code>Material</code> are no longer able to set array elements (but if any uniform array’s name is suffixed by a number it still works).</p>
+
+<h2>Shaders: Miscellaneous changes in 5.4</h2>
+
+<p>The default shader compilation target has changed to “#pragma target 2.5” (SM3.0 on DX9, DX11 9.3 feature level on WinPhone). You can still target DX9 SM2.0 and DX11 9.1 feature level with “#pragma target 2.0”. </p>
+
+<p>The majority of built-in shaders target 2.5 now: Notable exceptions are Unlit, VertexLit and fixed function shaders. In practice, this means that most of built-in shaders and newly-created shaders, by default, will not work on PC GPUs that are made before 2004. See <a href="http://blogs.unity3d.com/2015/08/27/plans-for-graphics-features-deprecation/">this blog post</a> for details.</p>
+
+<p>The <code>Material</code> class constructor <code>Material(string)</code>, which was already deprecated, stops working in 5.4. Using it will print an error and result in the magenta error shader.</p>
+
+<p>The internal shader used to compute screen-space directional light shadows has moved to Graphics Settings. If you were using a customized version of directional light shadows by having a copy of that shader in your project, it will no longer be used. Instead, select your custom shader under <strong>Edit &gt; Project Settings &gt; Graphics</strong>.</p>
+
+<p>Reflection probes share a sampler between the two textures. If you are sampling them manually in your shader, and get an “undeclared identifier samplerunity_SpecCube1” error, you’ll need to change code from <code>UNITY_PASS_TEXCUBE(unity_SpecCube1)</code> to <code>UNITY_PASS_TEXCUBE_SAMPLER(unity_SpecCube1,unity_SpecCube0)</code>.</p>
+
+<p>
+<code>UnityEditor.ShaderUtil.ShaderPropertyTexDim</code> is deprecated; use <code>Texture.dimension</code>.</p>
+
+<h2>ComputeBuffers</h2>
+
+<p>The data layout of ComputeBuffers in automatically-converted OpenGL shaders has changed to match the layout of DirectX ComputeBuffers. If you use ComputeBuffers in OpenGL, remove any code that tweaks the data to match the previous OpenGL-specific layout rules. Please see <a href="ComputeShaders">Compute Shaders</a> for more information.</p>
+
+<h2>Playables: Migrating to 5.4</h2>
+
+<ul>
+<li><p>Playables are now structs instead of classes.</p></li>
+<li><p>The <code>Playable</code> structs are handles to native <code>Playable</code> classes, instead of pointers to native <code>Playable</code> classes.</p></li>
+<li><p>A non-null <code>Playable</code> struct doesn’t guarantee that the Playable is usable. Use the <code>.IsValid</code> method to verify that your Playable can be used.</p></li>
+<li><p>Any method that used to return null for empty inputs/outputs will now return <code>Playable.Null</code>.</p></li>
+<li><p>
+<code>Playable.Null</code> is an invalid Playable.</p></li>
+<li><p>
+<code>Playable.Null</code> can be passed to <code>AddInput</code>, <code>SetInput</code> and <code>SetInputs</code> to reserve empty inputs, or to implicitly disconnect connected inputs.</p></li>
+<li><p>Using <code>Playable.Null</code> or any invalid Playable as an input to any method, or calling a method on an invalid Playable will throw appropriate exceptions for the operation.</p></li>
+<li><p>Comparing Playables with <code>null</code> is now meaningless. Compare with <code>Playable.Null</code>.</p></li>
+<li><p>Playables must be allocated using the <code>Create</code> static method of the class you wish to use.</p></li>
+<li><p>Playables must be de-allocated using the <code>.Destroy</code> method on the Playable handle.</p></li>
+<li><p>Playables that are not de-allocated will leak.</p></li>
+<li><p>Playables were converted to structs to improve performance by avoiding boxing/unboxing (<a href="https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx">more info on boxing</a>). </p></li>
+<li><p>Casting a <code>Playable</code> to an object, implicitly or explicitly, will cause boxing/unboxing, thus reducing performance.</p></li>
+<li><p>Inheriting from a Playable class will cause boxing/unboxing of instances of the child class.</p></li>
+<li><p>Since only animation is available for now, <code>ScriptPlayable</code>s have been replaced by <code>CustomAnimationPlayables</code>.</p></li>
+<li><p>It is no longer possible to derive from base Playables. Simply aggregate Playables in your custom Playables.</p></li>
+</ul>
+
+<h2>Oculus Rift: Upgrading your project from Unity 5.3</h2>
+
+<p>Follow these instructions to upgrade your Oculus VR project from Unity 5.3:</p>
+
+<p>Re-enable virtual reality support.</p>
+
+<ul>
+<li>Open the <span class="tooltip"><a href="class-PlayerSettings.html">Player Settings</a><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span>. (Menu: <strong>Edit &gt; Project Settings &gt; Player</strong>)</li>
+<li>Select <strong>Other Settings</strong> and check the <strong>Virtual Reality Supported</strong> checkbox. Use the Virtual Reality SDK list displayed below the checkbox to add and remove Virtual Reality Devices for each build target.</li>
+</ul>
+
+<p>Remove <strong>Oculus Spatializer</strong>.</p>
+
+<ul>
+<li>Remove the <strong>Oculus Spatializer</strong> Audio Plugin from your project through the Audio Settings Window (Menu: <strong>Edit &gt; Project Settings &gt; Audio</strong>), using the Spatializer Plugin dropdown. It may conflict with the native spatializer and prevent building.</li>
+</ul>
+
+<h2>Reordering siblings</h2>
+
+<p>There has been a change to the events that are triggered when sibling GameObjects are re-ordered in Unity 5.4. Sibling GameObjects are GameObjects which all share the same parent in the Hierarchy window. In prior versions of Unity, changing the order of sibling GameObjects would cause every sibling to receive an <code>OnTransformParentChanged</code> call. In 5.4, the sibling GameObjects no longer get this call. Instead, the parent GameObject receives a single call to <code>OnTransformChildrenChanged</code>. </p>
+
+<p>This means that if you have code in your project that relies on <strong>OnTransformParentChanged</strong> being called when siblings are re-ordered, these calls will no longer occur, and you need to update your code to take action when the parent object receives the <strong>OnTransformChildrenChanged</strong> call instead.</p>
+
+<p>This changed because the new behavior gives improved performance.</p>
+
+<h2>Rearranging large GameObject hierarchies at runtime</h2>
+
+<p>Due to optimisations in the Transform component, using <code>Transform.SetParent</code> or <code>Destroy</code>ing parts of hierarchies involving 1000+ GameObjects may now take a long time. Calling <code>SetParent</code> on or otherwise rearranging such large hierarchies at runtime is not recommended.</p>
+
+<h2>Windows Store</h2>
+
+<p>The generated Visual Studio project format was updated for all .NET scripting backend SDKs. This fixes excessive rebuilding when nothing has changed in the generated project. You might need to delete your existing generated *.csproj, especially if it was built with the “Generate C# projects” option checked, so Unity can regenerate it.</p>
+
+<h2>Script serialization errors</h2>
+
+<p>There are two new script serialization errors to catch when the Unity API is being called from constructors and field initializers during deserialization (loading). Deserialization might happen on a different thread to the main thread and it is therefore not safe to call the Unity API during deserialization. There are more details at the bottom of the (Script Serialization)[script-Serialization] page in the Unity Manual.</p>
+
+<h2>Supporting Retina screens</h2>
+
+<p>The editor now supports Retina resolutions on Mac OS X with high-resolution text, UI and 3D views.</p>
+
+<p>The Editor GUI is now defined in point space rather than pixel space. On standard resolution displays, there is no change because each point is one pixel. On Retina displays, however, every point is two pixels. The current screen to UI scale is available as <code>EditorGUIUtility.pixelsPerPoint</code>. Since Unity can have multiple windows, each on monitors with different pixel densities, this value might change between views. </p>
+
+<p>If your editor code uses regular Editor/GUI/Layout methods, it is quite likely that you will not need to change anything.</p>
+
+<p>If you are using <code>Screen.width/height</code>, switch to <code>EditorWindow.position.width/height</code> instead. This is because screen size is measured in pixels, but UI is defined in points. For custom Editors displaying in the Inspector, use <code>EditorGUIUtility.currentViewWidth</code>, which properly accounts for the presence of a scroll bar.</p>
+
+<p>If you are displaying other content in your UI, such as a RenderTexture, you are probably calculating its size in points. To support Retina resolutions, you will need to convert your point sizes to pixel sizes. There are new methods in <a href="../ScriptReference/EditorGUIUtility.html">EditorGUIUtility</a> for this.</p>
+
+<p>If you are using GUIStyles with custom backgrounds, you can add Retina versions of background textures by putting one texture with exactly doubled dimensions into a ‘GUIStyleState.scaledBackgrounds’ array.</p>
+
+<p>Macs with underpowered graphics hardware may experience unacceptably slow editor frame rates in 3D views due to increased resolution. Retina support can be disabled by choosing “Get Info” on Unity.app in the Finder, and checking “Open in Low Resolution”.</p>
+
+<h2>Physics: Meshes and physics transform drift</h2>
+
+<p>There are:</p>
+
+<ul>
+<li>Changes to reject physics meshes if they contain invalid (non-finite) vertices.</li>
+<li>Changes to avoid physics transform drift by not sending redundant Transform updates.</li>
+</ul>
+
+<p>The 5.3 behavior is that the animation system always sends Transform update messages for animation curves which are constant. These messages wake up the Rigidbodies and fixing this proved very risky in 5.3.</p>
+
+<p>The 5.4 behavior is that if there are no position changes, the Rigidbody does not wake up (as most people would expect).</p>
+
+<p>If your project relies on the 5.3 behavior of waking Rigidbody all the time, it might not work as expected in 5.4. </p>
+
+<h2>Web Player</h2>
+
+<p>The Unity Web Player target has been dropped from Unity 5.4. If you upgrade your project to 5.4, you will not be able to deploy it to the Web Player platform.</p>
+
+<p>If you have legacy Web Player projects that you need to maintain, do not upgrade them to 5.4 or later.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide55.html"></a></span><div class="tip">Upgrading to Unity 5.5</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 Networking API Changes</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

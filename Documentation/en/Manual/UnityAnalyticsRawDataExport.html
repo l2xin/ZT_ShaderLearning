@@ -1,0 +1,921 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Unity Analytics Raw Data Export</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityAnalyticsRawDataExport.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityAnalyticsRawDataExport.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityAnalyticsRawDataExport.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityAnalyticsRawDataExport.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityAnalyticsRawDataExport.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li>Unity Analytics Raw Data Export</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsUserAttributes.html"></a></span><div class="tip">User Attributes</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsDataReset.html"></a></span><div class="tip"> Data reset</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Unity Analytics Raw Data Export</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Overview</h2>
+
+<p>Unity Analytics Raw Data Export gives you full access to raw event data. This lets you use the data in whatever way you choose, for example to construct custom queries or data visualizations. </p>
+
+<p>There are two ways you can access raw data export:</p>
+
+<ul>
+<li>The <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">See Analytics <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> dashboard user interface</li>
+<li>By calling the REST API</li>
+</ul>
+
+<p>Raw Data Export provides data from June 2016 onwards. </p>
+
+<h2>Analytics dashboard user interface</h2>
+
+<p>The Unity Analytics dashboard provides a way to export and access your raw event data without writing any code. In your Unity Analytics dashboard (<a href="https://analytics.cloud.unity3d.com/">analytics.cloud.unity3d.com</a>), select your project and navigate to <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span> &gt; <strong>Raw Data Export</strong>.</p>
+
+<p>Then follow these steps in the <strong>Export</strong> section of that screen:</p>
+
+<ol>
+<li>Specify the <strong>Data Set</strong> you want to export (such as appRunning, appStart, custom, deviceInfo, or transaction).</li>
+<li>Specify the <strong>Start Date</strong>, or alternatively continue exporting data from a previous job by selecting the <strong>Previous Job Id</strong> from the drop-down box.</li>
+<li>Specify the <strong>End Date</strong>.</li>
+<li>The file format defaults to JSON. Specify your preferred file format by clicking on and selecting an item from the drop-down menu under <strong>Export as JSON</strong>.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsRawDataExport_ExportAndActivity.png" alt="The Export section and Activity table on the Raw Data Export screen">
+<figcaption>The <strong>Export</strong> section and <strong>Activity</strong> table on the <strong>Raw Data Export</strong> screen</figcaption>
+</figure>
+
+<p>Raw Data Export automatically creates the job and displays it in the <strong>Activity</strong> table on the screen.</p>
+
+<p>Once the job is done, you can download your data by selecting the files from the <strong>Download</strong> column.</p>
+
+<h2>REST (Representational State Transfer) API</h2>
+
+<p>Every data point sent to Unity Analytics is stored in Unity’s data store. The Raw Data Export APIs allow you to download your raw event data in files as the data is received and stored. </p>
+
+<h3>Requirements</h3>
+
+<p>Every request requires HTTP Basic authentication using your Unity Project ID (UPID) and API Key.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsAuthentication.png" alt="">
+</figure>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>The request period (<code>startDate</code> to <code>endDate</code>) is limited to 31 days.</li>
+<li>Limits to usage may be subject to change.</li>
+<li>Unity Analytics retains the raw data files generated for a request for 14 days. (To access the data after 14 days has elapsed, make a new request.)</li>
+</ul>
+
+<h3>User workflow</h3>
+
+<p>To export raw data, call the Create Raw Data Export API. This request triggers an asynchronous job to process the data. The time this takes depends on how much data is being exported.</p>
+
+<p>To get the current status or result, poll using the Get Raw Data Export API. Once the export is completed, you can get the result in the response of this API. The result contains the list of files and the corresponding download URLs. You can loop through the URLs and download the exported data.</p>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>All dates and times in requests or responses are in the UTC timezone.</li>
+<li>API requests or responses use the JSON format (which is formatted for readability in this document). The data file format is configurable.</li>
+<li>Data is exported in .gzip compressed files.</li>
+<li>The URL base for the API is <a href="https://analytics.cloud.unity3d.com">https://analytics.cloud.unity3d.com</a>.</li>
+</ul>
+
+<h3>Create Raw Data Export</h3>
+
+<p>A Raw Data Export is specific to a project and specific to a single dataset (event type). The request period is limited to 31 days.</p>
+
+<p>Use the following HTTP method to create a Raw Data Export:</p>
+
+<pre><code>POST api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre>
+
+<p>Arguments are provided in the payload of the request, and are in JSON format with the Content-Type application/json.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Request argument</strong></th>
+	<th style="text-align:left;"><strong>Required or optional</strong></th>
+	<th style="text-align:left;"><strong>Type</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>startDate</strong></td>
+	<td style="text-align:left;">Required unless continueFrom is specified</td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">The start date (inclusive) of the export. The date is expressed in YYYY-MM-DD format (ISO–8601).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>endDate</strong></td>
+	<td style="text-align:left;">Required</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The end data (exclusive) of the export. The date is expressed in YYYY-MM-DD format (ISO 8601). This is the date at which to close the query. When searching for the current day, use the following day’s date.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>format</strong></td>
+	<td style="text-align:left;">Required</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The output data format: json (newline-delimited json) or tsv.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>dataset</strong></td>
+	<td style="text-align:left;">Required</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">One of the following event types: appStart, appRunning, deviceInfo, custom, or transaction.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>continueFrom</strong></td>
+	<td style="text-align:left;">Optional</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The Raw Data Export ID to continue exporting data from. This is used for continuing a previous export from the point it finished. See Continuing for more information. Instead of specifying a startDate, a prior Raw Data Export ID could be specified in continueFrom. It is an error to specify both continueFrom and startDate.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Template for a request using cURL on the command line:</p>
+
+<pre><code>curl --user {UNITY_PROJECT_ID}:{API_KEY} --request POST --header &quot;Content-Type: application/json&quot; --data {REQUEST_JSON}
+https://analytics.cloud.unity3d.com/api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre>
+
+<p>Example values:</p>
+
+<pre><code>UNITY_PROJECT_ID = aa43ae0a-a7a7-4016-ae96-e253bb126aa8
+API_KEY = 166291ff148b2878375a8e54aebb1549
+REQUEST_JSON = { &quot;startDate&quot;: &quot;2016-05-15&quot; , &quot;endDate&quot;: &quot;2016-05-16&quot;, &quot;format&quot;: &quot;tsv&quot;, &quot;dataset&quot;: &quot;appStart&quot; }
+</code></pre>
+
+<p>An actual request using the example values:</p>
+
+<pre><code>curl --user aa43ae0a-a7a7-4016-ae96-e253bb126aa8:166291ff148b2878375a8e54aebb1549 --request POST --header &quot;Content-Type: application/json&quot; --data '{ &quot;startDate&quot;: &quot;2016-05-15&quot; , &quot;endDate&quot;: &quot;2016-05-16&quot;, &quot;format&quot;: &quot;tsv&quot;, &quot;dataset&quot;: &quot;appStart&quot; }' https://analytics.cloud.unity3d.com/api/v2/projects/aa43ae0a-a7a7-4016-ae96-e253bb126aa8/rawdataexports
+</code></pre>
+
+<p>The response uses the common Raw Data Export Response Attributes in JSON format.</p>
+
+<h4>Raw Data Export Response Attributes</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Response attribute</strong></th>
+	<th style="text-align:left;"><strong>Type</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>id</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The Raw Data Export ID.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>upid</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The Unity Project ID.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>createdAt</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The created time in ISO 8601 format.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>status</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">The current status of the export. Possible values are: running, completed, or failed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>duration</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">The time it took to export data (in milliseconds).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>request</strong></td>
+	<td style="text-align:left;">Json</td>
+	<td style="text-align:left;">The request arguments.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result</strong></td>
+	<td style="text-align:left;">Json</td>
+	<td style="text-align:left;">The result contains attributes that detail the exported data. The result is only available after the export is successfully completed. See below for result attributes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.size</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">The total size of the data exported (in bytes).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.eventCount</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">The total number of events exported.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.intraDay</strong></td>
+	<td style="text-align:left;">Boolean</td>
+	<td style="text-align:left;">When the request includes the current day it might not contain all the data for the day. This attribute is TRUE if the data is incomplete for the last day.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList</strong></td>
+	<td style="text-align:left;">Json</td>
+	<td style="text-align:left;">The list of files containing the data exported. The file list is empty when there is no data.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.name</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The file name.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.url</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The download URL for the file. The files are compressed in gzip format.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.size</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">The size of the file in bytes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.date</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The file contains events for this specific date. This date is based on the submit time of the event. There may be multiple files for the same date. The date in is in ISO 8601 format.</td>
+</tr>
+</tbody>
+</table>
+
+<p>An example of response:</p>
+
+<pre><code>{  
+   &quot;id&quot;:&quot;8228d1e9-31b3-4a5e-aabe-55d9c8afa052&quot;,
+   &quot;upid&quot;:&quot;beff3f49-b9ed-41a4-91ea-677e9b85e71e&quot;,
+   &quot;createdAt&quot;:&quot;2016-05-10T10:10:10.100+0000&quot;,
+   &quot;status&quot;:&quot;running&quot;,
+   &quot;duration&quot; : 0,
+   &quot;request&quot;:{  
+      &quot;startDate&quot;:&quot;2016-05-01&quot;,
+      &quot;endDate&quot;:&quot;2016-05-02&quot;,
+      &quot;format&quot;:&quot;json&quot;,
+      &quot;dataset&quot;:&quot;appRunning&quot;
+   }
+}
+</code></pre>
+
+<h4>Continue creating from a prior Raw Data Export</h4>
+
+<p>When you are running periodic Raw Data Exports, you must provide the continueFrom argument instead of the startDate to make sure you are continuing from the previous Raw Data Export. Prior Raw Data Export IDs can be fetched via the GET APIs or accessed via the Dashboard.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsPriorRawData.png" alt="Prior Raw Data Exports in the Unity Analytics Project Dashboard">
+<figcaption>Prior Raw Data Exports in the Unity Analytics Project Dashboard</figcaption>
+</figure>
+
+<h3>Get Raw Data Export</h3>
+
+<p>Use the following HTTP method to get a specific Raw Data Export or ongoing export status:</p>
+
+<pre><code>GET api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports/{raw_data_export_id} 
+</code></pre>
+
+<p>All required arguments are part of the URL path.</p>
+
+<p>An example of a request:</p>
+
+<pre><code>curl --user {UNITY_PROJECT_ID}:${API_KEY} https://analytics.cloud.unity3d.com/api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports/${ID}
+</code></pre>
+
+<p>The response is the Raw Data Export in JSON format. It is the same as the response in Create Raw Data Export.</p>
+
+<p>An example of a response:</p>
+
+<pre><code>{  
+   &quot;id&quot;:&quot;6601f70e-6a0b-48ed-909f-26711af82b49&quot;,
+   &quot;status&quot;:&quot;completed&quot;,
+   &quot;createdAt&quot;:&quot;2016-05-21T04:41:54.000+0000&quot;,
+   &quot;duration&quot;:8631714000,
+   &quot;request&quot;:{  
+      &quot;startDate&quot;:&quot;2016-02-11T00:00:00.000+0000&quot;,
+      &quot;endDate&quot;:&quot;2016-03-11T00:00:00.000+0000&quot;,
+      &quot;format&quot;:&quot;tsv&quot;,
+      &quot;dataset&quot;:&quot;custom&quot;
+   },
+   &quot;result&quot;:{  
+      &quot;size&quot;:78355,
+      &quot;eventCount&quot;:17473,
+      &quot;fileList&quot;:[  
+         {  
+            &quot;name&quot;:&quot;headers.gz&quot;,
+            &quot;url&quot;:&quot;https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D&quot;,
+            &quot;size&quot;:105
+         },
+         {  
+            &quot;name&quot;:&quot;part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz&quot;,
+            &quot;url&quot;:&quot;https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D&quot;,
+            &quot;size&quot;:78250,
+            &quot;date&quot;:&quot;2016-02-13T00:00:00.000+0000&quot;
+         }
+      ],
+      &quot;intraDay&quot;:false
+   }
+}
+</code></pre>
+
+<h3>List all Raw Data Exports</h3>
+
+<p>Use this HTTP method to get the list of all Raw Data Exports for a specific project:</p>
+
+<pre><code>GET api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre>
+
+<p>All required arguments are part of the URL path.</p>
+
+<p>An example of a request:</p>
+
+<pre><code>curl --user {UNITY_PROJECT_ID}:${API_KEY} https://analytics.cloud.unity3d.com/api/v2/projects/${UNITY_PROJECT_ID}/rawdataexports/
+</code></pre>
+
+<p>The response is a list of Raw Data Exports in JSON format. See Raw Data Export Response Attributes for the definition of each export list element.</p>
+
+<p>An example of a response:</p>
+
+<pre><code>[
+{  
+   &quot;id&quot;:&quot;6601f70e-6a0b-48ed-909f-26711af82b49&quot;,
+   &quot;status&quot;:&quot;completed&quot;,
+   &quot;createdAt&quot;:&quot;2016-05-21T04:41:54.000+0000&quot;,
+   &quot;duration&quot;:8631714000,
+   &quot;request&quot;:{  
+      &quot;startDate&quot;:&quot;2016-02-11T00:00:00.000+0000&quot;,
+      &quot;endDate&quot;:&quot;2016-03-11T00:00:00.000+0000&quot;,
+      &quot;format&quot;:&quot;tsv&quot;,
+      &quot;dataset&quot;:&quot;custom&quot;
+   },
+   &quot;result&quot;:{  
+      &quot;size&quot;:78355,
+      &quot;eventCount&quot;:17473,
+      &quot;fileList&quot;:[  
+         {  
+            &quot;name&quot;:&quot;headers.gz&quot;,
+            &quot;url&quot;:&quot;https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D&quot;,
+            &quot;size&quot;:105
+         },
+         {  
+            &quot;name&quot;:&quot;part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz&quot;,
+            &quot;url&quot;:&quot;https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D&quot;,
+            &quot;size&quot;:78250,
+            &quot;date&quot;:&quot;2016-02-13T00:00:00.000+0000&quot;
+         }
+      ],
+      &quot;intraDay&quot;:false
+   }
+},
+{  
+   &quot;id&quot;:&quot;6601f70e-6a0b-48ed-909f-26711af82b48&quot;,
+   &quot;status&quot;:&quot;completed&quot;,
+   &quot;createdAt&quot;:&quot;2016-05-21T04:41:54.000+0000&quot;,
+   &quot;duration&quot;:8631714000,
+   &quot;request&quot;:{  
+      &quot;startDate&quot;:&quot;2016-02-11T00:00:00.000+0000&quot;,
+      &quot;endDate&quot;:&quot;2016-03-11T00:00:00.000+0000&quot;,
+      &quot;format&quot;:&quot;tsv&quot;,
+      &quot;dataset&quot;:&quot;custom&quot;
+   },
+   &quot;result&quot;:{  
+      &quot;size&quot;:78355,
+      &quot;eventCount&quot;:17473,
+      &quot;fileList&quot;:[  
+         {  
+            &quot;name&quot;:&quot;headers.gz&quot;,
+            &quot;url&quot;:&quot;https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b48/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D&quot;,
+            &quot;size&quot;:105
+         },
+         {  
+            &quot;name&quot;:&quot;part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz&quot;,
+            &quot;url&quot;:&quot;https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b48/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D&quot;,
+            &quot;size&quot;:78250,
+            &quot;date&quot;:&quot;2016-02-13T00:00:00.000+0000&quot;
+         }
+      ],
+      &quot;intraDay&quot;:false
+   }
+}
+]
+</code></pre>
+
+<h3>TSV format</h3>
+
+<p>If you choose to export in TSV format, the headers are provided in a separate file in <strong>headers.gz</strong>. The data files do not include headers. </p>
+
+<p>An example headers file:</p>
+
+<pre><code>ts  appid   type    userid  sessionid   platform    sdk_ver debug_device    user_agent  submit_time name    custom_params
+</code></pre>
+
+<h3>Dataset</h3>
+
+<p>Each of the six data types (event types) differ. See below for their schema definitions. </p>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>
+<code>ts</code> is the timestamp at which the event was generated on the device. Note that device-generated timestamps can be skewed due to the device clock and latency in receiving the event.</li>
+<li>
+<code>submit_time</code> is the timestamp at which the event was received by Unity Analytics.</li>
+<li>If a field in a record has no data, the value of that field is set to the default value for the data type of the field (<code>0</code> for numbers, <code>&quot;&quot;</code> for strings, and <code>false</code> for bools). Nested fields, like the IAP <code>TransactionEvent.receipt</code> field, in JSON-format exports are an exception to this policy. In the JSON-format export of nested fields, any fields containing no data are not included in the JSON object for that record.</li>
+</ul>
+
+<h4>AppStart event</h4>
+
+<pre><code>{
+   &quot;namespace&quot;:&quot;com.unity.analytics.commons.schema&quot;,
+   &quot;name&quot;:&quot;AppStartEvent&quot;,
+   &quot;type&quot;:&quot;record&quot;,
+   &quot;fields&quot;:[
+       {&quot;name&quot;: &quot;ts&quot;,   &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;appid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;}, 
+       {&quot;name&quot;: &quot;userid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sessionid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;platform&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sdk_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;debug_device&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;user_agent&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;submit_time&quot;, &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0} 
+   ]
+}  
+</code></pre>
+
+<h4>AppRunning event</h4>
+
+<pre><code>{
+   &quot;namespace&quot;:&quot;com.unity.analytics.commons.schema&quot;,
+   &quot;name&quot;:&quot;AppRunningEvent&quot;,
+   &quot;type&quot;:&quot;record&quot;,
+   &quot;fields&quot;:[
+       {&quot;name&quot;: &quot;ts&quot;,   &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;appid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;userid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sessionid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;platform&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sdk_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;debug_device&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;user_agent&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;submit_time&quot;, &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;int&quot;, &quot;default&quot;: 0}
+   ]
+}
+</code></pre>
+
+<h4>Custom event</h4>
+
+<pre><code>{
+   &quot;namespace&quot;:&quot;com.unity.analytics.commons.schema&quot;,
+   &quot;name&quot;:&quot;CustomEvent&quot;,
+   &quot;type&quot;:&quot;record&quot;,
+   &quot;fields&quot;:[
+       {&quot;name&quot;: &quot;ts&quot;,   &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;appid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;userid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sessionid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;platform&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sdk_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;debug_device&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;user_agent&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;submit_time&quot;, &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;name&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {
+           &quot;name&quot;:&quot;custom_params&quot;,
+           &quot;type&quot;:[&quot;null&quot;,{
+               &quot;type&quot;:&quot;map&quot;,
+               &quot;values&quot;: [&quot;string&quot;,&quot;null&quot;],
+               &quot;default&quot;: &quot;&quot;
+           }],
+           &quot;default&quot;: null
+       }
+   ]
+}
+</code></pre>
+
+<h4>DeviceInfo event</h4>
+
+<pre><code>{
+   &quot;namespace&quot;:&quot;com.unity.analytics.commons.schema&quot;,
+   &quot;name&quot;:&quot;DeviceInfoEvent&quot;,
+   &quot;type&quot;:&quot;record&quot;,
+   &quot;fields&quot;:[
+       {&quot;name&quot;: &quot;ts&quot;,   &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;appid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;}, 
+       {&quot;name&quot;: &quot;userid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sessionid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;platform&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sdk_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;debug_device&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;user_agent&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;submit_time&quot;, &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0}, 
+       {&quot;name&quot;: &quot;debug_build&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;rooted_jailbroken&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;processor_type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;system_memory_size&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;make&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;app_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;license_type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;app_install_mode&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;model&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;engine_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;os_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;app_name&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;timezone&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;ads_tracking&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false}
+   ]
+}  
+</code></pre>
+
+<h4>Transaction event</h4>
+
+<pre><code>{
+   &quot;namespace&quot;:&quot;com.unity.analytics.commons.schema&quot;,
+   &quot;name&quot;:&quot;TransactionEvent&quot;,
+   &quot;type&quot;:&quot;record&quot;,
+   &quot;fields&quot;:[
+       {&quot;name&quot;: &quot;ts&quot;,   &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0},
+       {&quot;name&quot;: &quot;appid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;type&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;userid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sessionid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;platform&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;sdk_ver&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;debug_device&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;default&quot;: false},
+       {&quot;name&quot;: &quot;user_agent&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+       {&quot;name&quot;: &quot;submit_time&quot;, &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0},        {
+           &quot;name&quot;:&quot;receipt&quot;,
+           &quot;type&quot;:[&quot;null&quot;,{
+               &quot;type&quot;:&quot;record&quot;,
+               &quot;name&quot;: &quot;receiptRecord&quot;,
+               &quot;fields&quot;:[
+                   {&quot;name&quot;: &quot;data&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;},
+                   {&quot;name&quot;: &quot;signature&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;}
+               ]
+           }],
+           &quot;default&quot;: null
+       },
+       {&quot;name&quot;: &quot;currency&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;USD&quot;},
+       {&quot;name&quot;: &quot;amount&quot;, &quot;type&quot;: &quot;float&quot;, &quot;default&quot;: 0},
+       {&quot;name&quot;: &quot;transactionid&quot;, &quot;type&quot;: &quot;long&quot;, &quot;default&quot;: 0},
+       {&quot;name&quot;: &quot;productid&quot;, &quot;type&quot;: &quot;string&quot;, &quot;default&quot;: &quot;&quot;}
+   ]
+}
+</code></pre>
+
+<h1>Dictionary</h1>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Data field</th>
+	<th style="text-align:left;">Definition</th>
+	<th style="text-align:left;">Dataset</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">ts</td>
+	<td style="text-align:left;">The timestamp (in milliseconds) at which the event was generated on the device. Note that device-generated timestamps can be skewed due to the device clock and latency in receiving the event</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">appid</td>
+	<td style="text-align:left;">The ID that is assigned to each app on the Unity Analytics Dashboard</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">type</td>
+	<td style="text-align:left;">The type of event being queried (i.e. Custom, DeviceInfo, Transaction, etc)</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">userid</td>
+	<td style="text-align:left;">Unity Analytics generated identifier for a userid</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">sessionid</td>
+	<td style="text-align:left;">Unity Analytics generated identifier for the session. If a game is reopened after more than 30 minutes of inactivity, a new session ID is generated</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">remote_ip</td>
+	<td style="text-align:left;">The IP address that the session was played from. Note that this field has been removed and is no longer available</td>
+	<td style="text-align:left;">Not used</td>
+</tr>
+<tr>
+	<td style="text-align:left;">platform</td>
+	<td style="text-align:left;">The platform that the session was played on</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">sdk_ver</td>
+	<td style="text-align:left;">Version of Unity Analytics SDK that is being used for this event. If the sdk_ver begins with a “u” then it is from the Analytics tool built engine. Otherwise, it is from the Analytics <span class="tooltip"><strong>plugin</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> for Unity versions older than 5.2</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">debug_device</td>
+	<td style="text-align:left;">A boolean that shows whether the event was sent from a <span class="tooltip"><strong>development build</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span>. Set to TRUE for events coming from Unity Editor</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">user_agent</td>
+	<td style="text-align:left;">The User-Agent request-header field</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">submit_time</td>
+	<td style="text-align:left;">The timestamp (in milliseconds) at which the event was received by Unity Analytics</td>
+	<td style="text-align:left;">All datasets</td>
+</tr>
+<tr>
+	<td style="text-align:left;">duration</td>
+	<td style="text-align:left;">The duration (number of seconds) that this session has been running for, calculated by the SDK</td>
+	<td style="text-align:left;">AppRunning</td>
+</tr>
+<tr>
+	<td style="text-align:left;">name</td>
+	<td style="text-align:left;">The name of the Custom Event (e.g. “LevelComplete”)</td>
+	<td style="text-align:left;">Custom</td>
+</tr>
+<tr>
+	<td style="text-align:left;">custom_params</td>
+	<td style="text-align:left;">The list of Custom Event parameters and their corresponding values.</td>
+	<td style="text-align:left;">Custom</td>
+</tr>
+<tr>
+	<td style="text-align:left;">receipt</td>
+	<td style="text-align:left;">Includes data returned by platform app stores, such as App Store and Google Play</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">currency</td>
+	<td style="text-align:left;">The currency code for the payment (eg. USD, EUR, CAD, etc) in ISO 4217 code</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">amount</td>
+	<td style="text-align:left;">The total decimal amount of currency spent</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">transactionid</td>
+	<td style="text-align:left;">Unique identifier for this transaction, set by SDK. Each transaction is given a unique ID, not to be confused with the store’s transaction ID</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">productid</td>
+	<td style="text-align:left;">The store-specific product identifier of an in-app purchase (eg. com.mygame.100coins)</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">debug_build</td>
+	<td style="text-align:left;">A boolean that shows whether the event was sent from a development build. Set to TRUE for events coming from Unity Editor</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">rooted_jailbroken</td>
+	<td style="text-align:left;">A boolean that is set to TRUE in case of rooted / jailbroken phone not sent for normal phone</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">processor_type</td>
+	<td style="text-align:left;">Device processor type</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">system_memory_size</td>
+	<td style="text-align:left;">Device system memory</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">make</td>
+	<td style="text-align:left;">Maker of the device (eg. “OSXEditor”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">app_ver</td>
+	<td style="text-align:left;">Version of the application (eg. “1.0”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">deviceid</td>
+	<td style="text-align:left;">A unique device identifier. Note that this field has been removed and is no longer available.</td>
+	<td style="text-align:left;">Not used</td>
+</tr>
+<tr>
+	<td style="text-align:left;">license_type</td>
+	<td style="text-align:left;">Type of license (eg. “advanced_pro”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">app_install_mode</td>
+	<td style="text-align:left;">Tells if app is installed via app store (“store”), adhoc (“adhoc”), developer install (“dev_release”), simulator (“simulator”) or enterprise (“enterprise”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">model</td>
+	<td style="text-align:left;">Device model (eg. “MacBookPro11,3”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">engine_ver</td>
+	<td style="text-align:left;">Unity engine version (eg. “5.5.0a3”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">os_ver</td>
+	<td style="text-align:left;">OS Version (eg. “Mac OS X 10.11.5”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">app_name</td>
+	<td style="text-align:left;">Bundle identifier or package name (eg. “com.Company.ProductName”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">timezone</td>
+	<td style="text-align:left;">ISO code (eg. “GMT–7”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ads_tracking</td>
+	<td style="text-align:left;">A boolean value that indicates whether the user has limited ad tracking</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">adsid</td>
+	<td style="text-align:left;">Advertising Id. On <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span>, collected when Unity Ads is enabled. On Android, all the time. Note that this field has been removed and is no longer available.</td>
+	<td style="text-align:left;">Not used</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–28 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2018–08–01 - Removed remote_ip field. It is no longer available.</span></p></li>
+<li>
+<li><p><span class="page-history">2018–06–28 - Removed UserInfo event.</span></p></li>
+<li><p><span class="page-history">2018–06–04 - Removed deviceid and adsid from DeviceInfo event. Deprecated UserInfo event.</span></p></li>
+<li><p><span class="page-history">2017–06–21 - Inclusion of empty nested fields in JSON exports changed in Unity <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsUserAttributes.html"></a></span><div class="tip">User Attributes</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsDataReset.html"></a></span><div class="tip"> Data reset</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

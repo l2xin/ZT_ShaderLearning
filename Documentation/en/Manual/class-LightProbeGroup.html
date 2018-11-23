@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Placing Light Probes</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-LightProbeGroup.html">English</a></li>
+<li><a href="/ja/current/Manual/class-LightProbeGroup.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-LightProbeGroup.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-LightProbeGroup.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-LightProbeGroup.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="LightingOverview.html">Lighting</a></li>
+<li><a href="GIIntro.html">Global Illumination</a></li>
+<li><a href="LightProbes.html"> Light Probes</a></li>
+<li> Placing Light Probes</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-TechnicalInformation.html"></a></span><div class="tip"> Light Probes: Technical information</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightProbes-Placing-Scripting.html"></a></span><div class="tip"> Placing probes using scripting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Placing Light Probes</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/LightProbeGroup.html' title='Go to LightProbeGroup page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>To place Light Probes in your scene, you must use a GameObject with a <strong>Light Probe Group</strong> component attached. You can add a Light Probe Group component from the menu: <strong>Component -&gt; Rendering -&gt; Light Probe Group</strong>.</p>
+
+<p>The <span class="tooltip"><strong>Light Probe</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> Group <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> can be added to any object in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, however it’s best to add it to a new empty <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-7.png" alt="The Light Probe Group component">
+<figcaption>The Light Probe Group component</figcaption>
+</figure>
+
+<p>The Light Probe Group has its own <strong>Edit Mode </strong>which can be turned on or off. To add, move, or delete light probes, you must switch the Light Probe Group’s edit mode on by pressing the <strong>Edit Light Probes </strong>button:</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-8.png" alt="The Edit Light Probes button">
+<figcaption>The Edit Light Probes button</figcaption>
+</figure>
+
+<p>When you are using the Edit Light Probes mode, you can manupulate individual light probes as in a similar way to GameObjects, however the individual probes are not GameObjects - they are stored as a set of points in the Light Probe Group component.</p>
+
+<p>When you begin editing a new Light Probe Group, you will start off with a default formation of eight probes arranged in a cube, as shown below:</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-9.png" alt="The default arrangement of light probes.">
+<figcaption>The default arrangement of light probes.</figcaption>
+</figure>
+
+<p>You can now use the controls in the Light Probe Group <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> to add new probe positions to the group. The probes appear in the scene as yellow spheres which can be positioned in the same manner as GameObjects. You can also select and duplicate individual probes or in groups, by using the usual “duplicate” keyboard shortcut (ctrl+d/cmd+d).</p>
+
+<p>Remember to switch the Light Probe Group edit mode <strong>off</strong> once you’ve finished editing the probes, or you will find you cannot move or manipulate normal GameObjects!</p>
+
+<h2>Choosing Light Probe positions</h2>
+
+<p>Unlike <span class="tooltip"><strong>lightmaps</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span>, which usually have a continuous resolution across the surface of an object, the resolution of the light probe information is entirely defined by how closely packed you choose to position the probes.</p>
+
+<p>To optimise the amount of data that is stored by light probes, and the amount of computation done while the game is playing, you should generally attempt to place as few light probes as possible. However, you should also place enough probes that changes in light from one space to another are recorded at a level that is acceptable to you. This means you might place light probes in a more condensed pattern around areas that have complex or highly contrasting light, and you might place them in a much more spread out pattern over areas where the light does not significantly change.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-10.png" alt="Light probes placed with varying density around a simple scene">
+<figcaption>Light probes placed with varying density around a simple scene</figcaption>
+</figure>
+
+<p>In the example above, the probes are placed more densely near and between the buildings where there is more contrast and color variation, and less densely along the road, where the lighting does not significantly change.</p>
+
+<p>The simplest approach to positioning probes is to arrange them in a regular 3D grid pattern. While this setup is simple and effective, it is likely to consume more memory than necessary, and you may have lots of redunant probes. For example, in the scene above, if there were lots of probes placed along the road it would be a waste of resources. The light does not change much along the length of the road, so many probes would be storing almost identical lighting data to their neighbouring probes. In situations like this, it is much more efficient to interpolate this lighting data between fewer more spread-out probes.</p>
+
+<p>Light probes individually do not store a large amount of information. From a technical perspective, each probe is a spherical, panoramic <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> image of the view from the sample point, encoded using Spherical Harmonics L2 which is stored as 27 floating point values. However in large scenes with hundreds of probes they can add up, and having unnecessarily densely packed probes can result in large amounts of wasted memory in your game.</p>
+
+<h2>Creating a volume</h2>
+
+<p>Even if your gameplay takes place on a 2D plane (for example, cars driving around on a road surface), your light probes must form a 3D volume.</p>
+
+<p>This means you should have at least two vertical “layers” of points in your group of probes.</p>
+
+<p>In the example below, you can see on the left the probes are arranged only across the surface of the ground. This will <strong>not result in good lighting</strong> because the light probe system will not be able to calculat sensible tetrahedral volumes from the probes.</p>
+
+<p>On the right, the probes are arranged in two layers, some low to the ground and others higher up, so that together they form a 3D volume made up of lots of individual tetrahedra. This is a <strong>good </strong>layout.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-11.jpg" alt="The left image shows a bad choice of light probe positions, because there is no height to the volume defined by the probes. The right image shows a good choice of light probe positions.">
+<figcaption>The left image shows a bad choice of light probe positions, because there is no height to the volume defined by the probes. The right image shows a good choice of light probe positions.</figcaption>
+</figure>
+
+<h2>Light Probe placement for dynamic GI</h2>
+
+<p>Unity’s realtime GI allows moving lights to cast dynamic bounced light against your <strong>static</strong> scenery. However, you can also receive dynamic bounced light from moving lights on <strong>moving GameObjects </strong>when you are using llight probes.</p>
+
+<p>Light Probes therefore perform two very similar but distinct functions - they store static baked light, and at runtime they represent sampling points for dynamic realtime global illumination (GI, or bounced light) to affect the lighting on moving objects.</p>
+
+<p>Therefore, if you are using dynamic moving lights, and want realtime bounced light on your moving GameObjects, this may have implications on your choice of where you place your light probes, and how densely you group them.</p>
+
+<p>The main point to consider in this situation is that in large areas of relatively unchanging <em>static light</em> you might have placed only a few probes - because the light does not change across a wide area. However, if you plan to have <em>moving lights</em> within this area, and you want moving objects to receive bounced light from them, you will need a more dense network of light probes within the area so that there is a high enough level of accuracy to match your light’s range and style.</p>
+
+<p>How densely placed your probes need to be will vary depending on the size and range of your lights, how fast they move, and how large the moving objects are that you want to receive bounced light.</p>
+
+<h2>Light Probe placement problems</h2>
+
+<p>Your choice of light probe positions must take into account that the lighting will be interpolated between sets of probes. Problems can arise if your probes don’t adequately cover the changes in lighting across your scene.</p>
+
+<p>The example below shows a night-time scene with two bright street lamps on either side, and a dark area in the middle. If light probes are only placed near the street lamps, and none in the dark area, the lighting from the lamps will “bleed” across the dark gap, on moving objects. This is because the lighting is being interpolated from one bright point to another, with no information about the dark area in-between.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-12.jpg" alt="This image shows poor light probe placement. There are no probes in the dark area between the two lamps, so the dark area will not be included in the interpolation at all.">
+<figcaption>This image shows poor light probe placement. There are no probes in the dark area between the two lamps, so the dark area will not be included in the interpolation at all.</figcaption>
+</figure>
+
+<p>If you are using realtime or mixed lights, this problem may be less noticable, because only the <em>indirect</em> light will bleed across the gap. The problem is more noticable if you are using fully <span class="tooltip"><strong>baked lights</strong><span class="tooltiptext">A Light Mode for creating local ambience, rather than fully featured lights for increasing brightness in dark areas without needing to adjust all of the lighting within a Scene. Unity pre-calculates the illumination from these lights before run time, and does not include them in any run-time lighting calculations. <a href="LightMode-Baked.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#BakedLights">Glossary</a></span></span></span>, because in this situation the direct light on moving objects is also interpolated from the light probes. In this example scene the two lamps are baked, so moving objects get their direct light from light probes. Here you can see the result - a moving object (the ambulance) remains brightly lit while passing through the dark area, which is not the desired effect. The yellow wireframe tetrahedron shows that the <span class="tooltip"><strong>interpolation</strong><span class="tooltiptext">The estimation of values that determine the shape of an animation curve between two keys. <a href="TimelineChangingInterpolation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#interpolation">Glossary</a></span></span></span> is occuring between one brightly lit end of the street to the other.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-13.jpg" alt="">
+</figure>
+
+<p>This is an undesired effect - the ambulance remains brightly lit while passing through a dark area, because no light probes were placed in the dark area.</p>
+
+<p>To solve this, you should place more probes in the dark area, as shown below:</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-14.jpg" alt="">
+</figure>
+
+<p>Now the scene has probes in the dark area too. And as a result, the moving ambulance takes on the darker lighting as it travels from one side of the scene to the other.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-15.jpg" alt="">
+</figure>
+
+<p>The ambulance now takes on the darker lighting in the centre of the scene, as desired.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Light Probes updated in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-TechnicalInformation.html"></a></span><div class="tip"> Light Probes: Technical information</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightProbes-Placing-Scripting.html"></a></span><div class="tip"> Placing probes using scripting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

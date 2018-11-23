@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: iOS Hardware Guide</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/iphone-Hardware.html">English</a></li>
+<li><a href="/ja/current/Manual/iphone-Hardware.html">日本語</a></li>
+<li><a href="/es/current/Manual/iphone-Hardware.html">Español</a></li>
+<li><a href="/kr/current/Manual/iphone-Hardware.html">한국어</a></li>
+<li><a href="/ru/current/Manual/iphone-Hardware.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li><a href="iphone-GettingStarted.html">Getting started with iOS development</a></li>
+<li>iOS Hardware Guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileCustomizeSplashScreen.html"></a></span><div class="tip">Customizing an iOS Splash Screen</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingsiOS.html"></a></span><div class="tip">iOS Player Settings</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>iOS Hardware Guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Hardware models</h2>
+
+<p>The following list summarizes <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> hardware available in devices of various generations. Current device <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> performance can compared on <a href="http://gfxbench.com/result.jsp?benchmark=gfx30&amp;test=547&amp;order=median&amp;base=device&amp;os-check-Android_gl=0&amp;os-check-Windows_gl=0&amp;arch-check-unknown=0&amp;arch-check-x86=0">gfxbench</a> which compares different hardware features using benchmarks.</p>
+
+<h3><a href="http://en.wikipedia.org/wiki/IPhone#Model_comparison">iPhone Models</a></h3>
+
+<h3>iPhone 4S</h3>
+
+<ul>
+<li>Screen: 960x640 <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span>, LCD at 326 ppi, 800:1 contrast ratio.</li>
+<li>Apple A5 Dual-Core 1 GHz ARM Cortex-A9 MPCore CPU</li>
+<li>Dual-Core PowerVR SGX543MP2 GPU</li>
+<li>512MB of memory</li>
+<li>Rear 8.0 MP infra-red cut-off filter, back-illuminated sensor, 1080p HD videos at 30 <span class="tooltip"><strong>fps</strong><span class="tooltiptext">See first person shooter, frames per second. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FPS">Glossary</a></span></span></span>.</li>
+<li>Front 0.3 MP (VGA) with geotagging, tap to focus, and 480p SD video at 30 fps</li>
+<li>GPS support</li>
+<li>Compass Support</li>
+</ul>
+
+<p>
+<img src="../uploads/Main/csrCar.jpg" alt="">
+The iPhone 4S, with the A5 chip, is capable of <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> complex shaders throughout the entire screen. Even image effects may be possible. However, optimizing your shaders is still crucial. But if your game isn’t trying to push limits of the device, optimizing scripting and gameplay is probably as much of a waste of time on this generation of devices as it is on PC.</p>
+
+<h3>iPhone 5</h3>
+
+<ul>
+<li>Screen: 1136x640 pixels, LCD at 326 ppi.</li>
+<li>Apple A6 Dual-Core 1.3 GHz Apple-designed ARMv7s CPU</li>
+<li>Triple-Core PowerVR SGX543MP3 GPU</li>
+<li>1GB LPDDR2 of memory</li>
+<li>Rear 8.0 MP infra-red cut-off filter, back-illuminated sensor, 1080p HD videos at 30 fps.</li>
+<li>Front 1.2 MP tagging, tap to focus, and 720p SD video at 30 fps</li>
+<li>GPS support</li>
+<li>Compass Support</li>
+</ul>
+
+<h3>iPhone 5S</h3>
+
+<ul>
+<li>Screen: 4&quot; 1136x640 pixels, LCD at 326 ppi.</li>
+<li>Apple A7 Dual-Core 1.3 GHz Apple-designed ARMv8 64-bit CPU</li>
+<li>M7 Motion Coprocessor</li>
+<li>Four Cluster PowerVR G643 GPU</li>
+<li>1GB LPDDR3 of memory</li>
+<li>Rear 8.0 MP infra-red cut-off filter, back-illuminated sensor, 1080p HD videos at 30 fps.</li>
+<li>Front 1.2 MP tagging, tap to focus, and 720p SD video at 30 fps</li>
+<li>GPS and GLONASS support</li>
+<li>Compass Support</li>
+<li>Three-axis gyro</li>
+<li>Proximity sensor</li>
+<li>Ambient light sensor</li>
+<li>Touch ID Fingerprint identity sensor</li>
+</ul>
+
+<h3>iPhone 6(+)</h3>
+
+<ul>
+<li>Screen iPhone6: 4.7&quot; 1134x750 pixels, LCD at 326 ppi.</li>
+<li>Screen iPhone6+: 5.5&quot; 1920x1080 pixels, LCD at 401 ppi.</li>
+<li>Apple A8 Dual-Core 1.4 GHz Apple-designed ARMv8-A 64-bit CPU</li>
+<li>M8 motion coprocessor</li>
+<li>Quad-Core PowerVR GX6450 GPU</li>
+<li>1GB LPDDR3 of memory</li>
+<li>Rear 8.0 MP infra-red cut-off filter, back-illuminated sensor, 1080p HD videos at 60 fps.</li>
+<li>Front 1.2 MP tagging, tap to focus, and 720p SD video at 30 fps</li>
+<li>GPS and GLONASS support</li>
+<li>Compass Support</li>
+<li>Three-axis gyro</li>
+<li>Proximity sensor</li>
+<li>Ambient light sensor</li>
+<li>Touch ID Fingerprint identity sensor</li>
+<li>NFC</li>
+</ul>
+
+<h3>iPhone 6s(+)</h3>
+
+<ul>
+<li>Screen iPhone6: 4.7&quot; 1134x750 pixels, LCD at 326 ppi.</li>
+<li>Screen iPhone6+: 5.5&quot; 1920x1080 pixels, LCD at 401 ppi.</li>
+<li>Apple A9 1.84 GHz Apple-designed ARMv8-A 64-bit CPU</li>
+<li>Embedded M9 motion coprocessor</li>
+<li>Hexa-Core PowerVR GT7600 GPU</li>
+<li>2GB LPDDR4 of memory</li>
+<li>Rear 12.0 MP phase detection autofocus, dual-LED dual-tone flash, 4K videos at 30 fps.</li>
+<li>Front 5.0 MP face detection, <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span>, panorama and 1080p HD video at 30 fps</li>
+<li>A-GPS and GLONASS support</li>
+<li>Compass Support</li>
+<li>Three-axis gyro</li>
+<li>Proximity sensor</li>
+<li>Ambient light sensor</li>
+<li>Touch ID Fingerprint identity sensor</li>
+<li>NFC</li>
+</ul>
+
+<h3>iPhone 7(+)</h3>
+
+<ul>
+<li>Screen iPhone6: 4.7&quot; 1134x750 pixels, LCD at 326 ppi.</li>
+<li>Screen iPhone6+: 5.5&quot; 1920x1080 pixels, LCD at 401 ppi.</li>
+<li>Apple A10 Fusion 2.34 GHz Quad-core (2 Hurricane + 2 Zephyr)</li>
+<li>M10 motion coprocessor</li>
+<li>Hexa-Core PowerVR Series7XT Plus</li>
+<li>iPhone7: 2GB LPDDR4 of memory</li>
+<li>iPhone7+: 3GB LPDDR4 of memory</li>
+<li>Rear 12.0 MP phase detection autofocus, dual-LED dual-tone flash, 4K videos at 30 fps.</li>
+<li>iPhone7+ also has a second 12.0 MP <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</li>
+<li>Front 7.0 MP face detection, HDR, panorama and 1080p HD video at 30 fps</li>
+<li>A-GPS and GLONASS support</li>
+<li>Compass Support</li>
+<li>Three-axis gyro</li>
+<li>Proximity sensor</li>
+<li>Ambient light sensor</li>
+<li>Touch ID Fingerprint identity sensor</li>
+<li>NFC</li>
+</ul>
+
+<h3>iPhone 8(+)</h3>
+
+<ul>
+<li>Screen iPhone6: 4.7&quot; 1134x750 pixels, LCD at 326 ppi.</li>
+<li>Screen iPhone6+: 5.5&quot; 1920x1080 pixels, LCD at 401 ppi.</li>
+<li>Apple A11 Bionic 2.39 GHz Hexa-core (2 Monsoon + 4 Mistral) with Neural Engine</li>
+<li>M11 motion coprocessor</li>
+<li>iPhone8: 2GB LPDDR4 of memory</li>
+<li>iPhone8+: 3GB LPDDR4 of memory</li>
+<li>Rear 12.0 MP phase detection autofocus, dual-LED dual-tone flash, 4K videos at 60 fps.</li>
+<li>iPhone8+ also has a second 12.0 MP camera.</li>
+<li>Front 7.0 MP face detection, HDR, panorama and 1080p HD video at 30 fps</li>
+<li>A-GPS and GLONASS support</li>
+<li>Compass Support</li>
+<li>Three-axis gyro</li>
+<li>Proximity sensor</li>
+<li>Ambient light sensor</li>
+<li>Touch ID Fingerprint identity sensor</li>
+<li>NFC</li>
+<li>Wireless charging supported</li>
+</ul>
+
+<h3>iPhone X</h3>
+
+<ul>
+<li>Screen: 5.8&quot; 1125x2436 pixels, OLED at 458 ppi.</li>
+<li>Apple A11 Bionic 2.39 GHz Hexa-core (2 Monsoon + 4 Mistral) with Neural Engine</li>
+<li>M11 motion coprocessor</li>
+<li>GB LPDDR4 of memory</li>
+<li>Rear Dual 12.0 MP phase detection autofocus, dual-LED dual-tone flash, 4K videos at 60 fps.</li>
+<li>Front 7.0 MP face detection, HDR, panorama and 1080p HD video at 30 fps</li>
+<li>A-GPS and GLONASS support</li>
+<li>Compass Support</li>
+<li>Three-axis gyro</li>
+<li>Proximity sensor</li>
+<li>Ambient light sensor</li>
+<li>Touch ID Fingerprint identity sensor</li>
+<li>NFC</li>
+<li>Wireless charging supported</li>
+</ul>
+
+<h3><a href="http://en.wikipedia.org/wiki/IPod_Touch#Specifications">iPod Touch Models</a></h3>
+
+<h3>iPod Touch 5th generation</h3>
+
+<ul>
+<li>Screen: 1136x640 pixels, LCD at 326 ppi</li>
+<li>Apple A5 Dual-Core 1GHz (underclocked to 800MHz) ARM Cortex-A9 MPCore CPU</li>
+<li>Dual-Core PowerVR SGX543MP2 GPU</li>
+<li>512MB of memory</li>
+<li>Rear 5.0 MP backside illuminated CMOS image sensor with 1080p HD video at 30 fps, face detection and video stabilization.</li>
+<li>Front 1.2 MP with geotagging, tap to focus, and 720p HD video at 30 fps</li>
+</ul>
+
+<h3><a href="http://en.wikipedia.org/wiki/IPad#Technical_specifications">iPad Models</a></h3>
+
+<h3>iPad 2</h3>
+
+<ul>
+<li>Screen: 1024x768 pixels, LCD at 132 ppi, LED-backlit.</li>
+<li>Apple A5 Dual-Core 1 GHz ARM Cortex-A9 MPCore CPU</li>
+<li>Dual-Core PowerVR SGX543MP2 GPU</li>
+<li>512MB DDR2 Ram</li>
+<li>GPS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 2.1 + (3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<p>
+<img src="../uploads/Main/deadtrigger.jpg" alt="">
+iPad2: the A5 can do full screen bumpmapping, assuming the shader is simple enough. However, it is likely that your game will perform best with bumpmapping only on crucial objects. Full screen image effects still out of reach. Scripting optimization less important.</p>
+
+<h3>iPad (3rd generation)</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A5X</li>
+<li>Dual-Core 1 GHz ARM Cortex-A9 MPCore CPU</li>
+<li>Quad-Core PowerVR SGX543MP4 GPU</li>
+<li>1GB LPDDR2 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<p>
+<img src="../uploads/Main/bladeslinger.jpg" alt="">
+The iPad 3 has been shown to be capable of render-to-texture effects such as reflective water and fullscreen image effects. However, optimized shaders are still crucial. But if your game isn’t trying to push limits of the device, optimizing scripting and gameplay is probably as much of a waste of time on this generation of devices as it is on PC.</p>
+
+<h3>iPad (4th generation)</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A6X Dual-Core 1.4 GHz Apple Swift</li>
+<li>Quad-Core PowerVR SGX554MP4 GPU</li>
+<li>1GB LPDDR2 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad (5th generation)</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A9 1.85 GHz dual-core 64-bit ARMv8-A</li>
+<li>PowerVR 7XT GT7600</li>
+<li>M9 Motion Coprocessor</li>
+<li>2GB LPDDR4 Ram</li>
+<li>A-GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.2 + (LTE Advanced, UMTS/HSPA/​HSPA+/DC-HSDPA, GSM/EDGE )</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad (6th generation)</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A10 Fusion 2.34 GHz Quad-core</li>
+<li>PowerVR 7XT GT7600</li>
+<li>M10 Motion Coprocessor</li>
+<li>2GB LPDDR4 Ram</li>
+<li>A-GPS and GLONASS support</li>
+<li>Apple Pencil support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.2 + (LTE Advanced, UMTS/HSPA/​HSPA+/DC-HSDPA, GSM/EDGE )</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Air</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A7 Dual-Core 1.4 GHz Apple Cyclone</li>
+<li>Quad-Core PowerVR G6430 GPU</li>
+<li>M7 Motion Coprocessor</li>
+<li>1GB LPDDR3 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Air 2</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A8X 1.5 GHz triple-core</li>
+<li>Hex-Core PowerVR GX6650 GPU</li>
+<li>M8 Motion Coprocessor</li>
+<li>2GB LPDDR3 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Mini</h3>
+
+<ul>
+<li>Screen: 1024x768 pixels, LCD at 163 ppi, LED-backlit.</li>
+<li>Apple A5 Dual-Core 1 GHz ARM Cortex-A9</li>
+<li>Dual-Core PowerVR SGX543MP2 GPU</li>
+<li>512MB DDR2 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Mini 2</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 326 ppi, LED-backlit.</li>
+<li>Apple A7 Dual-Core 1.3 GHz Apple Cyclone</li>
+<li>Quad-Core PowerVR G6430 GPU</li>
+<li>1GB LPDDR3 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Mini 3</h3>
+
+<ul>
+<li>Screen: 2048x1536 pixels, LCD at 326 ppi, LED-backlit.</li>
+<li>Apple A7 Dual-Core 1.3 GHz Apple Cyclone</li>
+<li>Quad-Core PowerVR G6430 GPU</li>
+<li>1GB LPDDR3 Ram</li>
+<li>GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.0 + (LTE, 3G Cellular HSDPA, 2G cellular EDGE on the 3G version)</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Pro (1st Generation)</h3>
+
+<ul>
+<li>Screen 9.7″: 20148x1536 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Screen 12.9″: 2732x2048 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A9X 64-bit ARMv8-A dual-core (9.7″ model is slightly underclocked)</li>
+<li>PowerVR 7XT GT7800 (12 Clusters)</li>
+<li>M9 Motion Coprocessor</li>
+<li>12.9″ Model: 4GB LPDDR4 Ram</li>
+<li>9.7″ Model: 2GB LPDDR4 Ram</li>
+<li>A-GPS and GLONASS support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.2 + (LTE Advanced, UMTS/HSPA/​HSPA+/DC-HSDPA, GSM/EDGE )</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h3>iPad Pro (2nd Generation)</h3>
+
+<ul>
+<li>Screen 10.5″: 2224x1668 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Screen 12.9″: 2732x2048 pixels, LCD at 264 ppi, LED-backlit.</li>
+<li>Apple A10X Fusion 2.38 GHz Hexa-core (3 Hurricane + 3 Zephyr)</li>
+<li>PowerVR 7XT GT7600 Plus (12 Clusters)</li>
+<li>M10 Motion Coprocessor</li>
+<li>4GB LPDDR4 Ram</li>
+<li>A-GPS and GLONASS support</li>
+<li>ProMotion support</li>
+<li>Accelerometer, Three-axis Gyro, Proximity Sensor, Ambient Light Sensor, Magnetometer</li>
+<li>Wifi + Bluetooth 4.2 + (LTE Advanced, UMTS/HSPA/​HSPA+/DC-HSDPA, GSM/EDGE )</li>
+<li>Mechanical keys: Home, sleep, function switch, volume.</li>
+</ul>
+
+<h2>Graphics Processing Unit and Hidden Surface Removal</h2>
+
+<p>The iPhone/iPad graphics processing unit (GPU) is a Tile-Based Deferred Renderer. In contrast with most GPUs in desktop computers, the iPhone/iPad GPU focuses on minimizing the work required to render an image as early as possible in the processing of a <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. That way, only the visible pixels will consume processing resources.</p>
+
+<p>The GPU’s frame buffer is divided up into tiles and rendering happens tile by tile. First, triangles for the whole frame are gathered and assigned to the tiles. Then, visible fragments of each triangle are chosen. Finally, the selected triangle fragments are passed to the rasterizer (triangle fragments occluded from the camera are rejected at this stage).</p>
+
+<p>In other words, the iPhone/iPad GPU implements a <strong>Hidden Surface Removal</strong> operation at reduced cost. Such an architecture consumes less memory bandwidth, has lower power consumption and utilizes the texture cache better. Tile-Based Deferred Rendering allows the device to reject occluded fragments before actual rasterization, which helps to keep overdraw low.</p>
+
+<p>For more information, see also:</p>
+
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Introduction/Introduction.html">Apple Notes on iPhone/iPad GPU and OpenGL ES</a></li>
+<li><a href="http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Performance/Performance.html">Apple Performance Advices for OpenGL ES in General</a></li>
+<li><a href="http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/BestPracticesforShaders/BestPracticesforShaders.html">Apple Performance Advices for OpenGL ES Shaders</a></li>
+</ul>
+
+<h3>Texture compression</h3>
+
+<p>iOS devices support these texture <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> formats: </p>
+
+<ul>
+<li><p><span class="tooltip"><strong>PVRTC</strong><span class="tooltiptext">PowerVR Texture Compression (PVRTC) is a fixed-rate texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PVRTC">Glossary</a></span></span></span> provides support for RGB and RGBA (color information plus an alpha channel) <span class="tooltip"><strong>texture formats</strong><span class="tooltiptext">A file format for handling textures during realtime rendering by 3D graphics hardware, such as a graphics card or mobile device. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureFormat">Glossary</a></span></span></span> and can compress a single pixel to two or four bits. The PVRTC format is essential to reduce the memory footprint and to reduce consumption of memory bandwidth, as in the rate at which data can be read from memory, which is usually very limited on mobile devices.</p></li>
+<li><p><span class="tooltip"><strong>ETC</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span> compresses 4x4 pixel blocks into 64-bit quantities, but lacks an alpha channel. </p></li>
+<li><p>
+<strong>ETC2</strong> supports both 1-bit and 8-bit alpha channel compression.</p></li>
+<li><p><span class="tooltip"><strong>ASTC</strong><span class="tooltiptext">Adaptive Scalable Texture Compression (ASTC) A block-based texture format that compresses textures to significantly reduce file sizes without cau sing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ASTC">Glossary</a></span></span></span> is flexible format that uses pixel block sizes. It’s supported by Metal and OpenGL ES 3.0 graphic APIs.</p></li>
+</ul>
+
+<p>
+<strong>Note</strong>: the DXT <span class="tooltip"><strong>texture compression</strong><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span> format on iOS devices is NOT supported.</p>
+
+<p>For detailed texture compression options in iOS, see <a href="class-TextureImporterIos.html">iOS 2D Texture Overrides</a>.</p>
+
+<h3>Vertex Processing Unit</h3>
+
+<p>The iPhone/iPad has a dedicated unit responsible for vertex processing which runs calculations in parallel with rasterization. In order to achieve better parallelization, the iPhone/iPad processes vertices one frame ahead of the rasterizer.</p>
+
+<h2>Unified Memory Architecture</h2>
+
+<p>Both the CPU and GPU on the iPhone/iPad share the same memory. The advantage is that you don’t need to worry about running out of video memory for your textures (unless, of course, you run out of main memory too). The disadvantage is that you share the same memory bandwidth for gameplay and graphics. The more memory bandwidth you dedicate to graphics, the less you will have for gameplay and physics.</p>
+
+<h2>Multimedia CoProcessing Unit</h2>
+
+<p>The iPhone/iPad main CPU is equipped with a powerful SIMD (Single Instruction, Multiple Data) coprocessor supporting either the <strong>VFP</strong> or the <strong>NEON</strong> architecture. The Unity iOS run-time takes advantage of these units for multiple tasks such as calculating skinned <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> transformations, geometry batching, audio processing and other calculation-intensive operations.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–06–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileCustomizeSplashScreen.html"></a></span><div class="tip">Customizing an iOS Splash Screen</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingsiOS.html"></a></span><div class="tip">iOS Player Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

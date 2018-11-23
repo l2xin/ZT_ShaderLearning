@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Understanding post-processing</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeMakingBelievableVisuals8.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeMakingBelievableVisuals8.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeMakingBelievableVisuals8.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeMakingBelievableVisuals8.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeMakingBelievableVisuals8.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html"> Making believable visuals in Unity</a></li>
+<li> Understanding post-processing</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals7.html"></a></span><div class="tip"> Indoor and local lighting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals9.html"></a></span><div class="tip"> Dynamic lighting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Understanding post-processing</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Post-processes are <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> effects that are based on an existing rendered <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Effects in post-processing are usually dependent on the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, or layered on top of the rendered <strong>Scene</strong> before generating the final render. The clear advantage of this feature is the instant visual feedback and dramatic improvement to the <strong>Scene</strong>, without the need to alter existing content.</p>
+
+<p>You don’t need to use all of the post-processing features to create believable Scenes. However, its capability to enhance a Scene further is certainly worth the time it takes to understand the system. This section helps you decide which post-processing effects are right for your situation, and helps you avoid the pitfalls that can come with these advanced features:</p>
+
+<ul>
+<li><a href="#aa">Anti-aliasing</a></li>
+<li><a href="#ao">Ambient occlusion (AO)n</a></li>
+<li><a href="#ssr">Screen Space Reflection</a></li>
+<li><span class="tooltip"><a href="#dof">Depth of Field</a><span class="tooltiptext">A post-processing effect that simulates the focus properties of a camera lens. <a href="PostProcessing-DepthOfField.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DepthofField">Glossary</a></span></span></span></li>
+<li><span class="tooltip"><a href="#motionBlur">Motion blur</a><span class="tooltiptext">A common post-processing effect that simulates the blurring of an image when objects filmed by a camera are moving faster than the camera’s exposure time. <a href="PostProcessing-MotionBlur.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MotionBlur">Glossary</a></span></span></span></li>
+<li><a href="#highIntensityColor">High intensity color</a></li>
+<li><a href="#artifacts">Chromatic Aberration, Grain and Vignette</a></li>
+</ul>
+
+<p>For an in-depth overview on post-processing, see the <a href="PostProcessingOverview.html">Post-processing documentation</a>.</p>
+
+<p><a name="aa"></a></p>
+
+<h2>Anti-aliasing</h2>
+
+<p>When rasterizing a 3D polygon into a 2D screen with limited resolution, the final <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> show an aliasing effect (like steps on the edges of objects). There are different solutions for anti-aliasing techniques in real-time 3D, such as supersampling, multisample anti-aliasing (MSAA), fast approximate anti-aliasing (FXAA), spatial anti-aliasing (SMAA) and temporal anti-aliasing (TXAA). Currently, the most popular techniques are FXAA and TXAA, due to their effectiveness and relatively high performance. For example, the following image from the sample Scene compares FXAA and TXAA:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsTXAATXAA.jpg" alt="">
+</figure>
+
+<p>FXAA does a good job of fixing some of the glaring aliasing effects, but TXAA takes it a step further and performs a much better job in the tram rails.</p>
+
+<p>FXAA is pure post-processing anti-aliasing. In simple terms, It captures the rasterized Scene, analyzes the edges, and runs an algorithm on top of the existing image to smooth it out. It is straightforward, doesn’t have any complex dependencies, and it’s fast.</p>
+
+<p>TXAA is a lot more complex. It uses jittering and the previous frame as additional data to blend into the current frame. It also uses motion vectors to predict which pixels to reject or accept to render the final frame. The idea is to increase the effective resolution of a frame with more data, without the need to render the Scene larger than its final resolution (as is usually the case in supersampling). The benefit is clearly a much smoother anti-aliasing, similar to the quality given by supersampling, but without the major performance impact.</p>
+
+<p>Like everything in real-time rendering, there’s always a trade-off. TXAA requires motion vectors to function, and has a larger performance impact when compared to FXAA. TXAA’s complex nature of predicting the final image can cause some unintended artifacts for fast-moving <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, and texture blurriness across the Scene, which might not be suitable for some applications.</p>
+
+<p><a name="ao"></a></p>
+
+<h2>Ambient occlusion (AO)</h2>
+
+<p>Ambient occlusion post-processing is an approximation of <strong>ambient occlusion</strong> based on screen space data, mainly depth. For this reason, it is usually called Screen Space <span class="tooltip"><strong>Ambient Occlusion</strong><span class="tooltiptext">A method to approximate how much ambient lighting (lighting not coming from a specific direction) can hit a point on a surface. <a href="PostProcessing-AmbientOcclusion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ambientocclusion">Glossary</a></span></span></span> (SSAO). As explained in <a href="BestPracticeMakingBelievableVisuals2.html#enablePP">Enable post-processing</a>, SSAO can give better fidelity when shading ambient lighting, especially for dynamic GameObjects that often don’t have any occlusion interaction between static Scenes and dynamic Scenes.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSSAODebugView.jpg" alt="Screen Space Ambient Occlusion - Debug View">
+<figcaption>Screen Space Ambient Occlusion - Debug View</figcaption>
+</figure>
+
+<p>While in general SSAO helps a Scene’s ambient shading, it can cause too much occlusion. Using per-object baked ambient occlusion from an offline 3D modelling application with additional ambient occlusion from light baking makes SSAO a third layer of ambient occlusion. </p>
+
+<p>Make sure you keep the final output in mind when setting up SSAO, and try to find a balance with the other ambient occlusion solutions.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsTooMuchAO.jpg" alt="Adding too much ambient occlusion can cause open areas to be very dark">
+<figcaption>Adding too much ambient occlusion can cause open areas to be very dark</figcaption>
+</figure>
+
+<p><a name="ssr"></a></p>
+
+<h2>Screen Space Reflection</h2>
+
+<p>Like SSAO, Screen Space Reflection uses the current Scene view to approximate reflections via ray tracing. To get believable results, it is almost always a good idea to enable this feature. It adds a highly accurate reflection that complements the normal cube map captured reflection. However, enabling this feature does restrict rendering to deferred rendering only, and has a performance impact. Another downside of SSR is that anything not on the screen does not generate reflection hits, and therefore can cause a missing reflection effect at the edges of the screen.</p>
+
+<p><a name="dof"></a></p>
+
+<h2>Depth of Field</h2>
+
+<p>The Depth of Field effect can give the cinematic feel of a large sensor <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>. It can also be used to change the scale perception of a Scene (much like how a tilt-shift camera lens gives a miniature effect). For example, the following image is a real-life photograph, made to look like a miniature by applying a Depth of Field effect:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsDepthOfField.jpg" alt="">
+</figure>
+
+<p><a name="motionBlue"></a></p>
+
+<h2>Motion blur</h2>
+
+<p>A subtle motion blur can make blending the transition of one frame to another more believable. However, you need to take care in your application to reduce the risk of motion sickness. This is especially true if there is a massive difference in Scene translation, which is typically found in first-person or third-person cameras. For example, a wide-angle view where the player can swing their camera really fast from left to right looks jittery and give a stop motion look without motion blur, even if it is rendering at 60FPS. The following image shows a running motion blur at a Shutter angle of 180 degrees:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsMotionBlur.jpg" alt="">
+</figure>
+
+<p>A full 360-degree shutter angle gives you a full frame duration trail. Anything less means less trail. With that in mind, if you are aiming for a stop-motion look, then disable motion blur.</p>
+
+<p><a name="bloom"></a></p>
+
+<h2>Bloom and emissive</h2>
+
+<p>In real life, bloom is a lens artifact where light beams aren’t focused properly. It usually occurs on lower-quality camera lenses, or some special effects glow camera filter. Bloom gives a hazy soft image, as shown here (<strong>Threshold Gamma</strong> set to 0):</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBloomSoft.jpg" alt="">
+</figure>
+
+<p>Or you can use Bloom to differentiate elements of high intensity or bright light, as shown here:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBloomBright.jpg" alt="">
+</figure>
+
+<p>Over-using these features can backfire. You can see this happen in the first sample in the above image; there are lots of high intensity pixels, and the threshold of the intensity starts to bloom very early.</p>
+
+<p>When you select the value of the threshold, consider the specific values of your emissive surfaces, the lighting setup for the Scene, and whether you have enabled eye adaptation.</p>
+
+<p><a name="highIntensityColor"></a></p>
+
+<h2>High intensity color</h2>
+
+<p>You can handle high intensity color values using a tonemapper, which processes a linear <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> buffer of input data and renders it back out to the designated color space for final output. This is similar to how a camera works. In Unity post-processing, there are two types of tonemapper: <strong>Neutral</strong> and <strong>ACES</strong> (<a href="https://en.wikipedia.org/wiki/Academy_Color_Encoding_System">Academy Color Encoding System (Wikipedia)</a>). At first glance, the difference between the two is in the default contrast of the tonemapper. However, the main difference between the two is that you can adjust <strong>Neutral</strong> to be similar in contrast to <strong>ACES</strong>. In the image below, the two examples are almost identical (where the <strong>Neutral</strong> settings are: <strong>Black</strong> In 0.02, <strong>White</strong> In 10, <strong>Black Out</strong> –0.04, <strong>White Out</strong> 10, <strong>White Level</strong> 5.3 and <strong>White Clip</strong> 10):</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsTonemapperNeutral.jpg" alt="">
+</figure>
+
+<p>The main difference you need to take into account is how the two tonemappers handle high intensity color values, such as colored light or emissive effects from explosion effects or fire. The following image shows how an <strong>ACES</strong> tonemapper normalizes high intensity color differently to the <strong>Neutral</strong> tonemapper:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsTonemapperACES.jpg" alt="">
+</figure>
+
+<p><a name="artifacts"></a></p>
+
+<h2>Chromatic Aberration, Grain and Vignette</h2>
+
+<p>Chromatic Aberration, Grain and Vignette are post-process effects that simulate artifacts from real-life camera systems. To use them properly, it is good to understand how each of these occur in real cameras:</p>
+
+<ul>
+<li><p>
+<strong>Chromatic Aberration (CA)</strong> is a dispersion of color that appears on an image if the lens of a camera fails to focus all color to the same convergent point. This is usually found in a poorly calibrated or lower quality lens. While this can sometimes add a sense of realism to a digital Scene, this also means your virtual camera is directed to convey a low quality lens.</p></li>
+<li><p>
+<strong>Grain</strong> seen in the final image of a real photograph or cinema is usually a sign of an insufficient quantity of useful light entering the sensor, such as a dark scene or a high ISO camera sensor/film translating to noise. You can use this effect to simulate camera limitations, to make a pristine 3D-rendered Scene feel more believable. However, too much noise in a Scene can distract the viewer with a false sense of motion, and affect the contrast of the final rendered image.</p></li>
+<li><p>
+<strong>Vignette</strong> is similar to the CA effect; it adds artifacts where a lens could not give consistent light coverage from the center to the edge of the sensor/film of a camera. You can use this effect to give some sense of focus for a central point of a Scene. However, if you use this effect too much, you can make a Scene look like it was processed by an amateur post-editor.</p></li>
+</ul>
+
+<p>The key takeaway from these post-processing fundamentals is that you should practice and develop an understanding of each effect, so that you can effectively use the features with a sense of purpose, and weigh the visual benefit of each additional effect against overall Scene performance.</p>
+
+<p>For advice on additional post-processing features, see documentation on:</p>
+
+<ul>
+<li><a href="PostProcessing-EyeAdaptation.html">Eye Adaptation</a></li>
+<li><a href="PostProcessing-ColorGrading.html">Color Grading (other than tonemapper)</a></li>
+<li><a href="PostProcessing-UserLut.html">User Lut (Lookup Table)</a></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Making believable visuals Best Practice Guide added in Unity 2017.3</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals7.html"></a></span><div class="tip"> Indoor and local lighting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals9.html"></a></span><div class="tip"> Dynamic lighting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

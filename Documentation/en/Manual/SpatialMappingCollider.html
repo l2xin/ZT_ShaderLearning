@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Spatial Mapping Collider</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SpatialMappingCollider.html">English</a></li>
+<li><a href="/ja/current/Manual/SpatialMappingCollider.html">日本語</a></li>
+<li><a href="/es/current/Manual/SpatialMappingCollider.html">Español</a></li>
+<li><a href="/kr/current/Manual/SpatialMappingCollider.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SpatialMappingCollider.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="XR-SDK_overviews.html"> XR SDKs</a></li>
+<li><a href="wmr_sdk_overview.html"> Windows Mixed Reality</a></li>
+<li><a href="SpatialMapping.html"> HoloLens Spatial Mapping</a></li>
+<li><a href="SpatialMappingComponents.html"> Spatial Mapping components</a></li>
+<li> Spatial Mapping Collider</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingComponentsGeneralSettings.html"></a></span><div class="tip">The settings below are common to both __Spatial Mapping Renderer__ and __Spatial Mapping Collider__ components.</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingRenderer.html"></a></span><div class="tip"> Spatial Mapping Renderer</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Spatial Mapping Collider</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Spatial Mapping Collider</strong> <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> allows <span class="tooltip"><strong>holographic</strong><span class="tooltiptext">The former name for Windows Mixed Reality. <a href="wmr_sdk_overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Holographic">Glossary</a></span></span></span> content to interact with real-world physical Surfaces. This <strong>component</strong> handles creating, updating, and destroying the Surface <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>.</p>
+
+<p>The component periodically queries the system for Surface changes in the physical world. When the system reports Surface changes, the <strong>Spatial Mapping Collider</strong> component prioritizes when each reported Surface is baked by Unity. Every time a Surface is baked by the system, a new GameObject is then generated by Unity, containing a <span class="tooltip"><a href="class-MeshFilter.html">Mesh Filter</a><span class="tooltiptext">A mesh component that takes a mesh from your assets and passes it to the Mesh Renderer for rendering on the screen. <a href="class-MeshFilter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshFilter">Glossary</a></span></span></span> and <span class="tooltip"><a href="class-MeshCollider.html">Mesh Collider</a><span class="tooltiptext">A free-form collider component which accepts a mesh reference to define its collision surface shape. <a href="class-MeshCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span> component. A Surface with a <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Collider allows raycasts to collide with it as with any other <strong>mesh</strong> in Unity. See <a href="CameraRays.html">Camera Raycast</a> documentation for more information.</p>
+
+<p>
+<strong>Note:</strong> This component only updates the Mesh Collider components of Surface GameObjects, and not the <span class="tooltip"><strong>Mesh Renderers</strong><span class="tooltiptext">A mesh component that takes the geometry from the Mesh Filter and renders it at the position defined by the object’s Transform component. <a href="class-MeshRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshRenderer">Glossary</a></span></span></span>.</p>
+
+<p>
+<strong>Note: </strong>Spatial Mapping__ Colliders__ update with less latency than <strong>Spatial Mapping Mesh Renderers</strong>. This means that Colliders update faster than Renderers.</p>
+
+<figure>
+<img src="../uploads/Main/spatial_mapping_collider.png" alt="Spatial Mapping Collider component as it appears in the Unity Editor">
+<figcaption>Spatial Mapping Collider component as it appears in the Unity Editor</figcaption>
+</figure>
+
+<h2>Collider Settings</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Enable Collisions</strong></td>
+	<td style="text-align:left;">Check this box to enable Surface <a href="class-MeshCollider.html">Mesh Colliders</a>. This means that holographic content can collide with Surfaces.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mesh Layer</strong></td>
+	<td style="text-align:left;">Set the <span class="tooltip"><a href="Layers.html">Layer</a><span class="tooltiptext">Layers in Unity can be used to selectively opt groups of GameObjects in or out of certain processes or calculations. This includes camera rendering, lighting, physics collisions, or custom calculations in your own code. <a href="Layers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Layer">Glossary</a></span></span></span> property on all the Surface Mesh Colliders. Note that you need to set Layers for raycasts. When performing a raycast, you must indicate which Layers you want the ray intersection to test against. See <a href="CameraRays.html">Camera Raycast</a> documentation for more information, and see <a href="#ExampleScript">Example script: SpatialSurface raycast</a>, below. <br><br>By default, Unity assigns all GameObjects to the <strong>Default</strong> Layer. However, it is good practice to assign your GameObjects to a specific Layer. We recommend that you create a new layer specifically for Spatial Mapping Surfaces and assign this Layer to the Mesh Layer property.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Physic Material</strong><span class="tooltiptext">A physics asset for adjusting the friction and bouncing effects of colliding objects. <a href="class-PhysicMaterial.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicMaterial">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Specify which <strong>Physic Material</strong> to assign to each Surface GameObject’s Mesh Collider. The default is <strong>None (Physic Material)</strong>. <br><br>A <strong>Physic Material</strong> specifies how other Rigidbody components should interact with it. For example, you might want to create a Surface that simulates ice, and therefore applies less friction to a GameObject moving on it. <br><br>The Spatial Mapping Collider component applies its <strong>Physic Material</strong> to all of the Mesh Colliders on its Surface GameObjects. See documentation on <a href="class-PhysicMaterial.html">Physic Material</a> for more information</td>
+</tr>
+</tbody>
+</table>
+
+<h2>General Settings</h2>
+
+<p>The settings below are common to both <strong>Spatial Mapping Renderer</strong> and <strong>Spatial Mapping Collider</strong> components.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Surface Parent</strong></td>
+	<td style="text-align:left;">Select the <strong>Surface Parent</strong> GameObject that you want Surface GameObjects generated by Spatial Mapping components to inherit from. Leave this as <strong>None(Game Object)</strong>, to automatically generate a Surface Parent GameObject.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Freeze Updates</strong></td>
+	<td style="text-align:left;">Check this box to stop the component querying the system for Surface changes. <br><br><strong>Note:</strong> Each Spatial Mapping component periodically queries the Spatial Mapping data for Surface changes in physical space. Querying and baking Surfaces costs memory, performance, and power. For environments that you expect to be mostly static, we recommend that you allow users to look around the environment for a duration of time without updating the Surface GameObjects. <br><br>If you expect the environment in your simulation to be mostly static and unchanging (like a board game), you can scan as much Surface data as you need when your application starts, and then set the <strong>Freeze Updates</strong> property to <strong>true</strong> to prevent further updates. This increases performance slightly and consumes less power.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Time Between Updates</strong></td>
+	<td style="text-align:left;">The time in decimal format seconds (for example, 3.7 or 4.6) between queries for Surface changes in physical space. The default is 2.5 seconds. Note that the more regular the queries, the higher the cost in memory, performance, and power.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Removal Update Count</strong></td>
+	<td style="text-align:left;">The number of updates before a Surface GameObject is removed by the system. You can think of an update as a frame in this case. The default is 10 updates.<br><br><strong>Note</strong>: The removal update countdown begins when Spatial Mapping notifies the component that a Surface GameObject is no longer in the SurfaceObserver’s bounding volume (in that it is no longer within the defined area that the system reports on). This setting allows you to specify the number of updates that should happen after this event before Spatial Mapping removes the Surface GameObject.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Level of Detail</strong></td>
+	<td style="text-align:left;">The quality of the Mesh that the component generates (<strong>Low</strong>, <strong>Medium</strong>, or <strong>High</strong>). The default quality is <strong>Medium</strong>. The higher the quality, the more refined and accurate the generated Collider or rendered Mesh. Using lower quality settings results in a lower cost in performance and power consumption. See the image below this table for an example of the three <span class="tooltip"><strong>Level Of Detail</strong><span class="tooltiptext">A rendering optimisation technique that allows you to reduce the number of triangles rendered for an object in stages as its distance from the camera increases. As long as your objects aren’t all close to the camera at the same time, LOD will reduce the load on the hardware and improve rendering performance. <a href="class-LODGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#levelofdetail">Glossary</a></span></span></span> modes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounding Volume Type</strong></td>
+	<td style="text-align:left;">The component’s bounding volume area shape, in which the application receives Spatial Mapping data. This can be either a <strong>Sphere</strong> or <strong>Axis Aligned Box</strong>. The default is <strong>Axis Aligned Box</strong>.<br><br><strong>Note: </strong>The bounding volume is the defined area about which the system reports physical Surface changes and limits the extents of the Spatial Mapping Mesh.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Size In Meters</strong></td>
+	<td style="text-align:left;">The size of the bounding volume used by component (in meters). Configure <strong>Sphere</strong> by radius; the default radius is 2 meters. Configure <strong>Axis Aligned Box</strong> by its extents; the default is a Vector3 (4,4,4). <br><br><strong>Note:</strong> The observer’s bounding volume is the defined area about which Spatial Mapping reports physical Surface changes.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Level of Detail</h3>
+
+<p>Both Spatial Mapping components allow you to specify one of three Levels of Detail for each component’s generated spatial meshes (Low, Medium, or High) as depicted in the image below.</p>
+
+<figure>
+<img src="../uploads/Main/spatialmapping_lod.jpg" alt="The three Level Of Detail modes for Spatial Mapping meshes">
+<figcaption>The three Level Of Detail modes for Spatial Mapping meshes</figcaption>
+</figure>
+
+<p>When possible, set the Level of Detail setting for <strong>Spatial Mapping Colliders</strong> to Low. This increases performance and reduces power usage when calculating <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> intersections. However, setting <strong>Level of Detail</strong> to <strong>Low</strong> can negatively affect the visual effect of your application, </p>
+
+<h2>Using the Spatial Mapping Collider</h2>
+
+<h3>Surface GameObjects</h3>
+
+<p>When you add a <strong>Spatial Mapping Collider</strong> component to a GameObject in your Scene, it generates its own separate set of Surface GameObjects during runtime. These appear in your Scene parented to a Surface Parent GameObject.</p>
+
+<p>The Surface GameObjects generated by the <strong>Spatial Mapping Collider</strong> contain the following components:</p>
+
+<ul>
+<li><p><a href="class-MeshFilter.html">Mesh Filter</a></p></li>
+<li><p><a href="wmr_input_types.html">World Anchor</a></p></li>
+<li><p><a href="class-MeshCollider.html">Mesh Collider</a></p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/sufacego_with_collider.png" alt="Components of a Surface GameObject generated by a Spatial Mapping Collider">
+<figcaption>Components of a Surface GameObject generated by a <strong>Spatial Mapping Collider</strong></figcaption>
+</figure>
+
+<p>If you add multiple <strong>Spatial Mapping Collider</strong> components to your Scene, each individual component generates its own set of Surface GameObjects. For example, if two GameObjects in your Scene contain a <strong>Spatial Mapping Collider</strong> then your Scene contains two sets of Surface GameObjects; one generated by each component at runtime. This is important to keep in mind for optimization purposes.
+s
+<strong>Note:</strong> When first generated by the Spatial Mapping system, all <strong>Surface GameObjects</strong> are assigned to the <strong>Default Layer</strong>. However, it is good practice to assign your GameObjects to a specific Layer, because raycasting is an expensive calculation to perform. By using Layers, you can filter which GameObjects you are doing your raycast calculations against, and so optimise performance. If you don’t have a lot of complicated Meshes on your <strong>Default</strong> Layer, then doing a raycast test for collision won’t have a large performance cost. However, it is best to organize your GameObjects into Layers to reduce the complexity of raycast tests when doing collisions. You can change the layer assigned to all Surface GameObjects generated by a specific <strong>Spatial Mapping Collider</strong> component by changing the <strong>Collider Settings</strong> &gt; <strong>Mesh Layer</strong> property.</p>
+
+<p><a name="ExampleScript"></a></p>
+
+<h3>Example script: SpatialSurface raycast on a tap gesture event</h3>
+
+<p>The following example demonstrates how to raycast against GameObjects on the <strong>SpatialSurface</strong> Layer and use a GestureRecognizer to initiate this raycast upon detection of a tap gesture event.</p>
+
+<pre><code>
+using UnityEngine;
+using System.Collections; 
+
+//Required for Gesture Recognizer
+using UnityEngine.XR.WSA.Input;
+
+
+public class CustomLayerCollision : MonoBehaviour
+{
+
+    //use this to capture gesture events
+
+    private GestureRecognizer GR_recognizer;
+
+    void Start()
+    {
+        //Initialise the GestureRecognizer
+
+        GR_recognizer = new GestureRecognizer();
+
+        //Initiate gesture capture
+
+        GR_recognizer.StartCapturingGestures();
+
+        //Tell the GestureRecognizer which events to listen for
+
+        GR_recognizer.SetRecognizableGestures(GestureSettings.Tap);
+
+        //Subscribe the Tapped event to the DetectCollisions method
+
+        //This makes this method be called any time the GestureRecognizer detects a tap event
+
+        GR_recognizer.Tapped += DetectCollisions;
+
+        //When the user initiates a tap gesture, the DetectCollisions   
+
+        //method is called by the Tapped event delegate to do a collision test using Raycasting
+
+        //See [GestureRecognizer API reference](../ScriptReference/XR.WSA.Input.GestureRecognizer.html) for more details
+    }
+    //Method to fire a raycast on a Tap event
+    public void DetectCollisions(TappedEventArgs tapEvent)
+    {
+        // Raycast against all GameObjects that are on either the
+        // spatial Surface or UI layers.
+
+        int layerMask = 1 &lt;&lt; LayerMask.NameToLayer(&quot;SpatialSurface&quot;);
+
+        //construct a Ray using the position and forward direction of the User’s head
+        Ray GazeRay = new Ray(tapEvent.headPose.position, tapEvent.headPose.forward);
+
+        //Raycast using constructed Ray from Gaze and store collisions in array hits
+
+        RaycastHit[] hits = Physics.RaycastAll(GazeRay, float.MaxValue, layerMask);
+
+        if (hits.Length &gt; 0)
+        {
+            foreach (RaycastHit hit in hits)
+            {
+                Debug.Log(string.Format(&quot;Hit Object **\&quot;**{0}**\&quot;** at position **\&quot;**{1}**\&quot;**&quot;, hit.collider.gameObject, hit.point));
+            }
+        }
+        else
+        {
+            Debug.Log(&quot;Nothing was hit.&quot;);
+        }
+    }
+}
+
+</code></pre>
+
+<p>See documentation on <a href="Layers.html">Layers</a> and <a href="CameraRays.html">Raycasting from Camera</a> for more information.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Spatial Mapping for Hololens documentation updated in 2017.3</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingComponentsGeneralSettings.html"></a></span><div class="tip">The settings below are common to both __Spatial Mapping Renderer__ and __Spatial Mapping Collider__ components.</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingRenderer.html"></a></span><div class="tip"> Spatial Mapping Renderer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Art Asset best practice guide</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/HOWTO-ArtAssetBestPracticeGuide.html">English</a></li>
+<li><a href="/ja/current/Manual/HOWTO-ArtAssetBestPracticeGuide.html">日本語</a></li>
+<li><a href="/es/current/Manual/HOWTO-ArtAssetBestPracticeGuide.html">Español</a></li>
+<li><a href="/kr/current/Manual/HOWTO-ArtAssetBestPracticeGuide.html">한국어</a></li>
+<li><a href="/ru/current/Manual/HOWTO-ArtAssetBestPracticeGuide.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsHowTos.html">Graphics HOWTOs</a></li>
+<li> Art Asset best practice guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-Water.html"></a></span><div class="tip">Water in Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-importObject.html"></a></span><div class="tip"> Importing models from 3D modeling software</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Art Asset best practice guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity supports textured 3D models from a variety of programs or sources. This short guide has been put together by games artists with developers at Unity to help you create <span class="tooltip"><strong>Assets</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> that work better and more efficiently in your Unity project.</p>
+
+<h2>Scale and units</h2>
+
+<p>Working to scale can be important for both lighting and physics simulation.</p>
+
+<ul>
+<li>Set your system and project units to Metric for your software to work consistently with Unity.
+
+<ul>
+<li>Be aware that different systems use different units - for example, the system unit default for Max is inches while in Maya it is centimeters.</li>
+<li>Unity has different scaling for importing FBX vs. importing native 3D modeling software files. Make sure you check the <a href="FBXImporter-Model.html">FBX import scale settings</a>. For example, if you want to achieve Scale Factor = 1, File Scale = 1 and Object Transform Scale = 1, use one of the <a href="3D-formats.html">proprietary file formats</a>.</li>
+<li>If in doubt, export a meter cube with your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> to match in Unity.</li>
+</ul>
+</li>
+<li>Animation frame rate defaults can be different in different packages. Because of this, it is a good idea to set this consistently across your pipeline (for example, at 30fps).</li>
+</ul>
+
+<h2>Files and objects</h2>
+
+<ul>
+<li>Name objects in your Scene sensibly and uniquely. This helps you locate and troubleshoot specific Meshes in your project.</li>
+<li>Avoid special characters such as <code>*()?&quot;#$</code>.</li>
+<li>Use simple but descriptive names for both objects and files in order to allow for duplication later.</li>
+<li>Keep your hierarchies as simple as you can.</li>
+<li>With big projects in your 3D application, consider having a working file outside your Unity project directory. This can often save time when running updates and importing unnecessary data.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/HierarchyWrongRight.png" alt="Sensibly named objects help you find things quickly">
+<figcaption>Sensibly named objects help you find things quickly</figcaption>
+</figure>
+
+<h3>Mesh</h3>
+
+<ul>
+<li>Build with an efficient topology. Use polygons only where you need them.</li>
+<li>Optimise your geometry if it has too many polygons. Many character models need to be intelligently optimized or even rebuilt by an artist, especially if sourced or built from:
+
+<ul>
+<li>3D capture data</li>
+<li>Poser</li>
+<li>Zbrush</li>
+<li>Other high density NURBS patch models designed for render</li>
+</ul>
+</li>
+<li>Where you can afford them, evenly spaced polygons in buildings, landscape and architecture will help spread lighting and avoid awkward kinks.</li>
+<li>Avoid really long thin triangles.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/GeomWrongRight.png" alt="Stairway to framerate heaven">
+<figcaption>Stairway to framerate heaven</figcaption>
+</figure>
+
+<p>The method you use to construct objects can have a massive effect on the number of polygons, especially when not optimized. In this diagram, the same shape <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> has 156 triangles on the right and 726 on the left. 726 may not sound like a great deal of polygons, but if this is used 40 times in a level, you will really start to see the savings. A good rule of thumb is often to start simple and add detail where needed. It’s always easier to add polygons than take them away.</p>
+
+<h3>Textures</h3>
+
+<p>If you author your textures to a power of two (for example, 512x512 or 256x1024), the textures will be more efficient and won’t need rescaling at build time. You can use up to 4096x4096 <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span>, but 2048x2048 is the highest available on many graphics cards and platforms.</p>
+
+<p>Search online for expert advice on creating good textures, but some of these guidelines can help you get the most efficient results from your project:</p>
+
+<ul>
+<li>Work with a high-resolution source file outside your Unity project (such as a .psd or Gimp file). You can always downsize from the source, but not the other way round.</li>
+<li>Use the Texture resolution output you require in your Scene (save a copy, for example a 256x256 optimised .png or a .tga file). You can make a judgement based on where the Texture will be seen and where it is mapped.</li>
+<li>Store your output Texture files together in your Unity project (for example, in \Assets\textures).</li>
+<li>Make sure your 3D working file refers to the same Textures, for consistency when you save or export.</li>
+<li>Make use of the available space in your Texture, but be aware of different Materials requiring different parts of the same Texture. You can end up using or loading that Texture multiple times.</li>
+<li>For alpha and elements that may require different <span class="tooltip"><strong>Shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>, separate the Textures. For example, the single Texture, below left, has been replaced by three smaller Textures, below right.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/Pack_WrongRight2.png" alt="One Texture (left) versus three Textures (right)">
+<figcaption>One Texture (left) versus three Textures (right)</figcaption>
+</figure>
+
+<ul>
+<li>Make use of tiling Textures which seamlessly repeat. This allows you to use better resolution repeating over space.</li>
+<li>Remove easily noticeable repeating elements from your bitmap, and be careful with contrast. To add details, use decals and objects to break up the repeats.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/TexWrongRight.png" alt="Tiling Textures">
+<figcaption>Tiling Textures</figcaption>
+</figure>
+
+<ul>
+<li>Unity takes care of <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> for the output platform, so unless your source is already a .jpg of the correct resolution, it’s better to use a lossless format for your Textures.</li>
+<li>When creating a Texture page from photographs, reduce the page to individual modular sections that can repeat. For example, you don’t need 12 of the same window using up Texture space. This means you can have more pixel detail for that one window.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BuildingWrongRight.png" alt="Less is more when it comes to windows">
+<figcaption>Less is more when it comes to windows</figcaption>
+</figure>
+
+<h3>Materials</h3>
+
+<ul>
+<li>Organize and name the materials in your Scene. This way you can find and edit your materials in Unity more easily when they’ve imported.</li>
+<li>You can choose to create Materials in Unity from either:
+
+<ul>
+<li>&lt;modelname&gt; - &lt;material name&gt;
+or</li>
+<li>&lt;texture name&gt;
+Make sure you know which one you want.</li>
+</ul>
+</li>
+<li>Settings for Materials in your native package will not all be imported to Unity:
+
+<ul>
+<li>
+<strong>Diffuse Colour</strong>, <strong>Diffuse Texture</strong> and <strong>Names</strong> are usually supported.</li>
+<li>Shader model, specular, normal, other secondary Textures and substance material settings are not recognised or imported.</li>
+</ul>
+</li>
+</ul>
+
+<h3>Import and export</h3>
+
+<p>Unity can use two types of files: saved 3D application files, and exported 3D formats. Which you decide to use can be quite important. For more information, see <a href="3D-formats.html">Model file formats</a>.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-Water.html"></a></span><div class="tip">Water in Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-importObject.html"></a></span><div class="tip"> Importing models from 3D modeling software</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

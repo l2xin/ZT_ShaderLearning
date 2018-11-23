@@ -1,0 +1,470 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Configurable Joint</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-ConfigurableJoint.html">English</a></li>
+<li><a href="/ja/current/Manual/class-ConfigurableJoint.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-ConfigurableJoint.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-ConfigurableJoint.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-ConfigurableJoint.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li><a href="Physics3DReference.html">3D Physics Reference</a></li>
+<li>Configurable Joint</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-CharacterJoint.html"></a></span><div class="tip">Character Joint</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ConstantForce.html"></a></span><div class="tip">Constant Force</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Configurable Joint</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/ConfigurableJoint.html' title='Go to ConfigurableJoint page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<strong>Configurable Joints</strong> are extremely customisable since they incorporate all the functionality of the other joint types. You can use them to create anything from adapted versions of the existing <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> to highly specialised <strong>joints</strong> of your own design.</p>
+
+<h2>Properties</h2>
+
+<figure>
+<img src="../uploads/Main/ConfigurableJointProps.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Connected Body</strong></td>
+	<td style="text-align:left;">The other <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> object to which the joint is connected. You can set this to <em>None</em> to indicate that the joint is attached to a fixed position in space rather than another <strong>Rigidbody</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Anchor</strong><span class="tooltiptext">A UI layout tool that fixes a UI element to a parent element. Anchors are shown as four small triangular handles in the Scene View and anchor information is also shown in the Inspector. <a href="UIBasicLayout.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Anchor">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">The point where the center of the joint is defined. All physics-based simulation will use this point as the center in calculations</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Axis</strong></td>
+	<td style="text-align:left;">The local axis that will define the object’s natural rotation based on physics simulation</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Configure Connected Anchor</strong></td>
+	<td style="text-align:left;">If this is enabled, then the Connected Anchor position will be calculated automatically to match the global position of the anchor property. This is the default behavior. If this is disabled, you can configure the position of the connected anchor manually.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Connected Anchor</strong></td>
+	<td style="text-align:left;">Manual configuration of the connected anchor position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Secondary Axis</strong></td>
+	<td style="text-align:left;">Together, <strong>Axis</strong> and <strong>Secondary Axis</strong> define the local coordinate system of the joint. The third axis is set to be orthogonal to the other two.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>X, Y, Z Motion</strong></td>
+	<td style="text-align:left;">Allow movement along the X, Y or Z axes to be <em>Free</em>, completely <em>Locked</em>, or <em>Limited</em> according to the limit properties described below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular X, Y, Z Motion</strong></td>
+	<td style="text-align:left;">Allow rotation around the X, Y or Z axes to be <em>Free</em>, completely <em>Locked</em>, or <em>Limited</em> according to the limit properties described below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Linear Limit Spring</strong></td>
+	<td style="text-align:left;">A spring force applied to pull the object back when it goes past the limit position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Spring</strong>
+</td>
+	<td style="text-align:left;">The spring force. If this value is set to zero then the limit will be impassable; a value other than zero will make the limit elastic.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Damper</strong>
+</td>
+	<td style="text-align:left;">The reduction of the spring force in proportion to the speed of the joint’s movement. Setting a value above zero allows the joint to “dampen” oscillations which would otherwise carry on indefinitely.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Linear Limit</strong></td>
+	<td style="text-align:left;">Limit on the joint’s linear movement (ie, movement over distance rather than rotation), specified as a distance from the joint’s origin.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Limit</strong>
+</td>
+	<td style="text-align:left;">The distance in world units from the origin to the limit.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Bounciness</strong>
+</td>
+	<td style="text-align:left;">Bounce force applied to the object to push it back when it reaches the limit distance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <span class="tooltip"><strong>Contact Distance</strong><span class="tooltiptext">A joint limit property that sets the minimum distance tolerance between the joint position and the limit at which the limit will be enforced. <a href="class-CharacterJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ContactDistance">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">The minimum distance tolerance (between the joint position and the limit) at which the limit will be enforced. A high tolerance makes the limit less likely to be violated when the object is moving fast. However, this will also require the limit to be taken into account by the physics simulation more often and this will tend to reduce performance slightly.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular X Limit Spring</strong></td>
+	<td style="text-align:left;">A spring torque applied to rotate the object back when it goes past the limit angle of the joint.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Spring</strong>
+</td>
+	<td style="text-align:left;">The spring torque. If this value is set to zero then the limit will be impassable; a value other than zero will make the limit elastic.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Damper</strong>
+</td>
+	<td style="text-align:left;">The reduction of the spring torque in proportion to the speed of the joint’s rotation. Setting a value above zero allows the joint to “dampen” oscillations which would otherwise carry on indefinitely.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Low Angular X Limit</strong></td>
+	<td style="text-align:left;">Lower limit on the joint’s rotation around the X axis, specified as a angle from the joint’s original rotation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Limit</strong>
+</td>
+	<td style="text-align:left;">The limit angle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Bounciness</strong>
+</td>
+	<td style="text-align:left;">Bounce torque applied to the object when its rotation reaches the limit angle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Contact Distance</strong>
+</td>
+	<td style="text-align:left;">The minimum angular tolerance (between the joint angle and the limit) at which the limit will be enforced. A high tolerance makes the limit less likely to be violated when the object is moving fast. However, this will also require the limit to be taken into account by the physics simulation more often and this will tend to reduce performance slightly.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>High Angular XLimit</strong></td>
+	<td style="text-align:left;">This is similar to the <em>Low Angular X Limit</em> property described above but it determines the upper angular limit of the joint’s rotation rather than the lower limit.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular YZ Limit Spring</strong></td>
+	<td style="text-align:left;">This is similar to the <em>Angular X Limit Spring</em> described above but applies to rotation around both the Y and Z axes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Y Limit</strong></td>
+	<td style="text-align:left;">Analogous to the <em>Angular X Limit</em> properties described above but applies to the Y axis and regards both the upper and lower angular limits as being the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Z Limit</strong></td>
+	<td style="text-align:left;">Analogous to the <em>Angular X Limit</em> properties described above but applies to the Z axis and regards both the upper and lower angular limits as being the same.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target Position</strong></td>
+	<td style="text-align:left;">The target position that the joint’s drive force should move it to.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target Velocity</strong></td>
+	<td style="text-align:left;">The desired velocity with which the joint should move to the <em>Target Position</em> under the drive force.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>XDrive</strong></td>
+	<td style="text-align:left;">The drive force that moves the joint linearly along its local X axis.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Mode</strong>
+</td>
+	<td style="text-align:left;">The mode determines whether the joint should move to reach a specified <strong>Position</strong>, a specified <span class="tooltip"><strong>Velocity</strong><span class="tooltiptext">A vector that defines the speed and direction of motion of a Rigidbody <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Velocity">Glossary</a></span></span></span> or both.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position Spring</strong>
+</td>
+	<td style="text-align:left;">The spring force that moves the joint towards its target position. This is only used when the drive mode is set to <em>Position</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position Damper</strong>
+</td>
+	<td style="text-align:left;">The reduction of the spring force in proportion to the speed of the joint’s movement. Setting a value above zero allows the joint to “dampen” oscillations which would otherwise carry on indefinitely. This is only used when the drive mode is set to <em>Position</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Maximum Force</strong>
+</td>
+	<td style="text-align:left;">The force used to accelerate the joint toward its target velocity. This is only used when the drive mode is set to <em>Velocity</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>YDrive</strong></td>
+	<td style="text-align:left;">This is analogous to the <em>X Drive</em> described above but applies to the joint’s Y axis.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>ZDrive</strong></td>
+	<td style="text-align:left;">This is analogous to the <em>X Drive</em> described above but applies to the joint’s Z axis.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target Rotation</strong></td>
+	<td style="text-align:left;">The orientation that the joint’s rotational drive should rotate towards, specified as a <span class="tooltip"><a href="../ScriptReference/Quaternion.html">quaternion</a><span class="tooltiptext">Unity’s standard way of representing rotations as data. When writing code that deals with rotations, you should usually use the Quaternion class and its methods. <a href="QuaternionAndEulerRotationsInUnity.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Quaternion">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target Angular Velocity</strong></td>
+	<td style="text-align:left;">The angular velocity that the joint’s rotational drive should aim to achieve. This is specified as a vector whose length specifies the rotational speed and whose direction defines the axis of rotation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rotation Drive Mode</strong></td>
+	<td style="text-align:left;">The way in which the drive force will be applied to the object to rotate it to the target orientation. If the mode is set to <em>X and YZ</em>, the torque will be applied around these axes as specified by the <em>Angular X/YZ Drive</em> properties described below. If <strong>Slerp</strong> mode is used then the <em>Slerp Drive</em> properties will determine the drive torque.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular X Drive</strong></td>
+	<td style="text-align:left;">This specifies how the joint will be rotated by the drive torque around its local X axis. It is used only if the <em>Rotation Drive Mode</em> property described above is set to <em>X &amp; YZ</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Mode</strong>
+</td>
+	<td style="text-align:left;">The mode determines whether the joint should move to reach a specified angular <strong>Position</strong>, a specified angular <strong>Velocity</strong> or both.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position Spring</strong>
+</td>
+	<td style="text-align:left;">The spring torque that rotates the joint towards its target position. This is only used when the drive mode is set to <em>Position</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position Damper</strong>
+</td>
+	<td style="text-align:left;">The reduction of the spring torque in proportion to the speed of the joint’s movement. Setting a value above zero allows the joint to “dampen” oscillations which would otherwise carry on indefinitely. This is only used when the drive mode is set to <em>Position</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Maximum Force</strong>
+</td>
+	<td style="text-align:left;">The torque used to accelerate the joint toward its target velocity. This is only used when the drive mode is set to <em>Velocity</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular YZDrive</strong></td>
+	<td style="text-align:left;">This is analogous to the <em>Angular X Drive</em> described above but applies to both the joint’s Y and Z axes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Slerp Drive</strong></td>
+	<td style="text-align:left;">This specifies how the joint will be rotated by the drive torque around all local axes. It is used only if the <em>Rotation Drive Mode</em> property described above is set to <em>Slerp</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Mode</strong>
+</td>
+	<td style="text-align:left;">The mode determines whether the joint should move to reach a specified angular <strong>Position</strong>, a specified angular <strong>Velocity</strong> or both.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position Spring</strong>
+</td>
+	<td style="text-align:left;">The spring torque that rotates the joint towards its target position. This is only used when the drive mode is set to <em>Position</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Position Damper</strong>
+</td>
+	<td style="text-align:left;">The reduction of the spring torque in proportion to the speed of the joint’s movement. Setting a value above zero allows the joint to “dampen” oscillations which would otherwise carry on indefinitely. This is only used when the drive mode is set to <em>Position</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Maximum Force</strong>
+</td>
+	<td style="text-align:left;">The torque used to accelerate the joint toward its target velocity. This is only used when the drive mode is set to <em>Velocity</em> or <em>Position and Velocity</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Projection Mode</strong></td>
+	<td style="text-align:left;">This defines how the joint will be snapped back to its constraints when it unexpectedly moves beyond them (due to the physics engine being unable to reconcile the current combination of forces within the simulation). The options are <em>None</em> and <em>Position and Rotation</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Projection Distance</strong></td>
+	<td style="text-align:left;">The distance the joint must move beyond its constraints before the <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> will attempt to snap it back to an acceptable position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Projection Angle</strong></td>
+	<td style="text-align:left;">The angle the joint must rotate beyond its constraints before the physics engine will attempt to snap it back to an acceptable position.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Configured in World Space</strong></td>
+	<td style="text-align:left;">Should the values set by the various target and drive properties be calculated in world space instead of the object’s local space?</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Swap Bodies</strong></td>
+	<td style="text-align:left;">If enabled, this will make the joint behave as though the <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> were attached to the connected Rigidbody (ie, the other end of the joint).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Force</strong></td>
+	<td style="text-align:left;">If the joint is pushed beyond its constraints by a force larger than this value then the joint will be permanently “broken” and deleted.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Torque</strong></td>
+	<td style="text-align:left;">If the joint is rotated beyond its constraints by a torque larger than this value then the joint will be permanently “broken” and deleted.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Collision</strong></td>
+	<td style="text-align:left;">Should the object with the joint be able to collide with the connected object (as opposed to just passing through each other)?</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Preprocessing</strong></td>
+	<td style="text-align:left;">If preprocessing is disabled then certain “impossible” configurations of the joint will be kept more stable rather than drifting wildly out of control.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>Like the other joints, the Configurable Joint allows you to restrict the movement of an object but also to drive it to a target velocity or position using forces. However, there are many configuration options available and they can be quite subtle when used in combination; you may need to experiment with different options to get the joint to behave exactly the way you want.</p>
+
+<h3>Constraining Movement</h3>
+
+<p>You can constrain both translational movement and rotation on each axis independently using the <em>X, Y, Z Motion</em> and <em>X, Y, Z Rotation</em> properties. If <em>Configured In World Space</em> is enabled then movements will be constrained to the world axes rather than the object’s local axes. Each of these properties can be set to <em>Locked</em>, <em>Limited</em> or <em>Free</em>:</p>
+
+<ul>
+<li>A <strong>Locked</strong> axis will allow no movement at all. For example, an object locked in the world Y axis cannot move up or down.</li>
+<li>A <strong>Limited</strong> axis allows free movement between predefined limits, as explained below. For example, a gun turret might be given a restricted arc of fire by limiting its Y rotation to a specific angular range.</li>
+<li>A <strong>Free</strong> axis allows any movement.</li>
+</ul>
+
+<p>You can limit translational movement using the <em>Linear Limit</em> property, which defines the maximum distance the joint can move from its point of origin. (measured along each axis separately). For example, you could constrain the puck for an air hockey table by locking the joint in the Y axis (in world space), leaving it free in the Z axis and setting the limit for the X axis to fit the width of the table; the puck would then be constrained to stay within the playing area.</p>
+
+<figure>
+<img src="../uploads/Main/XZLimit.svg" alt="">
+</figure>
+
+<p>You can also limit rotation using the <em>Angular Limit</em> properties. Unlike the linear limit, these allow you to specify different limit values for each axis. Additionally, you can also define separate upper and lower limits on the angle of rotation for the X axis (the other two axes use the same angle either side of the original rotation). For example, you could construct a “teeter table” using a flat plane with a joint constrained to allow slight tilting in the X and Z directions while leaving the Y rotation locked.</p>
+
+<h4>Bounciness and Springs</h4>
+
+<p>By default, a joint simply stops moving when it runs into its limit. However, an inelastic <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> like this is rare in the real world and so it is useful to add some feeling of bounce to a constrained joint. You can use the <em>Bounciness</em> property of the linear and angular limits to make the constrained object bounce back after it hits its limit. Most collisions will look more natural with a small amount of bounciness but you can also set this property higher to simulate unusually bouncy boundaries like, say, the cushions of a pool table.</p>
+
+<figure>
+<img src="../uploads/Main/CJointBounciness.svg" alt="Bouncy joint does not cross the limit">
+<figcaption>Bouncy joint does not cross the limit</figcaption>
+</figure>
+
+<p>The joint limits can be softened further using the spring properties: <em>Linear Limit Spring</em> for translation and <em>Angular X/YZ Limit Spring</em> for rotation. If you set the <em>Spring</em> property to a value above zero, the joint will not abruptly stop moving when it hits a limit but will be drawn back to the limit position by a spring force (the strength of the force is determined by the <em>Spring</em> value). By default, the spring is perfectly elastic and will tend to catapult the joint back in the direction opposite to the collision. However, you can use the <em>Damper</em> property to reduce the elasticity and return the joint to the limit more gently. For example, you might use a <span class="tooltip"><strong>spring joint</strong><span class="tooltiptext">A joint type that connects two Rigidbodies together but allows the distance between them to change as though they were connected by a spring. <a href="class-SpringJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SpringJoint">Glossary</a></span></span></span> to create a lever that can be pulled to the left or right but then springs back to an upright position. If the springs are perfectly elastic then the lever will tend to oscillate back and forth around the centre point after it is released. However, if you add enough damping then the spring will rapidly settle down to the neutral position.</p>
+
+<figure>
+<img src="../uploads/Main/CJointSpring.svg" alt="Spring joint crosses the limit but is pulled back to it">
+<figcaption>Spring joint crosses the limit but is pulled back to it</figcaption>
+</figure>
+
+<h3>Drive forces</h3>
+
+<p>Not only can a joint react to the movements of the attached object, but it can also actively apply <em>drive forces</em> to set the object in motion. Some joints simple need to keep the object moving at a constant speed as with, say, a rotary motor turning a fan blade. You can set your desired velocity for such joints using the <em>Target Velocity</em> and <em>Target Angluar Velocity</em> properties. You might also require joints that move their object towards a particular position in space (or a particular orientation); you can set these using the <em>Target Position</em> and <em>Target Rotation</em> properties. For example, you could implement a forklift by mounting the forks on a configurable joint and then setting the target height to raise them from a script.</p>
+
+<p>With the target set, the <em>X, Y, Z Drive</em> and <em>Angular X/YZ Drive</em> (or alternatively <em>Slerp Drive</em>) properties then specify the force used to push the joint toward it. The Drives’ <em>Mode</em> property selects whether the joint should seek a target position, velocity or both. The <em>Position Spring</em> and <em>Position Damper</em> work in the same way as for the joint limits when seeking a target position. In velocity mode, the spring force is dependent on the “distance” between the current velocity and the target velocity; the damper helps the velocity to settle at the chosen value rather than oscillating endlessly around it. The <em>Maximum Force</em> property is a final refinement that prevents the force applied by the spring from exceeding a limit value regardless of how far the joint is from its target. This prevents the circumstance where a joint stretched far from its target rapidly snaps the object back in an uncontrolled way.</p>
+
+<p>Note that with all the drive forces (except for <em>Slerp Drive</em>, described below), the force is applied separately in each axis. So, for example, you could implement a spacecraft that has a high forward flying speed but a relatively low speed in sideways steering motion.</p>
+
+<h4>Slerp Drive</h4>
+
+<p>While the other drive modes apply forces in separate axes, <em>Slerp Drive</em> uses the Quaternion’s spherical <span class="tooltip"><strong>interpolation</strong><span class="tooltiptext">The estimation of values that determine the shape of an animation curve between two keys. <a href="TimelineChangingInterpolation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#interpolation">Glossary</a></span></span></span> or “slerp” functionality to reorient the joint. Rather than isolating individual axes, the slerp process essentially finds the minimum total rotation that will take the object from the current orientation to the target and applies it on all axes as necessary. Slerp drive is slightly easier to configure and fine for most purposes but does not allow you to specify different drive forces for the X and Y/Z axes.</p>
+
+<p>To enable Slerp drive, you should change the <em>Rotation Drive Mode</em> property from <em>X and YZ</em> to <em>Slerp</em>. Note that the modes are mutually exclusive; the joint will use either the <em>Angular X/YZ Drive</em> values or the <em>Slerp Drive</em> values but not both together.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-CharacterJoint.html"></a></span><div class="tip">Character Joint</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ConstantForce.html"></a></span><div class="tip">Constant Force</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  NavMesh building components API</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Navigation" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/NavMesh-BuildingComponents-API.html">English</a></li>
+<li><a href="/ja/current/Manual/NavMesh-BuildingComponents-API.html">日本語</a></li>
+<li><a href="/es/current/Manual/NavMesh-BuildingComponents-API.html">Español</a></li>
+<li><a href="/kr/current/Manual/NavMesh-BuildingComponents-API.html">한국어</a></li>
+<li><a href="/ru/current/Manual/NavMesh-BuildingComponents-API.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Navigation.html">Navigation and Pathfinding</a></li>
+<li><a href="nav-Overview.html">Navigation Overview</a></li>
+<li><a href="NavMesh-BuildingComponents.html"> NavMesh building components</a></li>
+<li> NavMesh building components API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NavMeshLink.html"></a></span><div class="tip"> NavMesh Link</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-AdvancedSettings.html"></a></span><div class="tip">Advanced NavMesh Bake Settings</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>NavMesh building components API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><span class="tooltip"><a href="nav-NavigationSystem.html">NavMesh</a><span class="tooltiptext">A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation. <a href="nav-BuildingNavMesh.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NavMesh">Glossary</a></span></span></span> building <span class="tooltip"><a href="UsingComponents.html">components</a><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> provide you with additional controls for building (also known as <a href="nav-BuildingNavMesh.html">baking</a>) and using NavMeshes at run time and in the Unity Editor.</p>
+
+<p>NavMesh Modifiers are not in the Unity standard install; see documentation on <a href="NavMesh-BuildingComponents.html">high-level NavMesh building components</a> for information on how to access them.</p>
+
+<h3>NavMeshSurface</h3>
+
+<h4>Properties</h4>
+
+<ul>
+<li>
+<code>agentTypeID</code> – ID describing the Agent type the NavMesh should be built for.</li>
+<li>
+<code>collectObjects</code> – Defines how input geometry is collected from the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, one of <code>UnityEngine.AI.CollectObjects:</code>
+
+<ul>
+<li>
+<code>All</code> – Use all objects in the scene.</li>
+<li>
+<code>Volume</code> – Use all <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in the Scene that touch the <span class="tooltip"><strong>bounding volume</strong><span class="tooltiptext">A closed shape representing the edges and faces of a collider or trigger. <a href="SpatialMappingComponentsGeneralSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Boundingvolume">Glossary</a></span></span></span> (see <code>size</code> and <code>center</code>)</li>
+<li>
+<code>Children</code> – use all objects which are children to the Game Object where the NavMesh Surface is attached to.</li>
+</ul>
+</li>
+<li>
+<code>size</code> – Dimensions of the build volume. The size is not affected by scaling.</li>
+<li>
+<code>center</code> – Center of the build volume relative to the transform center.</li>
+<li>
+<code>layerMask</code> – Bitmask defining the layers on which the GameObjects must be to be included in the baking.</li>
+<li>
+<code>useGeometry</code> – Defines which geometry is used for baking, one of <code>UnityEngine.NavMeshCollectGeometry</code>:
+
+<ul>
+<li>
+<code>RenderMeshes</code> – Use geometry from render meshes and terrains</li>
+<li>
+<code>PhysicsColliders</code> – Use geometry from <span class="tooltip"><strong>colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> and <span class="tooltip"><strong>terrains</strong><span class="tooltiptext">The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape. <a href="terrain-UsingTerrains.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Terrain">Glossary</a></span></span></span>.</li>
+</ul>
+</li>
+<li>
+<code>defaultArea</code> – Default area type for all input geometries, unless otherwise specified.</li>
+<li>
+<code>ignoreNavMeshAgent</code> – True if GameObjects with a Nav <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Agent component should be ignored as input.</li>
+<li>
+<code>ignoreNavMeshObstacle</code> – True if GameObjects with a Nav Mesh Obstacle component should be ignored as input.</li>
+<li>
+<code>overrideTileSize</code> – True if tile size is set.</li>
+<li>
+<code>tileSize</code> – Tile size in <span class="tooltip"><strong>voxels</strong><span class="tooltiptext">A 3D pixel. <a href="nav-AdvancedSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Voxel">Glossary</a></span></span></span> (the component description includes information on how to choose tile size).</li>
+<li>
+<code>overrideVoxelSize</code> – True if the voxel size is set.</li>
+<li>
+<code>voxelSize</code> – Size of the voxel in world units (the component description includes information on how to choose tile size).</li>
+<li>
+<code>buildHeightMesh</code> – Not implemented.</li>
+<li>
+<code>bakedNavMeshData</code> – Reference to the NavMeshData the surface uses, or null if not set.</li>
+<li>
+<code>activeSurfaces</code> – List of all active NavMeshSurfaces.</li>
+</ul>
+
+<p>
+<strong>Note:</strong> The above values affect how the bake results, and so you must call <code>Bake()</code> to include them.</p>
+
+<h4>Public Functions</h4>
+
+<ul>
+<li><code>void Bake ()</code></li>
+</ul>
+
+<p>Bakes a new NavMeshData based on the parameters set on NavMesh Surface. The data can be accessed via <code>bakedNavMeshData</code>.</p>
+
+<h3>NavMesh Modifier</h3>
+
+<h4>Properties</h4>
+
+<ul>
+<li>
+<code>overrideArea</code> – True if the modifier overrides area type.</li>
+<li>
+<code>area</code> – New area type to apply.</li>
+<li>
+<code>ignoreFromBuild</code> – True if the GameObject which contains the modifier and its children should be not be used to NavMesh baking.</li>
+<li>
+<code>activeModifiers</code> – List of all active NavMeshModifiers.</li>
+</ul>
+
+<h4>Public Functions</h4>
+
+<ul>
+<li><code>bool AffectsAgentType(int agentTypeID)</code></li>
+</ul>
+
+<p>Returns true if the modifier applies to the specified Agent type, otherwise false. </p>
+
+<h3>NavMesh Modifier Volume</h3>
+
+<h4>Properties</h4>
+
+<ul>
+<li>
+<code>size</code> – Size of the bounding volume in local space units. Transform affects the size.</li>
+<li>
+<code>center</code> – Center of the bounding volume in local space units. Transform affects the center.</li>
+<li>
+<code>area</code> – Area type to apply for the NavMesh areas that are inside the bounding volume.</li>
+</ul>
+
+<h4>Public Functions</h4>
+
+<ul>
+<li><code>bool AffectsAgentType(int agentTypeID)</code></li>
+</ul>
+
+<p>Returns true of the the modifier applies for the specified Agent type. </p>
+
+<h3>NavMesh Link</h3>
+
+<h4>Properties</h4>
+
+<ul>
+<li>
+<code>agentTypeID</code> – The type of Agent that can use the link.</li>
+<li>
+<code>startPoint</code> – Start point of the link in local space units. Transform affects the location.</li>
+<li>
+<code>endPoint</code> – End point of the link in local space units. Transform affects the location.</li>
+<li>
+<code>width</code> – Width of the link in world length units.</li>
+<li>
+<code>bidirectional</code> – If true, the link can be traversed both ways. If false, the link can be traversed only from start to end.</li>
+<li>
+<code>autoUpdate</code> – If true, the link updates the end points to follow the transform of the GameObject every frame.</li>
+<li>
+<code>area</code> – Area type of the link (used for pathfinding cost).</li>
+</ul>
+
+<h4>Public Functions</h4>
+
+<ul>
+<li><code>void UpdateLink()</code></li>
+</ul>
+
+<p>Updates the link to match the associated transform. This is useful for updating a link, for example after changing the transform position, but is not necessary if the <code>autoUpdate</code> property is enabled. However calling <code>UpdateLink</code> can have a much smaller performance impact if you rarely change the link transform.</p>
+
+<h2>
+<br><br>
+</h2>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–26 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New feature in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NavMeshLink.html"></a></span><div class="tip"> NavMesh Link</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-AdvancedSettings.html"></a></span><div class="tip">Advanced NavMesh Bake Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

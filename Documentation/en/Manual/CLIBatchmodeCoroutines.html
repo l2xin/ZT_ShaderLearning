@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Batch mode and built-in coroutine compatibility</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/CLIBatchmodeCoroutines.html">English</a></li>
+<li><a href="/ja/current/Manual/CLIBatchmodeCoroutines.html">日本語</a></li>
+<li><a href="/es/current/Manual/CLIBatchmodeCoroutines.html">Español</a></li>
+<li><a href="/kr/current/Manual/CLIBatchmodeCoroutines.html">한국어</a></li>
+<li><a href="/ru/current/Manual/CLIBatchmodeCoroutines.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AdvancedEditor.html">Advanced Editor Topics</a></li>
+<li><a href="CommandLineArguments.html"> Command line arguments</a></li>
+<li> Batch mode and built-in coroutine compatibility</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CommandLineArguments.html"></a></span><div class="tip"> Command line arguments</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DefaultPresetsByFolder.html"></a></span><div class="tip"> Applying defaults to assets by folder</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Batch mode and built-in coroutine compatibility</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page describes the supported features when running the Unity Editor and Standalone Player in batch mode. </p>
+
+<p>When running Unity, the following built-in <a href="Coroutines.html">coroutine</a> operators add functionality:</p>
+
+<ul>
+<li><p><a href="../ScriptReference/AsyncOperation.html">AsyncOperation</a></p></li>
+<li><p><a href="../ScriptReference/WaitForEndOfFrame.html">WaitForEndOfFrame</a></p></li>
+<li><p><a href="../ScriptReference/WaitForFixedUpdate.html">WaitForFixedUpdate</a></p></li>
+<li><p>
+<a href="../ScriptReference/WaitForSeconds.html">WaitForSeconds</a> </p></li>
+<li><p><a href="../ScriptReference/WaitForSecondsRealtime.html">WaitForSecondsRealtime</a></p></li>
+<li><p><a href="../ScriptReference/WaitUntil.html">WaitUntil</a></p></li>
+<li><p><a href="../ScriptReference/WaitWhile.html">WaitWhile</a></p></li>
+</ul>
+
+<p>The following table shows which of these operators Unity supports inside the Editor and Standalone Player, and when running each of them in batch mode using the <a href="CommandLineArguments.html#batchmode">-batchmode</a> command line argument:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;">Editor</th>
+	<th style="text-align:left;">Editor -batchmode</th>
+	<th style="text-align:left;">Unity Standalone Player</th>
+	<th style="text-align:left;">Unity Standalone Player -batchmode</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>AsyncOperation</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>WaitForEndOfFrame</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">No*</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>WaitForFixedUpdate</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>WaitForSeconds</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>WaitForSecondsRealtime</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>WaitUntil</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>WaitWhile</code></td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+	<td style="text-align:left;">Yes</td>
+</tr>
+</tbody>
+</table>
+
+<p>* You cannot use <code>WaitForEndOfFrame</code> when running the Editor with <code>-batchmode</code>, because systems like animation, physics and <span class="tooltip"><strong>timeline</strong><span class="tooltiptext">Generic term within Unity that refers to all features, windows, editors, and components related to creating, modifying, or reusing cut-scenes, cinematics, and game-play sequences. <a href="TimelineSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timeline">Glossary</a></span></span></span> might not work correctly in the Editor. This is because Unity does not currently update these systems when using <code>WaitForEndOfFrame</code>. </p>
+
+<h2>Running coroutines</h2>
+
+<h3>Inside the Editor</h3>
+
+<p>In the Editor, press the “Play” button to run your code with coroutines.</p>
+
+<h3>Editor in batch mode</h3>
+
+<p>To run coroutines when launching the Editor in batch mode from the command line, enter:</p>
+
+<p>C:\Program Files\Unity\Editor\Unity.exe <strong>-projectPath</strong> PROJECT_PATH <strong>-batchMode</strong>
+</p>
+
+<h3>Inside the Standalone Player</h3>
+
+<p>Launch your Standalone Player to run your code. The Player loads and then waits for your coroutines to complete.</p>
+
+<h3>Standalone Player in batch mode</h3>
+
+<p>To run coroutines when launching the Player in batch mode from the command line, enter:</p>
+
+<p>PATH_TO_STANDALONE_BUILD <strong>-projectPath</strong> PROJECT_PATH <strong>-batchMode</strong>
+</p>
+
+<p>For example, on Windows:</p>
+
+<p>C:\projects\myproject\builds\myproject.exe <strong>-batchMode </strong>
+</p>
+
+<p>On Mac:</p>
+
+<p>~/UnityProjects/myproject/builds/myproject <strong>-batchMode</strong>
+</p>
+
+<h2>Example coroutine scripts</h2>
+
+<h3>AsyncOperation</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_AsyncTests());
+    }
+
+    public IEnumerator Example_AsyncTests()
+    {
+        Debug.Log(&quot;Start of AsyncLoad Example&quot;);
+        
+        var load = UnityEngine.Resources.LoadAsync(&quot;&quot;);
+        yield return load;
+        yield return null;
+        
+        Debug.Log(&quot;End of AsyncLoad Example&quot;);
+    }
+}
+</code></pre>
+
+<h3>WaitForEndOfFrame</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForEndOfFrame_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForEndOfFrame_Coroutine()
+    {
+        Debug.Log(&quot;Start of WaitForEndOfFrame Example&quot;);
+        
+        yield return new WaitForEndOfFrame();
+        
+        Debug.Log(&quot;End of WaitForEndOfFrame Example&quot;);
+    }
+}
+</code></pre>
+
+<h3>WaitForFixedUpdate</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForFixedUpdate_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForFixedUpdate_Coroutine()
+    {
+        Debug.Log(&quot;Start of WaitForFixedUpdate Example&quot;);
+        
+        yield return new WaitForFixedUpdate();
+        
+        Debug.Log(&quot;End of WaitForFixedUpdate Example&quot;);
+    }
+}
+</code></pre>
+
+<h3>WaitForSeconds</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForSeconds_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForSeconds_Coroutine()
+    {
+        Debug.Log(&quot;Start of WaitForSeconds Example&quot;);
+        
+        yield return new WaitForSeconds(1.5f);
+        
+        Debug.Log(&quot;End of WaitForSeconds Example&quot;);
+    }
+}
+</code></pre>
+
+<h3>WaitForSecondsRealtime</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitForSecondsRealtime_Coroutine());
+    }
+
+    public IEnumerator Example_WaitForSecondsRealtime_Coroutine()
+    {
+        Debug.Log(&quot;Start of WaitForSecondsRealtime Example&quot;);
+        
+        yield return new WaitForSecondsRealtime(1.5f);
+        
+        Debug.Log(&quot;End of WaitForSecondsRealtime Example&quot;);
+    }
+}
+</code></pre>
+
+<h3>WaitUntil</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitUntil_Coroutine());
+    }
+
+    public IEnumerator Example_WaitUntil_Coroutine()
+    {
+        Debug.Log(&quot;Start of WaitUntil Example&quot;);
+        
+        yield return new WaitUntil(() =&gt; Time.time &gt; 5.0f);
+        
+        Debug.Log(&quot;End of WaitUntil Example&quot;);
+    }
+}
+</code></pre>
+
+<h3>WaitWhile</h3>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class ExampleClass : MonoBehaviour
+{
+    public void Start()
+    {
+        StartCoroutine(Example_WaitWhile_Coroutine());
+    }
+
+    public IEnumerator Example_WaitWhile_Coroutine()
+    {
+        Debug.Log(&quot;Start of WaitWhile Example&quot;);
+        
+        yield return new WaitWhile(() =&gt; Time.time &lt; 5.0f);
+        
+        Debug.Log(&quot;End of WaitWhile Example&quot;);
+    }
+}
+</code></pre>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–06 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Added advice on using batchmode and coroutines in 2017.4</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CommandLineArguments.html"></a></span><div class="tip"> Command line arguments</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DefaultPresetsByFolder.html"></a></span><div class="tip"> Applying defaults to assets by folder</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

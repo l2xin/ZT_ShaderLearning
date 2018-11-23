@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 5.3</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide53.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide53.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide53.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide53.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide53.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 5.3</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 Networking API Changes</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide52.html"></a></span><div class="tip">Upgrading to Unity 5.2</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 5.3</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Global Illumination</h2>
+
+<p>Lightmap Snapshot was renamed to Lighting Data <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>. The internal format of the lighting data was changed after the upgrade to <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">The lighting system by Geomerics used in Unity for computing global illumination (GI). <a href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> 3. Snapshots from a previous versions of Unity are no longer supported and should be rebaked.</p>
+
+<p>This also affects streamed <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> AssetBundles with realtime GI. <span class="tooltip"><strong>Lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> data won’t be loaded and thus such bundles should be also rebuilt.</p>
+
+<p>Light probes and environment lighting is now consistent in gamma and linear color space. Some differences in environment lighting compared to Unity 5.2 is to be expected. Output is matching Unity 4.x intensity wise now but since 4.x and our light projection code generates L2 coefficients and Enlighten only outputs L1, the falloff for the final <span class="tooltip"><strong>light probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span> can appear different. L2 support for <strong>light probes</strong> will appear in a future release. Directional non-important lights should now match 4.x.
+Light probes are always passed to the shaders in linear color space and final gamma conversion happens on the GPU. If you are using Unity’s ShadeSHxxx functions for evaluating the spherical harmonics in the <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>, you should not have to change your shaders. In UNITY_STANDARD_SIMPLE shaders the SH evaluation is not split between the <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> and <span class="tooltip"><strong>vertex shader</strong><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span>, so we limit the linear to gamma conversions to only happen once and only in the <strong>vertex shader</strong>. On more advanced GPUs the calculation is split between vertex and <span class="tooltip"><strong>fragment shader</strong><span class="tooltiptext">The “per-pixel” part of shader code, performed every pixel that an object occupies on-screen. The fragment shader part is usually used to calculate and output the color of each pixel. <a href="ShaderTut2.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#fragmentshader">Glossary</a></span></span></span>.</p>
+
+<h2>Shuriken</h2>
+
+<p>The particle size in the <strong>Collision</strong> Module has been replaced by a new parameter: Radius Scale. This new parameter acts as a multiplier on the actual particle size. If you were using the old value to do anything other than approximate the particle sizes, then you will need to reconfigure your <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> bounds using the new parameter.</p>
+
+<h2>Multi Scene Editing</h2>
+
+<p>The multi scene editing feature introduces new API through EditorSceneManager and SceneManager. Which means that many of the API’s on EditorApplication and Application has been deprecated.</p>
+
+<ul>
+<li>EditorApplication.NewScene</li>
+<li>EditorApplication.NewEmptyScene</li>
+<li>EditorApplication.OpenScene</li>
+<li>EditorApplication.OpenSceneAdditive</li>
+<li>EditorApplication.SaveScene</li>
+<li>EditorApplication.SaveCurrentSceneIfUserWantsTo</li>
+<li>EditorApplication.SaveCurrentSceneIfUserWantsToForce</li>
+</ul>
+
+<p>The above all have equivalent APIs on EditorSceneManager</p>
+
+<ul>
+<li>EditorApplication.currentScene</li>
+</ul>
+
+<p>Internally this will return the name of the active scene in the Scene Manager, but to get all currently open scenes use the EditorSceneManager APIs</p>
+
+<ul>
+<li>EditorApplication.MarkSceneDirty</li>
+<li>EditorApplication.isSceneDirty</li>
+</ul>
+
+<p>Each scene now has its own dirty flag. Get the scenes through the EditorSceneManager and check their state. Setting scenes dirty is also done through the EditorSceneManager. The deprecated APIs all operate on the active scene only.</p>
+
+<ul>
+<li>Application.LoadLevel</li>
+<li>Application.LoadLevelAsync</li>
+<li>Application.LoadLevelAdditive</li>
+<li>Application.LoadLevelAdditiveAsync</li>
+</ul>
+
+<p>Application.LoadLevel[Async](path) redirects to SceneManager.LoadScene[Async](path, false) and Application.LoadLevelAdditive[Async](path) redirects to SceneManager.LoadScene[Async](path, true) </p>
+
+<ul>
+<li>Application.loadedLevel</li>
+<li>Application.loadedLevelName</li>
+</ul>
+
+<p>These respectively gets the Build Setting Index of the active scene and the name of the active scene. You should use the SceneManager to get the indices and names of all loaded scene.</p>
+
+<p>Note also that EditorApplication.OpenSceneAdditive can nolonger be called during play in the Editor. That also means it cannot be called from a [PostprocessScene] callback. If EditorApplication.OpenSceneAdditive is called during play anyway, then play mode will be stopped.</p>
+
+<h2>Precompiled Shader Assets</h2>
+
+<p>Precompiled shader assets are no longer supported - this means you can no longer click “show compiled code” and copy the resulting disassembly into a new shader asset. Old shader assets that are precompiled will be marked as unsupported.</p>
+
+<p>The “show compiled code” in the shader <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> will still work and will display the disassembly of the shader on each platform.</p>
+
+<p>Likewise you can still view the generated code for a <span class="tooltip"><strong>surface shader</strong><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span>, modify it, and copy that into a new shader asset - since it is only the HLSL source you are modifying.</p>
+
+<p>This will affect AssetBundles built in previous versions of Unity - they have compiled shader assets inside them by definition. Any shaders in such bundles will need to be rebuilt.</p>
+
+<p>For more detailed information you can see this <a href="http://blogs.unity3d.com/2015/08/27/plans-for-graphics-features-deprecation/">unity blog post about upcoming feature deprecation</a>.</p>
+
+<h2>OpenGL 4.x support on desktop</h2>
+
+<p>As a new feature, the OS X Editor and Standalone now support the new GL backend, which enables the use of OpenGL 3.x and 4.x features such as tessellation and geometry shaders. However, as Apple restricts the OpenGL version on OS X desktop to 4.1 at most, it does not support all DirectX 11 features (such as Unordered Access Views or Compute Shaders). This means that all shaders that are configured to target Shader Level 5.0 (with #pragma target 50) will fail to load on OS X.</p>
+
+<p>Therefore a new shader target level is introduced: #pragma target gl4.1. This target level requires at least OpenGL 4.1 or DirectX 11.0 Shader Level 5 on desktop, or OpenGL ES 3.1 + Android Extension Pack on mobiles.</p>
+
+<h2>AssetBundles</h2>
+
+<p>AssetBundle’s container format was changed in order to support new LZ4 <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> and have a basis for further improvements. Bundles created in earlier version (2.x, 3.x) are deprecated and not supported.
+Bundles created in Unity 4.x, 5.0–5.2 are supported and could be loaded. But, if they were already cached on a user device using WWW.LoadFromCacheOrDownload method, they will be redownloaded. Also take in mind that data in such bundles might be a subject to change (see e.g. Global Illumination section).</p>
+
+<h2>GetComponent(s)InChildren</h2>
+
+<p>GetComponentsInChildren has a slightly changed behaviour in the case where you invoke it on a <span class="tooltip"><strong>gameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> who has a parent that is inactive. Previously you would always get an empty array as a result. Because that is never what you want, and because that meant GetComponentsOnChildren didn’t work on <span class="tooltip"><strong>prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span>, this has been changed to ignore any active state from the target game object’s parents. Also, the singular version GetComponentInChildren() now has an optional includeInactive argument.</p>
+
+<h2>UI/default shaders</h2>
+
+<p>Using a default new <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> shader on non new <strong>UI</strong> objects is not longer supported by default. Previously there was an ‘if’ check to determine whether or not the _clipRect should be used but for performance reasons this check was removed. To continue using a new <strong>UI</strong> shader on a non new <strong>UI</strong> object you will need to specify a valid clipRect yourself.</p>
+
+<h2>Point and spot shadow casting lights</h2>
+
+<p>Point lights that are selected to cast shadows now have a working Bias slider, to allow adjustment and balancing of shadowing artifacts (under shadowing vs. shadow acne). This means any existing point lights which may have had a Bias set before that wasn’t doing anything will now start having an effect, and this will change the shadow casting behaviour.</p>
+
+<p>Spot lights that cast shadows now have a new slider which allows you to select the near clip distance. This is the distance to the light below which any objects won’t cast shadows. Low values include close-by objects, at the cost of greatly reduced precision for the shadows. In previous Unity versions this was calculated at 4% of the total range of the light, which could be much too high for large lights. Now it defaults to 0.2, which should work for most cases.</p>
+
+<h2>Quaternion Mathematics</h2>
+
+<p>The new support of importer Euler rotation curves, and the support of all the different Euler rotation orders necessitated a rewrite of the QuaternionToEuler and EulerToQuaternion mathematics functions, both in traditional and SIMD versions. Those new variations have not been made available in the API yet, and are only used internally for now.</p>
+
+<p>This should have very little impact, but there are minute differences (&lt;0.01 degrees) in the results between the previous version and the new one, and only when very close to gimbal lock conditions. Tests run have shown the new version to be more accurate most of the time, and the average error to be smaller by at least a factor of 10.</p>
+
+<h2>JointDriveMode flags</h2>
+
+<p>JointDriveMode flags are now obsolete, and thus have been removed. However, in earlier versions of Unity they were incorrectly being used to ignore the Configurable <span class="tooltip"><strong>Joint</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span>’s <strong>Joint</strong> Drive stiffness and damping settings. When upgrading a project to Unity 5.3 which uses <span class="tooltip"><strong>Configurable Joints</strong><span class="tooltiptext">An extremely customisable joint that other joint types are derived from. It can be used to create anything from adapted versions of existing joints to custom designed and highly specialised joints. <a href="class-ConfigurableJoint.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ConfigurableJoint">Glossary</a></span></span></span>, users should be aware that these settings may now be having an effect when previously they did not - because they were wrongly being ignored based on the old JointDriveMode flags.</p>
+
+<h2>Legacy Light Animation</h2>
+
+<p>As of 5.3, Legacy Animations, both existing and new, will not animate Light properties. Changes to the underlying data structure of the Lights have made them incompatible with Legacy. To properly animate Lights, please use the Animator <span class="tooltip"><strong>Component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>.=======</p>
+
+<h2>Editor Extensions</h2>
+
+<p>The scene’s dirty flag is now respected when saving scenes. Editor extensions that do not correctly set the dirty flag may fail to save data correctly. Use Undo.RecordObject to record that an object is about to change and to update the scene’s dirty flag accordingly, or EditorSceneManager.MarkSceneDirty to forcibly mark the entire scene as dirty.</p>
+
+<h2>Camera Depth Texture shader variable</h2>
+
+<p>The <code>_CameraDepthTexture</code> shader variable has been fixed to consistently refer to the primary depth texture on the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>, and not as it did previously to the last depth texture rendered by any <strong>camera</strong>. If you are <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> a secondary <strong>camera</strong> in a script to e.g. obtain a half-resolution depth buffer and you need to bind its depth texture, you should now use the <code>_LastCameraDepthTexture</code> variable which has the semantics of referring to the depth texture of whichever camera rendered last.</p>
+
+<h2>ComputeBuffers</h2>
+
+<p>The data layout of ComputeBuffers in automatically-converted OpenGL shaders has changed to match the layout of DirectX ComputeBuffers. If you use ComputeBuffers in OpenGL, remove any code that tweaks the data to match the previous OpenGL-specific layout rules. Please see <a href="ComputeShaders">Compute Shaders</a> for more information.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 Networking API Changes</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide52.html"></a></span><div class="tip">Upgrading to Unity 5.2</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

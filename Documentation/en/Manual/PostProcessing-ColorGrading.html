@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Color Grading</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PostProcessing-ColorGrading.html">English</a></li>
+<li><a href="/ja/current/Manual/PostProcessing-ColorGrading.html">日本語</a></li>
+<li><a href="/es/current/Manual/PostProcessing-ColorGrading.html">Español</a></li>
+<li><a href="/kr/current/Manual/PostProcessing-ColorGrading.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PostProcessing-ColorGrading.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsOverview.html">Graphics Overview</a></li>
+<li><a href="PostProcessingOverview.html"> Post-processing overview</a></li>
+<li> Color Grading</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Bloom.html"></a></span><div class="tip"> Bloom</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-UserLut.html"></a></span><div class="tip"> User LUT</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h2>Color Grading</h2>
+
+<p>The effect descriptions on this page refer to the default effects found within the post-processing stack.</p>
+
+<p>Color Grading is the process of altering or correcting the color and luminance of the final image. You can think of it like applying filters in software like Instagram. </p>
+
+<p>The Color Grading tools included in the post-processing stack are fully real-time <span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span> tools and internal processing is done in the <a href="http://www.oscars.org/science-technology/sci-tech-projects/aces">ACES</a> color-spaces.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-0.jpg" alt="Scene with Color Grading.">
+<figcaption>Scene with Color Grading.</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-1.jpg" alt="Scene without Color Grading.">
+<figcaption>Scene without Color Grading.</figcaption>
+</figure>
+
+<p>The Color Grading tools supplied in the post-processing stack come in five sections:</p>
+
+<ul>
+<li><p>Tonemapping</p></li>
+<li><p>Basic</p></li>
+<li><p>Channel Mixer</p></li>
+<li><p>Trackballs</p></li>
+<li><p>Grading Curves</p></li>
+</ul>
+
+<h3>Requirements</h3>
+
+<ul>
+<li><p>RGBAHalf Texture Format</p></li>
+<li><p><span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> model 3</p></li>
+</ul>
+
+<p>See the <a href="GraphicsEmulation.html">Graphics Hardware Capabilities and Emulation</a> page for further details and a list of compliant hardware.</p>
+
+<h2>Tonemapping</h2>
+
+<p>Tonemapping is the process of remapping HDR values of an image into a range suitable to be displayed on screen. <strong>Tonemapping</strong> should always be applied when using an HDR <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>, otherwise values color intensities above 1 will be clamped at 1, altering the <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> luminance balance.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-2.jpg" alt="The same scene with Neutral Tonemapper applied (notice how the sky is not blown out).">
+<figcaption>The same scene with Neutral Tonemapper applied (notice how the sky is not blown out).</figcaption>
+</figure>
+
+<p>There are three tonemapping modes supplied with the post-processing stack:</p>
+
+<ul>
+<li><p>None (apply no tonemapping, select this when working in LDR)</p></li>
+<li><p>Neutral</p></li>
+<li><p>Filmic (ACES)</p></li>
+</ul>
+
+<h2>Neutral Tonemapper</h2>
+
+<p>The Neutral tonemapper only does range-remapping with minimal impact on color hue &amp; saturation and is generally a great starting point for extensive color grading. Its operator is based on work by John Hable and Jim Hejl. It offers full parametric control over the tonemapping curve and is the recommended tonemapper to use in most cases.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-3.png" alt="UI for Tonemapping when Neutral tonemapper is selected">
+<figcaption>UI for Tonemapping when Neutral tonemapper is selected</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Black In</strong></td>
+	<td style="text-align:left;">Inner control point for the black point.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White In</strong></td>
+	<td style="text-align:left;">Inner control point for the white point.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Black Out</strong></td>
+	<td style="text-align:left;">Outer control point for the black point.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White Out</strong></td>
+	<td style="text-align:left;">Outer control point for the white point.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White Level</strong></td>
+	<td style="text-align:left;">Pre-curve white point adjustment.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White Clip</strong></td>
+	<td style="text-align:left;">Post-curve white point adjustment.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Filmic (ACES) Tonemapper</h2>
+
+<p>The Filmic (ACES) tonemapper uses a close approximation of the reference ACES tonemapper for a more filmic look. Because of that, it is more contrasted than Neutral and has an effect on actual color hue &amp; saturation. This tonemapper is the simplest to use as it requires no user input to give a standard filmic look to your scene.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-4.png" alt="UI for Tonemapping when Filmic (ACES) tonemapper is selected">
+<figcaption>UI for Tonemapping when Filmic (ACES) tonemapper is selected</figcaption>
+</figure>
+
+<h2>Basic</h2>
+
+<p>The basic section provides the simplest color grading tools such as Temperature and Contrast. This is the recommended starting point for color correction. </p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-5.jpg" alt="The same scene with only Basic Color Grading applied">
+<figcaption>The same scene with only Basic Color Grading applied</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-6.png" alt="UI for Basic Color Grading">
+<figcaption>UI for Basic Color Grading</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Post Exposure</strong></td>
+	<td style="text-align:left;">Adjusts the overall exposure of the scene in EV units. This is applied after HDR effect and right before tonemapping so it won’t affect previous effects in the chain.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Temperature</strong></td>
+	<td style="text-align:left;">Sets the white balance to a custom color temperature.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tint</strong></td>
+	<td style="text-align:left;">Sets the white balance to compensate for a green or magenta tint.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hue Shift</strong></td>
+	<td style="text-align:left;">Shift the hue of all colors.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Saturation</strong></td>
+	<td style="text-align:left;">Pushes the intensity of all colors.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Contrast</strong></td>
+	<td style="text-align:left;">Expands or shrinks the overall range of tonal values.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Channel Mixer</h2>
+
+<p>The Channel Mixer is used to modify the influence of each input color channel on the overall mix of the output channel. For example, increasing the influence of the green channel on the overall mix of the red channel will adjust all areas of the image containing green (including neutral/monochrome) to become more reddish in hue.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-7.jpg" alt="The same scene with only Channel Mixer applied (increased blue influence on red).">
+<figcaption>The same scene with only Channel Mixer applied (increased blue influence on red).</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-8.png" alt="UI for Channel Mixer">
+<figcaption>UI for Channel Mixer</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Channel</strong></td>
+	<td style="text-align:left;">Select the output channel to modify</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Red</strong></td>
+	<td style="text-align:left;">Modify the influence of the red channel within the overall mix</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Green</strong></td>
+	<td style="text-align:left;">Modify the influence of the green channel within the overall mix</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Blue</strong></td>
+	<td style="text-align:left;">Modify the influence of the blue channel within the overall mix</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Trackballs</h2>
+
+<p>The trackballs are used to perform three-way color grading in either Linear or Log space. When working in LDR it is recommended to use Linear trackballs for a better experience. When working in HDR it is recommended to use Log trackballs for greater control but linear trackballs can still be useful.</p>
+
+<p>Adjusting the position of the point on the trackball will have the effect of shifting the hue of the image towards that color in the given tonal range. Different trackballs are used to affect different ranges within the image. Adjusting the slider under the trackball offsets the color lightness of that range</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-9.jpg" alt="The same scene with only Log Trackballs applied.">
+<figcaption>The same scene with only Log Trackballs applied.</figcaption>
+</figure>
+
+<h2>Log</h2>
+
+<p>Log-style grading compresses the distribution of color and and contrast image data to emulate the color-timing process that could be done by optical film printers. It is generally the preferred way to do film-like grading and is highly recommended when working with HDR values.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-10.png" alt="UI for Trackballs when Log is selected">
+<figcaption>UI for Trackballs when Log is selected</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Slope</strong></td>
+	<td style="text-align:left;">Gain function</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Power</strong></td>
+	<td style="text-align:left;">Gamma function</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Offset</strong></td>
+	<td style="text-align:left;">Shifts the entire signal</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Linear</h2>
+
+<p>An alternative 3-way transformation to logarithmic controls optimized to work with linear-encoded data. Preferred when working in LDR.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-11.png" alt="UI for Trackballs when Linear is selected">
+<figcaption>UI for Trackballs when Linear is selected</figcaption>
+</figure>
+
+<h3>Properties</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Lift</strong></td>
+	<td style="text-align:left;">Shifts the entire signal higher or lower. Has a more pronounced effect on shadows.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gamma</strong></td>
+	<td style="text-align:left;">Power function that controls midrange tones.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gain</strong></td>
+	<td style="text-align:left;">Increases the signal. Makes highlights brighter</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Grading Curves</h2>
+
+<p>Grading Curves (also known as versus curves) are an advanced way to adjust specific ranges in hue, saturation or luminosity in your image. By adjusting the curves on the five graphs you can achieve the effects of specific hue replacement, desaturating certain luminosities and much more.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-12.jpg" alt="The same scene with only Hue vs Hue Grading Curve applied to achieve color replacement">
+<figcaption>The same scene with only Hue vs Hue Grading Curve applied to achieve color replacement</figcaption>
+</figure>
+
+<p>Five Grading Curve types are supplied in the post-processing stack:</p>
+
+<ul>
+<li><p>YRGB</p></li>
+<li><p>Hue vs Hue</p></li>
+<li><p>Hue vs Sat</p></li>
+<li><p>Sat vs Sat</p></li>
+<li><p>Lum vs Sat</p></li>
+</ul>
+
+<h2>YRGB Curve</h2>
+
+<p>Affects the selected input channels intensity across the whole image. Input channel can be selected between Y, R, G and B where Y is a global intensity offset applied to all channels. The X axis of the graph represents input intensity and the Y axis represents output intensity. This can be used to further adjust the appearance of basic attributes such as contrast and brightness.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-13.png" alt="UI for Grading Curves when YRGB is selected">
+<figcaption>UI for Grading Curves when YRGB is selected</figcaption>
+</figure>
+
+<h2>Hue vs Hue Curve</h2>
+
+<p>Used to shift hues within specific ranges. This curve shifts the input hue (X axis) according to the output hue (Y axis). This can be used to fine tune hues of specific ranges or perform color replacement.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-14.png" alt="UI for Grading Curves when Hue vs Hue is selected">
+<figcaption>UI for Grading Curves when Hue vs Hue is selected</figcaption>
+</figure>
+
+<h2>Hue vs Sat Curve</h2>
+
+<p>Used to adjust saturation of hues within specific ranges. This curve adjusts saturation (Y axis) according to the input hue (X axis). This can be used to tone down particularly bright areas or create artistic effects such as monochromatic except a single dominant color.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-15.png" alt="UI for Grading Curves when Hue vs Sat is selected">
+<figcaption>UI for Grading Curves when Hue vs Sat is selected</figcaption>
+</figure>
+
+<h2>Sat vs Sat Curve</h2>
+
+<p>Used to adjust saturation of areas of certain saturation. This curve adjusts saturation (Y axis) according to the input saturation (X axis). This can be used to fine tune saturation adjustments made with Basic Color Grading.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-16.png" alt="UI for Grading Curves when Sat vs Sat is selected">
+<figcaption>UI for Grading Curves when Sat vs Sat is selected</figcaption>
+</figure>
+
+<h2>Lum vs Sat Curve</h2>
+
+<p>Used to adjust saturation of areas of certain luminance. This curve adjusts saturation (Y axis) according to the input luminance (X axis). This can be used to desaturate areas of darkness to provide an interesting visual contrast.</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-17.png" alt="UI for Grading Curves when Lum vs Sat is selected">
+<figcaption>UI for Grading Curves when Lum vs Sat is selected</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–24 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">New feature in 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Bloom.html"></a></span><div class="tip"> Bloom</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-UserLut.html"></a></span><div class="tip"> User LUT</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

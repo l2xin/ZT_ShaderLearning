@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Remote Settings component</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityServices" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityAnalyticsRemoteSettingsComponent.html">English</a></li>
+<li><a href="/ja/current/Manual/UnityAnalyticsRemoteSettingsComponent.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityAnalyticsRemoteSettingsComponent.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityAnalyticsRemoteSettingsComponent.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityAnalyticsRemoteSettingsComponent.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li><a href="UnityAnalyticsRemoteSettings.html"> Remote Settings</a></li>
+<li><a href="UnityAnalyticsRemoteSettingsUsing.html"> Using Remote Settings in a Unity project</a></li>
+<li> Remote Settings component</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettingsManaging.html"></a></span><div class="tip"> Managing Remote Settings in the Unity Editor</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsRemoteSettingsScripting.html"></a></span><div class="tip"> Remote Settings scripting</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Remote Settings component</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the Remote Settings <span class="tooltip"><a href="Components.html">component</a><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> to control the properties of other components in your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> without writing any code. The Remote Settings component is part of the Remote Settings plug-in, which you can download from the <a href="https://www.assetstore.unity3d.com/#!/content/89317">Unity Asset Store</a>.</p>
+
+<p>Before using the Remote Settings component, you must <a href="UnityAnalyticsRemoteSettingsEnabling.html">enable Remote Settings</a> in your project and should also <a href="UnityAnalyticsRemoteSettingsCreating.html">create your Remote Settings key-value pairs</a> using the Unity Analytics Dashboard. </p>
+
+<p>You can place the Remote Settings component on the same <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> as another component you want to control, or place it on a different <strong>GameObject</strong>. The only requirement is that both the Remote Settings component and any controlled components are active in the same Scene. </p>
+
+<h2>Using the Remote Settings component</h2>
+
+<p>To connect a remote setting to a component property or field:</p>
+
+<ol>
+<li><p>Go to <strong>Window</strong> &gt; <span class="tooltip"><strong>Unity Analytics</strong><span class="tooltiptext">See Analytics <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UnityAnalytics">Glossary</a></span></span></span> &gt; <span class="tooltip"><strong>Remote Settings</strong><span class="tooltiptext">Remote settings are game variables that you can set remotely on your Analytics Dashboard. See Remote Settings. <a href="UnityAnalyticsRemoteSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RemoteSettings">Glossary</a></span></span></span> to open the Remote Settings window.</p></li>
+<li><p>Choose the configuration (<strong>Release</strong> or <strong>Development</strong>) that contains the setting you are going to connect.</p></li>
+<li><p>Go to the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window for the GameObject that you want to hold the Remote Settings component.</p></li>
+<li><p>Click the <strong>Add Component</strong> button.</p></li>
+<li>
+<p>Find the <span class="tooltip"><strong>Analytics</strong><span class="tooltiptext">A data platform that provides analytics for your Unity game. <a href="UnityAnalytics.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Analytics">Glossary</a></span></span></span> &gt; <strong>RemoteSettings</strong> script in the list.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRemoteSettingsAddComponent.png" alt="">
+</figure>
+</li>
+<li>
+<p>Click <strong>Add Component</strong> to add the Remote Settings component to the GameObject.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRemoteSettingsEmptyComponent.png" alt="">
+</figure>
+</li>
+<li><p>To add a new parameter mapping, click the <strong>+</strong> icon at the bottom of the Remote Setting component’s <strong>Parameters</strong> list.</p></li>
+<li>
+<p>Drag the GameObject or the component that you want to remotely control to the parameter’s <span class="tooltip"><strong>Object</strong><span class="tooltiptext">See GameObject. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Object">Glossary</a></span></span></span> field.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRemoteSettingsComponentEdit.png" alt="">
+</figure>
+</li>
+<li><p>Select the property or field you want to control in the parameter’s <span class="tooltip"><strong>Field</strong><span class="tooltiptext">A generic term that describes an editable box that the user clicks to enter a value. Editable fields in the inspector are also commonly referred to as fields. <a href="script-InputField.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#field">Glossary</a></span></span></span> drop-down list.</p></li>
+<li>
+<p>Choose the <strong>Remote Setting Key</strong> that you want to use to control this component property or field.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRemoteSettingsComponentComplete.png" alt="">
+</figure>
+</li>
+<li><p>Click the <strong>+</strong> icon to add additional parameters.</p></li>
+</ol>
+
+<p>If no <strong>Remote Settings Key</strong> names appear in the list, open the <strong>Remote Settings</strong> window (menu: <strong>Window</strong> &gt; <strong>Unity Analytics</strong> &gt; <strong>Remote Settings</strong>) and click <strong>Refresh</strong>. If your remote settings still do not display in this window, check that you have an Internet connection and that your project is properly set up (see <a href="UnityAnalyticsRemoteSettingsEnabling.html">Enabling Remote Settings</a>).</p>
+
+<p>If the wrong keys appear in the list of key names, open the Remote Settings window (menu: <strong>Window</strong> &gt; <strong>Unity Analytics</strong> &gt; <strong>Remote Settings</strong>) and set the <strong>Active Configuration</strong> to the configuration containing the correct set of keys.</p>
+
+<p>The Remote Settings component cannot set the variables of <span class="tooltip"><a href="Prefabs.html">prefabs</a><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> that Unity loads later in the Scene than the component itself. Similarly, a Remote Settings component that is loaded later in the Scene can only set variables of objects that are part of the same prefab. Use more than one Remote Settings component to handle these types of situations. </p>
+
+<h2>Setting non-primitive properties</h2>
+
+<p>You can use the Remote Settings component to set the primitive fields and properties of an object directly. However, to set the variables of an object’s non-primitive members, you do have to write some additional code. The easiest approach is to add primitive-type properties to an object that you can set using the Remote Settings component. Then, implement the setter functions of these properties to update the intended variables of the non-primitive objects. </p>
+
+<p><strong>Code example</strong></p>
+
+<p>In the example below, the class sets the base color of the Material assigned to a rendered GameObject. To do this, the class defines a primitive string-type property that takes an HTML-style color string. The setter for this property parses the string and sets the Material color accordingly. </p>
+
+<pre><code>using UnityEngine;
+
+public class RemoteColorChanger : MonoBehaviour
+{
+    private string _colorString = &quot;&quot;;
+    public string ColorString {
+
+        get { 
+            return _colorString; 
+        }
+
+        set { 
+            Color colorObject;
+            if (ColorUtility.TryParseHtmlString (value, out colorObject)) {
+                _colorString = value;
+                Renderer renderer = GetComponent&lt;Renderer&gt; ();
+
+                if (renderer != null) {
+                    MaterialPropertyBlock materialProperties = new MaterialPropertyBlock ();
+                    renderer.GetPropertyBlock (materialProperties);
+                    materialProperties.SetColor (&quot;_Color&quot;, colorObject);
+                    renderer.SetPropertyBlock (materialProperties);
+                } 
+            } else {
+                Debug.LogWarning (&quot;Invalid color string: &quot; + value);
+            }
+        }
+    }
+}
+</code></pre>
+
+<p><strong>Using the code example</strong></p>
+
+<p>You can add this <code>RemoteColorChanger</code> script to any <code>GameObject</code> that has a <code>Renderer</code> component. You can then use the Remote Settings component to map a setting key to the <code>ColorString</code> property. In this example, the script is a component of a <code>Cube</code> object.</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRemoteSettingsComponentComplete.png" alt="A Remote Settings component mapping the ColorString Remote Setting key">
+<figcaption>A Remote Settings component mapping the <code>ColorString</code> Remote Setting key</figcaption>
+</figure>
+
+<p>The matching key-value pair on the Remote Settings page of your Analytics Dashboard looks like the following:</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsSingleSetting.png" alt="The ColorString setting defined on the Analytics Dashboard">
+<figcaption>The <code>ColorString</code> setting defined on the Analytics Dashboard</figcaption>
+</figure>
+
+<p>Use the same technique to set any non-primitive value. </p>
+
+<p><br></p>
+
+<h2><br></h2>
+
+<ul>
+<li><p><span class="page-edit">2017–05–30 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit">2017–05–30 - Service compatible with Unity 5.5 onwards at this date but version compatibility may be subject to change.</span></p></li>
+<li><p><span class="page-history">New feature in Unity 2017.1</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettingsManaging.html"></a></span><div class="tip"> Managing Remote Settings in the Unity Editor</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsRemoteSettingsScripting.html"></a></span><div class="tip"> Remote Settings scripting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  The Network Manager HUD in Matchmaker mode</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UNet" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UNetManagerHUDMatchMakerMode.html">English</a></li>
+<li><a href="/ja/current/Manual/UNetManagerHUDMatchMakerMode.html">日本語</a></li>
+<li><a href="/es/current/Manual/UNetManagerHUDMatchMakerMode.html">Español</a></li>
+<li><a href="/kr/current/Manual/UNetManagerHUDMatchMakerMode.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UNetManagerHUDMatchMakerMode.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UNet.html">Multiplayer and Networking</a></li>
+<li> The Network Manager HUD in Matchmaker mode</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetManagerHUDLanMode.html"></a></span><div class="tip"> The Network Manager HUD in LAN mode</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetConverting.html"></a></span><div class="tip">Converting a single-player game to Unity Multiplayer</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>The Network Manager HUD in Matchmaker mode</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerHUDMMMode.png" alt="The Network Manager HUD in Matchmaker mode">
+<figcaption>The Network Manager HUD in Matchmaker mode</figcaption>
+</figure>
+
+<p>Matchmaker mode provides a simple interface that allows players to create, find and join matches hosted on Unity’s Multiplayer Service. </p>
+
+<p>A “match” (also sometimes referred to as a game session, or a game instance), is a unique instance of your game hosted by Unity’s Multiplayer Service. With Unity’s Multiplayer Service, a certain limited number of players can join and play together. If lots of people are playing your game, you may have multiple matches, each with multiple players playing together.</p>
+
+<p>In order to use Matchmaker mode, you must first enable Unity Multiplayer Service for your project. Once you have enabled Unity Multiplayer Service for your project, you can use the HUD in Matchmaker mode to create or connect to instances of your game (also sometimes referred to as “matches” or “sessions”) hosted on the internet.</p>
+
+<h3><strong>Create Internet Match</strong></h3>
+
+<p>Click <strong>Create Internet Match</strong> to start a new match. Unity’s Multiplayer Service creates a new instance of the game (a “match”), which other players can then find and join.</p>
+
+<h3>Find Internet Match</h3>
+
+<p>Click <strong>Find Internet Match</strong> to send a request to the Unity Multiplayer Service. The Unity Multiplayer Service returns a list of all matches that currently exist for this game. </p>
+
+<p>For example, if two separate players connect, and create a match each named “Match A” and “Match B” respectively, when a third player connects and presses the <strong>Find Internet Match</strong> button, <strong>Match A</strong> and <strong>Match B</strong> are listed as available matches to join.</p>
+
+<p>In the <span class="tooltip"><strong>Network manager</strong><span class="tooltiptext">A Networking component that manages the network state of a Project. <a href="class-NetworkManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NetworkManager">Glossary</a></span></span></span> HUD, the available matches appear as a series of buttons, with the text “Join Match: <em>match name</em>” (where <em>match name</em> is the name chosen by the player who created the match).</p>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerHUDMatchList.png" alt="An example of results after clicking Find Internet Match. In this example, there are no existing matches. If there were, they would appear here and be available for you to join.">
+<figcaption>An example of results after clicking <strong>Find Internet Match</strong>. In this example, there are no existing matches. If there were, they would appear here and be available for you to join.</figcaption>
+</figure>
+
+<p>To join one of the available matches, click on the “Join Match: <em>match name</em>” button for that match. Alternatively, click <strong>Back to Match Menu</strong> to go back to the Matchmaker menu.</p>
+
+<p>When you replace the HUD with your own <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span>, there are better ways to list the available matches. Many multiplayer games display available matches in a scrollable list. You might want to make each entry on the list show the match name, the current and maximum number of players, and other information such as the match mode type, if your decide to make your game have different match modes (such as “capture the flag”, “1 vs 1”, or “cooperative”).</p>
+
+<p>
+<strong>Note</strong>: There are some special characters which, if used in a match name, appear modified in the list of available matches in the Network manager HUD. These characters are:</p>
+
+<ul>
+<li><p>Open square brace: <strong>[</strong>
+</p></li>
+<li><p>percent symbol: <strong>%</strong>
+</p></li>
+<li><p>Underscore: <strong>_</strong>
+</p></li>
+</ul>
+
+<p>If a match name contains these characters, they are surrounded by square braces in the list of available matches. So a match named “my_game” is listed as “my[_]game”.</p>
+
+<h3>Change MM Server</h3>
+
+<p>This button is designed for internal use by Unity engineers (for testing the Multiplayer service). It reveals buttons which assign one of three pre-defined URLs to the <strong>MatchMaker Host URI</strong> field in the Network Manager - “local”, “staging” and “internet”. However, the “local” and “staging”** *<em>options are </em>only intended for internal use by Unity engineers, and not intended for general use*.</p>
+
+<p>If you select the “local” or “staging” options, your game cannot connect to Unity’s Multiuser Service. Therefore you should always make sure this option is set to “internet” (which is the default).</p>
+
+<h3>MM Uri Display</h3>
+
+<p>This displays the current Matchmaker URI (Uniform Resource Identifier, a string of characters used for identification). To view the URI in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, navigate to the Network Manager <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> and see the <strong>MatchMaker Host URI</strong> field<strong>. </strong>By default this points to the global Unity Multiplayer Service, and for normal multiplayer games using the Unity Multiplayer Service. You should not need to change this. The Unity Multiplayer Service automatically groups the players of your game into regional servers around the world. This grouping ensures fast multiplayer response times between players in the same region, and means that players from Europe, the US, and Asia generally end up playing with other players from their same global region.</p>
+
+<p>If you want to explicitly control which regional server your game connects to, override this value via scripting. For more information and for regional server URIs, see API reference documentation on <a href="https://docs.unity3d.com/ScriptReference/Networking.Match.NetworkMatch-baseUri.html">NetworkMatch.baseUri</a>.</p>
+
+<p>For example, you might want to override the URI if you want to give your players the option of joining a server outside of their global region. If “Player A” in the US wants to connect to a match created via Matchmaker by “Player B” in Europe, they would need to be able to set their desired global region in your game. Therefore you would need to write a UI feature which allows them to select this.</p>
+
+<p>
+<strong>Note</strong>: Remember that the Network Manager HUD feature is a temporary aid to development. It allows you to get your multiplayer game running quickly, but you should replace it with your own UI controls when you are ready.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetManagerHUDLanMode.html"></a></span><div class="tip"> The Network Manager HUD in LAN mode</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetConverting.html"></a></span><div class="tip">Converting a single-player game to Unity Multiplayer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

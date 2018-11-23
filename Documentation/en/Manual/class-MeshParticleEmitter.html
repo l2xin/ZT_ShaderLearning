@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Mesh Particle Emitter (Legacy)</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-MeshParticleEmitter.html">English</a></li>
+<li><a href="/ja/current/Manual/class-MeshParticleEmitter.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-MeshParticleEmitter.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-MeshParticleEmitter.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-MeshParticleEmitter.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="PartSysReference.html">Particle Systems reference</a></li>
+<li><a href="comp-ParticlesLegacy.html">Particle Systems (Legacy, prior to release 3.5)</a></li>
+<li>Mesh Particle Emitter (Legacy)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-EllipsoidParticleEmitter.html"></a></span><div class="tip">Ellipsoid Particle Emitter (Legacy)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ParticleAnimator.html"></a></span><div class="tip">Particle Animator (Legacy)</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Mesh Particle Emitter (Legacy)</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/MeshParticleEmitter.html' title='Go to MeshParticleEmitter page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Mesh Particle Emitter</strong> emits particles around a <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span>. Particles are spawned from the surface of the <strong>mesh</strong>, which can be necessary when you want to make your particles interact in a complex way with objects.</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-MeshPE.png" alt="">
+</figure>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Emit</strong></td>
+	<td style="text-align:left;">If enabled, the emitter will emit particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Size</strong></td>
+	<td style="text-align:left;">The minimum size each particle can be at the time when it is spawned.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Size</strong></td>
+	<td style="text-align:left;">The maximum size each particle can be at the time when it is spawned.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Energy</strong></td>
+	<td style="text-align:left;">The minimum lifetime of each particle, measured in seconds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Energy</strong></td>
+	<td style="text-align:left;">The maximum lifetime of each particle, measured in seconds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Emission</strong></td>
+	<td style="text-align:left;">The minimum number of particles that will be spawned every second.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Emission</strong></td>
+	<td style="text-align:left;">The maximum number of particles that will be spawned every second.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Velocity</strong></td>
+	<td style="text-align:left;">The starting speed of particles in world space, along X, Y, and Z.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Local Velocity</strong></td>
+	<td style="text-align:left;">The starting speed of particles along X, Y, and Z, measured in the object’s orientation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rnd Velocity</strong></td>
+	<td style="text-align:left;">A random speed along X, Y, and Z that is added to the velocity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Emitter Velocity Scale</strong></td>
+	<td style="text-align:left;">The amount of the emitter’s speed that the particles inherit.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tangent Velocity</strong></td>
+	<td style="text-align:left;">The starting speed of particles along X, Y, and Z, across the Emitter’s surface.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Velocity</strong></td>
+	<td style="text-align:left;">The angular velocity of new particles in degrees per second.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rnd Angular Velocity</strong></td>
+	<td style="text-align:left;">A random angular velocity modifier for new particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rnd Rotation</strong></td>
+	<td style="text-align:left;">If enabled, the particles will be spawned with random rotations.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Simulate In World Space</strong></td>
+	<td style="text-align:left;">If enabled, the particles don’t move when the emitter moves. If false, when you move the emitter, the particles follow it around.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>One Shot</strong></td>
+	<td style="text-align:left;">If enabled, the particle numbers specified by min &amp; max emission is spawned all at once. If disabled, the particles are generated in a long stream.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Interpolate Triangles</strong></td>
+	<td style="text-align:left;">If enabled, particles are spawned all over the mesh’s surface. If disabled, particles are only spawned from the mesh’s vertrices.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Systematic</strong></td>
+	<td style="text-align:left;">If enabled, particles are spawned in the order of the vertices defined in the mesh. Although you seldom have direct control over vertex order in meshes, most 3D modelling applications have a very systematic setup when using primitives. It is important that the mesh contains no faces in order for this to work.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Normal Velocity</strong></td>
+	<td style="text-align:left;">Minimum amount that particles are thrown away from the mesh.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Normal Velocity</strong></td>
+	<td style="text-align:left;">Maximum amount that particles are thrown away from the mesh.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Details</h2>
+
+<p>Mesh Particle Emitters (MPEs) are used when you want more precise control over the spawn position &amp; directions than the simpler <strong>Ellipsoid Particle Emitter</strong> gives you. They can be used for making advanced effects.</p>
+
+<p>MPEs work by emitting particles at the vertices of the attached mesh. Therefore, the areas of your mesh that are more dense with polygons will be more dense with particle emission.</p>
+
+<p>Particle Emitters work in conjunction with <a href="class-ParticleAnimator.html">Particle Animators</a> and <a href="class-ParticleRenderer.html">Particle Renderers</a> to create, manipulate, and display <span class="tooltip"><strong>Particle Systems</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particlesystem">Glossary</a></span></span></span>. All three <span class="tooltip"><strong>Components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> must be present on an object before the particles will behave correctly. When particles are being emitted, all different velocities are added together to create the final velocity.</p>
+
+<h3>Spawning Properties</h3>
+
+<p>Spawning properties like <strong>Size</strong>, <strong>Energy</strong>, <strong>Emission</strong>, and <span class="tooltip"><strong>Velocity</strong><span class="tooltiptext">A vector that defines the speed and direction of motion of a Rigidbody <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Velocity">Glossary</a></span></span></span> will give your particle system distinct personality when trying to achieve different effects. Having a small <strong>Size</strong> could simulate fireflies or stars in the sky. A large <strong>Size</strong> could simulate dust clouds in a musky old building.</p>
+
+<p>
+<strong>Energy</strong> and <strong>Emission</strong> will control how long your particles remain onscreen and how many particles can appear at any one time. For example, a rocket might have high <strong>Emission</strong> to simulate density of smoke, and high <strong>Energy</strong> to simulate the slow dispersion of smoke into the air.</p>
+
+<p>
+<strong>Velocity</strong> will control how your particles move. You might want to change your <strong>Velocity</strong> in scripting to achieve interesting effects, or if you want to simulate a constant effect like wind, set your X and Z <strong>Velocity</strong> to make your particles blow away.</p>
+
+<h3>Simulate in World Space</h3>
+
+<p>If this is disabled, the position of each individual particle will always translate relative to the <strong>Position</strong> of the emitter. When the emitter moves, the particles will move along with it. If you have <strong>Simulate in World Space</strong> enabled, particles will not be affected by the translation of the emitter. For example, if you have a fireball that is spurting flames that rise, the flames will be spawned and float up in space as the fireball gets further away. If <strong>Simulate in World Space</strong> is disabled, those same flames will move across the screen along with the fireball.</p>
+
+<h3>Emitter Velocity Scale</h3>
+
+<p>This property will only apply if <strong>Simulate in World Space</strong> is enabled.</p>
+
+<p>If this property is set to 1, the particles will inherit the exact translation of the emitter at the time they are spawned. If it is set to 2, the particles will inherit double the emitter’s translation when they are spawned. 3 is triple the translation, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</p>
+
+<h3>One Shot</h3>
+
+<p>
+<strong>One Shot</strong> emitters will create all particles within the <strong>Emission</strong> property all at once, and cease to emit particles over time. Here are some examples of different particle system uses with <strong>One Shot</strong> <strong>Enabled</strong> or <strong>Disabled</strong>:</p>
+
+<p>
+<strong>Enabled</strong>:</p>
+
+<ul>
+<li>Explosion</li>
+<li>Water splash</li>
+<li>Magic spell</li>
+</ul>
+
+<p>
+<strong>Disabled</strong>:</p>
+
+<ul>
+<li>Gun barrel smoke</li>
+<li>Wind effect</li>
+<li>Waterfall</li>
+</ul>
+
+<h2>Interpolate Triangles</h2>
+
+<p>Enabling your emitter to <strong>Interpolate Triangles</strong> will allow particles to be spawned between the mesh’s vertices. This option is off by default, so particles will only be spawned at the vertices.</p>
+
+<figure>
+<img src="../uploads/Main/MeshPE-InterpolateOff.png" alt="A sphere with Interpolate Triangles off (the default)">
+<figcaption>A sphere with Interpolate Triangles off (the default)</figcaption>
+</figure>
+
+<p>Enabling this option will spawn particles on and in-between vertices, essentially all over the mesh’s surface (seen below).</p>
+
+<figure>
+<img src="../uploads/Main/MeshPE-InterpolateOn.png" alt="A sphere with Interpolate Triangles on">
+<figcaption>A sphere with Interpolate Triangles on</figcaption>
+</figure>
+
+<p>It bears repeating that even with <strong>Interpolate Triangles</strong> enabled, particles will still be denser in areas of your mesh that are more dense with polygons.</p>
+
+<h2>Systematic</h2>
+
+<p>Enabling <strong>Systematic</strong> will cause your particles to be spawned in your mesh’s vertex order. The vertex order is set by your 3D modeling application.</p>
+
+<figure>
+<img src="../uploads/Main/MeshPE-Systematic.png" alt="An MPE attached to a sphere with Systematic enabled">
+<figcaption>An MPE attached to a sphere with Systematic enabled</figcaption>
+</figure>
+
+<h2>Normal Velocity</h2>
+
+<p>
+<strong>Normal Velocity</strong> controls the speed at which particles are emitted along the normal from where they are spawned.</p>
+
+<p>For example, create a Mesh Particle System, use a cube mesh as the emitter, enable <strong>Interpolate Triangles</strong>, and set <strong>Normal Velocity Min</strong> and <strong>Max</strong> to 1. You will now see the particles emit from the faces of the cube in a straight line.</p>
+
+<h2>See Also</h2>
+
+<ul>
+<li><a href="HOWTO-MeshParticleEmitter.html">How to make a Mesh Particle Emitter</a></li>
+</ul>
+
+<h2>Hints</h2>
+
+<ul>
+<li>Be careful of using many large particles. This can seriously hinder performance on low-level machines. Always try to use the minimum number of particles to attain an effect.</li>
+<li>The <strong>Emit</strong> property works in conjunction with the <strong>AutoDestruct</strong> property of the Particle Animator. Through scripting, you can cease the emitter from emitting, and then <strong>AutoDestruct</strong> will automatically destroy the Particle System and the <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> it is attached to.</li>
+<li>MPEs can also be used to make glow from a lot of lamps placed in a <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. Simply make a mesh with one vertex in the center of each lamp, and build an MPE from that with a halo material. Great for evil sci-fi worlds.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-EllipsoidParticleEmitter.html"></a></span><div class="tip">Ellipsoid Particle Emitter (Legacy)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ParticleAnimator.html"></a></span><div class="tip">Particle Animator (Legacy)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

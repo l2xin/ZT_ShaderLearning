@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Physics Debug Visualization</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PhysicsDebugVisualization.html">English</a></li>
+<li><a href="/ja/current/Manual/PhysicsDebugVisualization.html">日本語</a></li>
+<li><a href="/es/current/Manual/PhysicsDebugVisualization.html">Español</a></li>
+<li><a href="/kr/current/Manual/PhysicsDebugVisualization.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PhysicsDebugVisualization.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li><a href="PhysicsOverview.html">Physics Overview</a></li>
+<li>Physics Debug Visualization</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CharacterControllers.html"></a></span><div class="tip">Character Controllers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Physics3DReference.html"></a></span><div class="tip">3D Physics Reference</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Physics Debug Visualization</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Physics Debug Visualiser allows you to quickly inspect the <span class="tooltip"><a href="CollidersOverview.html">Collider</a><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collider">Glossary</a></span></span></span> geometry in your <span class="tooltip"><a href="CreatingScenes.html">Scene</a><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, and profile common physics-based scenarios. It provides a visualisation of which <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> should and should not collide with each other. This is particularly useful when there are many Colliders in your Scene, or if the <a href="class-MeshRenderer.html">Render</a> and <a href="class-MeshCollider.html">Collision Meshes</a> are out of sync.</p>
+
+<p>For further guidance on improving physics performance in your project, see documentation on the <a href="ProfilerPhysics.html">Physics Profiler</a>.</p>
+
+<p>To open the Physics Debug window in the Unity Editor, go to <strong>Window </strong>&gt; <strong>Analysis</strong> &gt; <strong>Physics Debugger</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage0.jpg" alt="Default Physics Debug Visualization settings and a Cube primitive">
+<figcaption>Default Physics Debug Visualization settings and a Cube primitive</figcaption>
+</figure>
+
+<p>From this window, you can customize visual settings and specify the types of GameObjects you want to see or hide in the visualizer.</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage1.jpg" alt="Physics Debug window with fold-out options and overlay panel ">
+<figcaption>Physics Debug window with fold-out options and overlay panel </figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage2.png" alt="The Physics Debug overlay panel">
+<figcaption>The Physics Debug overlay panel</figcaption>
+</figure>
+
+<p>
+<strong>Hide Selected Items</strong> is the default mode. This means that every item appears in the visualizer, and you need to tick the checkbox for each item to hide it. To change this to <strong>Show Selected Items</strong>, use the drop-down at the top of the window. This means that no items appear in the visualizer, and you need to tick the checkbox for each item to display it.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><span class="tooltip"><strong>Property</strong><span class="tooltiptext">A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable property is also referred to as a field. <a href="editor-PropertyDrawers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#property">Glossary</a></span></span></span></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Reset</strong></td>
+	<td style="text-align:left;">Click this button to reset the Physics Debug window back to default settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Layers</strong></td>
+	<td style="text-align:left;">Use the dropdown menu to determine whether or not to display Colliders from the selected <span class="tooltip"><a href="Layers.html">Layers</a><span class="tooltiptext">Layers in Unity can be used to selectively opt groups of GameObjects in or out of certain processes or calculations. This includes camera rendering, lighting, physics collisions, or custom calculations in your own code. <a href="Layers.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Layer">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Static Colliders</strong></td>
+	<td style="text-align:left;">Tick this checkbox to remove static Colliders (Colliders with no Rigidbody component) from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Triggers</strong></td>
+	<td style="text-align:left;">Tick this checkbox to remove Colliders that are also Triggers from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Rigidbodies</strong></td>
+	<td style="text-align:left;">Tick this checkbox to remove <a href="class-Rigidbody.html">Rigidbody components</a> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Kinematic Bodies</strong></td>
+	<td style="text-align:left;">Tick this checkbox to remove Colliders with <strong>Kinematic </strong>Rigidbody <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> (which are not controlled by the physics engine) from the visualization. See documentation on <a href="RigidbodiesOverview.html">Rigidbody components</a> for more details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Sleeping Bodies</strong></td>
+	<td style="text-align:left;">Tick this checkbox to remove Colliders with <strong>Sleeping</strong> <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> components (which are not currently engaging with the physics engine) from the visualization. See documentation on <a href="RigidbodiesOverview.html">Rigidbody components: Sleeping</a> for more details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collider Types</strong></td>
+	<td style="text-align:left;">Use these options to remove specific Collider types from the physics visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Hide <br>    BoxColliders</td>
+	<td style="text-align:left;">Tick this checkbox to remove <span class="tooltip"><a href="class-BoxCollider.html">Box Colliders</a><span class="tooltiptext">A cube-shaped collider component that handles collisions for GameObjects like dice and ice cubes. <a href="class-BoxCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#boxcollider">Glossary</a></span></span></span> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Hide <br>    SphereColliders</td>
+	<td style="text-align:left;">Tick this checkbox to remove <span class="tooltip"><a href="class-SphereCollider.html">Sphere Colliders</a><span class="tooltiptext">A sphere-shaped collider component that handles collisions for GameObjects like balls or other things that can be roughly approximated as a sphere for the purposes of physics. <a href="class-SphereCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Hide <br>    CapsuleColliders</td>
+	<td style="text-align:left;">Tick this checkbox to remove <span class="tooltip"><a href="class-CapsuleCollider.html">Capsule Colliders</a><span class="tooltiptext">A capsule-shaped collider component that handles collisions for GameObjects like barrels and character limbs. <a href="class-CapsuleCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#capsulecollider">Glossary</a></span></span></span> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Hide <br>    MeshColliders <br>    (convex)</td>
+	<td style="text-align:left;">Tick this checkbox to remove <strong>convex</strong> <span class="tooltip"><a href="class-MeshCollider.html">Mesh Colliders</a><span class="tooltiptext">A free-form collider component which accepts a mesh reference to define its collision surface shape. <a href="class-MeshCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Hide <br>    MeshColliders <br>    (concave)</td>
+	<td style="text-align:left;">Tick this checkbox to remove <strong>concave</strong> <a href="class-MeshCollider.html">Mesh Colliders</a> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Hide <br>    TerrainColliders</td>
+	<td style="text-align:left;">Tick this checkbox to remove <span class="tooltip"><a href="class-TerrainCollider.html">Terrain Colliders</a><span class="tooltiptext">A terrain-shaped collider component that handles collisions for collision surface with the same shape as the Terrain object it is attached to. <a href="class-TerrainCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TerrainCollider">Glossary</a></span></span></span> from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide None</strong></td>
+	<td style="text-align:left;">Click <strong>Hide None</strong> to clear all filtering criteria and display all Collider types in the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide All</strong></td>
+	<td style="text-align:left;">Click <strong>Hide All</strong> to enable all filters and remove all Collider types from the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Colors</strong></td>
+	<td style="text-align:left;">Use these settings to define how Unity displays physics components in the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Static <br>    Colliders</td>
+	<td style="text-align:left;">Use this color selector to define which color indicates static Colliders (Colliders with no Rigidbody component) in the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Triggers</td>
+	<td style="text-align:left;">Use this color selector to define which color indicates Colliders that are also Triggers in the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Rigidbodies</td>
+	<td style="text-align:left;">Use this color selector to define which color indicates Rigidbody components in the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Kinematic <br>    Bodies</td>
+	<td style="text-align:left;">Use this color selector to define which color indicates <strong>Kinematic </strong>Rigidbody components (which are not controlled by the physics engine) from the visualization. See documentation on <a href="RigidbodiesOverview.html">Rigidbody components</a> for more details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Sleeping <br>    Bodies</td>
+	<td style="text-align:left;">Use this color selector to define which color indicates <strong>Sleeping </strong>Rigidbody components (which are not currently engaging with the physics engine) from the visualization. See documentation on <a href="RigidbodiesOverview.html">Rigidbody components: Sleeping</a> for more details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Variation</td>
+	<td style="text-align:left;">Use the slider to set a value between 0 and 1. This defines how much of your chose color blends with a random color. Use this to visually separate Colliders by color, and to see the structure of the GameObjects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Use these settings to define how Unity renders and displays the physics visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Transparency</td>
+	<td style="text-align:left;">Use the slider to set the value between 0 and 1. This defines the transparency of drawn <span class="tooltip"><strong>collision</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> geometry in the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Force <br>    Overdraw</td>
+	<td style="text-align:left;">Normal render geometry can sometimes obscure Colliders (for example, a Mesh Collider plane underneath a floor).Tick the <strong>Force Overdraw</strong> checkbox to make the visualization renderer draw Collider geometry on top of render geometry.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    View <br>    Distance</td>
+	<td style="text-align:left;">Use this to set the view distance of the visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Terrain <br>    Tiles Max</td>
+	<td style="text-align:left;">Use this to set the maximum number of Terrain tiles in the visualization.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The overlay panel has further options:</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage2.png" alt="The Physics Debug overlay panel">
+<figcaption>The Physics Debug overlay panel</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Collision Geometry</strong></td>
+	<td style="text-align:left;">Tick this checkbox to enable collision geometry visualization.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mouse Select</strong></td>
+	<td style="text-align:left;">Tick this checkbox to enable mouse-over highlighting and mouse selection. This can be useful if you have large GameObjects obstructing each other in the visualizer.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Profiling</h3>
+
+<p>You can use Physics Debug to profile and troubleshoot physics activity in your game. You can customize which types of Colliders or Rigidbody components you can see in the visualiser, to help you find the source of activity. The two most helpful are:</p>
+
+<p>
+<strong>To see active Rigidbody components only</strong>: To see only the Rigidbody components that are active and therefore using CPU/GPU resources, tick <strong>Hide Static Colliders</strong> and <strong>Hide Sleeping Bodies</strong>.</p>
+
+<p>
+<strong>To see non-convex <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> Colliders only:</strong> Non-convex (triangle-based) Mesh Colliders tend to generate the most contacts when their attached Rigidbody components are very near a collision with another Rigidbody or Collider. To visualize only the non-convex Mesh Colliders, set the window to <strong>Show Selected Items</strong> mode, click the <strong>Select None</strong> button, then tick the <strong>Show MeshColliders (concave)</strong> checkbox.</p>
+
+<h3>Scripting API Reference</h3>
+
+<p>See Unity Scripting API Reference for: </p>
+
+<ul>
+<li><p><a href="../ScriptReference/PhysicsDebugWindow.html">PhysicsDebugWindow</a></p></li>
+<li><p><a href="../ScriptReference/PhysicsVisualizationSettings.html">PhysicsVisualizationSettings</a></p></li>
+</ul>
+
+<p><br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–01 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Physics Debug Visualization is a new feature in Unity 5.6</span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CharacterControllers.html"></a></span><div class="tip">Character Controllers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Physics3DReference.html"></a></span><div class="tip">3D Physics Reference</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

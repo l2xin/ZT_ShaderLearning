@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Audio in Unity 5.0</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide5-Audio.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide5-Audio.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide5-Audio.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide5-Audio.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide5-Audio.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li><a href="UpgradeGuide5.html">Upgrading to Unity 5.0</a></li>
+<li>Audio in Unity 5.0</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Animation.html"></a></span><div class="tip">Animation in Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-BakedDataFormats.html"></a></span><div class="tip">Baked Data in Unity 5.0</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h2>Audio in Unity 5.0</h2>
+
+<p>These are notes to be aware of when upgrading projects from Unity 4 to Unity 5, if your project uses audio features.</p>
+
+<h3>AudioClips</h3>
+
+<p>A number of things has changed in the AudioClip. First, there is no longer a 3D flag on the <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span>. This flag has been moved into the AudioSource in form of the Spatial Blend slider allowing you to, at runtime, morphing sounds from 2D to 3D. Old projects will get imported in such a way that AudioSource’s on <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> that have a clip assigned will get their Spatial Blend parameter set up according to the old 3D flag of the AudioClip. For obvious reasons this is not possible for <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> that dynamically assign clips to sources, so this requires manual fixing.</p>
+
+<p>While the default setting for the old 3D property was true, by default in the new system, the default of the Spatial Blend parameter is set to 2D.</p>
+
+<p>Finally, AudioClips can now be multi-edited.</p>
+
+<h3>Format</h3>
+
+<p>The naming of the Format property has changed so that it reflects the method by which the data is stored rather than particular file format which deviates from platform to platform. So from now on Uncompressed refers to raw sample data, Compressed refers to a lossy <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> method best suited to the platform and ADPCM refers to a lightweight (in terms of CPU) compression method that is best suited to natural audio signals which contain a fair amount of noise (footsteps, impacts, weapons etc) and are to be played in large amounts.</p>
+
+<h3>Preloading and loading audio data in the background</h3>
+
+<p>A new feature of AudioClips is that they provide support for an option for determining whether to preload the audio data or not. Any property of the AudioClip is detached from the actual audio data loading state and can be queried at any time, so having the possibility to load on demand now helps keeping the memory usage of AudioClips low. Additionally to this AudioClips can load their audio data in the background without blocking the main game thread and causing frame drops. The load process can of course be controlled via the scripting API.</p>
+
+<h3>Multi-editing</h3>
+
+<p>All AudioClips now support multi-editing.</p>
+
+<h3>Force to Mono</h3>
+
+<p>The Force To Mono option now performs peak-normalization on the resulting down mix.</p>
+
+<h3>GetData/SetData</h3>
+
+<p>These API calls are only supported by clips that are either storing the audio data uncompressed as PCM or perform the decompression at on load. In the past more clips supported this, but the pattern wasn’t very clear since it depended both on the target platform and had different behavior in the editor and standalone players. As a new thing, tracker files can be decompressed as PCM data into memory too, so GetData/SetData can also be used on these.</p>
+
+<h3>AudioSource pause behaviour</h3>
+
+<p>Pausing in Unity5 is now consistent between Play calls and PlayOneShots calls. Pausing an AudioSource pauses voices played both ways, and calling Play or PlayOneShot unpauses the AudioSource for voices played both ways too.</p>
+
+<p>To assist with unpausing an AudioSource without playing the assigned clip, (useful for when there are oneshot voices playing), we have added a new function AudioSource.Unpause ().</p>
+
+<h3>Audio mixer</h3>
+
+<p>The AudioMixer is a new feature of Unity 5 allowing complex routing of the audio data from AudioSource’s to mix groups where effects can be applied. One key difference from the <span class="tooltip"><strong>Audio Filter</strong><span class="tooltiptext">Any audio filter that distorts the sound from an Audio Source or sounds reaching the Audio Listener. <a href="class-AudioEffect.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AudioFilter">Glossary</a></span></span></span> <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> is that audio filters get instantiated per AudioSource and therefore are more costly in terms of CPU if a game has a large number of AudioSources with filters or if a script simply creates many instances of a GameObject containing . With the mixer it is now possible to set up a group with the same effects and simply routing the audio from the AudioSource through the shared effects resulting in lower CPU usage.</p>
+
+<p>The mixer does not currently support script-based effects, but it does have a new native audio <span class="tooltip"><strong>plugin</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plugins you can use in Unity: Managed plugins (managed .NET assemblies created with tools like Visual Studio) and Native plugins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plugin">Glossary</a></span></span></span> API allowing developers to write high-performance effects that integrate seamlessly with the other built-in effects.</p>
+
+<h3>AudioSettings</h3>
+
+<p>The way the audio system is configured has changed. The overall settings for setting speaker mode and DSP buffer size (i.e. latency) should still be configured in the audio <span class="tooltip"><strong>project settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>, and additional to these it is now also possible to configure the real and virtual voices counts. The real voice count specifies how many voices can be heard concurrently and therefore has a strong impact on the overall CPU consumption of the game. Previously this was hardcoded to 32 with some platform-specific exceptions. When the number of playing voices exceeds this number, those that are least audible will be put on hold until these voices become dominant or some of the dominant voices stop playing. These voices are simply bypassed from playing. They are not stopped, simply made inactive until there is bandwidth again. The virtual voice count defines how many voices can be managed in total, so if the number of voices playing exceeds this, the least audible voices will be stopped.</p>
+
+<p>AudioSettings.outputSampleRate and AudioSettings.speakerMode can still be read from, but the setters are now deprecated, as is the SetDSPBufferSize function. As a replacement for these for audio configuration changes that need to happen at runtime there is now a structure called AudioConfiguration. This can be obtained via AudioSettings.GetConfiguration() which will return the active settings on the audio output device. Changes can be made to this structure and applied via AudioSettings.Reset() which will return a boolean result depending on the successful or failed attempt of applying the changes.</p>
+
+<p>Whenever changes to the audio configuration happen, either caused by scripts via AudioSettings.Reset() or because of external events such as plugging in HDMI monitors with audio support, external sound cards or USB headsets, a user-defined callback AudioSettings.OnAudioConfigurationChanged(bool deviceChanged) will be invoked. Its argument deviceChanged will be false if the change was caused by an AudioSettings.Reset() call, and true if it was caused by an external device change (this could also be changing the sample rate of the audio device in use). The callback allows you to recreate any volatile sounds such as generated PCM clips, restore any audio state, or further adapt the audio settings through a call to AudioSettings.Reset().</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Animation.html"></a></span><div class="tip">Animation in Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-BakedDataFormats.html"></a></span><div class="tip">Baked Data in Unity 5.0</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

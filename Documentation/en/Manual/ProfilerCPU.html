@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: CPU Usage Profiler</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/ProfilerCPU.html">English</a></li>
+<li><a href="/ja/current/Manual/ProfilerCPU.html">日本語</a></li>
+<li><a href="/es/current/Manual/ProfilerCPU.html">Español</a></li>
+<li><a href="/kr/current/Manual/ProfilerCPU.html">한국어</a></li>
+<li><a href="/ru/current/Manual/ProfilerCPU.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="AdvancedDevelopment.html">Advanced Development</a></li>
+<li><a href="Profiler.html">Profiler overview</a></li>
+<li>CPU Usage Profiler</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerWindow.html"></a></span><div class="tip">Profiler window</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerRendering.html"></a></span><div class="tip">Rendering Profiler</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>CPU Usage Profiler</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/ProfilerCPU.png" alt="">
+</figure>
+
+<p>The CPU Usage Profiler displays where time is spent in your game. When it is selected, the lower pane displays hierarchical time data for the selected frame. See documentation on the <a href="ProfilerWindow.html">Profiler Window</a> to learn more about the information on the Profiler timeline.</p>
+
+<ul>
+<li>
+<strong>Hierarchy mode:</strong> Displays hierarchical time data.</li>
+<li>
+<strong>Group Hierarchy mode:</strong> Groups time data into logical groups (such as Rendering, Physics, Scripts). Because children of any group can also be in different groups (for example, some scripts might also call rendering functions), the percentages of group times often add up to more than 100%.</li>
+</ul>
+
+<p>Drag chart labels up and down to reorder the way the CPU chart is stacked.</p>
+
+<h2>Selecting individual items</h2>
+
+<p>When an item is selected in the lower pane, its contribution to the CPU chart is highlighted (and the rest are dimmed). Clicking on an item again de-selects it.</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerCPUSelected.png" alt="Render.OpaqueGeometry is selected and its contribution is highlighted in the chart">
+<figcaption>Render.OpaqueGeometry is selected and its contribution is highlighted in the chart</figcaption>
+</figure>
+
+<p>In the hierarchical time data, the <strong>Self</strong> column refers to the amount of time spent in a particular function, not including the time spent calling sub-functions. In the screenshot above, 41.1% of time is spent in the <code>Camera.Render</code> function. This function does a lot of work, and calls the various drawing and culling functions. Excluding all of these functions, only 2.1% of time is spent in the <code>Camera.Render</code> function itself. </p>
+
+<p>The <strong>Time ms</strong> and <strong>Self ms</strong> columns show the same information but in milliseconds. <code>Camera.Render</code> takes 0.01ms but, including all the functions it calls, 0.21ms are consumed. The <strong>GC Alloc</strong> column shows how much memory has been allocated in the current frame, which is later collected by the garbage collector. Keep this value at zero to prevent the garbage collector from causing hiccups in your framerate.</p>
+
+<p>The <strong>Others</strong> section of the CPU profiler records the total of all areas that do not fall into <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span>, <span class="tooltip"><strong>Scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, Physics, Garbage Collection or VSync. This includes Animation, AI, Audio, Particles, <span class="tooltip"><strong>Networking</strong><span class="tooltiptext">The Unity system that enables multiplayer gaming across a computer network. <a href="UNetOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Networking">Glossary</a></span></span></span>, Loading, and PlayerLoop.</p>
+
+<h2>Physics markers</h2>
+
+<p>The descriptions below provide a brief account of what each of the various high-level Physics Profiler markers mean.</p>
+
+<ul>
+<li>
+<strong>Physics.Simulate:</strong> Called from <code>FixedUpdate</code>. This updates the present state of the physics by instructing the <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span> (PhysX) to run its simulation.</li>
+<li>
+<strong>Physics.Processing:</strong> Called from <code>FixedUpdate</code>. This is where all the non-cloth physics jobs are processed. Expanding this marker shows low-level detail of the work being done internally in the physics engine.</li>
+<li>
+<strong>Physics.ProcessingCloth:</strong> Called from <code>FixedUpdate</code>. This is where all the cloth physics jobs are processed. Expanding this marker will show low level detail of the work being done internally in the physics engine.</li>
+<li>
+<strong>Physics.FetchResults:</strong> Called from <code>FixedUpdate</code>. This is where the results of the physics simulation are collected from the physics engine.</li>
+<li>
+<strong>Physics.UpdateBodies:</strong> Called from <code>FixedUpdate</code>. This is where all the physics bodies have their positions and rotations updated as well as where messages that communicate these updates are sent.</li>
+<li>
+<strong>Physics.ProcessReports:</strong> Called from <code>FixedUpdate</code>. This stage is run once the physics <code>FixedUpdate</code> has concluded, and is where all the various stages of responding to the results of the simulation are processed. Contacts, <span class="tooltip"><strong>joint</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> breaks and triggers are updated and messaged here. There are four distinct sub stages:
+
+<ul>
+<li>
+<strong>Physics.TriggerEnterExits:</strong> Called from <code>FixedUpdate</code>. This is where <code>OnTriggerEnter</code> and <code>OnTriggerExit</code> events are processed.</li>
+<li>
+<strong>Physics.TriggerStays:</strong> Called from <code>FixedUpdate</code>. This is where <code>OnTriggerStay</code> events are processed.</li>
+<li>
+<strong>Physics.Contacts:</strong> Called from <code>FixedUpdate</code>. This is where <code>OnCollisionEnter</code>, <code>OnCollisionExit</code> and <code>OnCollisionStay</code> events are processed.</li>
+<li>
+<strong>Physics.JointBreaks:</strong> Called from <code>FixedUpdate</code>. This is where updates and messages relating to joints being broken is processed.</li>
+</ul>
+</li>
+<li>
+<strong>Physics.UpdateCloth:</strong> Called from <code>Update</code>. This is where updates relating to cloth and their skinned meshes are made.</li>
+<li>
+<strong>Physics.<span class="tooltip"><strong>Interpolation</strong><span class="tooltiptext">The estimation of values that determine the shape of an animation curve between two keys. <a href="TimelineChangingInterpolation.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#interpolation">Glossary</a></span></span></span>:</strong> Called from <code>Update</code>. This stage deals with the interpolation of positions and rotations for all the physics objects.</li>
+</ul>
+
+<h2>Performance warnings</h2>
+
+<p>There are some common performance issues the CPU Profiler is able to detect and warn you about. These appear in the <strong>Warning</strong> column of the lower pane when viewing the <strong>CPU Usage</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerCPUWarningCount.png" alt="A Profiler warning indicating that Static Colliders have been moved">
+<figcaption>A Profiler warning indicating that Static Colliders have been moved</figcaption>
+</figure>
+
+<p>The specific issues the Profiler can detect are:</p>
+
+<ul>
+<li>
+<strong>Rigidbody.SetKinematic</strong> [Re-create non-convex MeshCollider for Rigidbody]</li>
+<li>
+<strong>Animation.DestroyAnimationClip</strong> [Triggers RebuildInternalState]</li>
+<li>
+<strong>Animation.AddClip</strong> [Triggers RebuildInternalState]</li>
+<li>
+<strong>Animation.RemoveClip</strong> [Triggers RebuildInternalState]</li>
+<li>
+<strong>Animation.Clone</strong> [Triggers RebuildInternalState]</li>
+<li>
+<strong>Animation.Deactivate</strong> [Triggers RebuildInternalState]</li>
+</ul>
+
+<p>In the screenshot above, the Profiler is showing the <strong>Static </strong>Collider<strong>.Move</strong> warning. The <strong>Warning</strong> column shows that this warning has been triggered 12 times in the current frame. The term “delayed cost” means that, although the entry in the Profiler may show a low cost (in this case 0.00ms), the action may trigger more system-demanding operations later on.</p>
+
+<h2>CPU Profiler Timeline</h2>
+
+<h3>Mem Record: Native memory performance profiling</h3>
+
+<p>Native memory performance profiling allows you to profile activity inside Unity’s native memory management system and assess how it is affecting runtime performance. This can be useful when searching for unwanted or resource-intensive allocation patterns in Unity’s memory management. </p>
+
+<p>To profile Unity’s native memory management, you need to record it. To access native memory recording mode (called <strong>Mem Record</strong> in Unity), go to <strong>Window</strong> &gt; <strong>Analysis</strong> &gt; <span class="tooltip"><strong>Profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span> to open the Profiler window. Select the <strong>CPU Usage</strong> Profiler (if it is not visible, click <strong>Add Profiler</strong> &gt; <strong>CPU</strong>) then the drop-down menu underneath the Profiler. Next, click <span class="tooltip"><strong>Timeline</strong><span class="tooltiptext">Generic term within Unity that refers to all features, windows, editors, and components related to creating, modifying, or reusing cut-scenes, cinematics, and game-play sequences. <a href="TimelineSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timeline">Glossary</a></span></span></span> and then select <strong>Mem Record</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerCPU-MemRecord-SelectMode.png" alt="Selecting recording mode">
+<figcaption>Selecting recording mode</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Option</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+	<th style="text-align:left;"><strong>Impact on performance</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>None</strong></td>
+	<td style="text-align:left;">Mode disabled. This is the default selection.</td>
+	<td style="text-align:left;">N/A</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sample only</strong></td>
+	<td style="text-align:left;">Records memory allocations, re-allocations, de-allocations, activity type, and system.</td>
+	<td style="text-align:left;">Low</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Callstack (fast)</strong></td>
+	<td style="text-align:left;">This has the same functionality as <strong>Sample only</strong>, but also records a shortened callstack from the native allocation site to where the callstack transitions from native symbols into script symbols. Effectively, you can only see the callstack up to the deepest script symbol.</td>
+	<td style="text-align:left;">Medium</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Callstack (full)</strong></td>
+	<td style="text-align:left;">This has the same functionality as <strong>Sample only</strong>, but also records the callstack with full script-to-native and native-to-script transitions.</td>
+	<td style="text-align:left;">High</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<strong>Note:</strong> When the active Profiler is only connected to a standalone player, only the low-impact <strong>Sample only</strong> mode is supported.</p>
+
+<p>The recorded memory allocation samples appear in the Profiler window in bright red.</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerCPU-MemRecord-Allocation.png" alt="">
+</figure>
+
+<p>Click the <strong>High Detail</strong> button next to <strong>Mem Record</strong> to enable High Detail mode. Select a sample to display the allocation type and system. If the callstack was recorded for the selected allocation sample, the associated callstack symbols are resolved and displayed as well:</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerCPU-MemRecord-HighDetail.jpg" alt="">
+</figure>
+
+<h4>Using Mem Record</h4>
+
+<p>There are a number of instances where the <strong>Mem Record</strong> function is useful. For example: </p>
+
+<ul>
+<li>Learning when a system is doing many small allocations instead of just a few large ones.</li>
+<li>Learning when a Worker Thread accidentally allocates memory (for example by unintended MemLabel use).</li>
+<li>Finding lock contention (when several threads try to access the native memory system simultaneously).</li>
+<li>Finding sources of memory fragmentation (particularly important for low-memory devices).</li>
+</ul>
+
+<h2>High Detail view of Timeline</h2>
+
+<p>The <strong>High Detail</strong> view for the CPU Usage Profiler Timeline gives at least one <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> of width to every time sample recorded by Unity’s CPU Usage Profiler.</p>
+
+<p>This allows you to see a complete overview of all activity in a frame, including short-lived activities such as thread synchronization or memory allocation.</p>
+
+<p>To enable the <strong>High Detail</strong> view, go to <strong>Window</strong> &gt; <strong>Analysis</strong> &gt; <strong>Profiler</strong> to open the Profiler window. Select the <strong>CPU Usage</strong> Profiler (if it is not visible, click <strong>Add Profiler</strong> &gt; <strong>CPU</strong>) then select the drop-down menu underneath the Profiler and click <strong>Timeline</strong> followed by <strong>High Detail</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/CPUProfilerHighDetail.png" alt="">
+</figure>
+
+<h2>Comparison</h2>
+
+<p>The following two images show the difference between the <strong>High Detail</strong> view and the normal view for the CPU Usage Profiler’s Timeline.</p>
+
+<h3>High Detail view</h3>
+
+<figure>
+<img src="../uploads/Main/CPUProfilerinHighDetail.png" alt="">
+</figure>
+
+<h3>Normal view</h3>
+
+<figure>
+<img src="../uploads/Main/CPUProfilerNormalDetail.png" alt="">
+</figure>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerWindow.html"></a></span><div class="tip">Profiler window</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerRendering.html"></a></span><div class="tip">Rendering Profiler</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

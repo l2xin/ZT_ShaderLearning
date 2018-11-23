@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 4.0</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide3540.html">English</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide3540.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide3540.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide3540.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide3540.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrade Guides</a></li>
+<li>Upgrading to Unity 4.0</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Other Upgrade Notes for Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide3435.html"></a></span><div class="tip">Upgrading to Unity 3.5</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Upgrading to Unity 4.0</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>GameObject active state</h2>
+
+<p>Unity 4.0 changes how the active state of <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> is handled. GameObject’s active state is now inherited by child <strong>GameObjects</strong>, so that any GameObject which is inactive will also cause its children to be inactive. We believe that the new behavior makes more sense than the old one, and should have always been this way. Also, the upcoming new GUI system heavily depends on the new 4.0 behavior, and would not be possible without it. Unfortunately, this may require some work to fix existing projects to work with the new Unity 4.0 behavior, and here is the change:</p>
+
+<h3>The old behavior:</h3>
+
+<ul>
+<li>Whether a GameObject is active or not was defined by its <strong>.active</strong> property.</li>
+<li>This could be queried and set by checking the <strong>.active</strong> property.</li>
+<li>A GameObject’s active state had no impact on the active state of child GameObjects. If you want to activate or deactivate a GameObject and all of its children, you needed to call <strong>GameObject.SetActiveRecursively</strong>.</li>
+<li>When using <strong>SetActiveRecursively</strong> on a GameObject, the previous active state of any child GameObject would be lost. When you deactivate and then activated a GameObject and all its children using <strong>SetActiveRecursively</strong>, any child which had been inactive before the call to <strong>SetActiveRecursively</strong>, would become active, and you had to manually keep track of the active state of children if you want to restore it to the way it was.</li>
+<li>Prefabs could not contain any active state, and were always active after <span class="tooltip"><strong>prefab</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> instantiation.</li>
+</ul>
+
+<h3>The new behavior:</h3>
+
+<ul>
+<li>Whether a GameObject is active or not is defined by its own <strong>.activeSelf</strong> property, and that of all of its parents. The GameObject is active if its own <strong>.activeSelf</strong> property and that of all of its parents is <strong>true</strong>. If any of them are <strong>false</strong>, the GameObject is inactive.</li>
+<li>This can be queried using the <strong>.activeInHierarchy</strong> property.</li>
+<li>The <strong>.activeSelf</strong> state of a GameObject can be changed by calling <strong>GameObject.SetActive</strong>. When calling <strong>SetActive (false)</strong> on a previously active GameObject, this will deactivate the GameObject and all its children. When calling <strong>SetActive (true)</strong> on a previously inactive GameObject, this will activate the GameObject, if all its parents are active. Children will be activated when all their parents are active (i.e., when all their parents have <strong>.activeSelf</strong> set to <strong>true</strong>).</li>
+<li>This means that <strong>SetActiveRecursively</strong> is no longer needed, as active state is inherited from the parents. It also means that, when deactivating and activating part of a hierarchy by calling <strong>SetActive</strong>, the previous active state of any child GameObject will be preserved.</li>
+<li>Prefabs can contain active state, which is preserved on prefab instantiation.</li>
+</ul>
+
+<h3>Example:</h3>
+
+<p>You have three GameObjects, A, B and C, so that B and C are children of A. </p>
+
+<ul>
+<li>Deactivate C by calling <strong>C.SetActive(false)</strong>.</li>
+<li>Now, <strong>A.activeInHierarchy == true</strong>, <strong>B.activeInHierarchy == true</strong> and <strong>C.activeInHierarchy == false</strong>.</li>
+<li>Likewise, <strong>A.activeSelf == true</strong>, <strong>B.activeSelf == true</strong> and <strong>C.activeSelf == false</strong>.</li>
+<li>Now we deactivate the parent A by calling <strong>A.SetActive(false)</strong>.</li>
+<li>Now, <strong>A.activeInHierarchy == false</strong>, <strong>B.activeInHierarchy == false</strong> and <strong>C.activeInHierarchy == false</strong>.</li>
+<li>Likewise, <strong>A.activeSelf == false</strong>, <strong>B.activeSelf == true</strong> and <strong>C.activeSelf == false</strong>.</li>
+<li>Now we activate the parent A again by calling <strong>A.SetActive(true)</strong>.</li>
+<li>Now, we are back to <strong>A.activeInHierarchy == true</strong>, <strong>B.activeInHierarchy == true</strong> and <strong>C.activeInHierarchy == false</strong>.</li>
+<li>Likewise, <strong>A.activeSelf == true</strong>, <strong>B.activeSelf == true</strong> and <strong>C.activeSelf == false</strong>.</li>
+</ul>
+
+<h3>The new active state in the editor</h3>
+
+<p>To visualize these changes, in the Unity 4.0 editor, any GameObject which is inactive (either because it’s own <strong>.activeSelf</strong> property is set to <strong>false</strong>, or that of one of it’s parents), will be greyed out in the hierarchy, and have a greyed out icon in the <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. The GameObject’s own <strong>.activeSelf</strong> property is reflected by it’s active checkbox, which can be toggled regardless of parent state (but it will only activate the GameObject if all parents are active).</p>
+
+<h3>How this affects existing projects:</h3>
+
+<ul>
+<li>To make you aware of places in your code where this might affect you, the <strong>GameObject.active</strong> property and the <strong>GameObject.SetActiveRecursively()</strong> function have been deprecated.</li>
+<li>They are, however still functional. Reading the value of <strong>GameObject.active</strong> is equivalent to reading <strong>GameObject.activeInHierarchy</strong>, and setting <strong>GameObject.active</strong> is equivalent to calling <strong>GameObject.SetActive()</strong>. Calling <strong>GameObject.SetActiveRecursively()</strong> is equivalent to calling <strong>GameObject.SetActive()</strong> on the GameObject and all of it’s children.</li>
+<li>Exiting <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> from 3.5 are imported by setting the <strong>selfActive</strong> property of any GameObject in the scene to it’s previous <strong>active</strong> property.</li>
+<li>As a result, any project imported from previous versions of Unity should still work as expected (with compiler warnings, though), as long as it does not rely on having active children of inactive GameObjects (which is no longer possible in Unity 4.0).</li>
+<li>If your project relies on having active children of inactive GameObjects, you need to change your logic to a model which works in Unity 4.0.</li>
+</ul>
+
+<h2>Changes to the <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> processing pipeline</h2>
+
+<p>During the development of 4.0 our asset import pipeline has changed in some significant ways internal in order to improve performance, memory usage and determinism. For the most part these changes does not have an impact on the user with one exception: Objects in assets are not made persistent until the very end of the import pipeline and any previously imported version of an assets will be completely replaced.</p>
+
+<p>The first part means that during post processing you cannot get the correct references to objects in the asset and the second part means that if you use the references to a previously imported version of the asset during post processing do store modification those modifications will be lost.</p>
+
+<h3>Example of references being lost because they are not persistent yet</h3>
+
+<p>Consider this small example:</p>
+
+<pre><code>public class ModelPostprocessor : AssetPostprocessor
+{
+    public void OnPostprocessModel(GameObject go)
+    {
+        PrefabUtility.CreatePrefab(&quot;Prefabs/&quot; + go.name, go);
+    }
+}
+
+
+</code></pre>
+
+<p>In Unity 3.5 this would create a prefab with all the correct references to the meshes and so on because all the meshes would already have been made persistent, but since this is not the case in Unity 4.0 the same post processor will create a prefab where all the references to the meshes are gone, simply because Unity 4.0 does not yet know how to resolve the references to objects in the original model prefab. To correctly copy a modelprefab in to prefab you should use <strong>OnPostProcessAllAssets</strong> to go through all imported assets, find the modelprefab and create new prefabs as above.</p>
+
+<h3>Example of references to previously imported assets being discarded</h3>
+
+<p>The second example is a little more complex but is actually a use case we have seen in 3.5 that broke in 4.0. Here is a simple <strong>ScriptableObject</strong> with a references to a <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span>.</p>
+
+<pre><code>public class Referencer : ScriptableObject
+{
+    public Mesh myMesh; 
+}
+
+
+</code></pre>
+
+<p>We use this <strong>ScriptableObject</strong> to create an asset with references to a mesh inside a model, then in our post processor we take that reference and give it a different name, the end result being that when we have reimported the model the name of the mesh will be what the post processor determines.</p>
+
+<pre><code>public class Postprocess : AssetPostprocessor
+{
+    public void OnPostprocessModel(GameObject go)
+    {
+        Referencer myRef = (Referencer)AssetDatabase.LoadAssetAtPath(&quot;Assets/MyRef.asset&quot;, typeof(Referencer));
+        myRef.myMesh.name = &quot;AwesomeMesh&quot;;
+    }
+}
+
+
+</code></pre>
+
+<p>This worked fine in Unity 3.5 but in Unity 4.0 the already imported model will be completely replaced, so changing the name of the mesh from a previous import will have no effect. The Solution here is to find the mesh by some other means and change its name. What is most important to note is that in Unity 4.0 you should ONLY modify the given input to the post processor and not rely on the previously imported version of the same asset.</p>
+
+<h2>Mesh Read/Write option</h2>
+
+<p>Unity 4.0 adds a “Read/Write Enabled” option in the <a href="class-FBXImporter.html">Model import settings</a>. When this option is turned off, it saves memory since Unity can unload a copy of mesh data in the game.</p>
+
+<p>However, if you are scaling or instantiating meshes at runtime with a non-uniform scale, you may have to enable “Read/Write Enabled” in their import settings. The reason is that non-uniform scaling requires the mesh data to be kept in memory. Normally we detect this at build time, but when meshes are scaled or instantiated at runtime you need to set this manually. Otherwise they might not be rendered in game builds correctly.</p>
+
+<h2>Mesh optimization</h2>
+
+<p>The Model Importer in Unity 4.0 has become better at mesh optimization. The “Mesh Optimization” checkbox in the Model Importer in Unity 4.0 is now enabled by default, and will reorder the vertices in your Mesh for optimal performance. You may have some post-processing code or effects in your project which depend on the vertex order of your meshes, and these might be broken by this change. In that case, turn off “Mesh Optimization” in the Mesh importer. Especially, if you are using the SkinnedCloth <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>, mesh optimization will cause your vertex weight mapping to change. So if you are using SkinnedCloth in a project imported from 3.5, you need to turn off “Mesh Optimization” for the affected meshes, or reconfigure your vertex weights to match the new vertex order.</p>
+
+<h2>Mobile input</h2>
+
+<p>With Unity 4.0 mobile sensor input got better alignment between platforms, which means you can write less code when handling typical input on mobile platforms. Now acceleration and gyro input will follow screen orientation in the same way both on <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> and Android platforms. To take advantage of this change you should refactor your input code and remove platform and screen orientation specific code when handling acceleration and gyro input. You still can get old behavior on <strong>iOS</strong> by setting <strong>Input.compensateSensors</strong> to false.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Other Upgrade Notes for Unity 5.0</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide3435.html"></a></span><div class="tip">Upgrading to Unity 3.5</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

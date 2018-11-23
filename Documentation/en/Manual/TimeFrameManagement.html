@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Time and Framerate Management</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="ScriptingSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/TimeFrameManagement.html">English</a></li>
+<li><a href="/ja/current/Manual/TimeFrameManagement.html">日本語</a></li>
+<li><a href="/es/current/Manual/TimeFrameManagement.html">Español</a></li>
+<li><a href="/kr/current/Manual/TimeFrameManagement.html">한국어</a></li>
+<li><a href="/ru/current/Manual/TimeFrameManagement.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="ScriptingSection.html">Scripting</a></li>
+<li><a href="ScriptingConcepts.html">Scripting Overview</a></li>
+<li>Time and Framerate Management</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="EventFunctions.html"></a></span><div class="tip">Event Functions</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CreateDestroyObjects.html"></a></span><div class="tip">Creating and Destroying GameObjects</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Time and Framerate Management</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <a href="../ScriptReference/MonoBehaviour.Update.html">Update</a> function allows you to monitor inputs and other events regularly from a script and take appropriate action. For example, you might move a character when the “forward” key is pressed. An important thing to remember when handling time-based actions like this is that the game’s framerate is not constant and neither is the length of time between Update function calls.</p>
+
+<p>As an example of this, consider the task of moving an object forward gradually, one frame at a time. It might seem at first that you could just shift the object by a fixed distance each frame:</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public float distancePerFrame;
+    
+    void Update() {
+        transform.Translate(0, 0, distancePerFrame);
+    }
+}
+
+
+//JS script example
+var distancePerFrame: float;
+
+function Update() {
+    transform.Translate(0, 0, distancePerFrame);
+}
+</code></pre>
+
+<p>However, given that the frame time is not constant, the object will appear to move at an irregular speed. If the frame time is 10 milliseconds then the object will step forward by <em>distancePerFrame</em> one hundred times per second. But if the frame time increases to 25 milliseconds (due to CPU load, say) then it will only step forward forty times a second and therefore cover less distance. The solution is to scale the size of the movement by the frame time which you can read from the <a href="../ScriptReference/Time-deltaTime.html">Time.deltaTime</a> property:</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public float distancePerSecond;
+    
+    void Update() {
+        transform.Translate(0, 0, distancePerSecond * Time.deltaTime);
+    }
+}
+
+
+//JS script example
+var distancePerSecond: float;
+
+function Update() {
+    transform.Translate(0, 0, distancePerSecond * Time.deltaTime);
+}
+</code></pre>
+
+<p>Note that the movement is now given as <em>distancePerSecond</em> rather than <em>distancePerFrame</em>. As the framerate changes, the size of the movement step will change accordingly and so the object’s speed will be constant.</p>
+
+<h2>Fixed Timestep</h2>
+
+<p>Unlike the main frame update, Unity’s physics system <em>does</em> work to a <span class="tooltip"><strong>fixed timestep</strong><span class="tooltiptext">A customizable framerate-independent interval that dictates when physics calculations and FixedUpdate() events are performed. <a href="class-TimeManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FixedTimestep">Glossary</a></span></span></span>, which is important for the accuracy and consistency of the simulation. At the start of the physics update, Unity sets an “alarm” by adding the <strong>fixed timestep</strong> value onto the time when the last physics update ended. The physics system will then perform calculations until the alarm goes off.</p>
+
+<p>You can change the size of the fixed timestep from the <span class="tooltip"><a href="class-TimeManager.html">Time Manager</a><span class="tooltiptext">A Unity Settings Manager that lets you set a number of properties that control timing within your game. <a href="class-TimeManager.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimeManager">Glossary</a></span></span></span> and you can read it from a script using the <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> property. Note that a lower value for the timestep will result in more frequent physics updates and more precise simulation but at the cost of greater CPU load. You probably won’t need to change the default fixed timestep unless you are placing high demands on the <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>.</p>
+
+<h2>Maximum Allowed Timestep</h2>
+
+<p>The fixed timestep keeps the physical simulation accurate in real time but it can cause problems in cases where the game makes heavy use of physics and the gameplay framerate has also become low (due to a large number of objects in play, say). The main frame update processing has to be “squeezed” in between the regular physics updates and if there is a lot of processing to do then several physics updates can take place during a single frame. Since the frame time, positions of objects and other properties are frozen at the start of the frame, the graphics can get out of sync with the more frequently updated physics.</p>
+
+<p>Naturally, there is only so much CPU power available but Unity has an option to let you effectively slow down physics time to let the frame processing catch up. The <em>Maximum Allowed Timestep</em> setting (in the <a href="class-TimeManager.html">Time Manager</a>) puts a limit on the amount of time Unity will spend processing physics and FixedUpdate calls during a given frame update. If a frame update takes longer than <em>Maximum Allowed Timestep</em> to process, the physics engine will “stop time” and let the frame processing catch up. Once the frame update has finished, the physics will resume as though no time has passed since it was stopped. The result of this is that <span class="tooltip"><strong>rigidbodies</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> will not move perfectly in real time as they usually do but will be slowed slightly. However, the physics “clock” will still track them as though they were moving normally. The slowing of physics time is usually not noticeable and is an acceptable trade-off against gameplay performance.</p>
+
+<h2>Time Scale</h2>
+
+<p>For special effects, such as “bullet-time”, it is sometimes useful to slow the passage of game time so that animations and script responses happen at a reduced rate. Furthermore, you may sometimes want to freeze game time completely, as when the game is paused. Unity has a <em>Time Scale</em> property that controls how fast game time proceeds relative to real time. If the scale is set to 1.0 then game time matches real time. A value of 2.0 makes time pass twice as quickly in Unity (ie, the action will be speeded-up) while a value of 0.5 will slow gameplay down to half speed. A value of zero will make time “stop” completely. Note that the time scale doesn’t actually slow execution but simply changes the time step reported to the Update and FixedUpdate functions via <a href="../ScriptReference/Time-deltaTime.html">Time.deltaTime</a> and <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a>. The Update function is likely to be called more often than usual when game time is slowed down but the <em>deltaTime</em> step reported each frame will simply be reduced. Other script functions are not affected by the time scale so you can, for example, display a GUI with normal interaction when the game is paused.</p>
+
+<p>The <a href="class-TimeManager.html">Time Manager</a> has a property to let you set the time scale globally but it is generally more useful to set the value from a script using the <a href="../ScriptReference/Time-timeScale.html">Time.timeScale</a> property:</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void Pause() {
+        Time.timeScale = 0;
+    }
+    
+    void Resume() {
+        Time.timeScale = 1;
+    }
+}
+
+//JS script example
+function Pause() {
+    Time.timeScale = 0;
+}
+
+function Resume() {
+    Time.timeScale = 1;
+}
+</code></pre>
+
+<h2>Capture Framerate</h2>
+
+<p>A very special case of time management is where you want to record gameplay as a video. Since the task of saving screen images takes considerable time, the usual framerate of the game will be drastically reduced if you attempt to do this during normal gameplay. This will result in a video that doesn’t reflect the true performance of the game.</p>
+
+<p>Fortunately, Unity provides a <a href="../ScriptReference/Time-captureFramerate.html">Capture Framerate</a> property that lets you get around this problem. When the property’s value is set to anything other than zero, game time will be slowed and the frame updates will be issued at precise regular intervals. The interval between frames is equal to 1 / Time.captureFramerate, so if the value is set to 5.0 then updates occur every fifth of a second. With the demands on framerate effectively reduced, you have time in the Update function to save screenshots or take other actions:</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    // Capture frames as a screenshot sequence. Images are
+    // stored as PNG files in a folder - these can be combined into
+    // a movie using image utility software (eg, QuickTime Pro).
+    // The folder to contain our screenshots.
+    // If the folder exists we will append numbers to create an empty folder.
+    string folder = &quot;ScreenshotFolder&quot;;
+    int frameRate = 25;
+        
+    void Start () {
+        // Set the playback framerate (real time will not relate to game time after this).
+        Time.captureFramerate = frameRate;
+        
+        // Create the folder
+        System.IO.Directory.CreateDirectory(folder);
+    }
+    
+    void Update () {
+        // Append filename to folder name (format is '0005 shot.png&quot;')
+        string name = string.Format(&quot;{0}/{1:D04} shot.png&quot;, folder, Time.frameCount );
+        
+        // Capture the screenshot to the specified file.
+        Application.CaptureScreenshot(name);
+    }
+}
+
+//JS script example
+
+// Capture frames as a screenshot sequence. Images are
+// stored as PNG files in a folder - these can be combined into
+// a movie using image utility software (eg, QuickTime Pro).
+// The folder to contain our screenshots.
+// If the folder exists we will append numbers to create an empty folder.
+var folder = &quot;ScreenshotFolder&quot;;
+var frameRate = 25;
+
+
+function Start () {
+    // Set the playback framerate (real time will not relate to game time after this).
+    Time.captureFramerate = frameRate;
+
+    // Create the folder
+    System.IO.Directory.CreateDirectory(folder);
+}
+
+function Update () {
+    // Append filename to folder name (format is '0005 shot.png&quot;')
+    var name = String.Format(&quot;{0}/{1:D04} shot.png&quot;, folder, Time.frameCount );
+
+    // Capture the screenshot to the specified file.
+    Application.CaptureScreenshot(name);
+}
+</code></pre>
+
+<p>Although the video recorded using this technique typically looks very good, the game can be hard to play when slowed-down drastically. You may need to experiment with the value of Time.captureFramerate to allow ample recording time without unduly complicating the task of the test player.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="EventFunctions.html"></a></span><div class="tip">Event Functions</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CreateDestroyObjects.html"></a></span><div class="tip">Creating and Destroying GameObjects</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

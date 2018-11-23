@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Cross-Platform Considerations</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="UnityOverview" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/CrossPlatformConsiderations.html">English</a></li>
+<li><a href="/ja/current/Manual/CrossPlatformConsiderations.html">日本語</a></li>
+<li><a href="/es/current/Manual/CrossPlatformConsiderations.html">Español</a></li>
+<li><a href="/kr/current/Manual/CrossPlatformConsiderations.html">한국어</a></li>
+<li><a href="/ru/current/Manual/CrossPlatformConsiderations.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="UnityOverview.html">Working in Unity</a></li>
+<li><a href="CreatingGameplay.html">Creating Gameplay</a></li>
+<li>Cross-Platform Considerations</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RandomNumbers.html"></a></span><div class="tip">Adding Random Gameplay Elements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PublishingBuilds.html"></a></span><div class="tip">Publishing Builds</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Cross-Platform Considerations</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Most of Unity’s API and project structure is identical for all supported platforms and in some cases a project can simply be rebuilt to run on different devices. However, fundamental differences in the hardware and deployment methods mean that some parts of a project may not port between platforms without change. Below are details of some common cross-platform issues and suggestions for solving them.</p>
+
+<h2>Input</h2>
+
+<p>The most obvious example of different behaviour between platforms is in the input methods offered by the hardware. </p>
+
+<h3>Keyboard and joypad</h3>
+
+<p>The <strong>Input.GetAxis</strong> function is very convenient on desktop platforms as a way of consolidating keyboard and joypad input. However, this function doesn’t make sense for the mobile platforms which rely on touchscreen input. Likewise, the standard desktop keyboard input doesn’t port over to mobiles well for anything other than typed text. It is worthwhile to add a layer of abstraction to your input code if you are considering porting to other platforms in the future. As a simple example, if you were making a driving game then you might create your own input class and wrap the Unity API calls in your own functions:-</p>
+
+<pre><code>// Returns values in the range -1.0 .. +1.0 (== left .. right).
+function Steering() {
+    return Input.GetAxis(&quot;Horizontal&quot;);
+}
+
+
+// Returns values in the range -1.0 .. +1.0 (== accel .. brake).
+function Acceleration() {
+    return Input.GetAxis(&quot;Vertical&quot;);
+}
+
+
+var currentGear: int;
+
+// Returns an integer corresponding to the selected gear.
+function Gears() {
+    if (Input.GetKeyDown(&quot;p&quot;))
+        currentGear++;
+    else if (Input.GetKeyDown(&quot;l&quot;))
+        currentGear--;
+    
+    return currentGear;
+}
+
+</code></pre>
+
+<p>One advantage of wrapping the API calls in a class like this is that they are all concentrated in a single source file and are consequently easy to locate and replace. However, the more important idea is that you should design your input functions according to the logical meaning of the inputs in your game. This will help to isolate the rest of the game code from the specific method of input used with a particular platform. For example, the Gears function above could be modified so that the actual input comes from touches on the screen of a mobile device. Using an integer to represent the chosen gear works fine for all platforms, but mixing the platform-specific API calls with the rest of the code would cause problems. You may find it convenient to use platform dependent compilation to combine the different implementation of the input functions in the same source file and avoid manual swaps.</p>
+
+<h3>Touches and clicks</h3>
+
+<p>The <strong>Input.GetMouseButtonXXX</strong> functions are designed so that they have a reasonably obvious interpretation on mobile devices even though there is no “mouse” as such. A single touch on the screen is reported as a left click and the <strong>Input.mousePosition</strong> property gives the position of the touch as long as the finger is touching the screen. This means that games with simple mouse interaction can often work transparently between the desktop and mobile platforms. Naturally, though, the conversion is often much less straightforward than this. A desktop game can make use of more than one mouse button and a mobile game can detect multiple touches on the screen at a time.</p>
+
+<p>As with API calls, the problem can be managed partly by representing input with logical values that are then used by the rest of the game code. For example, a pinch gesture to zoom on a mobile device might be replaced by a plus/minus keystroke on the desktop; the input function could simply return a float value specifying the zoom factor. Likewise, it might be possible to use a two-finger tap on a mobile to replace a right button click on the desktop. However, if the properties of the input device are an integral part of the game then it may not be possible to remodel them on a different platform. This may mean that game cannot be ported at all or that the input and/or gameplay need to be modified extensively.</p>
+
+<h3>Accelerometer, compass, gyroscope and GPS</h3>
+
+<p>These inputs derive from the mobility of handheld devices and so may not have any meaningful equivalent on the desktop. However, some use cases simply mirror standard game controls and can be ported quite easily. For example, a driving game might implement the steering control from the tilt of a mobile device (determined by the accelerometer). In cases like this, the input API calls are usually fairly easy to replace, so the accelerometer input might be replaced by keystrokes, say. However, it may be necessary to recalibrate inputs or even vary the difficulty of the game to take account of the different input method. Tilting a device is slower and eventually more strenuous than pressing keys and may also make it harder to concentrate on the display. This may result in the game’s being more difficult to master on a mobile device and so it may be appropriate to slow down gameplay or allow more time per level. This will require the game code to be designed so that these factors can be adjusted easily.</p>
+
+<h2>Memory, storage and CPU performance</h2>
+
+<p>Mobile devices inevitably have less storage, memory and CPU power available than desktop machines and so a game may be difficult to port simply because its performance is not acceptable on lower powered hardware. Some resource issues can be managed but if you are pushing the limits of the hardware on the desktop then the game is probably not a good candidate for porting to a mobile platform.</p>
+
+<h3>Movie playback</h3>
+
+<p>Currently, mobile devices are highly reliant on hardware support for movie playback. The result is that playback options are limited and certainly don’t give the flexibility that the MovieTexture <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> offers on desktop platforms. Movies can be played back fullscreen on mobiles but there isn’t any scope for using them to texture objects within the game (so it isn’t possible to display a movie on a TV screen within the game, for example). In terms of portability, it is fine to use movies for introductions, cutscenes, instructions and other simple pieces of presentation. However, if movies need to be visible within the game world then you should consider whether the mobile playback options will be adequate. </p>
+
+<h3>Storage requirements</h3>
+
+<p>Video, audio and even textures can use a lot of storage space and you may need to bear this in mind if you want to port your game. Storage space (which often also corresponds to download time) is typically not an issue on desktop machines but this is not the case with mobiles. Furthermore, mobile app stores often impose a limit on the maximum size of a submitted product. It may require some planning to address these concerns during the development of your game. For example, you may need to provide cut-down versions of assets for mobiles in order to save space. Another possibility is that the game may need to be designed so that large assets can be downloaded on demand rather than being part of the initial download of the application.</p>
+
+<h3>Automatic memory management</h3>
+
+<p>The recovery of unused memory from “dead” objects is handled automatically by Unity and often happens imperceptibly on desktop machines. However, the lower memory and CPU power on mobile devices means that garbage collections can be more frequent and the time they take can impinge more heavily on performance (causing unwanted pauses in gameplay, etc). Even if the game runs in the available memory, it may still be necessary to optimise code to avoid garbage collection pauses. More information can be found on our <a href="UnderstandingAutomaticMemoryManagement.html">memory management page</a>.</p>
+
+<h3>CPU power</h3>
+
+<p>A game that runs well on a desktop machine may suffer from poor framerate on a mobile device simply because the mobile CPU struggles with the game’s complexity. Extra attention may therefore need to be paid to code efficiency when a project is ported to a mobile platform. A number of simple steps to improve efficiency are outlined on <a href="iphone-performance.html">this page</a> in our manual.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RandomNumbers.html"></a></span><div class="tip">Adding Random Gameplay Elements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PublishingBuilds.html"></a></span><div class="tip">Publishing Builds</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Creating humanoid animation</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="TimelineSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/TimelineWorkflowHumanoidAnimation.html">English</a></li>
+<li><a href="/ja/current/Manual/TimelineWorkflowHumanoidAnimation.html">日本語</a></li>
+<li><a href="/es/current/Manual/TimelineWorkflowHumanoidAnimation.html">Español</a></li>
+<li><a href="/kr/current/Manual/TimelineWorkflowHumanoidAnimation.html">한국어</a></li>
+<li><a href="/ru/current/Manual/TimelineWorkflowHumanoidAnimation.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="TimelineSection.html"> Timeline</a></li>
+<li><a href="TimelineWorkflows.html"> Timeline workflows</a></li>
+<li> Creating humanoid animation</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TimelineWorkflowConvertingInfiniteClip.html"></a></span><div class="tip"> Converting an Infinite clip to an Animation clip</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TimelineWorkflowOverrideMasking.html"></a></span><div class="tip"> Using Animation Override Tracks and Avatar Masking</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Creating humanoid animation</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This workflow demonstrates how to use a <span class="tooltip"><strong>Timeline Instance</strong><span class="tooltiptext">Refers to the link between a Timeline Asset and the GameObjects that the Timeline Asset animates in the scene. You create a Timeline instance by associating a Timeline Asset to a GameObject through a Playable Director component. The Timeline instance is scene-based. <a href="TimelineOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timelineinstance">Glossary</a></span></span></span> to animate a humanoid character with external motion clips. This workflow also demonstrates how to match clip offsets, manually adjust clip offsets, and create blends between clips to minimize jumping and sliding. Although this workflow uses a humanoid character, you can use this animation method for any <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>.</p>
+
+<p>This workflow assumes that you have already created a <span class="tooltip"><strong>Timeline</strong><span class="tooltiptext">Generic term within Unity that refers to all features, windows, editors, and components related to creating, modifying, or reusing cut-scenes, cinematics, and game-play sequences. <a href="TimelineSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Timeline">Glossary</a></span></span></span> instance with an empty Animation track bound to a humanoid.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_start.png" alt="For example, the Guard humanoid is bound to an empty Animation track">
+<figcaption>For example, the Guard humanoid is bound to an empty Animation track</figcaption>
+</figure>
+
+<p>From your project, drag a motion clip into the Animation track to create a new <span class="tooltip"><strong>Animation clip</strong><span class="tooltiptext">Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”. <a href="class-AnimationClip.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span>. For example, drag an idle pose as the first clip to start the humanoid from an idle position. Position and resize the idle clip as appropriate.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_idle.png" alt="Animation track, bound to the Guard humanoid, with an idle pose (Idle) as its Animation clip">
+<figcaption>Animation track, bound to the Guard humanoid, with an idle pose (Idle) as its Animation clip</figcaption>
+</figure>
+
+<p>Add a second motion clip. In this example, a run and turn left clip (named Run_Left) is dragged onto the Animation track. Resize the Run_Left clip as appropriate. In this example, the Run_Left clip is resized to include one loop so that the Guard runs and turns 180 degrees.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_runleft.png" alt="Animation track with an Idle clip and a Run_Left clip">
+<figcaption>Animation track with an Idle clip and a Run_Left clip</figcaption>
+</figure>
+
+<p>Play the Timeline instance. Notice that the humanoid, Guard character, jumps between each Animation clip. This happens because the position of the humanoid character at the end of the first Animation clip (Idle) does not match the position at the start of the next Animation clip (Run_Left).</p>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_before_match.jpg" alt="The humanoid jumps between the first Animation clip, that ends at frame 29 (red arrow and box), and the second Animation clip, that starts at frame 30 (ghost with green arrow and box)">
+<figcaption>The humanoid jumps between the first Animation clip, that ends at frame 29 (red arrow and box), and the second Animation clip, that starts at frame 30 (ghost with green arrow and box)</figcaption>
+</figure>
+
+<p>To fix the jump between clips, <a href="TimelineMatchOffsets.html">match the offset of each Animation clip</a>. The <span class="tooltip"><strong>Timeline Editor window</strong><span class="tooltiptext">The name of the window where you create, modify, and preview a Timeline instance. Modifications to a Timeline instance also affects the Timeline Asset. <a href="TimelineEditorWindow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TimelineEditorwindow">Glossary</a></span></span></span> provides a few different methods for matching offsets. In this example, the second Animation clip is matched with the previous clip. To do this, select the Run_Left clip, Right-click and select Match Offsets to Previous Clip.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_match_menu.png" alt="Right-click and select Match Offsets to Previous Clip to match the offsets of the selected Animation clip with the preceding Animation clip">
+<figcaption>Right-click and select Match Offsets to Previous Clip to match the offsets of the selected Animation clip with the preceding Animation clip</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_after_match.jpg" alt="After matching offsets, the humanoid at the end of the first Animation clip (frame 29, red arrow) matches the position and rotation of the humanoid at the start of the second Animation clip (frame 30, ghost with green arrow)">
+<figcaption>After matching offsets, the humanoid at the end of the first Animation clip (frame 29, red arrow) matches the position and rotation of the humanoid at the start of the second Animation clip (frame 30, ghost with green arrow)</figcaption>
+</figure>
+
+<p>Play the Timeline instance again. Although the position and rotation of the humanoid matches, there is still a jump between the two Animation clips because the humanoid is in different poses. At the end of the first Animation clip, the humanoid is standing upright with its feet together. At the start of the second Animation clip, the humanoid is bent forward with its feet apart.</p>
+
+<p>Create a blend to remove the jump and transition between the two poses. Adjust the size of the clips, the <span class="tooltip"><strong>Blend Area</strong><span class="tooltiptext">The area where two Animation clips, Audio clips, or Control clips overlap. The overlap creates a transition that is referred to as a blend. The duration of the overlap is referred to as the blend area. The blend area sets the duration of the transition. <a href="TimelineBlendingClips.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#blendarea">Glossary</a></span></span></span>, the Clip In, and the shape of each Blend Curve to create a transition between the two poses. For example, in the transition between the Idle clip and the Run_Left clip, the Idle clip is changed to a duration of 36 and the Run_Left clip is repositioned to start at frame 25. The rest of the properties are left as their default values.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_blend.png" alt="Create a blend between the first two clips to create a smooth transition between the two animations">
+<figcaption>Create a blend between the first two clips to create a smooth transition between the two animations</figcaption>
+</figure>
+
+<p>As the Idle clip transitions to the Run_Left clip, the blend removes the obvious jump between poses and transitions between most body parts naturally. However, blending between the different positions of the foot results in an unnatural foot slide.</p>
+
+<p>To fix foot sliding, you can manually adjust the root offset of an Animation clip so that the position of the foot changes less drastically, reducing the foot slide. To manually adjust the root offset, select the Animation clip in the Timeline Editor window. In the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window, expand <strong>Animation Playable <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span></strong> and expand <strong>Clip <span class="tooltip"><strong>Root Motion</strong><span class="tooltiptext">Motion of character’s root node, whether it’s controlled by the animation itself or externally. <a href="RootMotion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RootMotion">Glossary</a></span></span></span> Offsets</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/timeline_inspector_animation_clip_playable.png" alt="Select an Animation clip. In the Inspector window, expand Animation Playable Asset (advanced properties) and expand Clip Root Motion Offsets.">
+<figcaption>Select an Animation clip. In the Inspector window, expand <strong>Animation Playable Asset</strong> (advanced properties) and expand <strong>Clip Root Motion Offsets</strong>.</figcaption>
+</figure>
+
+<p>The <strong>Clip Root Motion Offsets</strong>, both position and rotation, are not zero because performing Match Offsets to Previous Clip already set these values to match the root (hips) of the previous humanoid at the end of the previous Animation clip.</p>
+
+<p>Under Clip Root Motion Offsets, enable the Move tool. The Move <span class="tooltip"><strong>Gizmo</strong><span class="tooltiptext">A graphic overlay associated with a GameObject in a Scene, and displayed in the Scene View. Built-in scene tools such as the move tool are Gizmos, and you can create custom Gizmos using textures or scripting. Some Gizmos are only drawn when the GameObject is selected, while other Gizmos are drawn by the Editor regardless of which GameObjects are selected. <a href="GizmosMenu.html#gizmos">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gizmo">Glossary</a></span></span></span> appears in the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>, at the root of the Animation clip. Use one of the following methods to manual adjust the root offset position of the Animation clip:</p>
+
+<ul>
+<li><p>In the <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> view, drag the Move Gizmo.</p></li>
+<li><p>In the Inspector window, change the value of the appropriate Position property.</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/timeline_humanoid_manual.jpg" alt="Enable the Move tool (Inspector window, blue arrow) to show the Move Gizmo (red arrow) in the Scene view. Use the Move Gizmo to manually position the root motion offset of the selected Animation clip.">
+<figcaption>Enable the Move tool (Inspector window, blue arrow) to show the Move Gizmo (red arrow) in the Scene view. Use the Move Gizmo to manually position the root motion offset of the selected Animation clip.</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–12–07 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TimelineWorkflowConvertingInfiniteClip.html"></a></span><div class="tip"> Converting an Infinite clip to an Animation clip</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TimelineWorkflowOverrideMasking.html"></a></span><div class="tip"> Using Animation Override Tracks and Avatar Masking</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

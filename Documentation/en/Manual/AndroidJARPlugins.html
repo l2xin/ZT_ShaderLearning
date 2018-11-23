@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: JAR plug-ins</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AndroidJARPlugins.html">English</a></li>
+<li><a href="/ja/current/Manual/AndroidJARPlugins.html">日本語</a></li>
+<li><a href="/es/current/Manual/AndroidJARPlugins.html">Español</a></li>
+<li><a href="/kr/current/Manual/AndroidJARPlugins.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AndroidJARPlugins.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-GettingStarted.html"> Getting started with Android development</a></li>
+<li><a href="PluginsForAndroid.html">Building and using plug-ins for Android</a></li>
+<li>JAR plug-ins</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidAARPlugins.html"></a></span><div class="tip">AAR plug-ins and Android Libraries</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidUnityPlayerActivity.html"></a></span><div class="tip">Extending the UnityPlayerActivity Java Code</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>JAR plug-ins</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>JAR(Java Archive) plug-ins are primarily used to enable interaction with the Android OS or to call methods written in Java from within your C# <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p>
+
+<p>They can only contain Java code (for example, they can’t contain Android resources), which makes their use very limited.
+To add a JAR plug-in to your project, copy the .jar file into any of your project folders, then select it in Unity to open the Import Settings in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window. Tick the Android checkbox to mark this .jar file as compatible with Android:</p>
+
+<figure>
+<img src="../uploads/Main/AndroidJARPlugins.png" alt="JAR plug-in import settings as displayed in the Inspector window">
+<figcaption>JAR plug-in import settings as displayed in the Inspector window</figcaption>
+</figure>
+
+<h2>Using Java plug-ins</h2>
+
+<p>Unity uses the <a href="http://en.wikipedia.org/wiki/Java_Native_Interface">Java Native Interface (JNI)</a> both when calling code from Java and when interacting with Java or the Java VM(Virtual Machine) from native code or C# scripts. </p>
+
+<h3>Java source files as plug-ins</h3>
+
+<p>When using the Gradle build system, you can avoid creating JAR files. To do this:</p>
+
+<ol>
+<li>Drop the .java file into your Unity project as a plug-in.</li>
+<li>In the <a href="PluginInspector.html">Plugin Inspector</a>, mark the plug-in for the Android platform.</li>
+<li>When building for Android, make sure <span class="tooltip"><strong>Gradle</strong><span class="tooltiptext">An Android build system that automates several build processes. This automation means that many common build errors are less likely to occur. <a href="android-gradle-overview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gradle">Glossary</a></span></span></span> is set as your <strong>Build System</strong> in the <a href="BuildSettings.html">Build Settings</a>.</li>
+</ol>
+
+<p>Unity copies the java file to the Gradle project and builds with it.</p>
+
+<h2>Using your Java plug-in from native (C/C++) code</h2>
+
+<p>Note: This information in this section requires advanced knowledge of the Android Java Native Interface (JNI).</p>
+
+<p>To access your Java code from C or C++ plug-ins, you need access to the Java VM. Add the following method to your C/C++ code to access the Java VM.</p>
+
+<pre><code>jint JNI_OnLoad(JavaVM* vm, void* reserved) {
+  JNIEnv* jni_env = 0;
+  vm-&gt;AttachCurrentThread(&amp;jni_env, 0);
+  return JNI_VERSION_1_6;
+}
+</code></pre>
+
+<p>It is beyond the scope of this document to explain JNI completely, but this method usually involves finding the class definition, resolving the constructor (&lt;init&gt;) method and creating a new object instance, as shown in this example:</p>
+
+<pre><code>jobject createJavaObject(JNIEnv* jni_env) {
+  jclass cls_JavaClass = jni_env-&gt;FindClass(&quot;com/your/java/Class&quot;);         // find class definition
+  jmethodID mid_JavaClass = jni_env-&gt;GetMethodID (cls_JavaClass, &quot;&lt;init&gt;&quot;, &quot;()V&quot;);      // find constructor method
+  jobject obj_JavaClass = jni_env-&gt;NewObject(cls_JavaClass, mid_JavaClass);     // create object instance
+  return jni_env-&gt;NewGlobalRef(obj_JavaClass);                      // return object with a global reference
+}
+</code></pre>
+
+<p>For more information about JNI, see <a href="https://developer.android.com/training/articles/perf-jni.html">Android Developer documentation on JNI</a>
+</p>
+
+<p><a name="javawithhelper"></a></p>
+
+<h2>Using your Java plug-in from C# scripts with helper classes</h2>
+
+<p>Note: This information in this section requires advanced knowledge of the Android Java Native Interface (JNI).</p>
+
+<p>The <a href="../ScriptReference/AndroidJNIHelper.html"><code>AndroidJNIHelper</code></a> and <a href="../ScriptReference/AndroidJNI.html"><code>AndroidJNI</code></a> Unity API classes are used as a wrapper around a “raw” JNI interface.</p>
+
+<p>The AndroidJavaObject and AndroidJavaClass Unity API classes automate a lot of tasks when using JNI calls, and they also use caching to make calls to Java faster. The combination of <code>AndroidJavaObject</code> and <code>AndroidJavaClass</code> is built on top of <code>AndroidJNI</code> and <code>AndroidJNIHelper</code>, but also has some additional functionality. These classes also have static methods that are used to access static members of Java classes.</p>
+
+<p>There are three ways to make Java JNI calls from your C# scripts:</p>
+
+<ul>
+<li>raw JNI through the <code>AndroidJNI</code> methods ;</li>
+<li>
+<code>AndroidJNIHelper</code> class together with <code>AndroidJNI</code>;</li>
+<li>
+<code>AndroidJavaObject</code> and <code>AndroidJavaClass</code> classes as the most convenient high-level APIs.</li>
+</ul>
+
+<p>
+<a href="../ScriptReference/AndroidJNI.html">UnityEngine.AndroidJNI</a> is a wrapper for the JNI calls available in C (as described above). All methods in this class are static and have a 1:1 mapping to the Java Native Interface.</p>
+
+<p>
+<a href="../ScriptReference/AndroidJNIHelper.html">UnityEngine.AndroidJNIHelper</a> provides helper functionality used by the next level, which is exposed as public methods and might be useful in special cases.</p>
+
+<p>Instances of <a href="../ScriptReference/AndroidJavaObject.html">UnityEngine.AndroidJavaObject</a> and <a href="../ScriptReference/AndroidJavaClass.html">UnityEngine.AndroidJavaClass</a> have a one-to-one mapping to an instance of java.lang.Object and java.lang.Class (or their subclasses) on the Java side, respectively. They essentially provide 3 types of interaction with the Java side:</p>
+
+<ul>
+<li><p>Call a method</p></li>
+<li><p>Get the value of a field</p></li>
+<li><p>Set the value of a field</p></li>
+</ul>
+
+<p>The call is separated into two categories: A call to a ‘void’ method, and call to a method with non-void return type. A generic type is used to represent the return type of those methods which return a non-void type. The Get and Set always take a generic type representing the field type.</p>
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<pre><code> AndroidJavaObject jo = new AndroidJavaObject(&quot;java.lang.String&quot;, &quot;some_string&quot;); 
+ // jni.FindClass(&quot;java.lang.String&quot;); 
+ // jni.GetMethodID(classID, &quot;&lt;init&gt;&quot;, &quot;(Ljava/lang/String;)V&quot;); 
+ // jni.NewStringUTF(&quot;some_string&quot;); 
+ // jni.NewObject(classID, methodID, javaString); 
+ int hash = jo.Call&lt;int&gt;(&quot;hashCode&quot;); 
+ // jni.GetMethodID(classID, &quot;hashCode&quot;, &quot;()I&quot;); 
+ // jni.CallIntMethod(objectID, methodID);
+</code></pre>
+
+<p>This example creates an instance of <a href="http://developer.android.com/reference/java/lang/String.html">java.lang.String</a> initialized with a <a href="http://developer.android.com/reference/java/lang/String.html#String(java.lang.StringBuilder)">string</a>, and retrieves the <a href="http://developer.android.com/reference/java/lang/String.html#hashCode()">hash value</a> for that string.</p>
+
+<p>The <code>AndroidJavaObject</code> constructor takes at least one parameter - the name of the class of to construct an instance of. Any parameters after the class name are for the constructor call on the object, in this case the string “some_string”. The subsequent call to hashCode() returns an ‘int’ which is is used as the generic type parameter to the call method in this example.</p>
+
+<p>
+<strong>Note</strong>: A nested Java class cannot be instantiated using dotted notation. Inner classes must use the $ separator. Use <code>android.view.ViewGroup$LayoutParams</code> or <code>android/view/ViewGroup$LayoutParams</code>, where LayoutParams class is nested in ViewGroup class.</p>
+
+<h3>Example 2</h3>
+
+<p>This example shows how to get the cache directory for the current application in C# without using plug-ins:</p>
+
+<pre><code>AndroidJavaClass jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;); 
+ // jni.FindClass(&quot;com.unity3d.player.UnityPlayer&quot;); 
+ AndroidJavaObject jo = jc.GetStatic AndroidJavaObject&gt;(&quot;currentActivity&quot;); 
+ // jni.GetStaticFieldID(classID, &quot;Ljava/lang/Object;&quot;); 
+ // jni.GetStaticObjectField(classID, fieldID); 
+ // jni.FindClass(&quot;java.lang.Object&quot;); 
+
+ Debug.Log(jo.Call AndroidJavaObject&gt;(&quot;getCacheDir&quot;).Call&lt;string&gt;(&quot;getCanonicalPath&quot;)); 
+ // jni.GetMethodID(classID, &quot;getCacheDir&quot;, &quot;()Ljava/io/File;&quot;); // or any baseclass thereof! 
+ // jni.CallObjectMethod(objectID, methodID); 
+ // jni.FindClass(&quot;java.io.File&quot;); 
+ // jni.GetMethodID(classID, &quot;getCanonicalPath&quot;, &quot;()Ljava/lang/String;&quot;); 
+ // jni.CallObjectMethod(objectID, methodID); 
+ // jni.GetStringUTFChars(javaString);
+</code></pre>
+
+<p>This example starts with <code>AndroidJavaClass</code> instead of <code>AndroidJavaObject</code> in order to access a static member of <code>com.unity3d.player.UnityPlayer</code> rather than create a new object. Then the static field “currentActivity” is accessed but this time <code>AndroidJavaObject</code> is used as the generic parameter. This is because the actual field type <a href="http://developer.android.com/reference/android/app/Activity.html">android.app.Activity</a> is a subclass of <a href="http://developer.android.com/reference/java/lang/Object.html"><code>java.lang.Object</code></a>, and any <a href="http://developer.android.com/reference/java/lang/Class.html">non-primitive type</a> must be accessed as <code>AndroidJavaObject</code>. The exceptions to this rule are strings, which are accessed directly even though they don’t represent a primitive type in Java.</p>
+
+<p>
+<a href="http://developer.android.com/reference/android/content/Context.html#getCacheDir()"><code>getCacheDir()</code></a> can then be called on the Activity object to get the File object representing the cache directory, <a href="http://developer.android.com/reference/java/io/File.html#getCanonicalPath()"><code>getCanonicalPath()</code></a> can then be called to get a string representation.</p>
+
+<p>Unity provides access to the application’s cache and file directory with <a href="https://docs.unity3d.com/ScriptReference/Application-temporaryCachePath.html"><code>Application.temporaryCachePath</code></a> and <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html"><code>Application.persistentDataPath</code></a> APIs.</p>
+
+<h3>Example 3</h3>
+
+<p>This example shows how to pass data from Java to Unity using <code>UnitySendMessage</code>.</p>
+
+<pre><code>using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour { 
+
+    void Start () { 
+        AndroidJNIHelper.debug = true; 
+        using (AndroidJavaClass jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;)) { 
+        jc.CallStatic(&quot;UnitySendMessage&quot;, &quot;Main Camera&quot;, &quot;JavaMessage&quot;, &quot;NewMessage&quot;);
+        } 
+    } 
+
+    void JavaMessage(string message) { 
+        Debug.Log(&quot;message from java: &quot; + message); 
+    }
+} 
+</code></pre>
+
+<p>The Java class <code>com.unity3d.player.UnityPlayer</code> has a static method <a href="https://docs.unity3d.com/Manual/PluginsForIOS.html"><code>UnitySendMessage</code></a>, equivalent to the <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> method: <code>UnitySendMessage</code>. It is used in Java to pass data to Unity.</p>
+
+<p>Although <code>UnitySendMessage</code> is called from within Unity, it relays the message using Java, then Java calls back to the native/Unity code to deliver the message to the object named “Main <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>”. This object has a script attached which contains a method called <code>JavaMessage</code>.</p>
+
+<h2>Best practice when using Java plug-ins with Unity</h2>
+
+<p>
+<code>AndroidJavaObject</code> and <code>AndroidJavaClass</code> are computationally expensive methods (as are any methods that use raw JNI). Keep the number of transitions between managed and native/Java code to a minimum, for better performance and also code clarity.</p>
+
+<pre><code>//The first time you call a Java method like 
+AndroidJavaObject jo = new AndroidJavaObject(&quot;java.lang.String&quot;, &quot;some_string&quot;); // somewhat expensive
+int hash = jo.Call&lt;int&gt;(&quot;hashCode&quot;); // first time - expensive
+int hash = jo.Call&lt;int&gt;(&quot;hashCode&quot;); // second time - not as expensive as we already know the java method and can call it directly
+</code></pre>
+
+<p>The Mono garbage collector should release all created instances of <code>AndroidJavaObject</code> and <code>AndroidJavaClass</code> after use, but it is advisable to keep them in a <code>using(){}</code> statement to ensure they are deleted as soon as possible. Without this, you cannot be sure when they are be destroyed. If you set <code>AndroidJNIHelper.debug</code> to true, you will see a record of the garbage collector’s activity in the debug output.</p>
+
+<pre><code>//Getting the system language safely
+void Start () { 
+    using (AndroidJavaClass cls = new AndroidJavaClass(&quot;java.util.Locale&quot;)) { 
+        using(AndroidJavaObject locale = cls.CallStatic&lt;AndroidJavaObject&gt;(&quot;getDefault&quot;)) { 
+            Debug.Log(&quot;current lang = &quot; + locale.Call&lt;string&gt;(&quot;getDisplayLanguage&quot;)); 
+
+        } 
+    } 
+}
+</code></pre>
+
+<p><br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–20 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated features in 5.5</span></p></li>
+<li><p><span class="page-history">Support for Java source file plug-ins added for Android player in <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> <span class="search-words">NewIn20182</span></span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidAARPlugins.html"></a></span><div class="tip">AAR plug-ins and Android Libraries</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidUnityPlayerActivity.html"></a></span><div class="tip">Extending the UnityPlayerActivity Java Code</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

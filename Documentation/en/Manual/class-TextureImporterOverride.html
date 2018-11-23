@@ -1,0 +1,482 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Texture compression formats for platform-specific overrides</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="reference"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-TextureImporterOverride.html">English</a></li>
+<li><a href="/ja/current/Manual/class-TextureImporterOverride.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-TextureImporterOverride.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-TextureImporterOverride.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-TextureImporterOverride.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="comp-Textures.html">Texture Components</a></li>
+<li><a href="class-TextureImporter.html"> Textures</a></li>
+<li>Texture compression formats for platform-specific overrides</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TextureTypes.html"></a></span><div class="tip">Texture Types</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">Render Texture</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Texture compression formats for platform-specific overrides</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>While Unity supports many common image formats as source files for importing your <span class="tooltip"><a href="class-TextureImporter.html">Textures</a><span class="tooltiptext">An image used when rendering a GameObject, Sprite, or UI element. Textures are often applied to the surface of a mesh to give it visual detail. <a href="class-TextureImporter.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#texture">Glossary</a></span></span></span> (such as JPG, PNG, PSD and TGA), these formats are not used during realtime <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> by 3D graphics hardware such as a graphics card or mobile device. 3D graphics hardware requires Textures to be compressed in specialized formats which are optimised for fast Texture sampling. The various different platforms and devices available each have their own different proprietary formats.</p>
+
+<p>By default, the Unity Editor automatically converts Textures to the most appropriate format to match the build target you have selected. Only the converted Textures are included in your build; your source <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> files are left in their original format, in your project’s <em>Assets</em> folder. However, on most platforms there are a number of different supported Texture <strong>compression</strong> formats to choose from. Unity has certain default formats set up for each platform, but in some situations you may want to override the default and pick a different <strong>compression</strong> format for some of your Textures (for example, if you are using a Texture as a mask, with only one channel, you might choose to use the BC4 format to save space while preserving quality).</p>
+
+<p>To apply custom settings for each platform, use the <a href="class-TextureImporter.html">Texture Importer</a> to set default options, then use the <strong>Platform-specific overrides</strong> panel to override those defaults for specific platforms.</p>
+
+<figure>
+<img src="../uploads/Main/class-TextureImporterOverride.png" alt="Default internal Texture representation per platform ">
+<figcaption>Default internal Texture representation per platform
+</figcaption>
+</figure>
+
+<p>The following table shows the default formats used for each platform. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Platform</strong></th>
+	<th style="text-align:left;"><strong>Color model</strong></th>
+	<th style="text-align:left;"><strong>None</strong></th>
+	<th style="text-align:left;"><strong>Normal quality (Default)</strong></th>
+	<th style="text-align:left;"><strong>High quality</strong></th>
+	<th style="text-align:left;"><strong>Low quality (higher performance)</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Windows, Linux, macOS, <span class="tooltip"><strong>PS4</strong><span class="tooltiptext">Sony’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PS4">Glossary</a></span></span></span>, <span class="tooltip"><strong>XBox One</strong><span class="tooltiptext">Microsoft’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XboxOne">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 bit</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>HDR</strong><span class="tooltiptext">high dymanic range <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#HDR">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">RGBA Half</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>WebGL</strong><span class="tooltiptext">A JavaScript API that renders 2D and 3D graphics in a web browser. The Unity WebGL build option allows Unity to publish content as JavaScript programs which use HTML5 technologies and the WebGL rendering API to run Unity content in a web browser. <a href="webgl-gettingstarted.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WebGL">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 bit</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Android (default subTarget)</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 bit</td>
+	<td style="text-align:left;">RGB Compressed <strong>ETC</strong>
+</td>
+	<td style="text-align:left;">RGB Compressed <strong>ETC</strong>
+</td>
+	<td style="text-align:left;">RGB Compressed <strong>ETC</strong>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 bit</td>
+	<td style="text-align:left;">RGB Compressed <strong>PVRTC</strong> 4 bits</td>
+	<td style="text-align:left;">RGB Compressed <strong>PVRTC</strong> 4 bits</td>
+	<td style="text-align:left;">RGB Compressed <strong>PVRTC</strong> 2 bits</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 bits</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 bits</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 2 bits</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tvOS</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 bit</td>
+	<td style="text-align:left;">RGB Compressed <strong>ASTC</strong> 6x6 block</td>
+	<td style="text-align:left;">RGB Compressed <strong>ASTC</strong> 4x4 block</td>
+	<td style="text-align:left;">RGB Compressed <strong>ASTC</strong> 8x8 block</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 6x6 block</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 4x4 block</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 8x8 block</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">RGBA 16 bit</td>
+	<td style="text-align:left;">RGBA 16 bit</td>
+	<td style="text-align:left;">RGBA 16 bit</td>
+</tr>
+</tbody>
+</table>
+
+<h3>All supported Texture compression formats</h3>
+
+<p>The following table shows the <strong>Texture compression</strong> format options available on each platform, and the resulting compressed file size (based on a 256px-square image). Choosing a Texture compression format is a balance between file size and quality; the higher the quality, the greater the file size. In the description below, see the final file size of a in-game Texture of 256 by 256 <span class="tooltip"><strong>pixels</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a href="LightPerformance.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span>.</p>
+
+<p>When you use a Texture compression format that is not supported on the target platform, the Textures are decompressed to RGBA 32 and stored in memory alongside the compressed Textures. When this happens, time is lost decompressing Textures, and memory is lost because you are storing them twice. In addition, all platforms have different hardware, and are optimised to work most efficiently with specific compression formats; choosing non-compatible formats can impact your game’s performance. The table below shows supported platforms for each compression format.</p>
+
+<p>Notes on the table below:</p>
+
+<ul>
+<li><p>
+<strong>RGB</strong> is a color model in which red, green and blue are added together in various ways to reproduce a broad array of <a href="https://en.wikipedia.org/wiki/Color">colors</a>. </p></li>
+<li><p>
+<strong>RGBA</strong> is a version of <strong>RGB</strong> with an alpha channel, which supports blending and opacity alteration.</p></li>
+<li><p>
+<strong>Crunch compression </strong>is a lossy compression format (meaning that parts of the <a href="https://simple.wikipedia.org/wiki/Information">data</a> are lost during compression) on top of DXT or ETC Texture compression. Textures are decompressed to DXT or ETC on the CPU, and then uploaded to the GPU at run time. Crunch compression helps the Texture use the lowest possible amount of space on disk and for downloads. Crunch Textures can take a long time to compress, but decompression at run time is very fast.</p></li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Texture compression format</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+	<th style="text-align:left;">
+<strong>Size</strong> <br>for a 256x256 pixel Texture</th>
+	<th style="text-align:left;"><strong>Platform Support</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">Compressed unsigned normalised integer RGB Texture.</td>
+	<td style="text-align:left;">32KB (4 bits per pixel)</td>
+	<td style="text-align:left;">Windows, Linux, macOS, PS4, XBox One, Android (Nvidia Tegra and Intel Bay Trail), WebGL <br><br>Note: With <a href="LinearLighting.html">linear rendering</a> on web browser that doesn’t support sRGB DXT, textures are uncompressed at run time to RGBA32.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Crunched DXT1</td>
+	<td style="text-align:left;">Similar to RGB Compressed DXT1, but compressed using Crunch compression. See Notes, above, for more on crunch compression.</td>
+	<td style="text-align:left;">Variable, depending on the complexity of the content in the texture.</td>
+	<td style="text-align:left;">Windows, Linux, macOS, PS4, XBox One, Android (Nvidia Tegra and Intel Bay Trail), WebGL <br><br>Note: With <a href="LinearLighting.html">linear rendering</a> on a web browser that doesn’t support sRGB DXT, textures are uncompressed at run time to RGBA32.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">Compressed unsigned normalised integer RGBA Texture. 8 bits per pixel.</td>
+	<td style="text-align:left;">64KB (8 bits per pixel)</td>
+	<td style="text-align:left;">Windows, Linux, macOS, PS4, XBox One, Android (Nvidia Tegra and Intel Bay Trail), WebGL <br><br>Note: With <a href="LinearLighting.html">linear rendering</a> on a web browser that doesn’t support sRGB DXT, textures are uncompressed at run time to RGBA32.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Crunched DXT5</td>
+	<td style="text-align:left;">Similar to RGBA Compressed DXT5, but compressed using Crunch compression. See Notes, above, for more on crunch compression.</td>
+	<td style="text-align:left;">Variable, depending on the complexity of the content in the texture.</td>
+	<td style="text-align:left;">Windows, Linux, macOS, PS4, XBox One, Android (Nvidia Tegra and Intel Bay Trail), WebGL <br><br>Note: With <a href="LinearLighting.html">linear rendering</a> on a web browser that doesn’t support sRGB DXT, textures are uncompressed at run time to RGBA32.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">Compressed unsigned float/High Dynamic Range (HDR) RGB Texture.</td>
+	<td style="text-align:left;">64KB (8 bits per pixel)</td>
+	<td style="text-align:left;">Windows Direct3D 11: OpenGL 4, Linux. <br><br>Note: BC6H Textures are uncompressed at run time to RGBA half on the following platform configurations: <br>- macOS with OpenGL<br>- Platforms with Direct3D 10 Shader Model 4 or OpenGL 3 GPUs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">High-quality compressed unsigned normalised integer RGB or RGBA Texture.</td>
+	<td style="text-align:left;">64KB (8 bits per pixel)</td>
+	<td style="text-align:left;">Windows Direct3D 11: OpenGL 4, Linux <br><br>Note: BC7 Textures are uncompressed at run time to RGBA 32bits on the following platform configurations: <br>- macOS with OpenGL<br>- Platforms with Direct3D 10 Shader Model 4<br>Platforms with OpenGL 3 GPUs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">Compressed RGB Texture. This is the default texture compression format for textures without an alpha channel for Android projects.</td>
+	<td style="text-align:left;">32KB (4 bits per pixel)</td>
+	<td style="text-align:left;">Android, iOS, tvOS.<br>Note: ETC1 is supported by all OpenGL ES 2.0 GPUs. It does not support alpha.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Crunched ETC</td>
+	<td style="text-align:left;">Similar to RGB Compressed ETC, but compressed using Crunch compression. See Notes above for more on crunch compression.</td>
+	<td style="text-align:left;">Variable, depending on the complexity of the content in the texture.</td>
+	<td style="text-align:left;">Android, iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ETC2</td>
+	<td style="text-align:left;">Compressed RGB Texture.</td>
+	<td style="text-align:left;">32KB (4 bits per pixel)</td>
+	<td style="text-align:left;">Android (OpenGL ES 3.0) <br>Note: On Android platforms that don’t support ETC2, the texture is uncompressed at run time to the format specified by <strong>ETC2 fallback</strong> in the Build Settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">Compressed RGBA Texture. This is the default Texture compression format for textures with alpha channel for Android projects.</td>
+	<td style="text-align:left;">64KB (8 bits per pixel)</td>
+	<td style="text-align:left;">Android (OpenGL ES 3.0), iOS (OpenGL ES 3.0), tvOS (OpenGL ES 3.0) <br><br>Note: On iOS and tvOS devices that don’t support ETC2, the texture is uncompressed at run time to RGBA32. On Android platforms that don’t support ETC2, the texture is uncompressed at run time to the format specified by <strong>ETC2 fallback</strong> in the Build Settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Crunched ETC2</td>
+	<td style="text-align:left;">Similar to RGBA Compressed ETC2, but compressed using Crunch compression. See Notes above for more on crunch compression.</td>
+	<td style="text-align:left;">Variable, depending on the complexity of the content in the texture.</td>
+	<td style="text-align:left;">Android (OpenGL ES 3.0), iOS (OpenGL ES 3.0), tvOS (OpenGL ES 3.0) <br><br>Note: On iOS and tvOS devices that don’t support ETC2, the texture is uncompressed at run time to RGBA32. On Android platforms that don’t support ETC2, the texture is uncompressed at run time to the format specified by <strong>ETC2 fallback</strong> in the Build Settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ASTC</td>
+	<td style="text-align:left;">Variable block size compressed RGB Texture.</td>
+	<td style="text-align:left;">12x12: 0.89 bits per pixel (7.56KB for a 256x256 Texture)<br>10x10: 1.28 bits per pixel (10.56KB for a 256x256 Textures)<br>8x8: 2 bits per pixel (16KB for a 256x256 Texture); <br>6x6: 3.56 bits per pixel (28.89KB for a 256x256 Texture)<br>5x5: 5.12 bits per pixel (42.25KB for a 256x256 Texture)<br>4x4: 8 bits per pixel (64KB for a 256x256 Texture)</td>
+	<td style="text-align:left;">tvOS (all), iOS (A8), Android (PowerVR 6XT, Mali T600 series, Adreno 400 series, Tegra K1).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed ASTC</td>
+	<td style="text-align:left;">Variable block size compressed RGBA Texture.</td>
+	<td style="text-align:left;">12x12: 0.89 bits per pixel (7744 bytes for a 256x256 Texture)<br>10x10: 1.28 bits per pixel (10816 bytes for a 256x256 Textures)<br>8x8: 2 bits per pixel (16KB for a 256x256 Texture); <br>6x6: 3.56 bits per pixel (29584 bytes for a 256x256 Texture)<br>5x5: 5.12 bits per pixel (43264 bytes for a 256x256 Texture)<br>4x4: 8 bits per pixel (64KB for a 256x256 Texture)</td>
+	<td style="text-align:left;">tvOS (all), iOS (A8), Android (PowerVR 6XT, Mali T600 series, Adreno 400 series, Tegra K1).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed PVRTC 2 bits</td>
+	<td style="text-align:left;">High-compression RGB Texture. Low quality, but lower size, resulting in higher performance.</td>
+	<td style="text-align:left;">16KB (2 bits per pixel)</td>
+	<td style="text-align:left;">Android (PowerVR), iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed PVRTC 2 bits</td>
+	<td style="text-align:left;">High-compression RGBA Texture. Low quality, but lower size, resulting in higher performance.</td>
+	<td style="text-align:left;">16KB (2 bits per pixel)</td>
+	<td style="text-align:left;">Android (PowerVR), iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 bits</td>
+	<td style="text-align:left;">Compressed RGB Texture. High-quality Textures, particularly on color data, but can take a long time to compress.</td>
+	<td style="text-align:left;">32KB (4 bits per pixel)</td>
+	<td style="text-align:left;">Android (PowerVR), iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 bits</td>
+	<td style="text-align:left;">Compressed RGB Texture. High-quality Textures, particularly on color data, but can take a long time to compress.</td>
+	<td style="text-align:left;">32KB (4 bits per pixel)</td>
+	<td style="text-align:left;">Android (PowerVR), iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed <span class="tooltip"><strong>ATC</strong><span class="tooltiptext">AMD’s texture compression format for handheld devices to save on power, memory and bandwidth <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ATC">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Compressed RGB Texture.</td>
+	<td style="text-align:left;">32KB (4 bits per pixel)</td>
+	<td style="text-align:left;">Android (Qualcomm - Adreno), iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed ATC</td>
+	<td style="text-align:left;">Compressed RGBA Texture.</td>
+	<td style="text-align:left;">64KB (8 bits per pixel)</td>
+	<td style="text-align:left;">Android (Qualcomm - Adreno), iOS, tvOS.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB 16 bit</td>
+	<td style="text-align:left;">65 thousand colors with no alpha. Uses more memory than the compressed formats, but could be more suitable for <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> or crisp Textures without gradients.</td>
+	<td style="text-align:left;">128KB (16 bits per pixel)</td>
+	<td style="text-align:left;">All platforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB 24 bit</td>
+	<td style="text-align:left;">True color, but without alpha.</td>
+	<td style="text-align:left;">192KB (24 bits per pixel)</td>
+	<td style="text-align:left;">All platforms</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Alpha 8</td>
+	<td style="text-align:left;">High-quality alpha channel, but without any color.</td>
+	<td style="text-align:left;">64KB (8 bits per pixel)</td>
+	<td style="text-align:left;">All platforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 16 bit</td>
+	<td style="text-align:left;">Low-quality true color. This is the default compression for Textures that have an alpha channel.</td>
+	<td style="text-align:left;">128KB (16 bits per pixel)</td>
+	<td style="text-align:left;">All platforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 32 bit</td>
+	<td style="text-align:left;">True color with alpha. This is the highest quality compression for Textures that have an alpha channel.</td>
+	<td style="text-align:left;">256KB (32 bits per pixel)</td>
+	<td style="text-align:left;">All platforms.</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can import Textures from DDS files, but only DXT, BC compressed formats, or uncompressed pixel formats are supported.</p>
+
+<h3>Notes on Android</h3>
+
+<p>Unless you’re targeting specific hardware (such as Tegra), ETC2 compression is the most efficient option for Android, offering the best balance of quality and file size (with associated memory size requirements). If you need an alpha channel, you could store it externally and still benefit from a lower Texture file size.</p>
+
+<p>You can use ETC1 for Textures that have an <a href="HOWTO-alphamaps.html">alpha channel</a>, but only if the build is for Android and the Textures are placed on an atlas (by specifying the packing tag). To enable this, tick the <strong>Compress using ETC1</strong> checkbox for the Texture. Unity splits the resulting atlas into two Textures, each without an alpha channel, and then combines them in the final parts of the render pipeline.</p>
+
+<p>To store an alpha channel in a Texture, use RGBA16 bit compression, which is supported by all hardware vendors.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–11–20 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Linear rendering on WebGL added in <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">Crunch compression format updated in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">Tizen and Samsung TV support discontinued in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TextureTypes.html"></a></span><div class="tip">Texture Types</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">Render Texture</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

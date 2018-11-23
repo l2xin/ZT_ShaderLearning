@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Troubleshooting on iOS devices</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PlatformSpecific" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/TroubleShootingIPhone.html">English</a></li>
+<li><a href="/ja/current/Manual/TroubleShootingIPhone.html">日本語</a></li>
+<li><a href="/es/current/Manual/TroubleShootingIPhone.html">Español</a></li>
+<li><a href="/kr/current/Manual/TroubleShootingIPhone.html">한국어</a></li>
+<li><a href="/ru/current/Manual/TroubleShootingIPhone.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PlatformSpecific.html">Platform-specific</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li>Troubleshooting on iOS devices</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-unsupported.html"></a></span><div class="tip">Features currently not supported by Unity iOS</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-bugreporting.html"></a></span><div class="tip">Reporting crash bugs on iOS</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Troubleshooting on iOS devices</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>There are some situations with <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> where your game can work perfectly in the Unity editor but then doesn’t work or maybe doesn’t even start on the actual device.
+The problems are often related to code or content quality. This section describes the most common scenarios.</p>
+
+<h2>The game stops responding after a while. Xcode shows “interrupted” in the status bar.</h2>
+
+<p>There are a number of reasons why this may happen. Typical causes include:</p>
+
+<ol>
+<li>Scripting errors such as using uninitialized variables, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>.</li>
+<li>Using 3rd party Thumb compiled native libraries. Such libraries trigger a known problem in the iOS SDK linker and might cause random crashes.</li>
+<li>Using generic types with value types as parameters (e.g. List&lt;int&gt;, List&lt;SomeStruct&gt;, List&lt;SomeEnum&gt;) for serializable script properties.</li>
+<li>Using reflection when managed code stripping is enabled.</li>
+<li>Errors in the <span class="tooltip"><strong>native plugin</strong><span class="tooltiptext">A platform-specific native code library that is created outside of Unity for use in Unity. Allows you can access features like OS calls and third-party code libraries that would otherwise not be available to Unity. <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Nativeplugin">Glossary</a></span></span></span> interface (the managed code method signature does not match the native code function signature).
+Information from the XCode Debugger console can often help detect these problems (Xcode menu: <strong>View &gt; Debug Area &gt; Activate Console</strong>).</li>
+</ol>
+
+<h2>The Xcode console shows &quot;Program received signal: “SIGBUS” or EXC_BAD_ACCESS error.</h2>
+
+<p>This message typically appears on iOS devices when your application receives a NullReferenceException. There are two ways to figure out where the fault happened: </p>
+
+<h4>Managed stack traces</h4>
+
+<p>Unity includes software-based handling of the NullReferenceException. The AOT compiler includes quick checks for null references each time a method or variable is accessed on an object. This feature affects script performance, which is why it is enabled only for <span class="tooltip"><strong>development builds</strong><span class="tooltiptext">A development build includes debug symbols and enables the Profiler. <a href="UnityCloudBuildDevelopmentBuilds.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#DevelopmentBuild">Glossary</a></span></span></span> (enable the <em>script debugging</em> option in build settings dialog).
+If everything was done right and the fault actually is occurring in .NET code then you won’t see EXC_BAD_ACCESS anymore. Instead, the .NET exception text will be printed in the Xcode console (or else your code will just handle it in a “catch” statement). Typical output might be:</p>
+
+<pre><code>Unhandled Exception: System.NullReferenceException: A null value was found where an object instance was required.
+  at DayController+$handleTimeOfDay$121+$.MoveNext () [0x0035a] in DayController.js:122 
+</code></pre>
+
+<p>This indicates that the fault happened in the handleTimeOfDay method of the DayController class, which works as a coroutine. Also, if it is script code then you will generally be told the exact line number (e.g. “DayController.js:122”). The offending line might be something like the following:</p>
+
+<pre><code> Instantiate(_imgwww.assetBundle.mainAsset);
+</code></pre>
+
+<p>This might happen if, say, the script accesses an <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> bundle without first checking that it was downloaded correctly.</p>
+
+<h4>Native stack traces</h4>
+
+<p>Native stack traces are a much more powerful tool for fault investigation but using them requires some expertise. Also, you generally can’t continue after these native (hardware memory access) faults happen. To get a native stack trace, type <strong>bt all</strong> into the Xcode Debugger Console. Carefully inspect the printed stack traces; they may contain hints about where the error occurred. You might see something like:</p>
+
+<pre><code>...
+Thread 1 (thread 11523): 
+
+1. 0 0x006267d0 in m_OptionsMenu_Start ()
+1. 1 0x002e4160 in wrapper_runtime_invoke_object_runtime_invoke_void__this___object_intptr_intptr_intptr ()
+1. 2 0x00a1dd64 in mono_jit_runtime_invoke (method=0x18b63bc, obj=0x5d10cb0, params=0x0, exc=0x2fffdd34) at /Users/mantasp/work/unity/unity-mono/External/Mono/mono/mono/mini/mini.c:4487
+1. 3 0x0088481c in MonoBehaviour::InvokeMethodOrCoroutineChecked ()
+...
+</code></pre>
+
+<p>Firstly, you should find the stack trace for <strong>“Thread 1”</strong>, which is the main thread. The very first lines of the stack trace will point to the place where the error occurred. In this example, the trace indicates that the NullReferenceException happened inside the <em>OptionsMenu</em> script’s <em>Start</em> method. Looking carefully at this method implementation would reveal the cause of the problem. Typically, NullReferenceExceptions happen inside the <em>Start</em> method when incorrect assumptions are made about initialization order.
+In some cases only a partial stack trace is seen on the Debugger Console:</p>
+
+<pre><code>Thread 1 (thread 11523): 
+
+1. 0 0x0062564c in start ()
+</code></pre>
+
+<p>This indicates that native symbols were stripped during the Release build of the application. The full stack trace can be obtained with the following procedure:</p>
+
+<ul>
+<li>Remove application from device.</li>
+<li>Clean all targets.</li>
+<li>Build and run.</li>
+<li>Get stack traces again as described above.</li>
+</ul>
+
+<h2>EXC_BAD_ACCESS starts occurring when an external library is linked to the Unity iOS application.</h2>
+
+<p>This usually happens when an external library is compiled with the ARM Thumb instruction set. Currently, such libraries are not compatible with Unity. The problem can be solved easily by recompiling the library without Thumb instructions. You can do this for the library’s Xcode project with the following steps:</p>
+
+<ul>
+<li>In Xcode, select <em>View</em> &gt; <em>Navigators</em> &gt; <em>Show Project Navigator</em> from the menu</li>
+<li>Select the <em>Unity-iPhone</em> project, activate <em>Build Settings</em> tab</li>
+<li>In the search field enter: <em>Other C Flags</em>
+</li>
+<li>Add <em>-mno-thumb</em> flag there and rebuild the library.</li>
+</ul>
+
+<p>If the library source is not available you should ask the supplier for a non-thumb version of the library.</p>
+
+<h2>The Xcode console shows “WARNING -&gt; applicationDidReceiveMemoryWarning()” and the application crashes immediately afterwards</h2>
+
+<p>Sometimes, you might see a message like <em>Program received signal: “0”</em>.
+This warning message is often not fatal and merely indicates that iOS is low on memory and is asking applications to free up some memory. Typically, background processes like Mail will free some memory and your application can continue to run. However, if your application continues to use memory or ask for more, the OS will eventually start killing applications and yours could be one of them. Apple does not document what memory usage is safe, but empirical observations show that applications using less than 50% of all device RAM do not have major memory usage problems.
+The main metric you should rely on is how much RAM your application uses. Your application memory usage consists of three major <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>:</p>
+
+<ul>
+<li>Application code (the OS needs to load and keep your application code in RAM, but some of it might be discarded if really needed)</li>
+<li>Native heap (used by the engine to store its state, your assets, etc. in RAM)</li>
+<li>Managed heap (used by your Mono runtime to keep C# objects)</li>
+<li>GLES driver memory pools: textures, framebuffers, compiled <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span>, etc.
+Your application memory usage can be tracked by two Xcode Instruments tools: <strong>Activity Monitor</strong> and <strong>Allocations</strong>. You can start from the Xcode Run menu: <strong>Product &gt; Profile</strong> and then select specific tool or via <strong>Xcode &gt; Open Developer Tools &gt; Instruments</strong>. <strong>Activity Monitor</strong> tool shows all process statistics including <strong>Real memory</strong> which can be regarded as the total amount of RAM used by your application. <strong>Note:</strong> OS and device HW version combination might noticeably affect memory usage numbers, so you should be careful when comparing numbers obtained on different devices.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ActivityMonitor.png" alt="">
+</figure>
+
+<p>
+<strong>Note:</strong> The <a href="iphone-InternalProfiler.html">internal profiler</a> shows only the heap allocated by .NET <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>. Total memory usage can be determined via Xcode Instruments as shown above. This figure includes parts of the application binary, some standard framework buffers, Unity engine internal state buffers, the .NET runtime heap (number printed by internal profiler), GLES driver heap and some other miscellaneous stuff. </p>
+
+<p>The other tool displays all allocations made by your application and includes both native heap and managed heap statistics. The important statistic is the <strong>Net bytes</strong> value.</p>
+
+<figure>
+<img src="../uploads/Main/ObjectAlloc.png" alt="">
+</figure>
+
+<p>To keep memory usage low:</p>
+
+<ul>
+<li>Reduce the application binary size by using the strongest iOS stripping options, and avoid unnecessary dependencies on different .NET libraries. See the <span class="tooltip"><a href="class-PlayerSettings.html">player settings</a><span class="tooltiptext">A settings manager that lets you set various player-specific options for the final game built by Unity. <a href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> and <a href="iphone-playerSizeOptimization.html">player size optimization</a> manual pages for further details.</li>
+<li>Reduce the size of your content. Use <span class="tooltip"><strong>PVRTC</strong><span class="tooltiptext">PowerVR Texture Compression (PVRTC) is a fixed-rate texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PVRTC">Glossary</a></span></span></span> <span class="tooltip"><strong>compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <span class="tooltip"><a href="class-TextureImporterOverride.html">Texture Compression</a><span class="tooltiptext">3D Graphics hardware requires Textures to be compressed in specialised formats which are optimised for fast Texture sampling. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TextureCompression">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-AnimationClip.html#AssetProperties">Animation Compression</a><span class="tooltiptext">The method of compressing animation data to significantly reduce file sizes without causing a noticable reduction in motion quality. Animation compression is a trade off between saving on memory and image quality. <a href="class-AnimationClip.html#AssetProperties">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#animationcompression">Glossary</a></span></span></span>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>. <br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span> for textures and use low poly models. See the manual page about <a href="ReducingFilesize.html">reducing file size</a> for more information.</li>
+<li>Don’t allocate more memory than necessary in your scripts. Track mono heap size and usage with the <a href="iphone-InternalProfiler.html">internal profiler</a>.</li>
+</ul>
+
+<p>Querying the OS about the amount of free memory may seem like a good idea to evaluate how well your application is performing. However, the free memory statistic is likely to be unreliable since the OS uses a lot of dynamic buffers and caches. The only reliable approach is to keep track of memory consumption for your application and use that as the main metric. Pay attention to how the graphs from the tools described above change over time, especially after loading new levels.</p>
+
+<h2>The game runs correctly when launched from Xcode but crashes while loading the first level when launched manually on the device.</h2>
+
+<p>There could be several reasons for this. You need to inspect the device logs to get more details. Connect the device to your Mac, launch Xcode and select <strong>Window &gt; Devices and Simulators</strong> from the menu. Select your device in the window’s left toolbar, then click on the <strong>Show the device console</strong> button and review the latest messages carefully. Additionally, you may need to investigate crash reports. You can find out how to obtain crash reports here: <a href="https://developer.apple.com/library/content/technotes/tn2151/_index.html">http://developer.apple.com/iphone/library/technotes/tn2008/tn2151.html</a>.</p>
+
+<h2>The Xcode Organizer console contains the message “killed by SpringBoard”.</h2>
+
+<p>There is a poorly-documented time limit for an iOS application to render its first frames and process input. If your application exceeds this limit, it will be killed by SpringBoard. This may happen in an application with a first <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> which is too large, for example. To avoid this problem, it is advisable to create a small initial <strong>scene</strong> which just displays a splash screen, waits a frame or two with <strong>yield</strong> and then starts loading the real <strong>scene</strong>. This can be done with code as simple as the following:</p>
+
+<pre><code>IEnumerator Start() {
+    yield return new WaitForEndOfFrame();
+// Do not forget using UnityEngine.SceneManagement directive
+    SceneManager.LoadScene(&quot;Test&quot;);
+}
+</code></pre>
+
+<h2>Type.GetProperty() or Type.GetValue() cause crashes on the device</h2>
+
+<p>Currently <strong>Type.GetProperty()</strong> and <strong>Type.GetValue()</strong> are supported only for the <strong>.NET 2.0 Subset</strong> profile. You can select the .NET API compatibility level in the <a href="class-PlayerSettings.html">Player Settings</a>. </p>
+
+<p>
+<strong>Note:</strong> <strong>Type.GetProperty()</strong> and <strong>Type.GetValue()</strong> might be incompatible with managed code stripping and might need to be excluded (you can supply a custom non-strippable type list during the stripping process to accomplish this). For further details, see the <a href="iphone-playerSizeOptimization.html">iOS player size optimization guide</a>.</p>
+
+<h2>The game crashes with the error message “ExecutionEngineException: Attempting to JIT compile method ‘SometType`1&lt;SomeValueType&gt;:.ctor ()’ while running with –aot-only.”</h2>
+
+<p>The Mono .NET implementation for iOS is based on AOT (ahead of time compilation to native code) technology, which has its limitations. It compiles only those generic type methods (where a value type is used as a generic parameter) which are explicitly used by other code. When such methods are used only via reflection or from native code (i.e. the serialization system) then they get skipped during <span class="tooltip"><strong>AOT compilation</strong><span class="tooltiptext">Ahead of Time (AOT) compilation is an iOS optimization method for optimizing the size of the built iOS player <a href="iphone-playerSizeOptimization.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AOTCompilation">Glossary</a></span></span></span>. The AOT compiler can be hinted to include code by adding a dummy method somewhere in the script code. This can refer to the missing methods and so get them compiled ahead of time.</p>
+
+<pre><code>void _unusedMethod() {
+    var tmp = new SomeType&lt;SomeValueType&gt;();
+}
+</code></pre>
+
+<p>
+<strong>Note:</strong> Value types are basic types, enums and structs.</p>
+
+<h2>Various crashes occur on the device when a combination of System.Security.Cryptography and managed code stripping is used</h2>
+
+<p>.NET Cryptography services rely heavily on reflection and so are not compatible with managed code stripping since this involves static code analysis. Sometimes the easiest solution to the crashes is to exclude the whole <strong>System.Security.Crypography</strong> namespace from the stripping process.</p>
+
+<p>The stripping process can be customized by adding a custom <strong>link.xml</strong> file to the <em>Assets</em> folder of your Unity project. This specifies which types and namespaces should be excluded from stripping. Further details can be found in the <a href="iphone-playerSizeOptimization.html">iOS player size optimization guide</a>.</p>
+
+<h3>link.xml</h3>
+
+<pre><code>&lt;linker&gt;
+       &lt;assembly fullname=&quot;mscorlib&quot;&gt;
+               &lt;namespace fullname=&quot;System.Security.Cryptography&quot; preserve=&quot;all&quot;/&gt;
+       &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre>
+
+<h3>Application crashes when using System.Security.Cryptography.MD5 with managed code stripping</h3>
+
+<p>You should consider the above advice or try working around this problem by adding extra references to specific classes to your script code:</p>
+
+<pre><code>object obj = new MD5CryptoServiceProvider();
+</code></pre>
+
+<h2>“Ran out of trampolines of type 0/1/2” runtime error</h2>
+
+<p>This error usually happens if you use lots of recursive generics. You can hint to the AOT compiler to allocate more trampolines of type 0, type 1 or type 2. Additional AOT compiler command line options can be specified in the <em>Other Settings</em> section of the <a href="class-PlayerSettings.html">Player Settings</a>. For type 1 trampolines, specify <code>nrgctx-trampolines=ABCD</code>, where ABCD is the number of new trampolines required (i.e. 4096). For type 2 trampolines specify <code>nimt-trampolines=ABCD</code> and for type 0 trampolines specify <code>ntrampolines=ABCD</code>.</p>
+
+<h2>After upgrading Xcode Unity iOS, runtime fails with message “You are using Unity iPhone Basic. You are not allowed to remove the Unity splash screen from your game”</h2>
+
+<p>With some latest Xcode releases there were changes introduced in PNG compression and optimization tool. These changes might cause false positives in Unity iOS runtime checks for splash screen modifications. If you encounter such problems try upgrading Unity to the latest publicly available version. If this does not help, you might consider the following workaround:</p>
+
+<ul>
+<li>Replace your Xcode project from scratch when building from Unity (instead of appending it)</li>
+<li>Delete already installed projects from device</li>
+<li>Clean project in Xcode (<em>Product</em> &gt; <em>Clean</em>)</li>
+<li>Clear Xcode’s Derived Data folders (<em>Xcode</em> &gt; <em>Preferences</em> &gt; <em>Locations</em>)</li>
+</ul>
+
+<p>If this still does not help try disabling PNG re-compression in Xcode:</p>
+
+<ul>
+<li>Open your Xcode project</li>
+<li>Select <em>Unity-iPhone</em> project</li>
+<li>Select <strong>Build Settings</strong> tab</li>
+<li>Look for <strong>Compress PNG files</strong> option and set to <strong>NO</strong>
+</li>
+</ul>
+
+<h2>WWW downloads are working fine in Unity Editor and on Android, but not on iOS</h2>
+
+<p>The most common mistake is to assume that WWW downloads are always happening on a separate thread. On some platforms this might be true, but you should not take it for granted. Best way to track WWW status is either to use the <em>yield</em> statement or check status in <em>Update</em> method. You should <strong>not</strong> use busy <em>while</em> loops for that.</p>
+
+<h2>“PlayerLoop called recursively!” error occurs when using Cocoa via a native function called from a script</h2>
+
+<p>Some operations with the <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> will result in iOS redrawing the window immediately (the most common example is adding a UIView with a UIViewController to the main UIWindow). If you call a native function from a script, it will happen inside Unity’s PlayerLoop, resulting in PlayerLoop being called recursively. In such cases, you should consider using the <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#/apple_ref/occ/instm/NSObject/performSelectorOnMainThread:withObject:waitUntilDone:">performSelectorOnMainThread</a> method with <em>waitUntilDone</em> set to false. It will inform iOS to schedule the operation to run between Unity’s PlayerLoop calls.</p>
+
+<h2>Profiler or Debugger unable to see game running on iOS device</h2>
+
+<ul>
+<li>Check that you have built a Development build, and checked the <em>Script Debugging</em> and <em>Autoconnect Profiler</em> boxes (as appropriate).</li>
+<li>The application running on the device will make a multicast broadcast to 225.0.0.222 on UDP port 54997. Check that your network settings allow this traffic. Then, the <span class="tooltip"><strong>profiler</strong><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span> will make a connection to the remote device on a port in the range 55000 - 55511 to fetch <strong>profiler</strong> data from the device. These ports will need to be open for UDP access.</li>
+</ul>
+
+<h2>Missing DLLs</h2>
+
+<p>If your application runs ok in editor but you get errors in your iOS project this may be caused by missing DLLs (e.g. I18N.dll, I19N.West.dll). In this case, try copying those dlls from within the Unity.app to your project’s <em>Assets\Plugins</em> folder. The location of the DLLs within the unity app is:
+ <em>Unity.app\Contents\Frameworks\Mono\lib\mono\unity</em>
+You should then also check the stripping level of your project to ensure the classes in the DLLs aren’t being removed when the build is optimised. Refer to the <a href="iphone-playerSizeOptimization.html">iOS Optimisation Page</a> for more information on iOS Stripping Levels.</p>
+
+<h2>Xcode Debugger console reports: ExecutionEngineException: Attempting to JIT compile method ‘(wrapper native-to-managed) Test:TestFunc (int)’ while running with –aot-only</h2>
+
+<p>Typically, such a message is received when the managed function delegate is passed to the native function, but the required wrapper code wasn’t generated when the application was built. You can help AOT compiler by hinting which methods will be passed as delegates to the native code. This can be done by adding the <em>MonoPInvokeCallbackAttribute</em> custom attribute. Currently, only static methods can be passed as delegates to the native code.</p>
+
+<p>Sample code:</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+using System;
+using System.Runtime.InteropServices;
+using AOT;
+
+public class NewBehaviourScript : MonoBehaviour {
+    [DllImport (&quot;__Internal&quot;)]
+    private static extern void DoSomething (NoParamDelegate del1, StringParamDelegate del2);
+
+    delegate void NoParamDelegate ();
+    delegate void StringParamDelegate (string str);
+    
+    [MonoPInvokeCallback(typeof(NoParamDelegate))]
+    public static void NoParamCallback() {
+        Debug.Log (&quot;Hello from NoParamCallback&quot;);
+    }
+    
+    [MonoPInvokeCallback(typeof(StringParamDelegate))]
+    public static void StringParamCallback(string str) {
+        Debug.Log(string.Format(&quot;Hello from StringParamCallback {0}&quot;, str));
+    }
+
+    // Use this for initialization
+    void Start() {
+        DoSomething(NoParamCallback, StringParamCallback);
+    }
+}
+</code></pre>
+
+<h2>Xcode throws compilation error: “ld : unable to insert branch island. No insertion point available. for architecture armv7”, “clang: error: linker command failed with exit code 1 (use -v to see invocation)”</h2>
+
+<p>This error usually means there is just too much code in single module. Typically, it is caused by having lots of script code or having big external .NET assemblies included into build. And enabling script debugging might make things worse, because it adds quite few additional instructions to each function, so it is easier to hit that limit.</p>
+
+<p>Enabling managed code stripping in <a href="class-PlayerSettings.html">player settings</a> might help with this problem, especially if big external .NET assemblies are involved. But if the issue persists then the best solution is to split user script code into multiple assemblies. The easiest way to this is move some code to <em>Plugins</em> folder. Code at this location is put to a different assembly. Also, check the information about how <a href="ScriptCompileOrderFolders.html">special folder names</a> affect script compilation.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-unsupported.html"></a></span><div class="tip">Features currently not supported by Unity iOS</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-bugreporting.html"></a></span><div class="tip">Reporting crash bugs on iOS</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

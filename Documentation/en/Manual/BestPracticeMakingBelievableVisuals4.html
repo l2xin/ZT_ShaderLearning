@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Modelling</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="BestPracticeGuides" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/BestPracticeMakingBelievableVisuals4.html">English</a></li>
+<li><a href="/ja/current/Manual/BestPracticeMakingBelievableVisuals4.html">日本語</a></li>
+<li><a href="/es/current/Manual/BestPracticeMakingBelievableVisuals4.html">Español</a></li>
+<li><a href="/kr/current/Manual/BestPracticeMakingBelievableVisuals4.html">한국어</a></li>
+<li><a href="/ru/current/Manual/BestPracticeMakingBelievableVisuals4.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="BestPracticeGuides.html"> Best practice guides</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html"> Making believable visuals in Unity</a></li>
+<li> Modelling</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals3.html"></a></span><div class="tip"> Lighting strategy</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals5.html"></a></span><div class="tip"> Shading</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Modelling</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>It’s really important to plan ahead before modeling. Quickly made models are fine during pre-production or for roughing out a space, but the moment you start finalizing an <span class="tooltip"><strong>Asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> to make a proper <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>, consider the following:</p>
+
+<ul>
+<li><a href="#polygon">Make every polygon count</a></li>
+<li><a href="#GameObject">GameObject contribution to lighting</a></li>
+<li><a href="#modelUV">Model UV layout strategy</a></li>
+<li><a href="#geometry">Details in geometry</a></li>
+<li><a href="#smoothingGroup">Smoothing groups (Hard/soft edges of polygons)</a></li>
+</ul>
+
+<p><a name="polygon"></a></p>
+
+<h2>Make every polygon count</h2>
+
+<p>Despite modern hardware being more capable than ever, simple geometry is always beneficial in a Scene. Unnecessary tessellation and complex geometry is difficult to manage for a real-time setup, and it can impact performance and use memory unnecessarily. The following example demonstrates how geometry that is never seen by the players wastes resources such as <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> and overdraw, and causes light leakage:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsInvisibleSurfaces.jpg" alt="Scene highlighting unnecessary visible surfaces">
+<figcaption>Scene highlighting unnecessary visible surfaces</figcaption>
+</figure>
+
+<p><a name="GameObject"></a></p>
+
+<h2>GameObject contribution to lighting</h2>
+
+<p>If you are using Baked lighting or Realtime GI with <span class="tooltip"><strong>Light Probes</strong><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>, you need to decide whether a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> contributes to lighting in a Scene, or only receives indirect/baked lighting in the Scene. </p>
+
+<h3>GameObjects that contribute to lighting</h3>
+
+<p>To set a GameObject to contribute to lighting, make sure <strong>Lightmap Static</strong> in checked in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window. This provides simpler and smoother surface areas that produce better indirect bounces/baked lighting because of their efficiency in space usage for lightmap textures. Note that:</p>
+
+<ul>
+<li>You might need to author UV2 for the geometry when doing a light bake, if the auto lightmap UV provides inefficient chart or generate undesirable seams.</li>
+<li>You might need to author UV3 for the geometry for efficient results in Realtime GI.</li>
+</ul>
+
+<p>Sometimes, in Realtime GI, you can simplify a UV of a <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> to make the geometry use significantly less resources, and produce the best result with fewer artifacts.</p>
+
+<h3>GameObjects that only receive lighting in the scene</h3>
+
+<p>When GameObjects only receive lighting from <span class="tooltip"><strong>real-time lights</strong><span class="tooltiptext">A Lighting Mode for Lights that need to change their properties or which are spawned via scripts during gameplay. Unity calculates and updates the lighting of these Lights every frame at run time. They can change in response to actions taken by the player, or events which take place in the Scene. <a href="LightMode-Realtime.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Real-timelight">Glossary</a></span></span></span> and Light Probes, the geometry doesn’t have a lightmap UV restriction. The geometry still needs special attention if it’s large, because it might not be lit properly with a single Light Probe, and might require a <a href="class-LightProbeProxyVolume.html">Light Probe Proxy Volume component</a> to stitch together multiple probe light definitions. </p>
+
+<p>You don’t always need to use a lightmap or use Realtime GI for non-moving GameObjects. If a GameObject is small, or it doesn’t have surfaces that bounce much light, it probably doesn’t need to be included in the lightmap. The bench and railings shown below are a good example:</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsUVChart.jpg" alt="Only GameObjects with a UV chart need to contribute to indirect lighting">
+<figcaption>Only GameObjects with a UV chart need to contribute to indirect lighting</figcaption>
+</figure>
+
+<p><a name="modelUV"></a></p>
+
+<h2>Model UV layout strategy</h2>
+
+<p>The UV layout can help improve visual quality while using the same amount of memory for normal map baking (typically UV1), lightmaps baking (UV2) and real-time lightmaps (UV3), especially for geometry with non-tileable textures. </p>
+
+<p>Here are a few tips to consider when making a UV layout strategy:</p>
+
+<ul>
+<li>For UV1 charts, split the UV shell only as necessary, and try to lay out the UV chart as efficiently as possible to prevent wasting texture space for normal map baking. To put it into perspective, a 1024 square texture uses the same amount of memory whether you place details in the texture or not.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSmoothingGroup.jpg" alt="Example of how the pieces occupy the whole texture space, avoiding wasted space">
+<figcaption>Example of how the pieces occupy the whole texture space, avoiding wasted space</figcaption>
+</figure>
+
+<ul>
+<li>For lightmaps (UV2), try to make unbroken lightmap charts with borders that touch but do not overlap, to avoid bleeding or seams in the light bake. Keeping a consistent scale between UV charts/shells is important for even distribution of lightmap texels across your model.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSeamless.jpg" alt="An exaggerated lightmap splitting on a simple geometry, to demonstrate issues with lightmap seams">
+<figcaption>An exaggerated lightmap splitting on a simple geometry, to demonstrate issues with lightmap seams</figcaption>
+</figure>
+
+<ul>
+<li><p>For Realtime GI (UV3), prioritize UV space for large areas that represent big surfaces in your model to reduce memory usage and avoid seams. In many cases, the automatic UV settings in the model can really help optimize the chart. For in-depth information on chart optimization for Realtime GI, see the Unity tutorial <a href="https://unity3d.com/learn/tutorials/topics/graphics/optimizing-unitys-auto-unwrapping?playlist=17102">Optimizing Unity’s auto unwrapping</a>.</p></li>
+<li><p>For GameObjects that don’t require lightmaps, don’t waste memory and time by authoring additional UVs, unless custom <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> require them.</p></li>
+</ul>
+
+<p><a name="geometry"></a></p>
+
+<h2>Details in geometry</h2>
+
+<p>Real world GameObjects are highly detailed. To author real-time geometry, you need to identify which details to place in geometry, and which to place in the normal map and textures. When developing Assets for real-time Scenes, it’s normal to bake high-polygon to low-polygon normal maps.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsGeometry.jpg" alt="Example of baked tangent space normal map from High Poly mesh to Low Poly mesh">
+<figcaption>Example of baked tangent space normal map from High Poly mesh to Low Poly mesh</figcaption>
+</figure>
+
+<p>One important detail to remember is the way edges on a GameObject catch highlights. It is unusual to find a real-life object with very sharp edges, with non bevelled edges, or without detailed edge definition. Replicating realistic edge effects improves the believability of the Scene.</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsNormalMapSmooth.jpg" alt="Normal map gives a smooth flowing highlight on surfaces where it meets other geometry">
+<figcaption>Normal map gives a smooth flowing highlight on surfaces where it meets other geometry</figcaption>
+</figure>
+
+<p><a name="smoothingGroups"></a></p>
+
+<h2>Smoothing groups (Hard/Soft edges of polygon)</h2>
+
+<p>You can improve the efficiency of models and normal maps by using proper smoothing groups. Here are some tips on using smoothing groups:</p>
+
+<ul>
+<li>When dealing with normal map baking from high polygon to low polygon, use a simple configuration for smoothing groups rather than multiple faceted polygons. This is because tangent normal maps need to bend the hard split of the surface normal from the low-poly geometry.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLowHighPolygon.jpg" alt="A normal map bending the low-poly normal smoothly to mimic the high polygon mesh">
+<figcaption>A normal map bending the low-poly normal smoothly to mimic the high polygon mesh</figcaption>
+</figure>
+
+<ul>
+<li>
+<p>A smooth polygon with a good normal map saves on vertex count, which equates to more efficient geometry to render. Here’s a simple example that compares the following setups:</p>
+
+<ul>
+<li><p>A single plane with split smoothing groups that is equal to 36 vertices.</p></li>
+<li><p>A simple 18 triangle plane in 1 smoothing group that is equal to 16 vertices.</p></li>
+</ul>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsVertexComparison.jpg" alt="">
+</figure>
+
+<p>Single plane and triangle plane vertex count comparison</p>
+
+<ul>
+<li>A smooth polygon saves on chart splitting in Lightmap baking and Realtime GI that produces smoother visual result.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Making believable visuals Best Practice Guide added in Unity 2017.3</span></li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals3.html"></a></span><div class="tip"> Lighting strategy</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals5.html"></a></span><div class="tip"> Shading</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Input for Oculus</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="XR" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/OculusControllers.html">English</a></li>
+<li><a href="/ja/current/Manual/OculusControllers.html">日本語</a></li>
+<li><a href="/es/current/Manual/OculusControllers.html">Español</a></li>
+<li><a href="/kr/current/Manual/OculusControllers.html">한국어</a></li>
+<li><a href="/ru/current/Manual/OculusControllers.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li><a href="xr_input.html"> Unity XR input</a></li>
+<li>Input for Oculus</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OpenVRControllers.html"></a></span><div class="tip"> Input for OpenVR controllers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VRReference.html"></a></span><div class="tip">XR API reference</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Input for Oculus</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Oculus Rift has three inputs: two <strong>Oculus</strong> Touch Controllers, and one <strong>Oculus</strong> Remote. To allow native Unity Editor support for <strong>Oculus</strong> Rift input hardware, the Unity VR subsystem presents these three inputs as separate joysticks: Use the <a href="../ScriptReference/Input.html">UnityEngine.Input</a> class to read the axis and button values of these inputs.</p>
+
+<h2>Naming convention and detection</h2>
+
+<p>When properly configured and connected with your operating system, the Oculus Touch Controllers appear in the list returned by UnityEngine.Input.GetJoystickNames() as Oculus Touch - Left and Oculus Touch - Right, and the Oculus Remote appears as Oculus Remote. For information on correctly configuring and connecting the Touch Controllers and Remote, see the <a href="https://developer3.oculus.com">Oculus Developer Center</a> documentation on Pairing the <a href="https://developer3.oculus.com/documentation/pcsdk/latest/concepts/pairing-touch-controllers/">Oculus Touch Controllers</a> and the <a href="https://support.oculus.com">Oculus Support Center guidance</a> on the <a href="https://support.oculus.com/help/oculus/835449819935261">Oculus Remote</a>.</p>
+
+<p>Unity script code can test for the availability of the Touch Controllers by periodically checking for their presence in the list of joystick names. When the Touch Controllers are turned off, or their batteries are removed, an empty string replaces their name in the list returned by <a href="../ScriptReference/Input.GetJoystickNames.html">UnityEngine.Input.GetJoystickNames()</a>. When the Touch Controllers are turned on again, their name re-appears in the list.</p>
+
+<h2>Unity input system mappings</h2>
+
+<h3>Oculus Remote</h3>
+
+<figure>
+<img src="../uploads/Main/OculusControllersRemote.jpg" alt="(Image courtesy of developer.oculus.com)">
+<figcaption>(Image courtesy of developer.oculus.com)</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Hardware Feature</strong></th>
+	<th style="text-align:left;"><strong>Unity Button ID</strong></th>
+	<th style="text-align:left;"><strong>Unity Axis ID</strong></th>
+	<th style="text-align:left;"><strong>Unity Axis Value when Pressed</strong></th>
+	<th style="text-align:left;"><strong>Xbox Controller Analogue</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Button.DpadUp</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">6</td>
+	<td style="text-align:left;">1.0</td>
+	<th style="text-align:left;">D-Pad Up</th>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.DpadDown</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">6</td>
+	<td style="text-align:left;">–1.0</td>
+	<th style="text-align:left;">D-Pad Down</th>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.DpadLeft</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">5</td>
+	<td style="text-align:left;">–1.0</td>
+	<th style="text-align:left;">D-Pad Left</th>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.DpadRight</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">5</td>
+	<td style="text-align:left;">1.0</td>
+	<th style="text-align:left;">D-Pad Right</th>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.One</td>
+	<td style="text-align:left;">0</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<th style="text-align:left;">A Button</th>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Two</td>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<th style="text-align:left;">B Button</th>
+</tr>
+</tbody>
+</table>
+
+<h3>Oculus Touch Controllers</h3>
+
+<p>
+<strong>Note:</strong> The two Touch Controllers have a similar set of controls to the Xbox controller, so Unity’s Oculus Touch Controller mapping closely imitates those. </p>
+
+<figure>
+<img src="../uploads/Main/OculusControllersTouchControllers.jpg" alt="(Image courtesy of developer.oculus.com)">
+<figcaption>(Image courtesy of developer.oculus.com)</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Hardware Feature</strong></th>
+	<th style="text-align:left;"><strong>Interaction Type</strong></th>
+	<th style="text-align:left;"><strong>Unity Button ID</strong></th>
+	<th style="text-align:left;"><strong>Unity Axis ID</strong></th>
+	<th style="text-align:left;"><strong>Unity Axis Range</strong></th>
+	<th style="text-align:left;"><strong>Xbox Controller Analog</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Button.One</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">0</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">A Button</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.One</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">10</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Two</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">B Button</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Two</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">11</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Three</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">X Button</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Three</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">12</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Four</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">3</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">Y Button</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Four</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">13</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.Start</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">7</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">Start Button</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.PrimaryThumbstick</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">8</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">Left Stick Press</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.PrimaryThumbstick</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">16</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.PrimaryThumbstick</td>
+	<td style="text-align:left;">Near Touch</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">15</td>
+	<td style="text-align:left;">1.0 When Near Touch Is Detected; 0.0 Otherwise</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.SecondaryThumbstick</td>
+	<td style="text-align:left;">Press</td>
+	<td style="text-align:left;">9</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">Right Stick Press</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.SecondaryThumbstick</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">17</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Button.SecondaryThumbstick</td>
+	<td style="text-align:left;">Near Touch</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">16</td>
+	<td style="text-align:left;">1.0 When Near Touch Is Detected; 0.0 Otherwise</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Touch.PrimaryThumbRest</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">18</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Touch.PrimaryThumbRest</td>
+	<td style="text-align:left;">Near Touch</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">15</td>
+	<td style="text-align:left;">1.0 When Near Touch Is Detected; 0.0 Otherwise</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Touch.SecondaryThumbRest</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">19</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Touch.SecondaryThumbRest</td>
+	<td style="text-align:left;">Near Touch</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">16</td>
+	<td style="text-align:left;">1.0 When Near Touch Is Detected; 0.0 Otherwise</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.PrimaryIndexTrigger</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">14</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.PrimaryIndexTrigger</td>
+	<td style="text-align:left;">Near Touch</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">13</td>
+	<td style="text-align:left;">1.0 When Near Touch Is Detected; 0.0 Otherwise</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.PrimaryIndexTrigger</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">9</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+	<td style="text-align:left;">Squeeze Left Trigger</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.SecondaryIndexTrigger</td>
+	<td style="text-align:left;">Touch</td>
+	<td style="text-align:left;">15</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.SecondaryIndexTrigger</td>
+	<td style="text-align:left;">Near Touch</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">14</td>
+	<td style="text-align:left;">1.0 When Near Touch Is Detected; 0.0 Otherwise</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.SecondaryIndexTrigger</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">10</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+	<td style="text-align:left;">Squeeze Right Trigger</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.PrimaryHandTrigger</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">11</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis1D.SecondaryHandTrigger</td>
+	<td style="text-align:left;">Squeeze</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">12</td>
+	<td style="text-align:left;">0.0 to 1.0</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis2D.PrimaryThumbstick</td>
+	<td style="text-align:left;">Horizontal Movement</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+	<td style="text-align:left;">Move Left Stick</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis2D.PrimaryThumbstick</td>
+	<td style="text-align:left;">Vertical Movement</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+	<td style="text-align:left;">Move Left Stick</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis2D.SecondaryThumbstick</td>
+	<td style="text-align:left;">Horizontal Movement</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">4</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+	<td style="text-align:left;">Move Right Stick</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Axis2D.SecondaryThumbstick</td>
+	<td style="text-align:left;">Vertical Movement</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">5</td>
+	<td style="text-align:left;">–1.0 to 1.0</td>
+	<td style="text-align:left;">Move Right Stick</td>
+</tr>
+</tbody>
+</table>
+
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OpenVRControllers.html"></a></span><div class="tip"> Input for OpenVR controllers</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VRReference.html"></a></span><div class="tip">XR API reference</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Colliders</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="PhysicsSection" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/CollidersOverview.html">English</a></li>
+<li><a href="/ja/current/Manual/CollidersOverview.html">日本語</a></li>
+<li><a href="/es/current/Manual/CollidersOverview.html">Español</a></li>
+<li><a href="/kr/current/Manual/CollidersOverview.html">한국어</a></li>
+<li><a href="/ru/current/Manual/CollidersOverview.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="PhysicsSection.html">Physics</a></li>
+<li><a href="PhysicsOverview.html">Physics Overview</a></li>
+<li>Colliders</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RigidbodiesOverview.html"></a></span><div class="tip">Rigidbody overview</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Joints.html"></a></span><div class="tip">Joints</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>Colliders</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<strong>Collider</strong> <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> define the shape of an object for the purposes of physical <strong>collisions</strong>. A collider, which is invisible, need not be the exact same shape as the object’s <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> and in fact, a rough approximation is often more efficient and indistinguishable in gameplay.</p>
+
+<p>The simplest (and least processor-intensive) colliders are the so-called <em>primitive</em> collider types. In 3D, these are the <span class="tooltip"><a href="class-BoxCollider.html">Box Collider</a><span class="tooltiptext">A cube-shaped collider component that handles collisions for GameObjects like dice and ice cubes. <a href="class-BoxCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#boxcollider">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-SphereCollider.html">Sphere Collider</a><span class="tooltiptext">A sphere-shaped collider component that handles collisions for GameObjects like balls or other things that can be roughly approximated as a sphere for the purposes of physics. <a href="class-SphereCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span> and <span class="tooltip"><a href="class-CapsuleCollider.html">Capsule Collider</a><span class="tooltiptext">A capsule-shaped collider component that handles collisions for GameObjects like barrels and character limbs. <a href="class-CapsuleCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#capsulecollider">Glossary</a></span></span></span>. In 2D, you can use the <a href="class-BoxCollider2D.html">Box Collider 2D</a> and <a href="class-CircleCollider2D.html">Circle Collider 2D</a>. Any number of these can be added to a single object to create <em>compound colliders</em>.</p>
+
+<p>With careful positioning and sizing, compound colliders can often approximate the shape of an object quite well while keeping a low processor overhead. Further flexibility can be gained by having additional colliders on child objects (eg, boxes can be rotated relative to the local axes of the parent object). When creating a compound collider like this, there should only be one <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> component, placed on the root object in the hierarchy.</p>
+
+<p>Note, that primitive colliders will not work correctly with shear transforms - that means that if you use a combination of rotations and non-uniform scales in the Transform hierarchy so that the resulting shape would no longer match a primitive shape, the primitive collider will not be able to represent it correctly.</p>
+
+<p>There are some cases, however, where even compound colliders are not accurate enough. In 3D, you can use <span class="tooltip"><a href="class-MeshCollider.html">Mesh Colliders</a><span class="tooltiptext">A free-form collider component which accepts a mesh reference to define its collision surface shape. <a href="class-MeshCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MeshCollider">Glossary</a></span></span></span> to match the shape of the object’s mesh exactly. In 2D, the <a href="class-PolygonCollider2D.html">Polygon Collider 2D</a> will generally not match the shape of the <span class="tooltip"><strong>sprite</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span> graphic perfectly but you can refine the shape to any level of detail you like. These colliders are much more processor-intensive than primitive types, however, so use them sparingly to maintain good performance. Also, a mesh collider will normally be unable to collide with another mesh collider (ie, nothing will happen when they make contact). You can get around this in some cases by marking the mesh collider as <strong>Convex</strong> in the <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>. This will generate the collider shape as a “convex hull” which is like the original mesh but with any undercuts filled in. The benefit of this is that a convex mesh collider <em>can</em> collide with other mesh colliders so you may be able to use this feature when you have a moving character with a suitable shape. However, a good general rule is to use mesh colliders for <span class="tooltip"><strong>scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> geometry and approximate the shape of moving objects using compound primitive colliders.</p>
+
+<p>Colliders can be added to an object without a Rigidbody component to create floors, walls and other motionless elements of a scene. These are referred to as <strong>static</strong> colliders. In general, you should not reposition static colliders by changing the Transform position since this will impact heavily on the performance of the <span class="tooltip"><strong>physics engine</strong><span class="tooltiptext">A system that simulates aspects of physical systems so that objects can accelerate correctly and be affected by collisions, gravity and other forces. <a href="PhysicsSection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsEngine">Glossary</a></span></span></span>. Colliders on an object that <em>does</em> have a Rigidbody are known as <em>dynamic</em> colliders. Static colliders can interact with dynamic colliders but since they don’t have a Rigidbody, they will not move in response to collisions.</p>
+
+<p>The reference pages for the various collider types linked above have further information about their properties and uses.</p>
+
+<h2>Physics materials</h2>
+
+<p>When colliders interact, their surfaces need to simulate the properties of the material they are supposed to represent. For example, a sheet of ice will be slippery while a rubber ball will offer a lot of friction and be very bouncy. Although the shape of colliders is not deformed during collisions, their friction and bounce can be configured using <strong>Physics Materials</strong>. Getting the parameters just right can involve a bit of trial and error but an ice material, for example will have zero (or very low) friction and a rubber material with have high friction and near-perfect bounciness. See the reference pages for <a href="class-PhysicMaterial.html">Physic Material</a> and <a href="class-PhysicsMaterial2D.html">Physics Material 2D</a> for further details on the available parameters. Note that for historical reasons, the 3D <span class="tooltip"><strong>asset</strong><span class="tooltiptext">Any media or data that can be used in your game or project. An asset may come from a file created outside of Unity, such as a 3D model, an audio file or an image. You can also create some asset types in Unity, such as an Animator Controller, an Audio Mixer or a Render Texture. <a href="AssetWorkflow.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Asset">Glossary</a></span></span></span> is actually called <span class="tooltip"><strong>Physic Material</strong><span class="tooltiptext">A physics asset for adjusting the friction and bouncing effects of colliding objects. <a href="class-PhysicMaterial.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicMaterial">Glossary</a></span></span></span> (<em>without</em> the S) but the 2D equivalent is called <span class="tooltip"><strong>Physics Material 2D</strong><span class="tooltiptext">Use to adjust the friction and bounce that occurs between 2D physics objects when they collide <a href="class-PhysicsMaterial2D.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PhysicsMaterial2D">Glossary</a></span></span></span> (<em>with</em> the S).</p>
+
+<h2>Triggers</h2>
+
+<p>The scripting system can detect when collisions occur and initiate actions using the <code>OnCollisionEnter</code> function. However, you can also use the physics engine simply to detect when one collider enters the space of another without creating a collision. A collider configured as a <strong>Trigger</strong> (using the <strong>Is Trigger</strong> property) does not behave as a solid object and will simply allow other colliders to pass through. When a collider enters its space, a trigger will call the <code>OnTriggerEnter</code> function on the trigger object’s <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>.</p>
+
+<h2>Script actions taken on collision</h2>
+
+<p>When collisions occur, the physics engine calls functions with specific names on any scripts attached to the objects involved. You can place any code you like in these functions to respond to the collision event. For example, you might play a crash sound effect when a car bumps into an obstacle.</p>
+
+<p>On the first physics update where the collision is detected, the <code>OnCollisionEnter</code> function is called. During updates where contact is maintained, <code>OnCollisionStay</code> is called and finally, <code>OnCollisionExit</code> indicates that contact has been broken. Trigger colliders call the analogous <code>OnTriggerEnter</code>, <code>OnTriggerStay</code> and <code>OnTriggerExit</code> functions. Note that for 2D physics, there are equivalent functions with <strong>2D</strong> appended to the name, eg, <code>OnCollisionEnter2D</code>. Full details of these functions and code samples can be found on the Script Reference page for the <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> class.</p>
+
+<p>With normal, non-trigger collisions, there is an additional detail that at least one of the objects involved must have a non-kinematic Rigidbody (ie, <em>Is Kinematic</em> must be switched off). If both objects are kinematic Rigidbodies then <code>OnCollisionEnter</code>, <span class="tooltip"><strong>etc</strong><span class="tooltiptext">(Ericsson Texture Compression) A block-based texture format that compresses textures to significantly reduce file sizes without causing a noticable reduction in image quality. <a href="class-TextureImporterOverride.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ETC">Glossary</a></span></span></span>, will not be called. With trigger collisions, this restriction doesn’t apply and so both kinematic and non-kinematic Rigidbodies will prompt a call to <code>OnTriggerEnter</code> when they enter a trigger collider.</p>
+
+<h2>Collider interactions</h2>
+
+<p>Colliders interact with each other differently depending on how their <a href="RigidbodiesOverview.html">Rigidbody components</a> are configured. The three important configurations are the <em>Static Collider</em> (ie, no Rigidbody is attached at all), the <em>Rigidbody Collider</em> and the <em>Kinematic Rigidbody Collider</em>.</p>
+
+<h3>Static Collider</h3>
+
+<p>This is a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> that has a Collider but no Rigidbody. Static colliders are used for level geometry which always stays at the same place and never moves around. Incoming rigidbody objects will collide with the static collider but will not move it.</p>
+
+<p>The physics engine assumes that static colliders never move or change and can make useful optimizations based on this assumption. Consequently, static colliders should not be disabled/enabled, moved or scaled during gameplay. If you do change a static collider then this will result in extra internal recomputation by the physics engine which causes a major drop in performance. Worse still, the changes can sometimes leave the collider in an undefined state that produces erroneous physics calculations. For example a raycast against an altered Static Collider could fail to detect it, or detect it at a random position in space. Furthermore, Rigidbodies that are hit by a moving static collider will not necessarily be “awoken” and the static collider will not apply any friction. For these reasons, only colliders that are Rigidbodies should be altered. If you want a collider object that is not affected by incoming rigidbodies but can still be moved from a script then you should attach a <em>Kinematic</em> Rigidbody component to it rather than no Rigidbody at all. </p>
+
+<h3>Rigidbody Collider</h3>
+
+<p>This is a GameObject with a Collider and a normal, non-kinematic Rigidbody attached. Rigidbody colliders are fully simulated by the physics engine and can react to collisions and forces applied from a script. They can collide with other objects (including static colliders) and are the most commonly used Collider configuration in games that use physics.</p>
+
+<h3>Kinematic Rigidbody Collider</h3>
+
+<p>This is a GameObject with a Collider and a <em>kinematic</em> Rigidbody attached (ie, the <em>IsKinematic</em> property of the Rigidbody is enabled). You can move a kinematic rigidbody object from a script by modifying its <span class="tooltip"><strong>Transform Component</strong><span class="tooltiptext">A Transform component determines the Position, Rotation, and Scale of each object in the scene. Every GameObject has a Transform. <a href="Transforms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span> but it will not respond to collisions and forces like a non-kinematic rigidbody. Kinematic rigidbodies should be used for colliders that can be moved or disabled/enabled occasionally but that should otherwise behave like static colliders. An example of this is a sliding door that should normally act as an immovable physical obstacle but can be opened when necessary. Unlike a static collider, a moving kinematic rigidbody will apply friction to other objects and will “wake up” other rigidbodies when they make contact.</p>
+
+<p>Even when immobile, kinematic rigidbody colliders have different behavior to static colliders. For example, if the collider is set to as a trigger then you also need to add a rigidbody to it in order to receive trigger events in your script. If you don’t want the trigger to fall under gravity or otherwise be affected by physics then you can set the <em>IsKinematic</em> property on its rigidbody.</p>
+
+<p>A Rigidbody component can be switched between normal and kinematic behavior at any time using the <em>IsKinematic</em> property. </p>
+
+<p>A common example of this is the “ragdoll” effect where a character normally moves under animation but is thrown physically by an explosion or a heavy collision. The character’s limbs can each be given their own Rigidbody component with <em>IsKinematic</em> enabled by default. The limbs will move normallly by animation until <em>IsKinematic</em> is switched off for all of them and they immediately behave as physics objects. At this point, a collision or explosion force will send the character flying with its limbs thrown in a convincing way.</p>
+
+<h2>Collision action matrix</h2>
+
+<p>When two objects collide, a number of different script events can occur depending on the configurations of the colliding objects’ rigidbodies. The charts below give details of which event functions are called based on the components that are attached to the objects. Some of the combinations only cause one of the two objects to be affected by the collision, but the general rule is that physics will not be applied to an object that doesn’t have a Rigidbody component attached.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="7"><strong><em>Collision detection occurs and messages are sent upon collision</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Static Collider</td>
+	<td style="text-align:left;">Rigidbody Collider</td>
+	<td style="text-align:left;">Kinematic Rigidbody Collider</td>
+	<td style="text-align:left;">Static Trigger Collider</td>
+	<td style="text-align:left;">Rigidbody Trigger Collider</td>
+	<td style="text-align:left;">Kinematic Rigidbody Trigger Collider</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Static Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">Rigidbody Collider</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">Kinematic Rigidbody Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">Static Trigger Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">Rigidbody Trigger Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">Kinematic Rigidbody Trigger Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="7"><strong><em>Trigger messages are sent upon collision</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Static Collider</td>
+	<td style="text-align:left;">Rigidbody Collider</td>
+	<td style="text-align:left;">Kinematic Rigidbody Collider</td>
+	<td style="text-align:left;">Static Trigger Collider</td>
+	<td style="text-align:left;">Rigidbody Trigger Collider</td>
+	<td style="text-align:left;">Kinematic Rigidbody Trigger Collider</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Static Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Rigidbody Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Kinematic Rigidbody Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Static Trigger Collider</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Rigidbody Trigger Collider</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Kinematic Rigidbody Trigger Collider</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+	<td style="text-align:left;">Y</td>
+</tr>
+</tbody>
+</table>
+
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RigidbodiesOverview.html"></a></span><div class="tip">Rigidbody overview</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Joints.html"></a></span><div class="tip">Joints</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

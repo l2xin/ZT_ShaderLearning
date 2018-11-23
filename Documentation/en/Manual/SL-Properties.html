@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: ShaderLab: Properties</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Graphics" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-Properties.html">English</a></li>
+<li><a href="/ja/current/Manual/SL-Properties.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-Properties.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-Properties.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-Properties.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="GraphicsReference.html">Graphics Reference</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-Shader.html">ShaderLab Syntax</a></li>
+<li>ShaderLab: Properties</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab Syntax</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SubShader.html"></a></span><div class="tip">ShaderLab: SubShader</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>ShaderLab: Properties</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Shaders can define a list of parameters to be set by artists in Unity’s <a href="Materials.html">material inspector</a>. The Properties block in the <a href="SL-Shader.html">shader file</a> defines them.</p>
+
+<h2>Syntax</h2>
+
+<h4>Properties</h4>
+
+<pre><code>Properties { Property [Property ...] }
+</code></pre>
+
+<p>Defines the property block. Inside braces multiple properties are defined as follows.</p>
+
+<h4>Numbers and Sliders</h4>
+
+<pre><code>name (&quot;display name&quot;, Range (min, max)) = number
+name (&quot;display name&quot;, Float) = number
+name (&quot;display name&quot;, Int) = number
+</code></pre>
+
+<p>These all defines a number (scalar) property with a default value. The <code>Range</code> form makes it be displayed as a slider between <em>min</em> and <em>max</em> ranges.</p>
+
+<h4>Colors and Vectors</h4>
+
+<pre><code>name (&quot;display name&quot;, Color) = (number,number,number,number)
+name (&quot;display name&quot;, Vector) = (number,number,number,number)
+</code></pre>
+
+<p>Defines a color property with default value of given RGBA <span class="tooltip"><strong>components</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span>, or a 4D vector property with a default value. Color properties have a color picker shown for them, and are adjusted as needed depending on the color space (see <a href="SL-PropertiesInPrograms.html">Properties in Shader Programs</a>). Vector properties are displayed as four number fields.</p>
+
+<h4>Textures</h4>
+
+<pre><code>name (&quot;display name&quot;, 2D) = &quot;defaulttexture&quot; {}
+name (&quot;display name&quot;, Cube) = &quot;defaulttexture&quot; {}
+name (&quot;display name&quot;, 3D) = &quot;defaulttexture&quot; {}
+</code></pre>
+
+<p>Defines a <a href="class-TextureImporter.html">2D texture</a>, <span class="tooltip"><a href="class-Cubemap.html">cubemap</a><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> or <a href="class-Texture3D.html">3D (volume)</a> property respectively.</p>
+
+<h2>Details</h2>
+
+<p>Each property inside the <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#shader">Glossary</a></span></span></span> is referenced by <strong>name</strong> (in Unity, it’s common to start shader property names with underscore). The property will show up in material <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, Asset or Project Settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> as <strong>display name</strong>. For each property a default value is given after equals sign:</p>
+
+<ul>
+<li>For <em>Range</em> and <em>Float</em> properties it’s just a single number, for example “13.37”.</li>
+<li>For <em>Color</em> and <em>Vector</em> properties it’s four numbers in parentheses, for example “(1,0.5,0.2,1)”.</li>
+<li>For 2D Textures, the default value is either an empty string, or one of the built-in default Textures: “white” (RGBA: 1,1,1,1), “black” (RGBA: 0,0,0,0), “gray” (RGBA: 0.5,0.5,0.5,0.5), “bump” (RGBA: 0.5,0.5,1,0.5) or “red” (RGBA: 1,0,0,0).</li>
+<li>For non–2D Textures (Cube, 3D, 2DArray) the default value is an empty string. When a Material does not have a Cubemap/3D/Array Texture assigned, a gray one (RGBA: 0.5,0.5,0.5,0.5) is used.</li>
+</ul>
+
+<p>Later on in the shader’s fixed function parts, property values can be accessed using property name in square brackets: <strong>[name]</strong>. For example, you could make blending mode be driven by a material property by declaring two integer properties (say “<em>SrcBlend“ and ”</em>DstBlend”), and later on make <a href="SL-Blend.html">Blend Command</a> use them: <code>Blend [_SrcBlend] [_DstBlend]</code>.</p>
+
+<p>Shader parameters that are in the <code>Properties</code> block are serialized as <span class="tooltip"><a href="Materials.html">Material</a><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#material">Glossary</a></span></span></span> data. <a href="SL-ShaderPrograms.html">Shader programs</a> can actually have more parameters (like matrices, vectors and floats) that are set on the material from code at runtime, but if they are not part of the Properties block then their values will not be saved. This is mostly useful for values that are completely script code-driven (using <a href="../ScriptReference/Material.SetFloat.html">Material.SetFloat</a> and similar functions).</p>
+
+<h3>Property attributes and drawers</h3>
+
+<p>In front of any property, optional attributes in square brackets can be specified. These are either attributes recognized by Unity, or they can indicate your own <a href="../ScriptReference/MaterialPropertyDrawer.html">MaterialPropertyDrawer classes</a> to control how they should be rendered in the <a href="class-Material.html">material inspector</a>. Attributes recognized by Unity:</p>
+
+<ul>
+<li>
+<code>[HideInInspector]</code> - does not show the property value in the material inspector.</li>
+<li>
+<code>[NoScaleOffset]</code> - material inspector will not show texture tiling/offset fields for texture properties with this attribute.</li>
+<li>
+<code>[Normal]</code> - indicates that a texture property expects a normal-map.</li>
+<li>
+<code>[HDR]</code> - indicates that a texture property expects a high-dynamic range (HDR) texture.</li>
+<li>
+<code>[Gamma]</code> - indicates that a float/vector property is specified as sRGB value in the <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> (just like colors are), and possibly needs conversion according to color space used. See <a href="SL-PropertiesInPrograms.html">Properties in Shader Programs</a>.</li>
+<li>
+<code>[PerRendererData]</code> - indicates that a texture property will be coming from per-renderer data in the form of a <a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a>. Material inspector changes the texture slot UI for these properties.</li>
+</ul>
+
+<h2>Example</h2>
+
+<pre><code>// properties for a water shader
+Properties
+{
+    _WaveScale (&quot;Wave scale&quot;, Range (0.02,0.15)) = 0.07 // sliders
+    _ReflDistort (&quot;Reflection distort&quot;, Range (0,1.5)) = 0.5
+    _RefrDistort (&quot;Refraction distort&quot;, Range (0,1.5)) = 0.4
+    _RefrColor (&quot;Refraction color&quot;, Color) = (.34, .85, .92, 1) // color
+    _ReflectionTex (&quot;Environment Reflection&quot;, 2D) = &quot;&quot; {} // textures
+    _RefractionTex (&quot;Environment Refraction&quot;, 2D) = &quot;&quot; {}
+    _Fresnel (&quot;Fresnel (A) &quot;, 2D) = &quot;&quot; {}
+    _BumpMap (&quot;Bumpmap (RGB) &quot;, 2D) = &quot;&quot; {}
+}
+</code></pre>
+
+<h2>Texture property options (removed in 5.0)</h2>
+
+<p>Before Unity 5, texture properties could have options inside the curly brace block, e.g. <code>TexGen CubeReflect</code>. These were controlling fixed function texture coordinate generation. This functionality was removed in 5.0; if you need texgen you should write a <span class="tooltip"><a href="SL-ShaderPrograms.html">vertex shader</a><span class="tooltiptext">A program that runs on each vertex of a 3D model when the model is being rendered. <a href="SL-ShaderPrograms.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#vertexshader">Glossary</a></span></span></span> instead. See <a href="SL-ImplementingTexGen.html">Implementing Fixed Function TexGen page</a> page for examples.</p>
+
+<h2>See Also</h2>
+
+<ul>
+<li>
+<a href="SL-PropertiesInPrograms.html">Accessing Shader Properties in HLSL/Cg</a>.</li>
+<li>
+<a href="../ScriptReference/MaterialPropertyDrawer.html">Material Property Drawers</a>.</li>
+</ul>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab Syntax</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SubShader.html"></a></span><div class="tip">ShaderLab: SubShader</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

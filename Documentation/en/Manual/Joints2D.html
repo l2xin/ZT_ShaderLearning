@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-MC35ML');</script><script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  2D Joints</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFilesManual/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1539961666"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1539961666"></script><script type="text/javascript" src="docdata/toc.js?ts=1539961666"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1539961666"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1539961666">
+<link rel="stylesheet" href="../StaticFilesManual/js/feedback/five-star-rating-master/css/rating.min.css">
+<script src="../StaticFilesManual/js/feedback/five-star-rating-master/js/src/rating.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="Unity2D" data-pagetype="normal"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-number">Version: <b>2018.2</b> (switch to <a href="https://docs.unity3d.com/2018.3/Documentation/Manual">2018.3b</a> or <a href="https://docs.unity3d.com/2017.4/Documentation/Manual">2017.4</a>)</div>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language: <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/Joints2D.html">English</a></li>
+<li><a href="/ja/current/Manual/Joints2D.html">日本語</a></li>
+<li><a href="/es/current/Manual/Joints2D.html">Español</a></li>
+<li><a href="/kr/current/Manual/Joints2D.html">한국어</a></li>
+<li><a href="/ru/current/Manual/Joints2D.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Unity Manual</h2></div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2018.2)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Physics2DReference.html">Physics Reference 2D</a></li>
+<li> 2D Joints</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PhysicsMaterial2D.html"></a></span><div class="tip">Physics Material 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-DistanceJoint2D.html"></a></span><div class="tip">Distance Joint 2D</div>
+</div>
+</div></div>
+<div class="otherversionswrapper" onmouseover="setOtherVersionsDisplay(true)" onmouseout="setOtherVersionsDisplay(false)">
+<a>Other Versions</a><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">Cannot access other versions offline!</div>
+</div>
+<div class="scrollToFeedback"><a id="scrollToFeedback">Leave feedback</a></div>
+<h1>2D Joints</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>As the name implies, <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between rigidbodies, usually allowing some degree of movement such as a hinge. <a href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> attach <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> together. You can only attach 2D <strong>joints</strong> to <strong>GameObjects</strong> which have a <span class="tooltip"><strong>Rigidbody</strong><span class="tooltiptext">A component that allows a GameObject to be affected by simulated gravity and other forces. <a href="class-Rigidbody.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rigidbody">Glossary</a></span></span></span> 2D <span class="tooltip"><strong>component</strong><span class="tooltiptext">A functional part of a GameObject. A GameObject can contain any number of components. Unity has many built-in components, and you can create your own by writing scripts that inherit from MonoBehaviour. <a href="UsingComponents.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#component">Glossary</a></span></span></span> attached, or to a fixed position in world space.</p>
+
+<p>2D joints all have names ending ‘2D’. A joint named without a ‘2D’ ending is a 3D joint. 2D joints work with game objects in 2D and 3D joints work with game objects in 3D.</p>
+
+<p>(See <strong>Details and Hints</strong>, below, for useful background information on all 2D joints.)</p>
+
+<p>There are different types of 2D joints. See each joint reference page for detailed information about their properties:</p>
+
+<ul>
+<li><p>
+<a href="class-DistanceJoint2D.html">Distance Joint 2D</a> - attaches two game objects controlled by rigidbody physics together and keeps them a certain distance apart.</p></li>
+<li><p><span class="tooltip"><a href="class-FixedJoint2D.html">Fixed Joint 2D</a><span class="tooltiptext">A 2D joint type which is completely constrained, allowing two objects to be held together. Implemented as a spring so some small motion may still occur. <a href="class-FixedJoint2D.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FixedJoint2D">Glossary</a></span></span></span> - keeps two objects in a position relative to each other, so the objects are always offset at a given position and angle. For example, objects that need to react as if they are rigidly connected: They can’t move away from each other, they can’t move closer together, and they can’t rotate with respect to each other. You can also use this joint to create a less rigid connection that flexes.</p></li>
+<li><p>
+<a href="class-FrictionJoint2D.html">Friction Joint 2D</a> - reduces both the linear and angular velocities between two game objects controlled by rigidbody physics to zero (ie: it slows them down and stops them). For example; a platform that rotates but resists that movement. </p></li>
+<li><p>
+<a href="class-HingeJoint2D.html">Hinge Joint 2D</a>- allows a game object controlled by rigidbody physics to be attached to a point in space around which it can rotate. For example; the pivot on a pair of scissors.</p></li>
+<li><p><span class="tooltip"><a href="class-RelativeJoint2D.html">Relative Joint 2D</a><span class="tooltiptext">A 2D joint that allows two game objects controlled by rigidbody physics to maintain in a position based on each other’s location. Use this joint to keep two objects offset from each other, at a position and angle you decide <a href="class-RelativeJoint2D.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RelativeJoint2D">Glossary</a></span></span></span> - allows two game objects controlled by rigidbody physics to maintain a position based on each other’s location. Use this joint to keep two objects offset from each other. For example; a space-shooter game where the player has extra gun batteries that follow them.</p></li>
+<li><p>
+<a href="class-SliderJoint2D.html">Slider Joint 2D</a> - allows a game object controlled by rigidbody physics to slide along a line in space, like sliding doors, for example.</p></li>
+<li><p>
+<a href="class-SpringJoint2D.html">Spring Joint 2D</a> - allows two game objects controlled by rigidbody physics to be attached together as if by a spring.</p></li>
+<li><p>
+<a href="class-TargetJoint2D.html">Target Joint 2D</a> - connects to a specified target, rather than another rigid body object, as other joints do. It is a spring type joint, which you could use for picking up and moving an object acting under gravity, for example.</p></li>
+<li><p>
+<a href="class-WheelJoint2D.html">Wheel Joint 2D</a> - simulates wheels and suspension.</p></li>
+</ul>
+
+<h2>Details and Hints</h2>
+
+<h3>Constraints</h3>
+
+<p>All joints provide one or more constraints that apply to Rigidbody 2D behaviour. A constraint is a ‘rule’ which the joint will try to ensure isn’t permanently broken. There are different types of constraints available but usually a joint will only provide a few of them, sometimes only one. Some constraints limit behaviour such as ensuring a rigid body stays on a line, or in a certain position. Some are ‘driving’ constraints such as a motor that rotates or moves a rigid body object, trying to maintain a certain speed.</p>
+
+<h3>Temporarily breaking constraints</h3>
+
+<p>The physics system expects that constraints do become temporarily broken; the objects may move further apart than their distance constraint tells them, or objects may move faster than their motor-speed constraint. When a constraint isn’t broken, the joint doesn’t apply any forces and does little work. It is when a constraint is broken that the joint applies forces to fix the constraint: So for the ‘driving’ constraints mentioned above, it maintains a distance or ensures a motor-speed. This force, however, doesn’t always instantaneously fix the constraint. Although it usually happens very fast, it can happen over time. </p>
+
+<p>This time lag can lead to joints ‘stretching’ or seeming ‘soft’. The lag happens because the physics system is trying to apply joint-forces to fix constraints, whilst at the same time other game physics forces are acting to break constraints. In addition to the conflicting forces acting on game objects, some joints are more stable and react faster than others. </p>
+
+<p>Whatever constraints the joint provides, the joint only uses forces to fix the constraint. These are either a linear (straight line) force or angular (torque) force. </p>
+
+<p>
+<strong>HINT:</strong> Given the conflicing forces acting on joints, it is always good to be cautious when applying large forces to rigid body objects that have joints attached, especially those with large masses. </p>
+
+<h2>Permanently breaking joints</h2>
+
+<p>All joints have the ability to stop working completely (that is break) when a force exceeds a specified limit. The limit that causes breaking due to excessive linear force is called the “break force”. The limit that causes breaking due to excessive torque force is called the “break torque”.</p>
+
+<ul>
+<li>If a joint applies linear force, then it has a <strong>Break Force</strong> option.</li>
+<li>If a joint applies an angular (rotation) force then it has a <strong>Break Torque</strong> option.</li>
+</ul>
+
+<p>Both these limits are pre-set to <strong>Infinity</strong>: This means that they have no limit. </p>
+
+<p>When a <strong>Break Force</strong> or <strong>Break Torque</strong> limit is exceeded, the joint breaks and the component deletes itself from its GameObject.</p>
+<div class="feedbackbox" id="feedbackbox">
+<div id="rating"><p>Did you find this page useful? Please give it a rating:<br><div id="ratecontent" class="c-rating"></div>
+</p></div>
+<div id="ratingThanks" style="display:none"><p>Thanks for rating this page!</p></div>
+<div id="problem"><p><a name="problem">Report a problem on this page</a></p></div>
+<div id="problemType" style="display:none"><p>What kind of problem would you like to report?<ul type="problems">
+<li><a name="needcode" id="problemneedcode">This page needs code samples</a></li>
+<li><a name="code" id="problemcode">Code samples do not work</a></li>
+<li><a name="missing" id="problemmissing">Information is missing</a></li>
+<li><a name="incorrect" id="problemincorrect">Information is incorrect</a></li>
+<li><a name="unclear" id="problemunclear">Information is unclear or confusing</a></li>
+<li><a name="language" id="problemlanguage">There is a spelling/grammar error on this page</a></li>
+<li><a name="other" id="problemother">Something else</a></li>
+</ul>
+<p><known_issues><p>Is something described here not working as you expect it to? It might be a <b>Known Issue</b>. Please check with the Issue Tracker at <a href="https://issuetracker.unity3d.com">issuetracker.unity3d.com</a>.</p></known_issues></p>
+</p></div>
+<div id="problemThanks" style="display:none"><p>Thanks for letting us know! This page has been marked for review based on your feedback.<br><br>If you have time, you can provide more information to help us fix the problem faster.<br><br><a id="problemThanksMoreInfoButton">Provide more information</a><br>
+</p></div>
+<div id="problemMoreInfo" style="display:none">
+<p id="problemNeedCodeForm" style="display:none">You've told us this page needs code samples. If you'd like to help us further, you could provide a code sample, or tell us about what kind of code sample you'd like to see:</p>
+<p id="problemCodeForm" style="display:none">You've told us there are code samples on this page which don't work. If you know how to fix it, or have something better we could use instead, please let us know:</p>
+<p id="problemMissingForm" style="display:none">You've told us there is information missing from this page. Please tell us more about what's missing:</p>
+<p id="problemIncorrectForm" style="display:none">You've told us there is incorrect information on this page. If you know what we should change to make it correct, please tell us:</p>
+<p id="problemUnclearForm" style="display:none">You've told us this page has unclear or confusing information. Please tell us more about what you found unclear or confusing, or let us know how we could make it clearer:</p>
+<p id="problemLanguageForm" style="display:none">You've told us there is a spelling or grammar error on this page. Please tell us what's wrong:</p>
+<p id="problemOtherForm" style="display:none">You've told us this page has a problem. Please tell us more about what's wrong:</p>
+<form>
+<textarea id="problemFormSuggestionField" cols="40" rows="5"></textarea><input type="hidden" id="problemFormDescription"><input type="submit" id="problemFormDescriptionSubmit" value="Submit">
+</form>
+</div>
+<div id="problemMoreInfoThanks" style="display:none"><p>Thanks for helping to make the Unity documentation better!</p></div>
+<script>InitialiseStarRating();</script>
+</div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PhysicsMaterial2D.html"></a></span><div class="tip">Physics Material 2D</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-DistanceJoint2D.html"></a></span><div class="tip">Distance Joint 2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication: 2018.2-002K. Built: 2018-10-10.</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>
