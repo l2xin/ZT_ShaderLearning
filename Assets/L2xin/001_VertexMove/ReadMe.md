@@ -1,5 +1,8 @@
 ## T_VertexMoveShader 控制模型顶点移动 --by l2xin
 
+### 效果gif
+
+![T_VertexMove.gif](T_VertexMove.gif)
 
 ### 顶点偏移固定值
 ``` GLSL
