@@ -7,9 +7,9 @@ Shader "Custom/T_DoubleFaceMirrorReflection"
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-
+		_MainColor("MainColor", Color) = (1,1,1,0)
 		//顶点偏移 方便观察双面效果
-		_VertexOffset("VertexOffser", Range(0,20)) = 0
+		_VertexOffset("VertexOffset", Range(0,20)) = 0
 	}
 	SubShader
 	{
@@ -44,6 +44,7 @@ Shader "Custom/T_DoubleFaceMirrorReflection"
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			float _VertexOffset;
+			float4 _MainColor;
 			
 			v2f vert (a2v v)
 			{
@@ -64,7 +65,7 @@ Shader "Custom/T_DoubleFaceMirrorReflection"
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);
 				col = vfaceValue > 0 ? i.diffuseFront : i.diffuseBack;
-				return col * tex2D(_MainTex, i.uv);
+				return col * tex2D(_MainTex, i.uv) * _MainColor;
 			}
 
 			ENDCG

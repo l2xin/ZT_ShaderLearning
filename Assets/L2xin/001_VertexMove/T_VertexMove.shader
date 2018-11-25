@@ -7,7 +7,7 @@ Shader "Custom/T_VertexMoveShader"
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_MaxDistance("MaxDistance", Range(0.1,1)) = 0.2	//最大移动距离
+		_MaxDistance("MaxDistance", Range(0.1,5)) = 0.2	//最大移动距离
 	}
 	SubShader
 	{
