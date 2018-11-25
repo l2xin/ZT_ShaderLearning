@@ -1,5 +1,9 @@
 ## T_DoubleFaceMirrorReflection 双面镜面反射 --by l2xin
 
+### 效果如下：
+
+![T_DoubleFaceMirrorReflection.gif](T_DoubleFaceMirrorReflection.gif)
+
 ---
 ### Cull Off
 需关闭裁剪背面剔除或者正面剔除。
