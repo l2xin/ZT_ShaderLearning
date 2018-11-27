@@ -1,6 +1,7 @@
 ## T_VertexScaleBase & T_VertexScaleTangent 控制顶点缩放 --by l2xin
 
-
+### Github
+[https://github.com/l2xin/ZT_ShaderLearning/tree/master/Assets/L2xin/003_VertexScale](https://github.com/l2xin/ZT_ShaderLearning/tree/master/Assets/L2xin/003_VertexScale)
 
 ----------
 ## 顶点基础缩放T_VertexScaleBase

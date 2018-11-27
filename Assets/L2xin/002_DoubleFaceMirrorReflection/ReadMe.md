@@ -1,4 +1,8 @@
-## T_DoubleFaceMirrorReflection 双面镜面反射 --by l2xin
+## T_DoubleFaceMirrorReflection 双面镜面反射
+
+### Github
+[https://github.com/l2xin/ZT_ShaderLearning/tree/master/Assets/L2xin/002_DoubleFaceMirrorReflection](https://github.com/l2xin/ZT_ShaderLearning/tree/master/Assets/L2xin/002_DoubleFaceMirrorReflection)
+
 
 ### 效果如下：
 
