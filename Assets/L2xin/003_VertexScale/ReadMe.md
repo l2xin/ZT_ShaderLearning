@@ -75,3 +75,4 @@ $Proj_a^b = \frac{\vec{b}} {\left| \vec{b} \right|} * (\left| \vec{a} \right| * 
 ## 参考
 
 * Vscode Latex公式编辑插件-[Markdown All In One]
+* [编写LaTeX数学公式-https://blog.csdn.net/fzch_struggling/article/details/44998901](https://blog.csdn.net/fzch_struggling/article/details/44998901)
