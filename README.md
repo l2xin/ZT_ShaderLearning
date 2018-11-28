@@ -8,6 +8,10 @@
 
 * [Documentation/en-官方文档打开太慢，下载下来用浏览器打开](https://github.com/l2xin/ZT_ShaderLearning/tree/master/Documentation/en)
 
+## 其他
+
+* [MathJax Plugin for Github-谷歌浏览器Github显示数学公式插件](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related)
+
 
 ## 练习
 
