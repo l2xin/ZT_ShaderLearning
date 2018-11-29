@@ -11,7 +11,7 @@
 
 ![T_VertexScaleBase.gif](T_VertexScaleBase.gif)
 
-相当于模型整体缩放_MaxScale;
+相当于模型整体缩放_MaxScale;
 ``` GLSL
 v.vertex.xyz *= (_SinTime.w + 2) * 0.5 * _MaxScale;
 ```
@@ -32,8 +32,8 @@ v.vertex.xyz *= (_SinTime.w + 2) * 0.5 * _MaxScale;
 
 #### 两个辅助函数
 
-*  $Proj_a^b=\vec{b} * \frac{\vec{a} \cdot \vec{b}} { \vec{b} \cdot \vec{b}}$
-*  $Reject_a^b = \vec{a} - Proj_a^b$
+*  $Proj_b^a=\vec{b} * \frac{\vec{a} \cdot \vec{b}} { \vec{b} \cdot \vec{b}}$
+*  $Reject_b^a = \vec{a} - Proj_b^a$
 
 ``` GLSL
 //计算a在b上的投影
@@ -66,7 +66,7 @@ float3 vertex = v.vertex - Reject(v.vertex, v.normal) * (_SinTime.w + 1) * 0.5;
 
 #### $\vec{a}在\vec{b}上的投影$推导过程如下：
 
-$Proj_a^b = \frac{\vec{b}} {\left| \vec{b} \right|} * (\left| \vec{a} \right| * cos(\theta)) 
+$Proj_b^a = \frac{\vec{b}} {\left| \vec{b} \right|} * (\left| \vec{a} \right| * cos(\theta)) 
             = \vec{b} * \frac{(\vec{a} \cdot \vec{b})} {\left| \vec{b} \right| \cdot \left| \vec{b} \right|} 
             =\vec{b} * \frac{\vec{a} \cdot \vec{b}} { \vec{b} \cdot \vec{b}} 
             = \vec{b}*\frac{dot(\vec{a},\vec{b})}{dot(\vec{b},\vec{b})}$
