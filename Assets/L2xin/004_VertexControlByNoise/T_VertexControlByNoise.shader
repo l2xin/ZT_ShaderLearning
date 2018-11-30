@@ -6,7 +6,7 @@ Shader "Custom/T_VertexControlByNoise"
 {
 	Properties
 	{
-		_MaxMoveDistance("MaxMoveDistance", Range(1,5)) = 2	//最大移动距离
+		_MaxVertexOffset("MaxMoveDistance", Range(1,5)) = 2	//顶点偏移
 		_NoiseSpeed("NoiseSpeed", Range(0,10)) = 1
 		_NoiseScale("NoiseScale", Range(0, 1)) = 0.2
 
@@ -21,7 +21,6 @@ Shader "Custom/T_VertexControlByNoise"
 
 		Cull Off
 
-
 		Pass
 		{
 			CGPROGRAM
@@ -29,14 +28,10 @@ Shader "Custom/T_VertexControlByNoise"
 			#pragma fragment frag
 			#pragma shader_feature _NOISETYPE_NOISE_1 _NOISETYPE_NOISE_2 _NOISETYPE_NOISE_3 _NOISETYPE_NOISE_4
 
-			
-
 			#pragma target 3.0
-
 			
 			#include "UnityCG.cginc"
 			#include "CandycatNoise.cginc"
-			//#include "MyNoise.cginc"
 
 			struct a2v
 			{
@@ -53,7 +48,7 @@ Shader "Custom/T_VertexControlByNoise"
 				float4 diffuseBack : TEXCOORD2;
 			};
 
-			float _MaxMoveDistance;
+			float _MaxVertexOffset;
 			float _NoiseSpeed;
 			float _NoiseScale;
 			float4 _FrontColor;
@@ -89,7 +84,7 @@ Shader "Custom/T_VertexControlByNoise"
 				float randResult = simplex_noise(randInput);
 				#endif
 
-				v.vertex.xyz += randResult * _MaxMoveDistance * v.normal;
+				v.vertex.xyz += randResult * _MaxVertexOffset * v.normal;
 				float3 vertex = Proj(v.vertex, v.normal) + Reject(v.vertex, v.normal) * (1-randResult);
 				o.vertex = UnityObjectToClipPos(vertex);
 
