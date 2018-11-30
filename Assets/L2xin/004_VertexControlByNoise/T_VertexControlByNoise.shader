@@ -80,13 +80,13 @@ Shader "Custom/T_VertexControlByNoise"
 				float2 randInput = v.normal * _NoiseScale + (_NoiseSpeed * _Time.x);
 
 				#if _NOISETYPE_NOISE_1
-				float randResult = noise1(randInput);
+				float randResult = noise_fractal(randInput);
 				#elif _NOISETYPE_NOISE_2
-				float randResult = noise2(randInput);
+				float randResult = noise_sum_abs(randInput);
 				#elif _NOISETYPE_NOISE_3
-				float randResult = noise3(randInput);
+				float randResult = value_noise(randInput);
 				#elif _NOISETYPE_NOISE_4
-				float randResult = noise4(randInput);
+				float randResult = simplex_noise(randInput);
 				#endif
 
 				v.vertex.xyz += randResult * _MaxMoveDistance * v.normal;

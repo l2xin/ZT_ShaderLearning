@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: T_VertexControlByNoise
   m_Shader: {fileID: 4800000, guid: 4018027a97d39433598fe6cab5660221, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _NOISETYPE_NOISE_4 _NOISETYPE_NOISE_6)
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,10 +24,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _MaxDistance: 0.1
-    - _MaxMoveDistance: 5.3
-    - _MaxScale: 0
-    - _NoiseSpeed: 1.99
+    - _MaxMoveDistance: 4.11
+    - _MaxScale: 0.289
+    - _MoveSpeed: 1
+    - _NoiseScale: 0.196
+    - _NoiseSpeed: 5.33
+    - _NoiseType: 3
     - _ScaleSpeed: 0
     m_Colors:
-    - _BackColor: {r: 0.6509434, g: 0.1013261, b: 0.13336645, a: 0.7058824}
-    - _FrontColor: {r: 0.46666667, g: 0.83137256, b: 0.3764706, a: 0}
+    - _BackColor: {r: 1, g: 0.34509805, b: 0, a: 0.7058824}
+    - _FrontColor: {r: 0.2627451, g: 1, b: 0, a: 0.3372549}
