@@ -1,5 +1,5 @@
 ﻿/**
- * 控制模型顶点以随机方式缩放位移
+ * 控制模型顶点按照Nosie算法缩放位移
  * @author l2xin
  */
 Shader "Custom/T_VertexControlByNoise"

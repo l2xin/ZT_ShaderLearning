@@ -78,9 +78,10 @@ float value_noise(float2 p)
 
     // 它把原来的梯度替换成了一个简单的伪随机值，我们也不需要进行点乘操作，  
     // 而直接把晶格顶点处的随机值按权重相加即可。  
-    return lerp(lerp(hash21(pi + float2(0.0, 0.0)), hash21(pi + float2(1.0, 0.0)), w.x),
+    float v = lerp(lerp(hash21(pi + float2(0.0, 0.0)), hash21(pi + float2(1.0, 0.0)), w.x),
         lerp(hash21(pi + float2(0.0, 1.0)), hash21(pi + float2(1.0, 1.0)), w.x),
         w.y);
+    return saturate(v);
 }
 
 float simplex_noise(float2 p)
