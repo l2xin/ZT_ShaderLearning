@@ -1,6 +1,6 @@
 ﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
-Shader "Custom/RoundLog/T_VertexChange"
+Shader "JPLearning/Kuikui/T_VertexChange"
 {
 
 	Properties
