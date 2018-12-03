@@ -56,6 +56,7 @@ Matcap无法响应光源与相机位置的变化，原因很简单——Matcap�
 ----------
 ## Shaderlab实现
 
+第一种：
 ``` GLSL
 v2f vert (a2v v)
 {
@@ -69,6 +70,29 @@ fixed4 frag (v2f i) : SV_Target
 {
     fixed4 col = tex2D(_MainTex, i.uv);
     fixed4 matcapColor = tex2D(_MatcapTex, i.viewNormal.xy* 0.5 + 0.5);
+    return col * matcapColor;
+}
+```
+
+第二种：
+``` C
+v2f vert (a2v v)
+{
+    v2f o;
+    o.vertex = UnityObjectToClipPos(v.vertex);
+    o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+    
+    float3 worldNormal = UnityObjectToWorldNormal(v.normal);
+    viewNormal = mul((float3x3)UNITY_MATRIX_V, worldNormal);
+    o.matcapUV = viewNormal.xy * 0.5 + 0.5;
+
+    return o;
+}
+
+fixed4 frag (v2f i) : SV_Target
+{
+    fixed4 col = tex2D(_MainTex, i.uv);
+    fixed4 matcapColor = tex2D(_MatcapTex, i.matcapUV);
     return col * matcapColor;
 }
 ```
