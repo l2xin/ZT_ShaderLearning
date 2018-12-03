@@ -104,7 +104,7 @@ If it is orthogonal, the upper-left 3x3 of Object2World will be equal to that of
 
 
 ### **结论**：
-对顶点变化Wolrd2View使用MV矩阵，对normal变换使用IT_MV矩阵。
+对顶点Object2View变换使用MV矩阵，对normal变换使用IT_MV矩阵。
 
 ### **公式**：
 
