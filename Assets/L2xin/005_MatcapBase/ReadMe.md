@@ -12,15 +12,10 @@
 qianmo的文章：
 > MatCap Shader的基本思路是，使用某特定材质球的贴图，作为当前材质的视图空间环境贴图（view-space environment map），来实现具有均匀表面着色的反射材质物体的显示。考虑到物体的所有法线的投影的范围在x(-1,1),y(-1,1),构成了一个圆形，所以MatCap 贴图中存储光照信息的区域是一个圆形。基于MatCap思想的Shader，可以无需提供任何光照，只需提供一张或多张合适的MatCap贴图作为光照结果的“指导”即可。
 
-以下图片来自AssetStore中该资源：
-
-* [https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221](https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221)
-![Matcap_robot.png](Matcap_robot.png)
-
 ----------
 
 ## 效果gif
-* AssetStore中资源展示：
+* [AssetStore中资源展示](https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221)：
 ![T_MatcapRobot.gif](T_MatcapRobot.gif)
 
 * 自己做的：
@@ -41,7 +36,7 @@ qianmo的文章：
 复杂模型：可以通过几张简单的Matcap贴图组合来实现模型上各部位细节差异。
 
 #### 缺点
-Matcap无法响应光源与相机位置的变化，原因很简单——Matcap采样贴图是静态的，通过相机空间映射的
+Matcap无法响应光源与相机位置的变化，原因很简单——Matcap采样贴图是静态的，通过相机空间映射的。
 
 
 
@@ -124,7 +119,7 @@ If it is orthogonal, the upper-left 3x3 of Object2World will be equal to that of
 
 ## 其他
 
-如何利用Matcap实现pbr效果还没看，后面和TA交流请教一下。
+如何利用Matcap实现基本PBR光照模型以及混合材质还没尝试，后面和TA交流请教一下。
 
 -------------
 
@@ -132,10 +127,10 @@ If it is orthogonal, the upper-left 3x3 of Object2World will be equal to that of
 
 * [http://wiki.unity3d.com/index.php/MatCap](http://wiki.unity3d.com/index.php/MatCap)
 
-* [UNITY_MATRIX_IT_MV - SL-UnityShaderVariables.html](https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html) 
+* [UNITY_MATRIX_IT_MV From SL-UnityShaderVariables.html](https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html) 
   
 * [http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/the-normal-matrix/](http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/the-normal-matrix/)
   
-* [图形程序/技术美术 Shading Artist -https://zhuanlan.zhihu.com/p/37702186](https://zhuanlan.zhihu.com/p/37702186)
+* [图形程序/技术美术 Shading Artist From https://zhuanlan.zhihu.com/p/37702186](https://zhuanlan.zhihu.com/p/37702186)
 
 * [【Unity Shader编程】之十六 基于MatCap实现适于移动平台的“次时代”车漆Shader](https://blog.csdn.net/poem_qianmo/article/details/55803629)
