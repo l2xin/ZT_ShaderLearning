@@ -9,7 +9,7 @@ Graphics中，用Matrix把点从一个空间转换至另一个空间是比较常
 ### 第一篇：
 
 原文链接：[法线从object space到eye space的转换((normal matrix)](http://www.cnblogs.com/flytrace/p/3379816.html)
-![normal_matrix_objectspace2eyespace.png](normal_matrix_objectspace2eyespace.png)
+![SaveImage/normal_matrix_objectspace2eyespace.png](SaveImage/normal_matrix_objectspace2eyespace.png)
 
 <br>
 
@@ -17,7 +17,7 @@ Graphics中，用Matrix把点从一个空间转换至另一个空间是比较常
 
 原文链接：[法向量（Normal）的变换矩阵的推导](https://www.nigauri.co/%E6%B3%95%E5%90%91%E9%87%8F%EF%BC%88normal%EF%BC%89%E7%9A%84%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5%E7%9A%84%E6%8E%A8%E5%AF%BC/)
 
-![Normal_Matrix.png](Normal_Matrix.png)
+![SaveImage/Normal_Matrix.png](SaveImage/Normal_Matrix.png)
 
 <br>
 

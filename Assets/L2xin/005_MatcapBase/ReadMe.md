@@ -16,11 +16,11 @@ qianmo的文章：
 
 ## 效果gif
 * [AssetStore中资源展示](https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221)：
-![T_MatcapRobot.gif](T_MatcapRobot.gif)
+![SaveImage/T_MatcapRobot.gif](SaveImage/T_MatcapRobot.gif)
 
 * 自己做的：
-![Matcap_jianxian.png](Matcap_jianxian.png)
-![Matcap_jianxian02.png](Matcap_jianxian02.png)
+![SaveImage/Matcap_jianxian.png](SaveImage/Matcap_jianxian.png)
+![SaveImage/Matcap_jianxian02.png](SaveImage/Matcap_jianxian02.png)
 
 <br>
 
@@ -46,7 +46,7 @@ Matcap无法响应光源与相机位置的变化，原因很简单——Matcap�
 
 也可以在网上直接下载一些别人制作好的（[pinterest.com](https://www.pinterest.com/)有非常多）:
 
-![Matcap_google.png](Matcap_google.png)
+![SaveImage/Matcap_google.png](SaveImage/Matcap_google.png)
 
 
 
