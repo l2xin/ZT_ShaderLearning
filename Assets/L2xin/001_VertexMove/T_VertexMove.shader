@@ -2,7 +2,7 @@
  * 控制模型顶点移动
  * @author l2xin
  */
-Shader "Custom/T_VertexMoveShader"
+Shader "JPLearning/L2xin/T_VertexMoveShader"
 {
 	Properties
 	{

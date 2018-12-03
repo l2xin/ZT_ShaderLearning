@@ -2,7 +2,7 @@
  * 控制模型顶点按照Nosie算法缩放位移
  * @author l2xin
  */
-Shader "Custom/T_VertexControlByNoise"
+Shader "JPLearning/L2xin/T_VertexControlByNoise"
 {
 	Properties
 	{

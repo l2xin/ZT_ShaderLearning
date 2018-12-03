@@ -2,7 +2,7 @@
  * 双面镜面反射
  * @author l2xin
  */
-Shader "Custom/T_DoubleFaceMirrorReflection"
+Shader "JPLearning/L2xin/T_DoubleFaceMirrorReflection"
 {
 	Properties
 	{

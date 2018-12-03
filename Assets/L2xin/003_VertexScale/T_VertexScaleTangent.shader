@@ -2,7 +2,7 @@
  * 控制模型沿切线方向缩放
  * @author l2xin
  */
-Shader "Custom/T_VertexScaleTangent"
+Shader "JPLearning/L2xin/T_VertexScaleTangent"
 {
 	Properties
 	{
