@@ -4,7 +4,7 @@
 [https://github.com/l2xin/ZT_ShaderLearning/tree/master/Assets/L2xin/005_MatcapBase](https://github.com/l2xin/ZT_ShaderLearning/tree/master/Assets/L2xin/005_MatcapBase)
 
 ----
-## Mapcap是什么
+## Matcap是什么
 
 [Unity Community Wiki](http://wiki.unity3d.com/index.php/MatCap)上的定义：
 > MatCap (Material Capture) shader, for displaying objects with reflective materials with uniform surface colouring, like Zbrush or Mudbox can. It uses an image of a sphere as a view-space environment map. It's very cheap, and looks great when the camera doesn't rotate.
